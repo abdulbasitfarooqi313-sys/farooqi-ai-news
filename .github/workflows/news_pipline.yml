@@ -1,6 +1,5 @@
 import os
 import requests
-
 def send_telegram_message(message):
     token = os.environ.get"8980599665:AAFnUBKr8Ebn07YCMkJvWz4oZ8QGo_GcYiI"
     chat_id = "6593456628"
