@@ -42,8 +42,9 @@ def ensure() -> None:
             ("openai/whisper-tiny", "preprocessor_config.json", MODELS / "whisper")]
     for repo, name, dest in need:
         if not (dest / name).exists():
-            log(f"downloading {repo}/{name}")
+            t = time.time()
             hf_hub_download(repo, name, local_dir=str(dest))
+            log(f"downloaded {repo}/{name} in {time.time() - t:.0f}s")
 
 
 def _load():
@@ -127,7 +128,11 @@ def animate(base, box: tuple[int, int, int, int], audio: Path, out: Path, pad: i
                                 "-preset", "veryfast", "-crf", "16", "-pix_fmt", "yuv420p", str(out)],
                                stdin=subprocess.PIPE)
         bs, ts = 16, torch.tensor([0])
+        log(f"audio features ready: {len(chunks)} frames ({time.time() - t0:.0f}s)")
         for i in range(0, len(chunks), bs):
+            if i and i % (bs * 4) == 0:
+                el = time.time() - t0
+                log(f"  {i}/{len(chunks)} frames, {el:.0f}s, ~{el / i * (len(chunks) - i):.0f}s left")
             wb = chunks[i:i + bs]
             lat = latent.repeat(len(wb), 1, 1, 1)
             pred = unet.model(lat, ts, encoder_hidden_states=pe(wb)).sample
@@ -156,7 +161,12 @@ def test() -> None:
         if studio._cut("m").exists() and studio._cut("f").exists():
             studio.build_set(tmp)
         base = studio._anchor_full("m")
+        t = time.time()
         a = studio.speak(text, tmp / "v.mp3", 0)
+        log(f"voice ready in {time.time() - t:.0f}s: {studio.VOICE_USED}")
+        t = time.time()
+        _load()
+        log(f"models ready in {time.time() - t:.0f}s")
         box = studio.face_box("m")
         patch, px, py = animate(base, box, a, tmp / "patch.mp4")
         base.save(tmp / "base.png")

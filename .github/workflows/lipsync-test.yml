@@ -35,7 +35,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         shell: bash
-        run: python lipsync.py test 2>&1 | tee run.log; exit ${PIPESTATUS[0]}
+        run: timeout 40m python -u lipsync.py test 2>&1 | tee run.log; exit ${PIPESTATUS[0]}
       - name: Report the error
         if: failure()
         env:
