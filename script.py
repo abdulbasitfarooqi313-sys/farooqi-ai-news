@@ -143,6 +143,7 @@ PROMPT = """آپ "فاروقی اے آئی نیوز" کے ایڈیٹر ہیں �
 - صرف وہی بات لکھیں جو سرخی/خلاصے میں ہے۔ کوئی عدد، تاریخ، قیمت یا دعویٰ اپنی طرف سے نہ گھڑیں
 - کمپنیوں اور پروڈکٹس کے نام انگریزی ہی میں رہنے دیں (OpenAI, Google, ChatGPT…)
 - سادہ، صاف اردو؛ سنسنی خیزی نہیں
+- پوری ویڈیو تقریباً 3 منٹ کی ہو: چھ خبروں کے سرخی + خلاصہ + تبصرہ ملا کر کل تقریباً 330 الفاظ (ہر خلاصہ 2 مختصر جملے، ہر تبصرہ 1 جملہ)
 
 صرف یہ JSON واپس کریں:
 {{
@@ -263,6 +264,12 @@ def main() -> None:
         return
     items = items[:40]
     out = write(items)
+    # ویڈیو تقریباً 3 منٹ کی رہے: الفاظ زیادہ ہوں تو آخری خبریں نکال دیں (کم از کم 4)
+    def words(p): return len(f"{p.get('headline','')} {p.get('body','')} {p.get('comment','')}".split())
+    picks = out.get("picks", [])[:6]
+    while len(picks) > 4 and sum(words(p) for p in picks) > 380:
+        picks.pop()
+    out["picks"] = picks
     me = os.environ.get("TELEGRAM_CHAT_ID", "")
     channel = os.environ.get("TELEGRAM_CHANNEL", "")
     text = bulletin(out, items)
