@@ -1,2 +1,20 @@
-# farooqi-ai-news
-Automated portal for daily authentic AI news updates, studio scripts, and tech bulletins in Urdu language.
+# فاروقی اے آئی نیوز
+روزانہ مصنوعی ذہانت (AI) کی تازہ ترین خبریں — معتبر ذرائع سے، اردو میں، نیوز اسٹوڈیو ویڈیو کی شکل میں۔
+
+## روزانہ کیا ہوتا ہے (صبح 7 بجے، سعودی وقت)
+1. **خبریں جمع:** TechCrunch، The Verge، VentureBeat، MIT Technology Review، Ars Technica، Google News (پچھلے 36 گھنٹے)
+2. **انتخاب اور اردو:** Gemini (مفت) سب سے اہم 5 خبریں چنتا ہے اور صرف ماخذ کی معلومات سے اردو خلاصہ لکھتا ہے — ہر خبر کے ساتھ اصل لنک
+3. **ویڈیو:** نیوز اسٹوڈیو سلائیڈیں (نستعلیق)، «بریکنگ» پٹی، چلتا ٹکر، دو اردو اینکر (مرد و خاتون) کی آواز (`studio.py`)
+4. **ٹیلیگرام:** تحریری بلیٹن + ویڈیو + یوٹیوب/فیس بک کے لیے عنوان و تفصیل
+5. **دوبارہ نہیں:** بھیجی گئی خبریں `history.json` میں — اگلے دن نہیں دہرائی جاتیں
+
+## Secrets (Settings → Secrets and variables → Actions)
+| نام | کیا |
+|---|---|
+| `GEMINI_API_KEY` | aistudio.google.com/apikey |
+| `TELEGRAM_BOT_TOKEN` | @BotFather سے — **کبھی کسی فائل میں نہ لکھیں** |
+| `TELEGRAM_CHAT_ID` | آپ کا نمبر (@userinfobot) |
+| `TELEGRAM_CHANNEL` | (اختیاری) عوامی چینل، مثلاً `@FarooqiAINews` — بوٹ چینل کا ایڈمن ہو |
+
+## آزمائش
+`MOCK=1 python script.py` — بغیر چابیوں کے، ویڈیو بنا کر دکھاتا ہے۔

@@ -1,23 +1,48 @@
-import os
-import requests
+name: Daily AI News
 
-def send_telegram_message(message):
-    token = os.environ.get("TELEGRAM_BOT_TOKEN")
-    chat_id = "6593456628"
-    url = f"https://api.telegram.org/bot{token}/sendMessage"
-    payload = {
-        "chat_id": chat_id,
-        "text": message,
-        "parse_mode": "Markdown"
-    }
-    requests.post(url, json=payload)
+# روزانہ صبح 7 بجے (سعودی وقت) = 04:00 UTC
+on:
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
 
-def fetch_and_process_news():
-    sample_news = "🚨 **آج کی اہم خبر:** اے آئی کی دنیا میں بڑی پیش رفت۔"
-    print("Fetching and translating news...")
-    return sample_news
+permissions:
+  contents: write
 
-if __name__ == "__main__":
-    news = fetch_and_process_news()
-    send_telegram_message(news)
-    print("News sent to Telegram!")
+concurrency:
+  group: ai-news
+  cancel-in-progress: false
+
+jobs:
+  news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install requirements
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Fetch news, write Urdu bulletin, send to Telegram
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL }}
+        run: python script.py
+
+      - name: Remember sent news (no repeats tomorrow)
+        run: |
+          git config user.name "ai-news-bot"
+          git config user.email "ai-news-bot@users.noreply.github.com"
+          git add history.json
+          git diff --cached --quiet && exit 0
+          git commit -m "خبریں بھیجی گئیں"
+          for i in 1 2 3; do git pull --rebase -X theirs && git push && exit 0; sleep 5; done
