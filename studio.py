@@ -505,7 +505,7 @@ def l3_html(label: str, text: str) -> str:
 def detail_html(who: str, bg: str, headline: str, body: str, source: str, date: str, comment: str = "") -> str:
     n = len(headline) + len(body) + len(comment)
     hs, bs, cs = (58, 36, 31) if n < 300 else (52, 33, 28) if n < 430 else (46, 30, 26)
-    name = "نیوز اینکر" if who == "m" else "نیوز اینکر"
+    name = "🎙️ رپورٹر · آڈیو رپورٹ" if who == "m" else "نیوز اینکر"
     inner = (f'<div class="studio" style="background-image:url({bg})"></div><div class="shade"></div>' + _top(date) +
              f'<div class="abox"><div class="nm">{name} · فاروقی اے آئی نیوز</div></div><div class="glass"></div>'
              f'<div class="panel"><div class="kicker">تفصیلات · {html.escape(source)}</div><div class="head">{html.escape(headline)}</div>'
@@ -535,7 +535,7 @@ def _frames(seg: dict, states: dict, audio: Path, secs: float, tmp: Path, tag: s
     from PIL import Image, ImageDraw
     who = seg["who"]
     n = int(secs * FPS)
-    mouth = mouth_track(audio, secs) if who == "m" and not seg.get("patch") else [0] * n
+    mouth = [0] * n                     # ہونٹ نہیں ہلتے: خاتون نقاب میں، مرد رپورٹر کی ساکن تصویر
     cache = {}
 
     def comp(page: int, mo: int) -> Path:
@@ -648,16 +648,16 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
             intro = intro[:first + 12] + intro[first + 12:].replace("السلام علیکم", "").replace("۔۔", "۔")
         hl_say = [p.get("headline_say") or p["headline"] for p in picks] + ["اور اب، ان خبروں کی تفصیل۔"]
         # حصے: آغاز (مرد) → سرخیاں (خاتون) → ہر خبر کی تفصیل (باری باری) → اختتام (مرد)
-        segs_def = [{"kind": "full", "who": "m", "say": intro, "l3": [("خوش آمدید", "فاروقی اے آئی نیوز · آج کی اہم خبریں")]},
+        segs_def = [{"kind": "full", "who": "f", "say": intro, "l3": [("خوش آمدید", "فاروقی اے آئی نیوز · آج کی اہم خبریں")]},
                     {"kind": "full", "who": "f", "say": " ".join(hl_say), "parts": hl_say,
                      "l3": [("سرخیاں", p["headline"]) for p in picks] + [("تفصیلات", "اب ان خبروں کی تفصیل")]}]
         for k, p in enumerate(picks):
             src = items[int(p["n"]) - 1]["source"]
-            who = "m" if k % 2 == 0 else "f"
+            who = "f" if k % 2 == 0 else "m"          # خاتون اینکر اسٹوڈیو سے، مرد رپورٹر (ساکن تصویر + آواز)
             say = p.get("say") or (f"{p['headline']}۔ {p['body']}" + (f" {p['comment']}" if p.get("comment") else ""))
             segs_def.append({"kind": "detail", "who": who, "say": say, "pick": p, "src": src,
                              "l3": [("اہم خبر", p["headline"])]})
-        segs_def.append({"kind": "full", "who": "m",
+        segs_def.append({"kind": "full", "who": "f",
                          "say": out.get("outro") or "یہ تھیں آج کی اہم خبریں۔ مزید خبروں کے لیے چینل کو فالو کریں۔ اللہ حافظ۔",
                          "l3": [("شکریہ", "روزانہ اے آئی کی تازہ خبروں کے لیے چینل سبسکرائب کریں")]})
 
@@ -681,7 +681,7 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
             l3s = shoot([l3_html(a_, b_) for a_, b_ in sd["l3"]], tmp, transparent=True, height=96, tag=f"l{k}_")
             # مرد اینکر: ہونٹ آواز کے مطابق (MuseTalk AI)؛ نہ چلے تو پرانا طریقہ
             patch_in, fc = [], f"[0:v]fps={FPS},split=3[z0][o0][o1];"
-            if sd["who"] == "m" and _lipsync_ok():
+            if sd["who"] == "m" and os.environ.get("LIPSYNC") == "1" and _lipsync_ok():
                 try:
                     import lipsync
                     from PIL import Image
