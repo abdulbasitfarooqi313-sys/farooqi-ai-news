@@ -314,7 +314,7 @@ def ticker_png(text: str, out: Path) -> Path:
 PHOTOS = ROOT / "assets" / "anchors"
 PS = H / 768                                   # 1408×768 تصویر → 1080 اونچائی
 PX = (round(1408 * PS) - W) // 2               # دونوں طرف سے کٹنے والا حصہ
-FACE = {"m": (850, 203), "f": (706, 150)}      # اصل تصویر میں منہ/چہرے کا مرکز
+FACE = {"m": (850, 203), "f": (365, 272)}      # اصل تصویر میں منہ/چہرے کا مرکز
 ANCHOR_X = 1290                                 # نئے اسٹوڈیو میں اینکر کا مرکز (دائیں طرف، بائیں طرف لوگو والی دیوار)
 _SET: dict = {}                                 # اسٹوڈیو کی دیوار اور میز (render میں ایک بار بنتی ہیں)
 
@@ -435,12 +435,34 @@ def build_set(tmp: Path) -> None:
     _SET["desk"] = Image.open(b[0]).convert("RGBA")
 
 
+def brand_screen_html() -> str:
+    """نیوز روم کی بڑی اسکرین پر اپنا برانڈ (تصویر کی اصل اسکرین اور سائن ڈھک جاتے ہیں)"""
+    x, y, w, h = RP
+    return _bare(f'<div class="rp" style="left:{x}px;top:{y}px;width:{w}px;height:{h}px">'
+                 f'<div class="vis g" style="top:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px">'
+                 f'<img src="{_logo()}" style="width:330px;height:330px;border-radius:50%;box-shadow:0 0 60px rgba(0,190,255,.6)">'
+                 f'<div style="font-weight:700;font-size:64px;line-height:1.7">فاروقی اے آئی نیوز</div>'
+                 f'<div style="font-size:38px;color:#bfe9ff;line-height:1.6">باوثوق · باخبر · سب سے آگے</div></div></div>'
+                 f'<div style="position:absolute;left:1360px;top:8px;width:260px;height:118px;border-radius:10px;background:#1a1f2b;'
+                 f'border:4px solid #2b3245;display:flex;align-items:center;justify-content:center">'
+                 f'<div style="font-family:Naskh;font-weight:700;font-size:44px;color:#ff4d5e;text-shadow:0 0 18px rgba(255,60,80,.8);direction:ltr">AI NEWS</div></div>')
+
+
 def anchor_states(tmp: Path) -> dict:
     out = {}
+    from PIL import Image as _I
+    screen = None
+    if not (_cut("f").exists() and _SET):
+        screen = _I.open(shoot([brand_screen_html()], tmp, transparent=True, tag="brand")[0]).convert("RGBA")
     for who in ("m", "f"):
         for mo, d in enumerate(MOUTHS if who == "m" else (0.0,)):
             f = tmp / f"anchor_{who}{mo}.png"
-            _anchor_full(who, d).save(f)
+            im_ = _anchor_full(who, d)
+            if who == "f" and screen is not None:
+                im_ = im_.convert("RGBA")
+                im_.alpha_composite(screen)
+                im_ = im_.convert("RGB")
+            im_.save(f)
             out[(who, mo)] = f
     return out
 
@@ -555,8 +577,8 @@ def split_html(bg: str, date: str, reporter: str, city: str) -> str:
 
 # ---------------- رپورٹر سے تفصیل: اینکر ڈیسک پر، دائیں طرف بڑی اسکرین پر رپورٹ ----------------
 
-RP = (1010, 110, 870, 760)          # بڑی اسکرین: x, y, w, h
-RP_INSET = (1031, 525, 326, 266)     # رپورٹر کی تصویر (اسکرین کے اندر کارڈ میں)
+RP = (1080, 100, 835, 778)          # نیوز روم کی بڑی اسکرین کی جگہ: x, y, w, h
+RP_INSET = (1101, 533, 222, 266)     # رپورٹر کی تصویر (اسکرین کے اندر کارڈ میں)
 SHIFT_F = -360                       # خاتون اینکر کو بائیں طرف کھسکانا
 _RP: dict = {}
 _RP: dict = {}
@@ -595,10 +617,10 @@ CSS += """
  padding:4px 22px;border-radius:30px;color:#bfefff;direction:ltr}
 .card2{position:absolute;left:14px;right:14px;bottom:14px;height:330px;border-radius:12px;background:#0a1c52;border:3px solid #e9eef8;
  overflow:hidden}
-.card2 .t{position:absolute;right:0;left:330px;top:0;height:62px;background:#0b2a6f;font-weight:700;font-size:30px;line-height:2.1;padding:0 18px;
+.card2 .t{position:absolute;right:0;left:226px;top:0;height:62px;background:#0b2a6f;font-weight:700;font-size:30px;line-height:2.1;padding:0 18px;
  white-space:nowrap;overflow:hidden}
-.card2 .mp{position:absolute;right:8px;left:330px;top:66px;bottom:8px;border-radius:8px;overflow:hidden}
-.card2 .nm{position:absolute;left:0;width:326px;bottom:0;height:58px;background:#e11d2e;font-weight:700;font-size:28px;line-height:2.1;text-align:center}
+.card2 .mp{position:absolute;right:8px;left:226px;top:66px;bottom:8px;border-radius:8px;overflow:hidden}
+.card2 .nm{position:absolute;left:0;width:222px;bottom:0;height:58px;background:#e11d2e;font-weight:700;font-size:28px;line-height:2.1;text-align:center}
 .card2 .on{position:absolute;left:10px;top:10px;z-index:3;background:rgba(3,8,26,.8);border:1px solid #00c6ff;border-radius:8px;
  font-size:24px;line-height:1.7;padding:0 12px}
 """
@@ -687,9 +709,13 @@ def _frames(seg: dict, states: dict, audio: Path, secs: float, tmp: Path, tag: s
             im = seg["canvas"].copy()
             im.alpha_composite(Image.open(seg["pages"][0]).convert("RGBA"))
             x, y, w, h = RP_INSET
-            rep = Image.open(states[("m", 0)]).convert("RGBA")
-            cx = _sx("m")
-            crop = rep.crop((int(cx - 150), 50, int(cx + 150), 50 + 245)).resize((w, h))
+            rp_f = PHOTOS / "reporter.jpg"
+            if rp_f.exists():
+                crop = Image.open(rp_f).convert("RGB").resize((w, h), Image.LANCZOS)
+            else:
+                rep = Image.open(states[("m", 0)]).convert("RGBA")
+                cx = _sx("m")
+                crop = rep.crop((int(cx - 110), 50, int(cx + 110), 50 + 265)).resize((w, h))
             im.paste(crop, (x, y))
         elif seg["kind"] == "split":
             im = Image.open(seg["pages"][0]).convert("RGBA")
@@ -872,11 +898,8 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
                 sd["overlay"] = overlay
             elif sd["kind"] == "report":
                 if "canvas" not in _RP:
-                    from PIL import Image, ImageFilter, ImageEnhance
-                    fem = Image.open(states[("f", 0)]).convert("RGBA")
-                    cv = ImageEnhance.Brightness(fem.filter(ImageFilter.GaussianBlur(14))).enhance(0.55)
-                    cv.alpha_composite(fem.crop((-SHIFT_F, 0, W, H)), (0, 0))
-                    _RP["canvas"] = cv
+                    from PIL import Image
+                    _RP["canvas"] = Image.open(states[("f", 0)]).convert("RGBA")
                     simg = story_image(out.get("thumbnail_prompt", ""), tmp / "story.png")
                     _RP["story_img"] = ("data:image/png;base64," + base64.b64encode(simg.read_bytes()).decode()) if simg else ""
                 sd["canvas"] = _RP["canvas"]
