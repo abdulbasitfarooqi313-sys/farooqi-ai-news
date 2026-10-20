@@ -325,6 +325,9 @@ def find_chat_id() -> str:
     chats = [u["message"]["chat"]["id"] for u in r.get("result", [])
              if u.get("message", {}).get("chat", {}).get("type") == "private"]
     if not chats:
+        me_ = requests.get(f"https://api.telegram.org/bot{token}/getMe", timeout=30).json().get("result", {})
+        wh = requests.get(f"https://api.telegram.org/bot{token}/getWebhookInfo", timeout=30).json().get("result", {})
+        log(f"یہ ٹوکن اس بوٹ کا ہے: @{me_.get('username')} ({me_.get('first_name')}); webhook: {wh.get('url') or 'none'}")
         raise SystemExit("بوٹ کو ابھی کسی نے پیغام نہیں بھیجا — ٹیلیگرام میں ai_news_bot کھول کر 'hi' بھیجیں، پھر دوبارہ چلائیں")
     log("ٹیلیگرام چیٹ مل گئی ✅")
     return str(chats[-1])
