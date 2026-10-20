@@ -172,7 +172,7 @@ body{font-family:Nast,Naskh,serif;color:#fff;direction:rtl;position:relative}
 .card .of{font-size:34px;color:#cfe0ff;line-height:1.6}
 .card .src{font-family:Naskh;font-weight:700;font-size:30px;background:rgba(0,198,255,.15);border:1px solid rgba(0,198,255,.5);
  padding:6px 22px;border-radius:30px;color:#bfefff;direction:ltr}
-.panel{position:absolute;right:56px;left:500px;top:170px;height:560px;display:flex;flex-direction:column;justify-content:center}
+.panel{position:absolute;right:56px;left:780px;top:170px;height:560px;display:flex;flex-direction:column;justify-content:center}
 .kicker{align-self:flex-start;font-weight:700;font-size:32px;color:#04102b;background:linear-gradient(90deg,#7fe3ff,#00c6ff);
  padding:0 22px;border-radius:6px;line-height:1.9;margin-bottom:14px}
 .head{font-weight:700;font-size:@@hs@@px;line-height:2.0;text-shadow:0 6px 30px rgba(0,0,0,.6)}
@@ -191,8 +191,8 @@ body{font-family:Nast,Naskh,serif;color:#fff;direction:rtl;position:relative}
 .lower{position:absolute;left:0;right:0;bottom:0;height:104px;background:#06102e;border-top:3px solid #00c6ff;display:flex;align-items:center}
 .lower .t{background:#00c6ff;color:#04102b;font-weight:700;font-size:34px;height:100%;padding:0 30px;line-height:2.9;white-space:nowrap}
 /* آغاز / اختتام */
-.center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-bottom:90px}
-.biglogo{width:340px;height:340px;border-radius:50%;margin-bottom:6px;box-shadow:0 0 70px rgba(0,170,255,.5)}
+.center{position:absolute;top:0;bottom:0;right:0;left:720px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-bottom:90px}
+.biglogo{width:300px;height:300px;border-radius:50%;margin-bottom:6px;box-shadow:0 0 70px rgba(0,170,255,.5)}
 .big{font-weight:700;font-size:92px;line-height:1.8;text-shadow:0 10px 40px rgba(0,0,0,.6)}
 .sub{font-size:48px;line-height:1.8;color:#bfe9ff}
 """
@@ -227,9 +227,7 @@ def story_html(headline: str, body: str, source: str, date: str, comment: str = 
     n = len(headline) + len(body) + len(comment)
     hs, bs, cs = (64, 38, 32) if n < 300 else (56, 34, 29) if n < 430 else (50, 31, 27)
     inner = (_top(date) +
-             f'<div class="card"><img src="{_logo()}"><img class="lg" src="{_logo()}">'
-             f'<div class="of">ماخذ</div><div class="src">{html.escape(source)}</div></div>'
-             f'<div class="panel"><div class="kicker">تفصیلات</div><div class="head">{html.escape(headline)}</div>'
+             f'<div class="panel"><div class="kicker">تفصیلات · {html.escape(source)}</div><div class="head">{html.escape(headline)}</div>'
              f'<div class="bar"></div><div class="body">{html.escape(body)}</div>'
              + (f'<div class="cmt"><b>ہمارا تبصرہ: </b><span>{html.escape(comment)}</span></div>' if comment else "") + '</div>'
              f'<div class="l3"><div class="lab">اہم خبر</div><div class="txt">{html.escape(headline)}</div>'
@@ -240,7 +238,7 @@ def story_html(headline: str, body: str, source: str, date: str, comment: str = 
 def headline_html(headline: str, date: str) -> str:
     """سرخیوں کا حصہ: پوری اسکرین پر ایک سرخی"""
     inner = (_top(date) + '<div class="center"><div class="kicker" style="align-self:center;font-size:40px">اہم سرخیاں</div>'
-             f'<div class="big" style="font-size:84px;max-width:1600px">{html.escape(headline)}</div></div>'
+             f'<div class="big" style="font-size:76px;max-width:1100px">{html.escape(headline)}</div></div>'
              f'<div class="l3"><div class="lab">سرخیاں</div><div class="txt">{html.escape(headline)}</div>'
              f'<div class="bug"><img src="{_logo()}"></div></div>' + _lower())
     return _page(inner)
@@ -298,6 +296,80 @@ def ticker_png(text: str, out: Path) -> Path:
 
 # ---------------- ویڈیو ----------------
 
+def anchor_states(tmp: Path) -> dict:
+    """ہر اینکر کی ہر کیفیت کی شفاف تصویر"""
+    import anchors
+    from playwright.sync_api import sync_playwright
+    logo = _logo()
+    docs = {("m", 0, 0): anchors.male(0, False, logo), ("m", 1, 0): anchors.male(1, False, logo),
+            ("m", 2, 0): anchors.male(2, False, logo), ("m", 0, 1): anchors.male(0, True, logo),
+            ("f", 0, 0): anchors.female(False, logo), ("f", 0, 1): anchors.female(True, logo)}
+    out = {}
+    with sync_playwright() as pw:
+        exe = "/opt/pw-browsers/chromium" if Path("/opt/pw-browsers/chromium").is_file() else None
+        br = pw.chromium.launch(executable_path=exe) if exe else pw.chromium.launch()
+        pg = br.new_page(viewport={"width": anchors.AW, "height": anchors.AH})
+        for key, svg in docs.items():
+            pg.set_content(f"<html><body style='margin:0;background:transparent'>{svg}</body></html>")
+            p = tmp / f"anchor_{key[0]}{key[1]}{key[2]}.png"
+            pg.screenshot(path=str(p), omit_background=True)
+            out[key] = p
+        br.close()
+    return out
+
+
+def mouth_track(audio: Path, secs: float) -> list[int]:
+    """آواز کی بلندی سے ہر فریم پر منہ: 0 بند، 1 تھوڑا، 2 کھلا"""
+    import numpy as np
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(audio), "-ac", "1", "-ar", "16000", "-f", "s16le", "-"],
+                         capture_output=True, check=True).stdout
+    x = np.frombuffer(raw, dtype="<i2").astype(np.float32)
+    hop = 16000 // FPS
+    n = int(secs * FPS)
+    rms = np.array([np.sqrt(np.mean(x[i * hop:(i + 1) * hop] ** 2)) if i * hop < len(x) else 0.0 for i in range(n)])
+    hi = np.percentile(rms[rms > 0], 90) if (rms > 0).any() else 1.0
+    lv = rms / max(hi, 1e-6)
+    m = [2 if v > 0.55 else 1 if v > 0.2 else 0 for v in lv]
+    return [m[i] if i % 2 == 0 or i == 0 else m[i - 1] for i in range(n)]   # ہر دوسرے فریم پر بدلے — قدرتی لگے
+
+
+def anchor_frames(slide: Path, who: str, states: dict, audio: Path, secs: float, tmp: Path, tag: str) -> Path:
+    """سلائیڈ + اینکر کی کیفیتیں → فریموں کی فہرست (concat)"""
+    import random
+    from PIL import Image
+    base = Image.open(slide).convert("RGBA")
+    comp = {}
+    for (w, mo, bl), p in states.items():
+        if w != who:
+            continue
+        im = base.copy()
+        an = Image.open(p).convert("RGBA")
+        im.alpha_composite(an, (30, H - 200 - an.height))
+        f = tmp / f"{tag}_{mo}{bl}.png"
+        im.convert("RGB").save(f)
+        comp[(mo, bl)] = f
+    n = int(secs * FPS)
+    mouth = mouth_track(audio, secs) if who == "m" else [0] * n
+    rnd = random.Random(tag)
+    blink, nxt = [0] * n, rnd.randint(40, 110)
+    while nxt < n:
+        for j in range(nxt, min(n, nxt + 4)):
+            blink[j] = 1
+        nxt += rnd.randint(90, 160)
+    seq = [comp.get((0 if blink[i] else mouth[i], blink[i]), comp[(0, 0)]) for i in range(n)]
+    lines, i = [], 0
+    while i < n:
+        j = i
+        while j < n and seq[j] == seq[i]:
+            j += 1
+        lines += [f"file '{seq[i].name}'", f"duration {(j - i) / FPS:.4f}"]
+        i = j
+    lines.append(f"file '{seq[-1].name}'")
+    lst = tmp / f"{tag}.txt"
+    lst.write_text("\n".join(lines) + "\n")
+    return lst
+
+
 def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
     picks = [p for p in out.get("picks", [])[:6] if 1 <= int(p.get("n", 0)) <= len(items)]
     with tempfile.TemporaryDirectory() as t:
@@ -327,22 +399,23 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
         speech.append(out.get("outro") or "یہ تھیں آج کی اہم خبریں۔ مزید خبروں کے لیے چینل کو فالو کریں۔ اللہ حافظ۔")
         slides = shoot(pages, tmp)
         tick = ticker_png("   ●   ".join(p["headline"] for p in picks) + "   ●   ", tmp / "ticker.png")
+        states = anchor_states(tmp)
         segs = []
         for k, (img, text) in enumerate(zip(slides, speech)):
             stinger = k == 0 or k == len(picks) + 1 or k == len(pages) - 1
-            a = speak(text, tmp / f"v{k}.mp3", 0 if stinger else (k + 1) % 2)
+            role = 0 if stinger else (k + 1) % 2
+            a = speak(text, tmp / f"v{k}.mp3", role)
             d = _dur(a) + 0.8
             seg = tmp / f"s{k}.mp4"
-            # پس منظر پر ہلکا زوم + نیچے ٹکر دائیں سے بائیں (اردو کی سمت)
-            # اوپر کا حصہ ہلکا زوم؛ نیچے کی دونوں پٹیاں ساکن (اصل نیوز چینل کی طرح) اور ان پر چلتا ٹکر
-            fc = (f"[0:v]split=3[z0][o0][o1];"
-                  f"[z0]crop={W}:{H - 200}:0:0,scale={W * 1.04:.0f}:-1,"
-                  f"zoompan=z='min(zoom+0.0003,1.04)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{H - 200}:fps={FPS}[top];"
-                  f"[o0]crop={W}:200:0:{H - 200},fps={FPS}[bars];"
-                  f"[o1]crop=240:104:{W - 240}:{H - 104},fps={FPS}[lab];[1:v]format=rgba[tk];"
+            lst = anchor_frames(img, "m" if role == 0 else "f", states, a, d, tmp, f"k{k}")
+            # اوپر: اینکر اور خبر؛ نیچے کی دونوں پٹیاں ساکن اور ان پر چلتا ٹکر (اردو کی سمت)
+            fc = (f"[0:v]fps={FPS},split=3[z0][o0][o1];"
+                  f"[z0]crop={W}:{H - 200}:0:0[top];"
+                  f"[o0]crop={W}:200:0:{H - 200}[bars];"
+                  f"[o1]crop=240:104:{W - 240}:{H - 104}[lab];[1:v]format=rgba[tk];"
                   f"[bars][tk]overlay=x='mod(t*130+{k * 400}+w*0.55,w+{W - 240})-w':y=99:shortest=0[b2];"
                   f"[b2][lab]overlay={W - 240}:96[b3];[top][b3]vstack[v]")
-            _ff("-loop", "1", "-framerate", FPS, "-t", f"{d:.2f}", "-i", img,
+            _ff("-f", "concat", "-safe", "0", "-i", lst,
                 "-loop", "1", "-framerate", FPS, "-t", f"{d:.2f}", "-i", tick, "-i", a,
                 "-filter_complex", fc + ";[2:a]apad,atrim=0:" + f"{d:.2f}[a]",
                 "-map", "[v]", "-map", "[a]", "-t", f"{d:.2f}", "-c:v", "libx264", "-preset", "veryfast",
