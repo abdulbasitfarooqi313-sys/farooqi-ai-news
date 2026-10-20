@@ -314,7 +314,18 @@ def ticker_png(text: str, out: Path) -> Path:
 PHOTOS = ROOT / "assets" / "anchors"
 PS = H / 768                                   # 1408×768 تصویر → 1080 اونچائی
 PX = (round(1408 * PS) - W) // 2               # دونوں طرف سے کٹنے والا حصہ
-FACE = {"m": (850, 203), "f": (705, 150)}      # اصل تصویر میں منہ/چہرے کا مرکز
+FACE = {"m": (850, 203), "f": (706, 150)}      # اصل تصویر میں منہ/چہرے کا مرکز
+ANCHOR_X = 1290                                 # نئے اسٹوڈیو میں اینکر کا مرکز (دائیں طرف، بائیں طرف لوگو والی دیوار)
+_SET: dict = {}                                 # اسٹوڈیو کی دیوار اور میز (render میں ایک بار بنتی ہیں)
+
+
+def _cut(who: str) -> Path:
+    return PHOTOS / ("male_cut.png" if who == "m" else "female_cut.png")
+
+
+def _sx(who: str) -> float:
+    """اینکر کے چہرے کا اسکرین پر x"""
+    return ANCHOR_X if (_cut(who).exists() and _SET) else FACE[who][0] * PS - PX
 BOX = (50, 140, 700, 720)                      # تفصیل والی اسکرین پر اینکر کی کھڑکی: x, y, w, h
 
 
@@ -322,11 +333,20 @@ def _anchor_full(who: str, d: float = 0.0):
     """پوری اسکرین کی اینکر تصویر؛ مرد کے لیے d = منہ کتنا کھلا (پکسل)"""
     import numpy as np
     from PIL import Image
-    im = Image.open(PHOTOS / ("male.jpg" if who == "m" else "female.jpg")).convert("RGB")
-    im = im.resize((round(im.width * PS), H), Image.LANCZOS).crop((PX, 0, PX + W, H))
+    if _cut(who).exists() and _SET:
+        # نیا روشن اسٹوڈیو: دیوار → اینکر (الگ کی ہوئی تصویر) → میز
+        im = _SET["wall"].copy()
+        cut = Image.open(_cut(who)).convert("RGBA")
+        cut = cut.resize((round(cut.width * PS), H), Image.LANCZOS)
+        im.alpha_composite(cut, (round(ANCHOR_X - FACE[who][0] * PS), 0))
+        im.alpha_composite(_SET["desk"])
+        im = im.convert("RGB")
+    else:
+        im = Image.open(PHOTOS / ("male.jpg" if who == "m" else "female.jpg")).convert("RGB")
+        im = im.resize((round(im.width * PS), H), Image.LANCZOS).crop((PX, 0, PX + W, H))
     if who != "m" or d <= 0:
         return im
-    cx, my = FACE["m"][0] * PS - PX, FACE["m"][1] * PS
+    cx, my = _sx("m"), FACE["m"][1] * PS
     x0, x1, y0, y1 = int(cx - 70 * PS), int(cx + 70 * PS), int(my - 10 * PS), int(my + 70 * PS)
     a = np.asarray(im).astype(np.float32)
     sub = a[y0:y1, x0:x1]
@@ -349,6 +369,49 @@ def _anchor_full(who: str, d: float = 0.0):
 
 
 MOUTHS = (0.0, 3.0, 5.0)
+
+SET_CSS = """
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden;background:transparent}
+body{font-family:Nast,Naskh,serif;position:relative}
+.wall{position:absolute;inset:0;background:linear-gradient(180deg,#f4f6fa 0%,#e7ebf2 62%,#d9dee8 100%)}
+.panel{position:absolute;top:0;bottom:0;width:2px;background:rgba(120,135,160,.22)}
+.arc1{position:absolute;left:-520px;top:-420px;width:1500px;height:1500px;border-radius:50%;
+ border:120px solid #0b2a6f;opacity:.95}
+.arc2{position:absolute;left:-420px;top:-320px;width:1300px;height:1300px;border-radius:50%;border:16px solid #00b4e6}
+.arc3{position:absolute;left:-600px;top:-500px;width:1660px;height:1660px;border-radius:50%;border:6px solid #d4a73a}
+.arc4{position:absolute;right:-380px;top:-260px;width:900px;height:900px;border-radius:50%;border:70px solid rgba(11,42,111,.10)}
+.screen{position:absolute;left:150px;top:150px;width:700px;height:560px;border-radius:14px;overflow:hidden;
+ background:radial-gradient(500px 360px at 50% 40%,#1b4fc4,#0a1f5c 70%,#06123a);border:10px solid #1c2433;
+ box-shadow:0 30px 60px rgba(10,20,50,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.screen:before{content:"";position:absolute;inset:0;opacity:.16;background-image:
+ linear-gradient(rgba(140,200,255,.8) 1px,transparent 1px),linear-gradient(90deg,rgba(140,200,255,.8) 1px,transparent 1px);background-size:40px 40px}
+.screen img{width:300px;height:300px;border-radius:50%;box-shadow:0 0 50px rgba(0,190,255,.6);position:relative}
+.screen .t{font-weight:700;font-size:58px;color:#fff;line-height:1.7;position:relative}
+.screen .e{font-family:Naskh;font-weight:700;font-size:30px;letter-spacing:8px;color:#7fe3ff;position:relative;direction:ltr}
+.light{position:absolute;left:0;right:0;top:0;height:70px;background:linear-gradient(180deg,rgba(255,255,255,.9),transparent)}
+.floor{position:absolute;left:0;right:0;bottom:0;height:260px;background:linear-gradient(180deg,rgba(200,208,222,0),rgba(170,180,200,.55))}
+.desk{position:absolute;left:640px;right:-40px;top:842px;height:260px;border-radius:40px 0 0 0;
+ background:linear-gradient(180deg,#ffffff 0%,#f1f4f9 14%,#dfe5ee 15%,#ffffff 40%,#e9edf4 100%);
+ box-shadow:0 -6px 24px rgba(20,40,80,.18)}
+.desk:after{content:"";position:absolute;left:0;right:0;top:34px;height:10px;background:linear-gradient(90deg,#0b2a6f,#00b4e6,#d4a73a)}
+"""
+
+
+def build_set(tmp: Path) -> None:
+    """روشن جدید نیوز اسٹوڈیو: دیوار (لوگو والی بڑی اسکرین) اور سفید میز"""
+    from PIL import Image
+    fonts = (f"@font-face{{font-family:Nast;font-weight:700;src:url({_font('noto-nastaliq-urdu-arabic-700-normal.woff2')})}}"
+             f"@font-face{{font-family:Naskh;font-weight:700;src:url({_font('noto-naskh-arabic-arabic-700-normal.woff2')})}}")
+    panels = "".join(f'<div class="panel" style="left:{x}px"></div>' for x in (980, 1240, 1500, 1760))
+    wall = (f'<!doctype html><meta charset="utf-8"><style>{fonts}{SET_CSS}</style><body><div class="wall"></div>{panels}'
+            f'<div class="arc4"></div><div class="arc3"></div><div class="arc1"></div><div class="arc2"></div><div class="light"></div>'
+            f'<div class="screen"><img src="{_logo()}"><div class="t">فاروقی اے آئی نیوز</div><div class="e">AI NEWS</div></div>'
+            f'<div class="floor"></div></body>')
+    desk = f'<!doctype html><meta charset="utf-8"><style>{fonts}{SET_CSS}</style><body><div class="desk"></div></body>'
+    a, b = shoot([wall], tmp, tag="setwall"), shoot([desk], tmp, transparent=True, tag="setdesk")
+    _SET["wall"] = Image.open(a[0]).convert("RGBA")
+    _SET["desk"] = Image.open(b[0]).convert("RGBA")
 
 
 def anchor_states(tmp: Path) -> dict:
@@ -465,7 +528,7 @@ def _frames(seg: dict, states: dict, audio: Path, secs: float, tmp: Path, tag: s
         else:
             im = Image.open(seg["pages"][page]).convert("RGBA")
             x, y, w, h = BOX
-            cx = FACE[who][0] * PS - PX
+            cx = _sx(who)
             crop = anchor.crop((int(cx - (w - 6) / 2), 40, int(cx + (w - 6) / 2), 40 + h - 61))
             mask = Image.new("L", crop.size, 0)
             ImageDraw.Draw(mask).rounded_rectangle((0, 0, crop.width - 1, crop.height + 20), 15, fill=255)
@@ -505,6 +568,55 @@ def _split(text_parts: list[str], total: float) -> list[float]:
 
 
 
+def make_card(tmp: Path, kind: str, date: str) -> Path:
+    """انٹرو / آؤٹرو: حرکت کرتا لوگو + کورس کی آوازیں (کوئی ساز یا موسیقی نہیں) + اینکرز کی آواز میں چینل کا نام"""
+    import ident
+    fonts = (f"@font-face{{font-family:Nast;font-weight:400;src:url({_font('noto-nastaliq-urdu-arabic-400-normal.woff2')})}}"
+             f"@font-face{{font-family:Nast;font-weight:700;src:url({_font('noto-nastaliq-urdu-arabic-700-normal.woff2')})}}"
+             f"@font-face{{font-family:Naskh;font-weight:700;src:url({_font('noto-naskh-arabic-arabic-700-normal.woff2')})}}")
+    if kind == "intro":
+        dur, title, sub = 6.5, "فاروقی اے آئی نیوز", "مصنوعی ذہانت کی دنیا کی تازہ ترین خبریں"
+        lines = [("فاروقی، اے آئی نیوز۔", 0, 1.2), ("مصنوعی ذہانت کی دنیا، آپ کی زبان میں۔", 1, 3.4)]
+        notes, vowel = (146.83, 220.0, 293.66, 369.99), "aa"
+    else:
+        dur, title, sub = 6.0, "دیکھنے کا شکریہ", "روزانہ نئی خبروں کے لیے چینل سبسکرائب کریں"
+        lines = [("فاروقی، اے آئی نیوز۔", 0, 1.4)]
+        notes, vowel = (130.81, 196.0, 261.63, 329.63), "oo"
+    bg, _, tx = ident.card_html(_logo(), fonts, title, sub, date if kind == "intro" else "")
+    bgp = shoot([bg], tmp, tag=f"{kind}bg")[0]
+    txp = shoot([tx], tmp, transparent=True, tag=f"{kind}tx")[0]
+    sw = ident.sweep_png(tmp / f"{kind}_sweep.png")
+    logo = ROOT / "assets" / "logo.png"
+    ch = ident.save_wav(ident.choir(dur, notes, vowel), tmp / f"{kind}_choir.wav")
+    ins, mix = ["-i", ch], ["[1:a]volume=0.9[c]"]
+    for j, (txt, role, at) in enumerate(lines):
+        v = speak(txt, tmp / f"{kind}_v{j}.mp3", role)
+        ins += ["-i", v]
+        ms = int(at * 1000)
+        mix.append(f"[{2 + j}:a]aresample=44100,aformat=channel_layouts=stereo,volume=1.6,"
+                   f"aecho=0.8:0.55:90|180|300:0.32|0.2|0.1,adelay={ms}|{ms}[v{j}]")
+    lab = "".join(f"[v{j}]" for j in range(len(lines)))
+    mix.append(f"[c]{lab}amix=inputs={1 + len(lines)}:normalize=0:duration=first,atrim=0:{dur},"
+               f"afade=t=out:st={dur - 0.8}:d=0.8[a]")
+    n = 2 + len(lines)
+    fc = (f"[0:v]fps={FPS},format=rgba[b];"
+          f"[{n}:v]format=rgba,scale=w='trunc(560*(0.55+0.45*min(1,t/1.3))/2)*2':h=-2:eval=frame,"
+          f"fade=in:st=0.2:d=0.7:alpha=1[lg];"
+          f"[b][lg]overlay=x='(W-w)/2':y='420-h/2'[b1];"
+          f"[{n + 1}:v]format=rgba[sw];[b1][sw]overlay=x='-700+(t-1.1)*1700':y=0:enable='between(t,1.1,2.6)'[b2];"
+          f"[{n + 2}:v]format=rgba,fade=in:st=1.5:d=0.7:alpha=1[tx];[b2][tx]overlay=0:0,"
+          f"fade=in:st=0:d=0.4,format=yuv420p[v]")
+    outp = tmp / f"{kind}.mp4"
+    _ff("-loop", "1", "-framerate", FPS, "-t", f"{dur}", "-i", bgp, *ins,
+        "-loop", "1", "-framerate", FPS, "-t", f"{dur}", "-i", logo,
+        "-loop", "1", "-framerate", FPS, "-t", f"{dur}", "-i", sw,
+        "-loop", "1", "-framerate", FPS, "-t", f"{dur}", "-i", txp,
+        "-filter_complex", ";".join(mix) + ";" + fc, "-map", "[v]", "-map", "[a]", "-t", f"{dur}",
+        "-c:v", "libx264", "-preset", "veryfast", "-crf", "22", "-pix_fmt", "yuv420p", "-r", FPS,
+        "-c:a", "aac", "-b:a", "128k", "-ar", "44100", outp)
+    return outp
+
+
 def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
     picks = [p for p in out.get("picks", [])[:6] if 1 <= int(p.get("n", 0)) <= len(items)]
     with tempfile.TemporaryDirectory() as t:
@@ -528,6 +640,8 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
                          "say": out.get("outro") or "یہ تھیں آج کی اہم خبریں۔ مزید خبروں کے لیے چینل کو فالو کریں۔ اللہ حافظ۔",
                          "l3": [("شکریہ", "روزانہ اے آئی کی تازہ خبروں کے لیے چینل سبسکرائب کریں")]})
 
+        if _cut("m").exists() and _cut("f").exists():
+            build_set(tmp)
         states = anchor_states(tmp)
         overlay = shoot([full_overlay(date)], tmp, transparent=True, tag="ov")[0]
         bgs = {w: _studio_bg(w) for w in ("m", "f")}
@@ -549,7 +663,7 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
             fc = f"[0:v]fps={FPS},split=3[z0][o0][o1];"
             if sd["kind"] == "full":      # کیمرہ آہستہ آہستہ قریب (نیوز اسٹوڈیو کی طرح)
                 fc += (f"[z0]crop={W}:{H - 200}:0:0,scale=w='trunc({W}*(1+0.045*t/{d:.2f})/2)*2':h=-2:eval=frame,"
-                       f"crop={W}:{H - 200}:'(iw-{W})*{0.62 if sd['who'] == 'm' else 0.5}':'(ih-{H - 200})*0.35',setsar=1[top];")
+                       f"crop={W}:{H - 200}:'(iw-{W})*{_sx(sd['who']) / W:.2f}':'(ih-{H - 200})*0.35',setsar=1[top];")
             else:
                 fc += f"[z0]crop={W}:{H - 200}:0:0[top];"
             fc += (f"[o0]crop={W}:200:0:{H - 200}[bars];"
@@ -573,11 +687,14 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
                 "-map", f"[{last}]", "-map", "[a]", "-t", f"{d:.2f}", "-c:v", "libx264", "-preset", "veryfast",
                 "-crf", "23", "-pix_fmt", "yuv420p", "-r", FPS, "-c:a", "aac", "-b:a", "128k", "-ar", "44100", seg)
             segs.append(seg)
+        # شروع میں انٹرو اور آخر میں آؤٹرو (کورس کی آوازیں، موسیقی نہیں)
+        segs = [make_card(tmp, "intro", date)] + segs + [make_card(tmp, "outro", date)]
+        segs_def = [{"kind": "full"}] + segs_def + [{"kind": "full"}]
         T = 0.5
         durs = [_dur(x) for x in segs]
         start = [sum(durs[:k]) - k * T for k in range(len(segs))]
         out["_chapters"] = ([(0, "آغاز اور آج کی سرخیاں")] +
-                            [(start[2 + i], p["headline"]) for i, p in enumerate(picks)])
+                            [(start[3 + i], p["headline"]) for i, p in enumerate(picks)])
         out["_voice"] = ", ".join(sorted(VOICE_USED))
         args, vf, af = [], [], []
         for x in segs:
