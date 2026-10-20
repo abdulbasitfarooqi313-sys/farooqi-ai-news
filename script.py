@@ -314,6 +314,22 @@ def seo(out: dict, items: list[dict]) -> list[str]:
     ]
 
 
+def find_chat_id() -> str:
+    """TELEGRAM_CHAT_ID نہ ہو تو: بوٹ کو جس نے آخری پیغام بھیجا، اسی کی چیٹ (ایک بار مل جائے تو history.json میں یاد)"""
+    token = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
+    if not token:
+        raise SystemExit("TELEGRAM_BOT_TOKEN نہیں ملا — Settings → Secrets → Actions میں ڈالیں")
+    r = requests.get(f"https://api.telegram.org/bot{token}/getUpdates", timeout=30).json()
+    if not r.get("ok"):
+        raise SystemExit(f"ٹیلیگرام بوٹ ٹوکن غلط ہے: {r.get('description')}")
+    chats = [u["message"]["chat"]["id"] for u in r.get("result", [])
+             if u.get("message", {}).get("chat", {}).get("type") == "private"]
+    if not chats:
+        raise SystemExit("بوٹ کو ابھی کسی نے پیغام نہیں بھیجا — ٹیلیگرام میں ai_news_bot کھول کر 'hi' بھیجیں، پھر دوبارہ چلائیں")
+    log("ٹیلیگرام چیٹ مل گئی ✅")
+    return str(chats[-1])
+
+
 def send(text: str, chat: str) -> None:
     if MOCK:
         print(text, "\n")
@@ -349,6 +365,13 @@ def main() -> None:
         log("آج کافی نئی خبریں نہیں — کچھ نہیں بھیجا")
         return
     items = items[:40]
+    # ٹیلیگرام پہلے چیک — تاکہ Gemini کا کوٹہ ضائع نہ ہو
+    me = os.environ.get("TELEGRAM_CHAT_ID", "").strip() or str(hist.get("chat_id", ""))
+    if not me and not MOCK:
+        me = find_chat_id()
+        if me:
+            hist["chat_id"] = me
+    channel = os.environ.get("TELEGRAM_CHANNEL", "")
     out = write(items)
     # ویڈیو تقریباً 3 منٹ کی رہے: الفاظ زیادہ ہوں تو آخری خبریں نکال دیں (کم از کم 4)
     def words(p): return len(f"{p.get('headline','')} {p.get('body','')} {p.get('comment','')}".split())
@@ -356,8 +379,6 @@ def main() -> None:
     while len(picks) > 4 and sum(words(p) for p in picks) > 380:
         picks.pop()
     out["picks"] = picks
-    me = os.environ.get("TELEGRAM_CHAT_ID", "")
-    channel = os.environ.get("TELEGRAM_CHANNEL", "")
     text = bulletin(out, items)
     if not me and not channel and not MOCK:
         raise SystemExit("TELEGRAM_CHAT_ID (یا TELEGRAM_CHANNEL) Secret میں ڈالیں")
