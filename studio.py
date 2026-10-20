@@ -515,6 +515,44 @@ def detail_html(who: str, bg: str, headline: str, body: str, source: str, date: 
     return _bare(inner, H, hs, bs, cs).replace("background:transparent!important", "background:#040a1c!important")
 
 
+BOX_L = (60, 150, 880, 690)                     # دو حصوں والی اسکرین: اینکر (بائیں) اور رپورٹر (دائیں)
+BOX_R = (980, 150, 880, 690)
+
+CSS += """
+.sbox{position:absolute;border-radius:18px;border:3px solid rgba(0,198,255,.75);box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.sbox .nm{position:absolute;bottom:-3px;right:-3px;left:-3px;height:64px;background:linear-gradient(90deg,#0a3aa8,#1150d8);
+ border-radius:0 0 18px 18px;font-weight:700;font-size:32px;line-height:2;text-align:center}
+.sbox .live{position:absolute;top:16px;left:16px;z-index:2;background:#e11d2e;font-weight:700;font-size:26px;padding:0 16px;border-radius:6px;line-height:1.7}
+.pin{position:absolute;z-index:2;right:18px;top:16px;background:rgba(3,8,26,.82);border:1px solid rgba(0,198,255,.6);border-radius:10px;
+ padding:2px 16px;font-size:28px;line-height:1.8;display:flex;gap:10px;align-items:center}
+.pin svg{width:26px;height:26px}
+.mic{position:absolute;z-index:2;left:18px;top:16px;width:58px;height:58px;border-radius:50%;background:#e11d2e;display:flex;align-items:center;justify-content:center}
+.mic svg{width:30px;height:30px}
+"""
+PIN_SVG = '<svg viewBox="0 0 24 24" fill="#ff4d5e"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>'
+MIC_SVG = '<svg viewBox="0 0 24 24" fill="#fff"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-3.1A7 7 0 0 0 19 11z"/></svg>'
+
+
+def split_icons(city: str) -> str:
+    """رپورٹر کی کھڑکی پر مائیک اور شہر کا نشان (تصویر کے اوپر، شفاف)"""
+    x, y, w, h = BOX_R
+    return _bare(f'<div style="position:absolute;left:{x}px;top:{y}px;width:{w}px;height:{h}px">'
+                 f'<div class="mic">{MIC_SVG}</div><div class="pin">{PIN_SVG}{html.escape(city)}</div></div>')
+
+
+def split_html(bg: str, date: str, reporter: str, city: str) -> str:
+    """اینکر اور رپورٹر آمنے سامنے (رپورٹر کی ساکن تصویر، مائیک، نام اور شہر)"""
+    def box(b, inner):
+        x, y, w, h = b
+        return f'<div class="sbox" style="left:{x}px;top:{y}px;width:{w}px;height:{h}px">{inner}</div>'
+    inner = (f'<div class="studio" style="background-image:url({bg})"></div><div class="shade" style="background:rgba(2,8,30,.72)"></div>'
+             + _top(date)
+             + box(BOX_L, '<div class="nm">نیوز اینکر · اسٹوڈیو</div>')
+             + box(BOX_R, f'<div class="nm">نمائندہ: {html.escape(reporter)} · {html.escape(city)}</div>')
+             + '<div class="l3"></div>' + _lower())
+    return _bare(inner).replace("background:transparent!important", "background:#040a1c!important")
+
+
 def mouth_track(audio: Path, secs: float) -> list[int]:
     """آواز کی بلندی سے ہر فریم پر منہ: 0 بند، 1 تھوڑا، 2 کھلا"""
     import numpy as np
@@ -546,6 +584,19 @@ def _frames(seg: dict, states: dict, audio: Path, secs: float, tmp: Path, tag: s
         if seg["kind"] == "full":
             im = anchor
             im.alpha_composite(Image.open(seg["overlay"]).convert("RGBA"))
+        elif seg["kind"] == "split":
+            im = Image.open(seg["pages"][0]).convert("RGBA")
+            for w_, (x, y, w, h) in (("f", BOX_L), ("m", BOX_R)):
+                an = Image.open(states[(w_, 0)]).convert("RGBA")
+                cx = _sx(w_)
+                crop = an.crop((int(cx - (w - 6) / 2), 30, int(cx + (w - 6) / 2), 30 + h - 67))
+                mask = Image.new("L", crop.size, 0)
+                ImageDraw.Draw(mask).rounded_rectangle((0, 0, crop.width - 1, crop.height + 20), 15, fill=255)
+                im.paste(crop, (x + 3, y + 3), mask)
+                if (seg["speaker"] == w_) is False:      # جو نہیں بول رہا وہ ہلکا مدھم
+                    dim = Image.new("RGBA", (w - 6, h - 67), (0, 0, 0, 70))
+                    im.alpha_composite(dim, (x + 3, y + 3))
+            im.alpha_composite(Image.open(seg["icons"]).convert("RGBA"))
         else:
             im = Image.open(seg["pages"][page]).convert("RGBA")
             x, y, w, h = BOX
@@ -596,12 +647,12 @@ def make_card(tmp: Path, kind: str, date: str) -> Path:
              f"@font-face{{font-family:Nast;font-weight:700;src:url({_font('noto-nastaliq-urdu-arabic-700-normal.woff2')})}}"
              f"@font-face{{font-family:Naskh;font-weight:700;src:url({_font('noto-naskh-arabic-arabic-700-normal.woff2')})}}")
     if kind == "intro":
-        dur, title, sub = 6.5, "فاروقی اے آئی نیوز", "مصنوعی ذہانت کی دنیا کی تازہ ترین خبریں"
-        lines = [("فاروقی، اے آئی نیوز۔", 0, 1.2), ("مصنوعی ذہانت کی دنیا، آپ کی زبان میں۔", 1, 3.4)]
+        dur, title, sub = 6.5, "فاروقی اے آئی نیوز", "باوثوق · باخبر · سب سے آگے"
+        lines = [("فاروقی، اے آئی نیوز۔", 0, 1.2), ("باوثوق، باخبر، سب سے آگے!", 1, 3.3)]
         notes, vowel = (146.83, 220.0, 293.66, 369.99), "aa"
     else:
-        dur, title, sub = 6.0, "دیکھنے کا شکریہ", "روزانہ نئی خبروں کے لیے چینل سبسکرائب کریں"
-        lines = [("فاروقی، اے آئی نیوز۔", 0, 1.4)]
+        dur, title, sub = 6.0, "فاروقی اے آئی نیوز", "ہر لمحہ، باخبر · سبسکرائب کریں"
+        lines = [("فاروقی اے آئی نیوز۔ ہر لمحہ، باخبر!", 0, 1.4)]
         notes, vowel = (130.81, 196.0, 261.63, 329.63), "oo"
     bg, _, tx = ident.card_html(_logo(), fonts, title, sub, date if kind == "intro" else "")
     bgp = shoot([bg], tmp, tag=f"{kind}bg")[0]
@@ -639,27 +690,41 @@ def make_card(tmp: Path, kind: str, date: str) -> Path:
 
 
 def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
-    picks = [p for p in out.get("picks", [])[:6] if 1 <= int(p.get("n", 0)) <= len(items)]
+    picks = [p for p in out.get("picks", [])[:5] if 1 <= int(p.get("n", 0)) <= len(items)]
     with tempfile.TemporaryDirectory() as t:
         tmp = Path(t)
         intro = out.get("intro") or "السلام علیکم۔ فاروقی اے آئی نیوز میں خوش آمدید۔ آج کی تازہ ترین خبریں۔"
         first = intro.find("السلام علیکم")                     # سلام صرف ایک بار
         if first >= 0:
             intro = intro[:first + 12] + intro[first + 12:].replace("السلام علیکم", "").replace("۔۔", "۔")
-        hl_say = [p.get("headline_say") or p["headline"] for p in picks] + ["اور اب، ان خبروں کی تفصیل۔"]
-        # حصے: آغاز (مرد) → سرخیاں (خاتون) → ہر خبر کی تفصیل (باری باری) → اختتام (مرد)
+        hl_say = [p.get("headline_say") or p["headline"] for p in picks]
+        reporter = os.environ.get("NEWS_REPORTER", "عمر فاروق")
+
+        def story_say(p, extra=""):
+            base = p.get("say") or (f"{p['headline']}۔ {p['body']}" + (f" {p['comment']}" if p.get("comment") else ""))
+            return base + (f" {extra}" if extra else "")
+        # ترتیب: خاتون اینکر — سلام → سرخیاں → مین اسٹوری + تجزیہ → رپورٹر سے سوال و جواب → باقی خبریں → اختتام
         segs_def = [{"kind": "full", "who": "f", "say": intro, "l3": [("خوش آمدید", "فاروقی اے آئی نیوز · آج کی اہم خبریں")]},
                     {"kind": "full", "who": "f", "say": " ".join(hl_say), "parts": hl_say,
-                     "l3": [("سرخیاں", p["headline"]) for p in picks] + [("تفصیلات", "اب ان خبروں کی تفصیل")]}]
+                     "l3": [("سرخیاں", p["headline"]) for p in picks]}]
         for k, p in enumerate(picks):
             src = items[int(p["n"]) - 1]["source"]
-            who = "f" if k % 2 == 0 else "m"          # خاتون اینکر اسٹوڈیو سے، مرد رپورٹر (ساکن تصویر + آواز)
-            say = p.get("say") or (f"{p['headline']}۔ {p['body']}" + (f" {p['comment']}" if p.get("comment") else ""))
-            segs_def.append({"kind": "detail", "who": who, "say": say, "pick": p, "src": src,
-                             "l3": [("اہم خبر", p["headline"])]})
+            main = k == 0 and p.get("qa")
+            segs_def.append({"kind": "detail", "who": "f", "say": story_say(p, p.get("commentary", "") if main else ""),
+                             "pick": p, "src": src, "chapter": p["headline"],
+                             "note": (p.get("commentary") or p.get("comment", "")) if main else p.get("comment", ""),
+                             "l3": [("مین اسٹوری" if main else "اہم خبر", p["headline"])]})
+            if main:
+                city = p.get("reporter_city") or "سان فرانسسکو"
+                lab = ("رپورٹر سے رابطہ", f"نمائندہ {reporter} · {city}")
+                intro_r = p.get("reporter_intro") or f"اس خبر کی مزید تفصیل کے لیے ہمارے ساتھ موجود ہیں نمائندہ {reporter}۔"
+                segs_def.append({"kind": "split", "who": "f", "speaker": "f", "say": intro_r, "city": city, "l3": [lab]})
+                for qa in p["qa"][:2]:
+                    segs_def.append({"kind": "split", "who": "f", "speaker": "f", "say": qa["q"], "city": city, "l3": [lab]})
+                    segs_def.append({"kind": "split", "who": "m", "speaker": "m", "say": qa["a"], "city": city, "l3": [lab]})
         segs_def.append({"kind": "full", "who": "f",
-                         "say": out.get("outro") or "یہ تھیں آج کی اہم خبریں۔ مزید خبروں کے لیے چینل کو فالو کریں۔ اللہ حافظ۔",
-                         "l3": [("شکریہ", "روزانہ اے آئی کی تازہ خبروں کے لیے چینل سبسکرائب کریں")]})
+                         "say": out.get("outro") or "ناظرین و سامعین، یہ تھیں آج کی اہم خبریں۔ فاروقی اے آئی نیوز کو سبسکرائب کیجیے۔ اللہ حافظ۔",
+                         "l3": [("شکریہ", "فاروقی اے آئی نیوز سبسکرائب کریں · ہر لمحہ، باخبر")]})
 
         if _cut("m").exists() and _cut("f").exists():
             build_set(tmp)
@@ -673,10 +738,13 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
             d = _dur(a) + 0.7
             if sd["kind"] == "full":
                 sd["overlay"] = overlay
+            elif sd["kind"] == "split":
+                sd["pages"] = shoot([split_html(bgs["f"], date, reporter, sd["city"])], tmp, tag=f"d{k}_")
+                sd["icons"] = shoot([split_icons(sd["city"])], tmp, transparent=True, tag=f"i{k}_")[0]
             else:
                 p = sd["pick"]
                 sd["pages"] = shoot([detail_html(sd["who"], bgs[sd["who"]], p["headline"], p["body"], sd["src"], date,
-                                                 p.get("comment", ""))], tmp, tag=f"d{k}_")
+                                                 sd.get("note", ""))], tmp, tag=f"d{k}_")
             starts = _split(sd["parts"], d - 0.7) if sd.get("parts") else [0.0]
             l3s = shoot([l3_html(a_, b_) for a_, b_ in sd["l3"]], tmp, transparent=True, height=96, tag=f"l{k}_")
             # مرد اینکر: ہونٹ آواز کے مطابق (MuseTalk AI)؛ نہ چلے تو پرانا طریقہ
@@ -732,7 +800,7 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
         durs = [_dur(x) for x in segs]
         start = [sum(durs[:k]) - k * T for k in range(len(segs))]
         out["_chapters"] = ([(0, "آغاز اور آج کی سرخیاں")] +
-                            [(start[3 + i], p["headline"]) for i, p in enumerate(picks)])
+                            [(start[i], sd_["chapter"]) for i, sd_ in enumerate(segs_def) if sd_.get("chapter")])
         out["_voice"] = ", ".join(sorted(VOICE_USED))
         args, vf, af = [], [], []
         for x in segs:
@@ -740,7 +808,8 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
         vlast, alast, off = "0:v", "0:a", 0.0
         for k in range(1, len(segs)):
             off += durs[k - 1] - T
-            kind = "fade" if segs_def[k]["kind"] == "full" else "slideleft"
+            cur, prev = segs_def[k]["kind"], segs_def[k - 1]["kind"]
+            kind = "fade" if cur == "full" or (cur == "split" and prev == "split") else "slideleft"
             vf.append(f"[{vlast}][{k}:v]xfade=transition={kind}:duration={T}:offset={off:.2f}[v{k}]")
             af.append(f"[{alast}][{k}:a]acrossfade=d={T}[a{k}]")
             vlast, alast = f"v{k}", f"a{k}"
