@@ -641,6 +641,51 @@ def report_html(headline: str, src: str, reporter: str, city: str, img: str = ""
     return _bare(inner)
 
 
+# ---- رپورٹ کا منظر (دوسرا نیوز روم: اینکر کھڑی، بڑی خمدار اسکرین پر رپورٹ) ----
+SCENE = PHOTOS / "report_scene.jpg"
+SC_CROP = (0, 24, 1280, 744)          # دائیں طرف کی عمودی پٹی کٹ جاتی ہے؛ ×1.5 = 1920×1080
+RP2 = (1150, 190, 670, 450)           # بڑی اسکرین پر ہماری رپورٹ
+RP2_REP = (1579, 205, 226, 272)       # اسکرین کے اندر رپورٹر کی تصویر
+
+CSS += """
+.r2{position:absolute;border-radius:14px;overflow:hidden;background:#06123a;border:3px solid rgba(190,230,255,.85);
+ box-shadow:0 0 30px rgba(0,198,255,.45)}
+.r2 .vis{position:absolute;inset:0;background-size:cover;background-position:center}
+.r2 .vis.g{background:radial-gradient(500px 300px at 35% 40%,#1f5be0,#0a1f5c 65%,#040c2a)}
+.r2 .vis .big{position:absolute;left:20px;right:250px;top:170px;text-align:center;font-weight:700;font-size:38px;line-height:1.8;
+ text-shadow:0 6px 30px rgba(0,0,0,.7)}
+.r2 .cap{position:absolute;left:0;right:0;bottom:0;height:72px;background:linear-gradient(90deg,#0a2a7a,#0d3fb0);border-top:3px solid #00c6ff;
+ font-weight:700;font-size:30px;line-height:2.3;padding:0 22px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.r2 .map{position:absolute;left:12px;top:12px;width:230px;height:150px;border-radius:8px;overflow:hidden;border:2px solid #e9eef8}
+.r2 .map .c{position:absolute;left:0;right:0;bottom:0;background:rgba(11,42,111,.92);font-weight:700;font-size:22px;line-height:1.7;text-align:center}
+.r2 .nm{position:absolute;right:12px;top:284px;width:226px;height:44px;background:#e11d2e;font-weight:700;font-size:23px;line-height:1.9;text-align:center}
+.r2 .on{position:absolute;right:12px;top:334px;width:226px;text-align:center;background:rgba(3,8,26,.85);border:1px solid #00c6ff;
+ border-radius:8px;font-size:22px;line-height:1.7}
+"""
+
+
+def report2_html(headline: str, src: str, reporter: str, city: str, img: str = "", reporter_on: bool = False) -> str:
+    """دوسرے نیوز روم کی بڑی اسکرین (شفاف صفحہ): خبر کی تصویر، نقشہ، رپورٹر، عنوان"""
+    x, y, w, h = RP2
+    vis = (f'<div class="vis" style="background-image:url({img})"></div>' if img else
+           f'<div class="vis g"><div class="big">{html.escape(headline)}</div></div>')
+    sign = ('<div style="position:absolute;left:404px;top:96px;width:214px;height:112px;border-radius:8px;background:#1a1f2b;'
+            'border:3px solid #2b3245;display:flex;align-items:center;justify-content:center">'
+            '<div style="font-family:Naskh;font-weight:700;font-size:32px;color:#ff4d5e;text-shadow:0 0 14px rgba(255,60,80,.8);direction:ltr">AI NEWS</div></div>')
+    inner = (sign + f'<div class="r2" style="left:{x}px;top:{y}px;width:{w}px;height:{h}px">{vis}'
+             f'<div class="map">{_map_svg(city, 230, 150)}<div class="c">📍 {html.escape(city)}</div></div>'
+             f'<div class="nm">نمائندہ {html.escape(reporter)}</div>'
+             + ('<div class="on">🎙️ بول رہے ہیں</div>' if reporter_on else "")
+             + f'<div class="cap">خصوصی رپورٹ: {html.escape(headline)}</div></div>'
+             + '<div class="l3"></div>' + _lower())
+    return _bare(inner)
+
+
+def report_canvas():
+    from PIL import Image
+    return Image.open(SCENE).convert("RGB").crop(SC_CROP).resize((W, H), Image.LANCZOS).convert("RGBA")
+
+
 def story_image(prompt: str, out: Path) -> Path | None:
     """مین اسٹوری کی تصویر Gemini سے (اگر مفت کوٹہ ہو)؛ نہ بنے تو None — پھر گرافک"""
     import json as _j, requests
@@ -708,7 +753,7 @@ def _frames(seg: dict, states: dict, audio: Path, secs: float, tmp: Path, tag: s
         elif seg["kind"] == "report":
             im = seg["canvas"].copy()
             im.alpha_composite(Image.open(seg["pages"][0]).convert("RGBA"))
-            x, y, w, h = RP_INSET
+            x, y, w, h = RP2_REP if SCENE.exists() else RP_INSET
             rp_f = PHOTOS / "reporter.jpg"
             if rp_f.exists():
                 crop = Image.open(rp_f).convert("RGB").resize((w, h), Image.LANCZOS)
@@ -899,12 +944,13 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
             elif sd["kind"] == "report":
                 if "canvas" not in _RP:
                     from PIL import Image
-                    _RP["canvas"] = Image.open(states[("f", 0)]).convert("RGBA")
+                    _RP["canvas"] = report_canvas() if SCENE.exists() else Image.open(states[("f", 0)]).convert("RGBA")
                     simg = story_image(out.get("thumbnail_prompt", ""), tmp / "story.png")
                     _RP["story_img"] = ("data:image/png;base64," + base64.b64encode(simg.read_bytes()).decode()) if simg else ""
                 sd["canvas"] = _RP["canvas"]
-                sd["pages"] = shoot([report_html(sd["headline"], sd["src"], reporter, sd["city"], _RP["story_img"],
-                                                 sd["speaker"] == "m")], tmp, transparent=True, tag=f"d{k}_")
+                rh = report2_html if SCENE.exists() else report_html
+                sd["pages"] = shoot([rh(sd["headline"], sd["src"], reporter, sd["city"], _RP["story_img"],
+                                        sd["speaker"] == "m")], tmp, transparent=True, tag=f"d{k}_")
             elif sd["kind"] == "split":
                 sd["pages"] = shoot([split_html(bgs["f"], date, reporter, sd["city"])], tmp, tag=f"d{k}_")
                 sd["icons"] = shoot([split_icons(sd["city"])], tmp, transparent=True, tag=f"i{k}_")[0]
