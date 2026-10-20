@@ -26,13 +26,16 @@ GEMINI_VOICES = [v.strip() for v in os.environ.get("NEWS_GEMINI_VOICES", "Charon
 VOICES = [v.strip() for v in os.environ.get("NEWS_VOICES", "ur-PK-AsadNeural,ur-PK-UzmaNeural").split(",") if v.strip()]
 TTS_MODELS = ["gemini-2.5-flash-preview-tts", "gemini-2.5-pro-preview-tts"]
 STYLE = {
-    0: "a senior Pakistani television news anchor (male) on a national Urdu news channel: authoritative, crisp, "
-       "confident and warm; perfect standard Urdu pronunciation; "
-       "brisk broadcast pace with clean pauses at full stops; no theatrics",
-    1: "a senior Pakistani television news anchor (female) on a national Urdu news channel: clear, composed, "
-       "confident and friendly; perfect standard Urdu pronunciation; brisk broadcast pace with clean pauses at full stops",
+    0: "a seasoned male news anchor of a Pakistani national TV channel (PTV / Geo prime-time bulletin style): "
+       "deep, authoritative, steady and formal; refined standard Urdu (Karachi/Lahore broadcast Urdu, not Hindi), "
+       "correct Urdu sounds for ق خ غ ز ع; measured news-reading pace, slight emphasis on key words, "
+       "clear pause at every full stop; serious but not dramatic, no smiling tone",
+    1: "a seasoned female news anchor of a Pakistani national TV channel (PTV / Geo prime-time bulletin style): "
+       "clear, composed, confident and formal; refined standard Urdu (broadcast Urdu, not Hindi), "
+       "correct Urdu sounds for ق خ غ ز ع; measured news-reading pace, clear pause at every full stop; no theatrics",
 }
 _GEMINI_OFF = {"off": not os.environ.get("GEMINI_API_KEY")}
+VOICE_USED: set = set()
 
 
 def _ff(*args) -> None:
@@ -97,6 +100,7 @@ def _gemini_tts(text: str, role: int, out: Path) -> Path | None:
                 w.setframerate(int(m.group(1)) if m else 24000)
                 w.writeframes(base64.b64decode(part["data"]))
             if raw.stat().st_size > 20000:
+                VOICE_USED.add(f"Gemini {model} ({voice})")
                 return raw
     print("Gemini آواز نہیں ملی — آج Edge کی آواز پر")
     _GEMINI_OFF["off"] = True
@@ -126,6 +130,7 @@ def speak(text: str, out: Path, role: int = 0) -> Path:
         try:
             asyncio.run(_speak(_fix_edge(text), out, voice))
             if out.exists() and out.stat().st_size > 2000:
+                VOICE_USED.add(f"Edge {voice}")
                 return out
         except Exception as e:
             print(f"آواز: دوبارہ کوشش {i + 1} ({e})")
@@ -260,21 +265,21 @@ def title_html(big: str, sub: str, date: str) -> str:
     return _page(inner)
 
 
-def shoot(pages: list[str], outdir: Path) -> list[Path]:
+def shoot(pages: list[str], outdir: Path, transparent: bool = False, height: int = H, tag: str = "slide") -> list[Path]:
     from playwright.sync_api import sync_playwright
     paths = []
     with sync_playwright() as pw:
         exe = "/opt/pw-browsers/chromium" if Path("/opt/pw-browsers/chromium").is_file() else None
         br = pw.chromium.launch(executable_path=exe) if exe else pw.chromium.launch()
-        pg = br.new_page(viewport={"width": W, "height": H})
+        pg = br.new_page(viewport={"width": W, "height": height})
         for k, doc in enumerate(pages):
-            f = outdir / f"page{k}.html"
+            f = outdir / f"{tag}{k}.html"
             f.write_text(doc, encoding="utf-8")
             pg.goto(f.as_uri())
             pg.evaluate("document.fonts.ready")
             pg.wait_for_timeout(300)
-            p = outdir / f"slide{k}.png"
-            pg.screenshot(path=str(p))
+            p = outdir / f"{tag}{k}.png"
+            pg.screenshot(path=str(p), omit_background=transparent)
             paths.append(p)
         br.close()
     return paths
@@ -304,28 +309,126 @@ def ticker_png(text: str, out: Path) -> Path:
     return out
 
 
-# ---------------- ویڈیو ----------------
+# ---------------- اینکر (اصل تصویریں) ----------------
+
+PHOTOS = ROOT / "assets" / "anchors"
+PS = H / 768                                   # 1408×768 تصویر → 1080 اونچائی
+PX = (round(1408 * PS) - W) // 2               # دونوں طرف سے کٹنے والا حصہ
+FACE = {"m": (850, 203), "f": (705, 150)}      # اصل تصویر میں منہ/چہرے کا مرکز
+BOX = (50, 140, 700, 720)                      # تفصیل والی اسکرین پر اینکر کی کھڑکی: x, y, w, h
+
+
+def _anchor_full(who: str, d: float = 0.0):
+    """پوری اسکرین کی اینکر تصویر؛ مرد کے لیے d = منہ کتنا کھلا (پکسل)"""
+    import numpy as np
+    from PIL import Image
+    im = Image.open(PHOTOS / ("male.jpg" if who == "m" else "female.jpg")).convert("RGB")
+    im = im.resize((round(im.width * PS), H), Image.LANCZOS).crop((PX, 0, PX + W, H))
+    if who != "m" or d <= 0:
+        return im
+    cx, my = FACE["m"][0] * PS - PX, FACE["m"][1] * PS
+    x0, x1, y0, y1 = int(cx - 70 * PS), int(cx + 70 * PS), int(my - 10 * PS), int(my + 70 * PS)
+    a = np.asarray(im).astype(np.float32)
+    sub = a[y0:y1, x0:x1]
+    yy, xx = np.mgrid[y0:y1, x0:x1].astype(np.float32)
+    wx = np.clip(1 - ((xx - cx) / (40 * PS)) ** 2, 0, 1)
+    t = yy - my
+    prof = np.where(t < 0, 0, np.where(t < 10 * PS, t / (10 * PS), np.clip(1 - (t - 10 * PS) / (45 * PS), 0, 1)))
+    dy = d * PS * wx * prof
+    sy = np.clip(yy - dy, 0, H - 1)
+    iy = np.floor(sy).astype(int)
+    f = (sy - iy)[..., None]
+    xi = xx.astype(int)
+    warped = a[iy, xi] * (1 - f) + a[np.clip(iy + 1, 0, H - 1), xi] * f
+    gap = (wx * ((t >= 0) & (t < dy * 0.9)) * min(1.0, d / 6))[..., None]
+    warped = warped * (1 - 0.55 * gap) + np.array([40, 15, 15], np.float32) * 0.55 * gap
+    a = a.copy()
+    a[y0:y1, x0:x1] = warped
+    del sub
+    return Image.fromarray(a.clip(0, 255).astype(np.uint8))
+
+
+MOUTHS = (0.0, 3.0, 5.0)
+
 
 def anchor_states(tmp: Path) -> dict:
-    """ہر اینکر کی ہر کیفیت کی شفاف تصویر"""
-    import anchors
-    from playwright.sync_api import sync_playwright
-    logo = _logo()
-    docs = {("m", 0, 0): anchors.male(0, False, logo), ("m", 1, 0): anchors.male(1, False, logo),
-            ("m", 2, 0): anchors.male(2, False, logo), ("m", 0, 1): anchors.male(0, True, logo),
-            ("f", 0, 0): anchors.female(False, logo), ("f", 0, 1): anchors.female(True, logo)}
     out = {}
-    with sync_playwright() as pw:
-        exe = "/opt/pw-browsers/chromium" if Path("/opt/pw-browsers/chromium").is_file() else None
-        br = pw.chromium.launch(executable_path=exe) if exe else pw.chromium.launch()
-        pg = br.new_page(viewport={"width": anchors.AW, "height": anchors.AH})
-        for key, svg in docs.items():
-            pg.set_content(f"<html><body style='margin:0;background:transparent'>{svg}</body></html>")
-            p = tmp / f"anchor_{key[0]}{key[1]}{key[2]}.png"
-            pg.screenshot(path=str(p), omit_background=True)
-            out[key] = p
-        br.close()
+    for who in ("m", "f"):
+        for mo, d in enumerate(MOUTHS if who == "m" else (0.0,)):
+            f = tmp / f"anchor_{who}{mo}.png"
+            _anchor_full(who, d).save(f)
+            out[(who, mo)] = f
     return out
+
+
+def _studio_bg(who: str) -> str:
+    """تفصیل والی اسکرین کا پس منظر: اسی نیوز روم کی دھندلی تصویر"""
+    from io import BytesIO
+    from PIL import ImageFilter, ImageEnhance
+    im = _anchor_full(who).filter(ImageFilter.GaussianBlur(18))
+    im = ImageEnhance.Brightness(im).enhance(0.42)
+    b = BytesIO()
+    im.save(b, "JPEG", quality=85)
+    return "data:image/jpeg;base64," + base64.b64encode(b.getvalue()).decode()
+
+
+CSS += """
+.studio{position:absolute;inset:0;background-size:cover}
+.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,8,30,.25),rgba(2,8,30,.78) 45%,rgba(2,8,30,.9))}
+.abox{position:absolute;left:@@bx@@px;top:@@by@@px;width:@@bw@@px;height:@@bh@@px;border-radius:18px;
+ border:3px solid rgba(0,198,255,.75);box-shadow:0 0 0 6px rgba(0,198,255,.12),0 20px 60px rgba(0,0,0,.6)}
+.abox .nm{position:absolute;bottom:-3px;right:-3px;left:-3px;height:58px;background:linear-gradient(90deg,#0a3aa8,#1150d8);
+ border-radius:0 0 18px 18px;font-weight:700;font-size:30px;line-height:1.9;text-align:center}
+.glass{position:absolute;left:770px;right:44px;top:150px;height:690px;border-radius:22px;
+ background:linear-gradient(160deg,rgba(255,255,255,.10),rgba(255,255,255,.04));border:1px solid rgba(160,210,255,.28);
+ backdrop-filter:blur(4px)}
+.panel{left:810px;right:84px;top:160px;height:670px}
+.tagbox{position:absolute;top:34px;left:40px;display:flex;gap:12px;align-items:center;direction:ltr}
+.tagbox .tag{font-size:26px}
+.tagbox .date{background:rgba(3,8,26,.75);padding:0 18px;border-radius:6px;font-size:28px;line-height:1.7;direction:rtl}
+.l3x{position:absolute;left:0;top:0;width:1920px;height:96px;display:flex;align-items:stretch;
+ background:linear-gradient(90deg,#0a3aa8,#1150d8 60%,#0d47c9);box-shadow:0 -6px 30px rgba(0,0,0,.45)}
+.l3x .lab{background:#e11d2e;font-weight:700;font-size:36px;padding:0 30px;line-height:2.6;white-space:nowrap}
+.l3x .txt{flex:1;font-weight:700;font-size:38px;line-height:2.45;padding:0 28px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.l3x .bug{width:96px;display:flex;align-items:center;justify-content:center;background:#071a55}
+.l3x .bug img{width:78px;height:78px;border-radius:50%}
+"""
+
+
+def _bare(inner: str, height: int = H, hs: int = 64, bs: int = 38, cs: int = 32) -> str:
+    """شفاف صفحہ (اوورلے)"""
+    css = CSS
+    for k, v in {"n4": _font("noto-nastaliq-urdu-arabic-400-normal.woff2"),
+                 "n7": _font("noto-nastaliq-urdu-arabic-700-normal.woff2"),
+                 "k7": _font("noto-naskh-arabic-arabic-700-normal.woff2"), "hs": hs, "bs": bs, "cs": cs,
+                 "bx": BOX[0], "by": BOX[1], "bw": BOX[2], "bh": BOX[3]}.items():
+        css = css.replace(f"@@{k}@@", str(v))
+    return (f'<!doctype html><html lang="ur"><meta charset="utf-8"><style>{css}'
+            f'html,body{{background:transparent!important;height:{height}px}}</style><body>{inner}</body></html>')
+
+
+def full_overlay(date: str) -> str:
+    """پوری اسکرین اینکر شاٹ کے اوپر: تاریخ کا ٹیگ اور نیچے کی پٹی"""
+    return _bare(f'<div class="tagbox"><div class="tag">AI NEWS</div><div class="date">{html.escape(date)}</div></div>'
+                 + '<div class="l3"></div>' + _lower())
+
+
+def l3_html(label: str, text: str) -> str:
+    return _bare(f'<div class="l3x"><div class="lab">{html.escape(label)}</div><div class="txt">{html.escape(text)}</div>'
+                 f'<div class="bug"><img src="{_logo()}"></div></div>', 96)
+
+
+def detail_html(who: str, bg: str, headline: str, body: str, source: str, date: str, comment: str = "") -> str:
+    n = len(headline) + len(body) + len(comment)
+    hs, bs, cs = (58, 36, 31) if n < 300 else (52, 33, 28) if n < 430 else (46, 30, 26)
+    name = "نیوز اینکر" if who == "m" else "نیوز اینکر"
+    inner = (f'<div class="studio" style="background-image:url({bg})"></div><div class="shade"></div>' + _top(date) +
+             f'<div class="abox"><div class="nm">{name} · فاروقی اے آئی نیوز</div></div><div class="glass"></div>'
+             f'<div class="panel"><div class="kicker">تفصیلات · {html.escape(source)}</div><div class="head">{html.escape(headline)}</div>'
+             f'<div class="bar"></div><div class="body">{html.escape(body)}</div>'
+             + (f'<div class="cmt"><span>{html.escape(comment)}</span></div>' if comment else "") + '</div>'
+             + '<div class="l3"></div>' + _lower())
+    return _bare(inner, H, hs, bs, cs).replace("background:transparent!important", "background:#040a1c!important")
 
 
 def mouth_track(audio: Path, secs: float) -> list[int]:
@@ -340,33 +443,44 @@ def mouth_track(audio: Path, secs: float) -> list[int]:
     hi = np.percentile(rms[rms > 0], 90) if (rms > 0).any() else 1.0
     lv = rms / max(hi, 1e-6)
     m = [2 if v > 0.55 else 1 if v > 0.2 else 0 for v in lv]
-    return [m[i] if i % 2 == 0 or i == 0 else m[i - 1] for i in range(n)]   # ہر دوسرے فریم پر بدلے — قدرتی لگے
+    return [m[i] if i % 2 == 0 or i == 0 else m[i - 1] for i in range(n)]
 
 
-def anchor_frames(slide: Path, who: str, states: dict, audio: Path, secs: float, tmp: Path, tag: str) -> Path:
-    """سلائیڈ + اینکر کی کیفیتیں → فریموں کی فہرست (concat)"""
-    import random
-    from PIL import Image
-    base = Image.open(slide).convert("RGBA")
-    comp = {}
-    for (w, mo, bl), p in states.items():
-        if w != who:
-            continue
-        im = base.copy()
-        an = Image.open(p).convert("RGBA")
-        im.alpha_composite(an, (30, H - 200 - an.height))
-        f = tmp / f"{tag}_{mo}{bl}.png"
-        im.convert("RGB").save(f)
-        comp[(mo, bl)] = f
+def _frames(seg: dict, states: dict, audio: Path, secs: float, tmp: Path, tag: str) -> Path:
+    """ایک حصے کے فریم: اینکر (منہ کی حرکت) + اسکرین → concat فہرست"""
+    from PIL import Image, ImageDraw
+    who = seg["who"]
     n = int(secs * FPS)
     mouth = mouth_track(audio, secs) if who == "m" else [0] * n
-    rnd = random.Random(tag)
-    blink, nxt = [0] * n, rnd.randint(40, 110)
-    while nxt < n:
-        for j in range(nxt, min(n, nxt + 4)):
-            blink[j] = 1
-        nxt += rnd.randint(90, 160)
-    seq = [comp.get((0 if blink[i] else mouth[i], blink[i]), comp[(0, 0)]) for i in range(n)]
+    cache = {}
+
+    def comp(page: int, mo: int) -> Path:
+        key = (page, mo)
+        if key in cache:
+            return cache[key]
+        anchor = Image.open(states[(who, mo)]).convert("RGBA")
+        if seg["kind"] == "full":
+            im = anchor
+            im.alpha_composite(Image.open(seg["overlay"]).convert("RGBA"))
+        else:
+            im = Image.open(seg["pages"][page]).convert("RGBA")
+            x, y, w, h = BOX
+            cx = FACE[who][0] * PS - PX
+            crop = anchor.crop((int(cx - (w - 6) / 2), 40, int(cx + (w - 6) / 2), 40 + h - 61))
+            mask = Image.new("L", crop.size, 0)
+            ImageDraw.Draw(mask).rounded_rectangle((0, 0, crop.width - 1, crop.height + 20), 15, fill=255)
+            im.paste(crop, (x + 3, y + 3), mask)
+        f = tmp / f"{tag}_{page}_{mo}.png"
+        im.convert("RGB").save(f)
+        cache[key] = f
+        return f
+
+    bounds = seg.get("bounds") or [0.0]
+    seq = []
+    for i in range(n):
+        t = i / FPS
+        page = max(k for k, b in enumerate(bounds) if b <= t) if seg["kind"] == "detail" else 0
+        seq.append(comp(page, mouth[i]))
     lines, i = [], 0
     while i < n:
         j = i
@@ -380,79 +494,104 @@ def anchor_frames(slide: Path, who: str, states: dict, audio: Path, secs: float,
     return lst
 
 
+def _split(text_parts: list[str], total: float) -> list[float]:
+    """ایک آواز میں کئی سرخیاں: ہر حصے کا آغاز الفاظ کی لمبائی کے تناسب سے"""
+    w = [max(1, len(x)) for x in text_parts]
+    s, out = 0.0, []
+    for x in w:
+        out.append(total * s / sum(w))
+        s += x
+    return out
+
+
+
 def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
     picks = [p for p in out.get("picks", [])[:6] if 1 <= int(p.get("n", 0)) <= len(items)]
     with tempfile.TemporaryDirectory() as t:
         tmp = Path(t)
-        pages, speech = [], []
-        # ۱۔ آغاز
-        pages.append(title_html("آج کی تازہ خبریں", "فاروقی اے آئی نیوز", date))
         intro = out.get("intro") or "السلام علیکم۔ فاروقی اے آئی نیوز میں خوش آمدید۔ آج کی تازہ ترین خبریں۔"
         first = intro.find("السلام علیکم")                     # سلام صرف ایک بار
         if first >= 0:
             intro = intro[:first + 12] + intro[first + 12:].replace("السلام علیکم", "").replace("۔۔", "۔")
-        speech.append(intro)
-        # ۲۔ اہم سرخیاں — ایک ایک کر کے، صرف سرخی
-        for p in picks:
-            pages.append(headline_html(p["headline"], date))
-            speech.append(p["headline"])
-        # ۳۔ «اب تفصیل»
-        pages.append(title_html("اب تفصیل", "اہم خبروں کی تفصیلات اور ہمارا تبصرہ", date))
-        speech.append("اور اب، ان خبروں کی تفصیل۔")
-        # ۴۔ ہر خبر کی تفصیل + تبصرہ (نمبر کے بغیر)
-        for p in picks:
+        hl_say = [p.get("headline_say") or p["headline"] for p in picks] + ["اور اب، ان خبروں کی تفصیل۔"]
+        # حصے: آغاز (مرد) → سرخیاں (خاتون) → ہر خبر کی تفصیل (باری باری) → اختتام (مرد)
+        segs_def = [{"kind": "full", "who": "m", "say": intro, "l3": [("خوش آمدید", "فاروقی اے آئی نیوز · آج کی اہم خبریں")]},
+                    {"kind": "full", "who": "f", "say": " ".join(hl_say), "parts": hl_say,
+                     "l3": [("سرخیاں", p["headline"]) for p in picks] + [("تفصیلات", "اب ان خبروں کی تفصیل")]}]
+        for k, p in enumerate(picks):
             src = items[int(p["n"]) - 1]["source"]
-            pages.append(story_html(p["headline"], p["body"], src, date, p.get("comment", "")))
-            speech.append(f"{p['headline']}۔ {p['body']}" + (f" {p['comment']}" if p.get("comment") else ""))
-        # ۵۔ اختتام
-        pages.append(title_html("شکریہ", "مزید خبروں کے لیے چینل کو فالو کریں", date))
-        speech.append(out.get("outro") or "یہ تھیں آج کی اہم خبریں۔ مزید خبروں کے لیے چینل کو فالو کریں۔ اللہ حافظ۔")
-        slides = shoot(pages, tmp)
-        tick = ticker_png("   ●   ".join(p["headline"] for p in picks) + "   ●   ", tmp / "ticker.png")
+            who = "m" if k % 2 == 0 else "f"
+            say = p.get("say") or (f"{p['headline']}۔ {p['body']}" + (f" {p['comment']}" if p.get("comment") else ""))
+            segs_def.append({"kind": "detail", "who": who, "say": say, "pick": p, "src": src,
+                             "l3": [("اہم خبر", p["headline"])]})
+        segs_def.append({"kind": "full", "who": "m",
+                         "say": out.get("outro") or "یہ تھیں آج کی اہم خبریں۔ مزید خبروں کے لیے چینل کو فالو کریں۔ اللہ حافظ۔",
+                         "l3": [("شکریہ", "روزانہ اے آئی کی تازہ خبروں کے لیے چینل سبسکرائب کریں")]})
+
         states = anchor_states(tmp)
+        overlay = shoot([full_overlay(date)], tmp, transparent=True, tag="ov")[0]
+        bgs = {w: _studio_bg(w) for w in ("m", "f")}
+        tick = ticker_png("   ●   ".join(p["headline"] for p in picks) + "   ●   ", tmp / "ticker.png")
         segs = []
-        for k, (img, text) in enumerate(zip(slides, speech)):
-            stinger = k == 0 or k == len(picks) + 1 or k == len(pages) - 1
-            role = 0 if stinger else (k + 1) % 2
-            a = speak(text, tmp / f"v{k}.mp3", role)
-            d = _dur(a) + 0.8
+        for k, sd in enumerate(segs_def):
+            a = speak(sd["say"], tmp / f"v{k}.mp3", 0 if sd["who"] == "m" else 1)
+            d = _dur(a) + 0.7
+            if sd["kind"] == "full":
+                sd["overlay"] = overlay
+            else:
+                p = sd["pick"]
+                sd["pages"] = shoot([detail_html(sd["who"], bgs[sd["who"]], p["headline"], p["body"], sd["src"], date,
+                                                 p.get("comment", ""))], tmp, tag=f"d{k}_")
+            starts = _split(sd["parts"], d - 0.7) if sd.get("parts") else [0.0]
+            l3s = shoot([l3_html(a_, b_) for a_, b_ in sd["l3"]], tmp, transparent=True, height=96, tag=f"l{k}_")
+            lst = _frames(sd, states, a, d, tmp, f"k{k}")
+            # ان پٹ: 0 فریم، 1 ٹکر، 2 آواز، 3.. سرخی کی پٹیاں
+            fc = f"[0:v]fps={FPS},split=3[z0][o0][o1];"
+            if sd["kind"] == "full":      # کیمرہ آہستہ آہستہ قریب (نیوز اسٹوڈیو کی طرح)
+                fc += (f"[z0]crop={W}:{H - 200}:0:0,scale=w='trunc({W}*(1+0.045*t/{d:.2f})/2)*2':h=-2:eval=frame,"
+                       f"crop={W}:{H - 200}:'(iw-{W})*{0.62 if sd['who'] == 'm' else 0.5}':'(ih-{H - 200})*0.35',setsar=1[top];")
+            else:
+                fc += f"[z0]crop={W}:{H - 200}:0:0[top];"
+            fc += (f"[o0]crop={W}:200:0:{H - 200}[bars];"
+                   f"[o1]crop=240:104:{W - 240}:{H - 104}[lab];[1:v]format=rgba[tk];"
+                   f"[bars][tk]overlay=x='mod(t*130+{k * 400}+w*0.55,w+{W - 240})-w':y=99:shortest=0[b2];"
+                   f"[b2][lab]overlay={W - 240}:96[b3];[top][b3]vstack[v0]")
+            last = "v0"
+            ends = starts[1:] + [d + 1]
+            for j, (s0, e0) in enumerate(zip(starts, ends)):
+                s1 = s0 + 0.25
+                fc += (f";[v{j}][{3 + j}:v]overlay=x='if(lt(t,{s1:.2f}+0.4),{W}*(1-(t-{s1:.2f})/0.4),0)':y={H - 200}:"
+                       f"enable='between(t,{s1:.2f},{e0:.2f})'[v{j + 1}]")
+                last = f"v{j + 1}"
+            l3in = []
+            for f_ in l3s:
+                l3in += ["-loop", "1", "-framerate", FPS, "-t", f"{d:.2f}", "-i", f_]
             seg = tmp / f"s{k}.mp4"
-            lst = anchor_frames(img, "m" if role == 0 else "f", states, a, d, tmp, f"k{k}")
-            # اوپر: اینکر اور خبر؛ نیچے کی دونوں پٹیاں ساکن اور ان پر چلتا ٹکر (اردو کی سمت)
-            fc = (f"[0:v]fps={FPS},split=3[z0][o0][o1];"
-                  f"[z0]crop={W}:{H - 200}:0:0[top];"
-                  f"[o0]crop={W}:200:0:{H - 200}[bars];"
-                  f"[o1]crop=240:104:{W - 240}:{H - 104}[lab];[1:v]format=rgba[tk];"
-                  f"[bars][tk]overlay=x='mod(t*130+{k * 400}+w*0.55,w+{W - 240})-w':y=99:shortest=0[b2];"
-                  f"[b2][lab]overlay={W - 240}:96[b3];[top][b3]vstack[v]")
             _ff("-f", "concat", "-safe", "0", "-i", lst,
-                "-loop", "1", "-framerate", FPS, "-t", f"{d:.2f}", "-i", tick, "-i", a,
+                "-loop", "1", "-framerate", FPS, "-t", f"{d:.2f}", "-i", tick, "-i", a, *l3in,
                 "-filter_complex", fc + ";[2:a]apad,atrim=0:" + f"{d:.2f}[a]",
-                "-map", "[v]", "-map", "[a]", "-t", f"{d:.2f}", "-c:v", "libx264", "-preset", "veryfast",
-                "-crf", "24", "-pix_fmt", "yuv420p", "-r", FPS, "-c:a", "aac", "-b:a", "128k", "-ar", "44100", seg)
+                "-map", f"[{last}]", "-map", "[a]", "-t", f"{d:.2f}", "-c:v", "libx264", "-preset", "veryfast",
+                "-crf", "23", "-pix_fmt", "yuv420p", "-r", FPS, "-c:a", "aac", "-b:a", "128k", "-ar", "44100", seg)
             segs.append(seg)
-        # منظر بدلتے وقت نرم سلائیڈ ٹرانزیشن (نیوز چینل کی طرح)
         T = 0.5
         durs = [_dur(x) for x in segs]
-        # یوٹیوب ابواب (Chapters) کے لیے ہر حصے کا آغاز
         start = [sum(durs[:k]) - k * T for k in range(len(segs))]
-        base = len(picks) + 2
         out["_chapters"] = ([(0, "آغاز اور آج کی سرخیاں")] +
-                            [(start[base + i], p["headline"]) for i, p in enumerate(picks)])
+                            [(start[2 + i], p["headline"]) for i, p in enumerate(picks)])
+        out["_voice"] = ", ".join(sorted(VOICE_USED))
         args, vf, af = [], [], []
         for x in segs:
             args += ["-i", x]
         vlast, alast, off = "0:v", "0:a", 0.0
         for k in range(1, len(segs)):
             off += durs[k - 1] - T
-            kind = "slideleft" if k % 2 else "smoothleft"
+            kind = "fade" if segs_def[k]["kind"] == "full" else "slideleft"
             vf.append(f"[{vlast}][{k}:v]xfade=transition={kind}:duration={T}:offset={off:.2f}[v{k}]")
             af.append(f"[{alast}][{k}:a]acrossfade=d={T}[a{k}]")
             vlast, alast = f"v{k}", f"a{k}"
         _ff(*args, "-filter_complex", ";".join(vf + af), "-map", f"[{vlast}]", "-map", f"[{alast}]",
             "-c:v", "libx264", "-preset", "veryfast", "-crf", "24", "-pix_fmt", "yuv420p", "-r", FPS,
             "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", dest)
-        # ٹیلیگرام بوٹ کی حد 50MB
         if dest.stat().st_size > 48 * 1024 * 1024:
             small = dest.with_name(dest.stem + "_720.mp4")
             _ff("-i", dest, "-vf", "scale=-2:720", "-c:v", "libx264", "-crf", "28", "-preset", "veryfast",
