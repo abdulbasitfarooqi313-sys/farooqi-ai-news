@@ -201,7 +201,14 @@ def write(items: list[dict]) -> dict:
         for attempt in range(3):
             try:
                 r = requests.post(API.format(m=m), json=body, timeout=180, headers={"x-goog-api-key": key})
+                if r.status_code != 200:
+                    last = f"{m} → HTTP {r.status_code}: {r.text[:400]}"
+                    log(last)
+                if r.status_code in (400, 401, 403):
+                    raise SystemExit(f"Gemini کی چابی میں مسئلہ (غلط/بند key؟): {last}")
                 if r.status_code == 429 or r.status_code >= 500:
+                    if "PerDay" in r.text or "limit: 0" in r.text:
+                        break                       # اس ماڈل کا روزانہ کوٹہ ختم — اگلا ماڈل
                     time.sleep(20 * (attempt + 1))
                     continue
                 if r.status_code == 404:
