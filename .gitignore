@@ -1,3 +1,5 @@
 __pycache__/
 *.pyc
 news_video*.mp4
+.musetalk/
+lipsync_test.mp4

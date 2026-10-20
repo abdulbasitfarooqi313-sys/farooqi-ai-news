@@ -319,6 +319,27 @@ ANCHOR_X = 1290                                 # نئے اسٹوڈیو میں �
 _SET: dict = {}                                 # اسٹوڈیو کی دیوار اور میز (render میں ایک بار بنتی ہیں)
 
 
+def face_box(who: str) -> tuple[int, int, int, int]:
+    """اسکرین پر چہرے کا ڈبہ (ہونٹوں کی AI حرکت کے لیے) — اصل تصویر میں (785..920, 112..252)"""
+    ox, oy = FACE[who]
+    cx = _sx(who)
+    return (round(cx + (785 - ox) * PS), round(112 * PS), round(cx + (920 - ox) * PS), round(252 * PS))
+
+
+_LS: dict = {}
+
+
+def _lipsync_ok() -> bool:
+    if "ok" not in _LS:
+        try:
+            import lipsync
+            _LS["ok"] = lipsync.available()
+        except Exception as e:
+            print(f"lipsync: {e}")
+            _LS["ok"] = False
+    return _LS["ok"]
+
+
 def _cut(who: str) -> Path:
     return PHOTOS / ("male_cut.png" if who == "m" else "female_cut.png")
 
@@ -514,7 +535,7 @@ def _frames(seg: dict, states: dict, audio: Path, secs: float, tmp: Path, tag: s
     from PIL import Image, ImageDraw
     who = seg["who"]
     n = int(secs * FPS)
-    mouth = mouth_track(audio, secs) if who == "m" else [0] * n
+    mouth = mouth_track(audio, secs) if who == "m" and not seg.get("patch") else [0] * n
     cache = {}
 
     def comp(page: int, mo: int) -> Path:
@@ -658,9 +679,26 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
                                                  p.get("comment", ""))], tmp, tag=f"d{k}_")
             starts = _split(sd["parts"], d - 0.7) if sd.get("parts") else [0.0]
             l3s = shoot([l3_html(a_, b_) for a_, b_ in sd["l3"]], tmp, transparent=True, height=96, tag=f"l{k}_")
+            # مرد اینکر: ہونٹ آواز کے مطابق (MuseTalk AI)؛ نہ چلے تو پرانا طریقہ
+            patch_in, fc = [], f"[0:v]fps={FPS},split=3[z0][o0][o1];"
+            if sd["who"] == "m" and _lipsync_ok():
+                try:
+                    import lipsync
+                    from PIL import Image
+                    pv, px, py = lipsync.animate(Image.open(states[("m", 0)]).convert("RGB"), face_box("m"), a,
+                                                 tmp / f"patch{k}.mp4")
+                    if sd["kind"] == "detail":
+                        bx, by, bw, _ = BOX
+                        px, py = px + bx + 3 - int(_sx("m") - (bw - 6) / 2), py + by + 3 - 40
+                    sd["patch"] = pv
+                    patch_in = ["-i", pv]
+                    fc = (f"[0:v]fps={FPS}[b0];[b0][{3 + len(sd['l3'])}:v]overlay={px}:{py}:eof_action=pass,"
+                          f"split=3[z0][o0][o1];")
+                    VOICE_USED.add("lipsync: MuseTalk")
+                except Exception as e:
+                    print(f"lipsync ناکام ({e}) — پرانا طریقہ")
             lst = _frames(sd, states, a, d, tmp, f"k{k}")
-            # ان پٹ: 0 فریم، 1 ٹکر، 2 آواز، 3.. سرخی کی پٹیاں
-            fc = f"[0:v]fps={FPS},split=3[z0][o0][o1];"
+            # ان پٹ: 0 فریم، 1 ٹکر، 2 آواز، 3.. سرخی کی پٹیاں، آخر میں ہونٹوں کی ویڈیو
             if sd["kind"] == "full":      # کیمرہ آہستہ آہستہ قریب (نیوز اسٹوڈیو کی طرح)
                 fc += (f"[z0]crop={W}:{H - 200}:0:0,scale=w='trunc({W}*(1+0.045*t/{d:.2f})/2)*2':h=-2:eval=frame,"
                        f"crop={W}:{H - 200}:'(iw-{W})*{_sx(sd['who']) / W:.2f}':'(ih-{H - 200})*0.35',setsar=1[top];")
@@ -682,7 +720,7 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
                 l3in += ["-loop", "1", "-framerate", FPS, "-t", f"{d:.2f}", "-i", f_]
             seg = tmp / f"s{k}.mp4"
             _ff("-f", "concat", "-safe", "0", "-i", lst,
-                "-loop", "1", "-framerate", FPS, "-t", f"{d:.2f}", "-i", tick, "-i", a, *l3in,
+                "-loop", "1", "-framerate", FPS, "-t", f"{d:.2f}", "-i", tick, "-i", a, *l3in, *patch_in,
                 "-filter_complex", fc + ";[2:a]apad,atrim=0:" + f"{d:.2f}[a]",
                 "-map", f"[{last}]", "-map", "[a]", "-t", f"{d:.2f}", "-c:v", "libx264", "-preset", "veryfast",
                 "-crf", "23", "-pix_fmt", "yuv420p", "-r", FPS, "-c:a", "aac", "-b:a", "128k", "-ar", "44100", seg)
