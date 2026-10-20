@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: ai-news
@@ -36,7 +37,8 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL }}
-        run: python script.py
+        shell: bash
+        run: python script.py 2>&1 | tee run.log; exit ${PIPESTATUS[0]}
 
       - name: Remember sent news (no repeats tomorrow)
         run: |
@@ -46,3 +48,11 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "خبریں بھیجی گئیں"
           for i in 1 2 3; do git pull --rebase -X theirs && git push && exit 0; sleep 5; done
+
+      - name: Report the error (as a GitHub issue)
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          { echo "رن ناکام ہوا۔ آخری سطریں:"; echo '```'; tail -40 run.log 2>/dev/null; echo '```'; } > err.md
+          gh issue create --title "AI News run failed $(date -u +%F)" --body-file err.md || true
