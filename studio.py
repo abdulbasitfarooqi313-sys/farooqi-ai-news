@@ -868,7 +868,7 @@ def make_card(tmp: Path, kind: str, date: str) -> Path:
 
 
 def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
-    picks = [p for p in out.get("picks", [])[:5] if 1 <= int(p.get("n", 0)) <= len(items)]
+    picks = [p for p in out.get("picks", [])[:6] if 1 <= int(p.get("n", 0)) <= len(items)]
     with tempfile.TemporaryDirectory() as t:
         tmp = Path(t)
         intro = out.get("intro") or "السلام علیکم۔ فاروقی اے آئی نیوز میں خوش آمدید۔ آج کی تازہ ترین خبریں۔"
