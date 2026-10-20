@@ -53,7 +53,14 @@ def _gemini_tts(text: str, role: int, out: Path) -> Path | None:
     voice = GEMINI_VOICES[role % len(GEMINI_VOICES)]
     prompt = (f"Voice style (do not read this line aloud): {STYLE[role % 2]}. Say nothing except the Urdu text "
               f"below, exactly once, word for word — no greeting or words of your own:\n\n{text}")
-    for model in TTS_MODELS:
+    if "tts" not in _GEMINI_OFF:
+        try:
+            from script import available_models
+            _GEMINI_OFF["tts"] = list(dict.fromkeys(available_models(os.environ["GEMINI_API_KEY"], "tts") + TTS_MODELS))
+        except Exception:
+            _GEMINI_OFF["tts"] = TTS_MODELS
+        print("Gemini آواز کے ماڈل:", ", ".join(_GEMINI_OFF["tts"]))
+    for model in _GEMINI_OFF["tts"]:
         for attempt in range(3):
             try:
                 r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
@@ -76,6 +83,7 @@ def _gemini_tts(text: str, role: int, out: Path) -> Path | None:
                 time.sleep(10)
                 continue
             if not r.ok:
+                print(f"Gemini آواز {model}: HTTP {r.status_code} {r.text[:200]}")
                 break
             try:
                 part = r.json()["candidates"][0]["content"]["parts"][0]["inlineData"]
@@ -90,6 +98,8 @@ def _gemini_tts(text: str, role: int, out: Path) -> Path | None:
                 w.writeframes(base64.b64decode(part["data"]))
             if raw.stat().st_size > 20000:
                 return raw
+    print("Gemini آواز نہیں ملی — آج Edge کی آواز پر")
+    _GEMINI_OFF["off"] = True
     return None
 
 

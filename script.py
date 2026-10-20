@@ -43,7 +43,25 @@ FEEDS = [
     ("Hugging Face", "https://huggingface.co/blog/feed.xml"),
     ("Google News", "https://news.google.com/rss/search?q=artificial+intelligence+when:1d&hl=en-US&gl=US&ceid=US:en"),
 ]
-MODELS = ["gemini-2.5-flash", "gemini-flash-latest", "gemini-2.5-flash-lite"]
+MODELS = ["gemini-3.8-flash", "gemini-flash-latest", "gemini-3.5-flash-lite", "gemini-2.5-flash", "gemini-2.5-flash-lite"]
+
+
+def available_models(key: str, want: str) -> list[str]:
+    """اس چابی پر جو ماڈل واقعی چلتے ہیں — Google ماڈل بدلتا رہتا ہے، اس لیے خود پوچھ لیں"""
+    try:
+        r = requests.get("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200",
+                         headers={"x-goog-api-key": key}, timeout=30)
+        names = [m["name"].split("/")[-1] for m in r.json().get("models", [])
+                 if "generateContent" in m.get("supportedGenerationMethods", [])]
+    except Exception:
+        return []
+    if want == "tts":
+        return sorted([n for n in names if "tts" in n], key=lambda n: ("pro" in n, n), reverse=False)
+    flash = [n for n in names if "flash" in n and not any(x in n for x in ("tts", "image", "audio", "live", "embed"))]
+    def rank(n):
+        v = re.search(r"(\d+(?:\.\d+)?)", n)
+        return (-(float(v.group(1)) if v else 0), "lite" in n, "preview" in n or "exp" in n, n)
+    return sorted(flash, key=rank)
 API = "https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent"
 
 
@@ -197,7 +215,9 @@ def write(items: list[dict]) -> dict:
     body = {"contents": [{"parts": [{"text": PROMPT.format(items=listing)}]}],
             "generationConfig": {"temperature": 0.3, "responseMimeType": "application/json"}}
     last = None
-    for m in MODELS:
+    found = available_models(key, "text")
+    log(f"دستیاب ماڈل: {', '.join(found[:6]) or '—'}")
+    for m in list(dict.fromkeys(found[:4] + MODELS)):
         for attempt in range(3):
             try:
                 r = requests.post(API.format(m=m), json=body, timeout=180, headers={"x-goog-api-key": key})
