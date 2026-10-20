@@ -734,7 +734,29 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
         tick = ticker_png("   ●   ".join(p["headline"] for p in picks) + "   ●   ", tmp / "ticker.png")
         segs = []
         for k, sd in enumerate(segs_def):
-            a = speak(sd["say"], tmp / f"v{k}.mp3", 0 if sd["who"] == "m" else 1)
+            if sd.get("parts"):
+                # ہر سرخی سے پہلے مختصر ووکل (کورس کی "آآ" — موسیقی نہیں)، پھر سرخی؛ آغاز کے وقت بالکل درست
+                import ident
+                sting = ident.save_wav(ident.choir(1.0, (220.0, 277.18, 329.63, 440.0), "aa", attack=0.12,
+                                                   release=0.55, seed=k), tmp / f"sting{k}.wav")
+                pieces, sd["starts"], t_ = [], [], 0.0
+                for j, txt in enumerate(sd["parts"]):
+                    v = speak(txt, tmp / f"v{k}_{j}.mp3", 0 if sd["who"] == "m" else 1)
+                    sd["starts"].append(t_)
+                    pieces += [sting, v]
+                    t_ += _dur(sting) + _dur(v) + 0.35
+                lst_a = tmp / f"hl{k}.txt"
+                a = tmp / f"v{k}.wav"
+                norm = []
+                for j, f_ in enumerate(pieces):
+                    g = tmp / f"n{k}_{j}.wav"
+                    _ff("-i", f_, "-af", "aresample=44100,aformat=channel_layouts=stereo,apad=pad_dur=" +
+                        ("0.35" if j % 2 else "0"), "-ar", "44100", "-ac", "2", g)
+                    norm.append(g)
+                lst_a.write_text("".join(f"file '{g.name}'\n" for g in norm))
+                _ff("-f", "concat", "-safe", "0", "-i", lst_a, "-c:a", "pcm_s16le", a)
+            else:
+                a = speak(sd["say"], tmp / f"v{k}.mp3", 0 if sd["who"] == "m" else 1)
             d = _dur(a) + 0.7
             if sd["kind"] == "full":
                 sd["overlay"] = overlay
@@ -745,7 +767,7 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
                 p = sd["pick"]
                 sd["pages"] = shoot([detail_html(sd["who"], bgs[sd["who"]], p["headline"], p["body"], sd["src"], date,
                                                  sd.get("note", ""))], tmp, tag=f"d{k}_")
-            starts = _split(sd["parts"], d - 0.7) if sd.get("parts") else [0.0]
+            starts = sd.get("starts") or [0.0]
             l3s = shoot([l3_html(a_, b_) for a_, b_ in sd["l3"]], tmp, transparent=True, height=96, tag=f"l{k}_")
             # مرد اینکر: ہونٹ آواز کے مطابق (MuseTalk AI)؛ نہ چلے تو پرانا طریقہ
             patch_in, fc = [], f"[0:v]fps={FPS},split=3[z0][o0][o1];"
