@@ -32,13 +32,8 @@ jobs:
       - name: Install requirements
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
-          pip install -r requirements.txt -r requirements-lipsync.txt
+          pip install -r requirements.txt
           python -m playwright install --with-deps chromium
-
-      - uses: actions/cache@v4
-        with:
-          path: .musetalk
-          key: musetalk-v15-0a89dec
 
       - name: Fetch news, write Urdu bulletin, send to Telegram
         env:
@@ -46,6 +41,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL }}
+          LIPSYNC: "0"          # ہونٹوں کی AI (MuseTalk) بغیر GPU بہت سست — فی الحال بند؛ نمونہ: Lip-sync sample
         shell: bash
         run: python script.py 2>&1 | tee run.log; exit ${PIPESTATUS[0]}
 
