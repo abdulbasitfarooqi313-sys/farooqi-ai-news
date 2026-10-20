@@ -553,6 +553,104 @@ def split_html(bg: str, date: str, reporter: str, city: str) -> str:
     return _bare(inner).replace("background:transparent!important", "background:#040a1c!important")
 
 
+# ---------------- رپورٹر سے تفصیل: اینکر ڈیسک پر، دائیں طرف بڑی اسکرین پر رپورٹ ----------------
+
+RP = (1010, 110, 870, 760)          # بڑی اسکرین: x, y, w, h
+RP_INSET = (1031, 525, 326, 266)     # رپورٹر کی تصویر (اسکرین کے اندر کارڈ میں)
+SHIFT_F = -360                       # خاتون اینکر کو بائیں طرف کھسکانا
+_RP: dict = {}
+
+
+def _map_svg(city: str, w: int = 470, h: int = 300) -> str:
+    """سادہ نقشہ (اپنا بنایا ہوا، کسی کمپنی کا نہیں): سڑکیں، دریا اور شہر کا نشان"""
+    import random
+    r = random.Random(city)
+    roads = "".join(f'<path d="M{r.randint(-40, w)} {r.randint(-20, h)} Q{r.randint(0, w)} {r.randint(0, h)} '
+                    f'{r.randint(0, w + 40)} {r.randint(0, h + 20)}" stroke="#f6d38a" stroke-width="{r.choice((3, 4, 6))}" fill="none"/>'
+                    for _ in range(9))
+    minor = "".join(f'<path d="M{r.randint(0, w)} 0 L{r.randint(0, w)} {h}" stroke="#ffffff" stroke-width="2" opacity=".8"/>'
+                    for _ in range(7))
+    parks = "".join(f'<rect x="{r.randint(0, w - 60)}" y="{r.randint(0, h - 40)}" width="{r.randint(30, 70)}" height="{r.randint(20, 45)}" '
+                    f'rx="8" fill="#cfe8c4"/>' for _ in range(4))
+    return (f'<svg viewBox="0 0 {w} {h}" width="{w}" height="{h}" xmlns="http://www.w3.org/2000/svg">'
+            f'<rect width="{w}" height="{h}" fill="#f2efe6"/>{parks}{minor}{roads}'
+            f'<path d="M0 {h * .78} C{w * .3} {h * .62} {w * .55} {h * .95} {w} {h * .7}" stroke="#a9cdea" stroke-width="16" fill="none"/>'
+            f'<circle cx="{w / 2}" cy="{h / 2 + 22}" r="26" fill="rgba(225,29,46,.18)"/>'
+            f'<path transform="translate({w / 2 - 22},{h / 2 - 50}) scale(1.85)" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" fill="#0b2a6f"/>'
+            f'</svg>')
+
+
+CSS += """
+.rp{position:absolute;border-radius:16px;overflow:hidden;background:#06123a;border:4px solid #1c2c5a;
+ box-shadow:0 0 0 2px rgba(0,198,255,.45),0 30px 70px rgba(0,0,0,.6)}
+.rp .hd{height:96px;background:linear-gradient(90deg,#0a2a7a,#0d3fb0);display:flex;align-items:center;padding:0 26px;
+ font-weight:700;font-size:40px;line-height:2.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-bottom:4px solid #00c6ff}
+.rp .vis{position:absolute;left:0;right:0;top:100px;bottom:0;background-size:cover;background-position:center}
+.rp .vis.g{background:radial-gradient(600px 300px at 50% 35%,#1f5be0,#0a1f5c 65%,#040c2a)}
+.rp .vis .big{position:absolute;left:0;right:0;top:70px;text-align:center;font-weight:700;font-size:54px;line-height:1.8;color:#fff;
+ text-shadow:0 6px 30px rgba(0,0,0,.7);padding:0 40px}
+.rp .vis .src{position:absolute;left:0;right:0;top:250px;text-align:center}
+.rp .vis .src span{font-family:Naskh;font-weight:700;font-size:30px;background:rgba(0,198,255,.18);border:1px solid rgba(0,198,255,.6);
+ padding:4px 22px;border-radius:30px;color:#bfefff;direction:ltr}
+.card2{position:absolute;left:14px;right:14px;bottom:14px;height:330px;border-radius:12px;background:#0a1c52;border:3px solid #e9eef8;
+ overflow:hidden}
+.card2 .t{position:absolute;right:0;left:330px;top:0;height:62px;background:#0b2a6f;font-weight:700;font-size:30px;line-height:2.1;padding:0 18px;
+ white-space:nowrap;overflow:hidden}
+.card2 .mp{position:absolute;right:8px;left:330px;top:66px;bottom:8px;border-radius:8px;overflow:hidden}
+.card2 .nm{position:absolute;left:0;width:326px;bottom:0;height:58px;background:#e11d2e;font-weight:700;font-size:28px;line-height:2.1;text-align:center}
+.card2 .on{position:absolute;left:10px;top:10px;z-index:3;background:rgba(3,8,26,.8);border:1px solid #00c6ff;border-radius:8px;
+ font-size:24px;line-height:1.7;padding:0 12px}
+"""
+
+
+def report_html(headline: str, src: str, reporter: str, city: str, img: str = "", reporter_on: bool = False) -> str:
+    """دائیں طرف کی بڑی اسکرین (شفاف صفحہ): عنوان، خبر کی تصویر، اندر رپورٹر کی تصویر + نقشہ"""
+    x, y, w, h = RP
+    vis = (f'<div class="vis" style="background-image:url({img})"></div>' if img else
+           f'<div class="vis g"><div class="big">{html.escape(headline)}</div><div class="src"><span>{html.escape(src)}</span></div></div>')
+    inner = (f'<div class="rp" style="left:{x}px;top:{y}px;width:{w}px;height:{h}px">'
+             f'<div class="hd">خصوصی رپورٹ: {html.escape(headline)}</div>{vis}'
+             f'<div class="card2"><div class="t">📍 {html.escape(city)} · نمائندہ {html.escape(reporter)}</div>'
+             f'<div class="mp">{_map_svg(city)}</div>'
+             + ('<div class="on">🎙️ بول رہے ہیں</div>' if reporter_on else "")
+             + f'<div class="nm">{html.escape(reporter)}</div></div></div>'
+             + '<div class="l3"></div>' + _lower())
+    return _bare(inner)
+
+
+def story_image(prompt: str, out: Path) -> Path | None:
+    """مین اسٹوری کی تصویر Gemini سے (اگر مفت کوٹہ ہو)؛ نہ بنے تو None — پھر گرافک"""
+    import json as _j, requests
+    key = os.environ.get("GEMINI_API_KEY", "")
+    if not key or MOCK or not prompt:
+        return None
+    try:
+        r = requests.get("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200",
+                         headers={"x-goog-api-key": key}, timeout=30).json()
+        models = [m["name"].split("/")[-1] for m in r.get("models", [])
+                  if "image" in m["name"] and "generateContent" in m.get("supportedGenerationMethods", [])]
+    except Exception:
+        models = []
+    for m in sorted(models, reverse=True)[:3]:
+        try:
+            r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent",
+                              headers={"x-goog-api-key": key}, timeout=180, json={
+                                  "contents": [{"parts": [{"text": prompt + ". Photorealistic editorial news image, 16:9, "
+                                                           "no text, no logos, no real people's faces."}]}],
+                                  "generationConfig": {"responseModalities": ["IMAGE"]}})
+            if not r.ok:
+                print(f"تصویر {m}: HTTP {r.status_code}")
+                continue
+            for part in r.json()["candidates"][0]["content"]["parts"]:
+                if "inlineData" in part:
+                    out.write_bytes(base64.b64decode(part["inlineData"]["data"]))
+                    print(f"تصویر بن گئی: {m}")
+                    return out
+        except (requests.RequestException, KeyError, IndexError, _j.JSONDecodeError) as e:
+            print(f"تصویر {m}: {e}")
+    return None
+
+
 def mouth_track(audio: Path, secs: float) -> list[int]:
     """آواز کی بلندی سے ہر فریم پر منہ: 0 بند، 1 تھوڑا، 2 کھلا"""
     import numpy as np
@@ -584,6 +682,14 @@ def _frames(seg: dict, states: dict, audio: Path, secs: float, tmp: Path, tag: s
         if seg["kind"] == "full":
             im = anchor
             im.alpha_composite(Image.open(seg["overlay"]).convert("RGBA"))
+        elif seg["kind"] == "report":
+            im = seg["canvas"].copy()
+            im.alpha_composite(Image.open(seg["pages"][0]).convert("RGBA"))
+            x, y, w, h = RP_INSET
+            rep = Image.open(states[("m", 0)]).convert("RGBA")
+            cx = _sx("m")
+            crop = rep.crop((int(cx - 150), 50, int(cx + 150), 50 + 245)).resize((w, h))
+            im.paste(crop, (x, y))
         elif seg["kind"] == "split":
             im = Image.open(seg["pages"][0]).convert("RGBA")
             for w_, (x, y, w, h) in (("f", BOX_L), ("m", BOX_R)):
@@ -718,10 +824,13 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
                 city = p.get("reporter_city") or "سان فرانسسکو"
                 lab = ("رپورٹر سے رابطہ", f"نمائندہ {reporter} · {city}")
                 intro_r = p.get("reporter_intro") or f"اس خبر کی مزید تفصیل کے لیے ہمارے ساتھ موجود ہیں نمائندہ {reporter}۔"
-                segs_def.append({"kind": "split", "who": "f", "speaker": "f", "say": intro_r, "city": city, "l3": [lab]})
+                segs_def.append({"kind": "report", "who": "f", "speaker": "f", "say": intro_r, "city": city, "l3": [lab],
+                                 "headline": p["headline"], "src": src})
                 for qa in p["qa"][:2]:
-                    segs_def.append({"kind": "split", "who": "f", "speaker": "f", "say": qa["q"], "city": city, "l3": [lab]})
-                    segs_def.append({"kind": "split", "who": "m", "speaker": "m", "say": qa["a"], "city": city, "l3": [lab]})
+                    segs_def.append({"kind": "report", "who": "f", "speaker": "f", "say": qa["q"], "city": city, "l3": [lab],
+                                     "headline": p["headline"], "src": src})
+                    segs_def.append({"kind": "report", "who": "m", "speaker": "m", "say": qa["a"], "city": city, "l3": [lab],
+                                     "headline": p["headline"], "src": src})
         segs_def.append({"kind": "full", "who": "f",
                          "say": out.get("outro") or "ناظرین و سامعین، یہ تھیں آج کی اہم خبریں۔ فاروقی اے آئی نیوز کو سبسکرائب کیجیے۔ اللہ حافظ۔",
                          "l3": [("شکریہ", "فاروقی اے آئی نیوز سبسکرائب کریں · ہر لمحہ، باخبر")]})
@@ -760,6 +869,18 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
             d = _dur(a) + 0.7
             if sd["kind"] == "full":
                 sd["overlay"] = overlay
+            elif sd["kind"] == "report":
+                if "canvas" not in _RP:
+                    from PIL import Image, ImageFilter, ImageEnhance
+                    fem = Image.open(states[("f", 0)]).convert("RGBA")
+                    cv = ImageEnhance.Brightness(fem.filter(ImageFilter.GaussianBlur(14))).enhance(0.55)
+                    cv.alpha_composite(fem.crop((-SHIFT_F, 0, W, H)), (0, 0))
+                    _RP["canvas"] = cv
+                    simg = story_image(out.get("thumbnail_prompt", ""), tmp / "story.png")
+                    _RP["story_img"] = ("data:image/png;base64," + base64.b64encode(simg.read_bytes()).decode()) if simg else ""
+                sd["canvas"] = _RP["canvas"]
+                sd["pages"] = shoot([report_html(sd["headline"], sd["src"], reporter, sd["city"], _RP["story_img"],
+                                                 sd["speaker"] == "m")], tmp, transparent=True, tag=f"d{k}_")
             elif sd["kind"] == "split":
                 sd["pages"] = shoot([split_html(bgs["f"], date, reporter, sd["city"])], tmp, tag=f"d{k}_")
                 sd["icons"] = shoot([split_icons(sd["city"])], tmp, transparent=True, tag=f"i{k}_")[0]
@@ -831,7 +952,7 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
         for k in range(1, len(segs)):
             off += durs[k - 1] - T
             cur, prev = segs_def[k]["kind"], segs_def[k - 1]["kind"]
-            kind = "fade" if cur == "full" or (cur == "split" and prev == "split") else "slideleft"
+            kind = "fade" if cur == "full" or (cur in ("split", "report") and prev == cur) else "slideleft"
             vf.append(f"[{vlast}][{k}:v]xfade=transition={kind}:duration={T}:offset={off:.2f}[v{k}]")
             af.append(f"[{alast}][{k}:a]acrossfade=d={T}[a{k}]")
             vlast, alast = f"v{k}", f"a{k}"
