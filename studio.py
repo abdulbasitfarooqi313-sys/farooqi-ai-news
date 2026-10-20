@@ -527,7 +527,7 @@ def l3_html(label: str, text: str) -> str:
 def detail_html(who: str, bg: str, headline: str, body: str, source: str, date: str, comment: str = "") -> str:
     n = len(headline) + len(body) + len(comment)
     hs, bs, cs = (58, 36, 31) if n < 300 else (52, 33, 28) if n < 430 else (46, 30, 26)
-    name = "🎙️ رپورٹر · آڈیو رپورٹ" if who == "m" else "نیوز اینکر"
+    name = "🎙️ ورچوئل رپورٹر · آڈیو رپورٹ" if who == "m" else "ورچوئل نیوز کاسٹر"
     inner = (f'<div class="studio" style="background-image:url({bg})"></div><div class="shade"></div>' + _top(date) +
              f'<div class="abox"><div class="nm">{name} · فاروقی اے آئی نیوز</div></div><div class="glass"></div>'
              f'<div class="panel"><div class="kicker">تفصیلات · {html.escape(source)}</div><div class="head">{html.escape(headline)}</div>'
@@ -569,8 +569,8 @@ def split_html(bg: str, date: str, reporter: str, city: str) -> str:
         return f'<div class="sbox" style="left:{x}px;top:{y}px;width:{w}px;height:{h}px">{inner}</div>'
     inner = (f'<div class="studio" style="background-image:url({bg})"></div><div class="shade" style="background:rgba(2,8,30,.72)"></div>'
              + _top(date)
-             + box(BOX_L, '<div class="nm">نیوز اینکر · اسٹوڈیو</div>')
-             + box(BOX_R, f'<div class="nm">نمائندہ: {html.escape(reporter)} · {html.escape(city)}</div>')
+             + box(BOX_L, '<div class="nm">ورچوئل نیوز کاسٹر · اسٹوڈیو</div>')
+             + box(BOX_R, f'<div class="nm">ورچوئل رپورٹر: {html.escape(reporter)} · {html.escape(city)}</div>')
              + '<div class="l3"></div>' + _lower())
     return _bare(inner).replace("background:transparent!important", "background:#040a1c!important")
 
@@ -633,10 +633,10 @@ def report_html(headline: str, src: str, reporter: str, city: str, img: str = ""
            f'<div class="vis g"><div class="big">{html.escape(headline)}</div><div class="src"><span>{html.escape(src)}</span></div></div>')
     inner = (f'<div class="rp" style="left:{x}px;top:{y}px;width:{w}px;height:{h}px">'
              f'<div class="hd">خصوصی رپورٹ: {html.escape(headline)}</div>{vis}'
-             f'<div class="card2"><div class="t">📍 {html.escape(city)} · نمائندہ {html.escape(reporter)}</div>'
+             f'<div class="card2"><div class="t">📍 {html.escape(city)} · ورچوئل رپورٹر {html.escape(reporter)}</div>'
              f'<div class="mp">{_map_svg(city)}</div>'
              + ('<div class="on">🎙️ بول رہے ہیں</div>' if reporter_on else "")
-             + f'<div class="nm">{html.escape(reporter)}</div></div></div>'
+             + f'<div class="nm">ورچوئل رپورٹر</div></div></div>'
              + '<div class="l3"></div>' + _lower())
     return _bare(inner)
 
@@ -674,7 +674,7 @@ def report2_html(headline: str, src: str, reporter: str, city: str, img: str = "
             '<div style="font-family:Naskh;font-weight:700;font-size:32px;color:#ff4d5e;text-shadow:0 0 14px rgba(255,60,80,.8);direction:ltr">AI NEWS</div></div>')
     inner = (sign + f'<div class="r2" style="left:{x}px;top:{y}px;width:{w}px;height:{h}px">{vis}'
              f'<div class="map">{_map_svg(city, 230, 150)}<div class="c">📍 {html.escape(city)}</div></div>'
-             f'<div class="nm">نمائندہ {html.escape(reporter)}</div>'
+             f'<div class="nm">ورچوئل رپورٹر {html.escape(reporter)}</div>'
              + ('<div class="on">🎙️ بول رہے ہیں</div>' if reporter_on else "")
              + f'<div class="cap">خصوصی رپورٹ: {html.escape(headline)}</div></div>'
              + '<div class="l3"></div>' + _lower())
@@ -894,7 +894,7 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
                              "l3": [("مین اسٹوری" if main else "اہم خبر", p["headline"])]})
             if main:
                 city = p.get("reporter_city") or "سان فرانسسکو"
-                lab = ("رپورٹر سے رابطہ", f"نمائندہ {reporter} · {city}")
+                lab = ("رپورٹر سے رابطہ", f"ورچوئل رپورٹر {reporter} · {city}")
                 intro_r = p.get("reporter_intro") or f"اس خبر کی مزید تفصیل کے لیے ہمارے ساتھ موجود ہیں نمائندہ {reporter}۔"
                 segs_def.append({"kind": "report", "who": "f", "speaker": "f", "say": intro_r, "city": city, "l3": [lab],
                                  "headline": p["headline"], "src": src})
