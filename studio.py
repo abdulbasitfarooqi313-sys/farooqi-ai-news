@@ -515,7 +515,7 @@ def _bare(inner: str, height: int = H, hs: int = 64, bs: int = 38, cs: int = 32)
 
 def full_overlay(date: str) -> str:
     """پوری اسکرین اینکر شاٹ کے اوپر: تاریخ کا ٹیگ اور نیچے کی پٹی"""
-    return _bare(f'<div class="tagbox"><div class="tag">AI NEWS</div><div class="date">{html.escape(date)}</div></div>'
+    return _bare(f'<div class="tagbox"><div class="tag">اے آئی نامہ</div><div class="date">{html.escape(date)}</div></div>'
                  + '<div class="l3"></div>' + _lower())
 
 
@@ -825,8 +825,8 @@ def make_card(tmp: Path, kind: str, date: str) -> Path:
              f"@font-face{{font-family:Nast;font-weight:700;src:url({_font('noto-nastaliq-urdu-arabic-700-normal.woff2')})}}"
              f"@font-face{{font-family:Naskh;font-weight:700;src:url({_font('noto-naskh-arabic-arabic-700-normal.woff2')})}}")
     if kind == "intro":
-        dur, title, sub = 6.5, "فاروقی اے آئی نیوز", "باوثوق · باخبر · سب سے آگے"
-        lines = [("فاروقی، اے آئی نیوز۔", 0, 1.2), ("باوثوق، باخبر، سب سے آگے!", 1, 3.3)]
+        dur, title, sub = 6.5, "اے آئی نامہ", "فاروقی اے آئی نیوز · باوثوق · باخبر · سب سے آگے"
+        lines = [("اے آئی نامہ۔ فاروقی اے آئی نیوز۔", 0, 1.2), ("باوثوق، باخبر، سب سے آگے!", 1, 3.6)]
         notes, vowel = (146.83, 220.0, 293.66, 369.99), "aa"
     else:
         dur, title, sub = 6.0, "فاروقی اے آئی نیوز", "ہر لمحہ، باخبر · سبسکرائب کریں"
@@ -882,7 +882,7 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
             base = p.get("say") or (f"{p['headline']}۔ {p['body']}" + (f" {p['comment']}" if p.get("comment") else ""))
             return base + (f" {extra}" if extra else "")
         # ترتیب: خاتون اینکر — سلام → سرخیاں → مین اسٹوری + تجزیہ → رپورٹر سے سوال و جواب → باقی خبریں → اختتام
-        segs_def = [{"kind": "full", "who": "f", "say": intro, "l3": [("خوش آمدید", "فاروقی اے آئی نیوز · آج کی اہم خبریں")]},
+        segs_def = [{"kind": "full", "who": "f", "say": intro, "l3": [("اے آئی نامہ", "فاروقی اے آئی نیوز کا روزانہ خبرنامہ · آج کی اہم خبریں")]},
                     {"kind": "full", "who": "f", "say": " ".join(hl_say), "parts": hl_say,
                      "l3": [("سرخیاں", p["headline"]) for p in picks]}]
         for k, p in enumerate(picks):
@@ -904,7 +904,7 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
                     segs_def.append({"kind": "report", "who": "m", "speaker": "m", "say": qa["a"], "city": city, "l3": [lab],
                                      "headline": p["headline"], "src": src})
         segs_def.append({"kind": "full", "who": "f",
-                         "say": out.get("outro") or "ناظرین و سامعین، یہ تھیں آج کی اہم خبریں۔ فاروقی اے آئی نیوز کو سبسکرائب کیجیے۔ اللہ حافظ۔",
+                         "say": out.get("outro") or "ناظرین و سامعین، یہ تھا آج کا اے آئی نامہ۔ فاروقی اے آئی نیوز کو سبسکرائب کیجیے۔ اللہ حافظ۔",
                          "l3": [("شکریہ", "فاروقی اے آئی نیوز سبسکرائب کریں · ہر لمحہ، باخبر")]})
 
         if _cut("m").exists() and _cut("f").exists():
