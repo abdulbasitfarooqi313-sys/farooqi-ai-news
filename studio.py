@@ -424,6 +424,11 @@ def render(out: dict, items: list[dict], date: str, dest: Path) -> Path:
         # منظر بدلتے وقت نرم سلائیڈ ٹرانزیشن (نیوز چینل کی طرح)
         T = 0.5
         durs = [_dur(x) for x in segs]
+        # یوٹیوب ابواب (Chapters) کے لیے ہر حصے کا آغاز
+        start = [sum(durs[:k]) - k * T for k in range(len(segs))]
+        base = len(picks) + 2
+        out["_chapters"] = ([(0, "آغاز اور آج کی سرخیاں")] +
+                            [(start[base + i], p["headline"]) for i, p in enumerate(picks)])
         args, vf, af = [], [], []
         for x in segs:
             args += ["-i", x]

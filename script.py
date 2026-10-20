@@ -152,8 +152,15 @@ PROMPT = """آپ "فاروقی اے آئی نیوز" کے ایڈیٹر ہیں �
   ],
   "intro": "آغاز کا اعلان، ایک دو مختصر جملے، ‘السلام علیکم’ صرف ایک بار، جیسے: ‘السلام علیکم۔ فاروقی اے آئی نیوز میں خوش آمدید۔ آج کی تازہ ترین خبریں۔’",
   "outro": "اختتام، 1 سے 2 جملے: شکریہ، چینل فالو کرنے کی دعوت، اللہ حافظ",
-  "title": "ویڈیو کا اردو عنوان (60 حروف تک)",
-  "hashtags": "#AINews #مصنوعی_ذہانت سمیت 6 ہیش ٹیگ"
+  "title": "یوٹیوب SEO عنوان، 70 حروف تک: سب سے بڑی خبر کا اہم انگریزی نام (مثلاً OpenAI / ChatGPT) شروع میں، پھر اردو؛ آخر میں ' | اے آئی نیوز اردو'۔ کلک بیٹ یا جھوٹ نہیں",
+  "title_alts": ["متبادل عنوان 1", "متبادل عنوان 2"],
+  "hook": "تفصیل کی پہلی 2 لائنیں (150 حروف تک): آج کی سب سے اہم خبریں، اہم کی ورڈز کے ساتھ — یہی سرچ میں نظر آتی ہیں",
+  "summary_en": "One English sentence summarising today's top AI stories, with the key names (for English search)",
+  "tags": ["15 سے 20 ٹیگ: اردو، انگریزی اور رومن اردو/ہندی ملا کر؛ آج کی خبروں کے نام (کمپنی/ٹول) + عام ٹیگ جیسے AI news Urdu, AI news in Hindi, مصنوعی ذہانت, artificial intelligence, ChatGPT; کل 450 حروف سے کم"],
+  "hashtags": "صرف 3 سے 5 ہیش ٹیگ، پہلا #AINews (یوٹیوب پہلے 3 عنوان کے اوپر دکھاتا ہے)",
+  "thumbnail_text": "تھمب نیل پر لکھنے کے لیے 3 سے 5 اردو الفاظ، دلچسپ",
+  "pinned_comment": "پن کرنے کے لیے ایک کمنٹ: ناظرین سے آج کی خبروں پر ایک سوال پوچھیں تاکہ وہ جواب دیں",
+  "fb_caption": "فیس بک پوسٹ کے لیے 2 سے 3 لائن اردو کیپشن"
 }}
 
 آج کی خبریں:
@@ -162,7 +169,10 @@ PROMPT = """آپ "فاروقی اے آئی نیوز" کے ایڈیٹر ہیں �
 
 MOCK_OUT = {"picks": [{"n": i, "headline": f"آزمائشی سرخی {i}", "body": "آزمائشی خلاصہ۔", "comment": "آزمائشی تبصرہ۔"} for i in range(1, 7)],
             "intro": "السلام علیکم۔ فاروقی اے آئی نیوز میں خوش آمدید۔", "outro": "اللہ حافظ۔",
-            "title": "آج کی اے آئی خبریں", "hashtags": "#AINews #مصنوعی_ذہانت"}
+            "title": "آج کی اے آئی خبریں", "hashtags": "#AINews #مصنوعی_ذہانت",
+            "title_alts": ["متبادل ۱", "متبادل ۲"], "hook": "آزمائشی ہک۔", "summary_en": "Mock summary.",
+            "tags": ["AI news Urdu", "مصنوعی ذہانت"], "thumbnail_text": "آج کی بڑی خبر",
+            "pinned_comment": "آپ کی رائے؟", "fb_caption": "آزمائشی کیپشن۔"}
 
 
 def _json(text: str) -> dict:
@@ -228,6 +238,55 @@ def bulletin(out: dict, items: list[dict]) -> str:
     return "\n".join(lines)
 
 
+def _ts(sec: float) -> str:
+    sec = int(sec)
+    return f"{sec // 60}:{sec % 60:02d}"
+
+
+def seo(out: dict, items: list[dict]) -> list[str]:
+    """یوٹیوب / فیس بک کے لیے مکمل SEO پیکج — ہر حصہ الگ پیغام تاکہ آسانی سے کاپی ہو"""
+    picks = [p for p in out.get("picks", []) if 1 <= int(p.get("n", 0)) <= len(items)]
+    tags = out.get("tags") or []
+    if isinstance(tags, str):
+        tags = [t.strip() for t in tags.split(",")]
+    base = ["AI news Urdu", "AI news in Urdu", "AI news Hindi", "مصنوعی ذہانت", "اے آئی نیوز",
+            "artificial intelligence", "Farooqi AI News", "tech news Urdu"]
+    seen, tag_list = set(), []
+    for t in [*tags, *base]:
+        t = t.strip().lstrip("#")
+        if t and t.lower() not in seen and len(", ".join(tag_list + [t])) <= 480:
+            seen.add(t.lower()); tag_list.append(t)
+    hashtags = out.get("hashtags", "#AINews")
+    desc = [out.get("hook", ""), ""]
+    chapters = out.get("_chapters") or []
+    if len(chapters) >= 3:
+        desc += ["⏱️ ابواب (Chapters):", *[f"{_ts(t)} {lbl}" for t, lbl in chapters], ""]
+    desc += ["📰 آج کی خبریں:"]
+    for p in picks:
+        desc.append(f"• {p['headline']}")
+    desc += ["", "🔗 ذرائع:"]
+    for p in picks:
+        it = items[int(p["n"]) - 1]
+        desc.append(f"{it['source']}: {it['link']}")
+    desc += ["", out.get("summary_en", ""), "",
+             "فاروقی اے آئی نیوز — مصنوعی ذہانت کی دنیا کی روزانہ خبریں، آسان اردو میں۔ "
+             "روزانہ نئی ویڈیو کے لیے چینل کو سبسکرائب کریں اور گھنٹی کا بٹن دبائیں 🔔", "", hashtags]
+    e = html.escape
+    alts = "\n".join(f"• {e(a)}" for a in out.get("title_alts", []) if a)
+    return [
+        "📋 <b>یوٹیوب SEO — مکمل پیکج</b>\n\n"
+        f"<b>① عنوان (Title):</b>\n<code>{e(out.get('title', ''))}</code>"
+        + (f"\n\n<b>متبادل عنوان:</b>\n{alts}" if alts else "")
+        + f"\n\n<b>② تھمب نیل کا متن:</b>\n{e(out.get('thumbnail_text', ''))}"
+        "\n\n<b>③ سیٹنگز:</b>\nCategory: <b>News &amp; Politics</b> · Language: <b>Urdu</b> · "
+        "Made for kids: <b>No</b> · Playlist: <b>روزانہ اے آئی خبریں</b>",
+        "<b>④ تفصیل (Description) — پوری کاپی کریں:</b>\n\n<code>" + e("\n".join(desc)) + "</code>",
+        "<b>⑤ ٹیگز (Tags) — پوری لائن کاپی کر کے Tags خانے میں:</b>\n\n<code>" + e(", ".join(tag_list)) + "</code>",
+        f"<b>⑥ پن کمنٹ:</b>\n<code>{e(out.get('pinned_comment', ''))}</code>\n\n"
+        f"<b>⑦ فیس بک کیپشن:</b>\n<code>{e(out.get('fb_caption', ''))}\n\n{e(hashtags)}</code>",
+    ]
+
+
 def send(text: str, chat: str) -> None:
     if MOCK:
         print(text, "\n")
@@ -290,8 +349,8 @@ def main() -> None:
         for c in [x for x in (channel, me) if x]:
             send_video(video, cap, c)
         if me:
-            send("📋 <b>یوٹیوب / فیس بک کے لیے</b>\n\n<b>عنوان:</b>\n" + html.escape(out.get("title", "")) +
-                 "\n\n<b>تفصیل:</b>\n" + html.escape(re.sub(r"<[^>]+>", "", text)), me)
+            for msg in seo(out, items):
+                send(msg, me)
         if not MOCK:
             video.unlink(missing_ok=True)
     used = [items[int(p["n"]) - 1]["title"] for p in out.get("picks", []) if 1 <= int(p.get("n", 0)) <= len(items)]
