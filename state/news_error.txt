@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 595, in <module>
+    tick(force=len(sys.argv) > 1 and sys.argv[1] == "force")
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 537, in tick
+    make(feedback=(redo or {}).get("feedback") if isinstance(redo, dict) else None)
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 510, in make
+    audio, tl = build_audio(d, tmp)
+                ^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 278, in build_audio
+    anc = _speak([d["opening"]] + [s["anchor"] for s in sts], ANCHOR_VOICE, tmp, "anc")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 239, in _speak
+    return group(texts, tag)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 229, in group
+    return group(ts[:h], tg_ + "a") + group(ts[h:], tg_ + "b")
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 230, in group
+    whole = one("\n\n".join(t.strip() for t in ts), tmp / f"{tg_}_all.wav")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 206, in one
+    got = call(text, m)
+          ^^^^^^^^^^^^^
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 182, in call
+    raise TTSQuota("آواز (Gemini TTS) کا آج کا مفت کوٹہ ختم ہو گیا")
+news.base.TTSQuota: آواز (Gemini TTS) کا آج کا مفت کوٹہ ختم ہو گیا
+
+
