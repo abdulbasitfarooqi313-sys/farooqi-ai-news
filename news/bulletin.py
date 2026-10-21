@@ -535,6 +535,8 @@ def deliver(video: Path, thumb: Path, sd: dict, d: dict) -> list:
 # ---------------- چلانا ----------------
 
 def make(feedback: str | None = None) -> None:
+    if not news_chat():
+        raise RuntimeError("ٹیلیگرام چیٹ معلوم نہیں — @farooqi_ai_news_bot کو /start بھیجیں")
     items = fetch()
     if len(items) < 3:
         raise RuntimeError("آج AI کی کافی خبریں نہیں ملیں")
@@ -576,8 +578,8 @@ def tick(force: bool = False) -> None:
 
 def poll() -> None:
     """اے آئی نیوز کے اپنے بوٹ کے بٹن (✅/❌) اور ویڈیو پر Reply والی ہدایت"""
-    me = str(news_chat())
     ns = read_json(STATE) if STATE.exists() else {}
+    me = str(news_chat() or "")
     try:
         ups = tg_call("getUpdates", offset=ns.get("offset", 0), timeout=0, allowed_updates=["message", "callback_query"])
     except Exception as e:
@@ -607,6 +609,11 @@ def poll() -> None:
                 dispatch = True
                 tg_call("sendMessage", chat_id=chat, text="🔄 نیا بلیٹن بن رہا ہے (تقریباً 20–30 منٹ)۔ "
                          "کوئی خاص تبدیلی چاہیے تو اگلی بار ویڈیو پر Reply کر کے لکھیں۔")
+        elif (msg := up.get("message")) and not me and msg.get("chat", {}).get("type") == "private" \
+                and (msg.get("text") or "").startswith("/start"):
+            me = str(msg["chat"]["id"])                 # پہلا /start = مالک کی چیٹ (TELEGRAM_CHAT_ID نہ ہو تو)
+            ns["chat"] = msg["chat"]["id"]
+            tg_call("sendMessage", chat_id=me, text="📺 فاروقی اے آئی نیوز — جڑ گیا ✅ روزانہ بلیٹن دوپہر تقریباً 2 بجے یہاں آئے گا۔")
         elif (msg := up.get("message")) and str(msg.get("chat", {}).get("id")) == me:
             rt, text = msg.get("reply_to_message"), (msg.get("text") or "").strip()
             day = next((k for k, v in ns.get("days", {}).items() if rt and v.get("vmid") == rt.get("message_id")), None)
