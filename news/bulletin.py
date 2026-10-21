@@ -117,20 +117,34 @@ def fetch(max_age_h: int = 48) -> list[dict]:
     return out
 
 
-SCRIPT_SYSTEM = """آپ «فاروقی اے آئی نیوز» کے سینئر اردو نیوز ایڈیٹر اور اسکرپٹ رائٹر ہیں — مصنوعی ذہانت (AI) کی خبروں کا روزانہ اردو بلیٹن۔
-ناظرین عام پاکستانی/ہندوستانی اردو دان ہیں: زبان سادہ، شستہ، ٹی وی خبروں والی؛ انگریزی اصطلاح ہو تو اردو رسم الخط میں لکھیں اور پہلی بار مختصر وضاحت کریں (مثلاً «چیٹ بوٹ یعنی بات کرنے والا کمپیوٹر پروگرام»)۔
-سختی سے: صرف دی گئی خبروں کے حقائق؛ کوئی عدد، نام، تاریخ یا دعویٰ اپنی طرف سے نہ گھڑیں؛ غیر یقینی بات کو «بتایا جا رہا ہے»/«کمپنی کے مطابق» سے بیان کریں۔ ہر خبر میں ماخذ کا نام آئے (مثلاً «ٹیک کرنچ کے مطابق»)۔
-سنسنی، مبالغہ، سیاسی رائے اور غیر اخلاقی/نامناسب موضوع سے پرہیز۔ کسی شخص کا مذاق نہیں۔
-بلیٹن پہلے ہی ایک انٹرو اور آؤٹرو رکھتا ہے (آؤٹرو میں «اللہ حافظ» اور سبسکرائب کی بات ہے) — اس لیے آپ کے اسکرپٹ میں الوداع یا سبسکرائب کی بات نہ ہو۔
-بولا جانے والا ہر متن صرف وہی ہو جو پڑھا جائے گا — کوئی بریکٹ، ہدایت، ایموجی، ہیش ٹیگ یا انگریزی حروف نہیں (اعداد اردو الفاظ یا ہندسوں میں ٹھیک)۔
+SCRIPT_SYSTEM = """آپ «فاروقی اے آئی نیوز» کے سینئر اردو نیوز پروڈیوسر اور اسکرپٹ رائٹر ہیں — مصنوعی ذہانت (AI) کی خبروں کا روزانہ اردو بلیٹن، بڑے ٹی وی چینلوں کے پیشہ ور انداز میں۔
+ناظرین عام پاکستانی/ہندوستانی اردو دان ہیں: زبان سادہ، شستہ، ٹی وی خبروں والی؛ انگریزی اصطلاح اردو رسم الخط میں اور پہلی بار مختصر وضاحت (مثلاً «چیٹ بوٹ یعنی بات کرنے والا کمپیوٹر پروگرام»)۔
+سختی سے: صرف دی گئی خبروں کے حقائق؛ کوئی عدد، نام، تاریخ یا دعویٰ اپنی طرف سے نہ گھڑیں؛ غیر یقینی بات «بتایا جا رہا ہے»/«کمپنی کے مطابق»۔ کمپنیوں اور مصنوعات کے نام درست اردو تلفظ میں (Anthropic = انتھروپک، Claude = کلاڈ، OpenAI = اوپن اے آئی، Google = گوگل، Meta = میٹا، Microsoft = مائیکروسافٹ، Nvidia = این ویڈیا)۔
+سنسنی، مبالغہ، سیاسی رائے اور نامناسب موضوع سے پرہیز۔ بلیٹن کا انٹرو اور آؤٹرو الگ ہے (آؤٹرو میں «اللہ حافظ» اور سبسکرائب) — اسکرپٹ میں الوداع یا سبسکرائب نہیں۔
+بولا جانے والا ہر متن صرف وہی جو پڑھا جائے گا — کوئی بریکٹ، ہدایت، ایموجی، ہیش ٹیگ یا انگریزی حروف نہیں۔
+
+بلیٹن کی ترتیب (پیشہ ور پروڈیوسر کی طرح):
+۱) آغاز: «السلام علیکم! فاروقی اے آئی نیوز میں خوش آمدید، میں ہوں آپ کی میزبان سمیرہ۔ … آئیے پہلے نظر ڈالتے ہیں آج کی شہ سرخیوں پر۔»
+۲) شہ سرخیاں: ہر خبر کی صرف سرخی، ایک جملہ، 8 تا 14 الفاظ، خبر کے انداز میں (مثلاً «انتھروپک نے اپنا نیا اور طاقتور ماڈل متعارف کروا دیا»)۔ تفصیل نہیں۔
+۳) «اب چلتے ہیں خبروں کی تفصیل کی طرف» جیسا ایک جملہ۔
+۴) تفصیل: ہر خبر کی تفصیل میزبان خود پڑھے — ماخذ کے حوالے سے («ٹیک کرنچ کے مطابق…»)، کیا ہوا، کس نے کیا، کیوں اہم ہے — پھر میزبان کا مختصر، متوازن تبصرہ (عام آدمی کے لیے اس کا مطلب)۔
+۵) نامہ نگار: صرف 1 یا 2 سب سے اہم خبروں میں (ہر خبر میں ہرگز نہیں)۔ وہاں میزبان تفصیل کے بعد کہے «مزید جاننے کے لیے رابطہ کرتے ہیں ہمارے ورچوئل نامہ نگار زید سے… زید، …؟» اور ایک واضح سوال پوچھے؛ نامہ نگار جواب/رپورٹ دے؛ پھر میزبان مختصر شکریہ کہہ کر آگے بڑھے۔
+
 صرف JSON:
-{"opening": "میزبان کا آغاز، 30 تا 40 الفاظ: «السلام علیکم! فاروقی اے آئی نیوز میں خوش آمدید۔ میں ہوں آپ کی میزبان…» پھر آج کی خبروں کی جھلک",
+{"opening": "آغاز، 30 تا 45 الفاظ (میزبان کا نام سمیرہ)، آخر میں شہ سرخیوں کی طرف",
+ "to_details": "تفصیل کی طرف جانے کا ایک جملہ",
  "stories": [ ٹھیک 5 خبریں، سب سے اہم پہلے، مختلف موضوعات:
-   {"headline": "سرخی، 4 تا 8 الفاظ، اردو",
+   {"headline": "بولی جانے والی سرخی، 8 تا 14 الفاظ",
+    "screen": "اسکرین پر لکھی سرخی، 4 تا 8 الفاظ",
+    "company": "خبر کی مرکزی کمپنی/ادارے کا انگریزی نام (نہ ہو تو خالی)",
+    "domain": "اس کمپنی کی سرکاری ویب سائٹ کا ڈومین، مثلاً anthropic.com (یقین نہ ہو تو خالی)",
     "topic": "ان میں سے ایک: ai, robot, chip, phone, health, car, space, finance, security, education, law, data, media",
-    "location": "خبر کا مقام اردو میں «شہر، ملک» (معلوم نہ ہو تو کمپنی کا صدر مقام؛ وہ بھی نہ ہو تو «عالمی»)",
-    "anchor": "میزبان کی سرخی والی بات، 22 تا 30 الفاظ، آخر میں نامہ نگار کی طرف رخ، مثلاً «…تفصیل بتا رہے ہیں ہمارے ورچوئل نامہ نگار۔»",
-    "reporter": "نامہ نگار کی تفصیل، 45 تا 60 الفاظ: کیا ہوا، کس نے کیا، عام آدمی کے لیے اس کا مطلب کیا ہے؛ ماخذ کا نام",
+    "location": "خبر کا مقام اردو میں «شہر، ملک» (معلوم نہ ہو تو کمپنی کا صدر مقام؛ ورنہ «عالمی»)",
+    "detail": "میزبان کی تفصیل، 55 تا 80 الفاظ، ماخذ کے نام کے ساتھ",
+    "comment": "میزبان کا مختصر تبصرہ، 20 تا 35 الفاظ",
+    "reporter": null یا (صرف 1-2 خبروں میں) {"handoff": "میزبان: نامہ نگار کو لینے کا جملہ + سوال، 20 تا 35 الفاظ",
+                                             "report": "نامہ نگار زید کی رپورٹ، 50 تا 70 الفاظ، «شکریہ سمیرہ…» سے شروع (عام آدمی کے لیے اہمیت، آگے کیا ہوگا)",
+                                             "thanks": "میزبان کا مختصر شکریہ، 5 تا 10 الفاظ (مثلاً «بہت شکریہ زید۔»)"},
     "source": "ماخذ کا نام (انگریزی)", "link": "دیا گیا لنک"} ],
  "ticker": ["5 تا 6 مختصر شہ سرخیاں، ہر ایک 4 تا 8 الفاظ"],
  "thumb_text": "تھمب نیل کے لیے 3 تا 5 الفاظ، سب سے بڑی خبر",
@@ -149,14 +163,22 @@ def script(items: list[dict], feedback: str | None = None) -> dict:
     if feedback:
         user += f"\n\nمالک کی ہدایت (اس کا خاص خیال رکھیں): {feedback}"
     d = generate_json(SCRIPT_SYSTEM, user)
-    st = [s for s in d.get("stories", []) if s.get("anchor") and s.get("reporter")][:5]
+    st = [s for s in d.get("stories", []) if s.get("headline") and s.get("detail")][:5]
     if len(st) < 3:
         raise RuntimeError("اسکرپٹ میں کافی خبریں نہیں")
+    nrep = 0
     for s in st:
         if s.get("topic") not in TOPICS:
             s["topic"] = "ai"
         s["location"] = s.get("location") or "عالمی"
+        s["screen"] = s.get("screen") or s["headline"]
+        r = s.get("reporter")
+        if not (isinstance(r, dict) and r.get("handoff") and r.get("report")) or nrep >= 2:
+            s["reporter"] = None
+        else:
+            nrep += 1
     d["stories"] = st
+    d["to_details"] = d.get("to_details") or "اب چلتے ہیں خبروں کی تفصیل کی طرف۔"
     return d
 
 
@@ -297,31 +319,60 @@ def _edge(texts: list[str], voice: str, tmp: Path, tag: str) -> list[Path]:
     return out
 
 
-def _voices(d: dict, tmp: Path) -> tuple[list[Path], list[Path]]:
+def _anchor_texts(d: dict) -> list[str]:
     sts = d["stories"]
-    at = [d["opening"]] + [s["anchor"] for s in sts]
-    rt = [s["reporter"] for s in sts]
+    t = [d["opening"]] + [s["headline"] for s in sts] + [d["to_details"]]
+    for s in sts:
+        t.append(s["detail"].strip() + "\n\n" + (s.get("comment") or "").strip() if not s["reporter"] else
+                 s["detail"].strip() + " " + s["reporter"]["handoff"].strip())
+        if s["reporter"]:
+            t.append(((s["reporter"].get("thanks") or "").strip() + " " + (s.get("comment") or "")).strip())
+    return t
+
+
+def _voices(d: dict, tmp: Path) -> tuple[list[Path], list[Path]]:
+    at = _anchor_texts(d)
+    rt = [s["reporter"]["report"] for s in d["stories"] if s["reporter"]]
     if os.environ.get("NEWS_TTS", "gemini") == "gemini":
         try:
-            return _speak(at, ANCHOR_VOICE, tmp, "anc"), _speak(rt, REPORTER_VOICE, tmp, "rep")
-        except Exception as e:                      # کوٹہ یا خالی جواب — پورا بلیٹن ایک ہی قسم کی آواز میں
+            return _speak(at, ANCHOR_VOICE, tmp, "anc"), (_speak(rt, REPORTER_VOICE, tmp, "rep") if rt else [])
+        except Exception as e:
             LOG.append(f"Gemini آواز نہ ملی ({str(e)[:120]})")
             print(LOG[-1])
             if os.environ.get("NEWS_EDGE") != "1":      # مالک کو Microsoft کی آواز پسند نہیں — اگلی کوشش تک انتظار
                 raise
-    return _edge(at, ANCHOR_VOICE, tmp, "anc"), _edge(rt, REPORTER_VOICE, tmp, "rep")
+    return _edge(at, ANCHOR_VOICE, tmp, "anc"), (_edge(rt, REPORTER_VOICE, tmp, "rep") if rt else [])
+
+
+def _logo(domain: str, tmp: Path, i: int) -> str | None:
+    """کمپنی کا لوگو (سرکاری ویب سائٹ کا آئیکن) — نہ ملے تو None"""
+    if not domain or not re.match(r"^[a-z0-9.-]+\.[a-z]{2,}$", domain.strip().lower()):
+        return None
+    dom = domain.strip().lower()
+    for url in (f"https://www.google.com/s2/favicons?domain={dom}&sz=256", f"https://{dom}/apple-touch-icon.png"):
+        try:
+            r = requests.get(url, timeout=20, headers={"User-Agent": "Mozilla/5.0"})
+            if r.ok and len(r.content) > 1500 and r.headers.get("content-type", "").startswith("image"):
+                p = tmp / f"logo{i}.png"
+                p.write_bytes(r.content)
+                return _b64(p, r.headers["content-type"].split(";")[0])
+        except Exception:
+            pass
+    return None
 
 
 def build_audio(d: dict, tmp: Path) -> tuple[Path, dict]:
-    """بلیٹن کا درمیانی حصہ: آواز کی ترتیب + ہر حصے کے اوقات"""
+    """ترتیب: آغاز → شہ سرخیاں (ہر ایک سے پہلے ووکل، پوری اسکرین سرخی) → تفصیل (زوم اِن + سائیڈ خانہ؛ 1-2 خبروں میں نامہ نگار)"""
     sts = d["stories"]
     anc, rep = _voices(d, tmp)
     anc = [_trim(p, tmp / f"ancT{i}.wav") for i, p in enumerate(anc)]
     rep = [_trim(p, tmp / f"repT{i}.wav") for i, p in enumerate(rep)]
+    vocal = tmp / "vocal.wav"
+    _ff("-i", str(A / "vocal.wav"), "-af", "volume=0.9", "-ar", "44100", "-ac", "2", "-c:a", "pcm_s16le", str(vocal))
     sting = tmp / "sting.wav"
     _ff("-i", str(A / "sting.wav"), "-af", "apad=pad_dur=0.1", "-t", "1.6", "-ar", "44100", "-ac", "2", "-c:a", "pcm_s16le", str(sting))
     parts, t = [], 0.0
-    tl = {"split": [[0, 0]], "stories": [], "wipes": [], "anchor": []}
+    tl = {"split": [[0, 0]], "hl": [[0, 0]], "side": [[0, 0]], "zoom": [[0, 0]], "hcards": [], "stories": [], "wipes": [], "anchor": []}
 
     def add(p: Path, kind: str):
         nonlocal t
@@ -333,28 +384,57 @@ def build_audio(d: dict, tmp: Path) -> tuple[Path, dict]:
         t += du
         return t0, t
 
-    add(_sil(0.6, tmp / "s0.wav"), "gap")
-    add(anc[0], "anchor")
+    def gap(sec: float, tag: str):
+        return add(_sil(sec, tmp / f"g_{tag}.wav"), "gap")
+
+    gap(0.6, "s0")
+    k = 0
+    add(anc[k], "anchor"); k += 1
+    # شہ سرخیاں
     for i, s in enumerate(sts):
-        add(_sil(0.35, tmp / f"g{i}a.wav"), "gap")
+        gap(0.25, f"h{i}")
+        v0, v1 = add(vocal, "vocal")
+        a0, a1 = add(anc[k], "anchor"); k += 1
+        gap(0.35, f"h{i}b")
+        tl["hcards"].append({"t0": round(v0 + 0.3, 2), "t1": round(a1 + 0.35, 2), "i": i})
+        tl["hl"] += [[round(v0 + 0.2, 2), 0], [round(v0 + 0.9, 2), 1], [round(a1 + 0.05, 2), 1], [round(a1 + 0.5, 2), 0]]
+    gap(0.4, "td")
+    add(anc[k], "anchor"); k += 1
+    # تفصیل
+    r = 0
+    for i, s in enumerate(sts):
+        gap(0.3, f"d{i}")
         w0, _ = add(sting, "sting")
-        tl["wipes"].append([round(w0, 2), ORD[i]])
-        a0, a1 = add(anc[i + 1], "anchor")
-        add(_sil(0.55, tmp / f"g{i}b.wav"), "gap")
-        r0, r1 = add(rep[i], "reporter")
-        # میزبان پوری اسکرین → نامہ نگار سے بات پر «زوم اِن» دو خانے → واپس
-        tl["split"] += [[round(max(a1 - 0.4, a0), 2), 0], [round(r0 + 0.5, 2), 1], [round(r1 + 0.1, 2), 1], [round(r1 + 1.0, 2), 0]]
-        tl["stories"].append({"t0": round(w0, 2), "t1": round(r1 + 0.3, 2), "n": ORD[i], "h": s["headline"], "topic": s["topic"], "loc": s["location"]})
-    add(_sil(1.2, tmp / "s9.wav"), "gap")
+        tl["wipes"].append([round(w0, 2), s["screen"]])
+        a0, a1 = add(anc[k], "anchor"); k += 1
+        tl["zoom"] += [[round(w0 + 0.6, 2), 0], [round(w0 + 1.6, 2), 1]]
+        tl["side"] += [[round(w0 + 0.8, 2), 0], [round(w0 + 1.6, 2), 1]]
+        end = a1
+        if s["reporter"]:
+            gap(0.5, f"r{i}")
+            r0, r1 = add(rep[r], "reporter"); r += 1
+            gap(0.4, f"r{i}b")
+            b0, b1 = add(anc[k], "anchor"); k += 1
+            tl["side"] += [[round(a1 - 0.3, 2), 1], [round(a1 + 0.2, 2), 0], [round(r1 + 0.4, 2), 0], [round(r1 + 1.0, 2), 1]]
+            tl["split"] += [[round(a1 - 0.2, 2), 0], [round(r0 + 0.4, 2), 1], [round(r1 + 0.1, 2), 1], [round(r1 + 0.9, 2), 0]]
+            end = b1
+        tl["zoom"] += [[round(end + 0.1, 2), 1], [round(end + 0.9, 2), 0]]
+        tl["side"] += [[round(end + 0.1, 2), 1], [round(end + 0.6, 2), 0]]
+        tl["stories"].append({"t0": round(w0, 2), "t1": round(end + 0.3, 2), "n": "", "h": s["screen"], "topic": s["topic"],
+                              "loc": s["location"], "co": s.get("company") or "", "logo": s.get("_logo")})
+    gap(1.2, "end")
+    for key in ("split", "hl", "side", "zoom"):
+        tl[key] = sorted(tl[key], key=lambda x: x[0])
     lst = tmp / "body.txt"
     lst.write_text("".join(f"file '{p}'\n" for p in parts))
     voice = tmp / "body_voice.wav"
     _ff("-f", "concat", "-safe", "0", "-i", str(lst), "-c:a", "pcm_s16le", str(voice))
     tl["dur"] = round(_dur(voice), 2)
     tl["energy"] = _energy(voice, int(tl["dur"] * FPS) + 2, tl["anchor"])
+    tl["cards"] = [{"h": s["screen"], "topic": s["topic"], "co": s.get("company") or "", "logo": s.get("_logo"), "loc": s["location"]} for s in sts]
     mixed = tmp / "body_audio.wav"
     _ff("-i", str(voice), "-stream_loop", "-1", "-i", str(A / "bed.m4a"), "-filter_complex",
-        f"[1]volume=0.07,afade=t=in:d=1.5,afade=t=out:st={tl['dur'] - 1.5:.2f}:d=1.5[b];"
+        f"[1]volume=0.06,afade=t=in:d=1.5,afade=t=out:st={tl['dur'] - 1.5:.2f}:d=1.5[b];"
         f"[0][b]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-16:TP=-1.5[a]",
         "-map", "[a]", "-t", f"{tl['dur']:.2f}", "-ar", "44100", "-ac", "2", "-c:a", "pcm_s16le", str(mixed))
     return mixed, tl
@@ -369,7 +449,7 @@ def _b64(p: Path, mime: str) -> str:
 def page(d: dict, tl: dict) -> str:
     html = (A / "newsroom.html").read_text(encoding="utf-8")
     tick = " <b>◆</b> ".join(_h.escape(x) for x in (d.get("ticker") or [s["headline"] for s in d["stories"]]))
-    data = {k: tl[k] for k in ("split", "stories", "wipes", "dur", "energy")}
+    data = {k: tl[k] for k in ("split", "hl", "side", "zoom", "hcards", "cards", "stories", "wipes", "dur", "energy")}
     rep = {"__LOGO__": _b64(A / "logo_round.png", "image/png"), "__NQFONT__": FONT.as_uri(),
            "__ABG__": _b64(A / "anchor_bg.jpg", "image/jpeg"), "__AFG__": _b64(A / "anchor_fg.png", "image/png"),
            "__ABLINK__": _b64(A / "anchor_blink.png", "image/png"), "__IMGB__": _b64(A / "reporter.jpg", "image/jpeg"),
@@ -548,6 +628,8 @@ def make(feedback: str | None = None) -> None:
     d = script(fresh, feedback)
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
+        for i, s_ in enumerate(d["stories"]):
+            s_["_logo"] = _logo(s_.get("domain") or "", tmp, i)
         audio, tl = build_audio(d, tmp)
         print(f"درمیانی حصہ: {tl['dur']:.1f}s")
         body = render_body(d, tl, audio, tmp / "body.mp4", tmp)
