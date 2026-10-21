@@ -38,6 +38,15 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python -m news.bulletin ${{ github.event.inputs.force == 'yes' && 'force' || '' }}
+      - name: Keep a review copy
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -f bulletin.mp4 ] || exit 0
+          T="bulletin-$(TZ=Asia/Riyadh date +%F)"
+          gh release delete "$T" -y --cleanup-tag 2>/dev/null || true
+          gh release create "$T" --title "$T" --notes "review copy" bulletin.mp4 || true
       - name: Save
         if: always()
         run: |

@@ -305,8 +305,10 @@ def _voices(d: dict, tmp: Path) -> tuple[list[Path], list[Path]]:
         try:
             return _speak(at, ANCHOR_VOICE, tmp, "anc"), _speak(rt, REPORTER_VOICE, tmp, "rep")
         except Exception as e:                      # کوٹہ یا خالی جواب — پورا بلیٹن ایک ہی قسم کی آواز میں
-            LOG.append(f"Gemini آواز نہ ملی ({str(e)[:120]}) — Edge کی آواز")
+            LOG.append(f"Gemini آواز نہ ملی ({str(e)[:120]})")
             print(LOG[-1])
+            if os.environ.get("NEWS_EDGE") != "1":      # مالک کو Microsoft کی آواز پسند نہیں — اگلی کوشش تک انتظار
+                raise
     return _edge(at, ANCHOR_VOICE, tmp, "anc"), _edge(rt, REPORTER_VOICE, tmp, "rep")
 
 
@@ -554,6 +556,11 @@ def make(feedback: str | None = None) -> None:
         thumb = thumbnail(d, tmp / "thumb.jpg", tmp)
         sd = seo(d, tl, _dur(A / "intro.mp4"))
         vmid, mids = deliver(out, thumb, sd, d)
+        try:                                            # جانچ کے لیے نقل (GitHub Release)
+            import shutil
+            shutil.copy(out, ROOT / "bulletin.mp4")
+        except Exception:
+            pass
     day = _today()
     st = read_json(STATE) if STATE.exists() else {}
     st.setdefault("days", {})[day] = {"status": "pending", "vmid": vmid, "mids": mids,
