@@ -1,0 +1,49 @@
+# فاروقی اے آئی نیوز — روزانہ ایک بلیٹن (ساڑھے تین سے چار منٹ) → @farooqi_ai_news_bot پر منظوری کے لیے
+name: Daily Bulletin
+
+on:
+  schedule:
+    - cron: "31 10 * * *"   # 1:31 دوپہر (سعودی وقت)
+    - cron: "31 13 * * *"   # 4:31 شام — اگر دوپہر کو نہ بن سکا
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "دوبارہ بنائیں (آج کا بن چکا ہو تب بھی): yes"
+        required: false
+        default: "no"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bulletin
+  cancel-in-progress: false
+
+jobs:
+  bulletin:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Make bulletin
+        env:
+          GEMINI_NEWS_KEY: ${{ secrets.GEMINI_NEWS_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          NEWS_BOT_TOKEN: ${{ secrets.NEWS_BOT_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python -m news.bulletin ${{ github.event.inputs.force == 'yes' && 'force' || '' }}
+      - name: Save
+        if: always()
+        run: |
+          git config user.name "ai-news-bot"
+          git config user.email "ai-news-bot@users.noreply.github.com"
+          for f in state/news.json state/news_error.txt; do [ -f "$f" ] && git add "$f"; done; true
+          git diff --cached --quiet && exit 0
+          git commit -m "بلیٹن"
+          for i in 1 2 3; do git pull --rebase --autostash -X theirs && git push && exit 0; sleep 10; done; echo "push ناکام"; exit 1

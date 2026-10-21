@@ -1,0 +1,45 @@
+# @farooqi_ai_news_bot کے بٹن: ✅ منظور · ❌ دوبارہ · ویڈیو پر Reply = ہدایت کے ساتھ نیا بلیٹن
+name: Bot
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: bot
+  cancel-in-progress: false
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q requests
+      - name: Buttons
+        env:
+          NEWS_BOT_TOKEN: ${{ secrets.NEWS_BOT_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python -m news.bulletin poll
+      - name: Save
+        run: |
+          git config user.name "ai-news-bot"
+          git config user.email "ai-news-bot@users.noreply.github.com"
+          git add state/news.json || true
+          git diff --cached --quiet && exit 0
+          git commit -m "بوٹ: حیثیت"
+          for i in 1 2 3; do git pull --rebase --autostash -X theirs && git push && exit 0; sleep 10; done; exit 1
+      - name: Start new bulletin (❌)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -f /tmp/news_dispatch ] || exit 0
+          gh workflow run bulletin.yml --ref "${{ github.ref_name }}" -f force=yes

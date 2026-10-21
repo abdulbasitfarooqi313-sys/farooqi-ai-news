@@ -1,0 +1,131 @@
+<!doctype html><html dir="rtl"><head><meta charset="utf-8"><style>
+@font-face{font-family:NQ;src:url('__NQFONT__')}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#050b33}
+#root{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 20%,#1a3aa6,#0b1a5e 55%,#050b33);overflow:hidden}
+#circ{position:absolute;inset:0;opacity:.35}
+/* اوپر: لوگو + سلوگن + آج کی سرخی */
+#top{position:absolute;right:46px;top:30px;display:flex;align-items:center;gap:22px;flex-direction:row}
+#logo{width:150px;height:150px;border-radius:50%;background:url('__LOGO__') center/cover;
+ box-shadow:0 0 0 3px #e2b84f,0 0 30px rgba(95,180,255,.55)}
+#ring{position:absolute;right:46px;top:30px;width:150px;height:150px;border-radius:50%;border:3px solid transparent;
+ border-top-color:#7cc4ff;border-left-color:#ffd36b;pointer-events:none}
+#brand{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+#brand .n{font-family:NQ;font-size:58px;line-height:1.15;color:#fff;text-shadow:0 2px 0 #0a1550,0 0 18px rgba(95,180,255,.5)}
+#brand .n em{font-style:normal;color:#f0cf6a}
+#brand .s{font-family:NQ;font-size:28px;color:#cfe0ff;letter-spacing:.3px}
+#brand .s b{color:#f0cf6a;font-weight:normal;margin:0 8px}
+#today{position:absolute;left:46px;top:28px;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+#today .d{font-family:NQ;font-size:30px;color:#0a1550;background:linear-gradient(180deg,#ffe39a,#d4a53d);border-radius:30px;padding:2px 26px 8px}
+#today .h{font-family:NQ;font-size:34px;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.5)}
+#live{display:inline-flex;align-items:center;gap:10px;font-family:Arial,sans-serif;font-weight:700;font-size:24px;color:#fff;
+ background:#d42a2a;border-radius:6px;padding:4px 14px;letter-spacing:2px}
+#live i{width:12px;height:12px;border-radius:50%;background:#fff;display:inline-block}
+/* دو حصے */
+.pane{position:absolute;top:212px;height:690px;border-radius:18px;overflow:hidden;border:3px solid #e2b84f;
+ box-shadow:0 10px 40px rgba(0,0,0,.5),0 0 0 6px rgba(95,180,255,.18)}
+#paneA{right:46px;width:1000px}
+#paneA .img{background-position:0% 50%}
+#paneB{left:46px;width:770px}
+#paneB .img{background-position:50% 75%}
+#pip{position:absolute;left:66px;top:232px;width:250px;height:300px;border-radius:14px;overflow:hidden;border:3px solid #e2b84f;
+ box-shadow:0 10px 30px rgba(0,0,0,.55),0 0 0 5px rgba(95,180,255,.25)}
+#pip .img{position:absolute;inset:0;background:#0d1d6e center 20%/cover no-repeat}
+#pip .cap{position:absolute;left:0;right:0;bottom:0;padding:2px 0 7px;text-align:center;font-family:NQ;font-size:24px;color:#0a1550;
+ background:linear-gradient(180deg,#ffe39a,#d4a53d)}
+#pip .loc{position:absolute;left:10px;top:10px;font-family:NQ;font-size:22px;color:#fff;background:rgba(8,18,69,.85);border-radius:8px;padding:0 10px 4px}
+#pip .lv{position:absolute;right:10px;top:12px;font-family:Arial;font-weight:700;font-size:16px;color:#fff;background:#d42a2a;border-radius:4px;padding:2px 8px;letter-spacing:1px}
+.pane .img{position:absolute;inset:0;background:#0d1d6e center/cover no-repeat}
+.ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;
+ font-family:NQ;color:#9fb6ff;font-size:36px;background:repeating-linear-gradient(135deg,#0e1f6e 0 24px,#0b1a5e 24px 48px)}
+.tag{position:absolute;bottom:22px;right:22px;display:flex;align-items:stretch;border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.45)}
+.tag .k{font-family:NQ;font-size:30px;color:#0a1550;background:linear-gradient(180deg,#ffe39a,#d4a53d);padding:2px 18px 8px}
+.tag .v{font-family:NQ;font-size:30px;color:#fff;background:rgba(8,18,69,.92);padding:2px 20px 8px}
+.pin{display:inline-block;margin-left:8px}
+/* نیچے: شہ سرخیوں کی پٹی */
+.ticker{position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(180deg,#0d1d6e,#060d3c);border-top:4px solid #e2b84f;overflow:hidden}
+.tk-label{position:absolute;right:0;top:0;bottom:0;width:300px;background:linear-gradient(180deg,#ffe39a,#c99637);
+ color:#0a1550;font-family:NQ;font-size:44px;display:flex;align-items:center;justify-content:center;z-index:2;clip-path:polygon(12% 0,100% 0,100% 100%,0 100%)}
+.tk-text{position:absolute;white-space:nowrap;font-family:NQ;font-size:44px;color:#eef3ff;top:24px}
+.tk-text b{color:#f0cf6a;margin:0 30px;font-weight:normal}
+.tk-time{position:absolute;left:0;top:0;bottom:0;width:170px;background:#0a1550;border-right:3px solid #e2b84f;z-index:2;
+ display:flex;align-items:center;justify-content:center;font-family:Arial,sans-serif;font-size:34px;font-weight:700;color:#fff}
+
+#paneB .scene{position:absolute;inset:0}
+.pane .tag{bottom:92px}
+#lower{position:absolute;left:46px;right:46px;top:842px;height:72px;display:flex;align-items:stretch;border-radius:12px;overflow:hidden;
+ box-shadow:0 8px 26px rgba(0,0,0,.55);border:2px solid #e2b84f;opacity:0}
+#lower .n{flex:none;font-family:NQ;font-size:36px;color:#0a1550;background:linear-gradient(180deg,#ffe39a,#d4a53d);padding:6px 26px 0;display:flex;align-items:center}
+#lower .t{flex:1;font-family:NQ;font-size:40px;color:#fff;background:linear-gradient(90deg,rgba(6,13,60,.96),rgba(18,40,130,.96));padding:4px 28px 0;
+ display:flex;align-items:center;white-space:nowrap;overflow:hidden}
+#wipe{position:absolute;top:0;bottom:0;width:2400px;left:-2400px;background:linear-gradient(90deg,transparent,rgba(226,184,79,.0) 10%,#e2b84f 46%,#fff3c4 50%,#e2b84f 54%,rgba(226,184,79,0) 90%,transparent);
+ opacity:.85;pointer-events:none;mix-blend-mode:screen}
+#wtag{position:absolute;left:50%;top:430px;transform:translateX(-50%);font-family:NQ;font-size:64px;color:#0a1550;background:linear-gradient(180deg,#ffe39a,#d4a53d);
+ padding:6px 60px 18px;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,.6);opacity:0;white-space:nowrap}
+#stage{position:absolute;left:0;top:0;width:1715px;height:1184px;transform-origin:0 0}
+#abg{position:absolute;left:0;top:0;width:1715px;height:1184px}
+#afg{position:absolute;left:423px;top:413px;width:478px;height:492px}
+#afg img{position:absolute;left:0;top:0}
+#afg #ablink{left:202px;top:90px;opacity:0}
+</style></head><body><div id="root">
+<svg id="circ" width="1920" height="1080"><g stroke="#3d7dff" stroke-width="2" fill="none">
+ <path d="M0 140 H160 L200 180 H360"/><path d="M1920 960 H1700 L1660 920 H1500"/><path d="M0 980 H220 L260 940 H420"/>
+ <path d="M860 0 V60 L900 100 H1060"/></g></svg>
+
+<div id="top"><div id="logo"></div><div id="brand">
+ <div class="n">فاروقی <em>اے آئی</em> نیوز</div>
+ <div class="s">مصنوعی ذہانت کی دنیا <b>|</b> آسان اردو میں</div></div></div>
+<div id="ring"></div>
+
+<div id="today"><div id="live"><i></i>LIVE</div>
+ <div class="d">آج کی تازہ ترین خبریں</div>
+ <div class="h" id="hh">اے آئی کی دنیا میں آج کیا نیا ہوا؟</div></div>
+
+<div class="pane" id="paneA"><div id="stage"><img id="abg" src="__ABG__"><div id="afg"><img src="__AFG__"><img id="ablink" src="__ABLINK__"></div></div>
+ <div class="tag"><div class="k">ورچوئل نیوز کاسٹر</div><div class="v">فاروقی اے آئی نیوز</div></div></div>
+<div class="pane" id="paneB"><div class="scene" id="scene"></div>
+ <div class="tag"><div class="k">براہِ راست</div><div class="v"><span class="pin">📍</span><span id="loc">LOCATION</span></div></div></div>
+<div id="pip"><div class="img" id="imgB"></div><div class="ph" id="phB" style="font-size:26px">رپورٹر</div>
+ <div class="lv">LIVE</div><div class="cap">ورچوئل نامہ نگار</div></div>
+
+<div id="lower"><div class="n" id="ln"></div><div class="t" id="lt"></div></div>
+<div class="ticker"><div class="tk-label">شہ سرخیاں</div><div class="tk-time" id="clock" style="font-family:NQ;font-size:30px;font-weight:normal;direction:rtl;width:230px">__DATE__</div><div class="tk-text" id="tk">__TICKER__</div></div>
+<div id="wipe"></div><div id="wtag"></div></div>
+<script>__SCENESJS__</script>
+<script>
+const $=id=>document.getElementById(id);
+const IB='__IMGB__';
+if(IB.startsWith('data:')){ $('imgB').style.backgroundImage=`url('${IB}')`;$('phB').style.display='none';}
+const NF=__NFDATA__;   // {split:[[t,k]..], stories:[{t0,t1,h,topic,loc}], wipes:[t..]}
+const tk=$('tk');let tw=0,cur=-1;
+const SPLIT=NF.split;
+const UR=s=>String(s).replace(/[0-9]/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+function ez(x){x=Math.max(0,Math.min(1,x));return x*x*(3-2*x);}
+function seg(t,K){for(let i=1;i<K.length;i++){if(t<=K[i][0]){const [a,va]=K[i-1],[b,vb]=K[i];return va+(vb-va)*ez((t-a)/(b-a||1));}}return K[K.length-1][1];}
+window.render=function(t){
+ const k=seg(t,SPLIT);                      // 0 = پوری اسکرین، 1 = دو خانے
+ const A=$('paneA');A.style.width=(1828-828*k).toFixed(1)+'px';
+ const w=1828-828*k,zm=1+.03*Math.min(1,t/16),sc=Math.max(w/1715,690/1184)*zm,SW=1715*sc,SH=1184*sc;
+ const px=(30-30*k)/100,py=(58-8*k)/100;$('stage').style.transform=`translate(${((w-SW)*px).toFixed(1)}px,${((690-SH)*py).toFixed(1)}px) scale(${sc.toFixed(4)})`;
+ const fi=Math.min(NF.energy.length-1,Math.max(0,Math.round(t*25))),e=NF.energy.length?NF.energy[fi]:0;
+ const th=.35*Math.sin(t*.9)+1.1*e*Math.sin(t*5.3)+.4*e*Math.sin(t*2.7+1),ty=1.8*e*Math.sin(t*8.1),br=1+.005*Math.sin(t*Math.PI*2/4.2);
+ $('afg').style.transformOrigin='267px 347px';$('afg').style.transform=`translateY(${ty.toFixed(2)}px) rotate(${th.toFixed(3)}deg) scaleY(${br.toFixed(4)})`;
+ let bo=0;const bp=[3.7,4.6,3.1,5.2,4.1];let bt=1.2,bi=0;while(bt<t+1){const d=t-bt;if(d>=0&&d<.18)bo=1-Math.abs(d-.09)/.09;bt+=bp[bi++%5];}
+ $('ablink').style.opacity=Math.max(0,Math.min(1,bo*1.6)).toFixed(2);
+ const B=$('paneB');B.style.opacity=k.toFixed(3);B.style.transform=`translateX(${(-80*(1-k)).toFixed(1)}px)`;
+ const kp=ez((k-0.5)/0.5);$('pip').style.opacity=kp.toFixed(3);$('pip').style.transform=`translateX(${(-40*(1-kp)).toFixed(1)}px)`;
+ let si=-1;NF.stories.forEach((s,i)=>{if(t>=s.t0)si=i;});
+ if(si!==cur){cur=si;if(si>=0){const s=NF.stories[si];$('scene').innerHTML=nfScene(s.topic);$('loc').textContent=s.loc||'';$('ln').textContent=s.n;$('lt').textContent=s.h;$('hh').textContent=s.h;}}
+ if(si>=0){const s=NF.stories[si];nfAnimate($('scene'),t-s.t0);const lo=ez((t-s.t0-0.3)/0.6)*(1-ez((t-(s.t1-0.5))/0.5));$('lower').style.opacity=lo.toFixed(3);
+  $('lower').style.transform=`translateY(${(30*(1-lo)).toFixed(1)}px)`;}else{$('lower').style.opacity=0;}
+ let wo=0,wx=-2400,wl='';NF.wipes.forEach((w,i)=>{const d=t-w[0];if(d>=0&&d<1.4){wx=-2400+(1920+2400)*(d/1.4);wo=Math.sin(Math.PI*Math.min(1,d/1.4));wl=w[1];}});
+ $('wipe').style.left=wx.toFixed(0)+'px';$('wtag').style.opacity=wo.toFixed(3);$('wtag').textContent=wl;
+ const fo=ez(t/0.5)*(1-ez((t-(NF.dur-0.6))/0.6));$('root').style.opacity=fo.toFixed(3);
+ const q=t%6;$('logo').style.transform=q<1.2?`perspective(800px) rotateY(${(360*(q/1.2)).toFixed(1)}deg)`:`scale(${(1+.03*Math.sin(t*2.5)).toFixed(4)})`;
+ $('logo').style.boxShadow=`0 0 0 3px #e2b84f,0 0 ${(24+16*Math.sin(t*2.5)).toFixed(1)}px rgba(95,180,255,.65)`;
+ $('ring').style.transform=`rotate(${(t*120)%360}deg)`;
+ $('live').querySelector('i').style.opacity=Math.sin(t*6)>0?1:.2;
+ if(!tw)tw=tk.scrollWidth;tk.style.left=(-tw+((t*130)%(tw+1920)))+'px';
+};
+document.fonts.ready.then(()=>{render(0);document.title='ready';});
+</script></body></html>
