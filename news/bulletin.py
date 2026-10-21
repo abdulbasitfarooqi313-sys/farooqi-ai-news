@@ -179,6 +179,7 @@ def _speak(texts: list[str], voice: str, tmp: Path, tag: str) -> list[Path]:
                                       "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}})
             if r.status_code == 429:
                 if re.search(r"PerDay|per_day|per day|RequestsPerDay|limit: 0", r.text, flags=re.I):
+                    LOG.append(f"TTS {voice} 429: {r.text[:400]}")
                     raise TTSQuota("آواز (Gemini TTS) کا آج کا مفت کوٹہ ختم ہو گیا")
                 m = re.search(r'"retryDelay":\s*"(\d+)', r.text)
                 time.sleep(min(60, int(m.group(1)) + 2 if m else 30))
@@ -272,11 +273,47 @@ def _energy(wav: Path, n_frames: int, mask: list[tuple[float, float]]) -> list[f
     return [round(float(v), 3) for v in e]
 
 
+EDGE_VOICES = {ANCHOR_VOICE: "ur-PK-UzmaNeural", REPORTER_VOICE: "ur-PK-AsadNeural"}
+
+
+def _edge(texts: list[str], voice: str, tmp: Path, tag: str) -> list[Path]:
+    """Microsoft Edge کی مفت اردو آواز (کوئی کوٹہ نہیں) — Gemini کی آواز نہ ملے تو"""
+    import asyncio
+    import edge_tts
+    out = []
+    for i, t in enumerate(texts):
+        mp3 = tmp / f"{tag}e{i}.mp3"
+        for k in range(3):
+            try:
+                asyncio.run(edge_tts.Communicate(t.strip(), EDGE_VOICES[voice], rate="-4%").save(str(mp3)))
+                break
+            except Exception as e:
+                LOG.append(f"edge-tts: {str(e)[:200]}")
+                import time
+                time.sleep(5 * (k + 1))
+        else:
+            raise RuntimeError("Edge کی آواز بھی نہیں بن سکی")
+        out.append(_norm(mp3, tmp / f"{tag}e{i}.wav", pad=0.15))
+    return out
+
+
+def _voices(d: dict, tmp: Path) -> tuple[list[Path], list[Path]]:
+    sts = d["stories"]
+    at = [d["opening"]] + [s["anchor"] for s in sts]
+    rt = [s["reporter"] for s in sts]
+    if os.environ.get("NEWS_TTS", "gemini") == "gemini":
+        try:
+            return _speak(at, ANCHOR_VOICE, tmp, "anc"), _speak(rt, REPORTER_VOICE, tmp, "rep")
+        except Exception as e:                      # کوٹہ یا خالی جواب — پورا بلیٹن ایک ہی قسم کی آواز میں
+            LOG.append(f"Gemini آواز نہ ملی ({str(e)[:120]}) — Edge کی آواز")
+            print(LOG[-1])
+    return _edge(at, ANCHOR_VOICE, tmp, "anc"), _edge(rt, REPORTER_VOICE, tmp, "rep")
+
+
 def build_audio(d: dict, tmp: Path) -> tuple[Path, dict]:
     """بلیٹن کا درمیانی حصہ: آواز کی ترتیب + ہر حصے کے اوقات"""
     sts = d["stories"]
-    anc = _speak([d["opening"]] + [s["anchor"] for s in sts], ANCHOR_VOICE, tmp, "anc")
-    rep = _speak([s["reporter"] for s in sts], REPORTER_VOICE, tmp, "rep")
+    anc, rep = _voices(d, tmp)
     anc = [_trim(p, tmp / f"ancT{i}.wav") for i, p in enumerate(anc)]
     rep = [_trim(p, tmp / f"repT{i}.wav") for i, p in enumerate(rep)]
     sting = tmp / "sting.wav"
