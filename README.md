@@ -5,10 +5,10 @@
 انٹرو (`studio/intro.mp4`) → نیوز روم: میزبان (متحرک: سانس، سر کی جنبش، پلک) → ہر خبر: سنہری پٹی «پہلی خبر…»، میزبان کی سرخی،
 پھر دو خانے — موضوع کا متحرک منظر (`studio/scenes.js`) + «ورچوئل نامہ نگار» کی تفصیل → آؤٹرو (`studio/outro.mp4`)۔
 
-- **خبریں:** Google News، TechCrunch، The Verge، VentureBeat، AI News، MIT (پچھلے 48 گھنٹے) — Gemini صرف انہی سے اردو اسکرپٹ لکھتا ہے
+- **خبریں:** Google News، TechCrunch، The Verge، VentureBeat، AI News، MIT (پچھلے 72 گھنٹے) — Gemini صرف انہی سے اردو اسکرپٹ لکھتا ہے
 - **آواز:** میزبان Kore (زنانہ)، نامہ نگار Charon (مردانہ) — Gemini TTS
 - **ٹیلیگرام:** ویڈیو (✅/❌)، تھمب نیل، یوٹیوب عنوان/تفصیل/ٹیگ/پن کمنٹ، فیس بک/انسٹاگرام/ٹک ٹاک/X/واٹس ایپ متن
-- **وقت:** روزانہ 1:31 دوپہر (سعودی)، نہ بنے تو 4:31 شام
+- **وقت:** ہر پیر، بدھ اور ہفتہ — صبح 11:15 سے کوششیں، شام 7:31 تک
 
 ## Secrets
 `GEMINI_NEWS_KEY` (یا `GEMINI_API_KEY`) · `NEWS_BOT_TOKEN` (یا `TELEGRAM_BOT_TOKEN`) · `TELEGRAM_CHAT_ID`

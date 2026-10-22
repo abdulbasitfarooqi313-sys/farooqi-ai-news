@@ -1,4 +1,4 @@
-"""فاروقی اے آئی نیوز — روزانہ ایک بلیٹن (ساڑھے تین سے چار منٹ)۔
+"""فاروقی اے آئی نیوز — ہفتے میں تین بلیٹن — پیر، بدھ، ہفتہ (ساڑھے تین سے چار منٹ)۔
 
 ترتیب: انٹرو (مقررہ) → نیوز روم: میزبان کا آغاز → ہر خبر: سنہری پٹی «خبر ۱» + میزبان کی سرخی
 (پوری اسکرین) → ورچوئل نامہ نگار کی تفصیل (دو خانے: بائیں موضوع کا متحرک منظر + نامہ نگار) → آؤٹرو (مقررہ)۔
@@ -80,7 +80,7 @@ def _txt(s: str | None) -> str:
     return re.sub(r"\s+", " ", s).strip()
 
 
-def fetch(max_age_h: int = 48) -> list[dict]:
+def fetch(max_age_h: int = 72) -> list[dict]:
     now = dt.datetime.now(dt.timezone.utc)
     out, seen = [], set()
     for url in FEEDS:
@@ -161,7 +161,7 @@ SCRIPT_SYSTEM = """آپ «فاروقی اے آئی نیوز» کے سینئر ا
 def script(items: list[dict], feedback: str | None = None) -> dict:
     listing = "\n\n".join(f"[{i + 1}] {it['title']}\nماخذ: {it['source']} · {it['when'][:10]}\nخلاصہ: {it['summary']}\nلنک: {it['link']}"
                           for i, it in enumerate(items[:40]))
-    user = f"آج کی تاریخ: {urdu_date()}\n\nپچھلے دو دن کی AI خبریں:\n\n{listing}"
+    user = f"آج کی تاریخ: {urdu_date()}\n\nپچھلے تین دن کی AI خبریں:\n\n{listing}"
     if feedback:
         user += f"\n\nمالک کی ہدایت (اس کا خاص خیال رکھیں): {feedback}"
     d = generate_json(SCRIPT_SYSTEM, user)
@@ -801,9 +801,15 @@ def make(feedback: str | None = None) -> None:
     print("✅ بلیٹن بھیج دیا")
 
 
+BULLETIN_DAYS = {0, 2, 5}       # پیر، بدھ، ہفتہ (مالک کی ہدایت) — باقی دن بلیٹن نہیں
+
+
 def tick(force: bool = False) -> None:
     st = read_json(STATE) if STATE.exists() else {}
     day = _today()
+    if not force and not st.get("redo") and dt.datetime.now(TZ).weekday() not in BULLETIN_DAYS:
+        print("آج بلیٹن کا دن نہیں (پیر، بدھ، ہفتہ)")
+        return
     redo = st.get("redo")
     if not force and not redo and day in st.get("days", {}):
         print("آج کا بلیٹن بن چکا")
@@ -858,7 +864,7 @@ def poll() -> None:
                 dispatch = True
                 tg_call("sendMessage", chat_id=me, text="🔄 ٹھیک ہے — آپ کی ہدایت کے ساتھ نیا بلیٹن بن رہا ہے (تقریباً 20–30 منٹ)۔")
             elif text.startswith("/start"):
-                tg_call("sendMessage", chat_id=me, text="📺 فاروقی اے آئی نیوز — روزانہ بلیٹن دوپہر تقریباً 2 بجے یہاں آئے گا۔ "
+                tg_call("sendMessage", chat_id=me, text="📺 فاروقی اے آئی نیوز — بلیٹن ہر پیر، بدھ اور ہفتہ کو دوپہر یہاں آئے گا۔ "
                          "✅ منظور / ❌ دوبارہ، یا ویڈیو پر Reply کر کے ہدایت لکھیں۔")
     write_json(STATE, ns)
     if dispatch and os.environ.get("GITHUB_ACTIONS"):
