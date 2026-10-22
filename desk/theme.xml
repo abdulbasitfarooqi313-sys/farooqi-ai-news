@@ -6,6 +6,8 @@
 <meta content='width=device-width, initial-scale=1' name='viewport'/>
 <meta content='noindex, nofollow' name='robots'/>
 <meta content='#123c2e' name='theme-color'/>
+<link href='https://raw.githubusercontent.com/abdulbasitfarooqi313-sys/farooqi-ai-news/main/desk/favicon.png' rel='icon' type='image/png'/>
+<link href='https://raw.githubusercontent.com/abdulbasitfarooqi313-sys/farooqi-ai-news/main/desk/logo.png' rel='apple-touch-icon'/>
 <title><b:if cond='data:view.isHomepage'>روزنامچہ فاروقی — روزانہ مواد مرکز<b:else/><data:view.title.escaped/> · روزنامچہ فاروقی</b:if></title>
 <b:include data='blog' name='all-head-content'/>
 <link href='https://fonts.googleapis.com' rel='preconnect'/>
@@ -49,6 +51,7 @@ body.t-news .top,body.t-tools .top,body.t-nawa .top{
   background-image:repeating-linear-gradient(45deg,#fff 0 1px,transparent 1px 22px),repeating-linear-gradient(-45deg,#fff 0 1px,transparent 1px 22px)}
 .top .wrap{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:26px;padding-bottom:22px}
 .brand{display:flex;align-items:center;gap:16px}
+.logo{width:84px;height:84px;border-radius:50%;flex:none;box-shadow:0 0 0 3px rgba(240,207,106,.55),0 10px 26px rgba(0,0,0,.35)}
 .mark{width:60px;height:60px;border-radius:18px;flex:none;display:grid;place-items:center;position:relative;
   background:conic-gradient(from 200deg,var(--news2),var(--tools2),var(--nawa2),var(--news2));box-shadow:0 8px 22px rgba(0,0,0,.25)}
 .mark span{width:50px;height:50px;border-radius:14px;background:var(--ad);display:grid;place-items:center;
@@ -113,6 +116,7 @@ main{padding:26px 0 46px}
 footer{margin-top:10px;color:#cfd6d2;background:linear-gradient(120deg,#0b1220,#101b2a 45%,#0f2f24)}
 body.t-news footer,body.t-tools footer,body.t-nawa footer{background:linear-gradient(120deg,var(--ad),#0b1220)}
 .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:26px;padding:30px 0 18px}
+footer .flogo{border-radius:50%;margin-bottom:6px;box-shadow:0 0 0 2px rgba(240,207,106,.4)}
 footer h4{margin:0 0 8px;font-size:18px;color:#fff;font-weight:700;line-height:1.8}
 footer p{margin:0;font-size:14.5px;line-height:2}
 footer ul{list-style:none;margin:0;padding:0;font-size:15px;line-height:2.2}
@@ -123,7 +127,7 @@ footer li i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-i
 
 @media (max-width:760px){
   body{font-size:16.5px}
-  .brand h1{font-size:24px}.mark{width:50px;height:50px}.mark span{width:41px;height:41px;font-size:28px;line-height:41px}
+  .brand h1{font-size:24px}.logo{width:62px;height:62px}.mark{width:50px;height:50px}.mark span{width:41px;height:41px;font-size:28px;line-height:41px}
   .brand p{font-size:13px}.side{display:none}
   .intro{grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:18px}.grid{grid-template-columns:1fr}
   .chan{padding:10px 10px 8px;border-radius:12px;text-align:center}.chan:after{display:none}
@@ -138,7 +142,7 @@ footer li i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-i
 <header class='top'>
   <div class='wrap'>
     <div class='brand'>
-      <div class='mark'><span>ر</span></div>
+      <img alt='Farooqi Daily Desk' class='logo' height='84' src='https://raw.githubusercontent.com/abdulbasitfarooqi313-sys/farooqi-ai-news/main/desk/logo.png' width='84'/>
       <div>
         <h1><a expr:href='data:blog.homepageUrl'>روزنامچہ فاروقی</a></h1>
         <p id='sub'>اے آئی نیوز · Toolscape · نوائے فاروقی — روزانہ ٹرینڈ، مقابلین کا تجزیہ اور تیار پیکج</p>
@@ -229,6 +233,7 @@ footer li i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-i
   <div class='wrap'>
     <div class='fgrid'>
       <div>
+        <img alt='' class='flogo' src='https://raw.githubusercontent.com/abdulbasitfarooqi313-sys/farooqi-ai-news/main/desk/logo.png' width='72' height='72'/>
         <h4>روزنامچہ فاروقی</h4>
         <p>تینوں چینلوں کا نجی مواد مرکز۔ روز صبح 6 بجے خود تازہ ہوتا ہے: ٹرینڈنگ موضوعات، مقابل چینلوں کا تجزیہ، ہک بینک اور تیار پیکج۔</p>
       </div>
