@@ -1,0 +1,6 @@
+18:29:38 nawa: start
+18:29:40 nawa: 59 competitor videos, 21 trending items
+18:29:42 gemini-3.8-flash: HTTP 503 in 1s
+18:29:53 gemini-3.8-flash: HTTP 503 in 2s
+18:30:31 gemini-3.6-flash: HTTP 200 in 28s
+18:30:31    finish=STOP chars=13986
