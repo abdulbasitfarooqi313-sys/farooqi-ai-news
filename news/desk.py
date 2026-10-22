@@ -120,6 +120,7 @@ def _items(url: str, limit: int = 20) -> list[str]:
 
 
 LOG: list[str] = []
+DESK_MODELS = ["gemini-3.6-flash", "gemini-3.5-flash-lite", "gemini-flash-latest", GEMINI_MODEL]
 
 
 def note(msg: str) -> None:
@@ -131,7 +132,8 @@ def ask(system: str, user: str) -> str:
     """جیمنائی — ہر کوشش کا وقت اور نتیجہ لاگ میں؛ لمبے انتظار نہیں"""
     body = {"systemInstruction": {"parts": [{"text": system}]}, "contents": [{"role": "user", "parts": [{"text": user}]}],
             "generationConfig": {"temperature": 0.4, "maxOutputTokens": 60000, "responseMimeType": "application/json"}}
-    for model in [GEMINI_MODEL] + [m for m in FALLBACKS if m != GEMINI_MODEL]:
+    # بلیٹن کے لیے بڑا ماڈل بچا رہے: روزنامچہ پہلے ہلکے ماڈلوں سے
+    for model in DESK_MODELS:
         for attempt in range(2):
             t = time.time()
             try:
@@ -303,6 +305,7 @@ def main(niches: list[str]) -> None:
             note(f"{n}: FAILED {e}")
             continue
         (OUT / f"{n}.html").write_text(render(n, d, day), encoding="utf-8")
+        (OUT / f"{n}.json").write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
         (OUT / f"{n}_brief.txt").write_text(insight.brief(n, data=(d["_competitors"], d["_bank"])), encoding="utf-8")
         cfg = NICHES[n]
         idx[n] = {"date": day, "file": f"desk/{n}.html", "label": cfg["label"],
