@@ -1,6 +1,32 @@
-18:29:38 nawa: start
-18:29:40 nawa: 59 competitor videos, 21 trending items
-18:29:42 gemini-3.8-flash: HTTP 503 in 1s
-18:29:53 gemini-3.8-flash: HTTP 503 in 2s
-18:30:31 gemini-3.6-flash: HTTP 200 in 28s
-18:30:31    finish=STOP chars=13986
+18:30:57 news: start
+18:31:02 news: 93 competitor videos, 110 trending items
+18:31:02 gemini-3.8-flash: HTTP 429 in 0s
+18:31:02    {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+18:31:22 gemini-3.8-flash: HTTP 429 in 0s
+18:31:22    {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+18:31:53 gemini-3.6-flash: HTTP 503 in 11s
+18:32:03 gemini-3.6-flash: HTTP 503 in 0s
+18:32:32 gemini-3.5-flash-lite: HTTP 200 in 18s
+18:32:32    finish=STOP chars=15942
+18:32:32 desk news: JSON error (Expecting property name enclosed in double quotes: line 147 column 9 (char 6008))
+18:32:33 gemini-3.8-flash: HTTP 429 in 1s
+18:32:33    {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+18:32:53 gemini-3.8-flash: HTTP 429 in 0s
+18:32:53    {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+18:33:18 gemini-3.6-flash: HTTP 503 in 5s
+18:33:28 gemini-3.6-flash: HTTP 429 in 0s
+18:33:28    {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+18:34:16 gemini-3.5-flash-lite: HTTP 200 in 28s
+18:34:16    finish=STOP chars=17025
+18:34:16 toolscape: start
+18:34:26 toolscape: 135 competitor videos, 80 trending items
+18:34:26 gemini-3.8-flash: HTTP 429 in 0s
+18:34:26    {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+18:34:46 gemini-3.8-flash: HTTP 429 in 0s
+18:34:46    {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+18:35:06 gemini-3.6-flash: HTTP 429 in 0s
+18:35:06    {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+18:35:26 gemini-3.6-flash: HTTP 429 in 0s
+18:35:26    {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+18:36:40 gemini-3.5-flash-lite: HTTP 200 in 54s
+18:36:40    finish=STOP chars=12776
