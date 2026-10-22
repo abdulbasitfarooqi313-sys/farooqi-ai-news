@@ -32,7 +32,7 @@ UA = {"User-Agent": "Mozilla/5.0 (FarooqiDailyDesk RSS reader)"}
 
 NICHES = {
     "news": {
-        "name": "فاروقی اے آئی نیوز", "label": "AI News", "color": "#b42318", "rtl": True, "lang": "اردو",
+        "name": "فاروقی اے آئی نیوز", "label": "AI News", "color": "#0a1550", "color2": "#e2b84f", "dark": "#050b33", "rtl": True, "lang": "اردو",
         "about": "مصنوعی ذہانت کی خبروں کا اردو بلیٹن (پاکستان/ہندوستان کے ناظرین، پیر بدھ ہفتہ)",
         "feeds": [
             "https://news.google.com/rss/search?q=%22artificial+intelligence%22+OR+OpenAI+OR+Gemini+OR+Anthropic+when:1d&hl=en-US&gl=US&ceid=US:en",
@@ -44,7 +44,7 @@ NICHES = {
         ],
     },
     "toolscape": {
-        "name": "Toolscape", "label": "Toolscape", "color": "#0e7490", "rtl": False, "lang": "English",
+        "name": "Toolscape", "label": "Toolscape", "color": "#0e7490", "color2": "#22d3ee", "dark": "#0b1220", "rtl": False, "lang": "English",
         "about": "English faceless YouTube channel: step-by-step AI tool tutorials and tool lists for beginners in US/UK/Canada",
         "feeds": [
             "https://www.producthunt.com/feed",
@@ -55,7 +55,7 @@ NICHES = {
         ],
     },
     "nawa": {
-        "name": "نوائے فاروقی", "label": "Nawa-e-Farooqi", "color": "#1d5c46", "rtl": True, "lang": "اردو",
+        "name": "نوائے فاروقی", "label": "Nawa-e-Farooqi", "color": "#1d5c46", "color2": "#b08d3c", "dark": "#0f2f24", "rtl": True, "lang": "اردو",
         "about": ("قرآن کی اردو تفسیر کا دینی چینل (ترجمہ شیخ الہندؒ، تفسیرِ عثمانی کی روشنی میں) — رکوع وار سلسلہ، "
                   "شارٹس، تلاوت ویڈیو، لمبی ویڈیو، بلاگ۔ موضوعات صرف قرآن و تفسیر کی حد میں، کوئی نیا دینی دعویٰ نہیں"),
         "feeds": [
@@ -188,11 +188,11 @@ def build(niche: str) -> dict:
 # ---------------- HTML ----------------
 
 CSS = """<style>
-.dd{--a:#1d5c46;--ink:#16231d;--muted:#5f6b66;--line:#e3e8e4;--soft:#f4f6f3;--gold:#b08d3c;--goldl:#f6efdc;
- font-family:'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',system-ui,sans-serif;color:var(--ink);line-height:2;font-size:16px}
+.dd{--a:#1d5c46;--ink:#16231d;--muted:#5f6b66;--line:#e3e8e4;--soft:#f4f6f3;--gold:#b08d3c;--goldl:#f6efdc;--dk:#0f2f24;
+ font-family:'Jameel Noori Web','Jameel Noori Nastaleeq','Noto Nastaliq Urdu',serif;color:var(--ink);line-height:2;font-size:16px}
 .dd.ltr{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6}
 .dd *{box-sizing:border-box}
-.dd .hero{background:linear-gradient(135deg,var(--a),#0f2a20);color:#fff;border-radius:14px;padding:16px 18px;margin:6px 0 16px}
+.dd .hero{background:linear-gradient(135deg,var(--dk),var(--a));border-bottom:4px solid var(--gold);color:#fff;border-radius:14px;padding:16px 18px;margin:6px 0 16px}
 .dd .hero p{margin:0 0 12px;font-size:16px;opacity:.95}
 .dd .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .dd .tile{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:8px 10px;text-align:center}
@@ -207,11 +207,11 @@ CSS = """<style>
 .dd th{background:var(--soft);font-weight:700;color:var(--muted);font-size:13px}
 .dd .num{font-family:'Inter',system-ui,sans-serif;font-weight:700;color:var(--a)}
 .dd .meter{display:block;width:70px;height:7px;border-radius:5px;background:var(--line);overflow:hidden;margin-top:4px}
-.dd .meter i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),#e0a33a)}
+.dd .meter i{display:block;height:100%;background:linear-gradient(90deg,var(--a),var(--gold))}
 .dd .pk{border:1px solid var(--line);border-radius:14px;padding:4px 16px 14px;margin:14px 0;background:#fff;border-top:4px solid var(--a)}
 .dd .pk-h{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
 .dd .pk-h h2{margin:12px 0 6px;background:none;border:0;padding:0;font-size:19px}
-.dd .score{font-family:'Inter',system-ui,sans-serif;font-weight:800;background:var(--goldl);color:#7a5d17;border-radius:999px;padding:3px 14px;font-size:14px;white-space:nowrap}
+.dd .score{font-family:'Inter',system-ui,sans-serif;font-weight:800;background:var(--a);color:var(--gold);border-radius:999px;padding:3px 14px;font-size:14px;white-space:nowrap}
 .dd .why{background:var(--soft);border-radius:10px;padding:8px 12px;margin:6px 0}
 .dd .copy{white-space:pre-wrap;background:#fbfaf6;border:1px dashed #d8ccaa;border-radius:10px;padding:8px 12px;margin:6px 0;font-size:15px;user-select:all}
 .dd .muted{color:var(--muted);font-size:13px}
@@ -237,7 +237,7 @@ def render(niche: str, d: dict, day: str) -> str:
     L = (lambda ur, en: ur if rtl else en)
     pk = d.get("packages", [])[:3]
     top = max([int(p.get("viral", {}).get("score") or 0) for p in pk if str(p.get("viral", {}).get("score", "")).isdigit()] or [0])
-    o = [CSS, f'<div class="dd{"" if rtl else " ltr"}" dir="{"rtl" if rtl else "ltr"}" style="--a:{cfg.get("color", "#1d5c46")}">',
+    o = [CSS, f'<div class="dd{"" if rtl else " ltr"}" dir="{"rtl" if rtl else "ltr"}" style="--a:{cfg["color"]};--gold:{cfg["color2"]};--dk:{cfg["dark"]}">',
          f'<div class="hero"><p>{_e(d.get("summary"))}</p><div class="tiles">'
          f'<div class="tile"><b>{len(d.get("topics", [])[:10])}</b><span>{L("ٹرینڈنگ موضوعات", "trending topics")}</span></div>'
          f'<div class="tile"><b>{len(pk)}</b><span>{L("تیار پیکج", "ready packages")}</span></div>'

@@ -5,107 +5,155 @@
 <meta charset='utf-8'/>
 <meta content='width=device-width, initial-scale=1' name='viewport'/>
 <meta content='noindex, nofollow' name='robots'/>
+<meta content='#123c2e' name='theme-color'/>
 <title><b:if cond='data:view.isHomepage'>روزنامچہ فاروقی — روزانہ مواد مرکز<b:else/><data:view.title.escaped/> · روزنامچہ فاروقی</b:if></title>
 <b:include data='blog' name='all-head-content'/>
 <link href='https://fonts.googleapis.com' rel='preconnect'/>
 <link href='https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&amp;family=Inter:wght@400;600;800&amp;display=swap' rel='stylesheet'/>
 <b:skin><![CDATA[
-/* روزنامچہ فاروقی — نجی ڈیش بورڈ تھیم */
+/* ============ روزنامچہ فاروقی — نجی ڈیش بورڈ تھیم ============
+   رنگ:  اے آئی نیوز = گہرا نیلا + سنہری | Toolscape = گہرا سرمئی + فیروزی | نوائے فاروقی = زمردی + گہرا سنہری
+   جس چینل کا صفحہ ہو، پورا رنگ اسی کا؛ پہلے صفحے پر تینوں کا امتزاج */
+@font-face{font-family:'Jameel Noori Web';font-display:swap;
+  src:local('Jameel Noori Nastaleeq'),local('JameelNooriNastaleeq'),
+      url('https://cdn.jsdelivr.net/gh/abdulbasitfarooqi313-sys/farooqi-ai-news@main/fonts/jameel-noori.ttf') format('truetype')}
 :root{
-  --ink:#16231d; --muted:#5f6b66; --line:#e3e8e4; --bg:#f4f6f3; --card:#ffffff;
-  --green:#1d5c46; --green-d:#123c2e; --gold:#b08d3c; --gold-l:#f6efdc;
-  --news:#b42318; --tools:#0e7490; --nawa:#1d5c46;
-  --r:16px; --shadow:0 1px 2px rgba(16,40,30,.06),0 6px 24px rgba(16,40,30,.06);
+  --news:#0a1550; --news2:#e2b84f; --news-d:#050b33;
+  --tools:#0e7490; --tools2:#22d3ee; --tools-d:#0b1220;
+  --nawa:#1d5c46; --nawa2:#b08d3c; --nawa-d:#0f2f24;
+  --a:var(--nawa); --a2:var(--nawa2); --ad:var(--nawa-d);
+  --ink:#17201c; --muted:#5f6b66; --line:#e4e7e3; --bg:#f5f5f0; --card:#ffffff;
+  --r:16px; --shadow:0 1px 2px rgba(16,30,25,.06),0 8px 28px rgba(16,30,25,.07);
+  --ur:'Jameel Noori Web','Jameel Noori Nastaleeq','Noto Nastaliq Urdu',serif;
+  --en:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
+body.t-news{--a:var(--news);--a2:var(--news2);--ad:var(--news-d)}
+body.t-tools{--a:var(--tools);--a2:var(--tools2);--ad:var(--tools-d)}
+body.t-nawa{--a:var(--nawa);--a2:var(--nawa2);--ad:var(--nawa-d)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);
-  font-family:'Noto Nastaliq Urdu','Jameel Noori Nastaleeq','Inter',system-ui,sans-serif;
-  font-size:17px;line-height:2.1;-webkit-font-smoothing:antialiased}
-a{color:var(--green);text-decoration:none}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ur);font-size:18px;line-height:2.15;-webkit-font-smoothing:antialiased}
+a{color:var(--a);text-decoration:none}
 a:hover{text-decoration:underline}
-.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.tri{height:5px;background:linear-gradient(90deg,var(--news) 0 22%,var(--news2) 22% 33%,var(--tools-d) 33% 55%,var(--tools2) 55% 66%,var(--nawa) 66% 88%,var(--nawa2) 88%)}
+body.t-news .tri,body.t-tools .tri,body.t-nawa .tri{background:linear-gradient(90deg,var(--a) 0 70%,var(--a2) 70%)}
 
-/* سرورق */
-.top{background:linear-gradient(135deg,var(--green-d),var(--green) 60%,#2a7a5d);color:#fff;position:relative;overflow:hidden}
-.top:after{content:'';position:absolute;inset:auto -80px -120px auto;width:340px;height:340px;border-radius:50%;
-  border:2px solid rgba(255,255,255,.08);box-shadow:0 0 0 40px rgba(255,255,255,.03)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:22px;padding-bottom:18px;position:relative;z-index:1}
-.brand{display:flex;align-items:center;gap:14px}
-.brand .mark{width:52px;height:52px;border-radius:14px;background:var(--gold);display:grid;place-items:center;
-  font-size:26px;font-weight:700;color:var(--green-d);box-shadow:0 6px 18px rgba(0,0,0,.18)}
-.brand h1{margin:0;font-size:26px;line-height:1.6;font-weight:700}
-.brand p{margin:0;font-size:14px;opacity:.85;line-height:1.8}
-.today{font-family:'Inter',system-ui,sans-serif;font-size:13px;background:rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.2);padding:6px 14px;border-radius:999px;white-space:nowrap}
-.tabs{background:var(--green-d);position:sticky;top:0;z-index:5;box-shadow:0 2px 10px rgba(0,0,0,.12)}
-.tabs .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:8px;padding-bottom:8px;scrollbar-width:none}
-.tabs a{color:#e8f1ec;padding:6px 16px;border-radius:999px;font-size:15px;white-space:nowrap;line-height:1.9}
-.tabs a:hover{background:rgba(255,255,255,.1);text-decoration:none}
-.tabs a.on{background:var(--gold);color:var(--green-d);font-weight:700}
-.tabs .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-inline-end:6px;vertical-align:middle}
+/* ---------- سرورق ---------- */
+.top{color:#fff;position:relative;overflow:hidden;
+  background:radial-gradient(1200px 400px at 85% -40%,rgba(255,255,255,.10),transparent 60%),
+             linear-gradient(120deg,var(--news-d) 0%,var(--news) 30%,var(--tools-d) 50%,var(--nawa) 75%,var(--nawa-d) 100%)}
+body.t-news .top,body.t-tools .top,body.t-nawa .top{
+  background:radial-gradient(1000px 380px at 85% -40%,rgba(255,255,255,.12),transparent 60%),linear-gradient(120deg,var(--ad),var(--a))}
+.top:before{content:'';position:absolute;inset:0;opacity:.07;
+  background-image:repeating-linear-gradient(45deg,#fff 0 1px,transparent 1px 22px),repeating-linear-gradient(-45deg,#fff 0 1px,transparent 1px 22px)}
+.top .wrap{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:26px;padding-bottom:22px}
+.brand{display:flex;align-items:center;gap:16px}
+.mark{width:60px;height:60px;border-radius:18px;flex:none;display:grid;place-items:center;position:relative;
+  background:conic-gradient(from 200deg,var(--news2),var(--tools2),var(--nawa2),var(--news2));box-shadow:0 8px 22px rgba(0,0,0,.25)}
+.mark span{width:50px;height:50px;border-radius:14px;background:var(--ad);display:grid;place-items:center;
+  font-family:var(--ur);font-size:38px;line-height:1;color:var(--a2);padding-top:2px}
+body:not(.t-news):not(.t-tools):not(.t-nawa) .mark span{background:#0d1f2e;color:#f0cf6a}
+.brand h1{margin:0;font-size:32px;line-height:1.7;font-weight:700;letter-spacing:0}
+.brand h1 a{color:#fff;text-decoration:none}
+.brand p{margin:0;font-size:15px;opacity:.88;line-height:1.9}
+.side{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.today{font-family:var(--en);font-size:12.5px;letter-spacing:.2px;background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.22);padding:5px 14px;border-radius:999px;white-space:nowrap}
+.badge{font-family:var(--en);font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--a2)}
+body:not(.t-news):not(.t-tools):not(.t-nawa) .badge{color:#f0cf6a}
 
-/* فہرست */
-main{padding:24px 0 40px}
-.intro{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px}
-.intro a{background:var(--card);border-radius:var(--r);padding:14px 16px;box-shadow:var(--shadow);
-  border-top:4px solid var(--c);color:var(--ink);display:block}
-.intro a:hover{text-decoration:none;transform:translateY(-2px);transition:.15s}
-.intro b{display:block;font-size:17px;color:var(--c)}
-.intro span{font-size:13px;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
-.card{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:18px 20px;
-  border-inline-start:5px solid var(--c,var(--green));display:flex;flex-direction:column;gap:6px}
-.card h2{margin:0;font-size:19px;line-height:1.9}
+/* ---------- ٹیب ---------- */
+.tabs{background:#fff;position:sticky;top:0;z-index:5;box-shadow:0 1px 0 var(--line),0 6px 18px rgba(0,0,0,.05)}
+.tabs .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:9px;padding-bottom:9px;scrollbar-width:none}
+.tabs .wrap::-webkit-scrollbar{display:none}
+.tabs a{color:var(--ink);padding:5px 16px;border-radius:999px;font-size:16px;white-space:nowrap;line-height:2;border:1px solid var(--line);background:#fff}
+.tabs a:hover{text-decoration:none;border-color:var(--c,var(--a))}
+.tabs a i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-inline-end:7px;vertical-align:middle;background:var(--c);box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 18%,transparent)}
+.tabs a.on{background:var(--c,var(--a));border-color:var(--c,var(--a));color:#fff}
+.tabs a.on i{background:var(--c2,#fff);box-shadow:none}
+
+/* ---------- فہرست ---------- */
+main{padding:26px 0 46px}
+.intro{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px}
+.chan{border-radius:var(--r);padding:16px 18px 14px;color:#fff;display:block;position:relative;overflow:hidden;box-shadow:var(--shadow);
+  background:linear-gradient(135deg,var(--cd),var(--c))}
+.chan:after{content:'';position:absolute;inset:auto auto -30px -30px;width:110px;height:110px;border-radius:50%;border:10px solid var(--c2);opacity:.25}
+.chan:hover{text-decoration:none;transform:translateY(-2px);transition:.15s}
+.chan b{display:block;font-size:21px;line-height:1.8}
+.chan span{font-size:14px;opacity:.9}
+.chan em{font-style:normal;font-family:var(--en);font-size:11px;font-weight:800;letter-spacing:1.4px;color:var(--c2);text-transform:uppercase}
+.sec-t{display:flex;align-items:center;gap:10px;margin:4px 0 12px;font-size:20px;color:var(--ad)}
+.sec-t:after{content:'';flex:1;height:2px;background:linear-gradient(90deg,var(--a2),transparent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px}
+.card{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:16px 20px 16px;
+  border-top:5px solid var(--c);display:flex;flex-direction:column;gap:4px;position:relative}
+.card:before{content:'';position:absolute;top:-5px;inset-inline-start:0;width:30%;height:5px;background:var(--c2);border-start-start-radius:var(--r)}
+.card h2{margin:0;font-size:20px;line-height:1.9}
 .card h2 a{color:var(--ink)}
-.meta{font-family:'Inter',system-ui,sans-serif;font-size:12.5px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.chip{display:inline-block;font-family:'Inter',system-ui,sans-serif;font-size:12px;font-weight:600;padding:2px 10px;
-  border-radius:999px;background:var(--gold-l);color:#7a5d17;line-height:1.8}
-.chip.news{background:#fde8e6;color:var(--news)} .chip.tools{background:#e0f2f7;color:var(--tools)} .chip.nawa{background:#e3f1ea;color:var(--nawa)}
-.snip{color:var(--muted);font-size:15px;margin:2px 0 6px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.more{margin-top:auto;font-weight:700;font-size:15px}
-.pager{display:flex;justify-content:space-between;margin-top:24px}
-.pager a{background:var(--card);box-shadow:var(--shadow);padding:6px 18px;border-radius:999px}
+.meta{font-family:var(--en);font-size:12.5px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;align-items:center;line-height:1.8}
+.chip{display:inline-block;font-family:var(--en);font-size:12px;font-weight:700;padding:1px 11px;border-radius:999px;line-height:1.9;
+  background:color-mix(in srgb,var(--c,var(--a)) 12%,#fff);color:var(--c,var(--a));border:1px solid color-mix(in srgb,var(--c,var(--a)) 25%,#fff)}
+.snip{color:var(--muted);font-size:15.5px;margin:2px 0 8px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.more{margin-top:auto;font-weight:700;font-size:16px;color:var(--c)}
+.pager{display:flex;justify-content:space-between;margin-top:26px}
+.pager a{background:var(--card);box-shadow:var(--shadow);padding:5px 20px;border-radius:999px}
+.empty{background:var(--card);border-radius:var(--r);padding:34px;text-align:center;color:var(--muted);box-shadow:var(--shadow)}
 
-/* مکمل پوسٹ */
-.single{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:22px 26px 30px}
-.single .head{border-bottom:2px solid var(--gold);padding-bottom:10px;margin-bottom:8px}
-.single h1{margin:0;font-size:25px;line-height:1.8;color:var(--green-d)}
-.back{display:inline-block;margin-bottom:12px;font-size:15px}
-.empty{background:var(--card);border-radius:var(--r);padding:30px;text-align:center;color:var(--muted);box-shadow:var(--shadow)}
+/* ---------- مکمل پوسٹ ---------- */
+.single{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+.single .head{padding:18px 26px 14px;background:linear-gradient(135deg,var(--ad),var(--a));color:#fff}
+.single .head .meta{color:rgba(255,255,255,.8)}
+.single .head .chip{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.25)}
+.single h1{margin:0;font-size:27px;line-height:1.8}
+.single .body{padding:10px 26px 30px}
+.back{display:inline-block;margin:0 0 6px;font-size:15px;color:var(--a2)}
 
-footer{color:var(--muted);font-size:13px;text-align:center;padding:20px 0 34px;font-family:'Inter',system-ui,sans-serif}
+/* ---------- فوٹر ---------- */
+footer{margin-top:10px;color:#cfd6d2;background:linear-gradient(120deg,#0b1220,#101b2a 45%,#0f2f24)}
+body.t-news footer,body.t-tools footer,body.t-nawa footer{background:linear-gradient(120deg,var(--ad),#0b1220)}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:26px;padding:30px 0 18px}
+footer h4{margin:0 0 8px;font-size:18px;color:#fff;font-weight:700;line-height:1.8}
+footer p{margin:0;font-size:14.5px;line-height:2}
+footer ul{list-style:none;margin:0;padding:0;font-size:15px;line-height:2.2}
+footer a{color:#e9efe9}
+footer li i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-inline-end:8px;vertical-align:middle;background:var(--c)}
+.fbar{border-top:1px solid rgba(255,255,255,.1);padding:10px 0 16px;font-family:var(--en);font-size:12px;color:#9aa6a0;
+  display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 
-@media (max-width:720px){
-  body{font-size:16px}
-  .brand h1{font-size:21px}.brand .mark{width:44px;height:44px;font-size:22px}
-  .today{display:none}
-  .intro{grid-template-columns:1fr}
-  .grid{grid-template-columns:1fr}
-  .single{padding:16px 14px 24px;border-radius:12px}
-  .single h1{font-size:21px}
+@media (max-width:760px){
+  body{font-size:16.5px}
+  .brand h1{font-size:24px}.mark{width:50px;height:50px}.mark span{width:41px;height:41px;font-size:24px}
+  .brand p{font-size:13px}.side{display:none}
+  .intro{grid-template-columns:1fr}.grid{grid-template-columns:1fr}
+  .single .head{padding:14px 16px}.single .body{padding:6px 12px 22px}.single h1{font-size:21px}
+  .fgrid{grid-template-columns:1fr;gap:16px}
 }
 ]]></b:skin>
 </head>
 <body>
+<div class='tri'>&#8203;</div>
 <header class='top'>
   <div class='wrap'>
     <div class='brand'>
-      <div class='mark'>ر</div>
+      <div class='mark'><span>ر</span></div>
       <div>
-        <h1><a expr:href='data:blog.homepageUrl' style='color:#fff'>روزنامچہ فاروقی</a></h1>
-        <p>تینوں چینلوں کا روزانہ مواد مرکز — ٹرینڈ، مقابلین کا تجزیہ، تیار پیکج</p>
+        <h1><a expr:href='data:blog.homepageUrl'>روزنامچہ فاروقی</a></h1>
+        <p id='sub'>اے آئی نیوز · Toolscape · نوائے فاروقی — روزانہ ٹرینڈ، مقابلین کا تجزیہ اور تیار پیکج</p>
       </div>
     </div>
-    <div class='today' id='today'>Daily Desk</div>
+    <div class='side'>
+      <div class='badge' id='badge'>Farooqi Daily Desk</div>
+      <div class='today' id='today'>Daily Desk</div>
+    </div>
   </div>
 </header>
 <nav class='tabs'>
   <div class='wrap'>
-    <a expr:class='data:view.isHomepage ? &quot;on&quot; : &quot;&quot;' expr:href='data:blog.homepageUrl'>🏠 سب</a>
-    <a expr:href='data:blog.homepageUrl + &quot;search/label/AI%20News&quot;'><span class='dot' style='background:#f97066'>&#8203;</span>اے آئی نیوز</a>
-    <a expr:href='data:blog.homepageUrl + &quot;search/label/Toolscape&quot;'><span class='dot' style='background:#38bdf8'>&#8203;</span>Toolscape</a>
-    <a expr:href='data:blog.homepageUrl + &quot;search/label/Nawa-e-Farooqi&quot;'><span class='dot' style='background:#d4b25f'>&#8203;</span>نوائے فاروقی</a>
+    <a expr:class='data:view.isHomepage ? &quot;on&quot; : &quot;&quot;' expr:href='data:blog.homepageUrl' style='--c:#1f2a37;--c2:#f0cf6a'><i style='background:conic-gradient(#e2b84f,#22d3ee,#b08d3c,#e2b84f)'>&#8203;</i>سب</a>
+    <a data-t='news' expr:href='data:blog.homepageUrl + &quot;search/label/AI%20News&quot;' style='--c:#0a1550;--c2:#e2b84f'><i>&#8203;</i>اے آئی نیوز</a>
+    <a data-t='tools' expr:href='data:blog.homepageUrl + &quot;search/label/Toolscape&quot;' style='--c:#0e7490;--c2:#22d3ee'><i>&#8203;</i>Toolscape</a>
+    <a data-t='nawa' expr:href='data:blog.homepageUrl + &quot;search/label/Nawa-e-Farooqi&quot;' style='--c:#1d5c46;--c2:#b08d3c'><i>&#8203;</i>نوائے فاروقی</a>
   </div>
 </nav>
 
@@ -113,10 +161,11 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:20px 0 34px;f
   <div class='wrap'>
     <b:if cond='data:view.isHomepage'>
       <div class='intro'>
-        <a expr:href='data:blog.homepageUrl + &quot;search/label/AI%20News&quot;' style='--c:#b42318'><b>اے آئی نیوز</b><span>اردو بلیٹن · پیر، بدھ، ہفتہ</span></a>
-        <a expr:href='data:blog.homepageUrl + &quot;search/label/Toolscape&quot;' style='--c:#0e7490'><b>Toolscape</b><span>English AI tutorials</span></a>
-        <a expr:href='data:blog.homepageUrl + &quot;search/label/Nawa-e-Farooqi&quot;' style='--c:#1d5c46'><b>نوائے فاروقی</b><span>تفسیرِ قرآن · شارٹس · بلاگ</span></a>
+        <a class='chan' expr:href='data:blog.homepageUrl + &quot;search/label/AI%20News&quot;' style='--c:#0a1550;--cd:#050b33;--c2:#e2b84f'><em>AI News</em><b>فاروقی اے آئی نیوز</b><span>اردو بلیٹن · پیر، بدھ، ہفتہ</span></a>
+        <a class='chan' expr:href='data:blog.homepageUrl + &quot;search/label/Toolscape&quot;' style='--c:#0e7490;--cd:#0b1220;--c2:#22d3ee'><em>Toolscape</em><b>Toolscape</b><span>English AI tool tutorials</span></a>
+        <a class='chan' expr:href='data:blog.homepageUrl + &quot;search/label/Nawa-e-Farooqi&quot;' style='--c:#1d5c46;--cd:#0f2f24;--c2:#b08d3c'><em>Nawa-e-Farooqi</em><b>نوائے فاروقی</b><span>تفسیرِ قرآن · شارٹس · بلاگ</span></a>
       </div>
+      <div class='sec-t'>تازہ روزنامچے</div>
     </b:if>
 
     <b:section class='main' id='main' maxwidgets='1' showaddelement='false'>
@@ -129,13 +178,13 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:20px 0 34px;f
           <b:if cond='data:view.isSingleItem'>
             <b:loop values='data:posts' var='post'>
               <article class='single'>
-                <a class='back' expr:href='data:blog.homepageUrl'>→ واپس روزنامچہ</a>
                 <div class='head'>
+                  <a class='back' expr:href='data:blog.homepageUrl'>→ واپس روزنامچہ</a>
                   <h1><data:post.title/></h1>
                   <div class='meta'>
                     <span><data:post.date/></span>
                     <b:loop values='data:post.labels' var='label'>
-                      <a class='chip' expr:href='data:label.url'><data:label.name/></a>
+                      <a class='chip' expr:data-l='data:label.name' expr:href='data:label.url'><data:label.name/></a>
                     </b:loop>
                   </div>
                 </div>
@@ -148,21 +197,19 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:20px 0 34px;f
             </b:if>
             <div class='grid'>
               <b:loop values='data:posts' var='post'>
-                <b:with value='data:post.labels any (l =&gt; l.name == &quot;AI News&quot;) ? &quot;#b42318&quot; : (data:post.labels any (l =&gt; l.name == &quot;Toolscape&quot;) ? &quot;#0e7490&quot; : &quot;#1d5c46&quot;)' var='c'>
-                  <article class='card' expr:style='&quot;--c:&quot; + data:c'>
-                    <h2><a expr:href='data:post.url'><data:post.title/></a></h2>
-                    <div class='meta'>
-                      <span><data:post.date/></span>
-                      <b:loop values='data:post.labels' var='label'>
-                        <b:if cond='data:label.name != &quot;روزنامچہ&quot;'>
-                          <a expr:class='&quot;chip &quot; + (data:label.name == &quot;AI News&quot; ? &quot;news&quot; : (data:label.name == &quot;Toolscape&quot; ? &quot;tools&quot; : &quot;nawa&quot;))' expr:href='data:label.url'><data:label.name/></a>
-                        </b:if>
-                      </b:loop>
-                    </div>
-                    <p class='snip'><data:post.snippet/></p>
-                    <a class='more' expr:href='data:post.url'>پورا روزنامچہ کھولیں ←</a>
-                  </article>
-                </b:with>
+                <article class='card'>
+                  <h2><a expr:href='data:post.url'><data:post.title/></a></h2>
+                  <div class='meta'>
+                    <span><data:post.date/></span>
+                    <b:loop values='data:post.labels' var='label'>
+                      <b:if cond='data:label.name != &quot;روزنامچہ&quot;'>
+                        <a class='chip' expr:data-l='data:label.name' expr:href='data:label.url'><data:label.name/></a>
+                      </b:if>
+                    </b:loop>
+                  </div>
+                  <p class='snip'><data:post.snippet/></p>
+                  <a class='more' expr:href='data:post.url'>پورا روزنامچہ کھولیں ←</a>
+                </article>
               </b:loop>
             </div>
             <div class='pager'>
@@ -177,11 +224,50 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:20px 0 34px;f
 </main>
 
 <footer>
-  <div class='wrap'>روزنامچہ فاروقی · نجی ڈیش بورڈ · خودکار طور پر روز صبح تازہ ہوتا ہے</div>
+  <div class='tri'>&#8203;</div>
+  <div class='wrap'>
+    <div class='fgrid'>
+      <div>
+        <h4>روزنامچہ فاروقی</h4>
+        <p>تینوں چینلوں کا نجی مواد مرکز۔ روز صبح 6 بجے خود تازہ ہوتا ہے: ٹرینڈنگ موضوعات، مقابل چینلوں کا تجزیہ، ہک بینک اور تیار پیکج۔</p>
+      </div>
+      <div>
+        <h4>چینل</h4>
+        <ul>
+          <li style='--c:#e2b84f'><i>&#8203;</i><a expr:href='data:blog.homepageUrl + &quot;search/label/AI%20News&quot;'>فاروقی اے آئی نیوز</a></li>
+          <li style='--c:#22d3ee'><i>&#8203;</i><a expr:href='data:blog.homepageUrl + &quot;search/label/Toolscape&quot;'>Toolscape</a></li>
+          <li style='--c:#b08d3c'><i>&#8203;</i><a expr:href='data:blog.homepageUrl + &quot;search/label/Nawa-e-Farooqi&quot;'>نوائے فاروقی</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>معمول</h4>
+        <p>روزنامچہ: روزانہ صبح 6 بجے<br/>مقابل چینلوں کی نئی تلاش: ہر اتوار<br/>منظوری: ٹیلی گرام ✅ / ❌</p>
+      </div>
+    </div>
+    <div class='fbar'><span>© فاروقی پبلیکیشنز</span><span>Private · Farooqi Daily Desk</span></div>
+  </div>
 </footer>
 <script>
 //<![CDATA[
-try{var d=new Date();document.getElementById('today').textContent=d.toLocaleDateString('ur-PK',{weekday:'long',day:'numeric',month:'long',year:'numeric'});}catch(e){}
+(function(){
+  var M={'AI News':'news','Toolscape':'tools','Nawa-e-Farooqi':'nawa'},
+      N={news:['فاروقی اے آئی نیوز — روزانہ مواد مرکز','AI News Desk'],tools:['Toolscape — Daily content desk','Toolscape Desk'],nawa:['نوائے فاروقی — روزانہ مواد مرکز','Nawa-e-Farooqi Desk']},
+      C={news:['#0a1550','#e2b84f'],tools:['#0e7490','#22d3ee'],nawa:['#1d5c46','#b08d3c']};
+  var t=null, m=decodeURIComponent(location.pathname).match(/\/search\/label\/([^\/?]+)/);
+  if(m&&M[m[1]])t=M[m[1]];
+  if(!t&&document.querySelector('.single')){var c=document.querySelectorAll('.single .chip');for(var i=0;i<c.length;i++){if(M[c[i].getAttribute('data-l')]){t=M[c[i].getAttribute('data-l')];break;}}}
+  if(t){document.body.className+=' t-'+t;
+    var s=document.getElementById('sub'),b=document.getElementById('badge');if(s)s.textContent=N[t][0];if(b)b.textContent=N[t][1];
+    var a=document.querySelectorAll('.tabs a');for(var j=0;j<a.length;j++){a[j].classList.toggle('on',a[j].getAttribute('data-t')===t);}
+    var mc=document.querySelector('meta[name=theme-color]');if(mc)mc.setAttribute('content',C[t][0]);}
+  var cs=document.querySelectorAll('.card');
+  for(var k=0;k<cs.length;k++){var ch=cs[k].querySelectorAll('.chip'),tt='nawa';
+    for(var q=0;q<ch.length;q++){if(M[ch[q].getAttribute('data-l')]){tt=M[ch[q].getAttribute('data-l')];break;}}
+    cs[k].style.setProperty('--c',C[tt][0]);cs[k].style.setProperty('--c2',C[tt][1]);}
+  var all=document.querySelectorAll('.chip');
+  for(var z=0;z<all.length;z++){var l=M[all[z].getAttribute('data-l')];if(l)all[z].style.setProperty('--c',C[l][0]);}
+  try{document.getElementById('today').textContent=new Date().toLocaleDateString('ur-PK',{weekday:'long',day:'numeric',month:'long',year:'numeric'});}catch(e){}
+})();
 //]]>
 </script>
 </body>
