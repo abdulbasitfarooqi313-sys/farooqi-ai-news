@@ -21,7 +21,7 @@ import xml.etree.ElementTree as ET
 
 import requests
 
-from .base import ROOT, generate_json
+from .base import ROOT, _gemini, parse_json
 from . import insight
 
 OUT = ROOT / "desk"
@@ -123,8 +123,19 @@ def build(niche: str) -> dict:
     heads = [h for u in cfg["feeds"] for h in _items(u)]
     user = (f"Today: {dt.datetime.now(TZ):%A %d %B %Y}\n\nTRENDING ITEMS (last 1-3 days):\n" + "\n".join(heads[:120])
             + "\n\n" + insight.brief(niche, data=data) + "\n\nCHANNEL STYLE GUIDE:\n" + insight.style_guide(niche))
-    d = generate_json(SYSTEM.format(lang=cfg["lang"], script=" (Urdu script, never Roman Urdu)" if cfg["rtl"] else "",
-                                    extra=EXTRA.get(niche, ""), name=cfg["name"], about=cfg["about"]), user)
+    system = SYSTEM.format(lang=cfg["lang"], script=" (Urdu script, never Roman Urdu)" if cfg["rtl"] else "",
+                           extra=EXTRA.get(niche, ""), name=cfg["name"], about=cfg["about"])
+    d, last = None, None
+    for i in range(2):          # لمبا جواب: بڑی حد (اردو میں 8 ہزار ٹوکن کم پڑتے ہیں)
+        try:
+            d = parse_json(_gemini(system, user + ("" if not i else "\n\nIMPORTANT: return complete, valid JSON only; keep texts shorter."),
+                                   max_tokens=60000))
+            break
+        except ValueError as e:
+            last = e
+            print(f"desk {niche}: JSON error ({e})")
+    if d is None:
+        raise ValueError(f"desk {niche}: {last}")
     d["_competitors"] = data[0][:15]
     d["_bank"] = data[1][:15]
     return d
