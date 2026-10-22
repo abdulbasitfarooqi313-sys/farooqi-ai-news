@@ -12,7 +12,8 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install requests
       - run: python -m news.insight
+      - run: python -m news.discover
       - run: |
           git config user.name "news-bot"; git config user.email "news-bot@users.noreply.github.com"
-          git add state/insight_test.txt state/hook_bank.json state/competitor_ids.json
+          git add state/discover.json state/insight_test.txt state/hook_bank.json state/competitor_ids.json
           git commit -m "insight test" && git push || true
