@@ -1,0 +1,525 @@
+{
+ "summary": "Today's content focus is on practical AI agent updates, document automation tools, and local privacy setups tailored for beginners in the US, UK, and Canada. We will prioritize hands-on tutorials for newly launched productivity utilities.",
+ "topics": [
+  {
+   "title": "Anthropic Claude Duet Step-by-Step Tutorial",
+   "why": "Anthropic just entered the agent race with Claude Duet, driving high search interest across tech news.",
+   "trend": 10,
+   "sources": [
+    "producthunt.com",
+    "news.google.com"
+   ]
+  },
+  {
+   "title": "Documind Open-Source Structured Data Tool",
+   "why": "A rising open-source solution for turning unstructured documents into clean JSON and tables without paid subscriptions.",
+   "trend": 9,
+   "sources": [
+    "hnrss.org"
+   ]
+  },
+  {
+   "title": "NordLayer AI Scout Office Tool Tracker",
+   "why": "Teams and individuals in the US/UK/Canada are struggling to audit the growing number of internal AI tools.",
+   "trend": 8,
+   "sources": [
+    "news.google.com"
+   ]
+  },
+  {
+   "title": "FaceAge Biological Age Selfie Checker",
+   "why": "A viral public tool allowing users to upload a selfie for an instant biological age breakdown.",
+   "trend": 8,
+   "sources": [
+    "news.google.com"
+   ]
+  },
+  {
+   "title": "Mistral Voxtral 3 Audio Model Walkthrough",
+   "why": "New audio processing model capturing developer attention for fast local transcription.",
+   "trend": 7,
+   "sources": [
+    "producthunt.com"
+   ]
+  },
+  {
+   "title": "ElevenLabs Realtime Translation Tool",
+   "why": "Live translation capabilities are expanding, making multilingual content creation accessible to beginners.",
+   "trend": 7,
+   "sources": [
+    "producthunt.com"
+   ]
+  },
+  {
+   "title": "Open-Source AI Tool to Read Privacy Policies",
+   "why": "Show HN project gaining traction by automatically scanning websites to tell users who sells their data.",
+   "trend": 6,
+   "sources": [
+    "hnrss.org"
+   ]
+  },
+  {
+   "title": "Kalender Sync Tool for Beginners",
+   "why": "Simple productivity utility solving multi-calendar management for remote workers.",
+   "trend": 6,
+   "sources": [
+    "producthunt.com"
+   ]
+  },
+  {
+   "title": "Sponkly Creator Utility",
+   "why": "New Product Hunt launch helping solo creators streamline basic daily workflows.",
+   "trend": 5,
+   "sources": [
+    "producthunt.com"
+   ]
+  },
+  {
+   "title": "Fastlane 2.0 Deployment Tool",
+   "why": "Updated version simplifies mobile app deployment pipelines for small teams.",
+   "trend": 5,
+   "sources": [
+    "producthunt.com"
+   ]
+  }
+ ],
+ "packages": [
+  {
+   "topic": "Anthropic Claude Duet Step-by-Step Tutorial",
+   "competitors": "Competitors like The AI Advantage and Parker Prompts covered Claude Opus updates broadly, but missed a simple, beginner-focused walkthrough of setting up Claude Duet workflows.",
+   "angle": "We show exactly how to set up and run your first collaborative task in Claude Duet with zero coding experience.",
+   "viral": {
+    "score": 92,
+    "why": "High search volume around Anthropic's new agent release combined with practical tutorials always drives strong click-through rates."
+   },
+   "long": {
+    "title": "How to Use Claude Duet (Step-by-Step Beginner Guide)",
+    "thumb": "Claude Duet Setup",
+    "hook": "In the next 7 minutes you will set up your first collaborative task using Claude Duet. No coding required.",
+    "outline": [
+     "What Claude Duet is and how it differs from standard chat",
+     "Setting up your account and accessing the dashboard",
+     "Connecting your first file source",
+     "Writing your first collaborative prompt",
+     "Reviewing and exporting the generated output",
+     "One real downside: handling usage limits",
+     "Quick recap and next steps"
+    ]
+   },
+   "shorts": [
+    {
+     "title": "Claude Duet in 45 Seconds",
+     "hook": "Stop doing repetitive document tasks by hand.",
+     "script": "Here is how to use Claude Duet to handle your daily research notes. First, open the dashboard. Second, drop in your messy text files. Third, type this exact prompt to organize everything into a clean table. The only catch is free tier rate limits. Try it today and save hours.",
+     "cta": "Subscribe to Toolscape for more simple AI tutorials."
+    },
+    {
+     "title": "Try This New Claude Agent Feature",
+     "hook": "Did you know Anthropic just released Claude Duet?",
+     "script": "Let me show you how to test it out in under a minute. Log into your account, find the Duet workspace, and upload a simple PDF. Ask it to summarize the key points into bullet points. It runs fast, but watch out for occasional token limits on longer documents.",
+     "cta": "Check out our full video for the step-by-step guide."
+    }
+   ],
+   "carousel": {
+    "title": "How to Start With Claude Duet",
+    "slides": [
+     "Step 1: Open your Claude workspace",
+     "Step 2: Select the Duet collaboration mode",
+     "Step 3: Upload your reference files",
+     "Step 4: Use a clear instruction prompt",
+     "Step 5: Review structured results instantly",
+     "Note: Watch out for free tier usage caps"
+    ]
+   },
+   "posts": {
+    "x": [
+     "Anthropic's Claude Duet is finally here. We tested it for beginner document workflows—here is how to set it up in 5 minutes: [link]",
+     "Still managing research notes manually? Try this simple Claude Duet workflow to organize everything instantly: [link]"
+    ],
+    "facebook": "If you have been waiting to try Anthropic's new agent features, we put together a simple, step-by-step beginner guide to Claude Duet. Check it out and let us know how it works for your workflow!",
+    "instagram": "We tested the brand new Claude Duet agent workspace so you don't have to. Watch our full step-by-step tutorial on YouTube to see how to organize your notes in minutes. Link in bio! #AItools #ClaudeDuet #Productivity",
+    "linkedin": "Artificial intelligence agent workflows are evolving quickly. Today we published a practical guide on setting up Claude Duet for day-to-day administrative tasks. Read more and watch the full tutorial here: [link]"
+   },
+   "article": {
+    "title": "How to Set Up and Use Claude Duet for Beginners",
+    "outline": [
+     "Introduction to Claude Duet",
+     "Accessing the Workspace",
+     "Step-by-Step Prompting Guide",
+     "Limitations to Keep in Mind",
+     "Conclusion"
+    ]
+   }
+  },
+  {
+   "topic": "Documind Open-Source Structured Data Tool",
+   "competitors": "Competitors like Jeff Su and Kevin Stratvert covered general file organization, but missed open-source alternatives like Documind for turning documents into structured JSON.",
+   "angle": "A completely free, local-friendly walkthrough of setting up Documind without writing code.",
+   "viral": {
+    "score": 85,
+    "why": "Open-source data tools attract high engagement from users looking for free alternatives to expensive SaaS subscriptions."
+   },
+   "long": {
+    "title": "Turn Any Document into Structured Data Free (Documind Tutorial)",
+    "thumb": "Documind Open Source",
+    "hook": "In the next 6 minutes you will turn messy PDF invoices into clean spreadsheets using a free open-source tool.",
+    "outline": [
+     "What Documind is and why it matters",
+     "Downloading and setting up the tool locally",
+     "Uploading your first document sample",
+     "Extracting structured data into tables",
+     "Exporting your results to CSV",
+     "One real downside: requires basic setup steps",
+     "Recap and subscribe call"
+    ]
+   },
+   "shorts": [
+    {
+     "title": "Extract PDF Data Instantly",
+     "hook": "Stop typing invoice data into Excel manually.",
+     "script": "Here is how to use the open-source tool Documind. Drop your PDF into the interface, click run, and watch it generate clean structured data. The downside is you need to follow a quick setup guide. Try it out and speed up your workflow.",
+     "cta": "Subscribe to Toolscape for free tool lists."
+    },
+    {
+     "title": "Free Document AI Tool",
+     "hook": "This free open-source tool replaces costly data extraction apps.",
+     "script": "Documind lets you turn scanned receipts and reports into clean spreadsheets instantly. Just load the tool, upload your file, and export the table. It takes under two minutes once installed.",
+     "cta": "Watch our full tutorial on YouTube."
+    }
+   ],
+   "carousel": {
+    "title": "Turn PDFs to Data Free with Documind",
+    "slides": [
+     "Step 1: Download Documind open-source package",
+     "Step 2: Launch the local interface",
+     "Step 3: Upload your PDF or invoice",
+     "Step 4: Run data extraction",
+     "Step 5: Export clean CSV files",
+     "Note: Basic setup required for local run"
+    ]
+   },
+   "posts": {
+    "x": [
+     "Tired of paying for PDF data extraction? Documind is a free open-source tool that turns documents into structured tables: [link]",
+     "How to convert messy invoices into clean spreadsheets using Documind. Full step-by-step guide: [link]"
+    ],
+    "facebook": "If you work with a lot of PDF invoices or reports, you will love this. We tested Documind, a new open-source AI tool that extracts structured data instantly. Watch our free guide today!",
+    "instagram": "Stop copying text from PDFs by hand. We tested Documind, an open-source tool that turns documents into clean tables. Full tutorial on our channel! #Productivity #OpenSource #AItools",
+    "linkedin": "Data extraction doesn't have to be expensive. Our latest guide covers Documind, an open-source tool designed to convert unstructured documents into clean, usable data formats. Check it out: [link]"
+   },
+   "article": {
+    "title": "How to Use Documind to Extract Data from Documents",
+    "outline": [
+     "Why Use Open-Source Document Tools",
+     "Getting Started with Documind",
+     "Step-by-Step Extraction Guide",
+     "Pros and Cons",
+     "Summary"
+    ]
+   }
+  },
+  {
+   "topic": "NordLayer AI Scout Office Tool Tracker",
+   "competitors": "Competitors focused heavily on large frontier models, completely missing enterprise utility trackers like NordLayer AI Scout for auditing internal shadow AI tools.",
+   "angle": "A simple guide for beginners on how to track and audit AI tools being used across small teams.",
+   "viral": {
+    "score": 78,
+    "why": "Security and tool management are top-of-mind for remote teams and small business owners dealing with scattered software subscriptions."
+   },
+   "long": {
+    "title": "How to Track Every AI Tool Used in Your Team (NordLayer AI Scout)",
+    "thumb": "Track AI Tools",
+    "hook": "In the next 5 minutes you will discover how to track all the AI apps running inside your workspace.",
+    "outline": [
+     "What is the office 'AI Zoo' problem",
+     "Introducing NordLayer AI Scout",
+     "Setting up your team monitoring dashboard",
+     "Identifying unapproved or risky tools",
+     "Generating your first security audit report",
+     "One real downside: setup requires administrator rights",
+     "Recap and next steps"
+    ]
+   },
+   "shorts": [
+    {
+     "title": "Find All AI Tools in Your Office",
+     "hook": "Do you know how many AI apps your team is using?",
+     "script": "Here is how to use NordLayer AI Scout to track them all in one place. Open your dashboard, run the scanner, and view the list of active tools. The downside is you need admin access to install it.",
+     "cta": "Subscribe to Toolscape for more tool lists."
+    },
+    {
+     "title": "Stop Shadow AI With This Tool",
+     "hook": "Too many unapproved AI tools in your workflow?",
+     "script": "NordLayer AI Scout helps you track every software plugin your team opens. Simply connect your network view and review the generated list of active models. Try it out to keep your data secure.",
+     "cta": "Watch our full video breakdown."
+    }
+   ],
+   "carousel": {
+    "title": "Auditing Team AI Tools with AI Scout",
+    "slides": [
+     "Step 1: Access your NordLayer dashboard",
+     "Step 2: Enable the AI Scout feature",
+     "Step 3: Scan connected network devices",
+     "Step 4: Review active AI applications",
+     "Step 5: Generate safety reports",
+     "Note: Requires administrator permissions"
+    ]
+   },
+   "posts": {
+    "x": [
+     "Managing team software is getting harder with shadow AI. Here is how NordLayer AI Scout helps track workplace tools: [link]",
+     "How to audit the AI apps running inside your office network in 5 minutes: [link]"
+    ],
+    "facebook": "Is your team using too many unapproved AI tools? We looked at NordLayer AI Scout to see how small businesses can track and secure their software stack. Watch our breakdown!",
+    "instagram": "Tracking workplace AI tools just got easier. Check out our quick guide on using NordLayer AI Scout to secure your team's workflow. Link in bio! #Cybersecurity #AItools #TechTips",
+    "linkedin": "Shadow AI is a growing concern for modern workplaces. Our latest tutorial explores how NordLayer AI Scout helps organizations monitor and manage internal AI usage safely. Read more: [link]"
+   },
+   "article": {
+    "title": "How to Audit Workplace AI Tools Using NordLayer AI Scout",
+    "outline": [
+     "The Rise of Workplace Shadow AI",
+     "What is NordLayer AI Scout",
+     "Step-by-Step Audit Guide",
+     "Benefits and Limitations",
+     "Conclusion"
+    ]
+   }
+  }
+ ],
+ "hook_patterns": [
+  {
+   "pattern": "Action result combined with tool name and time frame",
+   "example": "How I Make Realistic AI Videos with Seedance 2.5 - Full Guide"
+  },
+  {
+   "pattern": "Direct platform update announcement with practical utility tag",
+   "example": "Microsoft Copilot Got a Major Upgrade: Step-by-Step Beginner Guide"
+  },
+  {
+   "pattern": "Problem-first instruction addressing common manual bottlenecks",
+   "example": "Stop Organizing Files Yourself: Try This Free AI Tool Instead"
+  },
+  {
+   "pattern": "Curiosity-driven prompt discovery for popular models",
+   "example": "The Biggest ChatGPT Update Yet: How to Use It in 5 Minutes"
+  },
+  {
+   "pattern": "Beginner-focused tutorial framing for new automation frameworks",
+   "example": "Build Your First AI Agent in 20 Minutes (No Coding Required)"
+  }
+ ],
+ "_competitors": [
+  {
+   "channel": "Dan Kieft",
+   "title": "How I Make Realistic AI Videos with Seedance 2.5 - Full Guide",
+   "views": 438120,
+   "date": "2026-10-16",
+   "url": "https://youtu.be/2hJsvDSPWYM"
+  },
+  {
+   "channel": "Dan Kieft",
+   "title": "GPT-6 Astra is Crazy For AI Video",
+   "views": 345633,
+   "date": "2026-09-23",
+   "url": "https://youtu.be/qwGIwxZFc2I"
+  },
+  {
+   "channel": "Nate Herk | AI Automation",
+   "title": "Matt Pocock: The Most Valuable Skill to Learn in the Age of AI",
+   "views": 330504,
+   "date": "2026-10-16",
+   "url": "https://youtu.be/Z8lf5oWKfj0"
+  },
+  {
+   "channel": "Metics Media",
+   "title": "The Ultimate Beginner’s Guide to Hermes Agent",
+   "views": 326703,
+   "date": "2026-10-08",
+   "url": "https://youtu.be/XNcKUSL1CTE"
+  },
+  {
+   "channel": "Kevin Stratvert",
+   "title": "Microsoft Copilot Got a Major Upgrade 🚀 These features are coming to Frontier soon #MicrosoftPartner",
+   "views": 316476,
+   "date": "2026-10-02",
+   "url": "https://youtu.be/2kzuCJ5KLn4"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "Google Just Caught Up (Gemini-4 Argon)",
+   "views": 268870,
+   "date": "2026-10-13",
+   "url": "https://youtu.be/eBszYxzE2dk"
+  },
+  {
+   "channel": "Jeff Su",
+   "title": "Personal Agents, Clearly Explained",
+   "views": 240218,
+   "date": "2026-10-13",
+   "url": "https://youtu.be/HdI_aYzgJIg"
+  },
+  {
+   "channel": "Metics Media",
+   "title": "Build Your First AI Agent in 20 Minutes (No Coding)",
+   "views": 221942,
+   "date": "2026-10-19",
+   "url": "https://youtu.be/rCkYVxOX-dI"
+  },
+  {
+   "channel": "Kevin Stratvert",
+   "title": "How to Edit Videos with ChatGPT",
+   "views": 213184,
+   "date": "2026-10-07",
+   "url": "https://youtu.be/cR0TaYikrz8"
+  },
+  {
+   "channel": "Skill Leap AI",
+   "title": "The Biggest ChatGPT Update Yet: Meet dots",
+   "views": 200406,
+   "date": "2026-09-29",
+   "url": "https://youtu.be/gfh6l3DxHK0"
+  },
+  {
+   "channel": "Futurepedia",
+   "title": "Claude Makes a New Kind of Video - Full Tutorial",
+   "views": 195843,
+   "date": "2026-10-19",
+   "url": "https://youtu.be/Ge1B-Ok1Pfk"
+  },
+  {
+   "channel": "Jeff Su",
+   "title": "Stop Organizing Files Yourself.",
+   "views": 179607,
+   "date": "2026-09-29",
+   "url": "https://youtu.be/peP_o66u-vM"
+  },
+  {
+   "channel": "Dan Kieft",
+   "title": "Suno v6 + Seedance 2.5 is NUTS at Making AI Music Videos",
+   "views": 177199,
+   "date": "2026-10-05",
+   "url": "https://youtu.be/BKDrtzJktO0"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "AI News: 6 New Models & A Nano Banana Killer",
+   "views": 174344,
+   "date": "2026-10-16",
+   "url": "https://youtu.be/KGcuuhqmPhI"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "This Tesla Actually Flies (NOT AI)",
+   "views": 173470,
+   "date": "2026-10-16",
+   "url": "https://youtu.be/WXWFmwfo1JA"
+  }
+ ],
+ "_bank": [
+  {
+   "channel": "Dan Kieft",
+   "title": "How I Make Realistic AI Videos with Seedance 2.5 - Full Guide",
+   "views": 438120,
+   "date": "2026-10-16",
+   "url": "https://youtu.be/2hJsvDSPWYM"
+  },
+  {
+   "channel": "Dan Kieft",
+   "title": "GPT-6 Astra is Crazy For AI Video",
+   "views": 345633,
+   "date": "2026-09-23",
+   "url": "https://youtu.be/qwGIwxZFc2I"
+  },
+  {
+   "channel": "Nate Herk | AI Automation",
+   "title": "Matt Pocock: The Most Valuable Skill to Learn in the Age of AI",
+   "views": 330504,
+   "date": "2026-10-16",
+   "url": "https://youtu.be/Z8lf5oWKfj0"
+  },
+  {
+   "channel": "Metics Media",
+   "title": "The Ultimate Beginner’s Guide to Hermes Agent",
+   "views": 326703,
+   "date": "2026-10-08",
+   "url": "https://youtu.be/XNcKUSL1CTE"
+  },
+  {
+   "channel": "Kevin Stratvert",
+   "title": "Microsoft Copilot Got a Major Upgrade 🚀 These features are coming to Frontier soon #MicrosoftPartner",
+   "views": 316476,
+   "date": "2026-10-02",
+   "url": "https://youtu.be/2kzuCJ5KLn4"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "Google Just Caught Up (Gemini-4 Argon)",
+   "views": 268870,
+   "date": "2026-10-13",
+   "url": "https://youtu.be/eBszYxzE2dk"
+  },
+  {
+   "channel": "Jeff Su",
+   "title": "Personal Agents, Clearly Explained",
+   "views": 240218,
+   "date": "2026-10-13",
+   "url": "https://youtu.be/HdI_aYzgJIg"
+  },
+  {
+   "channel": "Metics Media",
+   "title": "Build Your First AI Agent in 20 Minutes (No Coding)",
+   "views": 221942,
+   "date": "2026-10-19",
+   "url": "https://youtu.be/rCkYVxOX-dI"
+  },
+  {
+   "channel": "Kevin Stratvert",
+   "title": "How to Edit Videos with ChatGPT",
+   "views": 213184,
+   "date": "2026-10-07",
+   "url": "https://youtu.be/cR0TaYikrz8"
+  },
+  {
+   "channel": "Skill Leap AI",
+   "title": "The Biggest ChatGPT Update Yet: Meet dots",
+   "views": 200406,
+   "date": "2026-09-29",
+   "url": "https://youtu.be/gfh6l3DxHK0"
+  },
+  {
+   "channel": "Futurepedia",
+   "title": "Claude Makes a New Kind of Video - Full Tutorial",
+   "views": 195843,
+   "date": "2026-10-19",
+   "url": "https://youtu.be/Ge1B-Ok1Pfk"
+  },
+  {
+   "channel": "Jeff Su",
+   "title": "Stop Organizing Files Yourself.",
+   "views": 179607,
+   "date": "2026-09-29",
+   "url": "https://youtu.be/peP_o66u-vM"
+  },
+  {
+   "channel": "Dan Kieft",
+   "title": "Suno v6 + Seedance 2.5 is NUTS at Making AI Music Videos",
+   "views": 177199,
+   "date": "2026-10-05",
+   "url": "https://youtu.be/BKDrtzJktO0"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "AI News: 6 New Models & A Nano Banana Killer",
+   "views": 174344,
+   "date": "2026-10-16",
+   "url": "https://youtu.be/KGcuuhqmPhI"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "This Tesla Actually Flies (NOT AI)",
+   "views": 173470,
+   "date": "2026-10-16",
+   "url": "https://youtu.be/WXWFmwfo1JA"
+  }
+ ]
+}
