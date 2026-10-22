@@ -184,7 +184,6 @@ footer li i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-i
                   <a class='back' expr:href='data:blog.homepageUrl'>→ واپس روزنامچہ</a>
                   <h1><data:post.title/></h1>
                   <div class='meta'>
-                    <span><data:post.date/></span>
                     <b:loop values='data:post.labels' var='label'>
                       <a class='chip' expr:data-l='data:label.name' expr:href='data:label.url'><data:label.name/></a>
                     </b:loop>
@@ -202,7 +201,6 @@ footer li i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-i
                 <article class='card'>
                   <h2><a expr:href='data:post.url'><data:post.title/></a></h2>
                   <div class='meta'>
-                    <span><data:post.date/></span>
                     <b:loop values='data:post.labels' var='label'>
                       <b:if cond='data:label.name != &quot;روزنامچہ&quot;'>
                         <a class='chip' expr:data-l='data:label.name' expr:href='data:label.url'><data:label.name/></a>
@@ -222,6 +220,7 @@ footer li i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-i
         </b:includable>
       </b:widget>
     </b:section>
+    <div id='feedbox'>&#8203;</div>
   </div>
 </main>
 
@@ -268,6 +267,28 @@ footer li i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-i
     cs[k].style.setProperty('--c',C[tt][0]);cs[k].style.setProperty('--c2',C[tt][1]);}
   var all=document.querySelectorAll('.chip');
   for(var z=0;z<all.length;z++){var l=M[all[z].getAttribute('data-l')];if(l)all[z].style.setProperty('--c',C[l][0]);}
+
+  /* اگر Blogger کی فہرست خالی رہے تو پوسٹیں فیڈ سے لا کر خود دکھائیں */
+  function L(e){var c=e.category||[];for(var i=0;i<c.length;i++){if(M[c[i].term])return c[i].term;}return 'Nawa-e-Farooqi';}
+  function H(x){var d=document.createElement('div');d.textContent=x;return d.innerHTML;}
+  function href(e){var l=e.link||[];for(var i=0;i<l.length;i++){if(l[i].rel==='alternate')return l[i].href;}return '#';}
+  var box=document.getElementById('feedbox'),grid=document.querySelector('.grid');
+  if(box&&!document.querySelector('.single')&&!(grid&&grid.querySelector('.card'))){
+    var lab=m?m[1]:'',single=/\/\d{4}\/\d{2}\/.+\.html$/.test(location.pathname);
+    fetch('/feeds/posts/default'+(lab&&!single?'/-/'+encodeURIComponent(lab):'')+'?alt=json&max-results=30',{credentials:'include'})
+    .then(function(r){return r.json();}).then(function(j){
+      var es=(j.feed&&j.feed.entry)||[],out='';
+      if(single){
+        for(var i=0;i<es.length;i++){var u=href(es[i]);if(u.split('?')[0].replace(/^https?:/,'')===location.href.split('?')[0].split('#')[0].replace(/^https?:/,'')){
+          var lb=L(es[i]),tt=M[lb];document.body.className+=' t-'+tt;
+          box.innerHTML="<article class='single'><div class='head'><a class='back' href='/'>→ واپس روزنامچہ</a><h1>"+H(es[i].title.$t)+"</h1><div class='meta'><span>"+es[i].published.$t.slice(0,10)+"</span><a class='chip' href='/search/label/"+encodeURIComponent(lb)+"'>"+H(lb)+"</a></div></div><div class='body'>"+es[i].content.$t+"</div></article>";
+          var s2=document.getElementById('sub'),b2=document.getElementById('badge');if(s2)s2.textContent=N[tt][0];if(b2)b2.textContent=N[tt][1];return;}}
+      }
+      for(var k=0;k<es.length;k++){var e=es[k],lb2=L(e),c2=C[M[lb2]];
+        out+="<article class='card' style='--c:"+c2[0]+";--c2:"+c2[1]+"'><h2><a href='"+href(e)+"'>"+H(e.title.$t)+"</a></h2><div class='meta'><span>"+e.published.$t.slice(0,10)+"</span><a class='chip' style='--c:"+c2[0]+"' href='/search/label/"+encodeURIComponent(lb2)+"'>"+H(lb2)+"</a></div><p class='snip'>آج کے ٹرینڈنگ موضوعات، تیار پیکج، مقابلین کا تجزیہ اور وائرل امکان</p><a class='more' href='"+href(e)+"'>پورا روزنامچہ کھولیں ←</a></article>";}
+      box.innerHTML=out?"<div class='grid'>"+out+"</div>":"<div class='empty'>ابھی کوئی روزنامچہ نہیں — روز صبح 6 بجے نیا آتا ہے۔</div>";
+    }).catch(function(){box.innerHTML="<div class='empty'>روزنامچے لوڈ نہ ہو سکے — صفحہ دوبارہ کھولیں۔</div>";});
+  }
   try{document.getElementById('today').textContent=new Date().toLocaleDateString('ur-PK',{weekday:'long',day:'numeric',month:'long',year:'numeric'});}catch(e){}
 })();
 //]]>
