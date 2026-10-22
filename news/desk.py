@@ -32,7 +32,7 @@ UA = {"User-Agent": "Mozilla/5.0 (FarooqiDailyDesk RSS reader)"}
 
 NICHES = {
     "news": {
-        "name": "فاروقی اے آئی نیوز", "label": "AI News", "rtl": True, "lang": "اردو",
+        "name": "فاروقی اے آئی نیوز", "label": "AI News", "color": "#b42318", "rtl": True, "lang": "اردو",
         "about": "مصنوعی ذہانت کی خبروں کا اردو بلیٹن (پاکستان/ہندوستان کے ناظرین، پیر بدھ ہفتہ)",
         "feeds": [
             "https://news.google.com/rss/search?q=%22artificial+intelligence%22+OR+OpenAI+OR+Gemini+OR+Anthropic+when:1d&hl=en-US&gl=US&ceid=US:en",
@@ -44,7 +44,7 @@ NICHES = {
         ],
     },
     "toolscape": {
-        "name": "Toolscape", "label": "Toolscape", "rtl": False, "lang": "English",
+        "name": "Toolscape", "label": "Toolscape", "color": "#0e7490", "rtl": False, "lang": "English",
         "about": "English faceless YouTube channel: step-by-step AI tool tutorials and tool lists for beginners in US/UK/Canada",
         "feeds": [
             "https://www.producthunt.com/feed",
@@ -55,7 +55,7 @@ NICHES = {
         ],
     },
     "nawa": {
-        "name": "نوائے فاروقی", "label": "Nawa-e-Farooqi", "rtl": True, "lang": "اردو",
+        "name": "نوائے فاروقی", "label": "Nawa-e-Farooqi", "color": "#1d5c46", "rtl": True, "lang": "اردو",
         "about": ("قرآن کی اردو تفسیر کا دینی چینل (ترجمہ شیخ الہندؒ، تفسیرِ عثمانی کی روشنی میں) — رکوع وار سلسلہ، "
                   "شارٹس، تلاوت ویڈیو، لمبی ویڈیو، بلاگ۔ موضوعات صرف قرآن و تفسیر کی حد میں، کوئی نیا دینی دعویٰ نہیں"),
         "feeds": [
@@ -186,21 +186,38 @@ def build(niche: str) -> dict:
 # ---------------- HTML ----------------
 
 CSS = """<style>
-.dd{font-family:'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',system-ui,sans-serif;color:#1d2433;line-height:1.9;max-width:900px;margin:auto}
-.dd.ltr{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6}
-.dd h2{font-size:21px;margin:28px 0 10px;padding:6px 12px;background:#12324a;color:#fff;border-radius:8px}
-.dd h3{font-size:18px;margin:18px 0 6px;color:#12324a}
-.dd .sum{background:#eef4fa;border-radius:10px;padding:10px 14px}
-.dd table{width:100%;border-collapse:collapse;font-size:15px}
-.dd td,.dd th{border-bottom:1px solid #e3e7ee;padding:6px 8px;vertical-align:top;text-align:start}
-.dd th{background:#f5f7fa}
-.dd .bar{display:inline-block;height:9px;border-radius:5px;background:#e8a33d}
-.dd .card{border:1px solid #dfe5ee;border-radius:12px;padding:12px 16px;margin:14px 0;background:#fff}
-.dd .score{float:inline-end;font-weight:700;background:#fff3e0;color:#b45309;border-radius:20px;padding:2px 12px}
-.dd .copy{white-space:pre-wrap;background:#f7f8fa;border:1px dashed #cdd5e0;border-radius:8px;padding:8px 12px;margin:6px 0;font-size:15px}
-.dd .muted{color:#667085;font-size:14px}
-.dd details{margin:6px 0}.dd summary{cursor:pointer;font-weight:700;color:#12324a}
+.dd{--a:#1d5c46;--ink:#16231d;--muted:#5f6b66;--line:#e3e8e4;--soft:#f4f6f3;--gold:#b08d3c;--goldl:#f6efdc;
+ font-family:'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',system-ui,sans-serif;color:var(--ink);line-height:2;font-size:16px}
+.dd.ltr{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6}
+.dd *{box-sizing:border-box}
+.dd .hero{background:linear-gradient(135deg,var(--a),#0f2a20);color:#fff;border-radius:14px;padding:16px 18px;margin:6px 0 16px}
+.dd .hero p{margin:0 0 12px;font-size:16px;opacity:.95}
+.dd .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.dd .tile{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:8px 10px;text-align:center}
+.dd .tile b{display:block;font-family:'Inter',system-ui,sans-serif;font-size:22px;line-height:1.3}
+.dd .tile span{font-size:12.5px;opacity:.85}
+.dd h2{font-size:19px;margin:26px 0 10px;padding:4px 14px;border-inline-start:5px solid var(--gold);background:var(--soft);border-radius:8px;color:var(--a)}
+.dd h3{font-size:17px;margin:16px 0 6px;color:var(--a)}
+.dd .tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+.dd table{width:100%;border-collapse:collapse;font-size:14.5px}
+.dd td,.dd th{border-bottom:1px solid var(--line);padding:7px 10px;vertical-align:top;text-align:start}
+.dd tr:last-child td{border-bottom:0}
+.dd th{background:var(--soft);font-weight:700;color:var(--muted);font-size:13px}
+.dd .num{font-family:'Inter',system-ui,sans-serif;font-weight:700;color:var(--a)}
+.dd .meter{display:block;width:70px;height:7px;border-radius:5px;background:var(--line);overflow:hidden;margin-top:4px}
+.dd .meter i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),#e0a33a)}
+.dd .pk{border:1px solid var(--line);border-radius:14px;padding:4px 16px 14px;margin:14px 0;background:#fff;border-top:4px solid var(--a)}
+.dd .pk-h{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.dd .pk-h h2{margin:12px 0 6px;background:none;border:0;padding:0;font-size:19px}
+.dd .score{font-family:'Inter',system-ui,sans-serif;font-weight:800;background:var(--goldl);color:#7a5d17;border-radius:999px;padding:3px 14px;font-size:14px;white-space:nowrap}
+.dd .why{background:var(--soft);border-radius:10px;padding:8px 12px;margin:6px 0}
+.dd .copy{white-space:pre-wrap;background:#fbfaf6;border:1px dashed #d8ccaa;border-radius:10px;padding:8px 12px;margin:6px 0;font-size:15px;user-select:all}
+.dd .muted{color:var(--muted);font-size:13px}
+.dd details{margin:6px 0;border:1px solid var(--line);border-radius:10px;padding:4px 12px;background:#fff}
+.dd summary{cursor:pointer;font-weight:700;color:var(--a);padding:2px 0}
+.dd ol,.dd ul{margin:6px 0;padding-inline-start:24px}
 .dd a{color:#1d4ed8}
+@media(max-width:640px){.dd .tiles{grid-template-columns:repeat(2,1fr)}.dd{font-size:15px}}
 </style>"""
 
 
@@ -216,20 +233,29 @@ def render(niche: str, d: dict, day: str) -> str:
     cfg = NICHES[niche]
     rtl = cfg["rtl"]
     L = (lambda ur, en: ur if rtl else en)
-    o = [CSS, f'<div class="dd{"" if rtl else " ltr"}" dir="{"rtl" if rtl else "ltr"}">',
-         f'<p class="sum">{_e(d.get("summary"))}</p>', f'<h2>🔥 {L("آج کے 10 ٹرینڈنگ موضوعات", "Top 10 trending topics today")}</h2>',
-         f'<table><tr><th>#</th><th>{L("موضوع", "Topic")}</th><th>{L("ٹرینڈ", "Trend")}</th><th>{L("کیوں / کہاں", "Why / where")}</th></tr>']
+    pk = d.get("packages", [])[:3]
+    top = max([int(p.get("viral", {}).get("score") or 0) for p in pk if str(p.get("viral", {}).get("score", "")).isdigit()] or [0])
+    o = [CSS, f'<div class="dd{"" if rtl else " ltr"}" dir="{"rtl" if rtl else "ltr"}" style="--a:{cfg.get("color", "#1d5c46")}">',
+         f'<div class="hero"><p>{_e(d.get("summary"))}</p><div class="tiles">'
+         f'<div class="tile"><b>{len(d.get("topics", [])[:10])}</b><span>{L("ٹرینڈنگ موضوعات", "trending topics")}</span></div>'
+         f'<div class="tile"><b>{len(pk)}</b><span>{L("تیار پیکج", "ready packages")}</span></div>'
+         f'<div class="tile"><b>{top}%</b><span>{L("سب سے زیادہ وائرل امکان", "best viral chance")}</span></div>'
+         f'<div class="tile"><b>{len(d.get("_competitors") or [])}</b><span>{L("مقابل ویڈیوز دیکھی گئیں", "competitor videos read")}</span></div>'
+         '</div></div>',
+         f'<h2>🔥 {L("آج کے 10 ٹرینڈنگ موضوعات", "Top 10 trending topics today")}</h2>',
+         f'<div class="tbl"><table><tr><th>#</th><th>{L("موضوع", "Topic")}</th><th>{L("ٹرینڈ", "Trend")}</th><th>{L("کیوں / کہاں", "Why / where")}</th></tr>']
     for i, t in enumerate(d.get("topics", [])[:10], 1):
-        tr = max(1, min(10, int(t.get("trend") or 5))) if str(t.get("trend", "")).isdigit() else 5
-        o.append(f'<tr><td>{i}</td><td><b>{_e(t.get("title"))}</b></td><td><span class="bar" style="width:{tr * 8}px"></span> {tr}/10</td>'
+        tr = max(1, min(10, int(t.get("trend")))) if str(t.get("trend", "")).isdigit() else 5
+        o.append(f'<tr><td class="num">{i}</td><td><b>{_e(t.get("title"))}</b></td>'
+                 f'<td><span class="num">{tr}/10</span><span class="meter"><i style="width:{tr * 10}%"></i></span></td>'
                  f'<td>{_e(t.get("why"))}<br><span class="muted">{_e(", ".join(t.get("sources") or []))}</span></td></tr>')
-    o.append("</table>")
+    o.append("</table></div>")
     for i, p in enumerate(d.get("packages", [])[:3], 1):
         v, lg = p.get("viral") or {}, p.get("long") or {}
-        o.append(f'<h2>📦 {L("پیکج", "Package")} {i}: {_e(p.get("topic"))}</h2><div class="card">'
-                 f'<span class="score">{L("وائرل امکان", "Viral chance")} {_e(v.get("score", "?"))}/100</span>'
-                 f'<p>{_e(v.get("why"))}</p><p><b>{L("مقابلین", "Competitors")}:</b> {_e(p.get("competitors"))}</p>'
-                 f'<p><b>{L("ہمارا زاویہ", "Our angle")}:</b> {_e(p.get("angle"))}</p></div>')
+        o.append(f'<div class="pk"><div class="pk-h"><h2>📦 {L("پیکج", "Package")} {i}: {_e(p.get("topic"))}</h2>'
+                 f'<span class="score">🔥 {_e(v.get("score", "?"))}/100</span></div>'
+                 f'<div class="why">{_e(v.get("why"))}</div><p><b>{L("مقابلین", "Competitors")}:</b> {_e(p.get("competitors"))}</p>'
+                 f'<p><b>{L("ہمارا زاویہ", "Our angle")}:</b> {_e(p.get("angle"))}</p>')
         o.append(f'<h3>🎬 {L("لمبی ویڈیو", "Long video")}</h3>{_copy(lg.get("title"))}'
                  f'<p><b>{L("تھمب نیل", "Thumbnail")}:</b> {_e(lg.get("thumb"))}</p><p><b>{L("ہک", "Hook")}:</b> {_e(lg.get("hook"))}</p>'
                  "<ol>" + "".join(f"<li>{_e(x)}</li>" for x in lg.get("outline") or []) + "</ol>")
@@ -250,14 +276,16 @@ def render(niche: str, d: dict, day: str) -> str:
         if a:
             o.append(f'<details><summary>📝 {L("مضمون", "Article")}: {_e(a.get("title"))}</summary><ol>'
                      + "".join(f"<li>{_e(x)}</li>" for x in a.get("outline") or []) + "</ol></details>")
-    o.append(f'<h2>🪝 {L("ہک کے آزمودہ انداز", "Proven hook patterns")}</h2><table>')
+        o.append("</div>")
+    o.append(f'<h2>🪝 {L("ہک کے آزمودہ انداز", "Proven hook patterns")}</h2><div class="tbl"><table>'
+             f'<tr><th>{L("انداز", "Pattern")}</th><th>{L("ہمارے لیے مثال", "Our version")}</th></tr>')
     for h in d.get("hook_patterns") or []:
         o.append(f'<tr><td>{_e(h.get("pattern"))}</td><td><b>{_e(h.get("example"))}</b></td></tr>')
-    o.append(f'</table><h2>👀 {L("مقابل چینلوں کی تازہ ویڈیوز (سب سے زیادہ دیکھی گئی)", "Competitors: most viewed recent videos")}</h2><table>')
+    o.append(f'</table></div><h2>👀 {L("مقابل چینلوں کی تازہ ویڈیوز (سب سے زیادہ دیکھی گئی)", "Competitors: most viewed recent videos")}</h2><div class="tbl"><table>')
     for v in d.get("_competitors") or []:
         o.append(f'<tr><td>{_e(v["channel"])}</td><td><a href="{_e(v["url"])}">{_e(v["title"])}</a></td>'
-                 f'<td>{v["views"]:,}</td><td class="muted">{_e(v["date"])}</td></tr>')
-    o.append(f'</table><p class="muted">{L("خودکار روزنامچہ", "Automatic daily desk")} · {day} · '
+                 f'<td class="num">{v["views"]:,}</td><td class="muted">{_e(v["date"])}</td></tr>')
+    o.append(f'</table></div><p class="muted">{L("خودکار روزنامچہ", "Automatic daily desk")} · {day} · '
              f'{L("ماخذ: عوامی RSS اور یوٹیوب فیڈ؛ تجزیہ: جیمنائی", "sources: public RSS + YouTube feeds; analysis: Gemini")}</p></div>')
     return "\n".join(o)
 
