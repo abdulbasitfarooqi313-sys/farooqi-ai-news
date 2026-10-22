@@ -68,7 +68,8 @@ NICHES = {
 SYSTEM = """You are the head of content strategy for the YouTube channel described below. Every morning you prepare
 the team's "daily desk": what is trending, what competitors did, and ready-to-produce content packages.
 Write ALL text values in {lang}{script}. Be honest and specific; never invent facts, numbers or quotes —
-use only what the trending items and competitor titles show. Viral scores are realistic estimates, not hype.
+use only what the trending items and competitor titles show. Viral scores are strict, realistic estimates: most ideas
+score 25-60; above 75 only when a topic is exploding AND our angle clearly beats the competitors; never give all packages 80+.
 {extra}
 
 Channel: {name} — {about}
