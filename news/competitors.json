@@ -1,11 +1,38 @@
 {
- "_note": "مقابل یوٹیوب چینل (@handle) — بدلنے ہوں تو یہاں بدلیں",
- "competitors": [
+ "_note": "مقابل یوٹیوب چینل — «@handle» یا «@handle|regex» (صرف وہ ویڈیوز جن کے عنوان میں regex ملے)۔ ہر ہفتے news.discover نئی تجاویز state/discover.json میں لکھتا ہے۔",
+ "news": [
   "@BeyondTahir",
+  "@FaisalShabbir",
+  "@AsadAliTV",
+  "@bbcurdu|\\bAI\\b|اے آئی|مصنوعی ذہانت|ChatGPT|Gemini",
+  "@geonews|\\bAI\\b|ChatGPT|Gemini|OpenAI",
+  "@BBCHindi|\\bAI\\b|ChatGPT",
   "@mreflow",
-  "@TheAIGRID",
-  "@aiexplained-official",
   "@WesRoth",
+  "@aiexplained-official",
+  "@TheAIGRID",
   "@matthew_berman"
+ ],
+ "toolscape": [
+  "@JeffSu",
+  "@KevinStratvert",
+  "@futurepedia_io",
+  "@parkerprompts",
+  "@MeticsMedia",
+  "@iamAImaster",
+  "@nateherk",
+  "@Dankieft",
+  "@mreflow",
+  "@aiadvantage",
+  "@SkillLeapAI"
+ ],
+ "nawa": [
+  "@NoumanAliUrduLectures",
+  "@QuranIslamicSeries100",
+  "@LearnQuran-Urdu",
+  "@muhammadtasleemraza5497",
+  "@FARHATSPEAKS",
+  "@QuranDarsOBayanKiRoshni",
+  "@IslamTaqwaTauheed"
  ]
 }

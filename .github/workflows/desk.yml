@@ -1,0 +1,36 @@
+# روزنامچہ فاروقی — روز صبح 6 بجے (سعودی وقت) تینوں چینلوں کا مواد مرکز؛ اتوار کو نئے مقابل چینلوں کی تلاش
+name: Daily Desk
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+    inputs:
+      niches: { description: "news toolscape nawa (خالی = تینوں)", required: false, default: "" }
+permissions:
+  contents: write
+concurrency: desk
+jobs:
+  desk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install requests
+      - name: Build desk
+        env:
+          GEMINI_NEWS_KEY: ${{ secrets.GEMINI_NEWS_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python -m news.desk ${{ github.event.inputs.niches }}
+      - name: Weekly competitor discovery
+        if: always()
+        run: '[ "$(date -u +%u)" = "7" ] && python -m news.discover || true'
+      - name: Save
+        if: always()
+        run: |
+          git config user.name "news-bot"; git config user.email "news-bot@users.noreply.github.com"
+          git add -A desk state/hook_bank*.json state/competitor_ids.json state/discover.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "روزنامچہ $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase -X theirs && git push && exit 0; sleep 5; done

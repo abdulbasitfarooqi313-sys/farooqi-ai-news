@@ -1,9 +1,7 @@
-"""Competitor insight, hook bank and style guide — all free (official YouTube RSS feeds, no keys).
+"""مقابل چینل، ہک بینک اور انداز نامہ — سب مفت (یوٹیوب کی سرکاری RSS، کوئی چابی نہیں)۔
 
-1. Competitor glimpse: latest videos (title + views) of the channels listed in channel.json "competitors".
-2. Hook bank: every run adds those titles to data/hook_bank.json; the best performers are kept and fed
-   to the writer as proven patterns (never copied word for word).
-3. Style guide: style.md is read and given to the writer on every run.
+ہر «شعبہ» (news / toolscape / nawa) کے مقابل چینل news/competitors.json میں ہیں۔
+"@handle|regex" لکھیں تو اس چینل کی صرف وہ ویڈیوز لی جائیں گی جن کے عنوان میں regex ملے (مثلاً عام خبروں کے چینل سے صرف AI والی)۔
 """
 import datetime as dt
 import json
@@ -15,21 +13,7 @@ import requests
 
 from .base import ROOT
 
-MOCK = False
-
-
-def log(msg: str) -> None:
-    print(f"[insight] {msg}", flush=True)
-
-
-def load_channel() -> dict:
-    try:
-        return json.loads((ROOT / "news" / "competitors.json").read_text(encoding="utf-8"))
-    except Exception:
-        return {}
-
 DATA = ROOT / "state"
-BANK = DATA / "hook_bank.json"
 IDS = DATA / "competitor_ids.json"
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36",
       "Accept-Language": "en-US,en;q=0.9"}
@@ -37,11 +21,23 @@ NS = {"a": "http://www.w3.org/2005/Atom", "m": "http://search.yahoo.com/mrss/",
       "yt": "http://www.youtube.com/xml/schemas/2015"}
 
 
+def log(msg: str) -> None:
+    print(f"[insight] {msg}", flush=True)
+
+
 def _read(p: Path, default):
     try:
         return json.loads(p.read_text(encoding="utf-8"))
     except Exception:
         return default
+
+
+def competitors(niche: str) -> list:
+    return _read(ROOT / "news" / "competitors.json", {}).get(niche, [])
+
+
+def _bank_path(niche: str) -> Path:
+    return DATA / ("hook_bank.json" if niche == "news" else f"hook_bank_{niche}.json")
 
 
 def _channel_id(handle: str, cache: dict) -> str:
@@ -59,14 +55,12 @@ def _channel_id(handle: str, cache: dict) -> str:
     return cache[handle]
 
 
-def competitor_videos(max_age_days: int = 30) -> list:
-    """[{channel, title, views, date, url}] newest videos of the competitor channels."""
-    handles = load_channel().get("competitors", [])
-    if MOCK or not handles:
-        return []
+def competitor_videos(niche: str = "news", max_age_days: int = 30) -> list:
+    """[{channel, title, views, date, url}] مقابل چینلوں کی تازہ ویڈیوز"""
     cache = _read(IDS, {})
     out, cutoff = [], dt.datetime.utcnow() - dt.timedelta(days=max_age_days)
-    for h in handles:
+    for entry in competitors(niche):
+        h, _, pat = entry.partition("|")
         try:
             cid = _channel_id(h, cache)
             r = requests.get(f"https://www.youtube.com/feeds/videos.xml?channel_id={cid}", headers=UA, timeout=25)
@@ -76,47 +70,51 @@ def competitor_videos(max_age_days: int = 30) -> list:
             n = 0
             for e in root.findall("a:entry", NS):
                 date = dt.datetime.fromisoformat(e.findtext("a:published", "", NS)[:19])
-                if date < cutoff:
+                title = e.findtext("a:title", "", NS)
+                if date < cutoff or (pat and not re.search(pat, title, re.I)):
                     continue
                 st = e.find("m:group/m:community/m:statistics", NS)
-                out.append({"channel": name, "title": e.findtext("a:title", "", NS),
+                out.append({"channel": name, "title": title,
                             "views": int(st.get("views", 0)) if st is not None else 0,
                             "date": f"{date:%Y-%m-%d}",
                             "url": f"https://youtu.be/{e.findtext('yt:videoId', '', NS)}"})
                 n += 1
-            log(f"insight: {n} recent videos from {name}")
-        except Exception as e:  # one bad handle must never stop the video
-            log(f"insight: skipped competitor {h} ({e})")
+            log(f"{niche}: {n} videos from {name}")
+        except Exception as e:  # ایک خراب چینل سے کام نہ رکے
+            log(f"{niche}: skipped {h} ({e})")
     DATA.mkdir(exist_ok=True)
     IDS.write_text(json.dumps(cache, indent=1), encoding="utf-8")
     return out
 
 
-def update_bank(videos: list, keep: int = 300) -> list:
-    bank = {v["url"]: v for v in _read(BANK, [])}
-    for v in videos:  # newer stats replace older ones
+def update_bank(niche: str, videos: list, keep: int = 300) -> list:
+    p = _bank_path(niche)
+    bank = {v["url"]: v for v in _read(p, [])}
+    for v in videos:
         bank[v["url"]] = v
     items = sorted(bank.values(), key=lambda v: -v.get("views", 0))[:keep]
     DATA.mkdir(exist_ok=True)
-    BANK.write_text(json.dumps(items, indent=1, ensure_ascii=False), encoding="utf-8")
+    p.write_text(json.dumps(items, indent=1, ensure_ascii=False), encoding="utf-8")
     return items
 
 
-def style_guide() -> str:
-    p = ROOT / "news" / "style.md"
+def style_guide(niche: str = "news") -> str:
+    p = ROOT / "news" / ("style.md" if niche == "news" else f"style_{niche}.md")
     return p.read_text(encoding="utf-8").strip() if p.exists() else ""
 
 
-def brief(n_recent: int = 40, n_bank: int = 25) -> str:
-    """Text block for the writer prompt."""
-    recent = competitor_videos()
-    bank = update_bank(recent)
-    recent = sorted(recent, key=lambda v: -v["views"])[:n_recent]
+def gather(niche: str = "news") -> tuple[list, list]:
+    recent = competitor_videos(niche)
+    return sorted(recent, key=lambda v: -v["views"]), update_bank(niche, recent)
+
+
+def brief(niche: str = "news", n_recent: int = 40, n_bank: int = 25, data: tuple | None = None) -> str:
+    recent, bank = data or gather(niche)
     if not recent and not bank:
         return "(competitor data unavailable today — rely on the style guide)"
     fmt = lambda v: f"- [{v['channel']}] \"{v['title']}\" — {v['views']:,} views ({v['date']})"
-    return ("COMPETITORS' LATEST VIDEOS (last 30 days, most viewed first):\n" + "\n".join(map(fmt, recent))
-            + "\n\nHOOK BANK (best performing titles we have collected so far — learn the PATTERN, never copy):\n"
+    return ("COMPETITORS' LATEST VIDEOS (last 30 days, most viewed first):\n" + "\n".join(map(fmt, recent[:n_recent]))
+            + "\n\nHOOK BANK (best performing titles collected so far — learn the PATTERN, never copy):\n"
             + "\n".join(map(fmt, bank[:n_bank])))
 
 
