@@ -88,6 +88,29 @@ html,body{width:1920px;height:1080px;overflow:clip;background:#050b33}
 #side .lg2 .ini{font:800 60px Arial;color:#0a1550}
 #side .hd{position:absolute;left:30px;right:30px;top:420px;direction:rtl;text-align:right;font-family:NQ;font-size:52px;line-height:1.5;color:#fff}
 #side .lbl{position:absolute;right:30px;top:360px;font-family:NQ;font-size:28px;color:#0a1550;background:linear-gradient(180deg,#ffe39a,#d4a53d);padding:0 18px 8px;border-radius:8px}
+
+#pkg{position:absolute;inset:0;opacity:0;overflow:hidden;background:#050b33}
+#pkg .psc{position:absolute;inset:0;opacity:.5;filter:blur(2px)}
+#pkg .pshade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,11,51,.35),rgba(5,11,51,.75) 55%,rgba(5,11,51,.92))}
+#pkg .pwin{direction:ltr;position:absolute;left:70px;top:150px;width:1080px;height:680px;border-radius:16px;overflow:hidden;background:#0b1030;border:3px solid #e2b84f;
+ box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 6px rgba(95,180,255,.18)}
+#pkg .pbar{height:46px;display:flex;align-items:center;gap:9px;padding:0 16px;background:linear-gradient(180deg,#151C44,#10163A)}
+#pkg .pbar i{width:12px;height:12px;border-radius:50%;display:block}
+#pkg .purl{margin-left:14px;flex:1;height:30px;border-radius:8px;background:#0A0F2C;display:flex;align-items:center;padding:0 14px;font:500 18px monospace;color:#C7D2FE;direction:ltr}
+#pkg .pvp{position:absolute;left:0;right:0;top:46px;bottom:0;overflow:hidden;background:#fff}
+#pkg .pvp img{position:absolute;left:0;top:0;width:100%;transform-origin:30% 20%}
+#pkg .pvp .big{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 40%,#1f46b8,#060d3c)}
+#pkg .pvp .big img{position:static;width:300px;height:300px;object-fit:contain;background:#fff;border-radius:40px;padding:30px;box-shadow:0 0 0 6px #e2b84f}
+#pkg .ppts{position:absolute;left:1190px;top:150px;width:670px;height:680px;border-radius:16px;padding:30px 34px;direction:rtl;
+ background:linear-gradient(180deg,rgba(13,29,110,.95),rgba(6,13,60,.95));border:3px solid #e2b84f;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+#pkg .ppts h4{margin:0 0 18px;font-family:NQ;font-weight:normal;font-size:44px;color:#f0cf6a}
+#pkg .pt{display:flex;gap:16px;align-items:flex-start;font-family:NQ;font-size:40px;line-height:1.55;color:#fff;margin-bottom:18px;opacity:0}
+#pkg .pt b{flex:none;width:44px;height:44px;margin-top:10px;border-radius:50%;background:linear-gradient(180deg,#ffe39a,#d4a53d);color:#0a1550;
+ display:flex;align-items:center;justify-content:center;font:700 24px Arial}
+#pkg .psrc{position:absolute;left:70px;top:850px;display:flex;border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.45)}
+#pkg .psrc .k{font-family:NQ;font-size:30px;color:#0a1550;background:linear-gradient(180deg,#ffe39a,#d4a53d);padding:2px 18px 8px}
+#pkg .psrc .v{font:600 26px Arial;color:#fff;background:rgba(8,18,69,.92);padding:8px 20px}
+#pkg .ptitle{position:absolute;right:60px;top:50px;left:60px;direction:rtl;text-align:right;font-family:NQ;font-size:50px;color:#fff;text-shadow:0 3px 0 #0a1550;white-space:nowrap;overflow:hidden}
 </style></head><body><div id="root">
 <svg id="circ" width="1920" height="1080"><g stroke="#3d7dff" stroke-width="2" fill="none">
  <path d="M0 140 H160 L200 180 H360"/><path d="M1920 960 H1700 L1660 920 H1500"/><path d="M0 980 H220 L260 940 H420"/>
@@ -113,6 +136,10 @@ html,body{width:1920px;height:1080px;overflow:clip;background:#050b33}
 <div class="ticker"><div class="tk-label">شہ سرخیاں</div><div class="tk-time" id="clock" style="font-family:NQ;font-size:30px;font-weight:normal;direction:rtl;width:230px">__DATE__</div><div class="tk-text" id="tk">__TICKER__</div></div>
 <div id="side"><div class="sc" id="ssc"></div><div class="lg2" id="slg"></div><div class="lbl">تفصیل</div><div class="hd" id="shd"></div></div>
 <div id="wipe"></div><div id="wtag"></div></div>
+<div id="pwrap" style="position:absolute;inset:0;overflow:hidden;pointer-events:none"><div id="pkg"><div class="psc" id="psc"></div><div class="pshade"></div><div class="ptitle" id="pti"></div>
+<div class="pwin"><div class="pbar"><i style="background:#FF5F57"></i><i style="background:#FEBC2E"></i><i style="background:#28C840"></i><div class="purl" id="purl"></div></div><div class="pvp" id="pvp"></div></div>
+<div class="ppts"><h4>اہم نکات</h4><div id="ppl"></div></div>
+<div class="psrc"><div class="k">ماخذ</div><div class="v" id="psv"></div></div></div></div>
 <div id="hwrap" style="position:absolute;inset:0;overflow:hidden;pointer-events:none"><div id="hcard"><div class="bgsc" id="hsc"></div><div class="shade"></div><div class="lab">شہ سرخی</div><div class="bar" id="hbar"></div><div class="txt" id="htx"></div>
 <div class="lg" id="hlg"></div><div class="co" id="hco"></div></div></div>
 <script>__SCENESJS__</script>
@@ -143,6 +170,16 @@ window.render=function(t){
  if(si>=0){const s=NF.stories[si];nfAnimate($('scene'),t-s.t0);const lo=ez((t-s.t0-0.3)/0.6)*(1-ez((t-(s.t1-0.5))/0.5))*(1-seg(t,NF.side||[[0,0]]));$('lower').style.opacity=lo.toFixed(3);
   $('lower').style.transform=`translateY(${(30*(1-lo)).toFixed(1)}px)`;}else{$('lower').style.opacity=0;}
  let wo=0,wx=-2400,wl='';NF.wipes.forEach((w,i)=>{const d=t-w[0];if(d>=0&&d<1.4){wx=-2400+(1920+2400)*(d/1.4);wo=Math.sin(Math.PI*Math.min(1,d/1.4));wl=w[1];}});
+ const pv=seg(t,NF.pk||[[0,0]]);let pc=null;(NF.pkgs||[]).forEach(q=>{if(t>=q.t0&&t<q.t1)pc=q;});
+ if(pc&&pc.i!==window._pci){window._pci=pc.i;const c=NF.cards[pc.i];$('pti').textContent=c.h;$('psc').innerHTML=nfScene(c.topic);
+  $('purl').textContent=c.url?('https://'+c.url):'';$('psv').textContent=c.src||c.co||'';
+  $('pvp').innerHTML=c.shot?`<img src="${c.shot}">`:(c.logo?`<div class="big"><img src="${c.logo}"></div>`:`<div class="big"></div>`);
+  if(!c.shot&&!c.logo)$('pvp').querySelector('.big').innerHTML=nfScene(c.topic);
+  $('ppl').innerHTML=(c.pts||[]).map((x,j)=>`<div class="pt"><b>${j+1}</b><span>${x}</span></div>`).join('');}
+ if(pc){const lt=t-pc.t0,L=pc.t1-pc.t0;nfAnimate($('psc'),lt);const im=$('pvp').querySelector('img');
+  if(im&&!im.parentElement.classList.contains('big'))im.style.transform=`scale(${(1.02+0.12*lt/L).toFixed(4)}) translateY(${(-40*lt/L).toFixed(1)}px)`;
+  $('ppl').querySelectorAll('.pt').forEach((e,j)=>{const at=0.12+j*0.25;const v=Math.min(1,Math.max(0,(lt/L-at)/0.06));e.style.opacity=v;e.style.transform=`translateX(${(40*(1-v)).toFixed(1)}px)`});}
+ $('pkg').style.opacity=pv.toFixed(3);$('pkg').style.transform=`scale(${(1.05-0.05*pv).toFixed(4)})`;
  const hv=seg(t,NF.hl||[[0,0]]);let hc=null;(NF.hcards||[]).forEach(c=>{if(t>=c.t0-0.6&&t<c.t1+0.6)hc=c;});
  if(hc&&hc.i!==window._hci){window._hci=hc.i;const c=NF.cards[hc.i];$('htx').textContent=c.h;$('hsc').innerHTML=nfScene(c.topic);
   $('hlg').innerHTML=c.logo?`<img src="${c.logo}">`:`<span class="ini">${(c.co||'AI').slice(0,2)}</span>`;$('hco').textContent=c.co||'';$('hh').textContent=c.h;}

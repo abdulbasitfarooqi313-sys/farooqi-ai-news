@@ -127,7 +127,7 @@ SCRIPT_SYSTEM = """آپ «فاروقی اے آئی نیوز» کے سینئر ا
 ۱) آغاز: «السلام علیکم! فاروقی اے آئی نیوز میں خوش آمدید، میں ہوں آپ کی میزبان سمیرہ۔ … آئیے پہلے نظر ڈالتے ہیں آج کی شہ سرخیوں پر۔»
 ۲) شہ سرخیاں: ہر خبر کی صرف سرخی، ایک جملہ، 8 تا 14 الفاظ، خبر کے انداز میں (مثلاً «انتھروپک نے اپنا نیا اور طاقتور ماڈل متعارف کروا دیا»)۔ تفصیل نہیں۔
 ۳) «اب چلتے ہیں خبروں کی تفصیل کی طرف» جیسا ایک جملہ۔
-۴) تفصیل: ہر خبر کی تفصیل میزبان خود پڑھے — ماخذ کے حوالے سے («ٹیک کرنچ کے مطابق…»)، کیا ہوا، کس نے کیا، کیوں اہم ہے — پھر میزبان کا مختصر، متوازن تبصرہ (عام آدمی کے لیے اس کا مطلب)۔
+۴) تفصیل (بڑے ٹی وی چینلوں کا انداز): ہر خبر میں (الف) میزبان کیمرے پر مختصر تمہید پڑھے، (ب) پھر «پیکیج» — اسکرین پر خبر کے مناظر اور اہم نکات، اور پسِ منظر میں میزبان کی آواز میں ماخذ کے حوالے سے تفصیل («ٹیک کرنچ کی رپورٹ کے مطابق…»)، (ج) آخر میں میزبان کیمرے پر مختصر، متوازن تبصرہ۔ زبان غیر جانبدار، سنجیدہ اور پراعتماد؛ «ناظرین» سے خطاب؛ سنسنی نہیں۔
 ۵) نامہ نگار: صرف 1 یا 2 سب سے اہم خبروں میں (ہر خبر میں ہرگز نہیں)۔ وہاں میزبان تفصیل کے بعد کہے «مزید جاننے کے لیے رابطہ کرتے ہیں ہمارے ورچوئل نامہ نگار زید سے… زید، …؟» اور ایک واضح سوال پوچھے؛ نامہ نگار جواب/رپورٹ دے؛ پھر میزبان مختصر شکریہ کہہ کر آگے بڑھے۔
 
 صرف JSON:
@@ -140,7 +140,9 @@ SCRIPT_SYSTEM = """آپ «فاروقی اے آئی نیوز» کے سینئر ا
     "domain": "اس کمپنی کی سرکاری ویب سائٹ کا ڈومین، مثلاً anthropic.com (یقین نہ ہو تو خالی)",
     "topic": "ان میں سے ایک: ai, robot, chip, phone, health, car, space, finance, security, education, law, data, media",
     "location": "خبر کا مقام اردو میں «شہر، ملک» (معلوم نہ ہو تو کمپنی کا صدر مقام؛ ورنہ «عالمی»)",
-    "detail": "میزبان کی تفصیل، 55 تا 80 الفاظ، ماخذ کے نام کے ساتھ",
+    "lead": "کیمرے پر میزبان کی تمہید، 15 تا 25 الفاظ (خبر کا خلاصہ ایک دو جملوں میں)",
+    "vo": "پیکیج کی آواز (پسِ منظر)، 45 تا 65 الفاظ: ماخذ کے نام سے شروع، کیا ہوا، کس نے کیا، تفصیل",
+    "points": ["اسکرین پر اہم نکات: 2 تا 3، ہر ایک 4 تا 9 الفاظ، صرف ماخذ کے حقائق"],
     "comment": "میزبان کا مختصر تبصرہ، 20 تا 35 الفاظ",
     "reporter": null یا (صرف 1-2 خبروں میں) {"handoff": "میزبان: نامہ نگار کو لینے کا جملہ + سوال، 20 تا 35 الفاظ",
                                              "report": "نامہ نگار زید کی رپورٹ، 50 تا 70 الفاظ، «شکریہ سمیرہ…» سے شروع (عام آدمی کے لیے اہمیت، آگے کیا ہوگا)",
@@ -163,7 +165,11 @@ def script(items: list[dict], feedback: str | None = None) -> dict:
     if feedback:
         user += f"\n\nمالک کی ہدایت (اس کا خاص خیال رکھیں): {feedback}"
     d = generate_json(SCRIPT_SYSTEM, user)
-    st = [s for s in d.get("stories", []) if s.get("headline") and s.get("detail")][:5]
+    for s in d.get("stories", []):                     # پرانی شکل کا جواب آئے تو بھی چلے
+        if not s.get("lead") and s.get("detail"):
+            parts = re.split(r"(?<=۔)\s+", s["detail"].strip(), maxsplit=1)
+            s["lead"], s["vo"] = parts[0], (parts[1] if len(parts) > 1 else "")
+    st = [s for s in d.get("stories", []) if s.get("headline") and s.get("lead")][:5]
     if len(st) < 3:
         raise RuntimeError("اسکرپٹ میں کافی خبریں نہیں")
     nrep = 0
@@ -172,6 +178,7 @@ def script(items: list[dict], feedback: str | None = None) -> dict:
             s["topic"] = "ai"
         s["location"] = s.get("location") or "عالمی"
         s["screen"] = s.get("screen") or s["headline"]
+        s["points"] = [x for x in (s.get("points") or []) if isinstance(x, str) and x.strip()][:3]
         r = s.get("reporter")
         if not (isinstance(r, dict) and r.get("handoff") and r.get("report")) or nrep >= 2:
             s["reporter"] = None
@@ -247,7 +254,7 @@ def _speak(texts: list[str], voice: str, tmp: Path, tag: str) -> list[Path]:
         """ٹکڑوں کا گروپ ایک کال میں؛ نہ بنے تو آدھا آدھا کر کے"""
         if len(ts) == 1:
             return [must(ts[0], tmp / f"{tg_}_one.wav")]
-        if len(ts) > 3:                        # لمبے متن پر Gemini اکثر خالی (finishReason OTHER) لوٹاتا ہے
+        if len(ts) > 5:                        # لمبے متن پر Gemini اکثر خالی (finishReason OTHER) لوٹاتا ہے
             h = (len(ts) + 1) // 2
             return group(ts[:h], tg_ + "a") + group(ts[h:], tg_ + "b")
         whole = one("\n\n".join(t.strip() for t in ts), tmp / f"{tg_}_all.wav")
@@ -320,13 +327,18 @@ def _edge(texts: list[str], voice: str, tmp: Path, tag: str) -> list[Path]:
 
 
 def _anchor_texts(d: dict) -> list[str]:
+    """ترتیب build_audio کے ساتھ بالکل یکساں ہونی چاہیے"""
     sts = d["stories"]
     t = [d["opening"]] + [s["headline"] for s in sts] + [d["to_details"]]
     for s in sts:
-        t.append(s["detail"].strip() + "\n\n" + (s.get("comment") or "").strip() if not s["reporter"] else
-                 s["detail"].strip() + " " + s["reporter"]["handoff"].strip())
+        t.append(s["lead"].strip())
+        if (s.get("vo") or "").strip():
+            t.append(s["vo"].strip())
         if s["reporter"]:
+            t.append(s["reporter"]["handoff"].strip())
             t.append(((s["reporter"].get("thanks") or "").strip() + " " + (s.get("comment") or "")).strip())
+        elif (s.get("comment") or "").strip():
+            t.append(s["comment"].strip())
     return t
 
 
@@ -359,6 +371,43 @@ def _logo(domain: str, tmp: Path, i: int) -> str | None:
         except Exception:
             pass
     return None
+
+
+def _site_shots(d: dict, tmp: Path) -> None:
+    """ہر خبر کی کمپنی کی سرکاری ویب سائٹ کا اوپر والا حصہ (پیکیج کے مناظر کے لیے) — نہ ملے تو منظر/لوگو"""
+    doms = [(i, (s.get("domain") or "").strip().lower()) for i, s in enumerate(d["stories"])]
+    doms = [(i, x) for i, x in doms if re.match(r"^[a-z0-9.-]+\.[a-z]{2,}$", x)]
+    if not doms:
+        return
+    try:
+        from playwright.sync_api import sync_playwright
+        with sync_playwright() as pw:
+            br = _launch(pw)
+            ctx = br.new_context(viewport={"width": 1440, "height": 900}, locale="en-US",
+                                 user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36")
+            for i, dom in doms:
+                pg = ctx.new_page()
+                try:
+                    pg.goto(f"https://{dom}", wait_until="domcontentloaded", timeout=40000)
+                    pg.wait_for_timeout(3500)
+                    for lab in ("Accept all", "Accept All", "Accept", "I agree", "Agree", "Got it"):
+                        try:
+                            pg.get_by_role("button", name=lab, exact=True).first.click(timeout=700)
+                            break
+                        except Exception:
+                            pass
+                    pg.add_style_tag(content="[id*=cookie i],[class*=cookie i],[id*=consent i],[class*=consent i],[id*=onetrust i]{display:none!important}")
+                    pg.wait_for_timeout(600)
+                    f = tmp / f"site{i}.jpg"
+                    pg.screenshot(path=str(f), type="jpeg", quality=72)
+                    d["stories"][i]["_shot"] = _b64(f, "image/jpeg")
+                except Exception as e:
+                    print(f"   ویب سائٹ کی تصویر نہ ملی {dom}: {str(e)[:80]}")
+                finally:
+                    pg.close()
+            br.close()
+    except Exception as e:
+        print(f"   ویب سائٹ کی تصاویر نہ بن سکیں: {e}")
 
 
 def build_audio(d: dict, tmp: Path) -> tuple[Path, dict]:
@@ -400,8 +449,10 @@ def build_audio(d: dict, tmp: Path) -> tuple[Path, dict]:
         tl["hl"] += [[round(v0 + 0.2, 2), 0], [round(v0 + 0.9, 2), 1], [round(a1 + 0.05, 2), 1], [round(a1 + 0.5, 2), 0]]
     gap(0.4, "td")
     add(anc[k], "anchor"); k += 1
-    # تفصیل
+    tl["hbed"] = [round(tl["hcards"][0]["t0"] - 0.5, 2), round(t, 2)]
+    # تفصیل: کیمرے پر تمہید → پیکیج (پوری اسکرین مناظر + اہم نکات، پسِ منظر میں آواز) → [نامہ نگار] → تبصرہ
     r = 0
+    tl["pk"], tl["pkgs"] = [[0, 0]], []
     for i, s in enumerate(sts):
         gap(0.3, f"d{i}")
         w0, _ = add(sting, "sting")
@@ -410,20 +461,31 @@ def build_audio(d: dict, tmp: Path) -> tuple[Path, dict]:
         tl["zoom"] += [[round(w0 + 0.6, 2), 0], [round(w0 + 1.6, 2), 1]]
         tl["side"] += [[round(w0 + 0.8, 2), 0], [round(w0 + 1.6, 2), 1]]
         end = a1
+        if (s.get("vo") or "").strip():
+            gap(0.35, f"v{i}")
+            v0, v1 = add(anc[k], "vo"); k += 1
+            tl["pk"] += [[round(v0 - 0.35, 2), 0], [round(v0 + 0.35, 2), 1], [round(v1 + 0.1, 2), 1], [round(v1 + 0.7, 2), 0]]
+            tl["pkgs"].append({"t0": round(v0 - 0.35, 2), "t1": round(v1 + 0.7, 2), "i": i})
+            end = v1
         if s["reporter"]:
-            gap(0.5, f"r{i}")
+            gap(0.5, f"h{i}x")
+            c0, c1 = add(anc[k], "anchor"); k += 1          # نامہ نگار کو لینا
+            gap(0.4, f"r{i}")
             r0, r1 = add(rep[r], "reporter"); r += 1
             gap(0.4, f"r{i}b")
-            b0, b1 = add(anc[k], "anchor"); k += 1
-            tl["side"] += [[round(a1 - 0.3, 2), 1], [round(a1 + 0.2, 2), 0], [round(r1 + 0.4, 2), 0], [round(r1 + 1.0, 2), 1]]
-            tl["split"] += [[round(a1 - 0.2, 2), 0], [round(r0 + 0.4, 2), 1], [round(r1 + 0.1, 2), 1], [round(r1 + 0.9, 2), 0]]
+            b0, b1 = add(anc[k], "anchor"); k += 1          # شکریہ + تبصرہ
+            tl["side"] += [[round(c1 - 0.3, 2), 1], [round(c1 + 0.2, 2), 0], [round(r1 + 0.4, 2), 0], [round(r1 + 1.0, 2), 1]]
+            tl["split"] += [[round(c1 - 0.2, 2), 0], [round(r0 + 0.4, 2), 1], [round(r1 + 0.1, 2), 1], [round(r1 + 0.9, 2), 0]]
             end = b1
+        elif (s.get("comment") or "").strip():
+            gap(0.4, f"c{i}")
+            c0, end = add(anc[k], "anchor"); k += 1
         tl["zoom"] += [[round(end + 0.1, 2), 1], [round(end + 0.9, 2), 0]]
         tl["side"] += [[round(end + 0.1, 2), 1], [round(end + 0.6, 2), 0]]
         tl["stories"].append({"t0": round(w0, 2), "t1": round(end + 0.3, 2), "n": "", "h": s["screen"], "topic": s["topic"],
                               "loc": s["location"], "co": s.get("company") or "", "logo": s.get("_logo")})
     gap(1.2, "end")
-    for key in ("split", "hl", "side", "zoom"):
+    for key in ("split", "hl", "side", "zoom", "pk"):
         tl[key] = sorted(tl[key], key=lambda x: x[0])
     lst = tmp / "body.txt"
     lst.write_text("".join(f"file '{p}'\n" for p in parts))
@@ -431,11 +493,17 @@ def build_audio(d: dict, tmp: Path) -> tuple[Path, dict]:
     _ff("-f", "concat", "-safe", "0", "-i", str(lst), "-c:a", "pcm_s16le", str(voice))
     tl["dur"] = round(_dur(voice), 2)
     tl["energy"] = _energy(voice, int(tl["dur"] * FPS) + 2, tl["anchor"])
-    tl["cards"] = [{"h": s["screen"], "topic": s["topic"], "co": s.get("company") or "", "logo": s.get("_logo"), "loc": s["location"]} for s in sts]
+    tl["cards"] = [{"h": s["screen"], "topic": s["topic"], "co": s.get("company") or "", "logo": s.get("_logo"), "loc": s["location"],
+                    "pts": s.get("points") or [], "src": s.get("source") or "", "shot": s.get("_shot"),
+                    "url": (s.get("domain") or "").strip().lower()} for s in sts]
     mixed = tmp / "body_audio.wav"
-    _ff("-i", str(voice), "-stream_loop", "-1", "-i", str(A / "bed.m4a"), "-filter_complex",
+    h0, h1 = tl["hbed"]
+    hl_len = max(1.0, h1 - h0)
+    _ff("-i", str(voice), "-stream_loop", "-1", "-i", str(A / "bed.m4a"), "-stream_loop", "-1", "-i", str(A / "hbed.wav"), "-filter_complex",
         f"[1]volume=0.06,afade=t=in:d=1.5,afade=t=out:st={tl['dur'] - 1.5:.2f}:d=1.5[b];"
-        f"[0][b]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-16:TP=-1.5[a]",
+        f"[2]atrim=0:{hl_len:.2f},asetpts=PTS-STARTPTS,volume=0.32,afade=t=in:d=0.6,afade=t=out:st={max(0.1, hl_len - 1.2):.2f}:d=1.2,"
+        f"adelay={int(h0 * 1000)}|{int(h0 * 1000)},apad[h];"
+        f"[0][b][h]amix=inputs=3:duration=first:normalize=0,loudnorm=I=-16:TP=-1.5[a]",
         "-map", "[a]", "-t", f"{tl['dur']:.2f}", "-ar", "44100", "-ac", "2", "-c:a", "pcm_s16le", str(mixed))
     return mixed, tl
 
@@ -449,7 +517,7 @@ def _b64(p: Path, mime: str) -> str:
 def page(d: dict, tl: dict) -> str:
     html = (A / "newsroom.html").read_text(encoding="utf-8")
     tick = " <b>◆</b> ".join(_h.escape(x) for x in (d.get("ticker") or [s["headline"] for s in d["stories"]]))
-    data = {k: tl[k] for k in ("split", "hl", "side", "zoom", "hcards", "cards", "stories", "wipes", "dur", "energy")}
+    data = {k: tl[k] for k in ("split", "hl", "side", "zoom", "pk", "pkgs", "hcards", "cards", "stories", "wipes", "dur", "energy")}
     rep = {"__LOGO__": _b64(A / "logo_round.png", "image/png"), "__NQFONT__": FONT.as_uri(),
            "__ABG__": _b64(A / "anchor_bg.jpg", "image/jpeg"), "__AFG__": _b64(A / "anchor_fg.png", "image/png"),
            "__ABLINK__": _b64(A / "anchor_blink.png", "image/png"), "__IMGB__": _b64(A / "reporter.jpg", "image/jpeg"),
@@ -630,6 +698,7 @@ def make(feedback: str | None = None) -> None:
         tmp = Path(td)
         for i, s_ in enumerate(d["stories"]):
             s_["_logo"] = _logo(s_.get("domain") or "", tmp, i)
+        _site_shots(d, tmp)
         audio, tl = build_audio(d, tmp)
         print(f"درمیانی حصہ: {tl['dur']:.1f}s")
         body = render_body(d, tl, audio, tmp / "body.mp4", tmp)
