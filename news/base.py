@@ -18,11 +18,13 @@ FALLBACKS = ["gemini-3.6-flash", "gemini-3.5-flash-lite", "gemini-2.5-flash"]
 
 
 def gemini_key() -> str:
-    return os.environ.get("GEMINI_NEWS_KEY") or os.environ["GEMINI_API_KEY"]
+    """پرانے نظام کی اپنی چابی (اس ریپوزٹری کا GEMINI_API_KEY) — مالک کی ہدایت"""
+    return os.environ.get("GEMINI_API_KEY") or os.environ["GEMINI_NEWS_KEY"]
 
 
 def bot_token() -> str:
-    return os.environ.get("NEWS_BOT_TOKEN") or os.environ["TELEGRAM_BOT_TOKEN"]
+    """پرانا بوٹ (اس ریپوزٹری کا TELEGRAM_BOT_TOKEN)"""
+    return os.environ.get("TELEGRAM_BOT_TOKEN") or os.environ["NEWS_BOT_TOKEN"]
 
 
 def read_json(p: Path):

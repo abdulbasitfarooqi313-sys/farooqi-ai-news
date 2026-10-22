@@ -720,7 +720,33 @@ def poll() -> None:
             f.write("bulletin.yml\n")
 
 
+def check() -> None:
+    """جوڑ کی جانچ: بوٹ کون سا ہے، جیمنائی (متن + آواز) چلتا ہے یا نہیں → state/check.json"""
+    import time
+    from .base import tg_call, generate
+    out = {"time": time.strftime("%Y-%m-%d %H:%M", time.gmtime(time.time() + 3 * 3600))}
+    try:
+        me = tg_call("getMe")
+        out["bot"] = "@" + me.get("username", "")
+    except Exception as e:
+        out["bot"] = f"خرابی: {str(e)[:150]}"
+    out["chat"] = "ہے" if news_chat() else "نہیں"
+    try:
+        out["gemini_text"] = "ٹھیک" if generate("Reply with OK only.", "OK?").strip() else "خالی"
+    except Exception as e:
+        out["gemini_text"] = f"خرابی: {str(e)[:150]}"
+    r = requests.post("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent",
+                      params={"key": gemini_key()}, timeout=120, json={"contents": [{"parts": [{"text": "سلام"}]}],
+                      "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": "Kore"}}}}})
+    out["gemini_voice"] = "ٹھیک" if r.ok and "inlineData" in r.text else f"{r.status_code}: {r.text[:200]}"
+    write_json(ROOT / "state" / "check.json", out)
+    print(out)
+
+
 if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "check":
+        check()
+        sys.exit(0)
     if len(sys.argv) > 1 and sys.argv[1] == "poll":
         poll()
         sys.exit(0)
