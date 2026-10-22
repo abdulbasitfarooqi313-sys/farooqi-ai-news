@@ -250,23 +250,91 @@ def _speak(texts: list[str], voice: str, tmp: Path, tag: str) -> list[Path]:
             raise RuntimeError("آواز (Gemini TTS) نہیں بن سکی")
         return p
 
+    import hashlib
+    import shutil as _sh
+    CACHE = ROOT / "cache" / "tts" / _today()            # صرف آج کی محفوظ آوازیں؛ پرانے دن حذف
+    if CACHE.parent.exists():
+        for old in CACHE.parent.iterdir():
+            if old.name != _today():
+                _sh.rmtree(old, ignore_errors=True)
+    CACHE.mkdir(parents=True, exist_ok=True)
+
+    def ckey(t: str) -> Path:
+        return CACHE / (hashlib.sha1((voice + "|" + t.strip()).encode()).hexdigest()[:20] + ".m4a")
+
+    def save(t: str, wav: Path) -> None:               # کامیاب آواز محفوظ — اگلی کوشش میں دوبارہ کوٹہ خرچ نہ ہو
+        try:
+            _ff("-i", str(wav), "-ac", "1", "-c:a", "aac", "-b:a", "96k", str(ckey(t)))
+        except Exception:
+            pass
+
+    def cached(t: str, dest: Path) -> Path | None:
+        f = ckey(t)
+        if f.exists():
+            _ff("-i", str(f), "-ar", "44100", "-ac", "2", "-c:a", "pcm_s16le", str(dest))
+            return dest
+        return None
+
+    def rough_cut(wav: Path, ts: list[str], tg_: str) -> list[Path]:
+        """وقفوں سے کاٹنا ممکن نہ ہو تو متن کی لمبائی کے تناسب سے، قریب ترین خاموشی پر — دوبارہ آواز نہیں بنواتے"""
+        from .base import _silences, _cut
+        total = _dur(wav)
+        sil = [(a + b) / 2 for a, b in _silences(wav)]
+        w = [len(t) + 12 for t in ts]
+        cuts, acc, prev = [], 0, 0.0
+        for x in w[:-1]:
+            acc += x
+            est = total * acc / sum(w)
+            near = min(sil, key=lambda c: abs(c - est)) if sil else est
+            pick = near if abs(near - est) < 2.5 and near > prev + 0.5 else est
+            cuts.append(pick)
+            prev = pick
+        LOG.append(f"آواز تناسب سے کاٹی گئی ({len(ts)} حصے)")
+        return _cut(wav, cuts, total, len(ts), tmp, tg_)
+
     def group(ts: list[str], tg_: str) -> list[Path]:
         """ٹکڑوں کا گروپ ایک کال میں؛ نہ بنے تو آدھا آدھا کر کے"""
         if len(ts) == 1:
-            return [must(ts[0], tmp / f"{tg_}_one.wav")]
-        if len(ts) > 5:                        # لمبے متن پر Gemini اکثر خالی (finishReason OTHER) لوٹاتا ہے
+            p = must(ts[0], tmp / f"{tg_}_one.wav")
+            save(ts[0], p)
+            return [p]
+        if len(ts) > 6 or sum(len(t) for t in ts) > 1800:     # لمبے متن پر Gemini اکثر خالی لوٹاتا ہے
             h = (len(ts) + 1) // 2
             return group(ts[:h], tg_ + "a") + group(ts[h:], tg_ + "b")
         whole = one("\n\n".join(t.strip() for t in ts), tmp / f"{tg_}_all.wav")
         if whole:
             try:
-                return _split(whole, ts, tmp, tg_)
+                parts = _split(whole, ts, tmp, tg_)
             except SplitError as e:
-                print(f"   {e} — آدھا آدھا")
+                print(f"   {e} — تناسب سے")
+                parts = rough_cut(whole, ts, tg_)
+            for t, p in zip(ts, parts):
+                save(t, p)
+            return parts
         h = len(ts) // 2
         return group(ts[:h], tg_ + "a") + group(ts[h:], tg_ + "b")
 
-    return group(texts, tag)
+    out: list = [None] * len(texts)
+    todo = []
+    for i, t in enumerate(texts):
+        out[i] = cached(t, tmp / f"{tag}_c{i}.wav")
+        if out[i] is None:
+            todo.append(i)
+    if todo:
+        LOG.append(f"{voice}: {len(texts) - len(todo)} حصے محفوظ شدہ، {len(todo)} نئے")
+        # لگاتار حصوں کے گروپ (تاکہ پیراگراف کا بہاؤ قائم رہے)
+        runs, cur = [], [todo[0]]
+        for i in todo[1:]:
+            if i == cur[-1] + 1:
+                cur.append(i)
+            else:
+                runs.append(cur)
+                cur = [i]
+        runs.append(cur)
+        for j, rr in enumerate(runs):
+            for i, p in zip(rr, group([texts[i] for i in rr], f"{tag}{j}")):
+                out[i] = p
+    return out
 
 
 def _trim(src: Path, dst: Path) -> Path:
@@ -693,7 +761,16 @@ def make(feedback: str | None = None) -> None:
     st = read_json(STATE) if STATE.exists() else {}
     used = set(st.get("used_titles", []))
     fresh = [i for i in items if re.sub(r"\W+", "", i["title"].lower())[:60] not in used] or items
-    d = script(fresh, feedback)
+    for old in (ROOT / "state").glob("script_*.json"):
+        if old.name != f"script_{_today()}.json":
+            old.unlink()
+    sf = ROOT / "state" / f"script_{_today()}.json"
+    if sf.exists() and not feedback:                    # اسی دن کی دوسری کوشش: وہی اسکرپٹ — محفوظ آواز کام آئے
+        d = read_json(sf)
+        print("آج کا محفوظ اسکرپٹ استعمال ہو رہا ہے")
+    else:
+        d = script(fresh, feedback)
+        write_json(sf, {k: v for k, v in d.items()})
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
         for i, s_ in enumerate(d["stories"]):

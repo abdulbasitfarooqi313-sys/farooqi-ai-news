@@ -3,8 +3,10 @@ name: Daily Bulletin
 
 on:
   schedule:
-    - cron: "31 10 * * *"   # 1:31 دوپہر (سعودی وقت)
-    - cron: "31 13 * * *"   # 4:31 شام — اگر دوپہر کو نہ بن سکا
+    - cron: "15 8 * * *"    # 11:15 صبح (سعودی) — جیمنائی کا روزانہ کوٹہ نیا ہونے کے بعد
+    - cron: "31 10 * * *"   # 1:31 دوپہر — نہ بنا ہو تو (محفوظ آوازوں سے آگے)
+    - cron: "31 13 * * *"   # 4:31 شام
+    - cron: "31 16 * * *"   # 7:31 شام
   workflow_dispatch:
     inputs:
       force:
@@ -53,6 +55,7 @@ jobs:
           git config user.name "ai-news-bot"
           git config user.email "ai-news-bot@users.noreply.github.com"
           for f in state/news.json state/news_error.txt; do [ -f "$f" ] && git add "$f"; done; true
+          git add -A cache state/script_*.json 2>/dev/null || true
           git diff --cached --quiet && exit 0
           git commit -m "بلیٹن"
           for i in 1 2 3; do git pull --rebase --autostash -X theirs && git push && exit 0; sleep 10; done; echo "push ناکام"; exit 1
