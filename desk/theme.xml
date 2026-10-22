@@ -52,7 +52,7 @@ body.t-news .top,body.t-tools .top,body.t-nawa .top{
 .mark{width:60px;height:60px;border-radius:18px;flex:none;display:grid;place-items:center;position:relative;
   background:conic-gradient(from 200deg,var(--news2),var(--tools2),var(--nawa2),var(--news2));box-shadow:0 8px 22px rgba(0,0,0,.25)}
 .mark span{width:50px;height:50px;border-radius:14px;background:var(--ad);display:grid;place-items:center;
-  font-family:var(--ur);font-size:38px;line-height:1;color:var(--a2);padding-top:2px}
+  font-family:var(--ur);font-size:34px;line-height:50px;height:50px;color:var(--a2);text-align:center;padding:0 0 8px}
 body:not(.t-news):not(.t-tools):not(.t-nawa) .mark span{background:#0d1f2e;color:#f0cf6a}
 .brand h1{margin:0;font-size:32px;line-height:1.7;font-weight:700;letter-spacing:0}
 .brand h1 a{color:#fff;text-decoration:none}
@@ -123,9 +123,11 @@ footer li i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-i
 
 @media (max-width:760px){
   body{font-size:16.5px}
-  .brand h1{font-size:24px}.mark{width:50px;height:50px}.mark span{width:41px;height:41px;font-size:24px}
+  .brand h1{font-size:24px}.mark{width:50px;height:50px}.mark span{width:41px;height:41px;font-size:28px;line-height:41px}
   .brand p{font-size:13px}.side{display:none}
-  .intro{grid-template-columns:1fr}.grid{grid-template-columns:1fr}
+  .intro{grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:18px}.grid{grid-template-columns:1fr}
+  .chan{padding:10px 10px 8px;border-radius:12px;text-align:center}.chan:after{display:none}
+  .chan b{font-size:15px;line-height:1.9}.chan span{display:none}.chan em{font-size:9px;letter-spacing:.6px}
   .single .head{padding:14px 16px}.single .body{padding:6px 12px 22px}.single h1{font-size:21px}
   .fgrid{grid-template-columns:1fr;gap:16px}
 }
@@ -207,7 +209,7 @@ footer li i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-i
                       </b:if>
                     </b:loop>
                   </div>
-                  <p class='snip'><data:post.snippet/></p>
+                  <p class='snip'>آج کے ٹرینڈنگ موضوعات، تیار پیکج، مقابلین کا تجزیہ اور وائرل امکان</p>
                   <a class='more' expr:href='data:post.url'>پورا روزنامچہ کھولیں ←</a>
                 </article>
               </b:loop>
