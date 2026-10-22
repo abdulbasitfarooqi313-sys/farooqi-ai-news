@@ -152,6 +152,7 @@ SCRIPT_SYSTEM = """آپ «فاروقی اے آئی نیوز» کے سینئر ا
  "thumb_text": "تھمب نیل کے لیے 3 تا 5 الفاظ، سب سے بڑی خبر",
  "youtube_title": "یوٹیوب عنوان (زیادہ سے زیادہ 90 حروف): سب سے بڑی خبر + | فاروقی اے آئی نیوز",
  "summary": "یوٹیوب تفصیل کا پہلا پیراگراف، 2 تا 3 جملے",
+ "viral": {"score": "0 تا 100 (عدد)", "why": "2 مختصر جملے: یہ بلیٹن اور عنوان آج کیوں چل سکتا ہے", "competitors": "1 جملہ: مقابلین نے ان خبروں پر کیا دیا اور ہمارا بلیٹن کیسے مختلف/بہتر ہے", "hook": "عنوان اور تھمب نیل کس انداز پر بنے"},
  "tags": ["15 تا 20 ٹیگ اردو اور انگریزی ملا کر"],
  "social": {"facebook": "3 تا 5 سطریں + 4 ہیش ٹیگ", "instagram": "کیپشن 3 تا 5 سطریں + خالی سطر + 12 تا 15 ہیش ٹیگ",
             "tiktok": "1 تا 2 سطریں + 5 تا 7 ہیش ٹیگ", "x": "زیادہ سے زیادہ 230 حروف + 2 ہیش ٹیگ",
@@ -162,6 +163,11 @@ def script(items: list[dict], feedback: str | None = None) -> dict:
     listing = "\n\n".join(f"[{i + 1}] {it['title']}\nماخذ: {it['source']} · {it['when'][:10]}\nخلاصہ: {it['summary']}\nلنک: {it['link']}"
                           for i, it in enumerate(items[:40]))
     user = f"آج کی تاریخ: {urdu_date()}\n\nپچھلے تین دن کی AI خبریں:\n\n{listing}"
+    try:
+        from .insight import VIRAL_RULES, brief, style_guide
+        user += f"\n\n{brief()}\n\n{VIRAL_RULES}\n\nچینل کا انداز نامہ:\n{style_guide()}"
+    except Exception as e:                              # مقابل کا ڈیٹا اضافی سہولت ہے، رکاوٹ نہیں
+        LOG.append(f"insight: {e}")
     if feedback:
         user += f"\n\nمالک کی ہدایت (اس کا خاص خیال رکھیں): {feedback}"
     d = generate_json(SCRIPT_SYSTEM, user)
@@ -735,6 +741,10 @@ def deliver(video: Path, thumb: Path, sd: dict, d: dict) -> list:
                       width=1920, height=1080,
                          buttons=[[{"text": "✅ منظور", "callback_data": f"nok:{day}"}, {"text": "❌ دوبارہ بنائیں", "callback_data": f"nno:{day}"}]])
     send_photo(chat, thumb, caption="🖼️ تھمب نیل (یوٹیوب Custom thumbnail)")
+    v = d.get("viral") or {}
+    if v:
+        say(f"🔥 <b>وائرل امکان: {_h.escape(str(v.get('score', '?')))}/100</b>\n{_h.escape(v.get('why', ''))}\n\n"
+            f"<b>مقابلین:</b> {_h.escape(v.get('competitors', ''))}\n<b>ہک:</b> {_h.escape(v.get('hook', ''))}")
     blocks = [("▶️ یوٹیوب", "عنوان (Title)", sd["youtube_title"]), ("▶️ یوٹیوب", "تفصیل (Description)", sd["youtube_description"]),
               ("▶️ یوٹیوب", "ٹیگ (Tags)", _tags_line(sd["tags"])), ("▶️ یوٹیوب", "پلے لسٹ (Playlist)", "فاروقی اے آئی نیوز — روزانہ بلیٹن"),
               ("▶️ یوٹیوب", "پن کمنٹ", so.get("pinned", "")), ("📘 فیس بک", "پوسٹ", so.get("facebook", "")),

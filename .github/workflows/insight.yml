@@ -1,0 +1,18 @@
+# مقابل چینلوں کی جانچ (دستی) — نتیجہ state/insight_test.txt میں
+name: Insight
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install requests
+      - run: python -m news.insight
+      - run: |
+          git config user.name "news-bot"; git config user.email "news-bot@users.noreply.github.com"
+          git add state/insight_test.txt state/hook_bank.json state/competitor_ids.json
+          git commit -m "insight test" && git push || true
