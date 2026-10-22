@@ -21,7 +21,9 @@ import xml.etree.ElementTree as ET
 
 import requests
 
-from .base import ROOT, _gemini, parse_json
+import time
+
+from .base import FALLBACKS, GEMINI_MODEL, ROOT, gemini_key, parse_json
 from . import insight
 
 OUT = ROOT / "desk"
@@ -117,10 +119,51 @@ def _items(url: str, limit: int = 20) -> list[str]:
     return [f"[{src}] {t}" for t in out[:limit]]
 
 
+LOG: list[str] = []
+
+
+def note(msg: str) -> None:
+    LOG.append(f"{time.strftime('%H:%M:%S')} {msg}")
+    print(LOG[-1], flush=True)
+
+
+def ask(system: str, user: str) -> str:
+    """جیمنائی — ہر کوشش کا وقت اور نتیجہ لاگ میں؛ لمبے انتظار نہیں"""
+    body = {"systemInstruction": {"parts": [{"text": system}]}, "contents": [{"role": "user", "parts": [{"text": user}]}],
+            "generationConfig": {"temperature": 0.4, "maxOutputTokens": 60000, "responseMimeType": "application/json"}}
+    for model in [GEMINI_MODEL] + [m for m in FALLBACKS if m != GEMINI_MODEL]:
+        for attempt in range(2):
+            t = time.time()
+            try:
+                r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+                                  json=body, headers={"x-goog-api-key": gemini_key()}, timeout=240)
+            except requests.RequestException as e:
+                note(f"{model}: {type(e).__name__} after {time.time() - t:.0f}s")
+                continue
+            note(f"{model}: HTTP {r.status_code} in {time.time() - t:.0f}s")
+            if r.ok:
+                c = r.json().get("candidates", [{}])[0]
+                txt = "".join(p.get("text", "") for p in c.get("content", {}).get("parts", []))
+                note(f"   finish={c.get('finishReason')} chars={len(txt)}")
+                if txt:
+                    return txt
+            elif r.status_code == 429:
+                note("   " + r.text[:200].replace("\n", " "))
+                time.sleep(20)
+            elif r.status_code in (404, 400):
+                note("   " + r.text[:200].replace("\n", " "))
+                break
+            else:
+                time.sleep(10)
+    raise RuntimeError("Gemini: no answer")
+
+
 def build(niche: str) -> dict:
     cfg = NICHES[niche]
+    note(f"{niche}: start")
     data = insight.gather(niche)
     heads = [h for u in cfg["feeds"] for h in _items(u)]
+    note(f"{niche}: {len(data[0])} competitor videos, {len(heads)} trending items")
     user = (f"Today: {dt.datetime.now(TZ):%A %d %B %Y}\n\nTRENDING ITEMS (last 1-3 days):\n" + "\n".join(heads[:120])
             + "\n\n" + insight.brief(niche, data=data) + "\n\nCHANNEL STYLE GUIDE:\n" + insight.style_guide(niche))
     system = SYSTEM.format(lang=cfg["lang"], script=" (Urdu script, never Roman Urdu)" if cfg["rtl"] else "",
@@ -128,12 +171,11 @@ def build(niche: str) -> dict:
     d, last = None, None
     for i in range(2):          # لمبا جواب: بڑی حد (اردو میں 8 ہزار ٹوکن کم پڑتے ہیں)
         try:
-            d = parse_json(_gemini(system, user + ("" if not i else "\n\nIMPORTANT: return complete, valid JSON only; keep texts shorter."),
-                                   max_tokens=60000))
+            d = parse_json(ask(system, user + ("" if not i else "\n\nIMPORTANT: return complete, valid JSON only; keep texts shorter.")))
             break
         except ValueError as e:
             last = e
-            print(f"desk {niche}: JSON error ({e})")
+            note(f"desk {niche}: JSON error ({e})")
     if d is None:
         raise ValueError(f"desk {niche}: {last}")
     d["_competitors"] = data[0][:15]
@@ -228,8 +270,9 @@ def main(niches: list[str]) -> None:
     for n in niches:
         try:
             d = build(n)
-        except Exception:
+        except Exception as e:
             traceback.print_exc()
+            note(f"{n}: FAILED {e}")
             continue
         (OUT / f"{n}.html").write_text(render(n, d, day), encoding="utf-8")
         (OUT / f"{n}_brief.txt").write_text(insight.brief(n, data=(d["_competitors"], d["_bank"])), encoding="utf-8")
@@ -238,6 +281,7 @@ def main(niches: list[str]) -> None:
                   "title": f"روزنامچہ — {cfg['name']} — {day}"}
         print(f"desk {n}: {len(d.get('topics', []))} topics, {len(d.get('packages', []))} packages")
     idx_p.write_text(json.dumps(idx, ensure_ascii=False, indent=1), encoding="utf-8")
+    (OUT / "log.txt").write_text("\n".join(LOG), encoding="utf-8")
 
 
 if __name__ == "__main__":
