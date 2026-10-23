@@ -51,7 +51,7 @@
  {
   "channel": "Matthew Berman",
   "title": "Sam Altman: RSI, AI Consciousness, OpenAI's New Hardware, Compute, and more!",
-  "views": 189747,
+  "views": 223107,
   "date": "2026-10-21",
   "url": "https://youtu.be/3gXLmy7DK_4"
  },
@@ -135,7 +135,7 @@
  {
   "channel": "Matthew Berman",
   "title": "Meta just dropped something insane... (Muse Wonder)",
-  "views": 127355,
+  "views": 127453,
   "date": "2026-10-13",
   "url": "https://youtu.be/rpLrkJ5NNEI"
  },
@@ -156,7 +156,7 @@
  {
   "channel": "Matthew Berman",
   "title": "Google just went FRONTIER (Gemini 4 Argon)",
-  "views": 109854,
+  "views": 110000,
   "date": "2026-10-14",
   "url": "https://youtu.be/M8iqahFogtA"
  },
@@ -184,7 +184,7 @@
  {
   "channel": "Matthew Berman",
   "title": "OpenAI Employee Arrested Over Recording Device",
-  "views": 90931,
+  "views": 91037,
   "date": "2026-10-13",
   "url": "https://youtu.be/CIlqLzoJiU8"
  },
@@ -364,6 +364,13 @@
   "url": "https://youtu.be/GzY9QXDo9UU"
  },
  {
+  "channel": "Matthew Berman",
+  "title": "Actual Robot Bodyguard",
+  "views": 28811,
+  "date": "2026-10-21",
+  "url": "https://youtu.be/5eJnIYrr8rg"
+ },
+ {
   "channel": "TheAIGRID",
   "title": "OpenAI Is Building Past GPT-8… This Is Getting Serious",
   "views": 28623,
@@ -401,7 +408,7 @@
  {
   "channel": "Matthew Berman",
   "title": "How DeepSeek Uses Less Memory",
-  "views": 23065,
+  "views": 23087,
   "date": "2026-10-18",
   "url": "https://youtu.be/RS9vWYlJeH8"
  },
@@ -411,13 +418,6 @@
   "views": 22607,
   "date": "2026-09-26",
   "url": "https://youtu.be/s3WB5SSJc8w"
- },
- {
-  "channel": "Matthew Berman",
-  "title": "Actual Robot Bodyguard",
-  "views": 20802,
-  "date": "2026-10-21",
-  "url": "https://youtu.be/5eJnIYrr8rg"
  },
  {
   "channel": "Asad Ali TV",
@@ -436,7 +436,7 @@
  {
   "channel": "Matthew Berman",
   "title": "Gemini 4 Argon Built an Excel Clone in 20 Minutes",
-  "views": 18697,
+  "views": 19196,
   "date": "2026-10-17",
   "url": "https://youtu.be/YMulO01LMBE"
  },
@@ -555,7 +555,7 @@
  {
   "channel": "Matthew Berman",
   "title": "From Punch Cards to AI Software Factories",
-  "views": 10798,
+  "views": 10918,
   "date": "2026-10-15",
   "url": "https://youtu.be/6VDjFXM1FbM"
  },
@@ -568,22 +568,36 @@
  },
  {
   "channel": "Matthew Berman",
+  "title": "Sam Altman on Why Demand for Coders Hasn't Disappeared",
+  "views": 8695,
+  "date": "2026-10-21",
+  "url": "https://youtu.be/1g9Tqvyt4kU"
+ },
+ {
+  "channel": "Matthew Berman",
   "title": "Sam Altman on Why AI Hasn't Made Us Less Busy",
-  "views": 7861,
+  "views": 8641,
   "date": "2026-10-21",
   "url": "https://youtu.be/SU-h1k5IYOI"
  },
  {
   "channel": "Matthew Berman",
+  "title": "Sam Altman on Why AI Needs a New Kind of Hardware",
+  "views": 7572,
+  "date": "2026-10-21",
+  "url": "https://youtu.be/u6Tf62_5CP0"
+ },
+ {
+  "channel": "Matthew Berman",
   "title": "Gemini 4 Argon built this cyberpunk city",
-  "views": 7224,
+  "views": 7246,
   "date": "2026-10-16",
   "url": "https://youtu.be/vdU8mYN_-hE"
  },
  {
   "channel": "Matthew Berman",
   "title": "Gemini 4 Argon Made a Fall Guys Clone",
-  "views": 7030,
+  "views": 7048,
   "date": "2026-10-17",
   "url": "https://youtu.be/kb74_MmsTFM"
  },
@@ -596,17 +610,10 @@
  },
  {
   "channel": "Matthew Berman",
-  "title": "Sam Altman on Why Demand for Coders Hasn't Disappeared",
-  "views": 6278,
+  "title": "Sam Altman on What Personal AI Still Needs",
+  "views": 4079,
   "date": "2026-10-21",
-  "url": "https://youtu.be/1g9Tqvyt4kU"
- },
- {
-  "channel": "Matthew Berman",
-  "title": "Sam Altman on Why AI Needs a New Kind of Hardware",
-  "views": 5789,
-  "date": "2026-10-21",
-  "url": "https://youtu.be/u6Tf62_5CP0"
+  "url": "https://youtu.be/tc92psltcEg"
  },
  {
   "channel": "Asad Ali TV",
@@ -621,13 +628,6 @@
   "views": 3180,
   "date": "2026-10-22",
   "url": "https://youtu.be/xbEQoWQPQ4w"
- },
- {
-  "channel": "Matthew Berman",
-  "title": "Sam Altman on What Personal AI Still Needs",
-  "views": 2663,
-  "date": "2026-10-21",
-  "url": "https://youtu.be/tc92psltcEg"
  },
  {
   "channel": "Matt Wolfe",
@@ -649,5 +649,12 @@
   "views": 688,
   "date": "2026-10-22",
   "url": "https://youtu.be/Hu6SuVWP3hU"
+ },
+ {
+  "channel": "Matthew Berman",
+  "title": "Sam Altman on AI’s Discovery Era",
+  "views": 594,
+  "date": "2026-10-22",
+  "url": "https://youtu.be/9WZpou1faFU"
  }
 ]

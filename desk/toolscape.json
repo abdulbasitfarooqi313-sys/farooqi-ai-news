@@ -1,418 +1,415 @@
 {
- "summary": "Today's content focus is on practical AI agent updates, document automation tools, and local privacy setups tailored for beginners in the US, UK, and Canada. We will prioritize hands-on tutorials for newly launched productivity utilities.",
+ "summary": "Today's desk focuses on step-by-step tutorials for new AI workflow tools like Claude's video generator, LinkedIn's job tools, and local document management systems. We are targeting beginners who want practical, free methods to automate tasks without coding.",
  "topics": [
   {
-   "title": "Anthropic Claude Duet Step-by-Step Tutorial",
-   "why": "Anthropic just entered the agent race with Claude Duet, driving high search interest across tech news.",
+   "title": "Claude Video Generation Tool",
+   "why": "Competitors are pulling massive views showing Claude's new video style database and motion graphics capabilities.",
    "trend": 10,
    "sources": [
-    "producthunt.com",
-    "news.google.com"
+    "Futurepedia",
+    "Product Hunt"
    ]
   },
   {
-   "title": "Documind Open-Source Structured Data Tool",
-   "why": "A rising open-source solution for turning unstructured documents into clean JSON and tables without paid subscriptions.",
+   "title": "LinkedIn AI Job Application Tool",
+   "why": "Job applications are up 30% and LinkedIn's new features are trending across major news outlets.",
    "trend": 9,
    "sources": [
+    "news.google.com",
+    "Forbes"
+   ]
+  },
+  {
+   "title": "Open-Source Documind AI Tool",
+   "why": "A trending HN item showing how to turn unstructured documents into clean data using a free open-source setup.",
+   "trend": 8,
+   "sources": [
     "hnrss.org"
    ]
   },
   {
-   "title": "NordLayer AI Scout Office Tool Tracker",
-   "why": "Teams and individuals in the US/UK/Canada are struggling to audit the growing number of internal AI tools.",
-   "trend": 8,
+   "title": "ChatGPT Blender Integration",
+   "why": "Reddit users are sharing direct ChatGPT subscriptions inside Blender, cutting out complex plugins.",
+   "trend": 7,
    "sources": [
-    "news.google.com"
+    "reddit.com"
    ]
   },
   {
-   "title": "FaceAge Biological Age Selfie Checker",
-   "why": "A viral public tool allowing users to upload a selfie for an instant biological age breakdown.",
-   "trend": 8,
-   "sources": [
-    "news.google.com"
-   ]
-  },
-  {
-   "title": "Mistral Voxtral 3 Audio Model Walkthrough",
-   "why": "New audio processing model capturing developer attention for fast local transcription.",
+   "title": "ElevenLabs Realtime Translation",
+   "why": "Fresh product launch on Product Hunt offering instantaneous voice translation for beginners.",
    "trend": 7,
    "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "ElevenLabs Realtime Translation Tool",
-   "why": "Live translation capabilities are expanding, making multilingual content creation accessible to beginners.",
-   "trend": 7,
-   "sources": [
-    "producthunt.com"
-   ]
-  },
-  {
-   "title": "Open-Source AI Tool to Read Privacy Policies",
-   "why": "Show HN project gaining traction by automatically scanning websites to tell users who sells their data.",
+   "title": "Meta AI Conversation Privacy Exposure",
+   "why": "Major news coverage regarding private conversations exposed online, highlighting privacy risks for beginners.",
    "trend": 6,
    "sources": [
-    "hnrss.org"
+    "news.google.com",
+    "SFGATE"
    ]
   },
   {
-   "title": "Kalender Sync Tool for Beginners",
-   "why": "Simple productivity utility solving multi-calendar management for remote workers.",
+   "title": "Spotify AI Remixing Tool",
+   "why": "Co-CEOs announced new remixing capabilities, creating high interest among audio creators.",
    "trend": 6,
    "sources": [
-    "producthunt.com"
+    "news.google.com",
+    "Billboard"
    ]
   },
   {
-   "title": "Sponkly Creator Utility",
-   "why": "New Product Hunt launch helping solo creators streamline basic daily workflows.",
+   "title": "FaceAge Biological Age Tool",
+   "why": "CBS News and public releases highlight a viral selfie-based age tool that anyone can test for free.",
+   "trend": 6,
+   "sources": [
+    "news.google.com",
+    "CBS News"
+   ]
+  },
+  {
+   "title": "Mistral Voxtral 3",
+   "why": "New voice model release on Product Hunt capturing developer and enthusiast interest.",
    "trend": 5,
    "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "Fastlane 2.0 Deployment Tool",
-   "why": "Updated version simplifies mobile app deployment pipelines for small teams.",
+   "title": "Hugging Face DNA Chatbot Model",
+   "why": "WIRED covered the new biology model allowing users to chat directly with DNA sequences.",
    "trend": 5,
    "sources": [
-    "producthunt.com"
+    "news.google.com",
+    "WIRED"
    ]
   }
  ],
  "packages": [
   {
-   "topic": "Anthropic Claude Duet Step-by-Step Tutorial",
-   "competitors": "Competitors like The AI Advantage and Parker Prompts covered Claude Opus updates broadly, but missed a simple, beginner-focused walkthrough of setting up Claude Duet workflows.",
-   "angle": "We show exactly how to set up and run your first collaborative task in Claude Duet with zero coding experience.",
+   "topic": "Claude Video Generation Tool",
+   "competitors": "Futurepedia covered Claude's video features with titles like 'Claude Makes a New Kind of Video' reaching over 200k views, but they missed a slow, click-by-click beginner walkthrough.",
+   "angle": "We show the exact prompt structure and free settings to generate your first motion graphic without any video editor experience.",
    "viral": {
-    "score": 92,
-    "why": "High search volume around Anthropic's new agent release combined with practical tutorials always drives strong click-through rates."
+    "score": 82,
+    "why": "Claude video features are currently exploding in search interest and our step-by-step tutorial format directly answers the implementation gap left by news-style competitor videos."
    },
    "long": {
-    "title": "How to Use Claude Duet (Step-by-Step Beginner Guide)",
-    "thumb": "Claude Duet Setup",
-    "hook": "In the next 7 minutes you will set up your first collaborative task using Claude Duet. No coding required.",
+    "title": "How to Make AI Videos with Claude (Step-by-Step)",
+    "thumb": "Claude Video Guide",
+    "hook": "In the next 6 minutes you will turn a simple text prompt into a styled video using Claude's free tools. No video editor required.",
     "outline": [
-     "What Claude Duet is and how it differs from standard chat",
-     "Setting up your account and accessing the dashboard",
-     "Connecting your first file source",
-     "Writing your first collaborative prompt",
-     "Reviewing and exporting the generated output",
-     "One real downside: handling usage limits",
-     "Quick recap and next steps"
+     "Accessing Claude's video features",
+     "Writing your first motion prompt",
+     "Choosing style parameters",
+     "Exporting your clip",
+     "Fixing common prompt mistakes",
+     "Real-world workflow test"
     ]
    },
    "shorts": [
     {
-     "title": "Claude Duet in 45 Seconds",
-     "hook": "Stop doing repetitive document tasks by hand.",
-     "script": "Here is how to use Claude Duet to handle your daily research notes. First, open the dashboard. Second, drop in your messy text files. Third, type this exact prompt to organize everything into a clean table. The only catch is free tier rate limits. Try it today and save hours.",
-     "cta": "Subscribe to Toolscape for more simple AI tutorials."
+     "title": "Make AI Videos with Claude",
+     "hook": "Stop struggling with complex video editors when Claude can do this from a single prompt.",
+     "script": "Go to Claude and open the video generation tab. Type your scene description clearly. Pick your style preset from the free database. Hit generate and watch your text turn into motion graphics in seconds. Save this video to try it later.",
+     "cta": "Subscribe for more simple AI tool tutorials."
     },
     {
-     "title": "Try This New Claude Agent Feature",
-     "hook": "Did you know Anthropic just released Claude Duet?",
-     "script": "Let me show you how to test it out in under a minute. Log into your account, find the Duet workspace, and upload a simple PDF. Ask it to summarize the key points into bullet points. It runs fast, but watch out for occasional token limits on longer documents.",
-     "cta": "Check out our full video for the step-by-step guide."
+     "title": "Claude's Hidden Video Feature",
+     "hook": "Did you know Claude can create motion graphics without any video generator?",
+     "script": "Most people use Claude just for text, but the new video style database lets you build clean visuals instantly. Just enter your prompt, select your aspect ratio, and export. Follow for more beginner tips.",
+     "cta": "Check the full tutorial on our channel."
     }
    ],
    "carousel": {
-    "title": "How to Start With Claude Duet",
+    "title": "Make Videos with Claude in 4 Steps",
     "slides": [
-     "Step 1: Open your Claude workspace",
-     "Step 2: Select the Duet collaboration mode",
-     "Step 3: Upload your reference files",
-     "Step 4: Use a clear instruction prompt",
-     "Step 5: Review structured results instantly",
-     "Note: Watch out for free tier usage caps"
+     "Step 1: Open Claude and select the style database feature",
+     "Step 2: Write a clear scene description prompt",
+     "Step 3: Choose your visual aspect ratio and motion preset",
+     "Step 4: Generate and download your clip for free",
+     "Bonus: One common mistake to avoid when prompting"
     ]
    },
    "posts": {
     "x": [
-     "Anthropic's Claude Duet is finally here. We tested it for beginner document workflows—here is how to set it up in 5 minutes: [link]",
-     "Still managing research notes manually? Try this simple Claude Duet workflow to organize everything instantly: [link]"
+     "Want to make motion graphics without a video editor? Here is how to use Claude's new video tool step by step in under 5 minutes: [link]",
+     "Stop wasting hours in heavy editing software. Claude's new video style database lets beginners create clips from text prompts instantly. Full guide here: [link]"
     ],
-    "facebook": "If you have been waiting to try Anthropic's new agent features, we put together a simple, step-by-step beginner guide to Claude Duet. Check it out and let us know how it works for your workflow!",
-    "instagram": "We tested the brand new Claude Duet agent workspace so you don't have to. Watch our full step-by-step tutorial on YouTube to see how to organize your notes in minutes. Link in bio! #AItools #ClaudeDuet #Productivity",
-    "linkedin": "Artificial intelligence agent workflows are evolving quickly. Today we published a practical guide on setting up Claude Duet for day-to-day administrative tasks. Read more and watch the full tutorial here: [link]"
+    "facebook": "We tested Claude's new video generation feature so you don't have to guess the settings. Watch our step-by-step beginner guide to make your first clip in minutes: [link]",
+    "instagram": "Turn simple text prompts into clean motion graphics using Claude's free features. Step-by-step tutorial link in bio! #AITutorial #ClaudeAI #ContentCreator",
+    "linkedin": "Video generation tools are evolving fast. Here is a practical, beginner-friendly guide on how to use Claude's new video features for your content workflow: [link]"
    },
    "article": {
-    "title": "How to Set Up and Use Claude Duet for Beginners",
+    "title": "How to Use Claude for AI Video Generation: A Beginner's Guide",
     "outline": [
-     "Introduction to Claude Duet",
-     "Accessing the Workspace",
-     "Step-by-Step Prompting Guide",
-     "Limitations to Keep in Mind",
-     "Conclusion"
+     "Introduction to Claude's video features",
+     "Setting up your free account",
+     "How to write effective motion prompts",
+     "Exporting and formatting your files",
+     "Common limitations and downsides"
     ]
    }
   },
   {
-   "topic": "Documind Open-Source Structured Data Tool",
-   "competitors": "Competitors like Jeff Su and Kevin Stratvert covered general file organization, but missed open-source alternatives like Documind for turning documents into structured JSON.",
-   "angle": "A completely free, local-friendly walkthrough of setting up Documind without writing code.",
+   "topic": "LinkedIn AI Job Application Tool",
+   "competitors": "Forbes and news outlets reported on LinkedIn's new AI tools for job seekers, but none provide a screen-recorded tutorial on how to safely use them.",
+   "angle": "We demonstrate exactly where to click inside LinkedIn to optimize your profile and application without sounding like a robot.",
    "viral": {
-    "score": 85,
-    "why": "Open-source data tools attract high engagement from users looking for free alternatives to expensive SaaS subscriptions."
+    "score": 74,
+    "why": "Job applications are up 30% and millions are looking for practical ways to use LinkedIn's new AI features safely."
    },
    "long": {
-    "title": "Turn Any Document into Structured Data Free (Documind Tutorial)",
-    "thumb": "Documind Open Source",
-    "hook": "In the next 6 minutes you will turn messy PDF invoices into clean spreadsheets using a free open-source tool.",
+    "title": "How to Use LinkedIn's New AI Job Tools",
+    "thumb": "LinkedIn AI Tool",
+    "hook": "In the next 5 minutes you will update your LinkedIn profile using the new built-in AI assistant to land more interviews.",
     "outline": [
-     "What Documind is and why it matters",
-     "Downloading and setting up the tool locally",
-     "Uploading your first document sample",
-     "Extracting structured data into tables",
-     "Exporting your results to CSV",
-     "One real downside: requires basic setup steps",
-     "Recap and subscribe call"
+     "Finding the new AI tool inside LinkedIn",
+     "Analyzing your current experience",
+     "Generating clean summary bullet points",
+     "Customizing your job application text",
+     "One privacy setting you must check"
     ]
    },
    "shorts": [
     {
-     "title": "Extract PDF Data Instantly",
-     "hook": "Stop typing invoice data into Excel manually.",
-     "script": "Here is how to use the open-source tool Documind. Drop your PDF into the interface, click run, and watch it generate clean structured data. The downside is you need to follow a quick setup guide. Try it out and speed up your workflow.",
-     "cta": "Subscribe to Toolscape for free tool lists."
+     "title": "LinkedIn AI Job Tool Guide",
+     "hook": "Job applications are up 30%—here is how to use LinkedIn's new AI tool to stand out.",
+     "script": "Go to your LinkedIn profile and look for the new AI assistance button in your summary section. Click it to rewrite your experience without sounding robotic. Review the output and save your changes. Follow for more work tips.",
+     "cta": "Subscribe for weekly tool updates."
     },
     {
-     "title": "Free Document AI Tool",
-     "hook": "This free open-source tool replaces costly data extraction apps.",
-     "script": "Documind lets you turn scanned receipts and reports into clean spreadsheets instantly. Just load the tool, upload your file, and export the table. It takes under two minutes once installed.",
-     "cta": "Watch our full tutorial on YouTube."
+     "title": "Fix Your LinkedIn with AI",
+     "hook": "Stop guessing what recruiters want to see on your LinkedIn profile.",
+     "script": "LinkedIn just rolled out a new AI tool for job seekers. Open your profile, click edit, and let the assistant polish your headline. Make sure to edit the result so it sounds like you.",
+     "cta": "Watch the full guide on our channel."
     }
    ],
    "carousel": {
-    "title": "Turn PDFs to Data Free with Documind",
+    "title": "Optimize Your LinkedIn With AI",
     "slides": [
-     "Step 1: Download Documind open-source package",
-     "Step 2: Launch the local interface",
-     "Step 3: Upload your PDF or invoice",
-     "Step 4: Run data extraction",
-     "Step 5: Export clean CSV files",
-     "Note: Basic setup required for local run"
+     "Step 1: Navigate to your LinkedIn profile summary",
+     "Step 2: Click the new built-in AI optimization button",
+     "Step 3: Review and adjust the generated text",
+     "Step 4: Update your job application notes safely",
+     "Rule: Always add your personal voice before saving"
     ]
    },
    "posts": {
     "x": [
-     "Tired of paying for PDF data extraction? Documind is a free open-source tool that turns documents into structured tables: [link]",
-     "How to convert messy invoices into clean spreadsheets using Documind. Full step-by-step guide: [link]"
+     "Job applications are up 30%. Here is a quick walkthrough of LinkedIn's new AI tool and how to use it without sounding like a robot: [link]",
+     "Want more interview callbacks? Watch our step-by-step guide on using LinkedIn's new AI profile optimizer: [link]"
     ],
-    "facebook": "If you work with a lot of PDF invoices or reports, you will love this. We tested Documind, a new open-source AI tool that extracts structured data instantly. Watch our free guide today!",
-    "instagram": "Stop copying text from PDFs by hand. We tested Documind, an open-source tool that turns documents into clean tables. Full tutorial on our channel! #Productivity #OpenSource #AItools",
-    "linkedin": "Data extraction doesn't have to be expensive. Our latest guide covers Documind, an open-source tool designed to convert unstructured documents into clean, usable data formats. Check it out: [link]"
+    "facebook": "LinkedIn just released new AI tools for job seekers. We tested them out and put together a simple tutorial on how to use them safely: [link]",
+    "instagram": "Boost your job search with LinkedIn's new AI assistant. Watch our full tutorial link in bio! #LinkedInAI #JobSearch #CareerTips",
+    "linkedin": "With job applications rising, LinkedIn's new AI tools can help streamline your search. Here is our step-by-step guide on how to use them effectively: [link]"
    },
    "article": {
-    "title": "How to Use Documind to Extract Data from Documents",
+    "title": "How to Use LinkedIn's New AI Job Tools Effectively",
     "outline": [
-     "Why Use Open-Source Document Tools",
-     "Getting Started with Documind",
-     "Step-by-Step Extraction Guide",
-     "Pros and Cons",
-     "Summary"
+     "Overview of LinkedIn's recent AI updates",
+     "Where to find the AI assistant on your profile",
+     "Step-by-step profile optimization",
+     "Best practices for applying safely",
+     "Downsides to keep in mind"
     ]
    }
   },
   {
-   "topic": "NordLayer AI Scout Office Tool Tracker",
-   "competitors": "Competitors focused heavily on large frontier models, completely missing enterprise utility trackers like NordLayer AI Scout for auditing internal shadow AI tools.",
-   "angle": "A simple guide for beginners on how to track and audit AI tools being used across small teams.",
+   "topic": "Open-Source Documind AI Tool",
+   "competitors": "Hacker News discussions covered Documind as an open-source solution, but technical writeups are too complex for average beginners.",
+   "angle": "We break down how to run Documind locally with zero coding experience to turn messy PDFs into organized spreadsheets.",
    "viral": {
-    "score": 78,
-    "why": "Security and tool management are top-of-mind for remote teams and small business owners dealing with scattered software subscriptions."
+    "score": 68,
+    "why": "People are tired of paying monthly fees for document organization tools; showing a free open-source alternative attracts high beginner engagement."
    },
    "long": {
-    "title": "How to Track Every AI Tool Used in Your Team (NordLayer AI Scout)",
-    "thumb": "Track AI Tools",
-    "hook": "In the next 5 minutes you will discover how to track all the AI apps running inside your workspace.",
+    "title": "Turn Messy PDFs Into Data With This Free AI Tool",
+    "thumb": "Documind Free Tool",
+    "hook": "In the next 7 minutes you will turn a pile of messy PDF documents into a clean spreadsheet using a free open-source tool.",
     "outline": [
-     "What is the office 'AI Zoo' problem",
-     "Introducing NordLayer AI Scout",
-     "Setting up your team monitoring dashboard",
-     "Identifying unapproved or risky tools",
-     "Generating your first security audit report",
-     "One real downside: setup requires administrator rights",
-     "Recap and next steps"
+     "What is Documind and why it is free",
+     "Downloading and opening the tool",
+     "Uploading your first batch of documents",
+     "Extracting structured data into CSV",
+     "Reviewing accuracy and fixing errors"
     ]
    },
    "shorts": [
     {
-     "title": "Find All AI Tools in Your Office",
-     "hook": "Do you know how many AI apps your team is using?",
-     "script": "Here is how to use NordLayer AI Scout to track them all in one place. Open your dashboard, run the scanner, and view the list of active tools. The downside is you need admin access to install it.",
-     "cta": "Subscribe to Toolscape for more tool lists."
+     "title": "Free PDF to Data AI Tool",
+     "hook": "Stop typing data from PDFs manually when this free open-source tool can do it instantly.",
+     "script": "Download Documind on your computer for free. Drag and drop your messy invoices or reports into the window. Click run, and watch it organize everything into a clean table. Save this video for your next project.",
+     "cta": "Subscribe for more free tool lists."
     },
     {
-     "title": "Stop Shadow AI With This Tool",
-     "hook": "Too many unapproved AI tools in your workflow?",
-     "script": "NordLayer AI Scout helps you track every software plugin your team opens. Simply connect your network view and review the generated list of active models. Try it out to keep your data secure.",
-     "cta": "Watch our full video breakdown."
+     "title": "Organize Files With Documind",
+     "hook": "This free open-source tool turns any document into structured data.",
+     "script": "If you are tired of paying for document parsers, try Documind. Drop in your files, set your columns, and let it extract the data locally. Follow for more open-source guides.",
+     "cta": "Check our channel for the full walkthrough."
     }
    ],
    "carousel": {
-    "title": "Auditing Team AI Tools with AI Scout",
+    "title": "Organize PDFs Free With Documind",
     "slides": [
-     "Step 1: Access your NordLayer dashboard",
-     "Step 2: Enable the AI Scout feature",
-     "Step 3: Scan connected network devices",
-     "Step 4: Review active AI applications",
-     "Step 5: Generate safety reports",
-     "Note: Requires administrator permissions"
+     "Step 1: Download Documind from GitHub",
+     "Step 2: Open the local interface",
+     "Step 3: Drag and drop your messy documents",
+     "Step 4: Export structured data into Excel or CSV",
+     "Downside: Requires basic computer setup knowledge"
     ]
    },
    "posts": {
     "x": [
-     "Managing team software is getting harder with shadow AI. Here is how NordLayer AI Scout helps track workplace tools: [link]",
-     "How to audit the AI apps running inside your office network in 5 minutes: [link]"
+     "Tired of paying for PDF parsers? Here is a step-by-step guide to using Documind, a free open-source AI tool for structured data: [link]",
+     "Turn messy documents into clean spreadsheets in minutes with this free open-source tool. Full tutorial here: [link]"
     ],
-    "facebook": "Is your team using too many unapproved AI tools? We looked at NordLayer AI Scout to see how small businesses can track and secure their software stack. Watch our breakdown!",
-    "instagram": "Tracking workplace AI tools just got easier. Check out our quick guide on using NordLayer AI Scout to secure your team's workflow. Link in bio! #Cybersecurity #AItools #TechTips",
-    "linkedin": "Shadow AI is a growing concern for modern workplaces. Our latest tutorial explores how NordLayer AI Scout helps organizations monitor and manage internal AI usage safely. Read more: [link]"
+    "facebook": "We tested Documind, a new open-source AI tool that turns your messy documents into structured data without monthly fees. Watch the full tutorial: [link]",
+    "instagram": "Stop organizing files by hand! Here is how to use Documind for free. Tutorial link in bio! #OpenSource #Productivity #AITools",
+    "linkedin": "Open-source AI tools are changing document workflows. Here is how to set up Documind locally to extract clean data from your files: [link]"
    },
    "article": {
-    "title": "How to Audit Workplace AI Tools Using NordLayer AI Scout",
+    "title": "How to Use Documind: The Free Open-Source PDF AI Tool",
     "outline": [
-     "The Rise of Workplace Shadow AI",
-     "What is NordLayer AI Scout",
-     "Step-by-Step Audit Guide",
-     "Benefits and Limitations",
-     "Conclusion"
+     "What is Documind?",
+     "How to download and install it locally",
+     "Step-by-step document conversion",
+     "Exporting to CSV and Excel",
+     "Pros and cons of open-source document tools"
     ]
    }
   }
  ],
  "hook_patterns": [
   {
-   "pattern": "Action result combined with tool name and time frame",
-   "example": "How I Make Realistic AI Videos with Seedance 2.5 - Full Guide"
+   "pattern": "Result + time frame ('How I make X with Tool in Y minutes')",
+   "example": "How I make clean AI videos with Claude in 5 minutes"
   },
   {
-   "pattern": "Direct platform update announcement with practical utility tag",
-   "example": "Microsoft Copilot Got a Major Upgrade: Step-by-Step Beginner Guide"
+   "pattern": "Tool name + unexpected capability ('Tool is crazy for task')",
+   "example": "Claude is crazy for making motion graphics"
   },
   {
-   "pattern": "Problem-first instruction addressing common manual bottlenecks",
-   "example": "Stop Organizing Files Yourself: Try This Free AI Tool Instead"
+   "pattern": "Direct pain point + free solution ('Stop doing X manually, use this free tool')",
+   "example": "Stop organizing files yourself and use this free tool"
   },
   {
-   "pattern": "Curiosity-driven prompt discovery for popular models",
-   "example": "The Biggest ChatGPT Update Yet: How to Use It in 5 Minutes"
+   "pattern": "Platform update + major benefit ('Platform got a major upgrade')",
+   "example": "LinkedIn got a major AI upgrade for job seekers"
   },
   {
-   "pattern": "Beginner-focused tutorial framing for new automation frameworks",
-   "example": "Build Your First AI Agent in 20 Minutes (No Coding Required)"
+   "pattern": "Beginner guide promise ('Ultimate beginner's guide to Tool')",
+   "example": "The ultimate beginner's guide to Documind"
   }
  ],
  "_competitors": [
   {
-   "channel": "Dan Kieft",
-   "title": "How I Make Realistic AI Videos with Seedance 2.5 - Full Guide",
-   "views": 438120,
-   "date": "2026-10-16",
-   "url": "https://youtu.be/2hJsvDSPWYM"
-  },
-  {
-   "channel": "Dan Kieft",
-   "title": "GPT-6 Astra is Crazy For AI Video",
-   "views": 345633,
-   "date": "2026-09-23",
-   "url": "https://youtu.be/qwGIwxZFc2I"
-  },
-  {
-   "channel": "Nate Herk | AI Automation",
-   "title": "Matt Pocock: The Most Valuable Skill to Learn in the Age of AI",
-   "views": 330504,
-   "date": "2026-10-16",
-   "url": "https://youtu.be/Z8lf5oWKfj0"
-  },
-  {
-   "channel": "Metics Media",
-   "title": "The Ultimate Beginner’s Guide to Hermes Agent",
-   "views": 326703,
-   "date": "2026-10-08",
-   "url": "https://youtu.be/XNcKUSL1CTE"
-  },
-  {
-   "channel": "Kevin Stratvert",
-   "title": "Microsoft Copilot Got a Major Upgrade 🚀 These features are coming to Frontier soon #MicrosoftPartner",
-   "views": 316476,
-   "date": "2026-10-02",
-   "url": "https://youtu.be/2kzuCJ5KLn4"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "Google Just Caught Up (Gemini-4 Argon)",
-   "views": 268870,
-   "date": "2026-10-13",
-   "url": "https://youtu.be/eBszYxzE2dk"
-  },
-  {
-   "channel": "Jeff Su",
-   "title": "Personal Agents, Clearly Explained",
-   "views": 240218,
-   "date": "2026-10-13",
-   "url": "https://youtu.be/HdI_aYzgJIg"
-  },
-  {
-   "channel": "Metics Media",
-   "title": "Build Your First AI Agent in 20 Minutes (No Coding)",
-   "views": 221942,
-   "date": "2026-10-19",
-   "url": "https://youtu.be/rCkYVxOX-dI"
-  },
-  {
-   "channel": "Kevin Stratvert",
-   "title": "How to Edit Videos with ChatGPT",
-   "views": 213184,
-   "date": "2026-10-07",
-   "url": "https://youtu.be/cR0TaYikrz8"
-  },
-  {
-   "channel": "Skill Leap AI",
-   "title": "The Biggest ChatGPT Update Yet: Meet dots",
-   "views": 200406,
-   "date": "2026-09-29",
-   "url": "https://youtu.be/gfh6l3DxHK0"
-  },
-  {
    "channel": "Futurepedia",
    "title": "Claude Makes a New Kind of Video - Full Tutorial",
-   "views": 195843,
+   "views": 204819,
    "date": "2026-10-19",
    "url": "https://youtu.be/Ge1B-Ok1Pfk"
   },
   {
-   "channel": "Jeff Su",
-   "title": "Stop Organizing Files Yourself.",
-   "views": 179607,
-   "date": "2026-09-29",
-   "url": "https://youtu.be/peP_o66u-vM"
+   "channel": "Futurepedia",
+   "title": "The Ultimate Image Generator Showdown",
+   "views": 21029,
+   "date": "2026-10-09",
+   "url": "https://youtu.be/QLv4WCKVqd0"
   },
   {
-   "channel": "Dan Kieft",
-   "title": "Suno v6 + Seedance 2.5 is NUTS at Making AI Music Videos",
-   "views": 177199,
+   "channel": "Futurepedia",
+   "title": "Claude just made motion graphics with zero video generator",
+   "views": 6967,
+   "date": "2026-10-20",
+   "url": "https://youtu.be/2gVfS19Hudk"
+  },
+  {
+   "channel": "Futurepedia",
+   "title": "Remotion vs  Hyperframes. One prompt. One map skill",
+   "views": 5326,
    "date": "2026-10-05",
-   "url": "https://youtu.be/BKDrtzJktO0"
+   "url": "https://youtu.be/RxB56eE5BRc"
   },
   {
-   "channel": "Matt Wolfe",
-   "title": "AI News: 6 New Models & A Nano Banana Killer",
-   "views": 174344,
-   "date": "2026-10-16",
-   "url": "https://youtu.be/KGcuuhqmPhI"
+   "channel": "Futurepedia",
+   "title": "Claude video generator turns your single prompt into a stylized movie",
+   "views": 4958,
+   "date": "2026-10-21",
+   "url": "https://youtu.be/KZRUdQYU4dI"
   },
   {
-   "channel": "Matt Wolfe",
-   "title": "This Tesla Actually Flies (NOT AI)",
-   "views": 173470,
+   "channel": "Futurepedia",
+   "title": "Use Skills and Gemini to execute tasks consistently",
+   "views": 3426,
+   "date": "2026-10-06",
+   "url": "https://youtu.be/JwZVcb_vJT0"
+  },
+  {
+   "channel": "Futurepedia",
+   "title": "Your Personalized AI Plan, Free | Futurepedia 2.0",
+   "views": 2869,
+   "date": "2026-10-20",
+   "url": "https://youtu.be/qXlgk8VExhI"
+  },
+  {
+   "channel": "Futurepedia",
+   "title": "Gemini Skills for repeatable tasks",
+   "views": 2769,
+   "date": "2026-10-11",
+   "url": "https://youtu.be/R4W9FJ8XR0o"
+  },
+  {
+   "channel": "Futurepedia",
+   "title": "Does Gemini's Write Like Me make emails sound like you?",
+   "views": 2234,
+   "date": "2026-10-09",
+   "url": "https://youtu.be/6YEtBN76MK0"
+  },
+  {
+   "channel": "Futurepedia",
+   "title": "Nano Banana just dropped me into a barrel wave",
+   "views": 2054,
+   "date": "2026-10-14",
+   "url": "https://youtu.be/2zBvyF4IExY"
+  },
+  {
+   "channel": "Futurepedia",
+   "title": "Four AI models, one ad, one clear winner.",
+   "views": 1958,
+   "date": "2026-10-15",
+   "url": "https://youtu.be/umyrdpsnFCA"
+  },
+  {
+   "channel": "Futurepedia",
+   "title": "A to Z without a single mistake?",
+   "views": 1903,
+   "date": "2026-10-17",
+   "url": "https://youtu.be/Ar8yKK2liUw"
+  },
+  {
+   "channel": "Futurepedia",
+   "title": "Who nails the most realistic concert photo?",
+   "views": 1594,
    "date": "2026-10-16",
-   "url": "https://youtu.be/WXWFmwfo1JA"
+   "url": "https://youtu.be/pur1QwIA0qg"
+  },
+  {
+   "channel": "Futurepedia",
+   "title": "Claude video style database for free",
+   "views": 1540,
+   "date": "2026-10-22",
+   "url": "https://youtu.be/xr024WjmJUY"
+  },
+  {
+   "channel": "Futurepedia",
+   "title": "Last 30 Days: your new real-time web search",
+   "views": 1531,
+   "date": "2026-10-13",
+   "url": "https://youtu.be/7-556KlDMfg"
   }
  ],
  "_bank": [
@@ -480,18 +477,18 @@
    "url": "https://youtu.be/cR0TaYikrz8"
   },
   {
+   "channel": "Futurepedia",
+   "title": "Claude Makes a New Kind of Video - Full Tutorial",
+   "views": 204819,
+   "date": "2026-10-19",
+   "url": "https://youtu.be/Ge1B-Ok1Pfk"
+  },
+  {
    "channel": "Skill Leap AI",
    "title": "The Biggest ChatGPT Update Yet: Meet dots",
    "views": 200406,
    "date": "2026-09-29",
    "url": "https://youtu.be/gfh6l3DxHK0"
-  },
-  {
-   "channel": "Futurepedia",
-   "title": "Claude Makes a New Kind of Video - Full Tutorial",
-   "views": 195843,
-   "date": "2026-10-19",
-   "url": "https://youtu.be/Ge1B-Ok1Pfk"
   },
   {
    "channel": "Jeff Su",

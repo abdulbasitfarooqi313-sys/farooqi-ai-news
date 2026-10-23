@@ -1,21 +1,44 @@
-18:37:22 news: start
-18:37:26 news: 93 competitor videos, 110 trending items
-18:37:27 gemini-3.6-flash: HTTP 503 in 1s
-18:37:37 gemini-3.6-flash: HTTP 503 in 0s
-18:38:07 gemini-3.5-flash-lite: HTTP 200 in 19s
-18:38:07    finish=STOP chars=15164
-18:38:07 toolscape: start
-18:38:10 toolscape: 135 competitor videos, 80 trending items
-18:38:12 gemini-3.6-flash: HTTP 503 in 1s
-18:38:22 gemini-3.6-flash: HTTP 429 in 0s
-18:38:22    {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
-18:38:56 gemini-3.5-flash-lite: HTTP 200 in 14s
-18:38:56    finish=STOP chars=15288
-18:38:56 nawa: start
-18:38:59 nawa: 59 competitor videos, 21 trending items
-18:38:59 gemini-3.6-flash: HTTP 429 in 0s
-18:38:59    {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
-18:39:19 gemini-3.6-flash: HTTP 429 in 0s
-18:39:19    {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
-18:39:56 gemini-3.5-flash-lite: HTTP 200 in 17s
-18:39:56    finish=STOP chars=12868
+03:19:17 news: start
+03:19:20 news: 15 competitor videos, 110 trending items
+03:19:23 gemini-3.6-flash: HTTP 503 in 2s
+03:20:07 gemini-3.6-flash: HTTP 200 in 34s
+03:20:07    finish=STOP chars=15933
+03:20:07 desk news: JSON error (Expecting ',' delimiter: line 130 column 9 (char 5302))
+03:20:07 gemini-3.6-flash: HTTP 429 in 0s
+03:20:07    {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+03:20:30 gemini-3.6-flash: HTTP 503 in 3s
+03:20:56 gemini-3.5-flash-lite: HTTP 200 in 16s
+03:20:56    finish=STOP chars=15460
+03:20:56 desk news: JSON error (Expecting property name enclosed in double quotes: line 168 column 9 (char 9350))
+03:20:56 news: FAILED desk news: Expecting property name enclosed in double quotes: line 168 column 9 (char 9350)
+03:20:56 toolscape: start
+03:21:16 toolscape: 15 competitor videos, 80 trending items
+03:21:16 gemini-3.6-flash: HTTP 429 in 0s
+03:21:16    {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+03:21:40 gemini-3.6-flash: HTTP 503 in 4s
+03:22:00 gemini-3.5-flash-lite: HTTP 200 in 10s
+03:22:00    finish=STOP chars=14426
+03:22:00 desk toolscape: JSON error (Expecting ',' delimiter: line 219 column 41 (char 13649))
+03:22:00 gemini-3.6-flash: HTTP 429 in 0s
+03:22:00    {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+03:22:20 gemini-3.6-flash: HTTP 429 in 0s
+03:22:20    {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+03:22:51 gemini-3.5-flash-lite: HTTP 200 in 10s
+03:22:51    finish=STOP chars=13569
+03:22:51 nawa: start
+03:22:53 nawa: 0 competitor videos, 21 trending items
+03:22:53 gemini-3.6-flash: HTTP 429 in 0s
+03:22:53    {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+03:23:13 gemini-3.6-flash: HTTP 429 in 0s
+03:23:13    {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+03:23:45 gemini-3.5-flash-lite: HTTP 200 in 12s
+03:23:45    finish=STOP chars=11161
+03:23:45 desk nawa: JSON error (Expecting property name enclosed in double quotes: line 111 column 5 (char 4666))
+03:23:46 gemini-3.6-flash: HTTP 429 in 0s
+03:23:46    {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+03:24:06 gemini-3.6-flash: HTTP 429 in 0s
+03:24:06    {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+03:24:36 gemini-3.5-flash-lite: HTTP 200 in 11s
+03:24:36    finish=STOP chars=10722
+03:24:36 desk nawa: JSON error (Expecting property name enclosed in double quotes: line 168 column 9 (char 6820))
+03:24:36 nawa: FAILED desk nawa: Expecting property name enclosed in double quotes: line 168 column 9 (char 6820)

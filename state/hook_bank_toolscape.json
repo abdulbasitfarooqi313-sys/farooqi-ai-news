@@ -63,18 +63,18 @@
   "url": "https://youtu.be/cR0TaYikrz8"
  },
  {
+  "channel": "Futurepedia",
+  "title": "Claude Makes a New Kind of Video - Full Tutorial",
+  "views": 204819,
+  "date": "2026-10-19",
+  "url": "https://youtu.be/Ge1B-Ok1Pfk"
+ },
+ {
   "channel": "Skill Leap AI",
   "title": "The Biggest ChatGPT Update Yet: Meet dots",
   "views": 200406,
   "date": "2026-09-29",
   "url": "https://youtu.be/gfh6l3DxHK0"
- },
- {
-  "channel": "Futurepedia",
-  "title": "Claude Makes a New Kind of Video - Full Tutorial",
-  "views": 195843,
-  "date": "2026-10-19",
-  "url": "https://youtu.be/Ge1B-Ok1Pfk"
  },
  {
   "channel": "Jeff Su",
@@ -436,7 +436,7 @@
  {
   "channel": "Futurepedia",
   "title": "The Ultimate Image Generator Showdown",
-  "views": 20962,
+  "views": 21029,
   "date": "2026-10-09",
   "url": "https://youtu.be/QLv4WCKVqd0"
  },
@@ -623,6 +623,13 @@
   "url": "https://youtu.be/d1X2YiDozLQ"
  },
  {
+  "channel": "Futurepedia",
+  "title": "Claude just made motion graphics with zero video generator",
+  "views": 6967,
+  "date": "2026-10-20",
+  "url": "https://youtu.be/2gVfS19Hudk"
+ },
+ {
   "channel": "The AI Advantage",
   "title": "GPT 6 & UI Update",
   "views": 6866,
@@ -644,13 +651,6 @@
   "url": "https://youtu.be/S2srfNCa50A"
  },
  {
-  "channel": "Futurepedia",
-  "title": "Claude just made motion graphics with zero video generator",
-  "views": 6171,
-  "date": "2026-10-20",
-  "url": "https://youtu.be/2gVfS19Hudk"
- },
- {
   "channel": "The AI Advantage",
   "title": "How does Claude Motion work?",
   "views": 5521,
@@ -667,7 +667,7 @@
  {
   "channel": "Futurepedia",
   "title": "Remotion vs  Hyperframes. One prompt. One map skill",
-  "views": 5304,
+  "views": 5326,
   "date": "2026-10-05",
   "url": "https://youtu.be/RxB56eE5BRc"
  },
@@ -693,6 +693,13 @@
   "url": "https://youtu.be/wtm2Dl1PHtk"
  },
  {
+  "channel": "Futurepedia",
+  "title": "Claude video generator turns your single prompt into a stylized movie",
+  "views": 4958,
+  "date": "2026-10-21",
+  "url": "https://youtu.be/KZRUdQYU4dI"
+ },
+ {
   "channel": "AI Master",
   "title": "How to Make Viral Shorts With AI (Claude Video Workflow)",
   "views": 4636,
@@ -705,13 +712,6 @@
   "views": 4602,
   "date": "2026-10-09",
   "url": "https://youtu.be/rAKVvImQcEQ"
- },
- {
-  "channel": "Futurepedia",
-  "title": "Claude video generator turns your single prompt into a stylized movie",
-  "views": 4488,
-  "date": "2026-10-21",
-  "url": "https://youtu.be/KZRUdQYU4dI"
  },
  {
   "channel": "AI Master",
@@ -758,7 +758,7 @@
  {
   "channel": "Futurepedia",
   "title": "Use Skills and Gemini to execute tasks consistently",
-  "views": 3412,
+  "views": 3426,
   "date": "2026-10-06",
   "url": "https://youtu.be/JwZVcb_vJT0"
  },
@@ -792,17 +792,17 @@
  },
  {
   "channel": "Futurepedia",
-  "title": "Gemini Skills for repeatable tasks",
-  "views": 2754,
-  "date": "2026-10-11",
-  "url": "https://youtu.be/R4W9FJ8XR0o"
+  "title": "Your Personalized AI Plan, Free | Futurepedia 2.0",
+  "views": 2869,
+  "date": "2026-10-20",
+  "url": "https://youtu.be/qXlgk8VExhI"
  },
  {
   "channel": "Futurepedia",
-  "title": "Your Personalized AI Plan, Free | Futurepedia 2.0",
-  "views": 2737,
-  "date": "2026-10-20",
-  "url": "https://youtu.be/qXlgk8VExhI"
+  "title": "Gemini Skills for repeatable tasks",
+  "views": 2769,
+  "date": "2026-10-11",
+  "url": "https://youtu.be/R4W9FJ8XR0o"
  },
  {
   "channel": "Skill Leap AI",
@@ -842,14 +842,14 @@
  {
   "channel": "Futurepedia",
   "title": "Does Gemini's Write Like Me make emails sound like you?",
-  "views": 2228,
+  "views": 2234,
   "date": "2026-10-09",
   "url": "https://youtu.be/6YEtBN76MK0"
  },
  {
   "channel": "Futurepedia",
   "title": "Nano Banana just dropped me into a barrel wave",
-  "views": 2048,
+  "views": 2054,
   "date": "2026-10-14",
   "url": "https://youtu.be/2zBvyF4IExY"
  },
@@ -863,7 +863,7 @@
  {
   "channel": "Futurepedia",
   "title": "Four AI models, one ad, one clear winner.",
-  "views": 1950,
+  "views": 1958,
   "date": "2026-10-15",
   "url": "https://youtu.be/umyrdpsnFCA"
  },
@@ -877,21 +877,28 @@
  {
   "channel": "Futurepedia",
   "title": "A to Z without a single mistake?",
-  "views": 1881,
+  "views": 1903,
   "date": "2026-10-17",
   "url": "https://youtu.be/Ar8yKK2liUw"
  },
  {
   "channel": "Futurepedia",
   "title": "Who nails the most realistic concert photo?",
-  "views": 1585,
+  "views": 1594,
   "date": "2026-10-16",
   "url": "https://youtu.be/pur1QwIA0qg"
  },
  {
   "channel": "Futurepedia",
+  "title": "Claude video style database for free",
+  "views": 1540,
+  "date": "2026-10-22",
+  "url": "https://youtu.be/xr024WjmJUY"
+ },
+ {
+  "channel": "Futurepedia",
   "title": "Last 30 Days: your new real-time web search",
-  "views": 1529,
+  "views": 1531,
   "date": "2026-10-13",
   "url": "https://youtu.be/7-556KlDMfg"
  },
@@ -936,12 +943,5 @@
   "views": 60,
   "date": "2026-10-22",
   "url": "https://youtu.be/nc2ocx3ST8Q"
- },
- {
-  "channel": "Futurepedia",
-  "title": "Claude video style database for free",
-  "views": 38,
-  "date": "2026-10-22",
-  "url": "https://youtu.be/xr024WjmJUY"
  }
 ]
