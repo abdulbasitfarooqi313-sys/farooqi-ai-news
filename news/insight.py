@@ -4,6 +4,7 @@
 "@handle|regex" لکھیں تو اس چینل کی صرف وہ ویڈیوز لی جائیں گی جن کے عنوان میں regex ملے (مثلاً عام خبروں کے چینل سے صرف AI والی)۔
 """
 import datetime as dt
+import time
 import json
 import re
 import xml.etree.ElementTree as ET
@@ -63,7 +64,11 @@ def competitor_videos(niche: str = "news", max_age_days: int = 30) -> list:
         h, _, pat = entry.partition("|")
         try:
             cid = _channel_id(h, cache)
-            r = requests.get(f"https://www.youtube.com/feeds/videos.xml?channel_id={cid}", headers=UA, timeout=25)
+            for attempt in range(3):                  # یوٹیوب کبھی کبھار عارضی طور پر انکار کرتا ہے
+                r = requests.get(f"https://www.youtube.com/feeds/videos.xml?channel_id={cid}", headers=UA, timeout=25)
+                if r.ok:
+                    break
+                time.sleep(3 * (attempt + 1))
             r.raise_for_status()
             root = ET.fromstring(r.text)
             name = root.findtext("a:title", "", NS)

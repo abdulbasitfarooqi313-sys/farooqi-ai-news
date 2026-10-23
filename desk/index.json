@@ -3,18 +3,21 @@
   "date": "2026-10-22",
   "file": "desk/nawa.html",
   "label": "Nawa-e-Farooqi",
-  "title": "روزنامچہ — نوائے فاروقی — 2026-10-22"
+  "title": "روزنامچہ — نوائے فاروقی — 2026-10-22",
+  "hash": "eba73b2c414d"
  },
  "news": {
   "date": "2026-10-22",
   "file": "desk/news.html",
   "label": "AI News",
-  "title": "روزنامچہ — فاروقی اے آئی نیوز — 2026-10-22"
+  "title": "روزنامچہ — فاروقی اے آئی نیوز — 2026-10-22",
+  "hash": "027d02589ae1"
  },
  "toolscape": {
   "date": "2026-10-23",
   "file": "desk/toolscape.html",
   "label": "Toolscape",
-  "title": "روزنامچہ — Toolscape — 2026-10-23"
+  "title": "روزنامچہ — Toolscape — 2026-10-23",
+  "hash": "836e27245208"
  }
 }

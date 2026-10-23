@@ -76,9 +76,9 @@ Channel: {name} — {about}
 
 Return ONLY this JSON:
 {{"summary": "2 sentences: the big picture today for this channel",
- "topics": [10 items, most promising first: {{"title": "topic", "why": "1 sentence why it is hot / useful now",
+ "topics": [10 items, RANKED STRICTLY by how much the topic is trending right now (rank 1 = most discussed); give each a different trend score so the ranking is unambiguous: {{"title": "topic", "why": "1 sentence why it is hot / useful now",
             "trend": 1-10, "sources": ["where it is being discussed: site or competitor channel names"]}}],
- "packages": [3 items for the top 3 topics: {{
+ "packages": [3 items for topics ranked 1, 2 and 3, in that order: {{
     "topic": "topic",
     "competitors": "1-2 sentences: how competitors covered it (name them) and what they missed",
     "angle": "1 sentence: our different / better angle",
@@ -174,7 +174,15 @@ def build(niche: str) -> dict:
     d, last = None, None
     for i in range(2):          # لمبا جواب: بڑی حد (اردو میں 8 ہزار ٹوکن کم پڑتے ہیں)
         try:
-            d = parse_json(ask(system, user + ("" if not i else "\n\nIMPORTANT: return complete, valid JSON only; keep texts shorter.")))
+            txt = ask(system, user + ("" if not i else "\n\nIMPORTANT: return complete, valid JSON only; keep texts shorter."))
+            try:
+                d = parse_json(txt)
+            except ValueError:
+                import json_repair                      # ہلکے ماڈل کی معمولی JSON غلطیاں خود درست
+                d = json_repair.loads(txt)
+                if not isinstance(d, dict) or not d.get("topics"):
+                    raise ValueError("JSON could not be repaired")
+                note(f"desk {niche}: JSON repaired")
             break
         except ValueError as e:
             last = e
@@ -232,7 +240,25 @@ def _copy(x) -> str:
     return f'<div class="copy">{_e(x)}</div>' if x else ""
 
 
+def _score(x) -> float:
+    try:
+        return float(str(x).split("/")[0])
+    except Exception:
+        return 0.0
+
+
+def rank(d: dict) -> dict:
+    """موضوعات ٹرینڈ نمبر کے حساب سے سختی سے ترتیب: سب سے زیادہ والا نمبر 1؛ پیکج بھی اسی ترتیب سے"""
+    tp = d.get("topics") or []
+    d["topics"] = sorted(tp, key=lambda t: -_score(t.get("trend")))  # sorted() مستحکم: برابر نمبر پر جیمنائی کی ترتیب
+    order = {re.sub(r"\W+", "", (t.get("title") or "").lower()): i for i, t in enumerate(d["topics"])}
+    d["packages"] = sorted(d.get("packages") or [],
+                           key=lambda p: order.get(re.sub(r"\W+", "", (p.get("topic") or "").lower()), 99))
+    return d
+
+
 def render(niche: str, d: dict, day: str) -> str:
+    d = rank(d)
     cfg = NICHES[niche]
     rtl = cfg["rtl"]
     L = (lambda ur, en: ur if rtl else en)
@@ -248,7 +274,7 @@ def render(niche: str, d: dict, day: str) -> str:
          f'<h2>🔥 {L("آج کے 10 ٹرینڈنگ موضوعات", "Top 10 trending topics today")}</h2>',
          f'<div class="tbl"><table><tr><th>#</th><th>{L("موضوع", "Topic")}</th><th>{L("ٹرینڈ", "Trend")}</th><th>{L("کیوں / کہاں", "Why / where")}</th></tr>']
     for i, t in enumerate(d.get("topics", [])[:10], 1):
-        tr = max(1, min(10, int(t.get("trend")))) if str(t.get("trend", "")).isdigit() else 5
+        tr = max(1, min(10, round(_score(t.get("trend")) or 5)))
         o.append(f'<tr><td class="num">{i}</td><td><b>{_e(t.get("title"))}</b></td>'
                  f'<td><span class="num">{tr}/10</span><span class="meter"><i style="width:{tr * 10}%"></i></span></td>'
                  f'<td>{_e(t.get("why"))}<br><span class="muted">{_e(", ".join(t.get("sources") or []))}</span></td></tr>')
@@ -305,12 +331,14 @@ def main(niches: list[str]) -> None:
             traceback.print_exc()
             note(f"{n}: FAILED {e}")
             continue
-        (OUT / f"{n}.html").write_text(render(n, d, day), encoding="utf-8")
+        page = render(n, d, day)
+        (OUT / f"{n}.html").write_text(page, encoding="utf-8")
         (OUT / f"{n}.json").write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
         (OUT / f"{n}_brief.txt").write_text(insight.brief(n, data=(d["_competitors"], d["_bank"])), encoding="utf-8")
         cfg = NICHES[n]
         idx[n] = {"date": day, "file": f"desk/{n}.html", "label": cfg["label"],
-                  "title": f"روزنامچہ — {cfg['name']} — {day}"}
+                  "title": f"روزنامچہ — {cfg['name']} — {day}",
+                  "hash": __import__("hashlib").sha1(page.encode()).hexdigest()[:12]}
         print(f"desk {n}: {len(d.get('topics', []))} topics, {len(d.get('packages', []))} packages")
     idx_p.write_text(json.dumps(idx, ensure_ascii=False, indent=1), encoding="utf-8")
     (OUT / "log.txt").write_text("\n".join(LOG), encoding="utf-8")
