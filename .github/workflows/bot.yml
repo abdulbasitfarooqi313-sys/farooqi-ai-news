@@ -43,3 +43,13 @@ jobs:
         run: |
           [ -f /tmp/news_dispatch ] || exit 0
           gh workflow run bulletin.yml --ref "${{ github.ref_name }}" -f force=yes
+
+      - name: Alert on failure
+        if: failure()
+        env:
+          TOKEN: ${{ secrets.NEWS_BOT_TOKEN || secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT_SECRET: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          CHAT=$(python3 -c "import json;print(json.load(open('state/news.json')).get('chat',''))" 2>/dev/null); CHAT=${CHAT:-$CHAT_SECRET}
+          curl -s -X POST "https://api.telegram.org/bot$TOKEN/sendMessage" --data-urlencode "chat_id=$CHAT" \
+            --data-urlencode "text=⚠️ اے آئی نیوز: «${{ github.workflow }}» ناکام ہو گیا۔ یہ لنک Jules یا Claude کو دکھائیں: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" >/dev/null || true
