@@ -17,16 +17,10 @@ Traceback (most recent call last):
                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 309, in group
     return group(ts[:h], tg_ + "a") + group(ts[h:], tg_ + "b")
-                                      ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 309, in group
-    return group(ts[:h], tg_ + "a") + group(ts[h:], tg_ + "b")
            ^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 321, in group
     return group(ts[:h], tg_ + "a") + group(ts[h:], tg_ + "b")
            ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 321, in group
-    return group(ts[:h], tg_ + "a") + group(ts[h:], tg_ + "b")
-                                      ^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 310, in group
     whole = one("\n\n".join(t.strip() for t in ts), tmp / f"{tg_}_all.wav")
             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -38,7 +32,7 @@ Traceback (most recent call last):
 news.base.TTSQuota: آواز (Gemini TTS) کا آج کا مفت کوٹہ ختم ہو گیا
 
 
-Kore: 0 حصے محفوظ شدہ، 24 نئے
+Kore: 13 حصے محفوظ شدہ، 11 نئے
 TTS Kore بغیر آواز: {
   "candidates": [
     {
@@ -47,84 +41,12 @@ TTS Kore بغیر آواز: {
     }
   ],
   "usageMetadata": {
-    "promptTokenCount": 176,
-    "totalTokenCount": 176,
+    "promptTokenCount": 318,
+    "totalTokenCount": 318,
     "promptTokensDetails": [
       {
         "modality": "TEXT",
-        "tokenCount": 176
-      }
-    ],
-    "serviceTier": "standard"
- 
-TTS Kore بغیر آواز: {
-  "candidates": [
-    {
-      "finishReason": "OTHER",
-      "index": 0
-    }
-  ],
-  "usageMetadata": {
-    "promptTokenCount": 271,
-    "totalTokenCount": 271,
-    "promptTokensDetails": [
-      {
-        "modality": "TEXT",
-        "tokenCount": 271
-      }
-    ],
-    "serviceTier": "standard"
- 
-TTS Kore بغیر آواز: {
-  "candidates": [
-    {
-      "finishReason": "OTHER",
-      "index": 0
-    }
-  ],
-  "usageMetadata": {
-    "promptTokenCount": 144,
-    "totalTokenCount": 144,
-    "promptTokensDetails": [
-      {
-        "modality": "TEXT",
-        "tokenCount": 144
-      }
-    ],
-    "serviceTier": "standard"
- 
-TTS Kore بغیر آواز: {
-  "candidates": [
-    {
-      "finishReason": "OTHER",
-      "index": 0
-    }
-  ],
-  "usageMetadata": {
-    "promptTokenCount": 333,
-    "totalTokenCount": 333,
-    "promptTokensDetails": [
-      {
-        "modality": "TEXT",
-        "tokenCount": 333
-      }
-    ],
-    "serviceTier": "standard"
- 
-TTS Kore بغیر آواز: {
-  "candidates": [
-    {
-      "finishReason": "OTHER",
-      "index": 0
-    }
-  ],
-  "usageMetadata": {
-    "promptTokenCount": 182,
-    "totalTokenCount": 182,
-    "promptTokensDetails": [
-      {
-        "modality": "TEXT",
-        "tokenCount": 182
+        "tokenCount": 318
       }
     ],
     "serviceTier": "standard"
