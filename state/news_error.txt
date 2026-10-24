@@ -11,16 +11,10 @@ Traceback (most recent call last):
                ^^^^^^^^^^^^^^^
   File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 424, in _voices
     return _speak(at, ANCHOR_VOICE, tmp, "anc"), (_speak(rt, REPORTER_VOICE, tmp, "rep") if rt else [])
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 341, in _speak
     for i, p in zip(rr, group([texts[i] for i in rr], f"{tag}{j}")):
                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 309, in group
-    return group(ts[:h], tg_ + "a") + group(ts[h:], tg_ + "b")
-           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 321, in group
-    return group(ts[:h], tg_ + "a") + group(ts[h:], tg_ + "b")
-                                      ^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 310, in group
     whole = one("\n\n".join(t.strip() for t in ts), tmp / f"{tg_}_all.wav")
             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -32,26 +26,9 @@ Traceback (most recent call last):
 news.base.TTSQuota: آواز (Gemini TTS) کا آج کا مفت کوٹہ ختم ہو گیا
 
 
-Kore: 13 حصے محفوظ شدہ، 11 نئے
-TTS Kore بغیر آواز: {
-  "candidates": [
-    {
-      "finishReason": "OTHER",
-      "index": 0
-    }
-  ],
-  "usageMetadata": {
-    "promptTokenCount": 318,
-    "totalTokenCount": 318,
-    "promptTokensDetails": [
-      {
-        "modality": "TEXT",
-        "tokenCount": 318
-      }
-    ],
-    "serviceTier": "standard"
- 
-TTS Kore 429: {
+Kore: 16 حصے محفوظ شدہ، 8 نئے
+Charon: 0 حصے محفوظ شدہ، 2 نئے
+TTS Charon 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10,
