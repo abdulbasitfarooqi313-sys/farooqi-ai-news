@@ -1,19 +1,5 @@
 COMPETITORS' LATEST VIDEOS (last 30 days, most viewed first):
-- [Futurepedia] "Claude Makes a New Kind of Video - Full Tutorial" — 204,819 views (2026-10-19)
-- [Futurepedia] "The Ultimate Image Generator Showdown" — 21,029 views (2026-10-09)
-- [Futurepedia] "Claude just made motion graphics with zero video generator" — 6,967 views (2026-10-20)
-- [Futurepedia] "Remotion vs  Hyperframes. One prompt. One map skill" — 5,326 views (2026-10-05)
-- [Futurepedia] "Claude video generator turns your single prompt into a stylized movie" — 4,958 views (2026-10-21)
-- [Futurepedia] "Use Skills and Gemini to execute tasks consistently" — 3,426 views (2026-10-06)
-- [Futurepedia] "Your Personalized AI Plan, Free | Futurepedia 2.0" — 2,869 views (2026-10-20)
-- [Futurepedia] "Gemini Skills for repeatable tasks" — 2,769 views (2026-10-11)
-- [Futurepedia] "Does Gemini's Write Like Me make emails sound like you?" — 2,234 views (2026-10-09)
-- [Futurepedia] "Nano Banana just dropped me into a barrel wave" — 2,054 views (2026-10-14)
-- [Futurepedia] "Four AI models, one ad, one clear winner." — 1,958 views (2026-10-15)
-- [Futurepedia] "A to Z without a single mistake?" — 1,903 views (2026-10-17)
-- [Futurepedia] "Who nails the most realistic concert photo?" — 1,594 views (2026-10-16)
-- [Futurepedia] "Claude video style database for free" — 1,540 views (2026-10-22)
-- [Futurepedia] "Last 30 Days: your new real-time web search" — 1,531 views (2026-10-13)
+
 
 HOOK BANK (best performing titles collected so far — learn the PATTERN, never copy):
 - [Dan Kieft] "How I Make Realistic AI Videos with Seedance 2.5 - Full Guide" — 438,120 views (2026-10-16)

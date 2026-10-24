@@ -1,417 +1,317 @@
 {
- "summary": "Today's desk focuses on step-by-step tutorials for new AI workflow tools like Claude's video generator, LinkedIn's job tools, and local document management systems. We are targeting beginners who want practical, free methods to automate tasks without coding.",
+ "summary": "Today's landscape highlights growing demand for zero-cost, open-source AI utilities alongside heightened awareness around data privacy and local masking. Creators are shifting away from general news updates toward concrete step-by-step guides that teach viewers how to secure their workflows and automate repetitive document tasks.",
  "topics": [
   {
-   "title": "Claude Video Generation Tool",
-   "why": "Competitors are pulling massive views showing Claude's new video style database and motion graphics capabilities.",
+   "title": "Documind Open-Source Document Data Extractor",
+   "why": "It solves the universal beginner friction of manually typing data from scanned PDF invoices and receipts into structured spreadsheets for free.",
    "trend": 10,
    "sources": [
-    "Futurepedia",
-    "Product Hunt"
+    "hnrss.org",
+    "producthunt.com"
    ]
   },
   {
-   "title": "LinkedIn AI Job Application Tool",
-   "why": "Job applications are up 30% and LinkedIn's new features are trending across major news outlets.",
+   "title": "Conseal On-Device Data Privacy App for LLMs",
+   "why": "Growing user anxiety around AI training policies makes local data masking tools crucial for everyday ChatGPT and Claude users.",
    "trend": 9,
    "sources": [
     "news.google.com",
-    "Forbes"
+    "reddit.com"
    ]
   },
   {
-   "title": "Open-Source Documind AI Tool",
-   "why": "A trending HN item showing how to turn unstructured documents into clean data using a free open-source setup.",
+   "title": "ElevenLabs Realtime Low-Latency Voice AI",
+   "why": "Real-time conversational voice tools are trending on Product Hunt for language learning, interview prep, and hands-free study.",
    "trend": 8,
+   "sources": [
+    "producthunt.com",
+    "reddit.com"
+   ]
+  },
+  {
+   "title": "FLUX 3 Max & Speed-Focused Image Generators",
+   "why": "New high-resolution image model updates are sparking renewed interest in fast, high-quality image generation without long wait times.",
+   "trend": 7,
+   "sources": [
+    "producthunt.com",
+    "hnrss.org"
+   ]
+  },
+  {
+   "title": "ChatGPT Custom Instructions, Skills, and Projects",
+   "why": "Beginners on Reddit and YouTube remain confused about organizing custom settings versus workspace projects within ChatGPT.",
+   "trend": 6,
+   "sources": [
+    "reddit.com",
+    "Skill Leap AI"
+   ]
+  },
+  {
+   "title": "OpenAI Codex Task Automation for Beginners",
+   "why": "Non-coders are looking for clear step-by-step guides on using Codex to automate daily computer and file tasks without writing code.",
+   "trend": 5,
+   "sources": [
+    "reddit.com",
+    "Kevin Stratvert"
+   ]
+  },
+  {
+   "title": "ShogunAI & No-Code Personal Task Agents",
+   "why": "Personal task agents are gaining traction on Product Hunt as users seek automated web assistants for routine research.",
+   "trend": 4,
+   "sources": [
+    "producthunt.com",
+    "Jeff Su"
+   ]
+  },
+  {
+   "title": "AI Privacy Policy Summarizers",
+   "why": "Show HN tools that read long privacy policies and flag data selling are generating strong engagement among security-conscious users.",
+   "trend": 3,
    "sources": [
     "hnrss.org"
    ]
   },
   {
-   "title": "ChatGPT Blender Integration",
-   "why": "Reddit users are sharing direct ChatGPT subscriptions inside Blender, cutting out complex plugins.",
-   "trend": 7,
+   "title": "FaceAge Biological Health Assessment AI",
+   "why": "Consumer news coverage around selfie-based age and health estimation tools is driving curiosity among mainstream users.",
+   "trend": 2,
    "sources": [
-    "reddit.com"
+    "news.google.com"
    ]
   },
   {
-   "title": "ElevenLabs Realtime Translation",
-   "why": "Fresh product launch on Product Hunt offering instantaneous voice translation for beginners.",
-   "trend": 7,
+   "title": "Open-Source Drawing Animation Tools",
+   "why": "Simple creative open-source AI utilities for turning simple sketches into animated graphics continue to perform well with beginners.",
+   "trend": 1,
    "sources": [
-    "producthunt.com"
-   ]
-  },
-  {
-   "title": "Meta AI Conversation Privacy Exposure",
-   "why": "Major news coverage regarding private conversations exposed online, highlighting privacy risks for beginners.",
-   "trend": 6,
-   "sources": [
-    "news.google.com",
-    "SFGATE"
-   ]
-  },
-  {
-   "title": "Spotify AI Remixing Tool",
-   "why": "Co-CEOs announced new remixing capabilities, creating high interest among audio creators.",
-   "trend": 6,
-   "sources": [
-    "news.google.com",
-    "Billboard"
-   ]
-  },
-  {
-   "title": "FaceAge Biological Age Tool",
-   "why": "CBS News and public releases highlight a viral selfie-based age tool that anyone can test for free.",
-   "trend": 6,
-   "sources": [
-    "news.google.com",
-    "CBS News"
-   ]
-  },
-  {
-   "title": "Mistral Voxtral 3",
-   "why": "New voice model release on Product Hunt capturing developer and enthusiast interest.",
-   "trend": 5,
-   "sources": [
-    "producthunt.com"
-   ]
-  },
-  {
-   "title": "Hugging Face DNA Chatbot Model",
-   "why": "WIRED covered the new biology model allowing users to chat directly with DNA sequences.",
-   "trend": 5,
-   "sources": [
-    "news.google.com",
-    "WIRED"
+    "hnrss.org"
    ]
   }
  ],
  "packages": [
   {
-   "topic": "Claude Video Generation Tool",
-   "competitors": "Futurepedia covered Claude's video features with titles like 'Claude Makes a New Kind of Video' reaching over 200k views, but they missed a slow, click-by-click beginner walkthrough.",
-   "angle": "We show the exact prompt structure and free settings to generate your first motion graphic without any video editor experience.",
-   "viral": {
-    "score": 82,
-    "why": "Claude video features are currently exploding in search interest and our step-by-step tutorial format directly answers the implementation gap left by news-style competitor videos."
-   },
-   "long": {
-    "title": "How to Make AI Videos with Claude (Step-by-Step)",
-    "thumb": "Claude Video Guide",
-    "hook": "In the next 6 minutes you will turn a simple text prompt into a styled video using Claude's free tools. No video editor required.",
-    "outline": [
-     "Accessing Claude's video features",
-     "Writing your first motion prompt",
-     "Choosing style parameters",
-     "Exporting your clip",
-     "Fixing common prompt mistakes",
-     "Real-world workflow test"
-    ]
-   },
-   "shorts": [
-    {
-     "title": "Make AI Videos with Claude",
-     "hook": "Stop struggling with complex video editors when Claude can do this from a single prompt.",
-     "script": "Go to Claude and open the video generation tab. Type your scene description clearly. Pick your style preset from the free database. Hit generate and watch your text turn into motion graphics in seconds. Save this video to try it later.",
-     "cta": "Subscribe for more simple AI tool tutorials."
-    },
-    {
-     "title": "Claude's Hidden Video Feature",
-     "hook": "Did you know Claude can create motion graphics without any video generator?",
-     "script": "Most people use Claude just for text, but the new video style database lets you build clean visuals instantly. Just enter your prompt, select your aspect ratio, and export. Follow for more beginner tips.",
-     "cta": "Check the full tutorial on our channel."
-    }
-   ],
-   "carousel": {
-    "title": "Make Videos with Claude in 4 Steps",
-    "slides": [
-     "Step 1: Open Claude and select the style database feature",
-     "Step 2: Write a clear scene description prompt",
-     "Step 3: Choose your visual aspect ratio and motion preset",
-     "Step 4: Generate and download your clip for free",
-     "Bonus: One common mistake to avoid when prompting"
-    ]
-   },
-   "posts": {
-    "x": [
-     "Want to make motion graphics without a video editor? Here is how to use Claude's new video tool step by step in under 5 minutes: [link]",
-     "Stop wasting hours in heavy editing software. Claude's new video style database lets beginners create clips from text prompts instantly. Full guide here: [link]"
-    ],
-    "facebook": "We tested Claude's new video generation feature so you don't have to guess the settings. Watch our step-by-step beginner guide to make your first clip in minutes: [link]",
-    "instagram": "Turn simple text prompts into clean motion graphics using Claude's free features. Step-by-step tutorial link in bio! #AITutorial #ClaudeAI #ContentCreator",
-    "linkedin": "Video generation tools are evolving fast. Here is a practical, beginner-friendly guide on how to use Claude's new video features for your content workflow: [link]"
-   },
-   "article": {
-    "title": "How to Use Claude for AI Video Generation: A Beginner's Guide",
-    "outline": [
-     "Introduction to Claude's video features",
-     "Setting up your free account",
-     "How to write effective motion prompts",
-     "Exporting and formatting your files",
-     "Common limitations and downsides"
-    ]
-   }
-  },
-  {
-   "topic": "LinkedIn AI Job Application Tool",
-   "competitors": "Forbes and news outlets reported on LinkedIn's new AI tools for job seekers, but none provide a screen-recorded tutorial on how to safely use them.",
-   "angle": "We demonstrate exactly where to click inside LinkedIn to optimize your profile and application without sounding like a robot.",
-   "viral": {
-    "score": 74,
-    "why": "Job applications are up 30% and millions are looking for practical ways to use LinkedIn's new AI features safely."
-   },
-   "long": {
-    "title": "How to Use LinkedIn's New AI Job Tools",
-    "thumb": "LinkedIn AI Tool",
-    "hook": "In the next 5 minutes you will update your LinkedIn profile using the new built-in AI assistant to land more interviews.",
-    "outline": [
-     "Finding the new AI tool inside LinkedIn",
-     "Analyzing your current experience",
-     "Generating clean summary bullet points",
-     "Customizing your job application text",
-     "One privacy setting you must check"
-    ]
-   },
-   "shorts": [
-    {
-     "title": "LinkedIn AI Job Tool Guide",
-     "hook": "Job applications are up 30%—here is how to use LinkedIn's new AI tool to stand out.",
-     "script": "Go to your LinkedIn profile and look for the new AI assistance button in your summary section. Click it to rewrite your experience without sounding robotic. Review the output and save your changes. Follow for more work tips.",
-     "cta": "Subscribe for weekly tool updates."
-    },
-    {
-     "title": "Fix Your LinkedIn with AI",
-     "hook": "Stop guessing what recruiters want to see on your LinkedIn profile.",
-     "script": "LinkedIn just rolled out a new AI tool for job seekers. Open your profile, click edit, and let the assistant polish your headline. Make sure to edit the result so it sounds like you.",
-     "cta": "Watch the full guide on our channel."
-    }
-   ],
-   "carousel": {
-    "title": "Optimize Your LinkedIn With AI",
-    "slides": [
-     "Step 1: Navigate to your LinkedIn profile summary",
-     "Step 2: Click the new built-in AI optimization button",
-     "Step 3: Review and adjust the generated text",
-     "Step 4: Update your job application notes safely",
-     "Rule: Always add your personal voice before saving"
-    ]
-   },
-   "posts": {
-    "x": [
-     "Job applications are up 30%. Here is a quick walkthrough of LinkedIn's new AI tool and how to use it without sounding like a robot: [link]",
-     "Want more interview callbacks? Watch our step-by-step guide on using LinkedIn's new AI profile optimizer: [link]"
-    ],
-    "facebook": "LinkedIn just released new AI tools for job seekers. We tested them out and put together a simple tutorial on how to use them safely: [link]",
-    "instagram": "Boost your job search with LinkedIn's new AI assistant. Watch our full tutorial link in bio! #LinkedInAI #JobSearch #CareerTips",
-    "linkedin": "With job applications rising, LinkedIn's new AI tools can help streamline your search. Here is our step-by-step guide on how to use them effectively: [link]"
-   },
-   "article": {
-    "title": "How to Use LinkedIn's New AI Job Tools Effectively",
-    "outline": [
-     "Overview of LinkedIn's recent AI updates",
-     "Where to find the AI assistant on your profile",
-     "Step-by-step profile optimization",
-     "Best practices for applying safely",
-     "Downsides to keep in mind"
-    ]
-   }
-  },
-  {
-   "topic": "Open-Source Documind AI Tool",
-   "competitors": "Hacker News discussions covered Documind as an open-source solution, but technical writeups are too complex for average beginners.",
-   "angle": "We break down how to run Documind locally with zero coding experience to turn messy PDFs into organized spreadsheets.",
+   "topic": "Documind Open-Source Document Data Extractor",
+   "competitors": "Metics Media and Jeff Su covered document processing using paid Zapier steps or complex Python scripts, leaving beginners overwhelmed without zero-cost tools.",
+   "angle": "Show how to use Documind completely free with a simple drag-and-drop web UI to turn PDFs and receipts into structured Excel sheets in 5 minutes.",
    "viral": {
     "score": 68,
-    "why": "People are tired of paying monthly fees for document organization tools; showing a free open-source alternative attracts high beginner engagement."
+    "why": "Open-source document parsing solves a universal pain point for small business owners and students who refuse to pay expensive monthly software subscriptions."
    },
    "long": {
-    "title": "Turn Messy PDFs Into Data With This Free AI Tool",
-    "thumb": "Documind Free Tool",
-    "hook": "In the next 7 minutes you will turn a pile of messy PDF documents into a clean spreadsheet using a free open-source tool.",
+    "title": "Turn Messy PDFs Into Clean Spreadsheets Fast (Free AI Tool)",
+    "thumb": "Stop Copying PDFs!",
+    "hook": "In the next 5 minutes you will convert any scanned PDF or messy receipt into a clean Excel spreadsheet automatically. No manual typing, no complex coding, and completely free.",
     "outline": [
-     "What is Documind and why it is free",
-     "Downloading and opening the tool",
-     "Uploading your first batch of documents",
-     "Extracting structured data into CSV",
-     "Reviewing accuracy and fixing errors"
+     "Introduction to Documind open-source tool",
+     "Setting up your free workspace in 60 seconds",
+     "Uploading scanned PDFs and handwritten receipts",
+     "Defining structured custom fields (Date, Vendor, Total)",
+     "Exporting clean extracted data directly to CSV and Excel",
+     "One real downside: scanned handwriting must be legible"
     ]
    },
    "shorts": [
     {
-     "title": "Free PDF to Data AI Tool",
-     "hook": "Stop typing data from PDFs manually when this free open-source tool can do it instantly.",
-     "script": "Download Documind on your computer for free. Drag and drop your messy invoices or reports into the window. Click run, and watch it organize everything into a clean table. Save this video for your next project.",
-     "cta": "Subscribe for more free tool lists."
+     "title": "Stop Copying PDF Data Manually",
+     "hook": "Stop wasting hours copying numbers from scanned PDF receipts into Excel.",
+     "script": "There is a new open source tool called Documind that does it automatically. You just upload your PDF document, define what fields you want like total price or date, and it extracts every value into a clean table. It works on scanned invoices and contracts without making random typing mistakes.",
+     "cta": "Check our channel for the step-by-step setup guide."
     },
     {
-     "title": "Organize Files With Documind",
-     "hook": "This free open-source tool turns any document into structured data.",
-     "script": "If you are tired of paying for document parsers, try Documind. Drop in your files, set your columns, and let it extract the data locally. Follow for more open-source guides.",
-     "cta": "Check our channel for the full walkthrough."
+     "title": "Free AI Tool Turns Receipts into Excel",
+     "hook": "Here is how to turn a stack of paper receipts into a spreadsheet in seconds.",
+     "script": "Open the free tool Documind in your browser. Drag and drop your scanned receipts directly into the upload box. Click extract, and watch as it pulls vendor names, dates, and amounts into structured columns. You can download the entire dataset directly as a CSV file to open in Excel or Google Sheets.",
+     "cta": "Subscribe to Toolscape for daily free AI tutorials."
     }
    ],
    "carousel": {
-    "title": "Organize PDFs Free With Documind",
+    "title": "Extract PDF Data to Excel in 3 Steps",
     "slides": [
-     "Step 1: Download Documind from GitHub",
-     "Step 2: Open the local interface",
-     "Step 3: Drag and drop your messy documents",
-     "Step 4: Export structured data into Excel or CSV",
-     "Downside: Requires basic computer setup knowledge"
+     "Tired of copying text from PDFs into Excel manually?",
+     "1. Go to the free open-source Documind web tool",
+     "2. Upload your scanned invoice or PDF document",
+     "3. Select the target fields you need (Date, Total, Vendor)",
+     "4. Click Export to download a ready-to-use CSV file",
+     "Downside: Very messy handwritten notes still require manual checking"
     ]
    },
    "posts": {
     "x": [
-     "Tired of paying for PDF parsers? Here is a step-by-step guide to using Documind, a free open-source AI tool for structured data: [link]",
-     "Turn messy documents into clean spreadsheets in minutes with this free open-source tool. Full tutorial here: [link]"
+     "Stop typing PDF data into Excel manually.",
+     "Documind is a new open-source AI tool that turns messy receipts and documents into clean structured tables for free. Here is how it works 👇"
     ],
-    "facebook": "We tested Documind, a new open-source AI tool that turns your messy documents into structured data without monthly fees. Watch the full tutorial: [link]",
-    "instagram": "Stop organizing files by hand! Here is how to use Documind for free. Tutorial link in bio! #OpenSource #Productivity #AITools",
-    "linkedin": "Open-source AI tools are changing document workflows. Here is how to set up Documind locally to extract clean data from your files: [link]"
+    "facebook": "Stop copying text from PDF invoices manually! Documind is a free open-source AI tool that automatically extracts data from any PDF into Excel spreadsheets.",
+    "instagram": "Transform your PDF invoices into structured Excel files in minutes using Documind! #AITools #Productivity #ExcelHacks #TechTutorial #FreeAI",
+    "linkedin": "Extracting structured data from unstructured PDF files used to require expensive software. Today, open-source AI tool Documind lets you turn PDF documents into clean CSV spreadsheets automatically for free."
    },
    "article": {
-    "title": "How to Use Documind: The Free Open-Source PDF AI Tool",
+    "title": "How to Extract PDF Data to Excel Using Free Open-Source AI (Documind Tutorial)",
     "outline": [
-     "What is Documind?",
-     "How to download and install it locally",
-     "Step-by-step document conversion",
-     "Exporting to CSV and Excel",
-     "Pros and cons of open-source document tools"
+     "What is Documind and How Does It Work?",
+     "Step-by-Step Setup for Beginners",
+     "Extracting Data from Invoices and Receipts",
+     "Exporting Custom Fields to Excel and CSV",
+     "Limitations and Best Practices"
+    ]
+   }
+  },
+  {
+   "topic": "Conseal On-Device Data Privacy App for LLMs",
+   "competitors": "Tech news outlets like LawSites reported on Conseal masking corporate client data, but focused on corporate legal setups without showing end users step-by-step browser usage.",
+   "angle": "Demonstrate how a beginner can use Conseal on-device to automatically scrub names, emails, and financial details before sending prompts to ChatGPT or Claude.",
+   "viral": {
+    "score": 62,
+    "why": "Privacy concerns are peaking after news of platforms training on user data and government bans on staff computers."
+   },
+   "long": {
+    "title": "Stop Sending Private Data to ChatGPT (Use This Free Shield)",
+    "thumb": "Protect Your Privacy!",
+    "hook": "In the next 6 minutes you will shield your private names, emails, and financial data from ChatGPT without changing how you write prompts. Works locally on your computer for free.",
+    "outline": [
+     "Why web AI platforms store your personal prompt data",
+     "Introducing Conseal on-device privacy tool",
+     "Installing and configuring the local browser shield",
+     "Testing automatic data masking live in ChatGPT",
+     "Sending masked prompts safely to Claude and other LLMs",
+     "One realistic downside: adds one extra click before sending prompts"
+    ]
+   },
+   "shorts": [
+    {
+     "title": "Hide Private Info Before Using ChatGPT",
+     "hook": "More organizations are blocking ChatGPT over data security concerns.",
+     "script": "If you paste private emails or financial numbers into ChatGPT, that data can be saved. A new on-device app called Conseal automatically detects and masks sensitive names, credit card numbers, and emails on your computer before sending your prompt. It keeps your AI results helpful while hiding your personal identity.",
+     "cta": "Watch our full step-by-step guide on Toolscape."
+    },
+    {
+     "title": "How to Block AI from Reading Your Personal Info",
+     "hook": "Are you worried about AI tools saving your personal information?",
+     "script": "Protect yourself with Conseal, an on-device privacy app. When you paste notes into Claude or ChatGPT, Conseal replaces private info with anonymized tokens locally on your machine. The AI processes your prompt, but never sees your real personal data.",
+     "cta": "Subscribe to Toolscape for the best AI privacy tips."
+    }
+   ],
+   "carousel": {
+    "title": "Mask Private Data Before Sending to ChatGPT",
+    "slides": [
+     "Why your ChatGPT prompts might expose personal info",
+     "1. Download the Conseal on-device privacy browser tool",
+     "2. Paste text containing private names or numbers",
+     "3. Conseal masks sensitive details automatically on your machine",
+     "4. Send the anonymized prompt safely to ChatGPT or Claude",
+     "Downside: Requires brief manual review to ensure all sensitive words are caught"
+    ]
+   },
+   "posts": {
+    "x": [
+     "Worried about ChatGPT saving your private information?",
+     "Conseal is a new on-device privacy tool that masks sensitive details before your prompt hits the cloud. Here is how to set it up 👇"
+    ],
+    "facebook": "Don't paste client data or personal numbers directly into ChatGPT. Use Conseal, a new on-device privacy tool that anonymizes your sensitive data locally before sending prompts.",
+    "instagram": "Keep your personal data safe from AI training models! Conseal masks sensitive info locally before sending prompts to ChatGPT or Claude. #PrivacyFirst #ChatGPTTips #CyberSecurity #AITools",
+    "linkedin": "As enterprise privacy concerns grow, on-device tools like Conseal are becoming essential. Learn how local data masking protects sensitive client information when using LLMs like ChatGPT and Claude."
+   },
+   "article": {
+    "title": "How to Protect Personal Data When Using ChatGPT and Claude",
+    "outline": [
+     "The Hidden Privacy Risks of AI Prompting",
+     "How On-Device Data Masking Works",
+     "Setting Up Conseal Step-by-Step",
+     "Testing Prompt Anonymization Live",
+     "Pros and Cons of Privacy Tools for LLMs"
+    ]
+   }
+  },
+  {
+   "topic": "ElevenLabs Realtime Low-Latency Voice AI",
+   "competitors": "Skill Leap AI and Matt Wolfe mentioned ElevenLabs voice updates in rapid-fire news roundups, but skipped walking beginners through clear real-world applications.",
+   "angle": "Provide a hands-on, zero-fluff guide for beginners to build an interactive voice partner for interview practice and study using ElevenLabs Realtime.",
+   "viral": {
+    "score": 55,
+    "why": "Voice AI is popular on Reddit, but audio tutorials need precise visual step-by-step clarity to remain practical for beginners."
+   },
+   "long": {
+    "title": "Master Real-Time AI Voice Chats in 6 Minutes",
+    "thumb": "Instant AI Voice!",
+    "hook": "In the next 6 minutes you will set up a zero-latency conversational AI partner to practice job interviews or study on the go. Works directly in your browser.",
+    "outline": [
+     "What makes ElevenLabs Realtime different from standard text-to-speech",
+     "Accessing the free web playground interface",
+     "Setting up a custom conversational persona for interview prep",
+     "Practicing real-time interactive voice conversations",
+     "Adjusting latency settings and voice interruption rules",
+     "One key downside: free account monthly audio credits run out quickly"
+    ]
+   },
+   "shorts": [
+    {
+     "title": "Practice Interviews with Real-Time Voice AI",
+     "hook": "Want to practice job interviews with an AI that responds instantly?",
+     "script": "ElevenLabs Realtime offers low-latency voice conversations with almost zero lag. You can give it a persona like an interviewer or tutor, and speak naturally back and forth. If you interrupt it, it stops speaking immediately just like a real person.",
+     "cta": "Full tutorial link in our channel bio."
+    },
+    {
+     "title": "The Easiest Way to Use ElevenLabs Realtime",
+     "hook": "Stop typing prompts when you can speak naturally to AI.",
+     "script": "ElevenLabs Realtime allows you to build an interactive voice assistant in under two minutes. Just choose a voice, set instructions like 'act as a patient tutor', and start talking. It hears you and replies in real-time without awkward pause delays.",
+     "cta": "Subscribe to Toolscape for easy AI voice guides."
+    }
+   ],
+   "carousel": {
+    "title": "How to Set Up ElevenLabs Realtime Voice",
+    "slides": [
+     "Tired of slow AI voice responses?",
+     "1. Open the ElevenLabs Realtime playground",
+     "2. Choose a clean, natural conversational voice model",
+     "3. Give the AI its role (Job Interviewer or Tutor)",
+     "4. Start talking with instant voice responses",
+     "Downside: High audio usage consumes free plan credits fast"
+    ]
+   },
+   "posts": {
+    "x": [
+     "ElevenLabs Realtime is live.",
+     "You can now have zero-latency conversational chats with AI for interview prep and learning. Here is how to try it for free 👇"
+    ],
+    "facebook": "Need an instant AI study partner? ElevenLabs Realtime lets you have realistic, zero-lag voice conversations on your browser or phone.",
+    "instagram": "Experience real-time voice conversations with AI! ElevenLabs Realtime delivers instant voice responses with zero delay. #ElevenLabs #VoiceAI #AITutorial #StudyTech",
+    "linkedin": "Interactive real-time audio is transforming corporate training and prep. Here is how to leverage ElevenLabs Realtime for realistic interview and language practice."
+   },
+   "article": {
+    "title": "Beginner Guide to ElevenLabs Realtime Conversational Voice AI",
+    "outline": [
+     "What is ElevenLabs Realtime Voice?",
+     "How Ultra-Low Latency Conversational AI Works",
+     "Step-by-Step Playground Setup Guide",
+     "Practical Use Cases: Interview Prep & Study",
+     "Managing Credit Limits and Free Plan Usage"
     ]
    }
   }
  ],
  "hook_patterns": [
   {
-   "pattern": "Result + time frame ('How I make X with Tool in Y minutes')",
-   "example": "How I make clean AI videos with Claude in 5 minutes"
+   "pattern": "How I [Achieve Big Result] with [Tool] - Full Guide",
+   "example": "How I Turn Scanned PDFs Into Spreadsheets with Documind - Full Guide"
   },
   {
-   "pattern": "Tool name + unexpected capability ('Tool is crazy for task')",
-   "example": "Claude is crazy for making motion graphics"
+   "pattern": "The Ultimate Beginner’s Guide to [Tool Name]",
+   "example": "The Ultimate Beginner’s Guide to Conseal Privacy Shield"
   },
   {
-   "pattern": "Direct pain point + free solution ('Stop doing X manually, use this free tool')",
-   "example": "Stop organizing files yourself and use this free tool"
+   "pattern": "Build Your First [Thing] in [Time] (No Coding)",
+   "example": "Build Your First Real-Time Voice Agent in 5 Minutes (No Coding)"
   },
   {
-   "pattern": "Platform update + major benefit ('Platform got a major upgrade')",
-   "example": "LinkedIn got a major AI upgrade for job seekers"
+   "pattern": "How to [Do Common Task] with [Popular AI Tool]",
+   "example": "How to Extract Data from PDFs with ChatGPT"
   },
   {
-   "pattern": "Beginner guide promise ('Ultimate beginner's guide to Tool')",
-   "example": "The ultimate beginner's guide to Documind"
+   "pattern": "Stop [Doing Painful Manual Task] Yourself.",
+   "example": "Stop Formatting PDF Tables in Excel Yourself."
   }
  ],
- "_competitors": [
-  {
-   "channel": "Futurepedia",
-   "title": "Claude Makes a New Kind of Video - Full Tutorial",
-   "views": 204819,
-   "date": "2026-10-19",
-   "url": "https://youtu.be/Ge1B-Ok1Pfk"
-  },
-  {
-   "channel": "Futurepedia",
-   "title": "The Ultimate Image Generator Showdown",
-   "views": 21029,
-   "date": "2026-10-09",
-   "url": "https://youtu.be/QLv4WCKVqd0"
-  },
-  {
-   "channel": "Futurepedia",
-   "title": "Claude just made motion graphics with zero video generator",
-   "views": 6967,
-   "date": "2026-10-20",
-   "url": "https://youtu.be/2gVfS19Hudk"
-  },
-  {
-   "channel": "Futurepedia",
-   "title": "Remotion vs  Hyperframes. One prompt. One map skill",
-   "views": 5326,
-   "date": "2026-10-05",
-   "url": "https://youtu.be/RxB56eE5BRc"
-  },
-  {
-   "channel": "Futurepedia",
-   "title": "Claude video generator turns your single prompt into a stylized movie",
-   "views": 4958,
-   "date": "2026-10-21",
-   "url": "https://youtu.be/KZRUdQYU4dI"
-  },
-  {
-   "channel": "Futurepedia",
-   "title": "Use Skills and Gemini to execute tasks consistently",
-   "views": 3426,
-   "date": "2026-10-06",
-   "url": "https://youtu.be/JwZVcb_vJT0"
-  },
-  {
-   "channel": "Futurepedia",
-   "title": "Your Personalized AI Plan, Free | Futurepedia 2.0",
-   "views": 2869,
-   "date": "2026-10-20",
-   "url": "https://youtu.be/qXlgk8VExhI"
-  },
-  {
-   "channel": "Futurepedia",
-   "title": "Gemini Skills for repeatable tasks",
-   "views": 2769,
-   "date": "2026-10-11",
-   "url": "https://youtu.be/R4W9FJ8XR0o"
-  },
-  {
-   "channel": "Futurepedia",
-   "title": "Does Gemini's Write Like Me make emails sound like you?",
-   "views": 2234,
-   "date": "2026-10-09",
-   "url": "https://youtu.be/6YEtBN76MK0"
-  },
-  {
-   "channel": "Futurepedia",
-   "title": "Nano Banana just dropped me into a barrel wave",
-   "views": 2054,
-   "date": "2026-10-14",
-   "url": "https://youtu.be/2zBvyF4IExY"
-  },
-  {
-   "channel": "Futurepedia",
-   "title": "Four AI models, one ad, one clear winner.",
-   "views": 1958,
-   "date": "2026-10-15",
-   "url": "https://youtu.be/umyrdpsnFCA"
-  },
-  {
-   "channel": "Futurepedia",
-   "title": "A to Z without a single mistake?",
-   "views": 1903,
-   "date": "2026-10-17",
-   "url": "https://youtu.be/Ar8yKK2liUw"
-  },
-  {
-   "channel": "Futurepedia",
-   "title": "Who nails the most realistic concert photo?",
-   "views": 1594,
-   "date": "2026-10-16",
-   "url": "https://youtu.be/pur1QwIA0qg"
-  },
-  {
-   "channel": "Futurepedia",
-   "title": "Claude video style database for free",
-   "views": 1540,
-   "date": "2026-10-22",
-   "url": "https://youtu.be/xr024WjmJUY"
-  },
-  {
-   "channel": "Futurepedia",
-   "title": "Last 30 Days: your new real-time web search",
-   "views": 1531,
-   "date": "2026-10-13",
-   "url": "https://youtu.be/7-556KlDMfg"
-  }
- ],
+ "_competitors": [],
  "_bank": [
   {
    "channel": "Dan Kieft",
