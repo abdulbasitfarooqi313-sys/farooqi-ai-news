@@ -1,40 +1,134 @@
 Traceback (most recent call last):
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 823, in <module>
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 916, in <module>
     tick(force=len(sys.argv) > 1 and sys.argv[1] == "force")
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 734, in tick
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 827, in tick
     make(feedback=(redo or {}).get("feedback") if isinstance(redo, dict) else None)
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 702, in make
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 789, in make
     audio, tl = build_audio(d, tmp)
                 ^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 416, in build_audio
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 490, in build_audio
     anc, rep = _voices(d, tmp)
                ^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 350, in _voices
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 424, in _voices
     return _speak(at, ANCHOR_VOICE, tmp, "anc"), (_speak(rt, REPORTER_VOICE, tmp, "rep") if rt else [])
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 269, in _speak
-    return group(texts, tag)
-           ^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 259, in group
-    return group(ts[:h], tg_ + "a") + group(ts[h:], tg_ + "b")
-           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 259, in group
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 341, in _speak
+    for i, p in zip(rr, group([texts[i] for i in rr], f"{tag}{j}")):
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 309, in group
     return group(ts[:h], tg_ + "a") + group(ts[h:], tg_ + "b")
                                       ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 259, in group
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 309, in group
     return group(ts[:h], tg_ + "a") + group(ts[h:], tg_ + "b")
            ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 260, in group
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 321, in group
+    return group(ts[:h], tg_ + "a") + group(ts[h:], tg_ + "b")
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 321, in group
+    return group(ts[:h], tg_ + "a") + group(ts[h:], tg_ + "b")
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 310, in group
     whole = one("\n\n".join(t.strip() for t in ts), tmp / f"{tg_}_all.wav")
             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 236, in one
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 242, in one
     got = call(text, m)
           ^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 212, in call
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 218, in call
     raise TTSQuota("آواز (Gemini TTS) کا آج کا مفت کوٹہ ختم ہو گیا")
 news.base.TTSQuota: آواز (Gemini TTS) کا آج کا مفت کوٹہ ختم ہو گیا
 
 
+Kore: 0 حصے محفوظ شدہ، 24 نئے
+TTS Kore بغیر آواز: {
+  "candidates": [
+    {
+      "finishReason": "OTHER",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 176,
+    "totalTokenCount": 176,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 176
+      }
+    ],
+    "serviceTier": "standard"
+ 
+TTS Kore بغیر آواز: {
+  "candidates": [
+    {
+      "finishReason": "OTHER",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 271,
+    "totalTokenCount": 271,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 271
+      }
+    ],
+    "serviceTier": "standard"
+ 
+TTS Kore بغیر آواز: {
+  "candidates": [
+    {
+      "finishReason": "OTHER",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 144,
+    "totalTokenCount": 144,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 144
+      }
+    ],
+    "serviceTier": "standard"
+ 
+TTS Kore بغیر آواز: {
+  "candidates": [
+    {
+      "finishReason": "OTHER",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 333,
+    "totalTokenCount": 333,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 333
+      }
+    ],
+    "serviceTier": "standard"
+ 
+TTS Kore بغیر آواز: {
+  "candidates": [
+    {
+      "finishReason": "OTHER",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 182,
+    "totalTokenCount": 182,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 182
+      }
+    ],
+    "serviceTier": "standard"
+ 
 TTS Kore 429: {
   "error": {
     "code": 429,
