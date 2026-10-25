@@ -1,314 +1,305 @@
 {
- "summary": "Today's landscape highlights growing demand for zero-cost, open-source AI utilities alongside heightened awareness around data privacy and local masking. Creators are shifting away from general news updates toward concrete step-by-step guides that teach viewers how to secure their workflows and automate repetitive document tasks.",
+ "summary": "Today's trend landscape centers around practical everyday AI workflows, enhanced data privacy controls for LLMs, and updated creative suite integrations like Canva's latest AI features. Creators are moving away from abstract AI announcements toward concrete, screen-recorded tutorials that solve immediate daily productivity problems.",
  "topics": [
   {
-   "title": "Documind Open-Source Document Data Extractor",
-   "why": "It solves the universal beginner friction of manually typing data from scanned PDF invoices and receipts into structured spreadsheets for free.",
+   "title": "Canva Craft & New AI Image Generator",
+   "why": "Business Insider reviewed Canva's new AI image generation tools while Canva Craft launched on ProductHunt, creating high search interest among non-designers.",
    "trend": 10,
    "sources": [
-    "hnrss.org",
+    "Business Insider",
     "producthunt.com"
    ]
   },
   {
-   "title": "Conseal On-Device Data Privacy App for LLMs",
-   "why": "Growing user anxiety around AI training policies makes local data masking tools crucial for everyday ChatGPT and Claude users.",
+   "title": "Conseal On-Device Data Privacy Masking",
+   "why": "LawSites reported on Conseal, a tool that masks sensitive personal and client data on-device before sending prompts to ChatGPT and Claude.",
    "trend": 9,
    "sources": [
-    "news.google.com",
-    "reddit.com"
-   ]
-  },
-  {
-   "title": "ElevenLabs Realtime Low-Latency Voice AI",
-   "why": "Real-time conversational voice tools are trending on Product Hunt for language learning, interview prep, and hands-free study.",
-   "trend": 8,
-   "sources": [
-    "producthunt.com",
-    "reddit.com"
-   ]
-  },
-  {
-   "title": "FLUX 3 Max & Speed-Focused Image Generators",
-   "why": "New high-resolution image model updates are sparking renewed interest in fast, high-quality image generation without long wait times.",
-   "trend": 7,
-   "sources": [
-    "producthunt.com",
-    "hnrss.org"
-   ]
-  },
-  {
-   "title": "ChatGPT Custom Instructions, Skills, and Projects",
-   "why": "Beginners on Reddit and YouTube remain confused about organizing custom settings versus workspace projects within ChatGPT.",
-   "trend": 6,
-   "sources": [
-    "reddit.com",
-    "Skill Leap AI"
-   ]
-  },
-  {
-   "title": "OpenAI Codex Task Automation for Beginners",
-   "why": "Non-coders are looking for clear step-by-step guides on using Codex to automate daily computer and file tasks without writing code.",
-   "trend": 5,
-   "sources": [
-    "reddit.com",
-    "Kevin Stratvert"
-   ]
-  },
-  {
-   "title": "ShogunAI & No-Code Personal Task Agents",
-   "why": "Personal task agents are gaining traction on Product Hunt as users seek automated web assistants for routine research.",
-   "trend": 4,
-   "sources": [
-    "producthunt.com",
-    "Jeff Su"
-   ]
-  },
-  {
-   "title": "AI Privacy Policy Summarizers",
-   "why": "Show HN tools that read long privacy policies and flag data selling are generating strong engagement among security-conscious users.",
-   "trend": 3,
-   "sources": [
-    "hnrss.org"
-   ]
-  },
-  {
-   "title": "FaceAge Biological Health Assessment AI",
-   "why": "Consumer news coverage around selfie-based age and health estimation tools is driving curiosity among mainstream users.",
-   "trend": 2,
-   "sources": [
+    "LawSites",
     "news.google.com"
    ]
   },
   {
-   "title": "Open-Source Drawing Animation Tools",
-   "why": "Simple creative open-source AI utilities for turning simple sketches into animated graphics continue to perform well with beginners.",
+   "title": "Practical Daily ChatGPT Workflows and Sycophancy Fixes",
+   "why": "Reddit communities are actively debating ChatGPT sycophancy, guardrail inconsistencies, and real-world practical use cases like tutoring and game modding.",
+   "trend": 8,
+   "sources": [
+    "reddit.com"
+   ]
+  },
+  {
+   "title": "1Password for Agents",
+   "why": "ProductHunt highlighted 1Password for Agents, focusing on credentials and access control for automated AI agents.",
+   "trend": 7,
+   "sources": [
+    "producthunt.com"
+   ]
+  },
+  {
+   "title": "sideOS.ai Personal Workstation OS",
+   "why": "ProductHunt users are trending sideOS.ai, an AI-native operating system interface for managing daily desktop tasks.",
+   "trend": 6,
+   "sources": [
+    "producthunt.com"
+   ]
+  },
+  {
+   "title": "LinkedIn AI Career & Job Search Tools",
+   "why": "Forbes reported on LinkedIn's new AI tools designed to help job seekers navigate a 30% increase in job applications.",
+   "trend": 5,
+   "sources": [
+    "Forbes",
+    "news.google.com"
+   ]
+  },
+  {
+   "title": "Basedash Scheduled CSV Exports",
+   "why": "ProductHunt features Basedash's new scheduled data export tool for automated admin and spreadsheet reporting.",
+   "trend": 4,
+   "sources": [
+    "producthunt.com"
+   ]
+  },
+  {
+   "title": "River Writer AI Writing Workflow",
+   "why": "ProductHunt launched River Writer, an AI editing assistant aimed at structured long-form drafting.",
+   "trend": 3,
+   "sources": [
+    "producthunt.com"
+   ]
+  },
+  {
+   "title": "School District AI Bans & Classroom Policies",
+   "why": "News reports from NYC and Maryland highlight updated school board policies and software restrictions regarding classroom AI tools.",
+   "trend": 2,
+   "sources": [
+    "Chalkbeat",
+    "WMAR 2 News"
+   ]
+  },
+  {
+   "title": "ShogunAI Automation Platform",
+   "why": "ProductHunt launched ShogunAI, targeted at lightweight workflow automations for non-technical users.",
    "trend": 1,
    "sources": [
-    "hnrss.org"
+    "producthunt.com"
    ]
   }
  ],
  "packages": [
   {
-   "topic": "Documind Open-Source Document Data Extractor",
-   "competitors": "Metics Media and Jeff Su covered document processing using paid Zapier steps or complex Python scripts, leaving beginners overwhelmed without zero-cost tools.",
-   "angle": "Show how to use Documind completely free with a simple drag-and-drop web UI to turn PDFs and receipts into structured Excel sheets in 5 minutes.",
+   "topic": "Canva Craft & New AI Image Generator",
+   "competitors": "Business Insider reviewed Canva's updated AI image generator with a balanced comparison, but missed showing step-by-step UI clicks for beginner creators. Channel competitors like Dan Kieft focus on complex AI video tools, ignoring simple image generation.",
+   "angle": "A beginner step-by-step guide showing how to generate clean social media graphics in Canva AI without paying for premium subscriptions.",
    "viral": {
     "score": 68,
-    "why": "Open-source document parsing solves a universal pain point for small business owners and students who refuse to pay expensive monthly software subscriptions."
+    "why": "Canva has a massive search volume among non-designers, and recent updates keep user interest high across search platforms."
    },
    "long": {
-    "title": "Turn Messy PDFs Into Clean Spreadsheets Fast (Free AI Tool)",
-    "thumb": "Stop Copying PDFs!",
-    "hook": "In the next 5 minutes you will convert any scanned PDF or messy receipt into a clean Excel spreadsheet automatically. No manual typing, no complex coding, and completely free.",
+    "title": "How to Use Canva AI Tools (Beginner Guide)",
+    "thumb": "Canva AI Easy Guide",
+    "hook": "In the next 6 minutes, you will create three professional graphics using Canva's newest AI features step by step. You do not need any graphic design experience or a paid subscription.",
     "outline": [
-     "Introduction to Documind open-source tool",
-     "Setting up your free workspace in 60 seconds",
-     "Uploading scanned PDFs and handwritten receipts",
-     "Defining structured custom fields (Date, Vendor, Total)",
-     "Exporting clean extracted data directly to CSV and Excel",
-     "One real downside: scanned handwriting must be legible"
+     "Open Canva and access the new AI creation tab",
+     "Type clear image prompts to avoid blurred text",
+     "Use Canva Craft to style custom layouts instantly",
+     "Fix common AI generation mistakes in two clicks",
+     "Export your finished graphic for social media"
     ]
    },
    "shorts": [
     {
-     "title": "Stop Copying PDF Data Manually",
-     "hook": "Stop wasting hours copying numbers from scanned PDF receipts into Excel.",
-     "script": "There is a new open source tool called Documind that does it automatically. You just upload your PDF document, define what fields you want like total price or date, and it extracts every value into a clean table. It works on scanned invoices and contracts without making random typing mistakes.",
-     "cta": "Check our channel for the step-by-step setup guide."
+     "title": "Create Canva AI Graphics in Seconds",
+     "hook": "Stop struggling with graphic design when Canva AI can build your post in 10 seconds.",
+     "script": "Open Canva and click on the Magic Studio tab. Select the AI image generator and type your prompt. Specify lighting and style to get clear results. Drop the generated image directly onto your template, adjust the background opacity, and hit export. It takes less than one minute.",
+     "cta": "Subscribe for more quick AI design tutorials."
     },
     {
-     "title": "Free AI Tool Turns Receipts into Excel",
-     "hook": "Here is how to turn a stack of paper receipts into a spreadsheet in seconds.",
-     "script": "Open the free tool Documind in your browser. Drag and drop your scanned receipts directly into the upload box. Click extract, and watch as it pulls vendor names, dates, and amounts into structured columns. You can download the entire dataset directly as a CSV file to open in Excel or Google Sheets.",
-     "cta": "Subscribe to Toolscape for daily free AI tutorials."
+     "title": "Canva AI Secret Feature",
+     "hook": "Here is how to get clean text inside your Canva AI images without glitches.",
+     "script": "Most beginners put too many details into their prompts. Instead, generate the background image first inside Canva's Magic Studio. Then add your text separately using Canva's standard text tool. This gives you crisp, readable graphics every single time.",
+     "cta": "Follow for daily practical AI tips."
     }
    ],
    "carousel": {
-    "title": "Extract PDF Data to Excel in 3 Steps",
+    "title": "How to Master Canva AI Graphics in 5 Steps",
     "slides": [
-     "Tired of copying text from PDFs into Excel manually?",
-     "1. Go to the free open-source Documind web tool",
-     "2. Upload your scanned invoice or PDF document",
-     "3. Select the target fields you need (Date, Total, Vendor)",
-     "4. Click Export to download a ready-to-use CSV file",
-     "Downside: Very messy handwritten notes still require manual checking"
+     "1. Open Canva Magic Studio",
+     "2. Choose the AI Image Generator",
+     "3. Enter descriptive, simple prompts",
+     "4. Overlay clean typography manually",
+     "5. Export in HD format for free"
     ]
    },
    "posts": {
     "x": [
-     "Stop typing PDF data into Excel manually.",
-     "Documind is a new open-source AI tool that turns messy receipts and documents into clean structured tables for free. Here is how it works 👇"
+     "Canva released updated AI generation features this week. Here is how to create clean graphics in 5 steps without paying for a pro account.",
+     "Struggling with blurry AI graphics in Canva? Keep your prompts short and add text manually over the generated background."
     ],
-    "facebook": "Stop copying text from PDF invoices manually! Documind is a free open-source AI tool that automatically extracts data from any PDF into Excel spreadsheets.",
-    "instagram": "Transform your PDF invoices into structured Excel files in minutes using Documind! #AITools #Productivity #ExcelHacks #TechTutorial #FreeAI",
-    "linkedin": "Extracting structured data from unstructured PDF files used to require expensive software. Today, open-source AI tool Documind lets you turn PDF documents into clean CSV spreadsheets automatically for free."
+    "facebook": "Canva just updated its AI design suite. In our latest guide, we break down how to build professional social media graphics step by step using free tools.",
+    "instagram": "Create clean graphics using Canva's updated AI features in under 5 minutes. Check out the link in our bio for the full screen-recorded tutorial. #Canva #GraphicDesign #AITools #DesignTutorial",
+    "linkedin": "Canva's expanded AI capabilities enable non-designers to produce polished marketing collateral quickly. Here is a step-by-step workflow for beginners."
    },
    "article": {
-    "title": "How to Extract PDF Data to Excel Using Free Open-Source AI (Documind Tutorial)",
+    "title": "Beginner Guide to Canva's New AI Generation Tools",
     "outline": [
-     "What is Documind and How Does It Work?",
-     "Step-by-Step Setup for Beginners",
-     "Extracting Data from Invoices and Receipts",
-     "Exporting Custom Fields to Excel and CSV",
-     "Limitations and Best Practices"
+     "Introduction to Canva AI features",
+     "Step 1: Setting up your canvas",
+     "Step 2: Writing effective visual prompts",
+     "Step 3: Refining layouts with Canva Craft",
+     "Limitations and downside: Free account visual export caps"
     ]
    }
   },
   {
-   "topic": "Conseal On-Device Data Privacy App for LLMs",
-   "competitors": "Tech news outlets like LawSites reported on Conseal masking corporate client data, but focused on corporate legal setups without showing end users step-by-step browser usage.",
-   "angle": "Demonstrate how a beginner can use Conseal on-device to automatically scrub names, emails, and financial details before sending prompts to ChatGPT or Claude.",
+   "topic": "Conseal On-Device Data Privacy Masking",
+   "competitors": "LawSites highlighted Conseal's launch for masking client data before sending it to LLMs, but focused on legal context rather than showing screen setup. Competitor channels rarely cover local data privacy tools for everyday users.",
+   "angle": "Show beginners how to automatically hide sensitive personal names, addresses, and account details before pasting text into ChatGPT or Claude.",
    "viral": {
-    "score": 62,
-    "why": "Privacy concerns are peaking after news of platforms training on user data and government bans on staff computers."
+    "score": 52,
+    "why": "Privacy is a growing topic on Reddit and news outlets, but technical setup channels generally attract a focused utility audience rather than viral spikes."
    },
    "long": {
-    "title": "Stop Sending Private Data to ChatGPT (Use This Free Shield)",
-    "thumb": "Protect Your Privacy!",
-    "hook": "In the next 6 minutes you will shield your private names, emails, and financial data from ChatGPT without changing how you write prompts. Works locally on your computer for free.",
+    "title": "Protect Your Private Data Before Using ChatGPT",
+    "thumb": "Protect Private Data",
+    "hook": "In the next 5 minutes, you will set up a free tool that hides your personal details before they ever reach ChatGPT or Claude. You can safely summarize sensitive documents without sharing private data.",
     "outline": [
-     "Why web AI platforms store your personal prompt data",
-     "Introducing Conseal on-device privacy tool",
-     "Installing and configuring the local browser shield",
-     "Testing automatic data masking live in ChatGPT",
-     "Sending masked prompts safely to Claude and other LLMs",
-     "One realistic downside: adds one extra click before sending prompts"
+     "Why uploading raw private data to AI poses risks",
+     "How Conseal masks names, numbers, and addresses on-device",
+     "Step-by-step installation and basic settings",
+     "Testing a sensitive text snippet in real time",
+     "How to unmask the AI response locally on your computer"
     ]
    },
    "shorts": [
     {
-     "title": "Hide Private Info Before Using ChatGPT",
-     "hook": "More organizations are blocking ChatGPT over data security concerns.",
-     "script": "If you paste private emails or financial numbers into ChatGPT, that data can be saved. A new on-device app called Conseal automatically detects and masks sensitive names, credit card numbers, and emails on your computer before sending your prompt. It keeps your AI results helpful while hiding your personal identity.",
-     "cta": "Watch our full step-by-step guide on Toolscape."
+     "title": "Stop Pasting Private Data in ChatGPT",
+     "hook": "Never paste your private documents into ChatGPT without doing this first.",
+     "script": "When you paste financial reports or client emails into AI tools, that data reaches remote servers. Use an on-device privacy app like Conseal. It automatically replaces names, emails, and account numbers with placeholders before sending your prompt. The response gets unmasked locally on your device.",
+     "cta": "Subscribe to keep your digital data safe."
     },
     {
-     "title": "How to Block AI from Reading Your Personal Info",
-     "hook": "Are you worried about AI tools saving your personal information?",
-     "script": "Protect yourself with Conseal, an on-device privacy app. When you paste notes into Claude or ChatGPT, Conseal replaces private info with anonymized tokens locally on your machine. The AI processes your prompt, but never sees your real personal data.",
-     "cta": "Subscribe to Toolscape for the best AI privacy tips."
+     "title": "How to Mask Sensitive Text for AI",
+     "hook": "Here is the safest way to summarize client documents using Claude or ChatGPT.",
+     "script": "Run your text through an on-device masking tool first. It strips out phone numbers, full names, and addresses while leaving the core document structure intact. Paste the clean version into your AI tool, get your summary, and reverse the mask locally.",
+     "cta": "Follow for simple security and AI tutorials."
     }
    ],
    "carousel": {
-    "title": "Mask Private Data Before Sending to ChatGPT",
+    "title": "How to Mask Private Data in ChatGPT",
     "slides": [
-     "Why your ChatGPT prompts might expose personal info",
-     "1. Download the Conseal on-device privacy browser tool",
-     "2. Paste text containing private names or numbers",
-     "3. Conseal masks sensitive details automatically on your machine",
-     "4. Send the anonymized prompt safely to ChatGPT or Claude",
-     "Downside: Requires brief manual review to ensure all sensitive words are caught"
+     "1. Install an on-device masking tool like Conseal",
+     "2. Highlight sensitive text in your document",
+     "3. Automatically convert names and numbers to placeholders",
+     "4. Run your prompt in ChatGPT or Claude",
+     "5. Unmask the final output locally"
     ]
    },
    "posts": {
     "x": [
-     "Worried about ChatGPT saving your private information?",
-     "Conseal is a new on-device privacy tool that masks sensitive details before your prompt hits the cloud. Here is how to set it up 👇"
+     "Uploading client data to public AI tools carries real risks. Here is how on-device masking keeps your sensitive details private.",
+     "You can still use ChatGPT for work without sharing real names or financial numbers. Here is a quick breakdown of local data masking."
     ],
-    "facebook": "Don't paste client data or personal numbers directly into ChatGPT. Use Conseal, a new on-device privacy tool that anonymizes your sensitive data locally before sending prompts.",
-    "instagram": "Keep your personal data safe from AI training models! Conseal masks sensitive info locally before sending prompts to ChatGPT or Claude. #PrivacyFirst #ChatGPTTips #CyberSecurity #AITools",
-    "linkedin": "As enterprise privacy concerns grow, on-device tools like Conseal are becoming essential. Learn how local data masking protects sensitive client information when using LLMs like ChatGPT and Claude."
+    "facebook": "Concerned about data privacy when using AI at work? In today's guide, we show you how to automatically mask sensitive details before sending prompts to ChatGPT.",
+    "instagram": "Keep your personal and client data safe when using ChatGPT. Tap the link in bio to watch our 5-minute setup tutorial. #DataPrivacy #ChatGPT #CyberSecurity #AITools",
+    "linkedin": "Data privacy is a primary obstacle for professional AI adoption. On-device data masking offers a simple way to protect sensitive client records during processing."
    },
    "article": {
-    "title": "How to Protect Personal Data When Using ChatGPT and Claude",
+    "title": "How to Secure Sensitive Information When Prompting AI Models",
     "outline": [
-     "The Hidden Privacy Risks of AI Prompting",
-     "How On-Device Data Masking Works",
-     "Setting Up Conseal Step-by-Step",
-     "Testing Prompt Anonymization Live",
-     "Pros and Cons of Privacy Tools for LLMs"
+     "Understanding public AI privacy policies",
+     "What is on-device data masking?",
+     "Setting up Conseal step by step",
+     "Verifying that masked text preserves context",
+     "Downside: Minor processing overhead on older laptops"
     ]
    }
   },
   {
-   "topic": "ElevenLabs Realtime Low-Latency Voice AI",
-   "competitors": "Skill Leap AI and Matt Wolfe mentioned ElevenLabs voice updates in rapid-fire news roundups, but skipped walking beginners through clear real-world applications.",
-   "angle": "Provide a hands-on, zero-fluff guide for beginners to build an interactive voice partner for interview practice and study using ElevenLabs Realtime.",
+   "topic": "Practical Daily ChatGPT Workflows and Sycophancy Fixes",
+   "competitors": "Skill Leap AI and The AI Advantage covered recent ChatGPT model releases, but passed over practical prompt issues like ChatGPT over-agreeing with users. Reddit threads show users actively seeking fixes for sycophancy and practical daily uses.",
+   "angle": "Show beginners 3 custom system instructions that stop ChatGPT from agreeing with everything and turn it into an accurate, critical personal assistant.",
    "viral": {
-    "score": 55,
-    "why": "Voice AI is popular on Reddit, but audio tutorials need precise visual step-by-step clarity to remain practical for beginners."
+    "score": 78,
+    "why": "ChatGPT frustration threads on Reddit are reaching high engagement, making targeted fix-it tutorials extremely effective right now."
    },
    "long": {
-    "title": "Master Real-Time AI Voice Chats in 6 Minutes",
-    "thumb": "Instant AI Voice!",
-    "hook": "In the next 6 minutes you will set up a zero-latency conversational AI partner to practice job interviews or study on the go. Works directly in your browser.",
+    "title": "Stop ChatGPT From Agreeing With Everything You Say",
+    "thumb": "Fix ChatGPT Bias",
+    "hook": "If ChatGPT keeps agreeing with your bad ideas, you are missing out on its best feature. In 4 minutes, you will add three custom instructions that force ChatGPT to give honest, critical feedback.",
     "outline": [
-     "What makes ElevenLabs Realtime different from standard text-to-speech",
-     "Accessing the free web playground interface",
-     "Setting up a custom conversational persona for interview prep",
-     "Practicing real-time interactive voice conversations",
-     "Adjusting latency settings and voice interruption rules",
-     "One key downside: free account monthly audio credits run out quickly"
+     "Why ChatGPT defaults to sycophantic responses",
+     "Opening custom instructions in your profile settings",
+     "Prompt 1: Requesting constructive counter-arguments",
+     "Prompt 2: Disabling polite conversation filler",
+     "Testing the new settings on a real-world decision task"
     ]
    },
    "shorts": [
     {
-     "title": "Practice Interviews with Real-Time Voice AI",
-     "hook": "Want to practice job interviews with an AI that responds instantly?",
-     "script": "ElevenLabs Realtime offers low-latency voice conversations with almost zero lag. You can give it a persona like an interviewer or tutor, and speak naturally back and forth. If you interrupt it, it stops speaking immediately just like a real person.",
-     "cta": "Full tutorial link in our channel bio."
+     "title": "Fix ChatGPT's Most Annoying Habit",
+     "hook": "Stop ChatGPT from telling you every idea you have is brilliant.",
+     "script": "Open your ChatGPT settings and click on Custom Instructions. In the box asking how you want ChatGPT to respond, paste this exact rule: 'Be direct. Point out flaws in my logic and offer clear counter-arguments before answering.' Save it, and your responses will immediately become more useful.",
+     "cta": "Subscribe for simple ChatGPT fixes."
     },
     {
-     "title": "The Easiest Way to Use ElevenLabs Realtime",
-     "hook": "Stop typing prompts when you can speak naturally to AI.",
-     "script": "ElevenLabs Realtime allows you to build an interactive voice assistant in under two minutes. Just choose a voice, set instructions like 'act as a patient tutor', and start talking. It hears you and replies in real-time without awkward pause delays.",
-     "cta": "Subscribe to Toolscape for easy AI voice guides."
+     "title": "3 Prompts to Upgrade ChatGPT Today",
+     "hook": "Here are three lines you should paste into your ChatGPT custom instructions right now.",
+     "script": "First: 'Skip conversational filler and pleasantries.' Second: 'Highlight factual assumptions that might be wrong.' Third: 'Ask clarifying questions if my prompt lacks necessary detail.' These three lines stop low-quality answers instantly.",
+     "cta": "Follow for daily actionable AI tips."
     }
    ],
    "carousel": {
-    "title": "How to Set Up ElevenLabs Realtime Voice",
+    "title": "3 Custom Rules to Fix ChatGPT Answers",
     "slides": [
-     "Tired of slow AI voice responses?",
-     "1. Open the ElevenLabs Realtime playground",
-     "2. Choose a clean, natural conversational voice model",
-     "3. Give the AI its role (Job Interviewer or Tutor)",
-     "4. Start talking with instant voice responses",
-     "Downside: High audio usage consumes free plan credits fast"
+     "1. Open Custom Instructions in profile settings",
+     "2. Add Rule: 'Critique my premises directly'",
+     "3. Add Rule: 'Skip introductory pleasantries'",
+     "4. Add Rule: 'Highlight uncertain facts clearly'",
+     "5. Test with your next complex question"
     ]
    },
    "posts": {
     "x": [
-     "ElevenLabs Realtime is live.",
-     "You can now have zero-latency conversational chats with AI for interview prep and learning. Here is how to try it for free 👇"
+     "Tired of ChatGPT agreeing with everything you say? Paste 'Critique my logic before answering' into your custom instructions to get honest feedback.",
+     "Small changes to your ChatGPT settings eliminate conversational filler and improve fact-checking. Here is the 2-minute fix."
     ],
-    "facebook": "Need an instant AI study partner? ElevenLabs Realtime lets you have realistic, zero-lag voice conversations on your browser or phone.",
-    "instagram": "Experience real-time voice conversations with AI! ElevenLabs Realtime delivers instant voice responses with zero delay. #ElevenLabs #VoiceAI #AITutorial #StudyTech",
-    "linkedin": "Interactive real-time audio is transforming corporate training and prep. Here is how to leverage ElevenLabs Realtime for realistic interview and language practice."
+    "facebook": "Is ChatGPT being too agreeable? Learn how to configure custom instructions in under 3 minutes to turn ChatGPT into a critical editor and tutor.",
+    "instagram": "Fix ChatGPT's over-polite responses with this simple settings tweak. Check the link in bio for the full walkthrough. #ChatGPT #PromptEngineering #AITricks #Productivity",
+    "linkedin": "AI sycophancy can reduce the objectivity of strategic research. Applying custom systemic prompts ensures ChatGPT provides critical analysis rather than affirmation."
    },
    "article": {
-    "title": "Beginner Guide to ElevenLabs Realtime Conversational Voice AI",
+    "title": "How to Stop ChatGPT Sycophancy with Custom Instructions",
     "outline": [
-     "What is ElevenLabs Realtime Voice?",
-     "How Ultra-Low Latency Conversational AI Works",
-     "Step-by-Step Playground Setup Guide",
-     "Practical Use Cases: Interview Prep & Study",
-     "Managing Credit Limits and Free Plan Usage"
+     "Understanding why AI models default to agreeing with users",
+     "Locating Custom Instructions on mobile and desktop",
+     "The three core prompts for objective feedback",
+     "Testing your new setup on decision-making prompts",
+     "Downside: Responses may occasionally sound blunt"
     ]
    }
   }
  ],
  "hook_patterns": [
   {
-   "pattern": "How I [Achieve Big Result] with [Tool] - Full Guide",
-   "example": "How I Turn Scanned PDFs Into Spreadsheets with Documind - Full Guide"
+   "pattern": "How I [Achieved Result] with [Tool] - Full Guide",
+   "example": "How I Create Daily Presentation Slides with Canva AI - Full Guide"
+  },
+  {
+   "pattern": "[Tool Name] Got a Major Upgrade 🚀 These features are coming soon",
+   "example": "ChatGPT Custom Settings Got a Major Upgrade 🚀 Try These 3 Features Now"
   },
   {
    "pattern": "The Ultimate Beginner’s Guide to [Tool Name]",
-   "example": "The Ultimate Beginner’s Guide to Conseal Privacy Shield"
+   "example": "The Ultimate Beginner’s Guide to On-Device AI Privacy"
   },
   {
-   "pattern": "Build Your First [Thing] in [Time] (No Coding)",
-   "example": "Build Your First Real-Time Voice Agent in 5 Minutes (No Coding)"
+   "pattern": "Build Your First [Project] in [Time] (No Coding)",
+   "example": "Build Your First Automated Data Export in 10 Minutes (No Coding)"
   },
   {
-   "pattern": "How to [Do Common Task] with [Popular AI Tool]",
-   "example": "How to Extract Data from PDFs with ChatGPT"
-  },
-  {
-   "pattern": "Stop [Doing Painful Manual Task] Yourself.",
-   "example": "Stop Formatting PDF Tables in Excel Yourself."
+   "pattern": "Stop [Doing Task Manually] Yourself.",
+   "example": "Stop Masking Private Data in Spreadsheet Files Yourself."
   }
  ],
  "_competitors": [],
