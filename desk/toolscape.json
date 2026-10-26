@@ -1,18 +1,19 @@
 {
- "summary": "Today's trend landscape centers around practical everyday AI workflows, enhanced data privacy controls for LLMs, and updated creative suite integrations like Canva's latest AI features. Creators are moving away from abstract AI announcements toward concrete, screen-recorded tutorials that solve immediate daily productivity problems.",
+ "summary": "Today's landscape focuses heavily on advanced AI agent features like ChatGPT Dot, privacy tools for data masking, and enterprise AI translation rollouts. Toolscape will capitalize on these shifts by offering practical, step-by-step beginner tutorials for new tools.",
  "topics": [
   {
-   "title": "Canva Craft & New AI Image Generator",
-   "why": "Business Insider reviewed Canva's new AI image generation tools while Canva Craft launched on ProductHunt, creating high search interest among non-designers.",
+   "title": "ChatGPT Dot / Personal Agents",
+   "why": "Massive user interest across Reddit and tech news regarding personal task management and job research features.",
    "trend": 10,
    "sources": [
-    "Business Insider",
-    "producthunt.com"
+    "reddit.com",
+    "Skill Leap AI",
+    "The AI Advantage"
    ]
   },
   {
-   "title": "Conseal On-Device Data Privacy Masking",
-   "why": "LawSites reported on Conseal, a tool that masks sensitive personal and client data on-device before sending prompts to ChatGPT and Claude.",
+   "title": "Conseal On-Device Privacy App",
+   "why": "Crucial tool addressing data privacy concerns before sending prompts to ChatGPT or Claude.",
    "trend": 9,
    "sources": [
     "LawSites",
@@ -20,66 +21,67 @@
    ]
   },
   {
-   "title": "Practical Daily ChatGPT Workflows and Sycophancy Fixes",
-   "why": "Reddit communities are actively debating ChatGPT sycophancy, guardrail inconsistencies, and real-world practical use cases like tutoring and game modding.",
+   "title": "Google Ads AI Translation Tool",
+   "why": "Enables marketers to copy Search campaigns into 10 new languages automatically.",
    "trend": 8,
    "sources": [
-    "reddit.com"
+    "PPC Land",
+    "news.google.com"
    ]
   },
   {
-   "title": "1Password for Agents",
-   "why": "ProductHunt highlighted 1Password for Agents, focusing on credentials and access control for automated AI agents.",
+   "title": "OpenAI Codex for Legacy Hardware",
+   "why": "Users are finding creative ways to run old hardware on modern OS using coding assistants.",
    "trend": 7,
    "sources": [
-    "producthunt.com"
+    "reddit.com",
+    "Kevin Stratvert"
    ]
   },
   {
-   "title": "sideOS.ai Personal Workstation OS",
-   "why": "ProductHunt users are trending sideOS.ai, an AI-native operating system interface for managing daily desktop tasks.",
+   "title": "AgentGrid.io",
+   "why": "New workflow automation tool trending on Product Hunt for beginners.",
    "trend": 6,
    "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "LinkedIn AI Career & Job Search Tools",
-   "why": "Forbes reported on LinkedIn's new AI tools designed to help job seekers navigate a 30% increase in job applications.",
+   "title": "Papermark Data Rooms",
+   "why": "Gaining traction for secure document sharing and open-source data handling.",
    "trend": 5,
-   "sources": [
-    "Forbes",
-    "news.google.com"
-   ]
-  },
-  {
-   "title": "Basedash Scheduled CSV Exports",
-   "why": "ProductHunt features Basedash's new scheduled data export tool for automated admin and spreadsheet reporting.",
-   "trend": 4,
    "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "River Writer AI Writing Workflow",
-   "why": "ProductHunt launched River Writer, an AI editing assistant aimed at structured long-form drafting.",
+   "title": "Canva AI Image Generator",
+   "why": "Recent reviews test its mixed-bag capabilities for everyday beginner design tasks.",
+   "trend": 4,
+   "sources": [
+    "Business Insider",
+    "news.google.com"
+   ]
+  },
+  {
+   "title": "Openstatus Incident Management",
+   "why": "Popular open-source tool for tracking uptime and managing developer alerts.",
    "trend": 3,
    "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "School District AI Bans & Classroom Policies",
-   "why": "News reports from NYC and Maryland highlight updated school board policies and software restrictions regarding classroom AI tools.",
+   "title": "MRRaudit",
+   "why": "Simple indie hacker tool tracking recurring revenue metrics.",
    "trend": 2,
    "sources": [
-    "Chalkbeat",
-    "WMAR 2 News"
+    "producthunt.com"
    ]
   },
   {
-   "title": "ShogunAI Automation Platform",
-   "why": "ProductHunt launched ShogunAI, targeted at lightweight workflow automations for non-technical users.",
+   "title": "Badgey",
+   "why": "Handy utility for generating project badges quickly for GitHub repositories.",
    "trend": 1,
    "sources": [
     "producthunt.com"
@@ -88,218 +90,224 @@
  ],
  "packages": [
   {
-   "topic": "Canva Craft & New AI Image Generator",
-   "competitors": "Business Insider reviewed Canva's updated AI image generator with a balanced comparison, but missed showing step-by-step UI clicks for beginner creators. Channel competitors like Dan Kieft focus on complex AI video tools, ignoring simple image generation.",
-   "angle": "A beginner step-by-step guide showing how to generate clean social media graphics in Canva AI without paying for premium subscriptions.",
+   "topic": "ChatGPT Dot / Personal Agents",
+   "competitors": "Competitors like Skill Leap AI and The AI Advantage covered high-level feature overviews of ChatGPT Dot. They missed a simple, click-by-click beginner walkthrough on setting up automated job research.",
+   "angle": "We show a practical, step-by-step setup of ChatGPT Dot for automated daily research using a free account.",
    "viral": {
     "score": 68,
-    "why": "Canva has a massive search volume among non-designers, and recent updates keep user interest high across search platforms."
+    "why": "Interest in personal AI agents is peaking, and beginners are actively looking for concrete use cases rather than feature lists."
    },
    "long": {
-    "title": "How to Use Canva AI Tools (Beginner Guide)",
-    "thumb": "Canva AI Easy Guide",
-    "hook": "In the next 6 minutes, you will create three professional graphics using Canva's newest AI features step by step. You do not need any graphic design experience or a paid subscription.",
+    "title": "How to Use ChatGPT Dot for Daily Research",
+    "thumb": "Setup ChatGPT Dot",
+    "hook": "In the next 7 minutes you will set up ChatGPT Dot to automate your daily research tasks. No coding required.",
     "outline": [
-     "Open Canva and access the new AI creation tab",
-     "Type clear image prompts to avoid blurred text",
-     "Use Canva Craft to style custom layouts instantly",
-     "Fix common AI generation mistakes in two clicks",
-     "Export your finished graphic for social media"
+     "What ChatGPT Dot actually does",
+     "Accessing the feature on your free account",
+     "Writing your first daily research prompt",
+     "Connecting external data sources",
+     "Setting up scheduled automated checks",
+     "One major privacy limitation to watch out for",
+     "Summary and next steps"
     ]
    },
    "shorts": [
     {
-     "title": "Create Canva AI Graphics in Seconds",
-     "hook": "Stop struggling with graphic design when Canva AI can build your post in 10 seconds.",
-     "script": "Open Canva and click on the Magic Studio tab. Select the AI image generator and type your prompt. Specify lighting and style to get clear results. Drop the generated image directly onto your template, adjust the background opacity, and hit export. It takes less than one minute.",
-     "cta": "Subscribe for more quick AI design tutorials."
+     "title": "Stop Doing Research Manually",
+     "hook": "Stop searching the web by hand every morning.",
+     "script": "Open ChatGPT Dot on your dashboard. Type your target topic and select research mode. Let the agent compile the top links for you in under 60 seconds. Try this today and save hours of browsing.",
+     "cta": "Subscribe for more simple AI tool tutorials."
     },
     {
-     "title": "Canva AI Secret Feature",
-     "hook": "Here is how to get clean text inside your Canva AI images without glitches.",
-     "script": "Most beginners put too many details into their prompts. Instead, generate the background image first inside Canva's Magic Studio. Then add your text separately using Canva's standard text tool. This gives you crisp, readable graphics every single time.",
-     "cta": "Follow for daily practical AI tips."
+     "title": "ChatGPT Dot Hidden Feature",
+     "hook": "Did you know ChatGPT Dot can organize your tasks?",
+     "script": "Navigate to your agent settings and turn on background tasks. Paste your raw notes and watch it categorize them into clean lists automatically. It takes ten seconds to set up.",
+     "cta": "Check out our full guide on the channel."
     }
    ],
    "carousel": {
-    "title": "How to Master Canva AI Graphics in 5 Steps",
+    "title": "Automate Your Tasks with ChatGPT Dot",
     "slides": [
-     "1. Open Canva Magic Studio",
-     "2. Choose the AI Image Generator",
-     "3. Enter descriptive, simple prompts",
-     "4. Overlay clean typography manually",
-     "5. Export in HD format for free"
+     "Step 1: Open your ChatGPT dashboard",
+     "Step 2: Locate the Dot agent panel",
+     "Step 3: Enter your daily topic prompt",
+     "Step 4: Review the generated summary",
+     "Step 5: Save your workflow as a template"
     ]
    },
    "posts": {
     "x": [
-     "Canva released updated AI generation features this week. Here is how to create clean graphics in 5 steps without paying for a pro account.",
-     "Struggling with blurry AI graphics in Canva? Keep your prompts short and add text manually over the generated background."
+     "Still doing web research by hand? Here is how to set up ChatGPT Dot in under 5 minutes. Watch the full tutorial on Toolscape.",
+     "Personal agents are finally easy to use. We tested ChatGPT Dot so you don't have to guess the settings."
     ],
-    "facebook": "Canva just updated its AI design suite. In our latest guide, we break down how to build professional social media graphics step by step using free tools.",
-    "instagram": "Create clean graphics using Canva's updated AI features in under 5 minutes. Check out the link in our bio for the full screen-recorded tutorial. #Canva #GraphicDesign #AITools #DesignTutorial",
-    "linkedin": "Canva's expanded AI capabilities enable non-designers to produce polished marketing collateral quickly. Here is a step-by-step workflow for beginners."
+    "facebook": "Setting up personal AI agents doesn't have to be complicated. Watch our new step-by-step guide on using ChatGPT Dot for everyday research tasks.",
+    "instagram": "How to set up ChatGPT Dot for daily research in 5 minutes. Link in bio for the full tutorial. #AITools #ChatGPT #Productivity",
+    "linkedin": "Personal AI agents are changing how professionals handle routine research. Here is a simple walkthrough on setting up ChatGPT Dot for your daily workflow."
    },
    "article": {
-    "title": "Beginner Guide to Canva's New AI Generation Tools",
+    "title": "Beginner's Guide to Setting Up ChatGPT Dot",
     "outline": [
-     "Introduction to Canva AI features",
-     "Step 1: Setting up your canvas",
-     "Step 2: Writing effective visual prompts",
-     "Step 3: Refining layouts with Canva Craft",
-     "Limitations and downside: Free account visual export caps"
+     "Introduction to Personal AI Agents",
+     "How to Access ChatGPT Dot",
+     "Setting Up Your First Research Task",
+     "Best Practices for Clean Outputs",
+     "Common Limitations to Know"
     ]
    }
   },
   {
-   "topic": "Conseal On-Device Data Privacy Masking",
-   "competitors": "LawSites highlighted Conseal's launch for masking client data before sending it to LLMs, but focused on legal context rather than showing screen setup. Competitor channels rarely cover local data privacy tools for everyday users.",
-   "angle": "Show beginners how to automatically hide sensitive personal names, addresses, and account details before pasting text into ChatGPT or Claude.",
+   "topic": "Conseal On-Device Privacy App",
+   "competitors": "LawSites covered Conseal as a legal industry announcement without showing how individual users set it up with ChatGPT. They missed a practical demonstration of data masking.",
+   "angle": "We demonstrate step-by-step how to mask sensitive client text on your device before sending it to ChatGPT or Claude using Conseal's free plan.",
+   "viral": {
+    "score": 55,
+    "why": "Data privacy is a major concern for tool users, but utility tools generally have lower search volume than headline AI models."
+   },
+   "long": {
+    "title": "How to Mask Sensitive Data Before Using ChatGPT",
+    "thumb": "Protect Your Data",
+    "hook": "In the next 6 minutes you will learn how to hide private client data before pasting text into ChatGPT or Claude.",
+    "outline": [
+     "Why you should protect data before using AI tools",
+     "Downloading and installing Conseal on your device",
+     "Configuring your masking rules",
+     "Testing a prompt with masked data",
+     "Restoring original text safely",
+     "One limitation regarding custom file formats",
+     "Recap and subscribe"
+    ]
+   },
+   "shorts": [
+    {
+     "title": "Stop Pasting Private Data into ChatGPT",
+     "hook": "Never paste raw client names into ChatGPT again.",
+     "script": "Download the Conseal app to run locally on your device. Type your sensitive message inside the app. It automatically replaces names with placeholders before you hit send. Protect your privacy in seconds.",
+     "cta": "Subscribe for more privacy tool guides."
+    },
+    {
+     "title": "Mask Data Instantly",
+     "hook": "Here is how to keep your chats private.",
+     "script": "Open Conseal and paste your document. Watch it scrub names and financial numbers instantly. Copy the safe text straight into Claude or ChatGPT without worry.",
+     "cta": "Watch our full tutorial on Toolscape."
+    }
+   ],
+   "carousel": {
+    "title": "Keep Your AI Prompts Private",
+    "slides": [
+     "Step 1: Install Conseal on your device",
+     "Step 2: Open the local dashboard",
+     "Step 3: Add your sensitive text",
+     "Step 4: Check masked placeholders",
+     "Step 5: Copy safely to ChatGPT"
+    ]
+   },
+   "posts": {
+    "x": [
+     "Worried about data privacy when using AI? Here is how to mask sensitive info locally using Conseal before pasting into ChatGPT.",
+     "Keep your client data safe with this simple on-device masking tool. Full tutorial live on Toolscape."
+    ],
+    "facebook": "Protecting your data when using AI tools is essential. Watch our new step-by-step guide on using Conseal to mask sensitive text locally.",
+    "instagram": "How to protect your privacy before using ChatGPT and Claude. New tutorial on Toolscape. #DataPrivacy #AI #TechTutorial",
+    "linkedin": "Privacy in the age of AI: How to use on-device tools like Conseal to protect client data before prompt submission."
+   },
+   "article": {
+    "title": "How to Protect Your Data While Using ChatGPT and Claude",
+    "outline": [
+     "The Risks of Sharing Raw Data with AI",
+     "Introduction to On-Device Privacy Apps",
+     "Step-by-Step Setup of Conseal",
+     "Testing Masked Prompts",
+     "Summary"
+    ]
+   }
+  },
+  {
+   "topic": "Google Ads AI Translation Tool",
+   "competitors": "PPC Land covered the Google Ads translation tool as a standard news brief without a walkthrough. They missed a practical guide on how small advertisers can test it.",
+   "angle": "We show a live screen recording of copying an existing Search campaign into multiple languages using the new Google Ads AI tool.",
    "viral": {
     "score": 52,
-    "why": "Privacy is a growing topic on Reddit and news outlets, but technical setup channels generally attract a focused utility audience rather than viral spikes."
+    "why": "Targeted specifically at digital marketers and small business owners looking to expand internationally with zero extra effort."
    },
    "long": {
-    "title": "Protect Your Private Data Before Using ChatGPT",
-    "thumb": "Protect Private Data",
-    "hook": "In the next 5 minutes, you will set up a free tool that hides your personal details before they ever reach ChatGPT or Claude. You can safely summarize sensitive documents without sharing private data.",
+    "title": "How to Translate Google Ads Campaigns with AI",
+    "thumb": "Translate Ad Campaigns",
+    "hook": "In the next 5 minutes you will copy your existing Search campaign into 10 new languages using Google's new AI tool.",
     "outline": [
-     "Why uploading raw private data to AI poses risks",
-     "How Conseal masks names, numbers, and addresses on-device",
-     "Step-by-step installation and basic settings",
-     "Testing a sensitive text snippet in real time",
-     "How to unmask the AI response locally on your computer"
+     "Overview of the new Google Ads translation feature",
+     "Navigating to your campaign settings",
+     "Selecting target languages for translation",
+     "Reviewing AI-generated ad copy and keywords",
+     "Publishing your multi-language campaign",
+     "One downside regarding niche industry terminology",
+     "Recap and next steps"
     ]
    },
    "shorts": [
     {
-     "title": "Stop Pasting Private Data in ChatGPT",
-     "hook": "Never paste your private documents into ChatGPT without doing this first.",
-     "script": "When you paste financial reports or client emails into AI tools, that data reaches remote servers. Use an on-device privacy app like Conseal. It automatically replaces names, emails, and account numbers with placeholders before sending your prompt. The response gets unmasked locally on your device.",
-     "cta": "Subscribe to keep your digital data safe."
+     "title": "Translate Google Ads in One Click",
+     "hook": "Translate your Google Ads into 10 languages instantly.",
+     "script": "Open your Google Ads campaign dashboard and select your Search group. Click the new AI translation tool option and choose your target regions. Review the generated copy and launch. Expand your reach today.",
+     "cta": "Subscribe for more marketing tool tutorials."
     },
     {
-     "title": "How to Mask Sensitive Text for AI",
-     "hook": "Here is the safest way to summarize client documents using Claude or ChatGPT.",
-     "script": "Run your text through an on-device masking tool first. It strips out phone numbers, full names, and addresses while leaving the core document structure intact. Paste the clean version into your AI tool, get your summary, and reverse the mask locally.",
-     "cta": "Follow for simple security and AI tutorials."
+     "title": "Global Google Ads Setup",
+     "hook": "Want to run international ads without a translator?",
+     "script": "Use Google's built-in AI tool to copy your English Search campaign into new languages automatically. It matches keywords and headlines in seconds.",
+     "cta": "Watch the full walkthrough on Toolscape."
     }
    ],
    "carousel": {
-    "title": "How to Mask Private Data in ChatGPT",
+    "title": "Translate Google Ads with AI",
     "slides": [
-     "1. Install an on-device masking tool like Conseal",
-     "2. Highlight sensitive text in your document",
-     "3. Automatically convert names and numbers to placeholders",
-     "4. Run your prompt in ChatGPT or Claude",
-     "5. Unmask the final output locally"
+     "Step 1: Open Google Ads dashboard",
+     "Step 2: Select your active Search campaign",
+     "Step 3: Click the AI translation tool",
+     "Step 4: Choose your 10 target languages",
+     "Step 5: Review and publish changes"
     ]
    },
    "posts": {
     "x": [
-     "Uploading client data to public AI tools carries real risks. Here is how on-device masking keeps your sensitive details private.",
-     "You can still use ChatGPT for work without sharing real names or financial numbers. Here is a quick breakdown of local data masking."
+     "Want to expand your ads globally? Here is how to use Google's new AI tool to copy Search campaigns into 10 new languages.",
+     "Translate your Google Ads automatically with our new step-by-step tutorial on Toolscape."
     ],
-    "facebook": "Concerned about data privacy when using AI at work? In today's guide, we show you how to automatically mask sensitive details before sending prompts to ChatGPT.",
-    "instagram": "Keep your personal and client data safe when using ChatGPT. Tap the link in bio to watch our 5-minute setup tutorial. #DataPrivacy #ChatGPT #CyberSecurity #AITools",
-    "linkedin": "Data privacy is a primary obstacle for professional AI adoption. On-device data masking offers a simple way to protect sensitive client records during processing."
+    "facebook": "Expanding your reach globally just got easier. Watch our new tutorial on using Google's AI translation tool for Search campaigns.",
+    "instagram": "How to translate your Google Ads into 10 languages using AI. New video on Toolscape. #GoogleAds #DigitalMarketing #PPC",
+    "linkedin": "Scaling ad campaigns across borders: A practical look at Google's new AI tool for multi-language Search campaign creation."
    },
    "article": {
-    "title": "How to Secure Sensitive Information When Prompting AI Models",
+    "title": "How to Use Google's AI Tool to Translate Search Campaigns",
     "outline": [
-     "Understanding public AI privacy policies",
-     "What is on-device data masking?",
-     "Setting up Conseal step by step",
-     "Verifying that masked text preserves context",
-     "Downside: Minor processing overhead on older laptops"
-    ]
-   }
-  },
-  {
-   "topic": "Practical Daily ChatGPT Workflows and Sycophancy Fixes",
-   "competitors": "Skill Leap AI and The AI Advantage covered recent ChatGPT model releases, but passed over practical prompt issues like ChatGPT over-agreeing with users. Reddit threads show users actively seeking fixes for sycophancy and practical daily uses.",
-   "angle": "Show beginners 3 custom system instructions that stop ChatGPT from agreeing with everything and turn it into an accurate, critical personal assistant.",
-   "viral": {
-    "score": 78,
-    "why": "ChatGPT frustration threads on Reddit are reaching high engagement, making targeted fix-it tutorials extremely effective right now."
-   },
-   "long": {
-    "title": "Stop ChatGPT From Agreeing With Everything You Say",
-    "thumb": "Fix ChatGPT Bias",
-    "hook": "If ChatGPT keeps agreeing with your bad ideas, you are missing out on its best feature. In 4 minutes, you will add three custom instructions that force ChatGPT to give honest, critical feedback.",
-    "outline": [
-     "Why ChatGPT defaults to sycophantic responses",
-     "Opening custom instructions in your profile settings",
-     "Prompt 1: Requesting constructive counter-arguments",
-     "Prompt 2: Disabling polite conversation filler",
-     "Testing the new settings on a real-world decision task"
-    ]
-   },
-   "shorts": [
-    {
-     "title": "Fix ChatGPT's Most Annoying Habit",
-     "hook": "Stop ChatGPT from telling you every idea you have is brilliant.",
-     "script": "Open your ChatGPT settings and click on Custom Instructions. In the box asking how you want ChatGPT to respond, paste this exact rule: 'Be direct. Point out flaws in my logic and offer clear counter-arguments before answering.' Save it, and your responses will immediately become more useful.",
-     "cta": "Subscribe for simple ChatGPT fixes."
-    },
-    {
-     "title": "3 Prompts to Upgrade ChatGPT Today",
-     "hook": "Here are three lines you should paste into your ChatGPT custom instructions right now.",
-     "script": "First: 'Skip conversational filler and pleasantries.' Second: 'Highlight factual assumptions that might be wrong.' Third: 'Ask clarifying questions if my prompt lacks necessary detail.' These three lines stop low-quality answers instantly.",
-     "cta": "Follow for daily actionable AI tips."
-    }
-   ],
-   "carousel": {
-    "title": "3 Custom Rules to Fix ChatGPT Answers",
-    "slides": [
-     "1. Open Custom Instructions in profile settings",
-     "2. Add Rule: 'Critique my premises directly'",
-     "3. Add Rule: 'Skip introductory pleasantries'",
-     "4. Add Rule: 'Highlight uncertain facts clearly'",
-     "5. Test with your next complex question"
-    ]
-   },
-   "posts": {
-    "x": [
-     "Tired of ChatGPT agreeing with everything you say? Paste 'Critique my logic before answering' into your custom instructions to get honest feedback.",
-     "Small changes to your ChatGPT settings eliminate conversational filler and improve fact-checking. Here is the 2-minute fix."
-    ],
-    "facebook": "Is ChatGPT being too agreeable? Learn how to configure custom instructions in under 3 minutes to turn ChatGPT into a critical editor and tutor.",
-    "instagram": "Fix ChatGPT's over-polite responses with this simple settings tweak. Check the link in bio for the full walkthrough. #ChatGPT #PromptEngineering #AITricks #Productivity",
-    "linkedin": "AI sycophancy can reduce the objectivity of strategic research. Applying custom systemic prompts ensures ChatGPT provides critical analysis rather than affirmation."
-   },
-   "article": {
-    "title": "How to Stop ChatGPT Sycophancy with Custom Instructions",
-    "outline": [
-     "Understanding why AI models default to agreeing with users",
-     "Locating Custom Instructions on mobile and desktop",
-     "The three core prompts for objective feedback",
-     "Testing your new setup on decision-making prompts",
-     "Downside: Responses may occasionally sound blunt"
+     "Introduction to AI-Driven Ad Translation",
+     "Prerequisites Inside Google Ads",
+     "Step-by-Step Campaign Duplication",
+     "Checking Translated Keywords for Accuracy",
+     "Conclusion"
     ]
    }
   }
  ],
  "hook_patterns": [
   {
-   "pattern": "How I [Achieved Result] with [Tool] - Full Guide",
-   "example": "How I Create Daily Presentation Slides with Canva AI - Full Guide"
+   "pattern": "Result + time frame to achieve a specific modern workflow outcome",
+   "example": "In the next 7 minutes you will set up ChatGPT Dot to automate your daily research tasks."
   },
   {
-   "pattern": "[Tool Name] Got a Major Upgrade 🚀 These features are coming soon",
-   "example": "ChatGPT Custom Settings Got a Major Upgrade 🚀 Try These 3 Features Now"
+   "pattern": "Addressing a common manual workflow pain point directly",
+   "example": "Still doing web research by hand every morning?"
   },
   {
-   "pattern": "The Ultimate Beginner’s Guide to [Tool Name]",
-   "example": "The Ultimate Beginner’s Guide to On-Device AI Privacy"
+   "pattern": "Highlighting a free native option that replaces paid software",
+   "example": "This free on-device privacy app does what expensive enterprise software charges for."
   },
   {
-   "pattern": "Build Your First [Project] in [Time] (No Coding)",
-   "example": "Build Your First Automated Data Export in 10 Minutes (No Coding)"
+   "pattern": "Highlighting a specific tool update configuration mistake to avoid",
+   "example": "Stop pasting raw client notes into ChatGPT before doing this one thing."
   },
   {
-   "pattern": "Stop [Doing Task Manually] Yourself.",
-   "example": "Stop Masking Private Data in Spreadsheet Files Yourself."
+   "pattern": "Demonstrating a fast result with zero prior experience required",
+   "example": "Translate your Google Ads into 10 languages in under 5 minutes without writing code."
   }
  ],
  "_competitors": [],
