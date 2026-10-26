@@ -3,33 +3,37 @@ Traceback (most recent call last):
     tick(force=len(sys.argv) > 1 and sys.argv[1] == "force")
   File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 827, in tick
     make(feedback=(redo or {}).get("feedback") if isinstance(redo, dict) else None)
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 789, in make
-    audio, tl = build_audio(d, tmp)
-                ^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 490, in build_audio
-    anc, rep = _voices(d, tmp)
-               ^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 424, in _voices
-    return _speak(at, ANCHOR_VOICE, tmp, "anc"), (_speak(rt, REPORTER_VOICE, tmp, "rep") if rt else [])
-                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 341, in _speak
-    for i, p in zip(rr, group([texts[i] for i in rr], f"{tag}{j}")):
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 310, in group
-    whole = one("\n\n".join(t.strip() for t in ts), tmp / f"{tg_}_all.wav")
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 242, in one
-    got = call(text, m)
-          ^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 218, in call
-    raise TTSQuota("آواز (Gemini TTS) کا آج کا مفت کوٹہ ختم ہو گیا")
-news.base.TTSQuota: آواز (Gemini TTS) کا آج کا مفت کوٹہ ختم ہو گیا
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 796, in make
+    vmid, mids = deliver(out, thumb, sd, d)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 740, in deliver
+    vmid = send_video(chat, video, caption=f"📺 فاروقی اے آئی نیوز — {urdu_date()}\n" + "\n".join(f"{i + 1}. {s['headline']}" for i, s in enumerate(d["stories"])),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/base.py", line 266, in send_video
+    return tg_call("sendVideo", files={"video": (path.name, f, "video/mp4")}, chat_id=chat, caption=caption[:1000],
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/base.py", line 239, in tg_call
+    raise RuntimeError(f"Telegram {method}: {body.get('description')}")
+RuntimeError: Telegram sendVideo: Request Entity Too Large
 
 
-Kore: 16 حصے محفوظ شدہ، 8 نئے
+Kore: 0 حصے محفوظ شدہ، 24 نئے
+TTS Kore بغیر آواز: {
+  "candidates": [
+    {
+      "finishReason": "OTHER",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 356,
+    "totalTokenCount": 356,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 356
+      }
+    ],
+    "serviceTier": "standard"
+ 
 Charon: 0 حصے محفوظ شدہ، 2 نئے
-TTS Charon 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10,
-Gemini آواز نہ ملی (آواز (Gemini TTS) کا آج کا مفت کوٹہ ختم ہو گیا)
