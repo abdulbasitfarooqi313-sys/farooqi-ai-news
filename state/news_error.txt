@@ -17,23 +17,3 @@ Traceback (most recent call last):
 RuntimeError: Telegram sendVideo: Request Entity Too Large
 
 
-Kore: 0 حصے محفوظ شدہ، 24 نئے
-TTS Kore بغیر آواز: {
-  "candidates": [
-    {
-      "finishReason": "OTHER",
-      "index": 0
-    }
-  ],
-  "usageMetadata": {
-    "promptTokenCount": 356,
-    "totalTokenCount": 356,
-    "promptTokensDetails": [
-      {
-        "modality": "TEXT",
-        "tokenCount": 356
-      }
-    ],
-    "serviceTier": "standard"
- 
-Charon: 0 حصے محفوظ شدہ، 2 نئے
