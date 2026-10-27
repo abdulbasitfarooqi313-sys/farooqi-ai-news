@@ -35,16 +35,23 @@
   "url": "https://youtu.be/2kzuCJ5KLn4"
  },
  {
+  "channel": "Futurepedia",
+  "title": "Claude Makes a New Kind of Video - Full Tutorial",
+  "views": 297044,
+  "date": "2026-10-19",
+  "url": "https://youtu.be/Ge1B-Ok1Pfk"
+ },
+ {
   "channel": "Matt Wolfe",
   "title": "Google Just Caught Up (Gemini-4 Argon)",
-  "views": 268870,
+  "views": 273460,
   "date": "2026-10-13",
   "url": "https://youtu.be/eBszYxzE2dk"
  },
  {
   "channel": "Jeff Su",
   "title": "Personal Agents, Clearly Explained",
-  "views": 240218,
+  "views": 270849,
   "date": "2026-10-13",
   "url": "https://youtu.be/HdI_aYzgJIg"
  },
@@ -63,13 +70,6 @@
   "url": "https://youtu.be/cR0TaYikrz8"
  },
  {
-  "channel": "Futurepedia",
-  "title": "Claude Makes a New Kind of Video - Full Tutorial",
-  "views": 204819,
-  "date": "2026-10-19",
-  "url": "https://youtu.be/Ge1B-Ok1Pfk"
- },
- {
   "channel": "Skill Leap AI",
   "title": "The Biggest ChatGPT Update Yet: Meet dots",
   "views": 200406,
@@ -79,9 +79,16 @@
  {
   "channel": "Jeff Su",
   "title": "Stop Organizing Files Yourself.",
-  "views": 179607,
+  "views": 184851,
   "date": "2026-09-29",
   "url": "https://youtu.be/peP_o66u-vM"
+ },
+ {
+  "channel": "Matt Wolfe",
+  "title": "AI News: 6 New Models & A Nano Banana Killer",
+  "views": 178981,
+  "date": "2026-10-16",
+  "url": "https://youtu.be/KGcuuhqmPhI"
  },
  {
   "channel": "Dan Kieft",
@@ -92,15 +99,8 @@
  },
  {
   "channel": "Matt Wolfe",
-  "title": "AI News: 6 New Models & A Nano Banana Killer",
-  "views": 174344,
-  "date": "2026-10-16",
-  "url": "https://youtu.be/KGcuuhqmPhI"
- },
- {
-  "channel": "Matt Wolfe",
   "title": "This Tesla Actually Flies (NOT AI)",
-  "views": 173470,
+  "views": 173949,
   "date": "2026-10-16",
   "url": "https://youtu.be/WXWFmwfo1JA"
  },
@@ -119,6 +119,13 @@
   "url": "https://youtu.be/KJ8Y2Nb9y9o"
  },
  {
+  "channel": "Matt Wolfe",
+  "title": "Personal Body Guard Robot - What could go wrong?",
+  "views": 156336,
+  "date": "2026-10-22",
+  "url": "https://youtu.be/dyrNQV0F3Zs"
+ },
+ {
   "channel": "The AI Advantage",
   "title": "How ChatGPT Dots Can Change Your Life in 4 Minutes",
   "views": 149965,
@@ -126,11 +133,25 @@
   "url": "https://youtu.be/E3xKmcHBOzY"
  },
  {
+  "channel": "Matt Wolfe",
+  "title": "11 AI Breakthroughs You Didn’t Know Existed",
+  "views": 146883,
+  "date": "2026-10-21",
+  "url": "https://youtu.be/umGZrkyTRtw"
+ },
+ {
   "channel": "Dan Kieft",
   "title": "Master AI Video Editing in 25 Minutes (Full Course)",
   "views": 145332,
   "date": "2026-09-29",
   "url": "https://youtu.be/AgUATWAOaKY"
+ },
+ {
+  "channel": "Matt Wolfe",
+  "title": "AI News: 24 Things You Need To Know This Week",
+  "views": 140276,
+  "date": "2026-10-23",
+  "url": "https://youtu.be/TVRCcMlvR10"
  },
  {
   "channel": "Matt Wolfe",
@@ -161,13 +182,6 @@
   "url": "https://youtu.be/F1PEICLlEBk"
  },
  {
-  "channel": "Matt Wolfe",
-  "title": "AI Breakthroughs Everyone Missed",
-  "views": 93311,
-  "date": "2026-10-21",
-  "url": "https://youtu.be/umGZrkyTRtw"
- },
- {
   "channel": "Skill Leap AI",
   "title": "Google Gemini Skills Are Finally Here",
   "views": 86745,
@@ -175,18 +189,18 @@
   "url": "https://youtu.be/XQtvloPXap4"
  },
  {
+  "channel": "The AI Advantage",
+  "title": "New Claude Motion is Insane",
+  "views": 75353,
+  "date": "2026-10-14",
+  "url": "https://youtu.be/qZqZ02AsYiA"
+ },
+ {
   "channel": "Kevin Stratvert",
   "title": "Windows 11 Just Got WAY More Customizable",
   "views": 73164,
   "date": "2026-10-02",
   "url": "https://youtu.be/FsTq4NPIBqY"
- },
- {
-  "channel": "The AI Advantage",
-  "title": "New Claude Motion is Insane",
-  "views": 68898,
-  "date": "2026-10-14",
-  "url": "https://youtu.be/qZqZ02AsYiA"
  },
  {
   "channel": "Nate Herk | AI Automation",
@@ -210,11 +224,11 @@
   "url": "https://youtu.be/ezCmuRCAVXY"
  },
  {
-  "channel": "Matt Wolfe",
-  "title": "Personal Body Guard Robot - What could go wrong?",
-  "views": 62899,
-  "date": "2026-10-22",
-  "url": "https://youtu.be/dyrNQV0F3Zs"
+  "channel": "The AI Advantage",
+  "title": "ChatGPT Just Solved My Biggest Browser Problem",
+  "views": 63047,
+  "date": "2026-10-16",
+  "url": "https://youtu.be/KwvpDtUFS-s"
  },
  {
   "channel": "Metics Media",
@@ -229,13 +243,6 @@
   "views": 61516,
   "date": "2026-10-13",
   "url": "https://youtu.be/b5D80OWst78"
- },
- {
-  "channel": "The AI Advantage",
-  "title": "ChatGPT Just Solved My Biggest Browser Problem",
-  "views": 59681,
-  "date": "2026-10-16",
-  "url": "https://youtu.be/KwvpDtUFS-s"
  },
  {
   "channel": "Parker Prompts",
@@ -257,6 +264,13 @@
   "views": 48543,
   "date": "2026-10-09",
   "url": "https://youtu.be/yWL93gjFNd8"
+ },
+ {
+  "channel": "Matt Wolfe",
+  "title": "Old Phones Are Becoming Robots?!?",
+  "views": 48038,
+  "date": "2026-10-24",
+  "url": "https://youtu.be/FiyUagHO37Y"
  },
  {
   "channel": "Kevin Stratvert",
@@ -329,6 +343,13 @@
   "url": "https://youtu.be/nJut4s0DTx8"
  },
  {
+  "channel": "Jeff Su",
+  "title": "Microsoft’s plan to win the AI race, explained",
+  "views": 35626,
+  "date": "2026-09-30",
+  "url": "https://youtu.be/VXuN2iMwzqI"
+ },
+ {
   "channel": "Nate Herk | AI Automation",
   "title": "McKinsey Explains: Build an AI Operating System",
   "views": 34484,
@@ -336,11 +357,11 @@
   "url": "https://youtu.be/K70Qf06XBLE"
  },
  {
-  "channel": "Jeff Su",
-  "title": "Microsoft’s plan to win the AI race, explained",
-  "views": 34300,
-  "date": "2026-09-30",
-  "url": "https://youtu.be/VXuN2iMwzqI"
+  "channel": "The AI Advantage",
+  "title": "My Honest Take on Muse, Grok Bot, Dots & Duet",
+  "views": 33384,
+  "date": "2026-10-23",
+  "url": "https://youtu.be/Bd8-geZPwI4"
  },
  {
   "channel": "Kevin Stratvert",
@@ -427,6 +448,20 @@
   "url": "https://youtu.be/OawSCIZdZmU"
  },
  {
+  "channel": "Matt Wolfe",
+  "title": "Open-Source AI Models Caught Up! (Kimi K3.1 Pro)",
+  "views": 22289,
+  "date": "2026-10-24",
+  "url": "https://youtu.be/u3WV4nf8Jdo"
+ },
+ {
+  "channel": "Futurepedia",
+  "title": "The Ultimate Image Generator Showdown",
+  "views": 21450,
+  "date": "2026-10-09",
+  "url": "https://youtu.be/QLv4WCKVqd0"
+ },
+ {
   "channel": "Kevin Stratvert",
   "title": "How to Use ChatGPT Voice - Step-by-Step for Beginners",
   "views": 21432,
@@ -434,18 +469,18 @@
   "url": "https://youtu.be/RT318f4qsQ4"
  },
  {
-  "channel": "Futurepedia",
-  "title": "The Ultimate Image Generator Showdown",
-  "views": 21029,
-  "date": "2026-10-09",
-  "url": "https://youtu.be/QLv4WCKVqd0"
- },
- {
   "channel": "Parker Prompts",
   "title": "Claude Just Killed Opus (NEW Sonnet 5.5)",
   "views": 20749,
   "date": "2026-10-09",
   "url": "https://youtu.be/Sa0z4nKtATk"
+ },
+ {
+  "channel": "Matt Wolfe",
+  "title": "ANOTHER Flying Car? (Not Tesla / Not AI)",
+  "views": 19719,
+  "date": "2026-10-26",
+  "url": "https://youtu.be/gC18kqOcCEI"
  },
  {
   "channel": "AI Master",
@@ -483,6 +518,13 @@
   "url": "https://youtu.be/LIK6ZayNndU"
  },
  {
+  "channel": "Matt Wolfe",
+  "title": "3 New Claude Prompts You Need To Try",
+  "views": 18124,
+  "date": "2026-10-19",
+  "url": "https://youtu.be/aIrrq3CLSKM"
+ },
+ {
   "channel": "The AI Advantage",
   "title": "ChatGPT Dots Explained in 1 Minute",
   "views": 17449,
@@ -490,18 +532,18 @@
   "url": "https://youtu.be/5KrfKLXNQkQ"
  },
  {
-  "channel": "Matt Wolfe",
-  "title": "3 New Claude Prompts You Need To Try",
-  "views": 15525,
-  "date": "2026-10-19",
-  "url": "https://youtu.be/aIrrq3CLSKM"
- },
- {
   "channel": "Kevin Stratvert",
   "title": "How to Categorize Transactions in QuickBooks Online (2026)",
   "views": 15158,
   "date": "2026-10-09",
   "url": "https://youtu.be/pHeL9Qeb0kk"
+ },
+ {
+  "channel": "Matt Wolfe",
+  "title": "The Robot Butler Will Clean Up After You",
+  "views": 14368,
+  "date": "2026-10-26",
+  "url": "https://youtu.be/B8YFkYY20OY"
  },
  {
   "channel": "Kevin Stratvert",
@@ -519,8 +561,15 @@
  },
  {
   "channel": "Matt Wolfe",
+  "title": "My favorite new image editing tool",
+  "views": 14081,
+  "date": "2026-10-20",
+  "url": "https://youtu.be/VVBszkWK0Io"
+ },
+ {
+  "channel": "Matt Wolfe",
   "title": "The Cheapest Robot On The Market?!",
-  "views": 12266,
+  "views": 12868,
   "date": "2026-10-14",
   "url": "https://youtu.be/XEl4ZQKKxig"
  },
@@ -533,10 +582,10 @@
  },
  {
   "channel": "Matt Wolfe",
-  "title": "My favorite new image editing tool",
-  "views": 11508,
-  "date": "2026-10-20",
-  "url": "https://youtu.be/VVBszkWK0Io"
+  "title": "5 Prompts With Google's ULTRA Powerful New Model",
+  "views": 12041,
+  "date": "2026-10-21",
+  "url": "https://youtu.be/S2srfNCa50A"
  },
  {
   "channel": "Matt Wolfe",
@@ -562,7 +611,7 @@
  {
   "channel": "The AI Advantage",
   "title": "Create an Unrolling Timeline video with Claude Motion",
-  "views": 9953,
+  "views": 10131,
   "date": "2026-10-14",
   "url": "https://youtu.be/gyTcoQlibdk"
  },
@@ -574,11 +623,25 @@
   "url": "https://youtu.be/xGyFfZfNEbk"
  },
  {
+  "channel": "Futurepedia",
+  "title": "Claude just made motion graphics with zero video generator",
+  "views": 9508,
+  "date": "2026-10-20",
+  "url": "https://youtu.be/2gVfS19Hudk"
+ },
+ {
   "channel": "The AI Advantage",
   "title": "ChatGPT Can Now Scan Documents",
-  "views": 9233,
+  "views": 9322,
   "date": "2026-10-09",
   "url": "https://youtu.be/eeI_FSN35XE"
+ },
+ {
+  "channel": "Matt Wolfe",
+  "title": "These ChatGPT Prompts Are Game-Changers!",
+  "views": 8626,
+  "date": "2026-10-23",
+  "url": "https://youtu.be/WSHEBdmahHY"
  },
  {
   "channel": "Nate Herk | AI Automation",
@@ -586,6 +649,13 @@
   "views": 7863,
   "date": "2026-10-22",
   "url": "https://youtu.be/DSS1Yqb6-qE"
+ },
+ {
+  "channel": "The AI Advantage",
+  "title": "ChatGPT Just Changed How I Use the Internet",
+  "views": 7649,
+  "date": "2026-10-16",
+  "url": "https://youtu.be/fP4_LH2CrB8"
  },
  {
   "channel": "Metics Media",
@@ -600,13 +670,6 @@
   "views": 7287,
   "date": "2026-10-22",
   "url": "https://youtu.be/iO9MiefIpVM"
- },
- {
-  "channel": "The AI Advantage",
-  "title": "ChatGPT Just Changed How I Use the Internet",
-  "views": 7261,
-  "date": "2026-10-16",
-  "url": "https://youtu.be/fP4_LH2CrB8"
  },
  {
   "channel": "Nate Herk | AI Automation",
@@ -624,17 +687,24 @@
  },
  {
   "channel": "Futurepedia",
-  "title": "Claude just made motion graphics with zero video generator",
-  "views": 6967,
-  "date": "2026-10-20",
-  "url": "https://youtu.be/2gVfS19Hudk"
+  "title": "Claude video generator turns your single prompt into a stylized movie",
+  "views": 7058,
+  "date": "2026-10-21",
+  "url": "https://youtu.be/KZRUdQYU4dI"
  },
  {
   "channel": "The AI Advantage",
   "title": "GPT 6 & UI Update",
-  "views": 6866,
+  "views": 6937,
   "date": "2026-10-09",
   "url": "https://youtu.be/MCgavq9YpP0"
+ },
+ {
+  "channel": "Futurepedia",
+  "title": "Claude video style database for free",
+  "views": 6882,
+  "date": "2026-10-22",
+  "url": "https://youtu.be/xr024WjmJUY"
  },
  {
   "channel": "AI Master",
@@ -644,25 +714,25 @@
   "url": "https://youtu.be/4O0VWfZZsj4"
  },
  {
-  "channel": "Matt Wolfe",
-  "title": "5 Prompts With Google's ULTRA Powerful New Model",
-  "views": 6496,
-  "date": "2026-10-21",
-  "url": "https://youtu.be/S2srfNCa50A"
- },
- {
   "channel": "The AI Advantage",
   "title": "How does Claude Motion work?",
-  "views": 5521,
+  "views": 6492,
   "date": "2026-10-14",
   "url": "https://youtu.be/I9ja4gEbBiI"
  },
  {
   "channel": "The AI Advantage",
   "title": "New Claude Motion Feature",
-  "views": 5499,
+  "views": 5609,
   "date": "2026-10-14",
   "url": "https://youtu.be/R706jvQfQMM"
+ },
+ {
+  "channel": "The AI Advantage",
+  "title": "The Meetings Plugin in ChatGPT",
+  "views": 5395,
+  "date": "2026-10-12",
+  "url": "https://youtu.be/A6nf3vplEPY"
  },
  {
   "channel": "Futurepedia",
@@ -670,13 +740,6 @@
   "views": 5326,
   "date": "2026-10-05",
   "url": "https://youtu.be/RxB56eE5BRc"
- },
- {
-  "channel": "The AI Advantage",
-  "title": "The Meetings Plugin in ChatGPT",
-  "views": 5283,
-  "date": "2026-10-12",
-  "url": "https://youtu.be/A6nf3vplEPY"
  },
  {
   "channel": "Kevin Stratvert",
@@ -691,13 +754,6 @@
   "views": 5059,
   "date": "2026-10-07",
   "url": "https://youtu.be/wtm2Dl1PHtk"
- },
- {
-  "channel": "Futurepedia",
-  "title": "Claude video generator turns your single prompt into a stylized movie",
-  "views": 4958,
-  "date": "2026-10-21",
-  "url": "https://youtu.be/KZRUdQYU4dI"
  },
  {
   "channel": "AI Master",
@@ -723,7 +779,7 @@
  {
   "channel": "The AI Advantage",
   "title": "Grokbot with ANY AI Model?",
-  "views": 4216,
+  "views": 4256,
   "date": "2026-10-09",
   "url": "https://youtu.be/Y1uMhRTcYO0"
  },
@@ -749,6 +805,13 @@
   "url": "https://youtu.be/5CmsCgg0lAI"
  },
  {
+  "channel": "Futurepedia",
+  "title": "Claude video generator is a game changer",
+  "views": 3493,
+  "date": "2026-10-24",
+  "url": "https://youtu.be/RsidPYy61Fg"
+ },
+ {
   "channel": "AI Master",
   "title": "How to Build a Full-Stack App with AI in 2026 (AI App Builder)",
   "views": 3487,
@@ -768,6 +831,13 @@
   "views": 3347,
   "date": "2026-10-04",
   "url": "https://youtu.be/9X-4QbVC7dM"
+ },
+ {
+  "channel": "Futurepedia",
+  "title": "Your Personalized AI Plan, Free | Futurepedia 2.0",
+  "views": 3217,
+  "date": "2026-10-20",
+  "url": "https://youtu.be/qXlgk8VExhI"
  },
  {
   "channel": "Metics Media",
@@ -792,17 +862,31 @@
  },
  {
   "channel": "Futurepedia",
-  "title": "Your Personalized AI Plan, Free | Futurepedia 2.0",
-  "views": 2869,
-  "date": "2026-10-20",
-  "url": "https://youtu.be/qXlgk8VExhI"
+  "title": "using Claude video generator to add captions and timestamps",
+  "views": 2986,
+  "date": "2026-10-23",
+  "url": "https://youtu.be/eMFpzUYNv3o"
+ },
+ {
+  "channel": "The AI Advantage",
+  "title": "The Best AI Tool for Research?",
+  "views": 2932,
+  "date": "2026-10-23",
+  "url": "https://youtu.be/at1DSU0dZkE"
  },
  {
   "channel": "Futurepedia",
   "title": "Gemini Skills for repeatable tasks",
-  "views": 2769,
+  "views": 2842,
   "date": "2026-10-11",
   "url": "https://youtu.be/R4W9FJ8XR0o"
+ },
+ {
+  "channel": "The AI Advantage",
+  "title": "This Is What Everyone Uses AI Agents For",
+  "views": 2754,
+  "date": "2026-10-23",
+  "url": "https://youtu.be/nRuMcliU_uo"
  },
  {
   "channel": "Skill Leap AI",
@@ -817,6 +901,13 @@
   "views": 2582,
   "date": "2026-10-16",
   "url": "https://youtu.be/BGJELJSCpmc"
+ },
+ {
+  "channel": "The AI Advantage",
+  "title": "Still looking for the best AI bot for you?",
+  "views": 2572,
+  "date": "2026-10-23",
+  "url": "https://youtu.be/iOc6f6Dt10A"
  },
  {
   "channel": "Matt Wolfe",
@@ -842,16 +933,37 @@
  {
   "channel": "Futurepedia",
   "title": "Does Gemini's Write Like Me make emails sound like you?",
-  "views": 2234,
+  "views": 2248,
   "date": "2026-10-09",
   "url": "https://youtu.be/6YEtBN76MK0"
  },
  {
   "channel": "Futurepedia",
   "title": "Nano Banana just dropped me into a barrel wave",
-  "views": 2054,
+  "views": 2085,
   "date": "2026-10-14",
   "url": "https://youtu.be/2zBvyF4IExY"
+ },
+ {
+  "channel": "Futurepedia",
+  "title": "Four AI models, one ad, one clear winner.",
+  "views": 2001,
+  "date": "2026-10-15",
+  "url": "https://youtu.be/umyrdpsnFCA"
+ },
+ {
+  "channel": "The AI Advantage",
+  "title": "My Favorite Use Case for AI Agents",
+  "views": 1998,
+  "date": "2026-10-23",
+  "url": "https://youtu.be/kgS10xZhPzI"
+ },
+ {
+  "channel": "Futurepedia",
+  "title": "A to Z without a single mistake?",
+  "views": 1980,
+  "date": "2026-10-17",
+  "url": "https://youtu.be/Ar8yKK2liUw"
  },
  {
   "channel": "Skill Leap AI",
@@ -859,13 +971,6 @@
   "views": 1962,
   "date": "2026-10-15",
   "url": "https://youtu.be/vow-t96SiMo"
- },
- {
-  "channel": "Futurepedia",
-  "title": "Four AI models, one ad, one clear winner.",
-  "views": 1958,
-  "date": "2026-10-15",
-  "url": "https://youtu.be/umyrdpsnFCA"
  },
  {
   "channel": "AI Master",
@@ -876,29 +981,15 @@
  },
  {
   "channel": "Futurepedia",
-  "title": "A to Z without a single mistake?",
-  "views": 1903,
-  "date": "2026-10-17",
-  "url": "https://youtu.be/Ar8yKK2liUw"
- },
- {
-  "channel": "Futurepedia",
   "title": "Who nails the most realistic concert photo?",
-  "views": 1594,
+  "views": 1639,
   "date": "2026-10-16",
   "url": "https://youtu.be/pur1QwIA0qg"
  },
  {
   "channel": "Futurepedia",
-  "title": "Claude video style database for free",
-  "views": 1540,
-  "date": "2026-10-22",
-  "url": "https://youtu.be/xr024WjmJUY"
- },
- {
-  "channel": "Futurepedia",
   "title": "Last 30 Days: your new real-time web search",
-  "views": 1531,
+  "views": 1555,
   "date": "2026-10-13",
   "url": "https://youtu.be/7-556KlDMfg"
  },

@@ -1,87 +1,87 @@
 {
- "summary": "Today's landscape focuses heavily on advanced AI agent features like ChatGPT Dot, privacy tools for data masking, and enterprise AI translation rollouts. Toolscape will capitalize on these shifts by offering practical, step-by-step beginner tutorials for new tools.",
+ "summary": "Today's content focus centers heavily on advanced AI video capabilities and new model releases like Claude Motion and Gemini-4 Argon, alongside practical developer and workflow tools from Product Hunt. Our channel will break down these complex updates into simple, beginner-friendly step-by-step tutorials.",
  "topics": [
   {
-   "title": "ChatGPT Dot / Personal Agents",
-   "why": "Massive user interest across Reddit and tech news regarding personal task management and job research features.",
+   "title": "Claude Motion Video Generation",
+   "why": "Competitors like Futurepedia and The AI Advantage are pulling hundreds of thousands of views covering Claude's new video and motion features.",
    "trend": 10,
    "sources": [
-    "reddit.com",
-    "Skill Leap AI",
-    "The AI Advantage"
+    "Futurepedia",
+    "The AI Advantage",
+    "YouTube"
    ]
   },
   {
-   "title": "Conseal On-Device Privacy App",
-   "why": "Crucial tool addressing data privacy concerns before sending prompts to ChatGPT or Claude.",
+   "title": "Google Gemini-4 Argon Update",
+   "why": "Major interest in Google's latest model updates as they catch up in the AI model race.",
    "trend": 9,
    "sources": [
-    "LawSites",
-    "news.google.com"
+    "Matt Wolfe",
+    "Google News",
+    "YouTube"
    ]
   },
   {
-   "title": "Google Ads AI Translation Tool",
-   "why": "Enables marketers to copy Search campaigns into 10 new languages automatically.",
+   "title": "AI Personal Agents Explained",
+   "why": "Creators like Jeff Su are driving massive engagement explaining personal productivity and organization agents.",
    "trend": 8,
    "sources": [
-    "PPC Land",
-    "news.google.com"
+    "Jeff Su",
+    "Metics Media",
+    "YouTube"
    ]
   },
   {
-   "title": "OpenAI Codex for Legacy Hardware",
-   "why": "Users are finding creative ways to run old hardware on modern OS using coding assistants.",
+   "title": "MiniMax M3.1 Flash",
+   "why": "Trending new model release on Product Hunt capturing developer and creator attention.",
    "trend": 7,
    "sources": [
-    "reddit.com",
-    "Kevin Stratvert"
+    "producthunt.com"
    ]
   },
   {
-   "title": "AgentGrid.io",
-   "why": "New workflow automation tool trending on Product Hunt for beginners.",
+   "title": "N8N Chat UI",
+   "why": "Popular new workflow builder interface trending among automation beginners.",
    "trend": 6,
    "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "Papermark Data Rooms",
-   "why": "Gaining traction for secure document sharing and open-source data handling.",
+   "title": "CloudKnife",
+   "why": "New cloud management tool gaining early traction on Product Hunt.",
    "trend": 5,
    "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "Canva AI Image Generator",
-   "why": "Recent reviews test its mixed-bag capabilities for everyday beginner design tasks.",
+   "title": "PDF Accessibility Checker by WebYes",
+   "why": "Practical utility tool solving document compliance for beginners.",
    "trend": 4,
    "sources": [
-    "Business Insider",
-    "news.google.com"
+    "producthunt.com"
    ]
   },
   {
-   "title": "Openstatus Incident Management",
-   "why": "Popular open-source tool for tracking uptime and managing developer alerts.",
+   "title": "Jobmate AI",
+   "why": "Career assistance tool catching traction for job seekers.",
    "trend": 3,
    "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "MRRaudit",
-   "why": "Simple indie hacker tool tracking recurring revenue metrics.",
+   "title": "VibeiDE",
+   "why": "New coding interface environment listed on Product Hunt.",
    "trend": 2,
    "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "Badgey",
-   "why": "Handy utility for generating project badges quickly for GitHub repositories.",
+   "title": "SurgePix",
+   "why": "New visual editing and asset tool launched on Product Hunt.",
    "trend": 1,
    "sources": [
     "producthunt.com"
@@ -90,227 +90,333 @@
  ],
  "packages": [
   {
-   "topic": "ChatGPT Dot / Personal Agents",
-   "competitors": "Competitors like Skill Leap AI and The AI Advantage covered high-level feature overviews of ChatGPT Dot. They missed a simple, click-by-click beginner walkthrough on setting up automated job research.",
-   "angle": "We show a practical, step-by-step setup of ChatGPT Dot for automated daily research using a free account.",
+   "topic": "Claude Motion Video Generation",
+   "competitors": "Futurepedia and The AI Advantage covered Claude Motion with high-level overviews and quick showcases, but skipped step-by-step prompt structures for beginners.",
+   "angle": "We provide an exact screen-by-screen tutorial showing how to type your first prompt and fix common formatting errors.",
    "viral": {
-    "score": 68,
-    "why": "Interest in personal AI agents is peaking, and beginners are actively looking for concrete use cases rather than feature lists."
+    "score": 78,
+    "why": "The topic is currently exploding across YouTube with massive view counts, and our clear tutorial angle directly answers the 'how-to' gap left by high-level news videos."
    },
    "long": {
-    "title": "How to Use ChatGPT Dot for Daily Research",
-    "thumb": "Setup ChatGPT Dot",
-    "hook": "In the next 7 minutes you will set up ChatGPT Dot to automate your daily research tasks. No coding required.",
+    "title": "How to Use Claude Motion: Step-by-Step Tutorial",
+    "thumb": "Claude Motion Tutorial",
+    "hook": "In the next 7 minutes you will turn a simple text prompt into a motion graphic using Claude. No video editing software needed.",
     "outline": [
-     "What ChatGPT Dot actually does",
-     "Accessing the feature on your free account",
-     "Writing your first daily research prompt",
-     "Connecting external data sources",
-     "Setting up scheduled automated checks",
-     "One major privacy limitation to watch out for",
-     "Summary and next steps"
-    ]
-   },
-   "shorts": [
-    {
-     "title": "Stop Doing Research Manually",
-     "hook": "Stop searching the web by hand every morning.",
-     "script": "Open ChatGPT Dot on your dashboard. Type your target topic and select research mode. Let the agent compile the top links for you in under 60 seconds. Try this today and save hours of browsing.",
-     "cta": "Subscribe for more simple AI tool tutorials."
-    },
-    {
-     "title": "ChatGPT Dot Hidden Feature",
-     "hook": "Did you know ChatGPT Dot can organize your tasks?",
-     "script": "Navigate to your agent settings and turn on background tasks. Paste your raw notes and watch it categorize them into clean lists automatically. It takes ten seconds to set up.",
-     "cta": "Check out our full guide on the channel."
-    }
-   ],
-   "carousel": {
-    "title": "Automate Your Tasks with ChatGPT Dot",
-    "slides": [
-     "Step 1: Open your ChatGPT dashboard",
-     "Step 2: Locate the Dot agent panel",
-     "Step 3: Enter your daily topic prompt",
-     "Step 4: Review the generated summary",
-     "Step 5: Save your workflow as a template"
-    ]
-   },
-   "posts": {
-    "x": [
-     "Still doing web research by hand? Here is how to set up ChatGPT Dot in under 5 minutes. Watch the full tutorial on Toolscape.",
-     "Personal agents are finally easy to use. We tested ChatGPT Dot so you don't have to guess the settings."
-    ],
-    "facebook": "Setting up personal AI agents doesn't have to be complicated. Watch our new step-by-step guide on using ChatGPT Dot for everyday research tasks.",
-    "instagram": "How to set up ChatGPT Dot for daily research in 5 minutes. Link in bio for the full tutorial. #AITools #ChatGPT #Productivity",
-    "linkedin": "Personal AI agents are changing how professionals handle routine research. Here is a simple walkthrough on setting up ChatGPT Dot for your daily workflow."
-   },
-   "article": {
-    "title": "Beginner's Guide to Setting Up ChatGPT Dot",
-    "outline": [
-     "Introduction to Personal AI Agents",
-     "How to Access ChatGPT Dot",
-     "Setting Up Your First Research Task",
-     "Best Practices for Clean Outputs",
-     "Common Limitations to Know"
-    ]
-   }
-  },
-  {
-   "topic": "Conseal On-Device Privacy App",
-   "competitors": "LawSites covered Conseal as a legal industry announcement without showing how individual users set it up with ChatGPT. They missed a practical demonstration of data masking.",
-   "angle": "We demonstrate step-by-step how to mask sensitive client text on your device before sending it to ChatGPT or Claude using Conseal's free plan.",
-   "viral": {
-    "score": 55,
-    "why": "Data privacy is a major concern for tool users, but utility tools generally have lower search volume than headline AI models."
-   },
-   "long": {
-    "title": "How to Mask Sensitive Data Before Using ChatGPT",
-    "thumb": "Protect Your Data",
-    "hook": "In the next 6 minutes you will learn how to hide private client data before pasting text into ChatGPT or Claude.",
-    "outline": [
-     "Why you should protect data before using AI tools",
-     "Downloading and installing Conseal on your device",
-     "Configuring your masking rules",
-     "Testing a prompt with masked data",
-     "Restoring original text safely",
-     "One limitation regarding custom file formats",
-     "Recap and subscribe"
-    ]
-   },
-   "shorts": [
-    {
-     "title": "Stop Pasting Private Data into ChatGPT",
-     "hook": "Never paste raw client names into ChatGPT again.",
-     "script": "Download the Conseal app to run locally on your device. Type your sensitive message inside the app. It automatically replaces names with placeholders before you hit send. Protect your privacy in seconds.",
-     "cta": "Subscribe for more privacy tool guides."
-    },
-    {
-     "title": "Mask Data Instantly",
-     "hook": "Here is how to keep your chats private.",
-     "script": "Open Conseal and paste your document. Watch it scrub names and financial numbers instantly. Copy the safe text straight into Claude or ChatGPT without worry.",
-     "cta": "Watch our full tutorial on Toolscape."
-    }
-   ],
-   "carousel": {
-    "title": "Keep Your AI Prompts Private",
-    "slides": [
-     "Step 1: Install Conseal on your device",
-     "Step 2: Open the local dashboard",
-     "Step 3: Add your sensitive text",
-     "Step 4: Check masked placeholders",
-     "Step 5: Copy safely to ChatGPT"
-    ]
-   },
-   "posts": {
-    "x": [
-     "Worried about data privacy when using AI? Here is how to mask sensitive info locally using Conseal before pasting into ChatGPT.",
-     "Keep your client data safe with this simple on-device masking tool. Full tutorial live on Toolscape."
-    ],
-    "facebook": "Protecting your data when using AI tools is essential. Watch our new step-by-step guide on using Conseal to mask sensitive text locally.",
-    "instagram": "How to protect your privacy before using ChatGPT and Claude. New tutorial on Toolscape. #DataPrivacy #AI #TechTutorial",
-    "linkedin": "Privacy in the age of AI: How to use on-device tools like Conseal to protect client data before prompt submission."
-   },
-   "article": {
-    "title": "How to Protect Your Data While Using ChatGPT and Claude",
-    "outline": [
-     "The Risks of Sharing Raw Data with AI",
-     "Introduction to On-Device Privacy Apps",
-     "Step-by-Step Setup of Conseal",
-     "Testing Masked Prompts",
-     "Summary"
-    ]
-   }
-  },
-  {
-   "topic": "Google Ads AI Translation Tool",
-   "competitors": "PPC Land covered the Google Ads translation tool as a standard news brief without a walkthrough. They missed a practical guide on how small advertisers can test it.",
-   "angle": "We show a live screen recording of copying an existing Search campaign into multiple languages using the new Google Ads AI tool.",
-   "viral": {
-    "score": 52,
-    "why": "Targeted specifically at digital marketers and small business owners looking to expand internationally with zero extra effort."
-   },
-   "long": {
-    "title": "How to Translate Google Ads Campaigns with AI",
-    "thumb": "Translate Ad Campaigns",
-    "hook": "In the next 5 minutes you will copy your existing Search campaign into 10 new languages using Google's new AI tool.",
-    "outline": [
-     "Overview of the new Google Ads translation feature",
-     "Navigating to your campaign settings",
-     "Selecting target languages for translation",
-     "Reviewing AI-generated ad copy and keywords",
-     "Publishing your multi-language campaign",
-     "One downside regarding niche industry terminology",
+     "Introduction to Claude Motion features",
+     "Setting up your free account",
+     "Entering your first prompt",
+     "Adjusting motion settings",
+     "Exporting your video file",
+     "Common mistakes to avoid",
      "Recap and next steps"
     ]
    },
    "shorts": [
     {
-     "title": "Translate Google Ads in One Click",
-     "hook": "Translate your Google Ads into 10 languages instantly.",
-     "script": "Open your Google Ads campaign dashboard and select your Search group. Click the new AI translation tool option and choose your target regions. Review the generated copy and launch. Expand your reach today.",
-     "cta": "Subscribe for more marketing tool tutorials."
+     "title": "Make Videos with Claude Text",
+     "hook": "Stop using expensive video editors for simple motion graphics.",
+     "script": "You can now create motion graphics directly inside Claude using just text prompts. Open Claude, type your prompt describing the movement, and let the tool generate the layout. Watch how simple it is to export your file in under one minute. Subscribe for more easy AI tutorials.",
+     "cta": "Subscribe for more easy AI tutorials."
     },
     {
-     "title": "Global Google Ads Setup",
-     "hook": "Want to run international ads without a translator?",
-     "script": "Use Google's built-in AI tool to copy your English Search campaign into new languages automatically. It matches keywords and headlines in seconds.",
-     "cta": "Watch the full walkthrough on Toolscape."
+     "title": "Claude Motion Quick Fix",
+     "hook": "Here is why your Claude video prompt failed.",
+     "script": "If your Claude motion graphic looks distorted, you are probably missing direction details. Always specify the background color and object movement clearly in your prompt. Fix this one line and your export will work instantly. Check our channel for the full guide.",
+     "cta": "Check our channel for the full guide."
     }
    ],
    "carousel": {
-    "title": "Translate Google Ads with AI",
+    "title": "How to Use Claude Motion in 5 Steps",
     "slides": [
-     "Step 1: Open Google Ads dashboard",
-     "Step 2: Select your active Search campaign",
-     "Step 3: Click the AI translation tool",
-     "Step 4: Choose your 10 target languages",
-     "Step 5: Review and publish changes"
+     "Step 1: Open Claude and select the motion tool option",
+     "Step 2: Type a clear description of your desired graphic",
+     "Step 3: Review the generated layout on your screen",
+     "Step 4: Adjust colors or text directly in the panel",
+     "Step 5: Click export to save your finished MP4 file"
     ]
    },
    "posts": {
     "x": [
-     "Want to expand your ads globally? Here is how to use Google's new AI tool to copy Search campaigns into 10 new languages.",
-     "Translate your Google Ads automatically with our new step-by-step tutorial on Toolscape."
+     "Want to make motion graphics without editing software? Here is how to use Claude Motion step by step in our new video.",
+     "Stop struggling with complex video editors. Claude can now generate motion layouts from simple text prompts."
     ],
-    "facebook": "Expanding your reach globally just got easier. Watch our new tutorial on using Google's AI translation tool for Search campaigns.",
-    "instagram": "How to translate your Google Ads into 10 languages using AI. New video on Toolscape. #GoogleAds #DigitalMarketing #PPC",
-    "linkedin": "Scaling ad campaigns across borders: A practical look at Google's new AI tool for multi-language Search campaign creation."
+    "facebook": "We just tested Claude's new motion video feature. Watch our step-by-step tutorial to see how beginners can create clean graphics without any design experience.",
+    "instagram": "Learn how to turn simple text prompts into motion graphics using Claude. Link in bio for the full beginner tutorial. #AITools #Claude #ContentCreation",
+    "linkedin": "AI video generation tools are evolving fast. Here is a practical walkthrough of Claude's motion features for professionals looking to speed up content creation."
    },
    "article": {
-    "title": "How to Use Google's AI Tool to Translate Search Campaigns",
+    "title": "How Beginners Can Use Claude Motion for Quick Graphics",
     "outline": [
-     "Introduction to AI-Driven Ad Translation",
-     "Prerequisites Inside Google Ads",
-     "Step-by-Step Campaign Duplication",
-     "Checking Translated Keywords for Accuracy",
+     "What is Claude Motion",
+     "How to access the tool for free",
+     "Writing your first prompt",
+     "Exporting and formatting your video",
+     "Limitations to keep in mind"
+    ]
+   }
+  },
+  {
+   "topic": "Google Gemini-4 Argon Update",
+   "competitors": "Matt Wolfe covered Google Gemini-4 Argon as general tech news with high-level feature lists, but didn't demonstrate repeatable daily workflows for beginners.",
+   "angle": "We show 3 exact copy-paste prompts you can use right now in Gemini-4 Argon for daily tasks.",
+   "viral": {
+    "score": 72,
+    "why": "Google model releases always pull strong search traffic, and providing practical, copy-paste prompts gives viewers immediate utility."
+   },
+   "long": {
+    "title": "Google Gemini-4 Argon: 3 Prompts You Need to Try",
+    "thumb": "Gemini-4 Argon Prompts",
+    "hook": "In the next 6 minutes you will test Google's new Gemini-4 Argon model using three simple prompts for everyday research.",
+    "outline": [
+     "Overview of Gemini-4 Argon updates",
+     "Accessing the model on your dashboard",
+     "Prompt 1: Summarizing long research papers",
+     "Prompt 2: Structuring project notes",
+     "Prompt 3: Drafting professional emails",
+     "Real downside of the free tier",
      "Conclusion"
+    ]
+   },
+   "shorts": [
+    {
+     "title": "Try This Gemini-4 Argon Prompt",
+     "hook": "Google just updated its AI model. Try this prompt.",
+     "script": "Open Google Gemini-4 Argon and paste this exact prompt to summarize messy notes into clean bullet points. Watch how fast it organizes data compared to older versions. Try it today and let us know how it works for you.",
+     "cta": "Subscribe for more tool tests."
+    },
+    {
+     "title": "Gemini-4 vs Older Models",
+     "hook": "Is Google's new model actually faster?",
+     "script": "We tested Gemini-4 Argon against previous versions using a 50-page PDF. The new model processed the document in under 10 seconds. The only downside is occasional formatting errors on tables. Watch our full video for details.",
+     "cta": "Watch our full video for details."
+    }
+   ],
+   "carousel": {
+    "title": "3 Best Prompts for Gemini-4 Argon",
+    "slides": [
+     "Slide 1: How to access Gemini-4 Argon today",
+     "Slide 2: Prompt for instant document summaries",
+     "Slide 3: Prompt for organizing messy meeting notes",
+     "Slide 4: Prompt for drafting professional emails",
+     "Slide 5: One real limitation to watch out for"
+    ]
+   },
+   "posts": {
+    "x": [
+     "Google's Gemini-4 Argon is here. Here are 3 simple prompts to test its speed on your daily tasks.",
+     "Want to see how fast Gemini-4 Argon processes documents? Check out our new step-by-step video guide."
+    ],
+    "facebook": "Google just released Gemini-4 Argon. We tested it with three everyday workflows so you can see how it handles research and writing tasks.",
+    "instagram": "Testing Google's new Gemini-4 Argon model with 3 simple prompts. Watch the full tutorial on our channel. #GoogleAI #Gemini #TechTutorial",
+    "linkedin": "A practical look at Google's Gemini-4 Argon updates and how professionals can use them for document review and summarization."
+   },
+   "article": {
+    "title": "Getting Started With Google Gemini-4 Argon: A Beginner Guide",
+    "outline": [
+     "Introduction to Gemini-4 Argon",
+     "How to set up your workspace",
+     "Top 3 prompts for productivity",
+     "Performance comparison",
+     "Final verdict"
+    ]
+   }
+  },
+  {
+   "topic": "AI Personal Agents Explained",
+   "competitors": "Jeff Su explained personal agents conceptually using diagrams, but didn't walk through a free tool setup step by step on screen.",
+   "angle": "We walk through a free personal agent tool on screen, clicking every button so beginners can build one in 10 minutes.",
+   "viral": {
+    "score": 68,
+    "why": "Personal productivity agents are a top search trend, and our hands-on beginner setup angle fills the gap left by conceptual explanation videos."
+   },
+   "long": {
+    "title": "Personal AI Agents: How to Set Up Your First Free Agent",
+    "thumb": "Build Your AI Agent",
+    "hook": "In the next 8 minutes you will build your first personal AI agent to handle routine tasks without writing any code.",
+    "outline": [
+     "What a personal AI agent actually does",
+     "Choosing a free agent platform",
+     "Connecting your email and calendar",
+     "Setting up your first automation rule",
+     "Testing the agent live on screen",
+     "One security risk to keep in mind",
+     "Summary"
+    ]
+   },
+   "shorts": [
+    {
+     "title": "Build a Free AI Agent",
+     "hook": "Stop scheduling meetings manually. Build a free agent.",
+     "script": "You can set up a personal AI agent for free in under 10 minutes. Go to the platform dashboard, connect your calendar app, and set your availability rules. Watch the agent handle booking requests automatically. Subscribe for more tool guides.",
+     "cta": "Subscribe for more tool guides."
+    },
+    {
+     "title": "AI Agent Setup Mistake",
+     "hook": "Never give your AI agent this permission.",
+     "script": "When setting up your personal AI agent, always restrict access to financial folders and personal passwords. Keep permissions limited to your calendar and inbox. Watch our full video to set it up safely.",
+     "cta": "Watch our full video to set it up safely."
+    }
+   ],
+   "carousel": {
+    "title": "How to Build a Free Personal AI Agent",
+    "slides": [
+     "Slide 1: Choose a beginner-friendly free platform",
+     "Slide 2: Connect your calendar or email tool",
+     "Slide 3: Write simple instructions for your agent",
+     "Slide 4: Run a test task to verify results",
+     "Slide 5: Set strict permission boundaries"
+    ]
+   },
+   "posts": {
+    "x": [
+     "Tired of managing your schedule by hand? Here is how to build a free personal AI agent in 10 minutes.",
+     "Personal AI agents explained simply. Watch our step-by-step tutorial to set up your first assistant."
+    ],
+    "facebook": "Want to automate your daily schedule? We built a personal AI agent using a free tool and recorded every step so you can follow along.",
+    "instagram": "How to set up your own personal AI agent for free. Watch the full step-by-step tutorial on our YouTube channel. #AIAgents #ProductivityTools #TechTips",
+    "linkedin": "AI agents are changing how professionals manage routine tasks. Here is a simple, no-code tutorial on setting up a basic personal assistant."
+   },
+   "article": {
+    "title": "Beginner's Guide to Setting Up a Free Personal AI Agent",
+    "outline": [
+     "Understanding personal AI agents",
+     "Selecting a free tool",
+     "Step-by-step configuration",
+     "Security and privacy best practices",
+     "Common beginner mistakes"
     ]
    }
   }
  ],
  "hook_patterns": [
   {
-   "pattern": "Result + time frame to achieve a specific modern workflow outcome",
-   "example": "In the next 7 minutes you will set up ChatGPT Dot to automate your daily research tasks."
+   "pattern": "Clear result achieved within a specific timeframe",
+   "example": "In the next 7 minutes you will turn a messy list into a finished report."
   },
   {
-   "pattern": "Addressing a common manual workflow pain point directly",
-   "example": "Still doing web research by hand every morning?"
+   "pattern": "Challenging a common manual workflow pain point",
+   "example": "Still organizing your files by hand when free tools can do it instantly?"
   },
   {
-   "pattern": "Highlighting a free native option that replaces paid software",
-   "example": "This free on-device privacy app does what expensive enterprise software charges for."
+   "pattern": "Highlighting a free alternative to expensive software",
+   "example": "This free tool does what a $20 app does without requiring a credit card."
   },
   {
-   "pattern": "Highlighting a specific tool update configuration mistake to avoid",
-   "example": "Stop pasting raw client notes into ChatGPT before doing this one thing."
+   "pattern": "Warning about a common setup mistake to avoid",
+   "example": "Stop making this one prompt mistake if you want accurate results from Claude."
   },
   {
-   "pattern": "Demonstrating a fast result with zero prior experience required",
-   "example": "Translate your Google Ads into 10 languages in under 5 minutes without writing code."
+   "pattern": "Direct question targeting a daily frustration",
+   "example": "Why spend hours formatting documents when you can automate it in 3 clicks?"
   }
  ],
- "_competitors": [],
+ "_competitors": [
+  {
+   "channel": "Futurepedia",
+   "title": "Claude Makes a New Kind of Video - Full Tutorial",
+   "views": 297044,
+   "date": "2026-10-19",
+   "url": "https://youtu.be/Ge1B-Ok1Pfk"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "Google Just Caught Up (Gemini-4 Argon)",
+   "views": 273460,
+   "date": "2026-10-13",
+   "url": "https://youtu.be/eBszYxzE2dk"
+  },
+  {
+   "channel": "Jeff Su",
+   "title": "Personal Agents, Clearly Explained",
+   "views": 270849,
+   "date": "2026-10-13",
+   "url": "https://youtu.be/HdI_aYzgJIg"
+  },
+  {
+   "channel": "Jeff Su",
+   "title": "Stop Organizing Files Yourself.",
+   "views": 184851,
+   "date": "2026-09-29",
+   "url": "https://youtu.be/peP_o66u-vM"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "AI News: 6 New Models & A Nano Banana Killer",
+   "views": 178981,
+   "date": "2026-10-16",
+   "url": "https://youtu.be/KGcuuhqmPhI"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "This Tesla Actually Flies (NOT AI)",
+   "views": 173949,
+   "date": "2026-10-16",
+   "url": "https://youtu.be/WXWFmwfo1JA"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "Personal Body Guard Robot - What could go wrong?",
+   "views": 156336,
+   "date": "2026-10-22",
+   "url": "https://youtu.be/dyrNQV0F3Zs"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "11 AI Breakthroughs You Didn’t Know Existed",
+   "views": 146883,
+   "date": "2026-10-21",
+   "url": "https://youtu.be/umGZrkyTRtw"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "AI News: 24 Things You Need To Know This Week",
+   "views": 140276,
+   "date": "2026-10-23",
+   "url": "https://youtu.be/TVRCcMlvR10"
+  },
+  {
+   "channel": "The AI Advantage",
+   "title": "New Claude Motion is Insane",
+   "views": 75353,
+   "date": "2026-10-14",
+   "url": "https://youtu.be/qZqZ02AsYiA"
+  },
+  {
+   "channel": "The AI Advantage",
+   "title": "ChatGPT Just Solved My Biggest Browser Problem",
+   "views": 63047,
+   "date": "2026-10-16",
+   "url": "https://youtu.be/KwvpDtUFS-s"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "Old Phones Are Becoming Robots?!?",
+   "views": 48038,
+   "date": "2026-10-24",
+   "url": "https://youtu.be/FiyUagHO37Y"
+  },
+  {
+   "channel": "Jeff Su",
+   "title": "Microsoft’s plan to win the AI race, explained",
+   "views": 35626,
+   "date": "2026-09-30",
+   "url": "https://youtu.be/VXuN2iMwzqI"
+  },
+  {
+   "channel": "The AI Advantage",
+   "title": "My Honest Take on Muse, Grok Bot, Dots & Duet",
+   "views": 33384,
+   "date": "2026-10-23",
+   "url": "https://youtu.be/Bd8-geZPwI4"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "Open-Source AI Models Caught Up! (Kimi K3.1 Pro)",
+   "views": 22289,
+   "date": "2026-10-24",
+   "url": "https://youtu.be/u3WV4nf8Jdo"
+  }
+ ],
  "_bank": [
   {
    "channel": "Dan Kieft",
@@ -348,16 +454,23 @@
    "url": "https://youtu.be/2kzuCJ5KLn4"
   },
   {
+   "channel": "Futurepedia",
+   "title": "Claude Makes a New Kind of Video - Full Tutorial",
+   "views": 297044,
+   "date": "2026-10-19",
+   "url": "https://youtu.be/Ge1B-Ok1Pfk"
+  },
+  {
    "channel": "Matt Wolfe",
    "title": "Google Just Caught Up (Gemini-4 Argon)",
-   "views": 268870,
+   "views": 273460,
    "date": "2026-10-13",
    "url": "https://youtu.be/eBszYxzE2dk"
   },
   {
    "channel": "Jeff Su",
    "title": "Personal Agents, Clearly Explained",
-   "views": 240218,
+   "views": 270849,
    "date": "2026-10-13",
    "url": "https://youtu.be/HdI_aYzgJIg"
   },
@@ -376,13 +489,6 @@
    "url": "https://youtu.be/cR0TaYikrz8"
   },
   {
-   "channel": "Futurepedia",
-   "title": "Claude Makes a New Kind of Video - Full Tutorial",
-   "views": 204819,
-   "date": "2026-10-19",
-   "url": "https://youtu.be/Ge1B-Ok1Pfk"
-  },
-  {
    "channel": "Skill Leap AI",
    "title": "The Biggest ChatGPT Update Yet: Meet dots",
    "views": 200406,
@@ -392,9 +498,16 @@
   {
    "channel": "Jeff Su",
    "title": "Stop Organizing Files Yourself.",
-   "views": 179607,
+   "views": 184851,
    "date": "2026-09-29",
    "url": "https://youtu.be/peP_o66u-vM"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "AI News: 6 New Models & A Nano Banana Killer",
+   "views": 178981,
+   "date": "2026-10-16",
+   "url": "https://youtu.be/KGcuuhqmPhI"
   },
   {
    "channel": "Dan Kieft",
@@ -405,15 +518,8 @@
   },
   {
    "channel": "Matt Wolfe",
-   "title": "AI News: 6 New Models & A Nano Banana Killer",
-   "views": 174344,
-   "date": "2026-10-16",
-   "url": "https://youtu.be/KGcuuhqmPhI"
-  },
-  {
-   "channel": "Matt Wolfe",
    "title": "This Tesla Actually Flies (NOT AI)",
-   "views": 173470,
+   "views": 173949,
    "date": "2026-10-16",
    "url": "https://youtu.be/WXWFmwfo1JA"
   }
