@@ -260,8 +260,27 @@ def send_text(chat, text: str, html: bool = True, **kw) -> int:
     return tg_call("sendMessage", chat_id=chat, text=text, **kw)["message_id"]
 
 
+TG_LIMIT = 48 * 1024 * 1024      # ٹیلیگرام بوٹ 50MB سے بڑی ویڈیو نہیں لیتا
+
+
+def _tg_copy(path: Path) -> Path:
+    """بڑی ویڈیو کی ٹیلیگرام کے لیے ہلکی نقل (720p) — اصل فائل ویسی ہی رہتی ہے (یوٹیوب کے لیے)"""
+    import subprocess
+    dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(path)],
+                               capture_output=True, text=True).stdout.strip() or 600)
+    kbps = max(300, int(TG_LIMIT * 0.92 * 8 / dur / 1000) - 96)
+    out = path.with_name(path.stem + "_tg.mp4")
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(path), "-vf", "scale=1280:720", "-c:v", "libx264",
+                    "-preset", "veryfast", "-b:v", f"{kbps}k", "-maxrate", f"{kbps}k", "-bufsize", f"{2 * kbps}k",
+                    "-c:a", "aac", "-b:a", "96k", "-movflags", "+faststart", str(out)], check=True)
+    print(f"ٹیلیگرام نقل: {path.stat().st_size >> 20}MB → {out.stat().st_size >> 20}MB ({kbps}k)")
+    return out
+
+
 def send_video(chat, path: Path, caption: str = "", buttons=None, width: int = 1920, height: int = 1080) -> int:
     extra = {"reply_markup": {"inline_keyboard": buttons}} if buttons else {}
+    if path.stat().st_size > TG_LIMIT:
+        path, width, height = _tg_copy(path), 1280, 720
     with open(path, "rb") as f:
         return tg_call("sendVideo", files={"video": (path.name, f, "video/mp4")}, chat_id=chat, caption=caption[:1000],
                        width=width, height=height, supports_streaming=True, **extra)["message_id"]

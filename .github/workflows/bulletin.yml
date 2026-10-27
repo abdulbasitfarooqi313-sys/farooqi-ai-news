@@ -41,7 +41,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python -m news.bulletin ${{ github.event.inputs.force == 'yes' && 'force' || '' }}
       - name: Keep a review copy
-        if: success()
+        if: always()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
