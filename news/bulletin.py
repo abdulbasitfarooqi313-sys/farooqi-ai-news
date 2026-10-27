@@ -736,7 +736,7 @@ def deliver(video: Path, thumb: Path, sd: dict, d: dict) -> list:
     record_start()
     say(f"📺 <b>فاروقی اے آئی نیوز — {urdu_date()}</b>\nآج کا بلیٹن ({int(mins // 60)}:{int(mins % 60):02d} منٹ)، "
                  f"تھمب نیل، اور یوٹیوب / سوشل میڈیا کا پورا پیکیج۔ ویڈیو پسند ہے تو ✅، دوبارہ بنوانی ہو تو ❌ "
-                 f"(یا ویڈیو پر Reply کر کے لکھیں کیا بدلنا ہے)۔")
+                 f"(یا ویڈیو پر Reply کر کے لکھیں کیا بدلنا ہے)۔\n\n⏰ <b>اپلوڈ کا وقت: {_upload_time()}</b>")
     vmid = send_video(chat, video, caption=f"📺 فاروقی اے آئی نیوز — {urdu_date()}\n" + "\n".join(f"{i + 1}. {s['headline']}" for i, s in enumerate(d["stories"])),
                       width=1920, height=1080,
                          buttons=[[{"text": "✅ منظور", "callback_data": f"nok:{day}"}, {"text": "❌ دوبارہ بنائیں", "callback_data": f"nno:{day}"}]])
@@ -809,6 +809,17 @@ def make(feedback: str | None = None) -> None:
     write_json(STATE, st)
     out.unlink(missing_ok=True)
     print("✅ بلیٹن بھیج دیا")
+
+
+def _upload_time() -> str:
+    """پاکستان/ہندوستان میں شام 8–11 بجے سب سے زیادہ دیکھا جاتا ہے؛ اس سے ~1–2 گھنٹے پہلے اپلوڈ = 5 بجے سعودی (7 بجے پاکستان)۔
+    بلیٹن دیر سے بنے تو ٹیلیگرام پر آنے کے ایک گھنٹے بعد۔"""
+    now = dt.datetime.now(TZ)
+    t = max(now.replace(hour=17, minute=0, second=0, microsecond=0), now + dt.timedelta(hours=1))
+    if t.minute not in (0, 30):
+        t = (t + dt.timedelta(minutes=30 - t.minute % 30)).replace(second=0, microsecond=0)
+    h = lambda x: f"{(x.hour - 1) % 12 + 1}:{x.minute:02d}"
+    return f"آج {h(t)} بجے سعودی وقت ({h(t + dt.timedelta(hours=2))} بجے پاکستان)"
 
 
 BULLETIN_DAYS = {0, 2, 5}       # پیر، بدھ، ہفتہ (مالک کی ہدایت) — باقی دن بلیٹن نہیں
