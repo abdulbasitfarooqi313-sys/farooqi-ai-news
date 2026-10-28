@@ -593,10 +593,9 @@ ANCHOR_ON = os.environ.get("NEWS_ANCHOR", "on") != "off"   # off = بغیر ای
 
 def _key_png(name: str, size: tuple) -> Path:
     """میجنٹا خانہ (پیچھے خبر کی ویڈیو لگنی ہے)"""
-    from PIL import Image
     p = Path(tempfile.gettempdir()) / name
     if not p.exists():
-        Image.new("RGB", size, (255, 0, 255)).save(p)
+        _ff("-f", "lavfi", "-i", f"color=c=0xff00ff:s={size[0]}x{size[1]}", "-frames:v", "1", str(p))
     return p
 
 
