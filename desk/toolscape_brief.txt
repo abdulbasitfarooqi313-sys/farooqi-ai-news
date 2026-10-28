@@ -1,19 +1,5 @@
 COMPETITORS' LATEST VIDEOS (last 30 days, most viewed first):
-- [Futurepedia] "Claude Makes a New Kind of Video - Full Tutorial" — 297,044 views (2026-10-19)
-- [Matt Wolfe] "Google Just Caught Up (Gemini-4 Argon)" — 273,460 views (2026-10-13)
-- [Jeff Su] "Personal Agents, Clearly Explained" — 270,849 views (2026-10-13)
-- [Jeff Su] "Stop Organizing Files Yourself." — 184,851 views (2026-09-29)
-- [Matt Wolfe] "AI News: 6 New Models & A Nano Banana Killer" — 178,981 views (2026-10-16)
-- [Matt Wolfe] "This Tesla Actually Flies (NOT AI)" — 173,949 views (2026-10-16)
-- [Matt Wolfe] "Personal Body Guard Robot - What could go wrong?" — 156,336 views (2026-10-22)
-- [Matt Wolfe] "11 AI Breakthroughs You Didn’t Know Existed" — 146,883 views (2026-10-21)
-- [Matt Wolfe] "AI News: 24 Things You Need To Know This Week" — 140,276 views (2026-10-23)
-- [The AI Advantage] "New Claude Motion is Insane" — 75,353 views (2026-10-14)
-- [The AI Advantage] "ChatGPT Just Solved My Biggest Browser Problem" — 63,047 views (2026-10-16)
-- [Matt Wolfe] "Old Phones Are Becoming Robots?!?" — 48,038 views (2026-10-24)
-- [Jeff Su] "Microsoft’s plan to win the AI race, explained" — 35,626 views (2026-09-30)
-- [The AI Advantage] "My Honest Take on Muse, Grok Bot, Dots & Duet" — 33,384 views (2026-10-23)
-- [Matt Wolfe] "Open-Source AI Models Caught Up! (Kimi K3.1 Pro)" — 22,289 views (2026-10-24)
+
 
 HOOK BANK (best performing titles collected so far — learn the PATTERN, never copy):
 - [Dan Kieft] "How I Make Realistic AI Videos with Seedance 2.5 - Full Guide" — 438,120 views (2026-10-16)

@@ -1,87 +1,81 @@
 {
- "summary": "Today's content focus centers heavily on advanced AI video capabilities and new model releases like Claude Motion and Gemini-4 Argon, alongside practical developer and workflow tools from Product Hunt. Our channel will break down these complex updates into simple, beginner-friendly step-by-step tutorials.",
+ "summary": "Today's top opportunities center on practical productivity integrations like ChatGPT's new iCloud Mail and Calendar plugins, alongside accessible open-source workflow utilities like Documind. Creators who produce clear, step-by-step setup guides for these daily utility tools will capture search traffic from beginners looking for immediate time savings.",
  "topics": [
   {
-   "title": "Claude Motion Video Generation",
-   "why": "Competitors like Futurepedia and The AI Advantage are pulling hundreds of thousands of views covering Claude's new video and motion features.",
+   "title": "ChatGPT iCloud Mail & Calendar Plugins Integration",
+   "why": "Users are actively discussing new official integrations that let ChatGPT interact directly with Apple Mail and Calendar.",
    "trend": 10,
    "sources": [
-    "Futurepedia",
-    "The AI Advantage",
-    "YouTube"
+    "reddit.com"
    ]
   },
   {
-   "title": "Google Gemini-4 Argon Update",
-   "why": "Major interest in Google's latest model updates as they catch up in the AI model race.",
+   "title": "Documind Open-Source Document Parsing",
+   "why": "A popular new open-source tool enables beginners to convert unstructured PDFs and documents into structured spreadsheets.",
    "trend": 9,
    "sources": [
-    "Matt Wolfe",
-    "Google News",
-    "YouTube"
+    "hnrss.org"
    ]
   },
   {
-   "title": "AI Personal Agents Explained",
-   "why": "Creators like Jeff Su are driving massive engagement explaining personal productivity and organization agents.",
+   "title": "AI Privacy Policy Scanner Tools",
+   "why": "A trending open-source solution automates scanning dense privacy agreements to expose data-selling practices.",
    "trend": 8,
    "sources": [
-    "Jeff Su",
-    "Metics Media",
-    "YouTube"
+    "hnrss.org"
    ]
   },
   {
-   "title": "MiniMax M3.1 Flash",
-   "why": "Trending new model release on Product Hunt capturing developer and creator attention.",
+   "title": "Apple Creator Studio AI Upgrades",
+   "why": "Apple updated its Creator Studio with built-in AI editing and motion tools for creators.",
    "trend": 7,
    "sources": [
-    "producthunt.com"
+    "news.google.com"
    ]
   },
   {
-   "title": "N8N Chat UI",
-   "why": "Popular new workflow builder interface trending among automation beginners.",
+   "title": "Claude Duet Workload Assistant",
+   "why": "Anthropic introduced new AI agent capabilities focused on daily workplace automation and assistance.",
    "trend": 6,
    "sources": [
-    "producthunt.com"
+    "news.google.com"
    ]
   },
   {
-   "title": "CloudKnife",
-   "why": "New cloud management tool gaining early traction on Product Hunt.",
+   "title": "De-AI Prompting Techniques for Realism",
+   "why": "Reddit users are sharing structured styling rules to eliminate the generic glossy look from AI images.",
    "trend": 5,
    "sources": [
-    "producthunt.com"
+    "reddit.com"
    ]
   },
   {
-   "title": "PDF Accessibility Checker by WebYes",
-   "why": "Practical utility tool solving document compliance for beginners.",
+   "title": "GPT-6.1 Terra Release",
+   "why": "Newest GPT model iteration launched on ProductHunt targeting streamlined text tasks.",
    "trend": 4,
    "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "Jobmate AI",
-   "why": "Career assistance tool catching traction for job seekers.",
+   "title": "Open Source Drawing Animator AI",
+   "why": "A lightweight free tool allows users to bring static sketches and child drawings to life instantly.",
    "trend": 3,
    "sources": [
-    "producthunt.com"
+    "hnrss.org"
    ]
   },
   {
-   "title": "VibeiDE",
-   "why": "New coding interface environment listed on Product Hunt.",
+   "title": "Recovering Deleted Mobile AI Chats",
+   "why": "A viral diagnostic method shows how mobile cache recovers lost AI conversation logs.",
    "trend": 2,
    "sources": [
-    "producthunt.com"
+    "news.google.com"
    ]
   },
   {
-   "title": "SurgePix",
-   "why": "New visual editing and asset tool launched on Product Hunt.",
+   "title": "ContextGem 1.0 Workspace Assistant",
+   "why": "ProductHunt launch focused on quick contextual document indexing for desktop users.",
    "trend": 1,
    "sources": [
     "producthunt.com"
@@ -90,333 +84,227 @@
  ],
  "packages": [
   {
-   "topic": "Claude Motion Video Generation",
-   "competitors": "Futurepedia and The AI Advantage covered Claude Motion with high-level overviews and quick showcases, but skipped step-by-step prompt structures for beginners.",
-   "angle": "We provide an exact screen-by-screen tutorial showing how to type your first prompt and fix common formatting errors.",
+   "topic": "ChatGPT iCloud Mail & Calendar Plugins Integration",
+   "competitors": "Competitors like Skill Leap AI and The AI Advantage covered recent ChatGPT features briefly, but missed showing the full setup process for Apple ecosystem tools.",
+   "angle": "A clean 5-minute setup tutorial showing how to safely connect iCloud Mail and Calendar to ChatGPT without exposing private passwords.",
    "viral": {
-    "score": 78,
-    "why": "The topic is currently exploding across YouTube with massive view counts, and our clear tutorial angle directly answers the 'how-to' gap left by high-level news videos."
+    "score": 58,
+    "why": "Millions of iPhone and Mac users want simple AI scheduling without paying for third-party automation software."
    },
    "long": {
-    "title": "How to Use Claude Motion: Step-by-Step Tutorial",
-    "thumb": "Claude Motion Tutorial",
-    "hook": "In the next 7 minutes you will turn a simple text prompt into a motion graphic using Claude. No video editing software needed.",
+    "title": "Connect ChatGPT to iCloud Mail & Calendar in 5 Minutes",
+    "thumb": "Connect iCloud to ChatGPT",
+    "hook": "In the next 5 minutes you will connect ChatGPT directly to your iCloud Mail and Calendar to auto-schedule your week. No complex API keys or coding required.",
     "outline": [
-     "Introduction to Claude Motion features",
-     "Setting up your free account",
-     "Entering your first prompt",
-     "Adjusting motion settings",
-     "Exporting your video file",
-     "Common mistakes to avoid",
-     "Recap and next steps"
+     "Prerequisites: What you need before connecting",
+     "Locating the official iCloud plugin setting in ChatGPT",
+     "Generating a secure app-specific Apple password",
+     "Connecting iCloud Mail and testing simple search queries",
+     "Connecting iCloud Calendar to create and edit events",
+     "Important privacy limit: What data ChatGPT can and cannot access"
     ]
    },
    "shorts": [
     {
-     "title": "Make Videos with Claude Text",
-     "hook": "Stop using expensive video editors for simple motion graphics.",
-     "script": "You can now create motion graphics directly inside Claude using just text prompts. Open Claude, type your prompt describing the movement, and let the tool generate the layout. Watch how simple it is to export your file in under one minute. Subscribe for more easy AI tutorials.",
-     "cta": "Subscribe for more easy AI tutorials."
+     "title": "ChatGPT Can Now Read Your iCloud Calendar",
+     "hook": "Stop manually typing your schedule into ChatGPT.",
+     "script": "ChatGPT now has official support for iCloud Mail and Calendar plugins. Head to Settings, select Plugins, and toggle on Apple Workspace. You will need an app-specific password from appleid.apple.com to keep your main account safe. Once linked, ask ChatGPT to summarize unread emails or add meetings straight to your calendar.",
+     "cta": "Subscribe for more quick AI setup guides."
     },
     {
-     "title": "Claude Motion Quick Fix",
-     "hook": "Here is why your Claude video prompt failed.",
-     "script": "If your Claude motion graphic looks distorted, you are probably missing direction details. Always specify the background color and object movement clearly in your prompt. Fix this one line and your export will work instantly. Check our channel for the full guide.",
-     "cta": "Check our channel for the full guide."
+     "title": "Schedule Meetings in 10 Seconds with ChatGPT",
+     "hook": "Here is the fastest way to book appointments using AI.",
+     "script": "Open ChatGPT, enable the iCloud plugin, and paste a messy text message from a client. Type 'Add this to my calendar for tomorrow afternoon.' ChatGPT creates the event directly in your Apple Calendar app. One quick downside: recurring events can occasionally misalign, so quickly double-check your times.",
+     "cta": "Check the full tutorial on our channel."
     }
    ],
    "carousel": {
-    "title": "How to Use Claude Motion in 5 Steps",
+    "title": "How to Link iCloud to ChatGPT",
     "slides": [
-     "Step 1: Open Claude and select the motion tool option",
-     "Step 2: Type a clear description of your desired graphic",
-     "Step 3: Review the generated layout on your screen",
-     "Step 4: Adjust colors or text directly in the panel",
-     "Step 5: Click export to save your finished MP4 file"
+     "1. Open ChatGPT Settings and tap Plugins.",
+     "2. Search for Apple iCloud Mail & Calendar.",
+     "3. Go to appleid.apple.com to create an App-Specific Password.",
+     "4. Paste the app password into ChatGPT to authenticate safely.",
+     "5. Prompt: 'Show my free time slots for this Thursday.'",
+     "6. Prompt: 'Create an event called Client Call at 3 PM.'"
     ]
    },
    "posts": {
     "x": [
-     "Want to make motion graphics without editing software? Here is how to use Claude Motion step by step in our new video.",
-     "Stop struggling with complex video editors. Claude can now generate motion layouts from simple text prompts."
+     "You can now connect iCloud Mail and Calendar directly inside ChatGPT. Here is the 3-step setup guide.",
+     "Tired of copy-pasting meeting invites? Link Apple Calendar to ChatGPT with app-specific passwords today."
     ],
-    "facebook": "We just tested Claude's new motion video feature. Watch our step-by-step tutorial to see how beginners can create clean graphics without any design experience.",
-    "instagram": "Learn how to turn simple text prompts into motion graphics using Claude. Link in bio for the full beginner tutorial. #AITools #Claude #ContentCreation",
-    "linkedin": "AI video generation tools are evolving fast. Here is a practical walkthrough of Claude's motion features for professionals looking to speed up content creation."
+    "facebook": "Connect ChatGPT directly to your Apple iCloud Mail and Calendar! Follow our 5-minute setup guide to automate your daily schedule without risking your password security.",
+    "instagram": "Automate your daily schedule by connecting ChatGPT to Apple iCloud Mail & Calendar. Swipe through for the step-by-step setup guide! #ChatGPT #Apple #Productivity #AITools",
+    "linkedin": "ChatGPT now supports direct integration with iCloud Mail and Calendar. Here is a clear workflow guide on how professionals can leverage this feature safely."
    },
    "article": {
-    "title": "How Beginners Can Use Claude Motion for Quick Graphics",
+    "title": "How to Integrate ChatGPT with Apple iCloud Mail and Calendar",
     "outline": [
-     "What is Claude Motion",
-     "How to access the tool for free",
-     "Writing your first prompt",
-     "Exporting and formatting your video",
-     "Limitations to keep in mind"
+     "Introduction to ChatGPT iCloud Integration",
+     "Step 1: Preparing Your Apple ID Credentials",
+     "Step 2: Enabling the Plugin in ChatGPT Settings",
+     "Step 3: Automated Scheduling and Email Prompts",
+     "Privacy Best Practices and Data Limits"
     ]
    }
   },
   {
-   "topic": "Google Gemini-4 Argon Update",
-   "competitors": "Matt Wolfe covered Google Gemini-4 Argon as general tech news with high-level feature lists, but didn't demonstrate repeatable daily workflows for beginners.",
-   "angle": "We show 3 exact copy-paste prompts you can use right now in Gemini-4 Argon for daily tasks.",
+   "topic": "Documind Open-Source Document Parsing",
+   "competitors": "Channels like Metics Media covered building custom AI agents with code, but skipped easy open-source desktop tools designed specifically for document parsing.",
+   "angle": "Show beginners how to convert scanned PDF receipts and invoices into organized Excel sheets for free without subscription fees.",
    "viral": {
-    "score": 72,
-    "why": "Google model releases always pull strong search traffic, and providing practical, copy-paste prompts gives viewers immediate utility."
+    "score": 48,
+    "why": "Data entry is a major pain point, and free open-source software always attracts strong organic search traffic."
    },
    "long": {
-    "title": "Google Gemini-4 Argon: 3 Prompts You Need to Try",
-    "thumb": "Gemini-4 Argon Prompts",
-    "hook": "In the next 6 minutes you will test Google's new Gemini-4 Argon model using three simple prompts for everyday research.",
+    "title": "Turn Any PDF into an Excel Sheet with Documind (Free)",
+    "thumb": "PDF to Excel AI Tool",
+    "hook": "In the next 6 minutes you will convert a stack of messy PDF receipts into a clean Excel spreadsheet using a free open-source tool. You will never spend hours on manual data entry again.",
     "outline": [
-     "Overview of Gemini-4 Argon updates",
-     "Accessing the model on your dashboard",
-     "Prompt 1: Summarizing long research papers",
-     "Prompt 2: Structuring project notes",
-     "Prompt 3: Drafting professional emails",
-     "Real downside of the free tier",
-     "Conclusion"
+     "Why traditional PDF converters fail on complex layouts",
+     "Installing and launching Documind in your browser",
+     "Uploading sample receipts, invoices, and bank statements",
+     "Defining custom fields like Date, Total, and Vendor",
+     "Exporting clean CSV and Excel files in one click",
+     "One downside: Handwriting recognition can be inaccurate on smudged documents"
     ]
    },
    "shorts": [
     {
-     "title": "Try This Gemini-4 Argon Prompt",
-     "hook": "Google just updated its AI model. Try this prompt.",
-     "script": "Open Google Gemini-4 Argon and paste this exact prompt to summarize messy notes into clean bullet points. Watch how fast it organizes data compared to older versions. Try it today and let us know how it works for you.",
-     "cta": "Subscribe for more tool tests."
+     "title": "Extract PDF Data Free with AI",
+     "hook": "Still manually typing data from PDF invoices into Excel?",
+     "script": "Meet Documind, an open-source tool that reads documents and extracts clean structured data automatically. Upload your document, pick the fields you want like invoice total or date, and let the AI build your table. You can export directly to CSV or JSON in seconds without paying a monthly SaaS fee.",
+     "cta": "Save this video for your next project."
     },
     {
-     "title": "Gemini-4 vs Older Models",
-     "hook": "Is Google's new model actually faster?",
-     "script": "We tested Gemini-4 Argon against previous versions using a 50-page PDF. The new model processed the document in under 10 seconds. The only downside is occasional formatting errors on tables. Watch our full video for details.",
-     "cta": "Watch our full video for details."
+     "title": "Stop Copy-Pasting PDF Files Today",
+     "hook": "This free tool converts scanned receipts to spreadsheets instantly.",
+     "script": "Documind uses open-source models to turn unstructured files into clean database rows. Just drop in your files, tag what you need extracted, and download your spreadsheet. It runs locally or on a free tier, keeping your financial documents off public servers.",
+     "cta": "Follow for more free AI tools."
     }
    ],
    "carousel": {
-    "title": "3 Best Prompts for Gemini-4 Argon",
+    "title": "Extract PDF Data to Excel for Free",
     "slides": [
-     "Slide 1: How to access Gemini-4 Argon today",
-     "Slide 2: Prompt for instant document summaries",
-     "Slide 3: Prompt for organizing messy meeting notes",
-     "Slide 4: Prompt for drafting professional emails",
-     "Slide 5: One real limitation to watch out for"
+     "1. Open Documind in your browser.",
+     "2. Drag and drop your scanned PDF or receipt.",
+     "3. Select required schema (Amount, Date, Tax).",
+     "4. Click Run Extraction to parse the document.",
+     "5. Review extracted fields on screen.",
+     "6. Export instantly to CSV or Excel."
     ]
    },
    "posts": {
     "x": [
-     "Google's Gemini-4 Argon is here. Here are 3 simple prompts to test its speed on your daily tasks.",
-     "Want to see how fast Gemini-4 Argon processes documents? Check out our new step-by-step video guide."
+     "Stop copying table data from PDFs manually. Documind is an open-source tool that parses PDFs into Excel in seconds.",
+     "Need clean structured data from messy documents? Here is how to use open-source AI tool Documind for free."
     ],
-    "facebook": "Google just released Gemini-4 Argon. We tested it with three everyday workflows so you can see how it handles research and writing tasks.",
-    "instagram": "Testing Google's new Gemini-4 Argon model with 3 simple prompts. Watch the full tutorial on our channel. #GoogleAI #Gemini #TechTutorial",
-    "linkedin": "A practical look at Google's Gemini-4 Argon updates and how professionals can use them for document review and summarization."
+    "facebook": "Manual data entry from PDFs is officially over. Learn how to use Documind, an open-source tool that extracts custom fields from invoices and turns them into clean spreadsheets.",
+    "instagram": "Convert messy PDFs into structured Excel sheets in seconds using free open-source AI tool Documind! Tap link in bio for full walkthrough. #AITools #Productivity #Excel #OpenSource",
+    "linkedin": "Documind offers an open-source solution for parsing complex PDF documents into structured datasets. Here is how small business owners can automate administrative paperwork."
    },
    "article": {
-    "title": "Getting Started With Google Gemini-4 Argon: A Beginner Guide",
+    "title": "How to Use Documind to Convert Unstructured PDFs into Spreadsheets",
     "outline": [
-     "Introduction to Gemini-4 Argon",
-     "How to set up your workspace",
-     "Top 3 prompts for productivity",
-     "Performance comparison",
-     "Final verdict"
+     "The Challenge of Unstructured PDF Data",
+     "What is Documind and How Does It Work?",
+     "Step-by-Step Guide to Extracting Custom Data Fields",
+     "Exporting to CSV, Excel, and JSON",
+     "Comparing Open-Source Tools to Paid Alternatives"
     ]
    }
   },
   {
-   "topic": "AI Personal Agents Explained",
-   "competitors": "Jeff Su explained personal agents conceptually using diagrams, but didn't walk through a free tool setup step by step on screen.",
-   "angle": "We walk through a free personal agent tool on screen, clicking every button so beginners can build one in 10 minutes.",
+   "topic": "AI Privacy Policy Scanner Tools",
+   "competitors": "Tech news outlets reported on privacy tools generally, but no creator has published a clear end-user tutorial showing how to test websites step-by-step.",
+   "angle": "A practical 4-minute demonstration of a browser tool that scans complex terms of service and highlights data-selling clauses instantly.",
    "viral": {
-    "score": 68,
-    "why": "Personal productivity agents are a top search trend, and our hands-on beginner setup angle fills the gap left by conceptual explanation videos."
+    "score": 42,
+    "why": "Online privacy concerns are growing, but users want instant highlights rather than reading 20-page legal documents."
    },
    "long": {
-    "title": "Personal AI Agents: How to Set Up Your First Free Agent",
-    "thumb": "Build Your AI Agent",
-    "hook": "In the next 8 minutes you will build your first personal AI agent to handle routine tasks without writing any code.",
+    "title": "Expose Websites That Sell Your Data (Free AI Tool)",
+    "thumb": "Find Hidden Privacy Traps",
+    "hook": "In the next 4 minutes you will learn how to scan any website's legal terms in 3 seconds to see exactly who sells your personal information. You will never have to read a 20-page privacy policy again.",
     "outline": [
-     "What a personal AI agent actually does",
-     "Choosing a free agent platform",
-     "Connecting your email and calendar",
-     "Setting up your first automation rule",
-     "Testing the agent live on screen",
-     "One security risk to keep in mind",
-     "Summary"
+     "The problem with modern terms of service agreements",
+     "Installing the privacy scanner extension or web tool",
+     "Testing the tool on popular consumer websites",
+     "Understanding the red flag report: Data brokers and tracking",
+     "Setting custom alerts for sensitive data permissions",
+     "Real downside: It can flag standard analytics cookies as moderate risks"
     ]
    },
    "shorts": [
     {
-     "title": "Build a Free AI Agent",
-     "hook": "Stop scheduling meetings manually. Build a free agent.",
-     "script": "You can set up a personal AI agent for free in under 10 minutes. Go to the platform dashboard, connect your calendar app, and set your availability rules. Watch the agent handle booking requests automatically. Subscribe for more tool guides.",
-     "cta": "Subscribe for more tool guides."
+     "title": "Read Any Privacy Policy in 3 Seconds",
+     "hook": "Did you know most websites sell your browser history?",
+     "script": "Nobody reads privacy policies because they are 30 pages long. This free AI tool scans legal pages and summarizes the dangerous parts in bullet points. It instantly highlights whether a company sells your phone number, tracks your location, or shares data with third parties.",
+     "cta": "Subscribe to protect your personal privacy online."
     },
     {
-     "title": "AI Agent Setup Mistake",
-     "hook": "Never give your AI agent this permission.",
-     "script": "When setting up your personal AI agent, always restrict access to financial folders and personal passwords. Keep permissions limited to your calendar and inbox. Watch our full video to set it up safely.",
-     "cta": "Watch our full video to set it up safely."
+     "title": "Spot Data Selling Traps Instantly",
+     "hook": "This simple tool finds hidden traps in terms of service.",
+     "script": "Before clicking 'I Agree' on your next sign-up, paste the privacy link into this AI reader tool. Within seconds, it scores the document from green to red and lists every data broker attached to the site. It is completely free and requires no account.",
+     "cta": "Check the channel link for the full guide."
     }
    ],
    "carousel": {
-    "title": "How to Build a Free Personal AI Agent",
+    "title": "How to Scan Privacy Policies in 3 Seconds",
     "slides": [
-     "Slide 1: Choose a beginner-friendly free platform",
-     "Slide 2: Connect your calendar or email tool",
-     "Slide 3: Write simple instructions for your agent",
-     "Slide 4: Run a test task to verify results",
-     "Slide 5: Set strict permission boundaries"
+     "1. Copy any website's privacy policy URL.",
+     "2. Paste it into the free AI Privacy Reader.",
+     "3. Review the simplified Privacy Score.",
+     "4. Check red flag highlights for data sales.",
+     "5. See which third parties receive your email.",
+     "6. Make informed choices before creating accounts."
     ]
    },
    "posts": {
     "x": [
-     "Tired of managing your schedule by hand? Here is how to build a free personal AI agent in 10 minutes.",
-     "Personal AI agents explained simply. Watch our step-by-step tutorial to set up your first assistant."
+     "Stop clicking 'I Agree' without looking. This free AI tool scans privacy policies and shows you who sells your data.",
+     "Uncover hidden terms of service clauses in 3 seconds with this new open-source privacy scanner tool."
     ],
-    "facebook": "Want to automate your daily schedule? We built a personal AI agent using a free tool and recorded every step so you can follow along.",
-    "instagram": "How to set up your own personal AI agent for free. Watch the full step-by-step tutorial on our YouTube channel. #AIAgents #ProductivityTools #TechTips",
-    "linkedin": "AI agents are changing how professionals manage routine tasks. Here is a simple, no-code tutorial on setting up a basic personal assistant."
+    "facebook": "Protect your digital privacy! Learn how to use a free AI scanner tool that reads complex website privacy policies and alerts you if your personal data is being sold.",
+    "instagram": "Never read a long terms of service page again! This AI tool scans privacy policies in 3 seconds and highlights hidden traps. #Privacy #AITools #TechTips #CyberSecurity",
+    "linkedin": "Consumer privacy awareness is rising. Here is a practical workflow utilizing AI tools to evaluate vendor terms of service agreements quickly."
    },
    "article": {
-    "title": "Beginner's Guide to Setting Up a Free Personal AI Agent",
+    "title": "How to Use AI Scanner Tools to Read Privacy Policies Instantly",
     "outline": [
-     "Understanding personal AI agents",
-     "Selecting a free tool",
-     "Step-by-step configuration",
-     "Security and privacy best practices",
-     "Common beginner mistakes"
+     "The Problem with Lengthy Terms of Service",
+     "How AI Privacy Analyzers Evaluate Legal Text",
+     "Step-by-Step Usage Guide on Popular Sites",
+     "Key Red Flags to Look Out For",
+     "Limitations of Automated Legal Analysis"
     ]
    }
   }
  ],
  "hook_patterns": [
   {
-   "pattern": "Clear result achieved within a specific timeframe",
-   "example": "In the next 7 minutes you will turn a messy list into a finished report."
+   "pattern": "How I [Achieved Result] with [Tool] - Full Guide",
+   "example": "How I Automated My Daily Schedule with ChatGPT - Full Guide"
   },
   {
-   "pattern": "Challenging a common manual workflow pain point",
-   "example": "Still organizing your files by hand when free tools can do it instantly?"
+   "pattern": "[Tool Name] Got a Major Upgrade - These Features Are Coming",
+   "example": "Apple Creator Studio Got a Major Upgrade - New AI Tools Added"
   },
   {
-   "pattern": "Highlighting a free alternative to expensive software",
-   "example": "This free tool does what a $20 app does without requiring a credit card."
+   "pattern": "Stop [Doing Hard Task] Yourself",
+   "example": "Stop Formatting PDF Receipts Yourself"
   },
   {
-   "pattern": "Warning about a common setup mistake to avoid",
-   "example": "Stop making this one prompt mistake if you want accurate results from Claude."
+   "pattern": "The Ultimate Beginner's Guide to [Tool Name]",
+   "example": "The Ultimate Beginner's Guide to Documind"
   },
   {
-   "pattern": "Direct question targeting a daily frustration",
-   "example": "Why spend hours formatting documents when you can automate it in 3 clicks?"
+   "pattern": "Build Your First [Project] in [Time] (No Coding)",
+   "example": "Build Your First Document Parser in 10 Minutes (No Coding)"
   }
  ],
- "_competitors": [
-  {
-   "channel": "Futurepedia",
-   "title": "Claude Makes a New Kind of Video - Full Tutorial",
-   "views": 297044,
-   "date": "2026-10-19",
-   "url": "https://youtu.be/Ge1B-Ok1Pfk"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "Google Just Caught Up (Gemini-4 Argon)",
-   "views": 273460,
-   "date": "2026-10-13",
-   "url": "https://youtu.be/eBszYxzE2dk"
-  },
-  {
-   "channel": "Jeff Su",
-   "title": "Personal Agents, Clearly Explained",
-   "views": 270849,
-   "date": "2026-10-13",
-   "url": "https://youtu.be/HdI_aYzgJIg"
-  },
-  {
-   "channel": "Jeff Su",
-   "title": "Stop Organizing Files Yourself.",
-   "views": 184851,
-   "date": "2026-09-29",
-   "url": "https://youtu.be/peP_o66u-vM"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "AI News: 6 New Models & A Nano Banana Killer",
-   "views": 178981,
-   "date": "2026-10-16",
-   "url": "https://youtu.be/KGcuuhqmPhI"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "This Tesla Actually Flies (NOT AI)",
-   "views": 173949,
-   "date": "2026-10-16",
-   "url": "https://youtu.be/WXWFmwfo1JA"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "Personal Body Guard Robot - What could go wrong?",
-   "views": 156336,
-   "date": "2026-10-22",
-   "url": "https://youtu.be/dyrNQV0F3Zs"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "11 AI Breakthroughs You Didn’t Know Existed",
-   "views": 146883,
-   "date": "2026-10-21",
-   "url": "https://youtu.be/umGZrkyTRtw"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "AI News: 24 Things You Need To Know This Week",
-   "views": 140276,
-   "date": "2026-10-23",
-   "url": "https://youtu.be/TVRCcMlvR10"
-  },
-  {
-   "channel": "The AI Advantage",
-   "title": "New Claude Motion is Insane",
-   "views": 75353,
-   "date": "2026-10-14",
-   "url": "https://youtu.be/qZqZ02AsYiA"
-  },
-  {
-   "channel": "The AI Advantage",
-   "title": "ChatGPT Just Solved My Biggest Browser Problem",
-   "views": 63047,
-   "date": "2026-10-16",
-   "url": "https://youtu.be/KwvpDtUFS-s"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "Old Phones Are Becoming Robots?!?",
-   "views": 48038,
-   "date": "2026-10-24",
-   "url": "https://youtu.be/FiyUagHO37Y"
-  },
-  {
-   "channel": "Jeff Su",
-   "title": "Microsoft’s plan to win the AI race, explained",
-   "views": 35626,
-   "date": "2026-09-30",
-   "url": "https://youtu.be/VXuN2iMwzqI"
-  },
-  {
-   "channel": "The AI Advantage",
-   "title": "My Honest Take on Muse, Grok Bot, Dots & Duet",
-   "views": 33384,
-   "date": "2026-10-23",
-   "url": "https://youtu.be/Bd8-geZPwI4"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "Open-Source AI Models Caught Up! (Kimi K3.1 Pro)",
-   "views": 22289,
-   "date": "2026-10-24",
-   "url": "https://youtu.be/u3WV4nf8Jdo"
-  }
- ],
+ "_competitors": [],
  "_bank": [
   {
    "channel": "Dan Kieft",

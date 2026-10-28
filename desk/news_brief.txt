@@ -1,19 +1,5 @@
 COMPETITORS' LATEST VIDEOS (last 30 days, most viewed first):
-- [Matthew Berman] "Sam Altman: RSI, AI Consciousness, OpenAI's New Hardware, Compute, and more!" — 420,075 views (2026-10-21)
-- [AI Explained] "OpenAI Security: Controlling Models is Now ‘Hell’" — 295,880 views (2026-10-01)
-- [Matt Wolfe] "Google Just Caught Up (Gemini-4 Argon)" — 273,460 views (2026-10-13)
-- [Matt Wolfe] "AI News: 6 New Models & A Nano Banana Killer" — 178,981 views (2026-10-16)
-- [Matt Wolfe] "This Tesla Actually Flies (NOT AI)" — 173,949 views (2026-10-16)
-- [TheAIGRID] "Former OpenAI Researcher Makes a MASSIVE AI Discovery" — 170,475 views (2026-10-17)
-- [Matt Wolfe] "Personal Body Guard Robot - What could go wrong?" — 156,336 views (2026-10-22)
-- [AI Explained] "AI Labs Warn Race Makes Breach ‘Inevitable’" — 154,110 views (2026-10-12)
-- [Matthew Berman] "They actually did it... (Kimi K3.1)" — 148,277 views (2026-10-24)
-- [Matt Wolfe] "11 AI Breakthroughs You Didn’t Know Existed" — 146,883 views (2026-10-21)
-- [Matt Wolfe] "AI News: 24 Things You Need To Know This Week" — 140,276 views (2026-10-23)
-- [TheAIGRID] "Anthropic Has Officially Lost Its Mind..." — 82,927 views (2026-10-09)
-- [Matthew Berman] "Who is local AI really for?" — 67,821 views (2026-10-23)
-- [TheAIGRID] "Something BIG Is Happening Behind Closed Doors At OpenAI And Anthropic" — 64,476 views (2026-10-10)
-- [TheAIGRID] "Jack Dorsey Just Revealed a Terrifying AI Breakthrough" — 54,214 views (2026-10-25)
+
 
 HOOK BANK (best performing titles collected so far — learn the PATTERN, never copy):
 - [Wes Roth] "OpenAI’s “Alien Math” Is Freaking People Out" — 923,840 views (2026-10-09)
