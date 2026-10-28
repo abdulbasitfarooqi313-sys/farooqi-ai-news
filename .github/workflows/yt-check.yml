@@ -11,7 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: pip install requests
-      - run: python lab/yt_check.py
+      - run: |
+          set +e
+          python lab/yt_check.py > out.txt 2>&1; rc=$?
+          while IFS= read -r l; do echo "::notice::$l"; done < out.txt
+          exit $rc
         env:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
