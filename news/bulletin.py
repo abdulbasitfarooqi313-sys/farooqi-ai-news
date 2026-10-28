@@ -472,6 +472,11 @@ def _site_shots(d: dict, tmp: Path) -> None:
                             pass
                     pg.add_style_tag(content="[id*=cookie i],[class*=cookie i],[id*=consent i],[class*=consent i],[id*=onetrust i]{display:none!important}")
                     pg.wait_for_timeout(600)
+                    body = (pg.inner_text("body") or "")[:3000].lower()
+                    if any(k in body for k in ("verify you are human", "just a moment", "checking your browser",
+                                               "are you a robot", "access denied", "enable javascript and cookies")):
+                        print(f"   {dom}: حفاظتی جانچ کا صفحہ — تصویر نہیں لی")
+                        continue
                     f = tmp / f"site{i}.jpg"
                     pg.screenshot(path=str(f), type="jpeg", quality=72)
                     d["stories"][i]["_shot"] = _b64(f, "image/jpeg")
@@ -612,6 +617,9 @@ def page(d: dict, tl: dict, key: bool = False) -> str:
                         _b64(A / ("reporter.jpg" if ANCHOR_ON else "reporter_city.jpg"), "image/jpeg")),
            "__SCENESJS__": (A / "scenes.js").read_text(encoding="utf-8"), "__TICKER__": (tick + " <b>◆</b> ") * 3,
            "__DATE__": urdu_date(latin=True), "__NFDATA__": json.dumps(data, ensure_ascii=False)}
+    if not ANCHOR_ON:                                   # بغیر اینکر: «ورچوئل نیوز کاسٹر · سمیرہ» کی تختی نہیں
+        html = html.replace('<div class="tag"><div class="k">ورچوئل نیوز کاسٹر</div><div class="v">سمیرہ</div></div>', "")
+        html = html.replace("ورچوئل نامہ نگار · زید", "رپورٹ · زید")
     return re.sub(r"__[A-Z]+__", lambda m: rep.get(m.group(0), m.group(0)), html)
 
 
