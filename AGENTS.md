@@ -10,6 +10,12 @@
 - `studio/` — نیوز روم، انٹرو/آؤٹرو (منظور شدہ — نہ بدلیں)۔ آؤٹرو میں واٹس ایپ نمبر صرف ویڈیو میں، کسی فائل میں نہیں۔
 - `news/bot.yml` — ہر 15 منٹ ٹیلیگرام جانچ؛ ❌ پر بلیٹن دوبارہ۔
 
+## 1.1) یوٹیوب اپلوڈ ایجنٹ (`news/youtube.py`)
+- چینل: Farooqi ainews (@farooqiainews)۔ چابیاں GitHub Secrets: `YOUTUBE_CLIENT_ID`, `YOUTUBE_CLIENT_SECRET`, `YOUTUBE_REFRESH_TOKEN` (Google Cloud کلائنٹ ai-news-web؛ پروجیکٹ 475422064581 میں YouTube Data API v3 آن)۔
+- بلیٹن بنتے ہی ویڈیو **Private** اپلوڈ + پلے لسٹ «فاروقی اے آئی نیوز — روزانہ بلیٹن» + تھمب نیل (چینل کی فون تصدیق کے بعد ہی لگتا ہے)۔
+- ✅ پر شام 5 بجے سعودی کے لیے شیڈول (وقت گزر چکا ہو تو فوراً پبلک)؛ ❌ پر Private ہی رہتی ہے — کچھ ڈیلیٹ نہیں ہوتا۔
+- بند کرنا ہو: bulletin.yml/bot.yml میں `YOUTUBE_UPLOAD: off`۔ چابی کی جانچ: `yt-check.yml` (صرف چینل کا نام پڑھتا ہے)۔
+
 ## 2) روزنامچہ فاروقی (Daily Desk)
 - `news/desk.py` + `desk.yml` — روز صبح 6 بجے (سعودی) تینوں چینلوں (news / toolscape / nawa) کے لیے: 10 ٹرینڈنگ موضوعات (ٹرینڈ نمبر کی سختی سے ترتیب)، 3 پیکج، وائرل امکان، مقابلین۔
 - نتیجہ `desk/*.html|json|_brief.txt` + `desk/index.json`؛ نوائے فاروقی کا بوٹ اسے نجی بلاگ farooqidailydesk پر ڈالتا ہے۔
