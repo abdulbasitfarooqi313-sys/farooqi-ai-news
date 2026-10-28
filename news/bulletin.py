@@ -27,6 +27,7 @@ from pathlib import Path
 
 import requests
 
+from . import youtube as yt
 from .base import (ROOT, read_json, write_json, generate_json, _norm, _split, SplitError, TTSQuota, _launch as _launch0,
                    tg_call, record_start, record_stop, send_text, send_video, send_photo, gemini_key)
 
@@ -851,6 +852,7 @@ def make(feedback: str | None = None) -> None:
         thumb = thumbnail(d, tmp / "thumb.jpg", tmp)
         sd = seo(d, tl, _dur(A / "intro.mp4"))
         vmid, mids = deliver(out, thumb, sd, d)
+        ytinfo = _yt_upload(out, thumb, sd)
         try:                                            # جانچ کے لیے نقل (GitHub Release)
             import shutil
             shutil.copy(out, ROOT / "bulletin.mp4")
@@ -859,7 +861,7 @@ def make(feedback: str | None = None) -> None:
     day = _today()
     st = read_json(STATE) if STATE.exists() else {}
     st.setdefault("days", {})[day] = {"status": "pending", "vmid": vmid, "mids": mids,
-                                      "headlines": [s["headline"] for s in d["stories"]]}
+                                      "headlines": [s["headline"] for s in d["stories"]], **ytinfo}
     st["used_titles"] = (st.get("used_titles", []) + [re.sub(r"\W+", "", i["title"].lower())[:60] for i in fresh[:40]])[-400:]
     st.pop("redo", None)
     st["days"] = dict(sorted(st["days"].items())[-30:])
@@ -868,15 +870,41 @@ def make(feedback: str | None = None) -> None:
     print("✅ بلیٹن بھیج دیا")
 
 
-def _upload_time() -> str:
+def _upload_dt() -> dt.datetime:
     """پاکستان/ہندوستان میں شام 8–11 بجے سب سے زیادہ دیکھا جاتا ہے؛ اس سے ~1–2 گھنٹے پہلے اپلوڈ = 5 بجے سعودی (7 بجے پاکستان)۔
     بلیٹن دیر سے بنے تو ٹیلیگرام پر آنے کے ایک گھنٹے بعد۔"""
     now = dt.datetime.now(TZ)
     t = max(now.replace(hour=17, minute=0, second=0, microsecond=0), now + dt.timedelta(hours=1))
     if t.minute not in (0, 30):
         t = (t + dt.timedelta(minutes=30 - t.minute % 30)).replace(second=0, microsecond=0)
-    h = lambda x: f"{(x.hour - 1) % 12 + 1}:{x.minute:02d}"
-    return f"آج {h(t)} بجے سعودی وقت ({h(t + dt.timedelta(hours=2))} بجے پاکستان)"
+    return t
+
+
+def _hm(x: dt.datetime) -> str:
+    return f"{(x.hour - 1) % 12 + 1}:{x.minute:02d}"
+
+
+def _upload_time() -> str:
+    t = _upload_dt()
+    return f"آج {_hm(t)} بجے سعودی وقت ({_hm(t + dt.timedelta(hours=2))} بجے پاکستان)"
+
+
+def _yt_upload(video: Path, thumb: Path, sd: dict) -> dict:
+    """یوٹیوب پر Private اپلوڈ (✅ کے بعد ہی پبلک) — ناکامی پر بلیٹن نہیں رکتا، ٹیلیگرام پر اطلاع"""
+    if not yt.enabled():
+        return {}
+    chat = news_chat()
+    try:
+        r = yt.upload(video, thumb, sd["youtube_title"], sd["youtube_description"], sd["tags"])
+    except Exception as e:
+        LOG.append(f"یوٹیوب: {e}")
+        send_text(chat, f"⚠️ یوٹیوب پر خودکار اپلوڈ نہ ہو سکا: {str(e)[:300]}\nاوپر کے پیکیج سے ہاتھ سے لگا دیں۔", html=False)
+        return {}
+    when = _upload_dt()
+    notes = "".join(f"\n• {n}" for n in r["notes"])
+    send_text(chat, f"📤 یوٹیوب پر <b>Private</b> اپلوڈ ہو گیا (ابھی صرف آپ کو نظر آئے گا):\n{r['url']}\n\n"
+                    f"✅ دبائیں گے تو {_upload_time()} خود پبلک ہو جائے گا۔ ❌ پر Private ہی رہے گا۔{notes}")
+    return {"yt": r["id"], "yt_at": when.isoformat()}
 
 
 BULLETIN_DAYS = {0, 2, 5}       # پیر، بدھ، ہفتہ (مالک کی ہدایت) — باقی دن بلیٹن نہیں
@@ -920,8 +948,18 @@ def poll() -> None:
             d = ns.setdefault("days", {}).setdefault(day, {})
             if action == "nok":
                 d["status"] = "approved"
-                tg_call("sendMessage", chat_id=chat, reply_parameters={"message_id": mid},
-                         text="✅ آج کا بلیٹن منظور — اوپر کے پیکیج سے یوٹیوب پر لگا دیں۔")
+                if d.get("yt") and yt.enabled():
+                    try:
+                        when = dt.datetime.fromisoformat(d["yt_at"])
+                        mode = yt.release(d["yt"], when)
+                        d["yt_status"] = mode
+                        msg = (f"✅ منظور — یوٹیوب پر {_hm(when)} بجے سعودی ({_hm(when + dt.timedelta(hours=2))} بجے پاکستان) خود پبلک ہو جائے گا:"
+                               if mode == "scheduled" else "✅ منظور — یوٹیوب پر ابھی پبلک کر دیا:") + f"\nhttps://youtu.be/{d['yt']}"
+                    except Exception as e:
+                        msg = f"✅ منظور — مگر یوٹیوب پر پبلک/شیڈول نہ ہو سکا: {str(e)[:250]}\nیوٹیوب اسٹوڈیو میں ہاتھ سے پبلک کر دیں: https://youtu.be/{d['yt']}"
+                else:
+                    msg = "✅ آج کا بلیٹن منظور — اوپر کے پیکیج سے یوٹیوب پر لگا دیں۔"
+                tg_call("sendMessage", chat_id=chat, reply_parameters={"message_id": mid}, text=msg)
             elif action == "nno":
                 d["status"] = "redo"
                 ns["redo"] = {"day": day, "feedback": None}

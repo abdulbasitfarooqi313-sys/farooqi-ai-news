@@ -2,7 +2,7 @@ name: YouTube key check
 on:
   workflow_dispatch:
   push:
-    paths: [".github/workflows/yt-check.yml", "lab/yt_check.py"]
+    paths: [".github/workflows/yt-check.yml", "lab/yt_check.py", "lab/yt_upload_test.py"]
 permissions:
   contents: read
 jobs:
@@ -14,6 +14,7 @@ jobs:
       - run: |
           set +e
           python lab/yt_check.py > out.txt 2>&1; rc=$?
+          [ $rc = 0 ] && { sudo apt-get install -y -qq ffmpeg >/dev/null 2>&1; PYTHONPATH=. python lab/yt_upload_test.py >> out.txt 2>&1; rc=$?; }
           while IFS= read -r l; do echo "::notice::$l"; done < out.txt
           exit $rc
         env:
