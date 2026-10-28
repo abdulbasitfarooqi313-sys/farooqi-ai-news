@@ -493,6 +493,7 @@ def build_audio(d: dict, tmp: Path) -> tuple[Path, dict]:
     """ترتیب: آغاز → شہ سرخیاں (ہر ایک سے پہلے ووکل، پوری اسکرین سرخی) → تفصیل (زوم اِن + سائیڈ خانہ؛ 1-2 خبروں میں نامہ نگار)"""
     sts = d["stories"]
     anc, rep = _voices(d, tmp)
+    at, rt = _anchor_texts(d), [s["reporter"]["report"] for s in sts if s["reporter"]]
     anc = [_trim(p, tmp / f"ancT{i}.wav") for i, p in enumerate(anc)]
     rep = [_trim(p, tmp / f"repT{i}.wav") for i, p in enumerate(rep)]
     vocal = tmp / "vocal.wav"
@@ -500,14 +501,16 @@ def build_audio(d: dict, tmp: Path) -> tuple[Path, dict]:
     sting = tmp / "sting.wav"
     _ff("-i", str(A / "sting.wav"), "-af", "apad=pad_dur=0.1", "-t", "1.6", "-ar", "44100", "-ac", "2", "-c:a", "pcm_s16le", str(sting))
     parts, t = [], 0.0
-    tl = {"split": [[0, 0]], "hl": [[0, 0]], "side": [[0, 0]], "zoom": [[0, 0]], "hcards": [], "stories": [], "wipes": [], "anchor": []}
+    tl = {"split": [[0, 0]], "hl": [[0, 0]], "side": [[0, 0]], "zoom": [[0, 0]], "hcards": [], "stories": [], "wipes": [], "anchor": [], "utt": []}
 
-    def add(p: Path, kind: str):
+    def add(p: Path, kind: str, text: str = ""):
         nonlocal t
         du = _dur(p)
         parts.append(p)
         if kind == "anchor":
             tl["anchor"].append((t, t + du))
+        if text:                                          # کیپشن اور «ایکسپلینر» انداز کے لیے: کون سا جملہ کب
+            tl["utt"].append({"t0": round(t, 2), "t1": round(t + du, 2), "kind": kind, "text": text})
         t0 = t
         t += du
         return t0, t
@@ -517,17 +520,17 @@ def build_audio(d: dict, tmp: Path) -> tuple[Path, dict]:
 
     gap(0.6, "s0")
     k = 0
-    add(anc[k], "anchor"); k += 1
+    add(anc[k], "anchor", at[k]); k += 1
     # شہ سرخیاں
     for i, s in enumerate(sts):
         gap(0.25, f"h{i}")
         v0, v1 = add(vocal, "vocal")
-        a0, a1 = add(anc[k], "anchor"); k += 1
+        a0, a1 = add(anc[k], "anchor", at[k]); k += 1
         gap(0.35, f"h{i}b")
         tl["hcards"].append({"t0": round(v0 + 0.3, 2), "t1": round(a1 + 0.35, 2), "i": i})
         tl["hl"] += [[round(v0 + 0.2, 2), 0], [round(v0 + 0.9, 2), 1], [round(a1 + 0.05, 2), 1], [round(a1 + 0.5, 2), 0]]
     gap(0.4, "td")
-    add(anc[k], "anchor"); k += 1
+    add(anc[k], "anchor", at[k]); k += 1
     tl["hbed"] = [round(tl["hcards"][0]["t0"] - 0.5, 2), round(t, 2)]
     # تفصیل: کیمرے پر تمہید → پیکیج (پوری اسکرین مناظر + اہم نکات، پسِ منظر میں آواز) → [نامہ نگار] → تبصرہ
     r = 0
@@ -536,29 +539,29 @@ def build_audio(d: dict, tmp: Path) -> tuple[Path, dict]:
         gap(0.3, f"d{i}")
         w0, _ = add(sting, "sting")
         tl["wipes"].append([round(w0, 2), s["screen"]])
-        a0, a1 = add(anc[k], "anchor"); k += 1
+        a0, a1 = add(anc[k], "anchor", at[k]); k += 1
         tl["zoom"] += [[round(w0 + 0.6, 2), 0], [round(w0 + 1.6, 2), 1]]
         tl["side"] += [[round(w0 + 0.8, 2), 0], [round(w0 + 1.6, 2), 1]]
         end = a1
         if (s.get("vo") or "").strip():
             gap(0.35, f"v{i}")
-            v0, v1 = add(anc[k], "vo"); k += 1
+            v0, v1 = add(anc[k], "vo", at[k]); k += 1
             tl["pk"] += [[round(v0 - 0.35, 2), 0], [round(v0 + 0.35, 2), 1], [round(v1 + 0.1, 2), 1], [round(v1 + 0.7, 2), 0]]
             tl["pkgs"].append({"t0": round(v0 - 0.35, 2), "t1": round(v1 + 0.7, 2), "i": i})
             end = v1
         if s["reporter"]:
             gap(0.5, f"h{i}x")
-            c0, c1 = add(anc[k], "anchor"); k += 1          # نامہ نگار کو لینا
+            c0, c1 = add(anc[k], "anchor", at[k]); k += 1          # نامہ نگار کو لینا
             gap(0.4, f"r{i}")
-            r0, r1 = add(rep[r], "reporter"); r += 1
+            r0, r1 = add(rep[r], "reporter", rt[r]); r += 1
             gap(0.4, f"r{i}b")
-            b0, b1 = add(anc[k], "anchor"); k += 1          # شکریہ + تبصرہ
+            b0, b1 = add(anc[k], "anchor", at[k]); k += 1          # شکریہ + تبصرہ
             tl["side"] += [[round(c1 - 0.3, 2), 1], [round(c1 + 0.2, 2), 0], [round(r1 + 0.4, 2), 0], [round(r1 + 1.0, 2), 1]]
             tl["split"] += [[round(c1 - 0.2, 2), 0], [round(r0 + 0.4, 2), 1], [round(r1 + 0.1, 2), 1], [round(r1 + 0.9, 2), 0]]
             end = b1
         elif (s.get("comment") or "").strip():
             gap(0.4, f"c{i}")
-            c0, end = add(anc[k], "anchor"); k += 1
+            c0, end = add(anc[k], "anchor", at[k]); k += 1
         tl["zoom"] += [[round(end + 0.1, 2), 1], [round(end + 0.9, 2), 0]]
         tl["side"] += [[round(end + 0.1, 2), 1], [round(end + 0.6, 2), 0]]
         tl["stories"].append({"t0": round(w0, 2), "t1": round(end + 0.3, 2), "n": "", "h": s["screen"], "topic": s["topic"],
@@ -628,6 +631,9 @@ def _launch(pw):
 
 
 def render_body(d: dict, tl: dict, audio: Path, out: Path, tmp: Path) -> Path:
+    if os.environ.get("NEWS_STYLE") == "explainer":    # بغیر اینکر، پوری اسکرین مناظر + اردو کیپشن
+        from . import explainer
+        return explainer.render(d, tl, audio, out, tmp, urdu_date(latin=True), _launch, FONT, _b64(A / "logo_round.png", "image/png"))
     from playwright.sync_api import sync_playwright
     p = tmp / "newsroom_built.html"
     broll = None

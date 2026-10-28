@@ -1,6 +1,6 @@
-"""چھوٹا نمونہ بلیٹن (ایک خبر) — اصل ڈیزائن، Edge کی آواز (جیمنائی کا کوٹہ بچانے کو)۔ نتیجہ: out/preview.mp4
-KEYED=1: بغیر اینکر، میجنٹا خانوں کے ساتھ (پیچھے کی ویڈیو بعد میں لگتی ہے) + out/tl.json"""
-import json, os, shutil, sys, tempfile
+"""چھوٹا نمونہ بلیٹن (ایک خبر) — Edge کی آواز (جیمنائی کا کوٹہ بچانے کو)۔ نتیجہ: out/preview.mp4
+KEYED=1 / FORCE_KEY=1: میجنٹا خانے رہنے دیں (پیچھے کی ویڈیو بعد میں لگتی ہے) + out/tl.json, out/ranges.json"""
+import json, os, sys, tempfile
 from pathlib import Path
 os.environ["NEWS_TTS"] = "edge"
 import news.bulletin as b
@@ -13,11 +13,13 @@ d["ticker"] = (d.get("ticker") or [])[:4]
 out = Path("out"); out.mkdir(exist_ok=True)
 if os.environ.get("KEYED") == "1":
     b.ANCHOR_ON = False
-    br.track = lambda d, tl, dest, tmp: Path("/dev/null")             # صرف میجنٹا خانے
+    br.track = lambda d, tl, dest, tmp: Path("/dev/null")
     br.composite = lambda silent, broll, o: silent
 with tempfile.TemporaryDirectory() as t:
     tmp = Path(t)
     try:
+        for i, s_ in enumerate(d["stories"]):
+            s_["_logo"] = b._logo(s_.get("domain") or "", tmp, i)
         b._site_shots(d, tmp)
         b.thumbnail(d, out / "thumb.jpg", tmp)
     except Exception as e:

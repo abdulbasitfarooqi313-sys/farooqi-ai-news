@@ -5,6 +5,9 @@ on:
       anchor:
         description: "on / off"
         default: "off"
+      style:
+        description: "tv / explainer"
+        default: "explainer"
       keyed:
         description: "1 = magenta boxes for b-roll"
         default: "0"
@@ -20,10 +23,10 @@ jobs:
         with: { python-version: "3.12", cache: pip }
       - run: pip install -r requirements.txt && sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - run: python -m playwright install --with-deps chromium || true
-      - run: PYTHONPATH=. NEWS_ANCHOR=${{ inputs.anchor }} KEYED=${{ inputs.keyed }} python -u lab/preview.py 2>&1 | tee preview.log
+      - run: PYTHONPATH=. NEWS_ANCHOR=${{ inputs.anchor }} KEYED=${{ inputs.keyed }} NEWS_STYLE=${{ inputs.style }} FORCE_KEY=1 python -u lab/preview.py 2>&1 | tee preview.log
       - if: always()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           T=preview-${{ github.run_number }}
-          gh release create "$T" out/preview.mp4 out/thumb.jpg out/tl.json preview.log --prerelease --title "$T" --notes sample || gh release create "$T" preview.log --prerelease --title "$T" --notes failed
+          gh release create "$T" out/preview.mp4 out/thumb.jpg out/tl.json out/ranges.json preview.log --prerelease --title "$T" --notes sample || gh release create "$T" preview.log --prerelease --title "$T" --notes failed
