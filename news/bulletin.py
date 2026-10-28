@@ -588,13 +588,18 @@ def _b64(p: Path, mime: str) -> str:
     return f"data:{mime};base64," + base64.b64encode(p.read_bytes()).decode()
 
 
+ANCHOR_ON = os.environ.get("NEWS_ANCHOR", "on") != "off"   # off = بغیر اینکر: خالی اسٹوڈیو + لوگو اسکرین، نامہ نگار کی جگہ شہر کا منظر
+
+
 def page(d: dict, tl: dict) -> str:
     html = (A / "newsroom.html").read_text(encoding="utf-8")
     tick = " <b>◆</b> ".join(_h.escape(x) for x in (d.get("ticker") or [s["headline"] for s in d["stories"]]))
     data = {k: tl[k] for k in ("split", "hl", "side", "zoom", "pk", "pkgs", "hcards", "cards", "stories", "wipes", "dur", "energy")}
     rep = {"__LOGO__": _b64(A / "logo_round.png", "image/png"), "__NQFONT__": FONT.as_uri(),
-           "__ABG__": _b64(A / "anchor_bg.jpg", "image/jpeg"), "__AFG__": _b64(A / "anchor_fg.png", "image/png"),
-           "__ABLINK__": _b64(A / "anchor_blink.png", "image/png"), "__IMGB__": _b64(A / "reporter.jpg", "image/jpeg"),
+           "__ABG__": _b64(A / ("anchor_bg.jpg" if ANCHOR_ON else "empty_studio.jpg"), "image/jpeg"),
+           "__AFG__": _b64(A / ("anchor_fg.png" if ANCHOR_ON else "blank.png"), "image/png"),
+           "__ABLINK__": _b64(A / ("anchor_blink.png" if ANCHOR_ON else "blank.png"), "image/png"),
+           "__IMGB__": _b64(A / ("reporter.jpg" if ANCHOR_ON else "reporter_city.jpg"), "image/jpeg"),
            "__SCENESJS__": (A / "scenes.js").read_text(encoding="utf-8"), "__TICKER__": (tick + " <b>◆</b> ") * 3,
            "__DATE__": urdu_date(latin=True), "__NFDATA__": json.dumps(data, ensure_ascii=False)}
     return re.sub(r"__[A-Z]+__", lambda m: rep.get(m.group(0), m.group(0)), html)
@@ -667,7 +672,7 @@ def thumbnail(d: dict, out: Path, tmp: Path) -> Path:
     words = (d.get("thumb_text") or d["stories"][0]["headline"]).split()
     title = " ".join(words[:-1]) + (f" <em>{_h.escape(words[-1])}</em>" if words else "")
     rep = {"__NQFONT__": FONT.as_uri(), "__LOGO__": _b64(A / "logo_round.png", "image/png"),
-           "__ABG__": _b64(A / "anchor.jpg", "image/jpeg"), "__SCENESJS__": (A / "scenes.js").read_text(encoding="utf-8"),
+           "__ABG__": _b64(A / ("anchor.jpg" if ANCHOR_ON else "empty_studio.jpg"), "image/jpeg"), "__SCENESJS__": (A / "scenes.js").read_text(encoding="utf-8"),
            "__TOPIC__": d["stories"][0]["topic"], "__TITLE__": title, "__DATE__": "فاروقی اے آئی نیوز · " + urdu_date(latin=True)}
     html = re.sub(r"__[A-Z]+__", lambda m: rep.get(m.group(0), m.group(0)), THUMB)
     p = tmp / "thumb.html"

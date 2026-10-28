@@ -13,6 +13,7 @@ with tempfile.TemporaryDirectory() as t:
     tmp = Path(t)
     try:
         b._site_shots(d, tmp)
+        b.thumbnail(d, out / "thumb.jpg", tmp)
     except Exception as e:
         print("site shots skipped", e)
     audio, tl = b.build_audio(d, tmp)
