@@ -38,3 +38,4 @@ if not items:
 for it in items:
     s = it["snippet"]
     print(f"📺 چینل: {s['title']}  |  {s.get('customUrl', '')}  |  id {it['id']}  |  ویڈیوز {it['statistics'].get('videoCount')}")
+# rerun 2026-10-28T22:49:04
