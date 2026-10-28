@@ -98,8 +98,8 @@ def upload(video: Path, thumb: Path | None, title: str, desc: str, tags: list[st
         t = requests.post(f"{UPLOAD}/thumbnails/set", params={"videoId": vid}, timeout=120,
                           headers={**_h(tok), "Content-Type": "image/jpeg"}, data=thumb.read_bytes())
         if not t.ok:
-            notes.append("تھمب نیل نہیں لگا (چینل کی فون تصدیق ضروری ہو سکتی ہے: youtube.com/verify) — "
-                         "یوٹیوب اسٹوڈیو میں ہاتھ سے لگا دیں")
+            notes.append("تھمب نیل نہیں لگا — چینل کی فون تصدیق (youtube.com/verify) کے بغیر یوٹیوب کسٹم تھمب نیل نہیں لگانے دیتا؛ "
+                         "تب تک یوٹیوب ویڈیو کے اندر سے خود تصویر چنتا ہے")
     try:
         if not playlist:
             return {"id": vid, "url": f"https://youtu.be/{vid}", "notes": notes}
