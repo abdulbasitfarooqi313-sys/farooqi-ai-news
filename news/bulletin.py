@@ -81,10 +81,10 @@ def _txt(s: str | None) -> str:
     return re.sub(r"\s+", " ", s).strip()
 
 
-def fetch(max_age_h: int = 72) -> list[dict]:
+def fetch(max_age_h: int = 72, feeds: list[str] | None = None, per_feed: int = 25) -> list[dict]:
     now = dt.datetime.now(dt.timezone.utc)
     out, seen = [], set()
-    for url in FEEDS:
+    for url in feeds or FEEDS:
         try:
             r = requests.get(url, timeout=30, headers={"User-Agent": "Mozilla/5.0 (FarooqiAINews RSS reader)"})
             root = ET.fromstring(r.content)
@@ -93,7 +93,7 @@ def fetch(max_age_h: int = 72) -> list[dict]:
             continue
         ns = {"a": "http://www.w3.org/2005/Atom"}
         items = root.findall(".//item") or root.findall(".//a:entry", ns)
-        for it in items[:25]:
+        for it in items[:per_feed]:
             g = lambda tag: (it.findtext(tag) or it.findtext(f"a:{tag}", namespaces=ns) or "")
             title = _txt(g("title"))
             link = g("link") or ((it.find("a:link", ns).get("href")) if it.find("a:link", ns) is not None else "")
@@ -781,8 +781,8 @@ def news_chat():
     return ns.get("chat") or os.environ.get("TELEGRAM_CHAT_ID")
 
 
-def deliver(video: Path, thumb: Path, sd: dict, d: dict) -> list:
-    day = _today()
+def deliver(video: Path, thumb: Path, sd: dict, d: dict, key: str | None = None, label: str = "آج کا بلیٹن") -> list:
+    day = key or _today()
     so = d.get("social") or {}
     mins = _dur(video)
     chat = news_chat()
@@ -792,7 +792,7 @@ def deliver(video: Path, thumb: Path, sd: dict, d: dict) -> list:
         return tg_call("sendMessage", chat_id=chat, text=text, **kw)["message_id"]
 
     record_start()
-    say(f"📺 <b>فاروقی اے آئی نیوز — {urdu_date()}</b>\nآج کا بلیٹن ({int(mins // 60)}:{int(mins % 60):02d} منٹ)، "
+    say(f"📺 <b>فاروقی اے آئی نیوز — {urdu_date()}</b>\n{label} ({int(mins // 60)}:{int(mins % 60):02d} منٹ)، "
                  f"تھمب نیل، اور یوٹیوب / سوشل میڈیا کا پورا پیکیج۔ ویڈیو پسند ہے تو ✅، دوبارہ بنوانی ہو تو ❌ "
                  f"(یا ویڈیو پر Reply کر کے لکھیں کیا بدلنا ہے)۔\n\n⏰ <b>اپلوڈ کا وقت: {_upload_time()}</b>")
     vmid = send_video(chat, video, caption=f"📺 فاروقی اے آئی نیوز — {urdu_date()}\n" + "\n".join(f"{i + 1}. {s['headline']}" for i, s in enumerate(d["stories"])),
@@ -962,8 +962,12 @@ def poll() -> None:
                 tg_call("sendMessage", chat_id=chat, reply_parameters={"message_id": mid}, text=msg)
             elif action == "nno":
                 d["status"] = "redo"
-                ns["redo"] = {"day": day, "feedback": None}
-                dispatch = True
+                if day.endswith("-r"):                   # ہفتہ وار راؤنڈ اپ
+                    ns["redo_r"] = {"day": day, "feedback": None}
+                    dispatch = "roundup.yml"
+                else:
+                    ns["redo"] = {"day": day, "feedback": None}
+                    dispatch = dispatch or True
                 tg_call("sendMessage", chat_id=chat, text="🔄 نیا بلیٹن بن رہا ہے (تقریباً 20–30 منٹ)۔ "
                          "کوئی خاص تبدیلی چاہیے تو اگلی بار ویڈیو پر Reply کر کے لکھیں۔")
         elif (msg := up.get("message")) and not me and msg.get("chat", {}).get("type") == "private" \
@@ -975,9 +979,9 @@ def poll() -> None:
             rt, text = msg.get("reply_to_message"), (msg.get("text") or "").strip()
             day = next((k for k, v in ns.get("days", {}).items() if rt and v.get("vmid") == rt.get("message_id")), None)
             if day and text:
-                ns["redo"] = {"day": day, "feedback": text}
+                ns["redo_r" if day.endswith("-r") else "redo"] = {"day": day, "feedback": text}
                 ns["days"][day]["status"] = "redo"
-                dispatch = True
+                dispatch = "roundup.yml" if day.endswith("-r") else (dispatch or True)
                 tg_call("sendMessage", chat_id=me, text="🔄 ٹھیک ہے — آپ کی ہدایت کے ساتھ نیا بلیٹن بن رہا ہے (تقریباً 20–30 منٹ)۔")
             elif text.startswith("/start"):
                 tg_call("sendMessage", chat_id=me, text="📺 فاروقی اے آئی نیوز — بلیٹن ہر پیر، بدھ اور ہفتہ کو دوپہر یہاں آئے گا۔ "
@@ -985,7 +989,7 @@ def poll() -> None:
     write_json(STATE, ns)
     if dispatch and os.environ.get("GITHUB_ACTIONS"):
         with open("/tmp/news_dispatch", "a") as f:
-            f.write("bulletin.yml\n")
+            f.write(("roundup.yml" if dispatch == "roundup.yml" else "bulletin.yml") + "\n")
 
 
 def check() -> None:

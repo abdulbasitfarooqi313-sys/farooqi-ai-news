@@ -116,8 +116,14 @@ def _track(ranges: list, dest: Path, tmp: Path) -> Path | None:
 
 
 def render(d: dict, tl: dict, audio: Path, out: Path, tmp: Path, date: str, launch, font: Path, logo_b64: str) -> Path:
-    from playwright.sync_api import sync_playwright
     scenes, caps, ranges = plan(d, tl, date)
+    return render_scenes(scenes, caps, ranges, tl["dur"], audio, out, tmp, launch, font, logo_b64)
+
+
+def render_scenes(scenes: list, caps: list, ranges: list, dur: float, audio: Path, out: Path, tmp: Path, launch, font: Path,
+                  logo_b64: str) -> Path:
+    """مناظر + کیپشن + پسِ منظر ویڈیو → خاموش ویڈیو + آواز (بلیٹن اور ہفتہ وار راؤنڈ اپ دونوں کے لیے)"""
+    from playwright.sync_api import sync_playwright
     track = _track(ranges, Path(os.environ.get("BROLL_DIR") or (ROOT / "cache" / "broll")), tmp)
     keep_key = not track and os.environ.get("FORCE_KEY") == "1"      # نمونہ: میجنٹا رہنے دیں (ویڈیو بعد میں)
     if keep_key:
@@ -139,7 +145,7 @@ def render(d: dict, tl: dict, audio: Path, out: Path, tmp: Path, date: str, laun
         pg.wait_for_function("document.title==='ready'", timeout=90000)
         ff = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", str(FPS), "-c:v", "mjpeg",
                                "-i", "-", *enc, str(silent)], stdin=subprocess.PIPE)
-        n = int(tl["dur"] * FPS)
+        n = int(dur * FPS)
         for f in range(n):
             pg.evaluate(f"render({f / FPS})")
             ff.stdin.write(pg.screenshot(type="jpeg", quality=97 if (track or keep_key) else 88))
