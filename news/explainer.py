@@ -48,6 +48,8 @@ def plan(d: dict, tl: dict, date: str) -> tuple[list, list, list]:
 
     first_h = tl["hcards"][0]["t0"] - 0.3 if tl["hcards"] else utt[0]["t1"]
     scene(0, "title", br.GENERIC, kicker="فاروقی اے آئی نیوز", h="اے آئی کی دنیا: آج کی اہم خبریں", date=date)
+    if tl.get("tune"):                                   # دھن کے دوران «آج کی شہ سرخیاں»
+        scene(tl["tune"][0], "bridge", h="آج کی شہ سرخیاں")
     for hc in tl["hcards"]:
         s = sts[hc["i"]]
         scene(hc["t0"] - 0.3, "headline", num=f"سرخی  {hc['i'] + 1}", h=s["headline"],

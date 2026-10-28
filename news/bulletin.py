@@ -499,7 +499,15 @@ def build_audio(d: dict, tmp: Path) -> tuple[Path, dict]:
     vocal = tmp / "vocal.wav"
     _ff("-i", str(A / "vocal.wav"), "-af", "volume=0.9", "-ar", "44100", "-ac", "2", "-c:a", "pcm_s16le", str(vocal))
     sting = tmp / "sting.wav"
-    _ff("-i", str(A / "sting.wav"), "-af", "apad=pad_dur=0.1", "-t", "1.6", "-ar", "44100", "-ac", "2", "-c:a", "pcm_s16le", str(sting))
+    logo_mp3 = A / "headlines_logo.mp3"                 # «Headlines News Logo» — moodmode، Pixabay (مفت، کمرشل اجازت)
+    tune = None
+    if logo_mp3.exists():
+        tune = tmp / "tune.wav"
+        _ff("-i", str(logo_mp3), "-af", "volume=0.85", "-ar", "44100", "-ac", "2", "-c:a", "pcm_s16le", str(tune))
+        _ff("-i", str(logo_mp3), "-t", "1.6", "-af", "volume=0.8,afade=t=out:st=1.05:d=0.55,apad=pad_dur=0.1", "-t", "1.7",
+            "-ar", "44100", "-ac", "2", "-c:a", "pcm_s16le", str(sting))
+    else:
+        _ff("-i", str(A / "sting.wav"), "-af", "apad=pad_dur=0.1", "-t", "1.6", "-ar", "44100", "-ac", "2", "-c:a", "pcm_s16le", str(sting))
     parts, t = [], 0.0
     tl = {"split": [[0, 0]], "hl": [[0, 0]], "side": [[0, 0]], "zoom": [[0, 0]], "hcards": [], "stories": [], "wipes": [], "anchor": [], "utt": []}
 
@@ -524,7 +532,12 @@ def build_audio(d: dict, tmp: Path) -> tuple[Path, dict]:
     # شہ سرخیاں
     for i, s in enumerate(sts):
         gap(0.25, f"h{i}")
-        v0, v1 = add(vocal, "vocal")
+        if i == 0 and tune:                               # شہ سرخیوں سے پہلے ایک بار پوری دھن
+            u0, u1 = add(tune, "tune")
+            tl["tune"] = [round(u0, 2), round(u1, 2)]
+            v0, v1 = u1 - 1.0, u1
+        else:
+            v0, v1 = add(vocal, "vocal")
         a0, a1 = add(anc[k], "anchor", at[k]); k += 1
         gap(0.35, f"h{i}b")
         tl["hcards"].append({"t0": round(v0 + 0.3, 2), "t1": round(a1 + 0.35, 2), "i": i})
@@ -738,6 +751,8 @@ def seo(d: dict, tl: dict, intro_dur: float) -> dict:
     src = "\n".join(f"• {s.get('source', '')}: {s.get('link', '')}" for s in d["stories"] if s.get("link"))
     desc = (f"{d.get('summary', '')}\n\n📰 آج کی خبریں — {urdu_date()}\n" + "\n".join(f"{i + 1}. {s['headline']}" for i, s in enumerate(d["stories"]))
             + "\n\n⏱️ ابواب:\n" + "\n".join(ch) + (f"\n\n🔗 ماخذ:\n{src}" if src else "")
+            + ("\n\n🎵 Music: “Headlines News Logo” by moodmode (Pixabay)" if (A / "headlines_logo.mp3").exists() else "")
+            + ("\n🎬 Footage: Pexels" if not ANCHOR_ON or os.environ.get("NEWS_STYLE") == "explainer" else "")
             + "\n\nفاروقی اے آئی نیوز — مصنوعی ذہانت کی دنیا، آسان اردو میں۔ نئے آفاق کی دریافت!\n"
             "سبسکرائب کریں، لائک کریں اور بیل آئیکن دبائیں۔\n\n"
             "#فاروقی_اے_آئی_نیوز #مصنوعی_ذہانت #اے_آئی #AINews #ArtificialIntelligence #UrduNews #TechNews")
