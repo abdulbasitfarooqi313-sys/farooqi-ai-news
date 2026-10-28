@@ -10,6 +10,7 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#ff00ff}
 .rtl{direction:rtl;text-align:right;font-family:NQ,serif}
 /* title */
 #title .box{position:absolute;right:130px;top:300px;width:1400px}
+#title .box{background:#070f33;padding:34px 46px 40px;border-radius:14px;border-right:8px solid #e2b84f;width:auto;max-width:1400px}
 #title .k{display:inline-block;font-size:44px;color:#0a1550;background:#e2b84f;padding:0 26px 10px;border-radius:6px}
 #title .h{font-size:96px;line-height:1.5;color:#fff;margin-top:24px;text-shadow:0 6px 24px rgba(0,0,0,.5)}
 #title .d{font-size:46px;color:#cfdcff;margin-top:6px}
@@ -41,7 +42,7 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#ff00ff}
 #bug{position:absolute;right:52px;bottom:200px;width:120px;height:120px;border-radius:50%;background:url('__LOGO__') center/cover;opacity:.92;
  box-shadow:0 0 0 3px rgba(226,184,79,.85)}
 #cap{position:absolute;left:220px;right:220px;bottom:70px;text-align:center;direction:rtl}
-#cap span{display:inline;font-family:NQ,serif;font-size:58px;line-height:1.95;color:#fff;background:rgba(3,8,30,.78);
+#cap span{display:inline;font-family:NQ,serif;font-size:58px;line-height:1.95;color:#fff;background:#070f33;
  padding:2px 26px 12px;-webkit-box-decoration-break:clone;box-decoration-break:clone;border-radius:6px}
 </style></head><body>
 <div id="scenes"></div>
@@ -53,12 +54,12 @@ const $=id=>document.getElementById(id);
 const esc=s=>(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 const U=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
 function html(s,i){
- if(s.kind==='title') return `<div class="sc key" id="title"><div class="shade"></div><div class="box rtl"><div class="k">${esc(s.kicker)}</div><div class="h">${esc(s.h)}</div><div class="d">${esc(s.date)}</div></div></div>`;
+ if(s.kind==='title') return `<div class="sc key" id="title"><div class="box rtl"><div class="k">${esc(s.kicker)}</div><div class="h">${esc(s.h)}</div><div class="d">${esc(s.date)}</div></div></div>`;
  if(s.kind==='headline') return `<div class="sc dark hl"><div class="grid"></div><div class="num rtl">${esc(s.num)}</div><div class="bar"></div><div class="t rtl">${esc(s.h)}</div>`+
    (s.logo?`<div class="logo" style="background-image:url('${s.logo}')"></div>`:'')+`<div class="lt">${esc(s.co)}</div></div>`;
  if(s.kind==='bridge') return `<div class="sc dark" id="bridge"><div class="grid"></div><div class="bar"></div><div class="t rtl">${esc(s.h)}</div></div>`;
  if(s.kind==='site') return `<div class="sc dark site"><img class="shot" src="${s.shot}"><div class="src">${esc(s.url)}</div></div>`;
- if(s.kind==='points') return `<div class="sc dark pts">${s.shot?`<div class="bgimg" style="background-image:url('${s.shot}')"></div>`:'<div class="grid"></div>'}<div class="lbl rtl">اہم نکات</div>`+
+ if(s.kind==='points') return `<div class="sc dark pts"><div class="grid"></div><div class="lbl rtl">اہم نکات</div>`+
    s.pts.map((p,j)=>`<div class="p rtl" style="top:${300+j*190}px"><b>${j+1}</b>${esc(p)}</div>`).join('')+`</div>`;
  if(s.kind==='loc') return `<div class="sc dark loc"><div class="grid"></div><div class="pin rtl"><i>⌖</i> ${esc(s.loc)}</div><div class="who rtl">${esc(s.who)}</div></div>`;
  if(s.kind==='broll') return `<div class="sc key">${s.chip?`<div class="chip rtl">${esc(s.chip)}</div>`:''}</div>`;
