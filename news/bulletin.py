@@ -591,15 +591,26 @@ def _b64(p: Path, mime: str) -> str:
 ANCHOR_ON = os.environ.get("NEWS_ANCHOR", "on") != "off"   # off = بغیر اینکر: خالی اسٹوڈیو + لوگو اسکرین، نامہ نگار کی جگہ شہر کا منظر
 
 
-def page(d: dict, tl: dict) -> str:
+def _key_png(name: str, size: tuple) -> Path:
+    """میجنٹا خانہ (پیچھے خبر کی ویڈیو لگنی ہے)"""
+    from PIL import Image
+    p = Path(tempfile.gettempdir()) / name
+    if not p.exists():
+        Image.new("RGB", size, (255, 0, 255)).save(p)
+    return p
+
+
+def page(d: dict, tl: dict, key: bool = False) -> str:
     html = (A / "newsroom.html").read_text(encoding="utf-8")
     tick = " <b>◆</b> ".join(_h.escape(x) for x in (d.get("ticker") or [s["headline"] for s in d["stories"]]))
     data = {k: tl[k] for k in ("split", "hl", "side", "zoom", "pk", "pkgs", "hcards", "cards", "stories", "wipes", "dur", "energy")}
     rep = {"__LOGO__": _b64(A / "logo_round.png", "image/png"), "__NQFONT__": FONT.as_uri(),
-           "__ABG__": _b64(A / ("anchor_bg.jpg" if ANCHOR_ON else "empty_studio.jpg"), "image/jpeg"),
+           "__ABG__": (_b64(_key_png("key_abg.png", (1715, 1184)), "image/png") if key else
+                       _b64(A / ("anchor_bg.jpg" if ANCHOR_ON else "empty_studio.jpg"), "image/jpeg")),
            "__AFG__": _b64(A / ("anchor_fg.png" if ANCHOR_ON else "blank.png"), "image/png"),
            "__ABLINK__": _b64(A / ("anchor_blink.png" if ANCHOR_ON else "blank.png"), "image/png"),
-           "__IMGB__": _b64(A / ("reporter.jpg" if ANCHOR_ON else "reporter_city.jpg"), "image/jpeg"),
+           "__IMGB__": (_b64(_key_png("key_rep.png", (640, 768)), "image/png") if key else
+                        _b64(A / ("reporter.jpg" if ANCHOR_ON else "reporter_city.jpg"), "image/jpeg")),
            "__SCENESJS__": (A / "scenes.js").read_text(encoding="utf-8"), "__TICKER__": (tick + " <b>◆</b> ") * 3,
            "__DATE__": urdu_date(latin=True), "__NFDATA__": json.dumps(data, ensure_ascii=False)}
     return re.sub(r"__[A-Z]+__", lambda m: rep.get(m.group(0), m.group(0)), html)
@@ -612,25 +623,38 @@ def _launch(pw):
 def render_body(d: dict, tl: dict, audio: Path, out: Path, tmp: Path) -> Path:
     from playwright.sync_api import sync_playwright
     p = tmp / "newsroom_built.html"
-    p.write_text(page(d, tl), encoding="utf-8")
+    broll = None
+    if not ANCHOR_ON:                                   # بغیر اینکر: پیچھے خبر سے متعلق ویڈیو (Pexels)
+        try:
+            from . import broll as _br
+            broll = _br.track(d, tl, Path(os.environ.get("BROLL_DIR") or (ROOT / "cache" / "broll")), tmp)
+        except Exception as e:
+            print(f"   پسِ منظر ویڈیو نہیں بنی ({e}) — خالی اسٹوڈیو")
+            broll = None
+    p.write_text(page(d, tl, key=bool(broll)), encoding="utf-8")
     silent = tmp / "body_silent.mp4"
+    enc = (["-c:v", "libx264", "-preset", "veryfast", "-crf", "8", "-pix_fmt", "yuv444p"] if broll
+           else ["-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p"])
     with sync_playwright() as pw:
         br = _launch(pw)
         pg = br.new_page(viewport={"width": 1920, "height": 1080})
         pg.goto(p.as_uri())
         pg.wait_for_function("document.title==='ready'", timeout=90000)
         ff = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", str(FPS), "-c:v", "mjpeg",
-                               "-i", "-", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p", str(silent)],
+                               "-i", "-", *enc, str(silent)],
                               stdin=subprocess.PIPE)
         n = int(tl["dur"] * FPS)
         for f in range(n):
             pg.evaluate(f"render({f / FPS})")
-            ff.stdin.write(pg.screenshot(type="jpeg", quality=88))
+            ff.stdin.write(pg.screenshot(type="jpeg", quality=97 if broll else 88))
             if f % (FPS * 30) == 0:
                 print(f"   فریم {f}/{n}")
         ff.stdin.close()
         ff.wait()
         br.close()
+    if broll:
+        from . import broll as _br
+        silent = _br.composite(silent, broll, tmp / "body_keyed.mp4")
     _ff("-i", str(silent), "-i", str(audio), "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", str(out))
     return out
 
