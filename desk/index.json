@@ -1,23 +1,23 @@
 {
  "nawa": {
-  "date": "2026-10-28",
+  "date": "2026-10-29",
   "file": "desk/nawa.html",
   "label": "Nawa-e-Farooqi",
-  "title": "روزنامچہ — نوائے فاروقی — 2026-10-28",
-  "hash": "82cbe938ff0f"
+  "title": "روزنامچہ — نوائے فاروقی — 2026-10-29",
+  "hash": "f9ac9c90f227"
  },
  "news": {
-  "date": "2026-10-28",
+  "date": "2026-10-29",
   "file": "desk/news.html",
   "label": "AI News",
-  "title": "روزنامچہ — فاروقی اے آئی نیوز — 2026-10-28",
-  "hash": "83c04179e307"
+  "title": "روزنامچہ — فاروقی اے آئی نیوز — 2026-10-29",
+  "hash": "75b77c5f58f6"
  },
  "toolscape": {
-  "date": "2026-10-28",
+  "date": "2026-10-29",
   "file": "desk/toolscape.html",
   "label": "Toolscape",
-  "title": "روزنامچہ — Toolscape — 2026-10-28",
-  "hash": "5e199727eebc"
+  "title": "روزنامچہ — Toolscape — 2026-10-29",
+  "hash": "ce4b9caaf7f1"
  }
 }

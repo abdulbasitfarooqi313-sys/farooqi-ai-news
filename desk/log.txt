@@ -1,14 +1,14 @@
-03:28:02 news: start
-03:31:31 news: 0 competitor videos, 110 trending items
-03:31:39 gemini-3.6-flash: HTTP 503 in 8s
-03:31:53 gemini-3.6-flash: HTTP 503 in 5s
-03:32:17 gemini-3.5-flash-lite: HTTP 200 in 14s
-03:32:17    finish=STOP chars=14098
-03:32:17 toolscape: start
-03:35:41 toolscape: 0 competitor videos, 80 trending items
-03:36:53 gemini-3.6-flash: HTTP 200 in 72s
-03:36:53    finish=STOP chars=14888
-03:36:53 nawa: start
-03:39:02 nawa: 0 competitor videos, 21 trending items
-03:39:44 gemini-3.6-flash: HTTP 200 in 42s
-03:39:44    finish=STOP chars=16261
+03:29:44 news: start
+03:33:36 news: 0 competitor videos, 110 trending items
+03:34:17 gemini-3.6-flash: HTTP 200 in 41s
+03:34:17    finish=STOP chars=14640
+03:34:17 toolscape: start
+03:37:41 toolscape: 0 competitor videos, 60 trending items
+03:38:01 gemini-3.6-flash: HTTP 503 in 19s
+03:41:02 gemini-3.6-flash: HTTP 200 in 172s
+03:41:02    finish=STOP chars=16813
+03:41:02 nawa: start
+03:43:11 nawa: 0 competitor videos, 21 trending items
+03:43:22 gemini-3.6-flash: HTTP 503 in 11s
+03:44:15 gemini-3.6-flash: HTTP 200 in 43s
+03:44:15    finish=STOP chars=14331

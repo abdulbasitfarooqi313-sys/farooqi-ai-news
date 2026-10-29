@@ -1,307 +1,315 @@
 {
- "summary": "Today's top opportunities center on practical productivity integrations like ChatGPT's new iCloud Mail and Calendar plugins, alongside accessible open-source workflow utilities like Documind. Creators who produce clear, step-by-step setup guides for these daily utility tools will capture search traffic from beginners looking for immediate time savings.",
+ "summary": "Today's AI landscape centers on major platform UI consolidations like OpenAI merging ChatGPT Work and Chat, along with Apple launching dedicated AI tools across Creator Studio. For beginner tutorial creators, the highest leverage comes from turning confusing UI updates and corporate feature launches into practical, step-by-step workflow tutorials.",
  "topics": [
   {
-   "title": "ChatGPT iCloud Mail & Calendar Plugins Integration",
-   "why": "Users are actively discussing new official integrations that let ChatGPT interact directly with Apple Mail and Calendar.",
+   "title": "OpenAI ChatGPT Work and Personal Interface Merge",
+   "why": "OpenAI is rolling out a unified interface merging Work and Personal modes, causing user confusion over chat history and model selection.",
    "trend": 10,
    "sources": [
-    "reddit.com"
+    "reddit.com",
+    "producthunt.com"
    ]
   },
   {
-   "title": "Documind Open-Source Document Parsing",
-   "why": "A popular new open-source tool enables beginners to convert unstructured PDFs and documents into structured spreadsheets.",
+   "title": "Apple Creator Studio AI Integration in Logic Pro & Final Cut Pro",
+   "why": "Apple announced new creative AI assistants built into Final Cut Pro and Logic Pro for audio and video creators.",
    "trend": 9,
    "sources": [
-    "hnrss.org"
+    "news.google.com",
+    "RouteNote",
+    "Mashable"
    ]
   },
   {
-   "title": "AI Privacy Policy Scanner Tools",
-   "why": "A trending open-source solution automates scanning dense privacy agreements to expose data-selling practices.",
+   "title": "Anthropic Enterprise AI Spending Visibility Tools",
+   "why": "Anthropic launched new cost-tracking tools to help organizations monitor and manage API usage costs.",
    "trend": 8,
    "sources": [
-    "hnrss.org"
+    "news.google.com",
+    "TechCrunch"
    ]
   },
   {
-   "title": "Apple Creator Studio AI Upgrades",
-   "why": "Apple updated its Creator Studio with built-in AI editing and motion tools for creators.",
+   "title": "Liquid AI LFM3 Model Launch",
+   "why": "Liquid AI introduced LFM3 on ProductHunt, gaining strong developer interest for lightweight model alternatives.",
    "trend": 7,
-   "sources": [
-    "news.google.com"
-   ]
-  },
-  {
-   "title": "Claude Duet Workload Assistant",
-   "why": "Anthropic introduced new AI agent capabilities focused on daily workplace automation and assistance.",
-   "trend": 6,
-   "sources": [
-    "news.google.com"
-   ]
-  },
-  {
-   "title": "De-AI Prompting Techniques for Realism",
-   "why": "Reddit users are sharing structured styling rules to eliminate the generic glossy look from AI images.",
-   "trend": 5,
-   "sources": [
-    "reddit.com"
-   ]
-  },
-  {
-   "title": "GPT-6.1 Terra Release",
-   "why": "Newest GPT model iteration launched on ProductHunt targeting streamlined text tasks.",
-   "trend": 4,
    "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "Open Source Drawing Animator AI",
-   "why": "A lightweight free tool allows users to bring static sketches and child drawings to life instantly.",
-   "trend": 3,
+   "title": "ChatGPT for Executive Function and Task Coaching",
+   "why": "Viral community guides show users how to build structured coaching prompts for daily planning and task execution.",
+   "trend": 6,
    "sources": [
-    "hnrss.org"
+    "reddit.com",
+    "news.google.com"
    ]
   },
   {
-   "title": "Recovering Deleted Mobile AI Chats",
-   "why": "A viral diagnostic method shows how mobile cache recovers lost AI conversation logs.",
+   "title": "Agent Handshake and Agentic AI Developer Tools",
+   "why": "New tools like Agent Handshake by Fini are simplifying how autonomous AI agents communicate with each other.",
+   "trend": 5,
+   "sources": [
+    "producthunt.com",
+    "All About Circuits"
+   ]
+  },
+  {
+   "title": "Autonomous AI Research Paper Generation",
+   "why": "Discussions flared after researchers demonstrated AI selecting physics problems, solving them, and writing paper drafts in under two hours.",
+   "trend": 4,
+   "sources": [
+    "reddit.com"
+   ]
+  },
+  {
+   "title": "Privacy-Preserving AI & Uncensored Security Models",
+   "why": "Tools like Zro and CDT privacy software are trending among privacy-conscious tech users.",
+   "trend": 3,
+   "sources": [
+    "producthunt.com",
+    "news.google.com"
+   ]
+  },
+  {
+   "title": "AI Chatbot Safety and Mental Health Auditing",
+   "why": "New open auditing tools enable researchers and parents to test how AI models answer sensitive health questions.",
    "trend": 2,
    "sources": [
     "news.google.com"
    ]
   },
   {
-   "title": "ContextGem 1.0 Workspace Assistant",
-   "why": "ProductHunt launch focused on quick contextual document indexing for desktop users.",
+   "title": "Meta Waddle World AI Pet Application",
+   "why": "Meta released a consumer-facing AI companion experience called Waddle World to test conversational agent engagement.",
    "trend": 1,
    "sources": [
-    "producthunt.com"
+    "news.google.com",
+    "TechCrunch"
    ]
   }
  ],
  "packages": [
   {
-   "topic": "ChatGPT iCloud Mail & Calendar Plugins Integration",
-   "competitors": "Competitors like Skill Leap AI and The AI Advantage covered recent ChatGPT features briefly, but missed showing the full setup process for Apple ecosystem tools.",
-   "angle": "A clean 5-minute setup tutorial showing how to safely connect iCloud Mail and Calendar to ChatGPT without exposing private passwords.",
+   "topic": "OpenAI ChatGPT Work and Personal Interface Merge",
+   "competitors": "Competitors like Matt Wolfe and Kevin Stratvert covered general OpenAI updates in weekly roundups. They highlighted model switcher changes but skipped showing beginners how to safely separate private chats from team workspace history.",
+   "angle": "A practical 6-minute walkthrough showing how to navigate the merged interface, organize custom instructions, and prevent accidental data sharing.",
+   "viral": {
+    "score": 68,
+    "why": "UI changes directly impact active ChatGPT subscribers seeking immediate guidance on where their settings moved, yielding high search traffic."
+   },
+   "long": {
+    "title": "Master the New ChatGPT Layout in 6 Minutes",
+    "thumb": "New ChatGPT Unified UI",
+    "hook": "In the next six minutes, you will learn how to navigate the new unified ChatGPT layout without losing your private chat history. You will see exactly where your model settings moved and how to keep work projects separate.",
+    "outline": [
+     "Understanding the Unified ChatGPT Work and Chat Layout",
+     "Where to Find the Model Picker and Custom Instructions",
+     "How to Switch Between Personal and Workspace Contexts",
+     "Step-by-Step: Organizing Old Chats into Tagged Folders",
+     "Managing Privacy Settings to Prevent Data Sharing",
+     "One Real Downside: Missing Legacy Shortcut Keys"
+    ]
+   },
+   "shorts": [
+    {
+     "title": "ChatGPT Changed Its Layout Today",
+     "hook": "If your ChatGPT sidebar looks completely different today, do not panic.",
+     "script": "OpenAI merged personal chats and work spaces into one single menu. To find your model choices, click the top selector instead of the old sidebar toggle. You can still separate personal projects by setting up workspace tags in account settings. Make sure to turn off shared history under data controls so your personal chats stay private.",
+     "cta": "Subscribe for daily step-by-step AI tool tutorials."
+    },
+    {
+     "title": "Keep Personal Chats Private in ChatGPT",
+     "hook": "Here is how to keep your private chats safe after the latest ChatGPT update.",
+     "script": "Open your account profile in the bottom corner and select Settings. Look for Workspace Privacy Controls, which was moved into the unified profile menu. Toggle off Data Training for personal chats while leaving workspace sharing active for team items. This ensures private prompts stay private while keeping team features active.",
+     "cta": "Follow Toolscape for quick tool guides every morning."
+    }
+   ],
+   "carousel": {
+    "title": "How to Use the New ChatGPT Interface",
+    "slides": [
+     "OpenAI combined personal and work chats into one layout.",
+     "Locate the main model dropdown at the top center of your screen.",
+     "Use workspace tags to sort personal projects from team tasks.",
+     "Check your profile settings to confirm private chat data controls.",
+     "Downside: Some browser extensions need updates to work with the new UI.",
+     "Save this guide to clean up your workspace today."
+    ]
+   },
+   "posts": {
+    "x": [
+     "OpenAI just merged ChatGPT Work and Personal chats into one interface. Here is how to find your lost settings and manage chat history safely.",
+     "Struggling with the new ChatGPT layout? Check your Data Controls tab under Profile Settings to keep personal chats separated from team spaces."
+    ],
+    "facebook": "OpenAI rolled out a major update to the ChatGPT interface, combining personal chats and work spaces. If you cannot find your model options or custom instructions, open our quick step-by-step breakdown to set up your workspace cleanly today.",
+    "instagram": "ChatGPT changed its layout again! 🤖 Here is where your model selectors and workspace settings moved. Keep your personal chats separate from work folders in under 2 minutes. #ChatGPT #AITools #Productivity #TechTutorial",
+    "linkedin": "OpenAI has officially unified personal and enterprise account navigation within ChatGPT. For professionals using ChatGPT daily, managing workspace context boundaries is critical. Here is a clear guide on updating your privacy settings after the rollout."
+   },
+   "article": {
+    "title": "How to Navigate the New Unified ChatGPT Interface: A Beginner Guide",
+    "outline": [
+     "Overview of the ChatGPT Interface Redesign",
+     "Locating Model Controls and Custom Instructions",
+     "Step-by-Step Guide to Managing Workspace Privacy",
+     "Tips for Organizing Personal and Work Chat History",
+     "Known Limitations and Missing Legacy Features"
+    ]
+   }
+  },
+  {
+   "topic": "Apple Creator Studio AI Integration in Logic Pro & Final Cut Pro",
+   "competitors": "Tech news outlets covered Apple's press release focusing on high-level features. They failed to show step-by-step alternatives for non-Mac users or creators using free software tools.",
+   "angle": "A beginner comparison demonstrating Apple's new AI editing features alongside free cross-platform AI alternatives.",
    "viral": {
     "score": 58,
-    "why": "Millions of iPhone and Mac users want simple AI scheduling without paying for third-party automation software."
+    "why": "Apple feature updates attract broad creative audience search interest, but non-Mac users require cross-platform context."
    },
    "long": {
-    "title": "Connect ChatGPT to iCloud Mail & Calendar in 5 Minutes",
-    "thumb": "Connect iCloud to ChatGPT",
-    "hook": "In the next 5 minutes you will connect ChatGPT directly to your iCloud Mail and Calendar to auto-schedule your week. No complex API keys or coding required.",
+    "title": "New Apple Creator AI Features Tested for Beginners",
+    "thumb": "Apple AI Video Tools",
+    "hook": "In the next seven minutes, you will see how Apple's new AI video and audio tools work step-by-step. You will also learn about free web-based alternatives you can use on any device.",
     "outline": [
-     "Prerequisites: What you need before connecting",
-     "Locating the official iCloud plugin setting in ChatGPT",
-     "Generating a secure app-specific Apple password",
-     "Connecting iCloud Mail and testing simple search queries",
-     "Connecting iCloud Calendar to create and edit events",
-     "Important privacy limit: What data ChatGPT can and cannot access"
+     "What Was Announced in Apple Creator Studio",
+     "Step-by-Step: Testing the Audio Assistant in Logic Pro",
+     "How the New Video Features Work in Final Cut Pro",
+     "Comparing Apple AI Features to Free Web AI Editors",
+     "System Requirements and Free Trial Options",
+     "One Real Downside: Hardware Requirements for Local AI"
     ]
    },
    "shorts": [
     {
-     "title": "ChatGPT Can Now Read Your iCloud Calendar",
-     "hook": "Stop manually typing your schedule into ChatGPT.",
-     "script": "ChatGPT now has official support for iCloud Mail and Calendar plugins. Head to Settings, select Plugins, and toggle on Apple Workspace. You will need an app-specific password from appleid.apple.com to keep your main account safe. Once linked, ask ChatGPT to summarize unread emails or add meetings straight to your calendar.",
-     "cta": "Subscribe for more quick AI setup guides."
+     "title": "Apple Just Added AI to Final Cut Pro",
+     "hook": "Apple just launched new AI editing tools inside Final Cut Pro.",
+     "script": "The new update adds automatic audio balancing and smart scene detection directly into your timeline. You can highlight background noise and remove it with one click. If you do not own a Mac, free tools like CapCut and ElevenLabs offer similar features right in your browser. The main drawback is that Apple features require recent hardware.",
+     "cta": "Subscribe to Toolscape for free tool alternatives."
     },
     {
-     "title": "Schedule Meetings in 10 Seconds with ChatGPT",
-     "hook": "Here is the fastest way to book appointments using AI.",
-     "script": "Open ChatGPT, enable the iCloud plugin, and paste a messy text message from a client. Type 'Add this to my calendar for tomorrow afternoon.' ChatGPT creates the event directly in your Apple Calendar app. One quick downside: recurring events can occasionally misalign, so quickly double-check your times.",
-     "cta": "Check the full tutorial on our channel."
+     "title": "Free Alternative to Apple's AI Creator Tools",
+     "hook": "You do not need an expensive Mac to use new AI video tools.",
+     "script": "Apple just launched AI assistants for video and music editing. But if you are on Windows or a budget device, you can use free tools like Clipchamp for video cleanup and LALAL.AI for stem separation. Both work directly in your browser without hardware upgrades. They deliver similar results for zero upfront cost.",
+     "cta": "Follow for simple tech tutorials every day."
     }
    ],
    "carousel": {
-    "title": "How to Link iCloud to ChatGPT",
+    "title": "Apple Creator Studio AI Tools Explained",
     "slides": [
-     "1. Open ChatGPT Settings and tap Plugins.",
-     "2. Search for Apple iCloud Mail & Calendar.",
-     "3. Go to appleid.apple.com to create an App-Specific Password.",
-     "4. Paste the app password into ChatGPT to authenticate safely.",
-     "5. Prompt: 'Show my free time slots for this Thursday.'",
-     "6. Prompt: 'Create an event called Client Call at 3 PM.'"
+     "Apple added native AI assistance to Final Cut and Logic Pro.",
+     "Key features include automated voice isolation and smart trimming.",
+     "Requires recent Apple Silicon hardware for local processing.",
+     "Free web alternatives like Clipchamp offer similar video edits.",
+     "Downside: Heavy AI processing can drain laptop batteries fast.",
+     "Follow Toolscape for straightforward software walkthroughs."
     ]
    },
    "posts": {
     "x": [
-     "You can now connect iCloud Mail and Calendar directly inside ChatGPT. Here is the 3-step setup guide.",
-     "Tired of copy-pasting meeting invites? Link Apple Calendar to ChatGPT with app-specific passwords today."
+     "Apple added native AI tools to Final Cut Pro and Logic Pro today. Here is a clear look at what they do and the best free web alternatives.",
+     "No Mac? No problem. You can get similar AI audio and video editing results using free browser-based tools without upgrading hardware."
     ],
-    "facebook": "Connect ChatGPT directly to your Apple iCloud Mail and Calendar! Follow our 5-minute setup guide to automate your daily schedule without risking your password security.",
-    "instagram": "Automate your daily schedule by connecting ChatGPT to Apple iCloud Mail & Calendar. Swipe through for the step-by-step setup guide! #ChatGPT #Apple #Productivity #AITools",
-    "linkedin": "ChatGPT now supports direct integration with iCloud Mail and Calendar. Here is a clear workflow guide on how professionals can leverage this feature safely."
+    "facebook": "Apple released new AI features inside Final Cut Pro and Logic Pro for audio and video creators. We tested the new capabilities and compared them with free browser tools you can use on any PC or laptop.",
+    "instagram": "Apple's new creator AI tools are here! 🎥 Here is how the new Final Cut Pro features work and how to replicate them for free on Windows. #VideoEditing #Apple #AITools #ContentCreator #LogicPro",
+    "linkedin": "Apple's expansion of AI tools into professional creative software highlights the shift toward desktop AI integration. Read our breakdown of these tools and how independent creators can leverage free cross-platform alternatives."
    },
    "article": {
-    "title": "How to Integrate ChatGPT with Apple iCloud Mail and Calendar",
+    "title": "Apple Creator Studio AI Features: Step-by-Step Guide and Free Alternatives",
     "outline": [
-     "Introduction to ChatGPT iCloud Integration",
-     "Step 1: Preparing Your Apple ID Credentials",
-     "Step 2: Enabling the Plugin in ChatGPT Settings",
-     "Step 3: Automated Scheduling and Email Prompts",
-     "Privacy Best Practices and Data Limits"
+     "Summary of Apple's New Creator AI Updates",
+     "How to Use Native Audio Isolation in Logic Pro",
+     "Final Cut Pro AI Video Trimming Walkthrough",
+     "Best Free Web-Based Alternatives for PC Users",
+     "Hardware Demands and Performance Benchmarks"
     ]
    }
   },
   {
-   "topic": "Documind Open-Source Document Parsing",
-   "competitors": "Channels like Metics Media covered building custom AI agents with code, but skipped easy open-source desktop tools designed specifically for document parsing.",
-   "angle": "Show beginners how to convert scanned PDF receipts and invoices into organized Excel sheets for free without subscription fees.",
+   "topic": "Anthropic Enterprise AI Spending Visibility Tools",
+   "competitors": "TechCrunch reported on Anthropic launching cost transparency features for large enterprise clients, but missed explaining how small business users can use free API monitors to manage monthly spending.",
+   "angle": "A simple guide showing small creators how to monitor Claude API token costs and set spending caps to prevent unexpected bills.",
    "viral": {
     "score": 48,
-    "why": "Data entry is a major pain point, and free open-source software always attracts strong organic search traffic."
+    "why": "Targeted at creators using API credits who need practical cost-control steps, though smaller than general consumer chat updates."
    },
    "long": {
-    "title": "Turn Any PDF into an Excel Sheet with Documind (Free)",
-    "thumb": "PDF to Excel AI Tool",
-    "hook": "In the next 6 minutes you will convert a stack of messy PDF receipts into a clean Excel spreadsheet using a free open-source tool. You will never spend hours on manual data entry again.",
+    "title": "Stop Overpaying for AI: Track Your Claude API Costs",
+    "thumb": "Control AI Costs",
+    "hook": "In the next five minutes, you will set up spending limits and real-time alerts for your Claude AI API account. You will avoid unexpected monthly bills using free built-in dashboard settings.",
     "outline": [
-     "Why traditional PDF converters fail on complex layouts",
-     "Installing and launching Documind in your browser",
-     "Uploading sample receipts, invoices, and bank statements",
-     "Defining custom fields like Date, Total, and Vendor",
-     "Exporting clean CSV and Excel files in one click",
-     "One downside: Handwriting recognition can be inaccurate on smudged documents"
+     "Why Tracking Token Usage Matters for Small Teams",
+     "Setting Up Usage Caps in the Anthropic Console",
+     "Step-by-Step: Enabling Email Cost Alerts",
+     "Understanding Input vs Output Token Costs",
+     "Free Dashboard Tools to Monitor Daily API Spend",
+     "One Real Downside: Delayed Alert Processing Times"
     ]
    },
    "shorts": [
     {
-     "title": "Extract PDF Data Free with AI",
-     "hook": "Still manually typing data from PDF invoices into Excel?",
-     "script": "Meet Documind, an open-source tool that reads documents and extracts clean structured data automatically. Upload your document, pick the fields you want like invoice total or date, and let the AI build your table. You can export directly to CSV or JSON in seconds without paying a monthly SaaS fee.",
-     "cta": "Save this video for your next project."
+     "title": "How to Stop Surprise AI Bills",
+     "hook": "Stop letting AI API costs drain your credit card on auto-pilot.",
+     "script": "Anthropic released new spend tracking tools today. You can set strict monthly hard caps directly inside your developer dashboard. Navigate to Account Settings, click Billing, and set your Hard Limit to your exact monthly budget. Once reached, API calls pause automatically so you never get a surprise bill.",
+     "cta": "Subscribe to Toolscape for more cost-saving AI tips."
     },
     {
-     "title": "Stop Copy-Pasting PDF Files Today",
-     "hook": "This free tool converts scanned receipts to spreadsheets instantly.",
-     "script": "Documind uses open-source models to turn unstructured files into clean database rows. Just drop in your files, tag what you need extracted, and download your spreadsheet. It runs locally or on a free tier, keeping your financial documents off public servers.",
-     "cta": "Follow for more free AI tools."
+     "title": "Track Your Claude API Usage for Free",
+     "hook": "Here is how to monitor your daily AI spending in 60 seconds.",
+     "script": "Log into your Anthropic console and open the Usage tab. You can view input and output token breakdowns by project key. Set an automated notification threshold at 80 percent of your budget. This gives you time to optimize your prompts before hitting your account limit.",
+     "cta": "Follow for simple, practical AI tutorials."
     }
    ],
    "carousel": {
-    "title": "Extract PDF Data to Excel for Free",
+    "title": "How to Limit Your Anthropic API Costs",
     "slides": [
-     "1. Open Documind in your browser.",
-     "2. Drag and drop your scanned PDF or receipt.",
-     "3. Select required schema (Amount, Date, Tax).",
-     "4. Click Run Extraction to parse the document.",
-     "5. Review extracted fields on screen.",
-     "6. Export instantly to CSV or Excel."
+     "API bills can grow quickly if usage is unmonitored.",
+     "Log into the Anthropic Console billing panel.",
+     "Set a monthly hard limit to block automatic overages.",
+     "Configure email threshold alerts at 80% usage.",
+     "Downside: Notifications can take up to an hour to trigger.",
+     "Save this checklist to protect your monthly budget."
     ]
    },
    "posts": {
     "x": [
-     "Stop copying table data from PDFs manually. Documind is an open-source tool that parses PDFs into Excel in seconds.",
-     "Need clean structured data from messy documents? Here is how to use open-source AI tool Documind for free."
+     "Want to avoid surprise AI bills? Here is how to set hard monthly spend limits and real-time usage alerts in your Anthropic account.",
+     "Anthropic launched spend tracking tools. Set your monthly API spending cap in 3 clicks to keep your software budget under control."
     ],
-    "facebook": "Manual data entry from PDFs is officially over. Learn how to use Documind, an open-source tool that extracts custom fields from invoices and turns them into clean spreadsheets.",
-    "instagram": "Convert messy PDFs into structured Excel sheets in seconds using free open-source AI tool Documind! Tap link in bio for full walkthrough. #AITools #Productivity #Excel #OpenSource",
-    "linkedin": "Documind offers an open-source solution for parsing complex PDF documents into structured datasets. Here is how small business owners can automate administrative paperwork."
+    "facebook": "Managing API token spend can be tricky for small businesses using Claude. Follow this quick tutorial to set hard limits and automatic email alerts inside your developer dashboard today.",
+    "instagram": "Never get a surprise AI bill again! 💰 Here is how to set monthly spending caps on your Claude API account in under 2 minutes. #AITools #Budgeting #ClaudeAI #TechTutorial #SmallBusiness",
+    "linkedin": "Cost predictability remains a core challenge for businesses deploying LLM APIs. Anthropic's new spend tracking capabilities allow teams to enforce hard caps and prevent budget overruns. Here is how to configure spending limits step-by-step."
    },
    "article": {
-    "title": "How to Use Documind to Convert Unstructured PDFs into Spreadsheets",
+    "title": "How to Set Up Budget Caps and Spend Alerts for Anthropic Claude",
     "outline": [
-     "The Challenge of Unstructured PDF Data",
-     "What is Documind and How Does It Work?",
-     "Step-by-Step Guide to Extracting Custom Data Fields",
-     "Exporting to CSV, Excel, and JSON",
-     "Comparing Open-Source Tools to Paid Alternatives"
-    ]
-   }
-  },
-  {
-   "topic": "AI Privacy Policy Scanner Tools",
-   "competitors": "Tech news outlets reported on privacy tools generally, but no creator has published a clear end-user tutorial showing how to test websites step-by-step.",
-   "angle": "A practical 4-minute demonstration of a browser tool that scans complex terms of service and highlights data-selling clauses instantly.",
-   "viral": {
-    "score": 42,
-    "why": "Online privacy concerns are growing, but users want instant highlights rather than reading 20-page legal documents."
-   },
-   "long": {
-    "title": "Expose Websites That Sell Your Data (Free AI Tool)",
-    "thumb": "Find Hidden Privacy Traps",
-    "hook": "In the next 4 minutes you will learn how to scan any website's legal terms in 3 seconds to see exactly who sells your personal information. You will never have to read a 20-page privacy policy again.",
-    "outline": [
-     "The problem with modern terms of service agreements",
-     "Installing the privacy scanner extension or web tool",
-     "Testing the tool on popular consumer websites",
-     "Understanding the red flag report: Data brokers and tracking",
-     "Setting custom alerts for sensitive data permissions",
-     "Real downside: It can flag standard analytics cookies as moderate risks"
-    ]
-   },
-   "shorts": [
-    {
-     "title": "Read Any Privacy Policy in 3 Seconds",
-     "hook": "Did you know most websites sell your browser history?",
-     "script": "Nobody reads privacy policies because they are 30 pages long. This free AI tool scans legal pages and summarizes the dangerous parts in bullet points. It instantly highlights whether a company sells your phone number, tracks your location, or shares data with third parties.",
-     "cta": "Subscribe to protect your personal privacy online."
-    },
-    {
-     "title": "Spot Data Selling Traps Instantly",
-     "hook": "This simple tool finds hidden traps in terms of service.",
-     "script": "Before clicking 'I Agree' on your next sign-up, paste the privacy link into this AI reader tool. Within seconds, it scores the document from green to red and lists every data broker attached to the site. It is completely free and requires no account.",
-     "cta": "Check the channel link for the full guide."
-    }
-   ],
-   "carousel": {
-    "title": "How to Scan Privacy Policies in 3 Seconds",
-    "slides": [
-     "1. Copy any website's privacy policy URL.",
-     "2. Paste it into the free AI Privacy Reader.",
-     "3. Review the simplified Privacy Score.",
-     "4. Check red flag highlights for data sales.",
-     "5. See which third parties receive your email.",
-     "6. Make informed choices before creating accounts."
-    ]
-   },
-   "posts": {
-    "x": [
-     "Stop clicking 'I Agree' without looking. This free AI tool scans privacy policies and shows you who sells your data.",
-     "Uncover hidden terms of service clauses in 3 seconds with this new open-source privacy scanner tool."
-    ],
-    "facebook": "Protect your digital privacy! Learn how to use a free AI scanner tool that reads complex website privacy policies and alerts you if your personal data is being sold.",
-    "instagram": "Never read a long terms of service page again! This AI tool scans privacy policies in 3 seconds and highlights hidden traps. #Privacy #AITools #TechTips #CyberSecurity",
-    "linkedin": "Consumer privacy awareness is rising. Here is a practical workflow utilizing AI tools to evaluate vendor terms of service agreements quickly."
-   },
-   "article": {
-    "title": "How to Use AI Scanner Tools to Read Privacy Policies Instantly",
-    "outline": [
-     "The Problem with Lengthy Terms of Service",
-     "How AI Privacy Analyzers Evaluate Legal Text",
-     "Step-by-Step Usage Guide on Popular Sites",
-     "Key Red Flags to Look Out For",
-     "Limitations of Automated Legal Analysis"
+     "The Importance of API Cost Governance",
+     "Step-by-Step: Configuring Monthly Spend Limits",
+     "Setting Up Automated Threshold Email Alerts",
+     "Analyzing Input and Output Token Usage",
+     "Best Practices for Prompt Optimization to Lower Costs"
     ]
    }
   }
  ],
  "hook_patterns": [
   {
-   "pattern": "How I [Achieved Result] with [Tool] - Full Guide",
-   "example": "How I Automated My Daily Schedule with ChatGPT - Full Guide"
+   "pattern": "In the next [X] minutes you will [achieve specific result]",
+   "example": "In the next 6 minutes you will organize your entire ChatGPT sidebar and secure your private data."
   },
   {
-   "pattern": "[Tool Name] Got a Major Upgrade - These Features Are Coming",
-   "example": "Apple Creator Studio Got a Major Upgrade - New AI Tools Added"
+   "pattern": "Stop [doing task inefficiently] — do this instead",
+   "example": "Stop guessing your monthly AI costs — set up automatic spend caps in 3 clicks instead."
   },
   {
-   "pattern": "Stop [Doing Hard Task] Yourself",
-   "example": "Stop Formatting PDF Receipts Yourself"
+   "pattern": "This free tool does what a $[X] app does",
+   "example": "This free web tool gives you the same video audio cleanup as a $300 editing suite."
   },
   {
-   "pattern": "The Ultimate Beginner's Guide to [Tool Name]",
-   "example": "The Ultimate Beginner's Guide to Documind"
+   "pattern": "If your [tool] looks different today, here is why",
+   "example": "If your ChatGPT screen changed layout today, here is where your settings moved."
   },
   {
-   "pattern": "Build Your First [Project] in [Time] (No Coding)",
-   "example": "Build Your First Document Parser in 10 Minutes (No Coding)"
+   "pattern": "[Tool] just got a major update: [number] features tested",
+   "example": "Final Cut Pro just got a major AI update: 3 key features tested step-by-step."
   }
  ],
  "_competitors": [],
