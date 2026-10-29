@@ -338,6 +338,7 @@ footer .flogo img{width:64px;height:64px;border-radius:50%;box-shadow:0 0 0 3px 
         <h5>ہم سے جڑیں</h5>
         <ul>
           <li><a href='https://www.youtube.com/@farooqiainews' rel='noopener' target='_blank'>یوٹیوب: @farooqiainews</a></li>
+          <li><a href='https://www.facebook.com/farooqiainews' rel='noopener' target='_blank'>فیس بک: فاروقی اے آئی نیوز</a></li>
           <li><a expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot;'>آر ایس ایس فیڈ</a></li>
         </ul>
       </div>
@@ -351,7 +352,7 @@ footer .flogo img{width:64px;height:64px;border-radius:50%;box-shadow:0 0 0 3px 
 //<![CDATA[
 (function(){
   /* ── اپنے سوشل لنک یہاں لکھیں (خالی ہوں تو بٹن چھپ جاتا ہے) ── */
-  var SOCIAL={fb:'', x:'', wa:''};
+  var SOCIAL={fb:'https://www.facebook.com/farooqiainews', x:'', wa:''};
   [['fb','fb-link'],['x','x-link'],['wa','wa-link']].forEach(function(p){var a=document.getElementById(p[1]);if(!a)return;if(SOCIAL[p[0]])a.href=SOCIAL[p[0]];else a.style.display='none';});
   try{document.getElementById('today').textContent=new Date().toLocaleDateString('ur-PK',{weekday:'long',day:'numeric',month:'long',year:'numeric'});}catch(e){}
   try{document.getElementById('yr').textContent=new Date().getFullYear();}catch(e){}
