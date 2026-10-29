@@ -36,13 +36,35 @@ EDITIONS = [("en-US", "US", "en"), ("en-GB", "GB", "en"), ("en-IN", "IN", "en"),
 FEEDS = [GN.format(hl=h, gl=g, lang=l) for h, g, l in EDITIONS] + [
     "https://news.google.com/rss/search?q=AI+China+OR+Japan+OR+Korea+OR+Europe+OR+Saudi+when:2d&hl=en-US&gl=US&ceid=US:en"]
 
+# مستند ذرائع (مالک کی ہدایت): صرف معروف خبر ایجنسیاں، بڑے اخبار/چینل، معتبر ٹیک صحافت اور کمپنیوں کے سرکاری بلاگ۔
+TRUSTED = ["reuters", "associated press", "ap news", "afp", "bbc", "bloomberg", "financial times", "the guardian", "cnbc", "cnn",
+           "new york times", "wall street journal", "washington post", "the economist", "axios", "politico", "fortune",
+           "business insider", "the verge", "techcrunch", "wired", "ars technica", "venturebeat", "mit technology review",
+           "mit news", "engadget", "zdnet", "the register", "nature.com", "ieee spectrum", "al jazeera", "dawn",
+           "express tribune", "the news international", "geo news", "business recorder", "hindustan times", "the hindu",
+           "times of india", "ndtv", "economic times", "indian express", "livemint", "mint", "south china morning post",
+           "nikkei", "japan times", "korea herald", "korea joongang", "yonhap", "straits times", "cna", "channel newsasia",
+           "abc news", "sydney morning herald", "cbc", "globe and mail", "gulf news", "arab news", "khaleej times",
+           "the national", "saudi gazette", "deutsche welle", "dw", "france 24", "euronews", "le monde", "techradar",
+           "the information", "semafor", "artificialintelligence-news", "openai", "google", "deepmind", "anthropic",
+           "microsoft", "nvidia", "ibm", "samsung", "alibaba", "baidu", "tencent"]
+MAX_AGE_H = 36                     # صرف تازہ (پچھلے ڈیڑھ دن کی) خبریں
+
+
+def trusted(src: str) -> bool:
+    s_ = (src or "").lower()
+    return any(re.search(rf"(^|\W){re.escape(t)}(\W|$)", s_) for t in TRUSTED)
+
+
 SYSTEM = """آپ «فاروقی اے آئی نیوز» کے اردو نیوز پروڈیوسر ہیں۔ پروگرام: «اے آئی فلیش» — یوٹیوب شارٹ میں تیز رفتار سرخیاں، صرف سرخی، کوئی تفصیل نہیں۔
 دی گئی خبروں میں سے 18 مختلف خبریں چنیں جن کا **مرکز مصنوعی ذہانت (AI)** ہو — جس خبر میں AI صرف ضمنی ذکر ہو (عام کاروبار، جائیداد، اسٹاک مارکیٹ، جرائم) وہ نہیں — جتنے زیادہ مختلف ملک ہو سکیں (امریکہ، چین، برطانیہ، یورپ، بھارت، پاکستان، خلیج، جاپان، کوریا، افریقہ…)؛ ایک ہی ملک کی تین سے زیادہ نہیں۔
 سختی سے: صرف دی گئی خبروں کے حقائق؛ کوئی عدد، نام یا دعویٰ اپنی طرف سے نہیں۔ ایک واقعے کی دو سرخیاں نہیں۔ سیاسی رائے، سنسنی اور سرمایہ کاری کا مشورہ نہیں۔
+مستند: صرف تصدیق شدہ واقعات چنیں — افواہ، «ذرائع کے مطابق» والی غیر مصدقہ بات، رائے/کالم، اشتہاری یا تشہیری پریس ریلیز، اور تجزیاتی قیاس آرائی والی خبریں نہیں۔ سب سے تازہ پہلے۔
 سرخی: خبر والا مکمل جملہ، 7 تا 12 الفاظ، سادہ اردو؛ انگریزی نام اردو رسم الخط میں (OpenAI = اوپن اے آئی، Google = گوگل، Nvidia = این ویڈیا)۔ کوئی انگریزی حرف، ایموجی، بریکٹ نہیں۔
 صرف JSON:
 {"items": [{"h": "سرخی", "country": "ملک کا نام اردو میں (مثلاً جاپان، برطانیہ، عالمی)", "photo_query": "Pexels تصویر کی تلاش، انگریزی 2 تا 4 الفاظ (موضوع کا منظر؛ کسی شخص یا برانڈ کا نام نہیں)",
-            "company": "مرکزی کمپنی کا انگریزی نام یا خالی", "domain": "سرکاری ڈومین یا خالی", "n": "فہرست میں خبر کا نمبر"}],
+            "company": "مرکزی کمپنی کا انگریزی نام یا خالی", "domain": "سرکاری ڈومین یا خالی", "n": "فہرست میں خبر کا نمبر",
+            "source_ur": "ماخذ کا نام اردو رسم الخط میں (مثلاً رائٹرز، بی بی سی، ڈان، ٹیک کرنچ)"}],
  "open_sub": "آغاز کی ذیلی سطر، 3 تا 6 الفاظ (مثلاً «دنیا بھر سے اٹھارہ خبریں»)",
  "youtube_title": "شارٹ کا عنوان (زیادہ سے زیادہ 80 حروف، اردو)", "summary": "تفصیل کا 1 تا 2 جملے", "tags": ["10 تا 15 ٹیگ اردو/انگریزی"]}"""
 
@@ -191,7 +213,7 @@ def build(d: dict, tmp: Path) -> tuple[Path, Path]:
           f"[1]volume=0.22,afade=t=in:d=0.5,afade=t=out:st={dur - 2:.2f}:d=2[b];"
           "[0][b]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5[a]",
           "-map", "[a]", "-t", f"{dur:.2f}", "-ar", "44100", "-ac", "2", "-c:a", "pcm_s16le", str(audio))
-    data = {"items": [{k: it.get(k) for k in ("h", "country", "t0", "t1")} | {"photo": it.get("_photo"), "logo": it.get("_logo")}
+    data = {"items": [{k: it.get(k) for k in ("h", "country", "t0", "t1", "source_ur")} | {"photo": it.get("_photo"), "logo": it.get("_logo")}
                       for it in d["items"]],
             "open_end": round(open_end, 2), "open_sub": d.get("open_sub") or f"دنیا بھر سے {n} خبریں",
             "open_photo": d["items"][0].get("_photo"), "end_t": round(end_t, 2), "dur": round(dur, 2)}
@@ -228,7 +250,9 @@ def build(d: dict, tmp: Path) -> tuple[Path, Path]:
 def make(sample: bool = False, feedback: str | None = None) -> Path:
     if os.environ.get("FLASH_TTS", "gemini") == "gemini":
         B.tts_guard(TTS_NEED, "اے آئی فلیش")
-    items = B.fetch(max_age_h=48, feeds=FEEDS, per_feed=30)
+    allitems = B.fetch(max_age_h=MAX_AGE_H, feeds=FEEDS, per_feed=40)
+    items = [it for it in allitems if trusted(it.get("source", ""))]
+    print(f"مستند ذرائع: {len(items)} / {len(allitems)}")
     if len(items) < 30:
         raise RuntimeError(f"کافی خبریں نہیں ملیں ({len(items)})")
     d = script(items, feedback)
@@ -252,6 +276,7 @@ def make(sample: bool = False, feedback: str | None = None) -> Path:
         n = len(d["items"])
         sd = {"youtube_title": (d.get("youtube_title") or f"اے آئی فلیش: دنیا بھر سے {n} خبریں")[:90] + " #shorts",
               "youtube_description": (d.get("summary", "") + "\n\n" + "\n".join(f"{i + 1}. {it['h']}" for i, it in enumerate(d["items"]))
+                                      + "\n\n🔗 ماخذ:\n" + "\n".join(f"{i + 1}. {it.get('source', '')} — {it.get('link', '')}" for i, it in enumerate(d["items"]) if it.get("link"))
                                       + "\n\n🎬 Photos: Pexels / Pixabay\nآواز: اے آئی\n\n#shorts #اے_آئی #AINews #فاروقی_اے_آئی_نیوز")[:4900],
               "tags": list(dict.fromkeys((d.get("tags") or []) + ["اے آئی فلیش", "AI News Urdu", "فاروقی اے آئی نیوز", "shorts"]))}
         key = B._today() + "-f"

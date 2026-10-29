@@ -21,6 +21,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#05070f}
 .tx{position:absolute;right:42px;top:44px;width:600px;direction:rtl;text-align:right;font-family:NQ;font-size:70px;line-height:1.75;color:#0a1550;opacity:0;-webkit-text-stroke:.8px #0a1550}
 .gl{position:absolute;background:rgba(226,184,79,.8)}
 .ctry{position:absolute;right:0;top:556px;height:78px;padding:0 36px;background:#0a1550;color:#ffe39a;border-left:8px solid #e2b84f;font-family:NQ;font-size:46px;line-height:1.55;direction:rtl;opacity:0;white-space:nowrap}
+.src{position:absolute;right:0;font-family:NQ;font-size:44px;line-height:1.6;color:#ffe39a;background:#0a1550;border-left:6px solid #e2b84f;padding:0 26px 4px;direction:rtl;opacity:0;white-space:nowrap}
 .co{position:absolute;left:40px;top:1280px;width:150px;height:150px;border-radius:26px;background:#fff center/72% no-repeat;box-shadow:0 14px 40px rgba(0,0,0,.5);opacity:0}
 /* bottom band */
 #bot{position:absolute;left:0;right:0;bottom:0;height:240px;background:linear-gradient(180deg,rgba(10,21,80,0),#0a1550 50%);}
@@ -58,7 +59,8 @@ const U=n=>String(n).padStart(2,'0').replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d])
 $('items').innerHTML=NF.items.map((it,i)=>`<div class="it" id="it${i}"><div class="ph" style="background-image:url('${it.photo||''}')"></div><div class="dim"></div>
  ${it.country?`<div class="ctry">${esc(it.country)}</div>`:''}
  <div class="box"><div class="gl" style="right:640px;top:120px;width:420px;height:3px;opacity:0"></div><div class="gl" style="right:200px;top:-120px;width:3px;height:780px;opacity:0"></div>
- <div class="blk b0"></div><div class="blk b1"></div><div class="blk b2"></div><div class="tx">${esc(it.h)}</div></div>
+ <div class="blk b0"></div><div class="blk b1"></div><div class="blk b2"></div><div class="tx">${esc(it.h)}</div>
+ ${it.source_ur?`<div class="src">ماخذ: ${esc(it.source_ur)}</div>`:''}</div>
  ${it.logo?`<div class="co" style="background-image:url('${it.logo}')"></div>`:''}</div>`).join('');
 if(NF.open_photo) $('openph').style.backgroundImage=`url('${NF.open_photo}')`;
 $('opens').textContent=NF.open_sub||'';
@@ -80,6 +82,7 @@ function render(t){
   bs[0].style.cssText=`right:0;top:0;width:${640*ease(k/0.25)}px;height:${h*0.34}px`;
   bs[1].style.cssText=`right:0;top:${h*0.33}px;width:${640*ease((k-0.08)/0.25)}px;height:${h*0.35}px`;
   bs[2].style.cssText=`right:0;top:${h*0.67}px;width:${640*ease((k-0.16)/0.25)}px;height:${h*0.33}px`;
+  const sr=e.querySelector('.src'); if(sr){sr.style.top=(h+18)+'px';sr.style.opacity=ease((k-0.6)/0.3)}
   tx.style.opacity=ease((k-0.3)/0.25); tx.style.transform=`translateX(${(1-ease((k-0.3)/0.25))*40}px)`;
   e.querySelectorAll('.gl').forEach(g=>g.style.opacity=ease((k-0.2)/0.3)*0.8);
   const c=e.querySelector('.ctry'); if(c){c.style.opacity=ease((k-0.35)/0.25);c.style.transform=`translateX(${(1-ease((k-0.35)/0.25))*120}px)`}
