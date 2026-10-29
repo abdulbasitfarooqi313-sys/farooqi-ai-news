@@ -280,6 +280,13 @@ def _speak(texts: list[str], voice: str, tmp: Path, tag: str) -> list[Path]:
             part = r.json()["candidates"][0]["content"]["parts"][0]["inlineData"]
         except Exception:
             LOG.append(f"TTS {voice} بغیر آواز: {r.text[:300]}"); print(LOG[-1])
+            if not getattr(call, "_retried", False) and '"OTHER"' in r.text:     # جیمنائی کا عارضی خالی جواب — ایک بار دوبارہ
+                call._retried = True
+                time.sleep(8)
+                try:
+                    return call(text, model)
+                finally:
+                    call._retried = False
             return None
         m = re.search(r"rate=(\d+)", part.get("mimeType", ""))
         return b64.b64decode(part["data"]), int(m.group(1)) if m else 24000

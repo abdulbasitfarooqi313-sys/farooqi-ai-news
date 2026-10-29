@@ -27,7 +27,7 @@ from . import bulletin as B
 from .base import generate_json, read_json, write_json, send_text
 
 FLASH_DAYS = {6, 1, 3}             # اتوار، منگل، جمعرات (پیر/بدھ/ہفتہ = بلیٹن، جمعہ = پوڈکاسٹ) — مالک کی منظور شدہ تقسیم
-TTS_NEED = 4                       # آغاز + 2 بلاک + اختتام
+TTS_NEED = 5                       # 20 متن، 6 تک ایک درخواست میں
 FPS = 25
 MIN_N, MAX_N = 15, 20
 GN = "https://news.google.com/rss/search?q=%22artificial+intelligence%22+OR+AI+when:2d&hl={hl}&gl={gl}&ceid={gl}:{lang}"
@@ -150,27 +150,20 @@ def _edge(texts: list[str], tmp: Path) -> list[Path]:
 
 
 def voices(texts: list[str], tmp: Path) -> list[Path]:
+    """جیمنائی: بلیٹن والا آزمودہ طریقہ — ہر سرخی الگ متن، _speak خود 6 تک ایک درخواست میں جوڑ کر کاٹتا ہے۔
+    جیمنائی ناکام ہو (کوٹا یا خالی جواب) تو مائیکروسافٹ کی آواز — تاکہ فلیش رکے نہیں (ٹیلیگرام پر اطلاع)۔"""
     if os.environ.get("FLASH_TTS", "gemini") == "edge":
         return _edge(texts, tmp)
-    # جیمنائی: 10 سرخیاں ایک درخواست میں، پھر کاٹ کر
-    from .base import _split, SplitError
-    head, rest, tail = texts[0], texts[1:-1], texts[-1]
-    blocks = [rest[i:i + 10] for i in range(0, len(rest), 10)]
-    wavs = B._speak([head] + ["\n\n".join(b) for b in blocks] + [tail], B.ANCHOR_VOICE, tmp, "fl")
-    out = [wavs[0]]
-    for j, (b, w) in enumerate(zip(blocks, wavs[1:-1])):
+    try:
+        return B._speak(texts, B.ANCHOR_VOICE, tmp, "fl")
+    except Exception as e:
+        B.LOG.append(f"فلیش: جیمنائی آواز نہ بنی ({str(e)[:120]}) — مائیکروسافٹ کی آواز")
+        print(B.LOG[-1])
         try:
-            out += _split(w, b, tmp, f"fb{j}")
-        except SplitError:
-            from .base import _cut
-            tot = B._dur(w)
-            wts = [len(x) + 12 for x in b]
-            cuts, acc = [], 0
-            for x in wts[:-1]:
-                acc += x
-                cuts.append(tot * acc / sum(wts))
-            out += _cut(w, cuts, tot, len(b), tmp, f"fb{j}")
-    return out + [wavs[-1]]
+            send_text(B.news_chat(), "ℹ️ آج کی اے آئی فلیش میں جیمنائی کی آواز نہ بن سکی، اس لیے مائیکروسافٹ کی اردو آواز لگائی گئی ہے۔", html=False)
+        except Exception:
+            pass
+        return _edge(texts, tmp)
 
 
 def build(d: dict, tmp: Path) -> tuple[Path, Path]:
