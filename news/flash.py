@@ -2,7 +2,7 @@
 
 انداز (مالک کا نمونہ): اوپر سرخ تیر والی پٹی «تازہ خبر ۰۱»، پوری اسکرین پر خبر کے موضوع کی تصویر (Pexels — مفت،
 کمرشل اجازت)، بیچ میں پیلے خانے میں اردو سرخی (ٹکڑوں میں بنتا خانہ)، ملک کا نام، کمپنی کا لوگو؛ آخر میں «دیکھنے کا شکریہ»۔
-انگریزی میں کچھ نہیں لکھا جاتا۔ دن: جن دنوں بلیٹن نہیں (اتوار، منگل، جمعرات، جمعہ)۔
+انگریزی میں کچھ نہیں لکھا جاتا۔ دن: اتوار، منگل، جمعرات (شام 5 بجے، ✅ کے بعد)۔
 
 آواز: FLASH_TTS=gemini (طے شدہ) یا edge (مائیکروسافٹ کی مفت اردو آواز — نمونے کے لیے)۔
 python -m news.flash            → آج کی فلیش (اگر آج کا دن ہو اور نہ بنی ہو)
@@ -26,7 +26,8 @@ import requests
 from . import bulletin as B
 from .base import generate_json, read_json, write_json, send_text
 
-FLASH_DAYS = {6, 1, 3, 4}          # اتوار، منگل، جمعرات، جمعہ (پیر/بدھ/ہفتہ = بلیٹن)
+FLASH_DAYS = {6, 1, 3}             # اتوار، منگل، جمعرات (پیر/بدھ/ہفتہ = بلیٹن، جمعہ = پوڈکاسٹ) — مالک کی منظور شدہ تقسیم
+TTS_NEED = 4                       # آغاز + 2 بلاک + اختتام
 FPS = 25
 MIN_N, MAX_N = 15, 20
 GN = "https://news.google.com/rss/search?q=%22artificial+intelligence%22+OR+AI+when:2d&hl={hl}&gl={gl}&ceid={gl}:{lang}"
@@ -206,6 +207,8 @@ def build(d: dict, tmp: Path) -> tuple[Path, Path]:
 
 
 def make(sample: bool = False, feedback: str | None = None) -> Path:
+    if os.environ.get("FLASH_TTS", "gemini") == "gemini":
+        B.tts_guard(TTS_NEED, "اے آئی فلیش")
     items = B.fetch(max_age_h=48, feeds=FEEDS, per_feed=30)
     if len(items) < 30:
         raise RuntimeError(f"کافی خبریں نہیں ملیں ({len(items)})")
@@ -233,10 +236,11 @@ def make(sample: bool = False, feedback: str | None = None) -> Path:
               "tags": list(dict.fromkeys((d.get("tags") or []) + ["اے آئی فلیش", "AI News Urdu", "فاروقی اے آئی نیوز", "shorts"]))}
         key = B._today() + "-f"
         d["stories"] = [{"headline": it["h"]} for it in d["items"]]
-        vmid, mids = B.deliver(final, B.ROOT / "flash_thumb.jpg", sd, d, key=key, label=f"اے آئی فلیش — {n} سرخیاں")
+        vmid, mids = B.deliver(final, B.ROOT / "flash_thumb.jpg", sd, d, key=key, label=f"اے آئی فلیش — {n} سرخیاں", size=(1080, 1920))
         ytinfo = B._yt_upload(final, None, sd)
     st = read_json(B.STATE) if B.STATE.exists() else {}
     st.setdefault("days", {})[key] = {"status": "pending", "vmid": vmid, "mids": mids, "kind": "flash", **ytinfo}
+    st.pop("redo_f", None)
     st["days"] = dict(sorted(st["days"].items())[-60:])
     write_json(B.STATE, st)
     return final
@@ -244,6 +248,10 @@ def make(sample: bool = False, feedback: str | None = None) -> Path:
 
 def tick(force: bool = False) -> None:
     st = read_json(B.STATE) if B.STATE.exists() else {}
+    redo = st.get("redo_f")
+    if redo:
+        make(feedback=redo.get("feedback") if isinstance(redo, dict) else None)
+        return
     if not force and dt.datetime.now(B.TZ).weekday() not in FLASH_DAYS:
         print("آج فلیش کا دن نہیں (بلیٹن والا دن)")
         return

@@ -198,6 +198,36 @@ def script(items: list[dict], feedback: str | None = None) -> dict:
 
 # ---------------- آواز ----------------
 
+TTS_LIMIT, TTS_RESERVE = 10, 2          # جیمنائی آواز: روزانہ 10 درخواستیں (بحرالکاہل کے وقت آدھی رات = 10/11 بجے سعودی پر نئی)
+TTS_LEDGER = ROOT / "state" / "tts_usage.json"
+
+
+def _pt_day() -> str:
+    from zoneinfo import ZoneInfo
+    return dt.datetime.now(ZoneInfo("America/Los_Angeles")).strftime("%Y-%m-%d")
+
+
+def tts_used() -> int:
+    led = read_json(TTS_LEDGER) if TTS_LEDGER.exists() else {}
+    return int(led.get(_pt_day(), 0))
+
+
+def tts_note(n: int = 1) -> None:
+    led = read_json(TTS_LEDGER) if TTS_LEDGER.exists() else {}
+    day = _pt_day()
+    led = {k: v for k, v in led.items() if k >= (dt.date.fromisoformat(day) - dt.timedelta(days=7)).isoformat()}
+    led[day] = int(led.get(day, 0)) + n
+    write_json(TTS_LEDGER, led)
+
+
+def tts_guard(need: int, what: str) -> None:
+    """حفاظتی تالا: کام شروع کرنے سے پہلے — بچت 2 سے کم ہونے کا خطرہ ہو تو نہیں چلے گا"""
+    used = tts_used()
+    if used + need > TTS_LIMIT - TTS_RESERVE:
+        raise TTSQuota(f"آج آواز کا کوٹا کم ہے ({used}/{TTS_LIMIT} استعمال ہو چکا، {what} کو تقریباً {need} چاہیے) — "
+                       "صبح 10–11 بجے کوٹا نیا ہونے کے بعد بنے گا")
+
+
 def _speak(texts: list[str], voice: str, tmp: Path, tag: str) -> list[Path]:
     """سب ٹکڑے ایک Gemini کال میں (کوٹہ بچانے کے لیے) — صرف متن؛ پھر وقفوں/Gemini اوقات سے کاٹ کر الگ۔
     کاٹنا ممکن نہ ہو تو ہر ٹکڑا الگ کال میں۔"""
@@ -213,6 +243,7 @@ def _speak(texts: list[str], voice: str, tmp: Path, tag: str) -> list[Path]:
                                   "contents": [{"parts": [{"text": prompt}]}],
                                   "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {
                                       "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}})
+            tts_note()
             if r.status_code == 429:
                 if re.search(r"PerDay|per_day|per day|RequestsPerDay|limit: 0", r.text, flags=re.I):
                     LOG.append(f"TTS {voice} 429: {r.text[:400]}")
@@ -781,7 +812,8 @@ def news_chat():
     return ns.get("chat") or os.environ.get("TELEGRAM_CHAT_ID")
 
 
-def deliver(video: Path, thumb: Path, sd: dict, d: dict, key: str | None = None, label: str = "آج کا بلیٹن") -> list:
+def deliver(video: Path, thumb: Path, sd: dict, d: dict, key: str | None = None, label: str = "آج کا بلیٹن",
+            size: tuple = (1920, 1080)) -> list:
     day = key or _today()
     so = d.get("social") or {}
     mins = _dur(video)
@@ -796,7 +828,7 @@ def deliver(video: Path, thumb: Path, sd: dict, d: dict, key: str | None = None,
                  f"تھمب نیل، اور یوٹیوب / سوشل میڈیا کا پورا پیکیج۔ ویڈیو پسند ہے تو ✅، دوبارہ بنوانی ہو تو ❌ "
                  f"(یا ویڈیو پر Reply کر کے لکھیں کیا بدلنا ہے)۔\n\n⏰ <b>اپلوڈ کا وقت: {_upload_time()}</b>")
     vmid = send_video(chat, video, caption=f"📺 فاروقی اے آئی نیوز — {urdu_date()}\n" + "\n".join(f"{i + 1}. {s['headline']}" for i, s in enumerate(d["stories"])),
-                      width=1920, height=1080,
+                      width=size[0], height=size[1],
                          buttons=[[{"text": "✅ منظور", "callback_data": f"nok:{day}"}, {"text": "❌ دوبارہ بنائیں", "callback_data": f"nno:{day}"}]])
     send_photo(chat, thumb, caption="🖼️ تھمب نیل (یوٹیوب Custom thumbnail)")
     v = d.get("viral") or {}
@@ -923,6 +955,9 @@ def tick(force: bool = False) -> None:
     make(feedback=(redo or {}).get("feedback") if isinstance(redo, dict) else None)
 
 
+SIDE = {"-r": ("redo_r", "roundup.yml"), "-f": ("redo_f", "flash.yml")}   # دن کی کلید کا آخری حصہ → (دوبارہ کا نشان، ورک فلو)
+
+
 def poll() -> None:
     """اے آئی نیوز کے اپنے بوٹ کے بٹن (✅/❌) اور ویڈیو پر Reply والی ہدایت"""
     ns = read_json(STATE) if STATE.exists() else {}
@@ -962,9 +997,9 @@ def poll() -> None:
                 tg_call("sendMessage", chat_id=chat, reply_parameters={"message_id": mid}, text=msg)
             elif action == "nno":
                 d["status"] = "redo"
-                if day.endswith("-r"):                   # ہفتہ وار راؤنڈ اپ
-                    ns["redo_r"] = {"day": day, "feedback": None}
-                    dispatch = "roundup.yml"
+                if day[-2:] in SIDE:                     # فلیش / راؤنڈ اپ
+                    ns[SIDE[day[-2:]][0]] = {"day": day, "feedback": None}
+                    dispatch = SIDE[day[-2:]][1]
                 else:
                     ns["redo"] = {"day": day, "feedback": None}
                     dispatch = dispatch or True
@@ -979,9 +1014,9 @@ def poll() -> None:
             rt, text = msg.get("reply_to_message"), (msg.get("text") or "").strip()
             day = next((k for k, v in ns.get("days", {}).items() if rt and v.get("vmid") == rt.get("message_id")), None)
             if day and text:
-                ns["redo_r" if day.endswith("-r") else "redo"] = {"day": day, "feedback": text}
+                ns[SIDE[day[-2:]][0] if day[-2:] in SIDE else "redo"] = {"day": day, "feedback": text}
                 ns["days"][day]["status"] = "redo"
-                dispatch = "roundup.yml" if day.endswith("-r") else (dispatch or True)
+                dispatch = SIDE[day[-2:]][1] if day[-2:] in SIDE else (dispatch or True)
                 tg_call("sendMessage", chat_id=me, text="🔄 ٹھیک ہے — آپ کی ہدایت کے ساتھ نیا بلیٹن بن رہا ہے (تقریباً 20–30 منٹ)۔")
             elif text.startswith("/start"):
                 tg_call("sendMessage", chat_id=me, text="📺 فاروقی اے آئی نیوز — بلیٹن ہر پیر، بدھ اور ہفتہ کو دوپہر یہاں آئے گا۔ "
@@ -989,7 +1024,7 @@ def poll() -> None:
     write_json(STATE, ns)
     if dispatch and os.environ.get("GITHUB_ACTIONS"):
         with open("/tmp/news_dispatch", "a") as f:
-            f.write(("roundup.yml" if dispatch == "roundup.yml" else "bulletin.yml") + "\n")
+            f.write((dispatch if isinstance(dispatch, str) else "bulletin.yml") + "\n")
 
 
 def check() -> None:
