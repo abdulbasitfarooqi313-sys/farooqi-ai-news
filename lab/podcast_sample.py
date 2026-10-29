@@ -25,19 +25,28 @@ def tts(prompt):
                           {"speaker": "Sarah", "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": "Aoede"}}},
                           {"speaker": "Ahmed", "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": "Orus"}}}]}}}})
 import time
-for attempt, pr in enumerate(["TTS the following conversation between Sarah and Ahmed:\n" + conv, conv]):
-    r = tts(pr)
-    c = (r.json().get("candidates") or [{}])[0] if r.ok else {}
-    if r.ok and c.get("content"):
-        break
-    print("TTS_TRY", attempt, r.status_code, json.dumps(c.get("finishReason")), r.text[:200].replace("\n", " "))
-    time.sleep(10)
-if not r.ok or not c.get("content"):
-    print("TTS_FAIL", r.status_code, r.text[:300]); sys.exit(1)
-part = c["content"]["parts"][0]["inlineData"]
-rate = int(re.search(r"rate=(\d+)", part.get("mimeType", "rate=24000")).group(1))
+CH = int(__import__("os").environ.get("POD_CHUNK", "4"))
+pcm, rate = b"", 24000
+for k in range(0, len(lines), CH):
+    part_txt = "\n".join(f"{l['s']}: {l['t'].strip()}" for l in lines[k:k + CH])
+    c = {}
+    for attempt in range(2):
+        r = tts("TTS the following conversation between Sarah and Ahmed:\n" + part_txt)
+        c = (r.json().get("candidates") or [{}])[0] if r.ok else {}
+        if r.ok and c.get("content"):
+            break
+        print("TTS_TRY", k, attempt, r.status_code, json.dumps(c.get("finishReason")), r.text[:150].replace("\n", " "))
+        if r.status_code == 429:
+            sys.exit(1)
+        time.sleep(8)
+    if not c.get("content"):
+        print("TTS_FAIL chunk", k); sys.exit(1)
+    p_ = c["content"]["parts"][0]["inlineData"]
+    rate = int(re.search(r"rate=(\d+)", p_.get("mimeType", "rate=24000")).group(1))
+    pcm += base64.b64decode(p_["data"]) + b"\x00\x00" * int(rate * 0.35)
+print("TTS_CALLS ok, chunks", (len(lines) + CH - 1) // CH)
 with wave.open("pod.wav", "wb") as w:
-    w.setnchannels(1); w.setsampwidth(2); w.setframerate(rate); w.writeframes(base64.b64decode(part["data"]))
+    w.setnchannels(1); w.setsampwidth(2); w.setframerate(rate); w.writeframes(pcm)
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", "pod.wav", "-af", "loudnorm=I=-16:TP=-1.5", "-c:a", "aac", "-b:a", "128k",
                 "podcast-namuna.m4a"], check=True)
 Path("pod_script.json").write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
