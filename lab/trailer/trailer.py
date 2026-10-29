@@ -20,11 +20,21 @@ LINES = [
     ("s7", "کوئی سنسنی نہیں، صرف حقائق۔ طلبہ، نوجوانوں، اور ہر اس شخص کے لیے جو آنے والے کل کو سمجھنا چاہتا ہے۔"),
     ("s8", "ہر روز شام پانچ بجے سعودی وقت، اور پاکستان میں سات بجے۔ ابھی سبسکرائب کیجیے اور بیل آئیکن دبائیے۔ فاروقی اے آئی نیوز، نئے آفاق کی دریافت۔"),
 ]
-PHOTOS = ["artificial intelligence robot", "futuristic city technology", "reading news smartphone", "television studio",
+PHOTOS = ["robot hand technology", "futuristic city technology", "reading news smartphone", "robot",
           "technology conference stage", "smartphone night city", "students laptop classroom"]
 
 
 def pix(q: str, dest: Path) -> str:
+    pk = os.environ.get("PEXELS_API_KEY", "").strip()
+    if pk:
+        try:
+            r = requests.get("https://api.pexels.com/v1/search", headers={"Authorization": pk}, timeout=30,
+                             params={"query": q, "orientation": "landscape", "per_page": 5, "size": "large"})
+            ph = r.json()["photos"][0]
+            dest.write_bytes(requests.get(ph["src"]["large2x"], timeout=60).content)
+            return B._b64(dest, "image/jpeg")
+        except Exception as e:
+            print("pexels fail", q, e)
     key = os.environ.get("PIXABAY_API_KEY", "").strip()
     try:
         r = requests.get("https://pixabay.com/api/", timeout=30, params={"key": key, "q": q, "image_type": "photo",
@@ -35,6 +45,32 @@ def pix(q: str, dest: Path) -> str:
     except Exception as e:
         print("photo fail", q, e)
         return ""
+
+
+VOICES = {"F": "Aoede", "M": "Orus"}      # جیمنائی: خاتون / مرد
+
+
+def gem(text: str, voice: str, dest: Path) -> Path:
+    import base64, re, time, wave
+    for attempt in range(3):
+        r = requests.post("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent",
+                          params={"key": os.environ["GEMINI_API_KEY"]}, timeout=240, json={
+                              "contents": [{"parts": [{"text": "Read the following Urdu text aloud:\n\n" + text}]}],
+                              "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {
+                                  "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}})
+        c = (r.json().get("candidates") or [{}])[0] if r.ok else {}
+        if c.get("content"):
+            part = c["content"]["parts"][0]["inlineData"]
+            rate = int(re.search(r"rate=(\d+)", part.get("mimeType", "rate=24000")).group(1))
+            raw = dest.with_suffix(".raw.wav")
+            with wave.open(str(raw), "wb") as w:
+                w.setnchannels(1); w.setsampwidth(2); w.setframerate(rate); w.writeframes(base64.b64decode(part["data"]))
+            return B._norm(raw, dest, pad=0.1)
+        print("TTS try", attempt, r.status_code, c.get("finishReason"), r.text[:160].replace("\n", " "))
+        if r.status_code == 429:
+            break
+        time.sleep(6)
+    raise RuntimeError("Gemini TTS failed")
 
 
 def main():
@@ -55,9 +91,13 @@ def main():
         a, b = add(tune)
         sc.append({"id": "s1", "t0": 0.0, "t1": b})
         for i, (sid, text) in enumerate(LINES):
-            mp3 = tmp / f"l{i}.mp3"
-            asyncio.run(edge_tts.Communicate(text, "ur-PK-UzmaNeural", rate="-2%").save(str(mp3)))
-            w = B._norm(mp3, tmp / f"l{i}.wav", pad=0.1)
+            who = "F" if i % 2 == 0 else "M"
+            if os.environ.get("TRAILER_TTS") == "gemini":
+                w = gem(text, VOICES[who], tmp / f"l{i}.wav")
+            else:
+                mp3 = tmp / f"l{i}.mp3"
+                asyncio.run(edge_tts.Communicate(text, "ur-PK-UzmaNeural" if who == "F" else "ur-PK-AsadNeural", rate="-2%").save(str(mp3)))
+                w = B._norm(mp3, tmp / f"l{i}.wav", pad=0.1)
             s0, _ = add(B._sil(0.35, tmp / f"g{i}.wav"))
             v0, v1 = add(w)
             tail = 2.6 if sid == "s8" else 0.45
