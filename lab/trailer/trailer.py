@@ -21,7 +21,7 @@ LINES = [
     ("s8", "ہر روز شام پانچ بجے سعودی وقت، اور پاکستان میں سات بجے۔ ابھی سبسکرائب کیجیے اور بیل آئیکن دبائیے۔ فاروقی اے آئی نیوز، نئے آفاق کی دریافت۔"),
 ]
 PHOTOS = ["robot hand technology", "futuristic city technology", "reading news smartphone", "industrial robot arm",
-          "technology conference stage", "smartphone night city", "circuit board blue"]
+          "technology conference stage", "smartphone night city", "circuit board"]
 
 
 def pix(q: str, dest: Path) -> str:
@@ -39,7 +39,9 @@ def pix(q: str, dest: Path) -> str:
     try:
         r = requests.get("https://pixabay.com/api/", timeout=30, params={"key": key, "q": q, "image_type": "photo",
                          "orientation": "horizontal", "safesearch": "true", "per_page": 10, "min_width": 1920})
-        h = r.json()["hits"][0]
+        bad = ("woman", "man", "girl", "boy", "person", "people", "child", "face", "female", "male", "lady", "photographer", "portrait", "human")
+        hits = [x for x in r.json()["hits"] if not any(b in (x.get("tags") or "").lower() for b in bad)]
+        h = hits[0]
         dest.write_bytes(requests.get(h["largeImageURL"], timeout=60).content)
         return B._b64(dest, "image/jpeg")
     except Exception as e:
