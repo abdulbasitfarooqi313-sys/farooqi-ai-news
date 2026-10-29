@@ -92,6 +92,25 @@ def photo(query: str, dest: Path, used: set) -> str | None:
     return None
 
 
+def photo_pixabay(query: str, dest: Path, used: set) -> str | None:
+    """Pixabay (مفت، کمرشل اجازت، حوالہ ضروری نہیں) — PIXABAY_API_KEY؛ Pexels نہ ہو تو"""
+    key = os.environ.get("PIXABAY_API_KEY")
+    if not key or not query:
+        return None
+    try:
+        r = requests.get("https://pixabay.com/api/", timeout=30, params={"key": key, "q": query, "image_type": "photo",
+                         "orientation": "vertical", "safesearch": "true", "per_page": 20, "min_height": 1600})
+        for ph in r.json().get("hits", []):
+            if ("pb", ph["id"]) in used:
+                continue
+            used.add(("pb", ph["id"]))
+            dest.write_bytes(requests.get(ph.get("largeImageURL") or ph["webformatURL"], timeout=60).content)
+            return B._b64(dest, "image/jpeg")
+    except Exception as e:
+        print(f"   Pixabay تصویر نہیں ملی ({query}): {e}")
+    return None
+
+
 def _edge(texts: list[str], tmp: Path) -> list[Path]:
     import edge_tts
     out = []
@@ -217,7 +236,8 @@ def make(sample: bool = False, feedback: str | None = None) -> Path:
         tmp = Path(td)
         used: set = set()
         for i, it in enumerate(d["items"]):
-            it["_photo"] = photo(it.get("photo_query") or "artificial intelligence technology", tmp / f"p{i}.jpg", used)
+            q = it.get("photo_query") or "artificial intelligence technology"
+            it["_photo"] = photo(q, tmp / f"p{i}.jpg", used) or photo_pixabay(q, tmp / f"p{i}.jpg", used)
             it["_logo"] = B._logo(it.get("domain") or "", tmp, i)
         out, thumb = build(d, tmp)
         final = B.ROOT / "flash.mp4"
@@ -232,7 +252,7 @@ def make(sample: bool = False, feedback: str | None = None) -> Path:
         n = len(d["items"])
         sd = {"youtube_title": (d.get("youtube_title") or f"اے آئی فلیش: دنیا بھر سے {n} خبریں")[:90] + " #shorts",
               "youtube_description": (d.get("summary", "") + "\n\n" + "\n".join(f"{i + 1}. {it['h']}" for i, it in enumerate(d["items"]))
-                                      + "\n\n🎬 Photos: Pexels\nآواز: اے آئی\n\n#shorts #اے_آئی #AINews #فاروقی_اے_آئی_نیوز")[:4900],
+                                      + "\n\n🎬 Photos: Pexels / Pixabay\nآواز: اے آئی\n\n#shorts #اے_آئی #AINews #فاروقی_اے_آئی_نیوز")[:4900],
               "tags": list(dict.fromkeys((d.get("tags") or []) + ["اے آئی فلیش", "AI News Urdu", "فاروقی اے آئی نیوز", "shorts"]))}
         key = B._today() + "-f"
         d["stories"] = [{"headline": it["h"]} for it in d["items"]]
