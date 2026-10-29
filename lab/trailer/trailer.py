@@ -20,7 +20,7 @@ LINES = [
     ("s7", "کوئی سنسنی نہیں، صرف حقائق۔ طلبہ، نوجوانوں، اور ہر اس شخص کے لیے جو آنے والے کل کو سمجھنا چاہتا ہے۔"),
     ("s8", "ہر روز شام پانچ بجے سعودی وقت، اور پاکستان میں سات بجے۔ ابھی سبسکرائب کیجیے اور بیل آئیکن دبائیے۔ فاروقی اے آئی نیوز، نئے آفاق کی دریافت۔"),
 ]
-PHOTOS = ["robot hand technology", "futuristic city technology", "reading news smartphone", "robot",
+PHOTOS = ["robot hand technology", "futuristic city technology", "reading news smartphone", "industrial robot arm",
           "technology conference stage", "smartphone night city", "students laptop classroom"]
 
 
