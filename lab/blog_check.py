@@ -1,8 +1,10 @@
 import re, requests
 B = "https://farooqiainews.blogspot.com"
-x = requests.get(f"{B}/p/about.html", headers={"User-Agent": "Mozilla/5.0"}, timeout=30).text
-i = x.find("postbody")
-print("BLOG idx", i, "len", len(x))
-seg = re.sub(r"\s+", " ", x[i - 200:i + 900]) if i > 0 else re.sub(r"\s+", " ", x[x.find("<main"):x.find("<main") + 900])
-for k in range(0, len(seg), 220):
-    print("BLOG", seg[k:k + 220])
+H = {"User-Agent": "Mozilla/5.0"}
+for u in ["/", "/p/about.html"]:
+    x = requests.get(B + u, headers=H, timeout=30).text
+    i = x.find("<main>")
+    j = x.find("</main>")
+    seg = re.sub(r"\s+", " ", x[i:j])
+    print("BLOG", u, "main-len", len(seg), "| single:", "class='single'" in x or 'class="single"' in x, "| cards:", x.count("class='card") + x.count('class="card'), "| empty:", "ابھی یہاں کوئی خبر نہیں" in x)
+    print("BLOG", u, seg[:600])
