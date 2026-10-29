@@ -16,6 +16,9 @@ jobs:
       - run: pip install -q -r requirements.txt && sudo apt-get install -y -qq ffmpeg >/dev/null
       - env:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          GEMINI_BACKUP_KEY: ${{ secrets.GEMINI_BACKUP_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TRAILER_TTS: gemini
         run: |
           set +e
           python -u lab/trailer/trailer.py > out.txt 2>&1; rc=$?

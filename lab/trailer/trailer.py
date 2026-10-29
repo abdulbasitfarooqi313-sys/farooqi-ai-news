@@ -56,7 +56,7 @@ def gem(text: str, voice: str, dest: Path) -> Path:
     import base64, re, time, wave
     for attempt in range(3):
         r = requests.post("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent",
-                          params={"key": os.environ["GEMINI_API_KEY"]}, timeout=240, json={
+                          params={"key": os.environ.get("GEMINI_BACKUP_KEY") or os.environ["GEMINI_API_KEY"]}, timeout=240, json={
                               "contents": [{"parts": [{"text": "Read the following Urdu text aloud:\n\n" + text}]}],
                               "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {
                                   "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}})

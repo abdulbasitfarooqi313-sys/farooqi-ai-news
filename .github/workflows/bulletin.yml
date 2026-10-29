@@ -35,6 +35,7 @@ jobs:
         env:
           GEMINI_NEWS_KEY: ${{ secrets.GEMINI_NEWS_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_BACKUP_KEY: ${{ secrets.GEMINI_BACKUP_KEY }}
           NEWS_BOT_TOKEN: ${{ secrets.NEWS_BOT_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

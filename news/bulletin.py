@@ -207,6 +207,14 @@ def _pt_day() -> str:
     return dt.datetime.now(ZoneInfo("America/Los_Angeles")).strftime("%Y-%m-%d")
 
 
+_BACKUP = {"on": False}      # پہلی چابی کا روزانہ کوٹا ختم → GEMINI_BACKUP_KEY (الگ پروجیکٹ، الگ 10)
+
+
+def tts_key() -> str:
+    b = os.environ.get("GEMINI_BACKUP_KEY", "").strip()
+    return b if (_BACKUP["on"] and b) else gemini_key()
+
+
 def tts_used() -> int:
     led = read_json(TTS_LEDGER) if TTS_LEDGER.exists() else {}
     return int(led.get(_pt_day(), 0))
@@ -223,6 +231,10 @@ def tts_note(n: int = 1) -> None:
 def tts_guard(need: int, what: str) -> None:
     """حفاظتی تالا: کام شروع کرنے سے پہلے — بچت 2 سے کم ہونے کا خطرہ ہو تو نہیں چلے گا"""
     used = tts_used()
+    if used + need > TTS_LIMIT - TTS_RESERVE and os.environ.get("GEMINI_BACKUP_KEY", "").strip():
+        _BACKUP["on"] = True                                  # پہلی چابی میں گنجائش نہیں — سیدھا دوسری پر
+        print(f"TTS: پہلی چابی میں گنجائش کم ({used}/{TTS_LIMIT}) — {what} دوسری چابی سے")
+        return
     if used + need > TTS_LIMIT - TTS_RESERVE:
         raise TTSQuota(f"آج آواز کا کوٹا کم ہے ({used}/{TTS_LIMIT} استعمال ہو چکا، {what} کو تقریباً {need} چاہیے) — "
                        "صبح 10–11 بجے کوٹا نیا ہونے کے بعد بنے گا")
@@ -239,13 +251,19 @@ def _speak(texts: list[str], voice: str, tmp: Path, tag: str) -> list[Path]:
         prompt = "Read the following Urdu text aloud:\n\n" + text      # صرف پڑھنے کا اشارہ — یہ جملہ بولا نہیں جاتا
         for attempt in range(3):
             r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
-                              params={"key": gemini_key()}, timeout=240, json={
+                              params={"key": tts_key()}, timeout=240, json={
                                   "contents": [{"parts": [{"text": prompt}]}],
                                   "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {
                                       "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}})
-            tts_note()
+            if not _BACKUP["on"]:
+                tts_note()
             if r.status_code == 429:
                 if re.search(r"PerDay|per_day|per day|RequestsPerDay|limit: 0", r.text, flags=re.I):
+                    if not _BACKUP["on"] and os.environ.get("GEMINI_BACKUP_KEY", "").strip():
+                        _BACKUP["on"] = True                 # دوسری چابی پر — اسی متن کو فوراً دوبارہ
+                        LOG.append("TTS: پہلی چابی کا کوٹا ختم — دوسری چابی (GEMINI_BACKUP_KEY) استعمال ہو رہی ہے")
+                        print(LOG[-1])
+                        continue
                     LOG.append(f"TTS {voice} 429: {r.text[:400]}")
                     raise TTSQuota("آواز (Gemini TTS) کا آج کا مفت کوٹہ ختم ہو گیا")
                 m = re.search(r'"retryDelay":\s*"(\d+)', r.text)
