@@ -26,12 +26,12 @@
   --navy:#0a1550; --navy2:#15286a; --deep:#050b33; --gold:#e2b84f; --gold2:#ffe39a; --gold3:#d4a53d; --sky:#7cc4ff;
   --ink:#141a33; --muted:#5d6480; --line:#e3e6ef; --bg:#f4f5f9; --card:#fff; --red:#c8202f;
   --r:14px; --shadow:0 1px 2px rgba(10,21,80,.06),0 10px 30px rgba(10,21,80,.08);
-  --ur:'Jameel Noori Web','Jameel Noori Nastaleeq','Noto Nastaliq Urdu',serif;
+  --ur:'Noto Nastaliq Urdu','Jameel Noori Web','Jameel Noori Nastaleeq',serif;
   --en:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ur);font-size:19px;line-height:2.1;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ur);font-size:17px;line-height:2.3;-webkit-font-smoothing:antialiased}
 a{color:var(--navy);text-decoration:none}
 a:hover{color:var(--gold3)}
 img{max-width:100%;height:auto}
@@ -50,7 +50,7 @@ img{max-width:100%;height:auto}
 .masthead .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:22px;padding-bottom:22px;position:relative;z-index:1}
 .brand{display:flex;align-items:center;gap:16px}
 .brand img{width:92px;height:92px;border-radius:50%;box-shadow:0 0 0 4px var(--gold),0 0 30px rgba(124,196,255,.45)}
-.brand h1{margin:0;font-size:46px;line-height:1.5;font-weight:normal}
+.brand h1{margin:0;font-size:38px;line-height:1.9;font-weight:normal}
 .brand h1 a{color:#fff}
 .brand h1 b{font-weight:normal;color:var(--gold2)}
 .brand p{margin:0;color:#cfe0ff;font-size:18px;line-height:1.8}
@@ -93,7 +93,7 @@ img{max-width:100%;height:auto}
 @media(max-width:720px){.hero{grid-template-columns:1fr}}
 .hero .im{min-height:300px;background:linear-gradient(135deg,var(--navy),var(--navy2)) center/cover}
 .hero .tx{padding:22px 26px}
-.hero h2{margin:6px 0 8px;font-size:32px;line-height:1.65;font-weight:normal}
+.hero h2{margin:6px 0 8px;font-size:27px;line-height:1.95;font-weight:normal}
 .hero p{margin:0;color:var(--muted);font-size:18px}
 
 /* کارڈ */
@@ -105,7 +105,7 @@ img{max-width:100%;height:auto}
 .card .im .noimg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
 .card .im .noimg img{width:84px;height:84px;border-radius:50%;opacity:.9}
 .card .bd{padding:14px 18px 18px;flex:1;display:flex;flex-direction:column}
-.card h3{margin:4px 0 6px;font-size:23px;line-height:1.7;font-weight:normal}
+.card h3{margin:4px 0 6px;font-size:19px;line-height:2;font-weight:normal}
 .card p{margin:0 0 10px;color:var(--muted);font-size:17px;line-height:1.95;flex:1}
 .lbl{display:inline-block;background:var(--navy);color:var(--gold2)!important;font-size:14px;line-height:1.9;padding:0 12px 3px;border-radius:6px;margin-left:6px}
 .lbl.fl{background:var(--red);color:#fff!important}
@@ -133,8 +133,8 @@ img{max-width:100%;height:auto}
 .single{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
 .single .head{padding:26px 30px 10px}
 .crumb{font-size:15px;color:var(--muted)}
-.single h1{margin:6px 0 10px;font-size:38px;line-height:1.7;font-weight:normal;color:var(--navy)}
-.single .body{padding:6px 30px 26px;font-size:20px;line-height:2.25}
+.single h1{margin:6px 0 10px;font-size:30px;line-height:2;font-weight:normal;color:var(--navy)}
+.single .body{padding:6px 30px 26px;font-size:18px;line-height:2.5}
 .single .body h2,.single .body h3{color:var(--navy);font-weight:normal;line-height:1.8;border-right:5px solid var(--gold);padding-right:12px;margin:26px 0 8px}
 .single .body img{border-radius:10px}
 .single .body iframe{width:100%;aspect-ratio:16/9;height:auto;border:0;border-radius:12px}
