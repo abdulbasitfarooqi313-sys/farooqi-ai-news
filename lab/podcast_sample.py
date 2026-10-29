@@ -25,8 +25,8 @@ def tts(prompt):
                           {"speaker": "Sarah", "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": "Aoede"}}},
                           {"speaker": "Ahmed", "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": "Orus"}}}]}}}})
 import time
-for attempt in range(3):
-    r = tts(prompt)
+for attempt, pr in enumerate(["TTS the following conversation between Sarah and Ahmed:\n" + conv, conv]):
+    r = tts(pr)
     c = (r.json().get("candidates") or [{}])[0] if r.ok else {}
     if r.ok and c.get("content"):
         break
