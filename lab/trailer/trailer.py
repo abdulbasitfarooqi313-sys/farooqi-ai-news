@@ -54,7 +54,7 @@ VOICES = {"F": "Aoede", "M": "Orus"}      # جیمنائی: خاتون / مرد
 
 def gem(text: str, voice: str, dest: Path) -> Path:
     import base64, re, time, wave
-    for attempt in range(3):
+    for attempt in range(5):
         r = requests.post("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent",
                           params={"key": os.environ.get("GEMINI_BACKUP_KEY") or os.environ["GEMINI_API_KEY"]}, timeout=240, json={
                               "contents": [{"parts": [{"text": "Read the following Urdu text aloud:\n\n" + text}]}],
@@ -70,7 +70,11 @@ def gem(text: str, voice: str, dest: Path) -> Path:
             return B._norm(raw, dest, pad=0.1)
         print("TTS try", attempt, r.status_code, c.get("finishReason"), r.text[:160].replace("\n", " "))
         if r.status_code == 429:
-            break
+            if re.search(r"PerDay|per_day|limit: 0", r.text, flags=re.I):
+                break
+            m = re.search(r'"retryDelay":\s*"(\d+)', r.text)
+            time.sleep(min(65, int(m.group(1)) + 3 if m else 30))
+            continue
         time.sleep(6)
     raise RuntimeError("Gemini TTS failed")
 
@@ -95,6 +99,9 @@ def main():
         for i, (sid, text) in enumerate(LINES):
             who = "F" if i % 2 == 0 else "M"
             if os.environ.get("TRAILER_TTS") == "gemini":
+                if i:
+                    import time
+                    time.sleep(22)                      # مفت حد: فی منٹ 3 درخواستیں
                 w = gem(text, VOICES[who], tmp / f"l{i}.wav")
             else:
                 mp3 = tmp / f"l{i}.mp3"

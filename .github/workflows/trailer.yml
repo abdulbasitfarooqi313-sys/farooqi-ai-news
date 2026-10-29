@@ -22,7 +22,7 @@ jobs:
         run: |
           set +e
           python -u lab/trailer/trailer.py > out.txt 2>&1; rc=$?
-          grep -E "TRAILER|photo fail|Error|Traceback" out.txt | head -8 | while IFS= read -r l; do echo "::notice::$l"; done
+          grep -E "TRAILER|TTS try|photo fail|Error|Traceback" out.txt | head -8 | while IFS= read -r l; do echo "::notice::$l"; done
           exit $rc
       - env: { GH_TOKEN: "${{ github.token }}" }
         run: gh release create "trailer-$(date -u +%H%M)" --draft --title trailer -n "channel trailer (review)" trailer.mp4
