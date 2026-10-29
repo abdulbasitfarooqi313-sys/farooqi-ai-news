@@ -1,0 +1,25 @@
+name: Podcast sample (temporary)
+on:
+  push:
+    paths: [".github/workflows/podcast-sample.yml", "lab/podcast_sample.py"]
+permissions:
+  contents: write
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt && sudo apt-get install -y -qq ffmpeg >/dev/null
+      - env:
+          GEMINI_NEWS_KEY: ${{ secrets.GEMINI_NEWS_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          set +e
+          PYTHONPATH=. python -u lab/podcast_sample.py > out.txt 2>&1; rc=$?
+          grep -E "TOPIC|TTS_FAIL|Error|error" out.txt | head -5 | while IFS= read -r l; do echo "::notice::$l"; done
+          exit $rc
+      - env: { GH_TOKEN: "${{ github.token }}" }
+        run: gh release create podcast-sample --draft --title podcast-sample -n sample podcast-namuna.m4a pod_script.json
