@@ -7,6 +7,8 @@ on:
     - cron: "0 12 * * 0,2,4"   # 3:00 سہ پہر (سعودی)
     - cron: "0 14 * * 0,2,4"   # 5:00 — نہ بنا ہو تو
     - cron: "0 16 * * 0,2,4"   # 7:00 — آخری کوشش
+  push:
+    paths: ["state/flash_run_now"]      # فوری رن (GitHub کا شیڈول دیر کرے تو)
   workflow_dispatch:
     inputs:
       force:
