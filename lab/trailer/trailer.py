@@ -21,7 +21,7 @@ LINES = [
     ("s8", "ہر روز شام پانچ بجے سعودی وقت، اور پاکستان میں سات بجے۔ ابھی سبسکرائب کیجیے اور بیل آئیکن دبائیے۔ فاروقی اے آئی نیوز، نئے آفاق کی دریافت۔"),
 ]
 PHOTOS = ["robot hand technology", "futuristic city technology", "reading news smartphone", "industrial robot arm",
-          "technology conference stage", "smartphone night city", "students laptop classroom"]
+          "technology conference stage", "smartphone night city", "circuit board blue"]
 
 
 def pix(q: str, dest: Path) -> str:
