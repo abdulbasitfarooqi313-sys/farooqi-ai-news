@@ -17,15 +17,24 @@ lines = [l for l in d["lines"] if l.get("t", "").strip() and l.get("s") in ("Sar
 conv = "\n".join(f"{l['s']}: {l['t'].strip()}" for l in lines)
 prompt = ("TTS the following Urdu podcast conversation between Sarah and Ahmed. Natural, warm, friendly podcast tone, "
           "conversational pace:\n\n" + conv)
-r = requests.post("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent",
+def tts(prompt):
+  return requests.post("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent",
                   params={"key": gemini_key()}, timeout=300, json={
                       "contents": [{"parts": [{"text": prompt}]}],
                       "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {"multiSpeakerVoiceConfig": {"speakerVoiceConfigs": [
                           {"speaker": "Sarah", "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": "Aoede"}}},
                           {"speaker": "Ahmed", "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": "Orus"}}}]}}}})
-if not r.ok:
+import time
+for attempt in range(3):
+    r = tts(prompt)
+    c = (r.json().get("candidates") or [{}])[0] if r.ok else {}
+    if r.ok and c.get("content"):
+        break
+    print("TTS_TRY", attempt, r.status_code, json.dumps(c.get("finishReason")), r.text[:200].replace("\n", " "))
+    time.sleep(10)
+if not r.ok or not c.get("content"):
     print("TTS_FAIL", r.status_code, r.text[:300]); sys.exit(1)
-part = r.json()["candidates"][0]["content"]["parts"][0]["inlineData"]
+part = c["content"]["parts"][0]["inlineData"]
 rate = int(re.search(r"rate=(\d+)", part.get("mimeType", "rate=24000")).group(1))
 with wave.open("pod.wav", "wb") as w:
     w.setnchannels(1); w.setsampwidth(2); w.setframerate(rate); w.writeframes(base64.b64decode(part["data"]))
