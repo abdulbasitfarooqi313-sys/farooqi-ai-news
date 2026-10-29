@@ -21,3 +21,4 @@ print("UP ✅", r["url"], r["notes"])
 st = json.loads(Path("state/news.json").read_text())
 st["days"][key].update({"yt": r["id"], "yt_at": B._upload_dt().isoformat()})
 Path("state/news.json").write_text(json.dumps(st, ensure_ascii=False, indent=1))
+# run 2026-10-29T17:53:37
