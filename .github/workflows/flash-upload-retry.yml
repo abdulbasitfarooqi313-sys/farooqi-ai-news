@@ -1,0 +1,27 @@
+name: Flash upload retry (one-off)
+on:
+  push:
+    paths: [".github/workflows/flash-upload-retry.yml", "lab/flash_upload_retry.py"]
+permissions:
+  contents: write
+jobs:
+  up:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q -r requirements.txt
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          set +e
+          python -u lab/flash_upload_retry.py > out.txt 2>&1; rc=$?
+          grep -E "UP|Error|Traceback" out.txt | head -6 | while IFS= read -r l; do echo "::notice::$l"; done
+          [ $rc = 0 ] || exit $rc
+          git config user.name "ai-news-bot"; git config user.email "ai-news-bot@users.noreply.github.com"
+          git add state/news.json && git commit -m "فلیش: یوٹیوب Private اپلوڈ" && for i in 1 2 3; do git pull --rebase -X theirs && git push && break; sleep 5; done
