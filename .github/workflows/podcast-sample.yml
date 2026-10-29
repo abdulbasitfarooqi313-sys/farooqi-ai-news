@@ -17,6 +17,7 @@ jobs:
       - env:
           GEMINI_NEWS_KEY: ${{ secrets.GEMINI_NEWS_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          POD_TTS: edge
         run: |
           set +e
           PYTHONPATH=. python -u lab/podcast_sample.py > out.txt 2>&1; rc=$?

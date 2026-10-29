@@ -24,7 +24,24 @@ def tts(prompt):
                       "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {"multiSpeakerVoiceConfig": {"speakerVoiceConfigs": [
                           {"speaker": "Sarah", "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": "Aoede"}}},
                           {"speaker": "Ahmed", "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": "Orus"}}}]}}}})
-import time
+import os, time, asyncio
+if os.environ.get("POD_TTS") == "edge":                 # مائیکروسافٹ کی مفت اردو آوازیں (کوئی کوٹا نہیں) — مالک کی ہدایت پر نمونے کے لیے
+    import edge_tts
+    V = {"Sarah": "ur-PK-UzmaNeural", "Ahmed": "ur-PK-AsadNeural"}
+    parts = []
+    for i, l in enumerate(lines):
+        mp3 = f"e{i:02d}.mp3"
+        asyncio.run(edge_tts.Communicate(l["t"].strip(), V[l["s"]], rate="+0%").save(mp3))
+        wav = f"e{i:02d}.wav"
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", mp3, "-af", "apad=pad_dur=0.3", "-ar", "24000", "-ac", "1", wav], check=True)
+        parts.append(wav)
+    Path("e.txt").write_text("".join(f"file '{p}'\n" for p in parts))
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", "e.txt", "pod.wav"], check=True)
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", "pod.wav", "-af", "loudnorm=I=-16:TP=-1.5", "-c:a", "aac", "-b:a", "128k",
+                    "podcast-namuna.m4a"], check=True)
+    Path("pod_script.json").write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
+    print("TOPIC", d.get("topic"), "| lines", len(lines), "| edge voices")
+    sys.exit(0)
 CH = int(__import__("os").environ.get("POD_CHUNK", "4"))
 pcm, rate = b"", 24000
 for k in range(0, len(lines), CH):
