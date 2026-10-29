@@ -1,0 +1,126 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:NQ;src:url('__NQFONT__')}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#050b33;font-family:NQ}
+#bg{position:absolute;inset:0;background:radial-gradient(1400px 900px at 50% 45%,#1b3482 0%,#0f1f63 38%,#0a1550 62%,#050b33 100%)}
+canvas{position:absolute;inset:0}
+.sc{position:absolute;inset:0;opacity:0}
+.ph{position:absolute;inset:-50px;background-size:cover;background-position:center}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,11,51,.55),rgba(5,11,51,.35) 40%,rgba(5,11,51,.85))}
+.gold{color:#ffe39a}
+.rtl{direction:rtl}
+/* S1 logo */
+#s1 .lg{position:absolute;left:760px;top:170px;width:400px;height:400px;border-radius:50%;background:url('__LOGO__') center/cover;box-shadow:0 0 0 10px #e2b84f,0 0 90px rgba(124,196,255,.7)}
+#s1 .ring{position:absolute;left:960px;top:370px;width:10px;height:10px;border-radius:50%;border:6px solid #e2b84f;transform:translate(-50%,-50%)}
+#s1 .t{position:absolute;left:0;right:0;top:620px;text-align:center;font-size:130px;color:#fff;text-shadow:0 6px 30px rgba(0,0,0,.6)}
+#s1 .s{position:absolute;left:0;right:0;top:830px;text-align:center;font-size:54px;color:#cfe0ff}
+/* big words */
+.words{position:absolute;left:0;right:0;top:380px;text-align:center}
+.w{display:inline-block;margin:0 40px;font-size:120px;color:#ffe39a;opacity:0;text-shadow:0 6px 30px rgba(0,0,0,.7)}
+.cap{position:absolute;left:0;right:0;top:220px;text-align:center;font-size:76px;color:#fff;text-shadow:0 4px 20px rgba(0,0,0,.7)}
+/* S3 */
+.card{position:absolute;background:linear-gradient(135deg,#ffe39a,#e2b84f 55%,#d4a53d);color:#0a1550;border-radius:22px;box-shadow:0 20px 60px rgba(0,0,0,.5);text-align:center}
+.en{position:absolute;font:600 40px Arial;color:#cfe0ff;background:rgba(10,21,80,.85);border:2px solid rgba(124,196,255,.4);border-radius:12px;padding:10px 22px;letter-spacing:1px}
+/* feature scenes */
+.feat .tag{position:absolute;right:140px;top:150px;font-size:60px;color:#0a1550;background:linear-gradient(180deg,#ffe39a,#d4a53d);padding:0 34px 12px;border-radius:14px}
+.feat .h{position:absolute;right:140px;top:280px;width:900px;font-size:110px;line-height:1.4;color:#fff;text-align:right}
+.feat .d{position:absolute;right:140px;top:470px;width:900px;font-size:52px;line-height:1.7;color:#cfe0ff;text-align:right}
+.chips{position:absolute;right:140px;top:690px;display:flex;gap:18px;direction:rtl}
+.chip{font-size:46px;line-height:1.7;color:#ffe39a;border:3px solid #e2b84f;background:rgba(10,21,80,.8);padding:0 28px 8px;border-radius:14px;opacity:0}
+/* bulletin mock */
+.tv{position:absolute;left:120px;top:200px;width:720px;height:405px;border-radius:18px;overflow:hidden;box-shadow:0 0 0 6px #e2b84f,0 30px 80px rgba(0,0,0,.6);background:#0a1550}
+.tv .lt{position:absolute;left:0;right:0;bottom:40px;height:96px;background:linear-gradient(90deg,#0a1550,#15286a);border-top:5px solid #e2b84f}
+.tv .lt b{position:absolute;right:20px;top:8px;font-weight:normal;font-size:44px;color:#fff;direction:rtl}
+.tv .tk{position:absolute;left:0;right:0;bottom:0;height:40px;background:#e2b84f;color:#0a1550;font-size:26px;line-height:1.5;white-space:nowrap;direction:rtl}
+.tv .bug{position:absolute;right:18px;top:18px;width:80px;height:80px;border-radius:50%;background:url('__LOGO__') center/cover}
+/* phone */
+.phone{position:absolute;left:250px;top:70px;width:400px;height:720px;border-radius:52px;background:#0b0f1d;box-shadow:0 0 0 8px #1c2340,0 0 0 12px #e2b84f,0 40px 90px rgba(0,0,0,.65)}
+/* podcast */
+.host{position:absolute;top:240px;width:420px;height:420px;border-radius:50%;background:radial-gradient(#15286a,#0a1550);box-shadow:0 0 0 8px #e2b84f,0 0 60px rgba(124,196,255,.45)}
+.host .n{position:absolute;left:0;right:0;top:120px;text-align:center;font-size:110px;color:#ffe39a}
+.host .r{position:absolute;left:0;right:0;top:270px;text-align:center;font-size:40px;color:#cfe0ff}
+.wave{position:absolute;left:560px;top:700px;width:800px;height:120px;display:flex;align-items:center;justify-content:center;gap:10px}
+.wave i{display:block;width:14px;border-radius:7px;background:linear-gradient(180deg,#ffe39a,#d4a53d)}
+/* values */
+.val{position:absolute;top:420px;width:480px;height:260px;border-radius:24px;background:rgba(10,21,80,.85);border:4px solid #e2b84f;text-align:center;opacity:0}
+.val .i{font-size:90px;line-height:1.3;color:#ffe39a}
+.val .x{font-size:58px;color:#fff}
+/* CTA */
+#s8 .lg{position:absolute;left:810px;top:110px;width:300px;height:300px;border-radius:50%;background:url('__LOGO__') center/cover;box-shadow:0 0 0 8px #e2b84f,0 0 80px rgba(124,196,255,.7)}
+#s8 .t{position:absolute;left:0;right:0;top:430px;text-align:center;font-size:96px;color:#fff}
+#s8 .sub{position:absolute;left:700px;top:620px;width:520px;height:130px;border-radius:26px;background:linear-gradient(180deg,#ffe39a,#d4a53d);color:#0a1550;font-size:70px;line-height:1.7;text-align:center}
+#s8 .bell{position:absolute;left:1250px;top:630px;width:110px;height:110px;border-radius:50%;background:rgba(10,21,80,.9);border:4px solid #e2b84f}
+#s8 .bell:before{content:"";position:absolute;left:30px;top:24px;width:50px;height:46px;background:#ffe39a;border-radius:25px 25px 6px 6px}
+#s8 .bell:after{content:"";position:absolute;left:46px;top:72px;width:18px;height:12px;background:#ffe39a;border-radius:0 0 9px 9px}
+#s8 .cur{position:absolute;width:0;height:0;border-left:26px solid transparent;border-right:26px solid transparent;border-bottom:60px solid #fff;transform:rotate(-30deg);filter:drop-shadow(0 4px 6px rgba(0,0,0,.6))}
+#s8 .time{position:absolute;left:0;right:0;top:800px;text-align:center;font-size:56px;color:#cfe0ff;direction:rtl}
+#bug{position:absolute;right:40px;top:36px;width:110px;height:110px;border-radius:50%;background:url('__LOGO__') center/cover;box-shadow:0 0 0 4px #e2b84f;opacity:0}
+#capb{position:absolute;left:260px;right:260px;bottom:46px;text-align:center;direction:rtl}
+#capb span{font-size:46px;line-height:1.9;color:#fff;background:rgba(5,11,51,.88);padding:2px 24px 10px;border-radius:8px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+</style></head><body>
+<div id="bg"></div><canvas id="net" width="1920" height="1080"></canvas>
+<div id="scenes">
+<div class="sc" id="s1"><div class="ring"></div><div class="lg"></div><div class="t rtl">فاروقی <span class="gold">اے آئی</span> نیوز</div><div class="s rtl">نئے آفاق کی دریافت</div></div>
+<div class="sc" id="s2"><div class="ph" style="background-image:url('__P0__')"></div><div class="ph p2" style="background-image:url('__P1__');opacity:0"></div><div class="shade"></div>
+ <div class="cap rtl">مصنوعی ذہانت ہر روز دنیا بدل رہی ہے</div>
+ <div class="words rtl"><span class="w">نئی ایجادات</span><span class="w">نئے ٹولز</span><span class="w">نئے مواقع</span></div></div>
+<div class="sc" id="s3"><div class="ph" style="background-image:url('__P2__')"></div><div class="shade"></div>
+ <div class="en" style="left:180px;top:200px">BREAKING: NEW AI MODEL</div><div class="en" style="left:260px;top:330px">AI CHIPS RACE</div><div class="en" style="left:140px;top:460px">ROBOTICS UPDATE</div>
+ <div class="en" style="left:300px;top:590px">AI REGULATION</div>
+ <div class="card rtl" style="left:980px;top:300px;width:780px;height:340px"><div style="font-size:64px;margin-top:40px">یہی دنیا</div><div style="font-size:112px;line-height:1.3">آسان اردو میں</div></div></div>
+<div class="sc feat" id="s4"><div class="ph" style="background-image:url('__P3__');opacity:.35"></div><div class="shade"></div>
+ <div class="tv"><div class="ph" style="background-image:url('__P4__');inset:0"></div><div class="bug"></div><div class="lt"><b>اے آئی کی دنیا: آج کی اہم خبریں</b></div><div class="tk">  ◆ مستند ذرائع  ◆ آسان اردو  ◆ فاروقی اے آئی نیوز  ◆ مستند ذرائع  ◆ آسان اردو</div></div>
+ <div class="tag rtl">نیوز بلیٹن</div><div class="h rtl">تفصیلی خبریں</div><div class="d rtl">ہفتے کی اہم ترین خبریں، تفصیل اور مستند ذرائع کے ساتھ</div>
+ <div class="chips"><div class="chip">ہفتہ</div><div class="chip">پیر</div><div class="chip">بدھ</div></div></div>
+<div class="sc feat" id="s5"><div class="ph" style="background-image:url('__P5__');opacity:.3"></div><div class="shade"></div>
+ <div class="phone"></div>
+ <div class="tag rtl">اے آئی فلیش</div><div class="h rtl">دنیا بھر سے</div><div class="d rtl">پندرہ سے زیادہ سرخیاں، صرف دو منٹ میں</div>
+ <div class="chips"><div class="chip">اتوار</div><div class="chip">منگل</div><div class="chip">جمعرات</div></div></div>
+<div class="sc" id="s6"><div class="cap rtl" style="top:90px">اے آئی بیٹھک <span class="gold">· جلد</span></div>
+ <div class="host" style="right:300px"><div class="n">سارہ</div><div class="r">میزبان</div></div>
+ <div class="host" style="left:300px"><div class="n">احمد</div><div class="r">ٹیک ماہر</div></div>
+ <div class="wave" id="wave"></div><div class="chips" style="right:820px;top:835px"><div class="chip" style="opacity:1">ہر جمعہ</div></div></div>
+<div class="sc" id="s7"><div class="ph" style="background-image:url('__P6__')"></div><div class="shade" style="background:rgba(5,11,51,.72)"></div>
+ <div class="cap rtl">صرف حقائق، کوئی سنسنی نہیں</div>
+ <div class="val rtl" style="right:180px"><div class="i">✓</div><div class="x">مستند ذرائع</div></div>
+ <div class="val rtl" style="right:720px"><div class="i">✓</div><div class="x">آسان اردو</div></div>
+ <div class="val rtl" style="right:1260px"><div class="i">✓</div><div class="x">ہر روز نیا</div></div></div>
+<div class="sc" id="s8"><div class="lg"></div><div class="t rtl">ابھی سبسکرائب کیجیے</div><div class="sub">سبسکرائب</div><div class="bell"></div><div class="cur"></div>
+ <div class="time">ہر روز <span class="gold">شام 5 بجے</span> سعودی وقت · <span class="gold">7 بجے</span> پاکستان</div></div>
+</div>
+<div id="bug"></div>
+<div id="capb"><span id="capt"></span></div>
+<script>
+const NF=__NFDATA__;const $=id=>document.getElementById(id);
+const ease=x=>1-Math.pow(1-Math.max(0,Math.min(1,x)),3);
+// network
+const cv=$('net'),cx=cv.getContext('2d');let seed=11;const rnd=()=>{seed=(seed*9301+49297)%233280;return seed/233280};
+const P=[];for(let i=0;i<80;i++)P.push({x:rnd()*1920,y:rnd()*1080,vx:(rnd()-.5)*30,vy:(rnd()-.5)*30});
+function net(t){cx.clearRect(0,0,1920,1080);const Q=P.map(p=>({x:(p.x+p.vx*t+1920*4)%1920,y:(p.y+p.vy*t+1080*4)%1080}));
+ for(let i=0;i<Q.length;i++)for(let j=i+1;j<Q.length;j++){const d=Math.hypot(Q[i].x-Q[j].x,Q[i].y-Q[j].y);if(d<220){cx.strokeStyle=`rgba(124,196,255,${.3*(1-d/220)})`;cx.lineWidth=1.5;cx.beginPath();cx.moveTo(Q[i].x,Q[i].y);cx.lineTo(Q[j].x,Q[j].y);cx.stroke()}}
+ Q.forEach(q=>{cx.fillStyle='rgba(124,196,255,.8)';cx.beginPath();cx.arc(q.x,q.y,3,0,7);cx.fill()})}
+const wv=$('wave');for(let i=0;i<40;i++){const e=document.createElement('i');wv.appendChild(e)}
+function render(t){
+ net(t);
+ NF.sc.forEach(s=>{const e=$(s.id),on=t>=s.t0&&t<s.t1;const a=on?Math.min(1,(t-s.t0)/.4,(s.t1-t)/.4):0;e.style.opacity=Math.max(0,a);if(!on)return;
+  const k=t-s.t0,p=k/(s.t1-s.t0);
+  e.querySelectorAll('.ph').forEach((ph,i)=>{if(ph.closest('.tv'))return;ph.style.transform=`scale(${1.05+.08*p}) translate(${(i?-1:1)*25*p}px,0)`});
+  if(s.id==='s1'){e.querySelector('.lg').style.transform=`scale(${.6+.4*ease(k/.9)})`;const r=e.querySelector('.ring');const q=ease(k/1.4);r.style.width=r.style.height=(10+1100*q)+'px';r.style.opacity=1-q;
+   e.querySelector('.t').style.opacity=ease((k-.6)/.6);e.querySelector('.s').style.opacity=ease((k-1.1)/.6)}
+  if(s.id==='s2'){e.querySelector('.p2').style.opacity=ease((p-.45)/.15);e.querySelectorAll('.w').forEach((w,i)=>{const z=ease((k-1.6-i*1.1)/.4);w.style.opacity=z;w.style.transform=`translateY(${(1-z)*40}px)`})}
+  if(s.id==='s3'){e.querySelectorAll('.en').forEach((x,i)=>{x.style.opacity=Math.max(0,1-ease((k-2.2-i*.2)/.6))*ease(k/.4);x.style.transform=`translateX(${ease((k-2.2-i*.2)/.8)*500}px)`});
+   const c=e.querySelector('.card');c.style.opacity=ease((k-2.6)/.5);c.style.transform=`scale(${.85+.15*ease((k-2.6)/.5)})`}
+  if(s.id==='s4'||s.id==='s5'){e.querySelectorAll('.chip').forEach((c,i)=>{const z=ease((k-1.2-i*.35)/.35);c.style.opacity=z;c.style.transform=`translateY(${(1-z)*30}px)`});
+   e.querySelector('.h').style.opacity=ease((k-.3)/.5);e.querySelector('.d').style.opacity=ease((k-.7)/.5)}
+  if(s.id==='s4'){e.querySelector('.tk').style.transform=`translateX(${(k*90)%600}px)`}
+  if(s.id==='s6'){[...wv.children].forEach((b,i)=>{b.style.height=(18+90*Math.abs(Math.sin(t*6+i*.7)*Math.sin(t*2.3+i*.31)))+'px'})}
+  if(s.id==='s7'){e.querySelectorAll('.val').forEach((v,i)=>{const z=ease((k-.8-i*.6)/.4);v.style.opacity=z;v.style.transform=`translateY(${(1-z)*50}px)`})}
+  if(s.id==='s8'){const c=e.querySelector('.cur');const z=ease((k-1.5)/.8);c.style.left=(1500-520*z)+'px';c.style.top=(900-210*z)+'px';
+   const sb=e.querySelector('.sub');const clk=k>2.4;sb.style.background=clk?'#7c8399':'linear-gradient(180deg,#ffe39a,#d4a53d)';sb.textContent=clk?'سبسکرائبڈ ✓':'سبسکرائب';sb.style.color=clk?'#fff':'#0a1550';
+   sb.style.transform=`scale(${k>2.3&&k<2.5?0.94:1})`;$('s8').querySelector('.bell').style.transform=`rotate(${k>2.8?Math.sin(k*18)*14*Math.max(0,1-(k-2.8)):0}deg)`}
+ });
+ $('bug').style.opacity=(t>NF.sc[0].t1&&t<NF.sc[NF.sc.length-1].t0)?.9:0;
+ const c=NF.caps.find(c=>t>=c.t0&&t<c.t1);$('capt').textContent=c?c.text:'';$('capb').style.opacity=c?1:0;
+}
+document.fonts.ready.then(()=>{render(0);document.title='ready'});
+</script></body></html>
