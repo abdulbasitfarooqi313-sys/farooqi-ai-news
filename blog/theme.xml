@@ -289,6 +289,7 @@ footer .flogo img{width:64px;height:64px;border-radius:50%;box-shadow:0 0 0 3px 
         </b:includable>
       </b:widget>
     </b:section>
+    <div id='feedbox'>&#8203;</div>
   </main>
 
   <aside class='side'>
@@ -359,6 +360,40 @@ footer .flogo img{width:64px;height:64px;border-radius:50%;box-shadow:0 0 0 3px 
   var top=document.getElementById('totop');
   window.addEventListener('scroll',function(){top.classList.toggle('on',window.scrollY>600);});
   top.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});
+
+  /* ── اگر Blogger کا خبروں والا خانہ خالی ہو تو سب کچھ فیڈ سے دکھائیں (صفحات، خبر، فہرست) ── */
+  var LOGO='https://raw.githubusercontent.com/abdulbasitfarooqi313-sys/farooqi-ai-news/main/studio/logo_round.png';
+  function esc(x){var d=document.createElement('div');d.textContent=x||'';return d.innerHTML;}
+  function alt(e){var l=e.link||[];for(var i=0;i<l.length;i++){if(l[i].rel==='alternate')return l[i].href;}return '#';}
+  function img(e){if(e.media$thumbnail)return e.media$thumbnail.url.replace(/\/s\d+(-c)?\//,'/w720-h405-c/').replace(/=s\d+(-c)?$/,'=w720-h405-c');
+    var m=((e.content||e.summary||{}).$t||'').match(/<img[^>]+src=["']([^"']+)/);return m?m[1]:'';}
+  function txt(e,n){var d=document.createElement('div');d.innerHTML=((e.summary||e.content||{}).$t||'');var t=(d.textContent||'').replace(/\s+/g,' ').trim();return t.length>n?t.slice(0,n)+'…':t;}
+  function labs(e){return (e.category||[]).map(function(c){return '<a class="lbl'+(c.term==='اے آئی فلیش'?' fl':'')+'" href="/search/label/'+encodeURIComponent(c.term)+'">'+esc(c.term)+'</a>';}).join('');}
+  function day(e){return (e.published&&e.published.$t||'').slice(0,10);}
+  function card(e){var u=alt(e),t=img(e);
+    return '<article class="card"><a class="im" href="'+u+'"'+(t?' style="background-image:url('+t+')"':'')+'>'+(t?'':'<span class="noimg"><img src="'+LOGO+'" alt=""/></span>')+'</a><div class="bd"><div class="meta">'+labs(e)+'<span class="d">'+day(e)+'</span></div><h3><a href="'+u+'">'+esc(e.title.$t)+'</a></h3><p>'+esc(txt(e,170))+'</p><a class="more" href="'+u+'">پوری خبر پڑھیں ←</a></div></article>';}
+  function same(a,b){return a.split('?')[0].split('#')[0].replace(/^https?:/,'').replace(/\.html$/,'')===b.split('?')[0].split('#')[0].replace(/^https?:/,'').replace(/\.html$/,'');}
+  var fb=document.getElementById('feedbox'),path=decodeURIComponent(location.pathname);
+  if(fb&&!document.querySelector('main .single, main .card')){
+    var isPage=/^\/p\/.+\.html$/.test(path),isPost=/^\/\d{4}\/\d{2}\/.+\.html$/.test(path),lm=path.match(/^\/search\/label\/(.+)$/);
+    var url=isPage?'/feeds/pages/default?alt=json&max-results=50':(lm?'/feeds/posts/default/-/'+encodeURIComponent(lm[1])+'?alt=json&max-results=20':'/feeds/posts/default?alt=json&max-results='+(isPost?150:13));
+    fetch(url).then(function(r){return r.json();}).then(function(j){
+      var es=(j.feed&&j.feed.entry)||[];
+      if(isPage||isPost){
+        for(var i=0;i<es.length;i++){if(same(alt(es[i]),location.href)){var e=es[i];
+          document.title=e.title.$t+' | فاروقی اے آئی نیوز';
+          var sh=isPost?'<div class="share"><span>شیئر کریں:</span><a class="s-wa" target="_blank" rel="noopener" href="https://wa.me/?text='+encodeURIComponent(location.href)+'">واٹس ایپ</a><a class="s-fb" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href)+'">فیس بک</a><a class="s-x" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'">ایکس</a><a class="s-tg" target="_blank" rel="noopener" href="https://t.me/share/url?url='+encodeURIComponent(location.href)+'">ٹیلیگرام</a></div><div class="note">یہ خبر معتبر بین الاقوامی ذرائع کی بنیاد پر تیار کی گئی ہے؛ ماخذ کے لنک خبر کے اندر دیے گئے ہیں۔</div><div class="related"><div class="sec-t">مزید خبریں</div><div class="grid" id="related"></div></div>':'';
+          fb.innerHTML='<article class="single"><div class="head"><div class="crumb"><a href="/">ہوم</a></div><h1>'+esc(e.title.$t)+'</h1><div class="meta">'+(isPost?'<span class="d">'+day(e)+'</span>'+labs(e):'')+'</div></div><div class="body">'+((e.content||e.summary||{}).$t||'')+'</div>'+sh+'</article>';
+          if(isPost){var rel=document.getElementById('related'),n=0,o='';es.forEach(function(x){if(n<4&&x!==e){n++;o+=card(x);}});rel.innerHTML=o;}
+          return;}}
+        fb.innerHTML='<div class="empty">یہ صفحہ نہیں ملا۔ <a href="/">ہوم پر جائیں</a></div>';return;}
+      if(!es.length){fb.innerHTML='<div class="empty">ابھی یہاں کوئی خبر نہیں — نئی خبریں جلد آئیں گی۔</div>';return;}
+      var h='<div class="sec-t">'+(lm?esc(lm[1]):'تازہ ترین خبریں')+'</div>',rest=es;
+      if(!lm){var f=es[0],u=alt(f),t=img(f);rest=es.slice(1);
+        h+='<article class="hero"><a class="im" href="'+u+'" style="display:flex;align-items:center;justify-content:center;background-color:#0a1550;'+(t?'background-image:url('+t+')':'')+'">'+(t?'':'<img src="'+LOGO+'" style="width:130px;height:130px;border-radius:50%" alt=""/>')+'</a><div class="tx"><div class="meta">'+labs(f)+'<span class="d">'+day(f)+'</span></div><h2><a href="'+u+'">'+esc(f.title.$t)+'</a></h2><p>'+esc(txt(f,260))+'</p><a class="more" href="'+u+'">پوری خبر پڑھیں ←</a></div></article>';}
+      fb.innerHTML=h+'<div class="grid">'+rest.map(card).join('')+'</div>';
+    }).catch(function(){fb.innerHTML='<div class="empty">خبریں لوڈ نہ ہو سکیں — صفحہ دوبارہ کھولیں۔</div>';});
+  }
 
   /* پڑھنے کا وقت */
   var pb=document.getElementById('postbody'),rt=document.getElementById('rtime');
