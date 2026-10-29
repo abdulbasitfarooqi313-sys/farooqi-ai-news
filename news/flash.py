@@ -36,7 +36,7 @@ FEEDS = [GN.format(hl=h, gl=g, lang=l) for h, g, l in EDITIONS] + [
     "https://news.google.com/rss/search?q=AI+China+OR+Japan+OR+Korea+OR+Europe+OR+Saudi+when:2d&hl=en-US&gl=US&ceid=US:en"]
 
 SYSTEM = """آپ «فاروقی اے آئی نیوز» کے اردو نیوز پروڈیوسر ہیں۔ پروگرام: «اے آئی فلیش» — یوٹیوب شارٹ میں تیز رفتار سرخیاں، صرف سرخی، کوئی تفصیل نہیں۔
-دی گئی خبروں میں سے مصنوعی ذہانت (AI) کی 18 مختلف خبریں چنیں — جتنے زیادہ مختلف ملک ہو سکیں (امریکہ، چین، برطانیہ، یورپ، بھارت، پاکستان، خلیج، جاپان، کوریا، افریقہ…)؛ ایک ہی ملک کی تین سے زیادہ نہیں۔
+دی گئی خبروں میں سے 18 مختلف خبریں چنیں جن کا **مرکز مصنوعی ذہانت (AI)** ہو — جس خبر میں AI صرف ضمنی ذکر ہو (عام کاروبار، جائیداد، اسٹاک مارکیٹ، جرائم) وہ نہیں — جتنے زیادہ مختلف ملک ہو سکیں (امریکہ، چین، برطانیہ، یورپ، بھارت، پاکستان، خلیج، جاپان، کوریا، افریقہ…)؛ ایک ہی ملک کی تین سے زیادہ نہیں۔
 سختی سے: صرف دی گئی خبروں کے حقائق؛ کوئی عدد، نام یا دعویٰ اپنی طرف سے نہیں۔ ایک واقعے کی دو سرخیاں نہیں۔ سیاسی رائے، سنسنی اور سرمایہ کاری کا مشورہ نہیں۔
 سرخی: خبر والا مکمل جملہ، 7 تا 12 الفاظ، سادہ اردو؛ انگریزی نام اردو رسم الخط میں (OpenAI = اوپن اے آئی، Google = گوگل، Nvidia = این ویڈیا)۔ کوئی انگریزی حرف، ایموجی، بریکٹ نہیں۔
 صرف JSON:
@@ -112,11 +112,11 @@ def voices(texts: list[str], tmp: Path) -> list[Path]:
         return _edge(texts, tmp)
     # جیمنائی: 10 سرخیاں ایک درخواست میں، پھر کاٹ کر
     from .base import _split, SplitError
-    head, rest = texts[0], texts[1:]
+    head, rest, tail = texts[0], texts[1:-1], texts[-1]
     blocks = [rest[i:i + 10] for i in range(0, len(rest), 10)]
-    wavs = B._speak([head] + ["\n\n".join(b) for b in blocks], B.ANCHOR_VOICE, tmp, "fl")
+    wavs = B._speak([head] + ["\n\n".join(b) for b in blocks] + [tail], B.ANCHOR_VOICE, tmp, "fl")
     out = [wavs[0]]
-    for j, (b, w) in enumerate(zip(blocks, wavs[1:])):
+    for j, (b, w) in enumerate(zip(blocks, wavs[1:-1])):
         try:
             out += _split(w, b, tmp, f"fb{j}")
         except SplitError:
@@ -128,13 +128,15 @@ def voices(texts: list[str], tmp: Path) -> list[Path]:
                 acc += x
                 cuts.append(tot * acc / sum(wts))
             out += _cut(w, cuts, tot, len(b), tmp, f"fb{j}")
-    return out
+    return out + [wavs[-1]]
 
 
 def build(d: dict, tmp: Path) -> tuple[Path, Path]:
     n = len(d["items"])
-    opening = f"اے آئی فلیش۔ {d.get('open_sub') or 'دنیا بھر سے مصنوعی ذہانت کی تازہ خبریں'}۔"
-    ws = voices([opening] + [it["h"] for it in d["items"]], tmp)
+    opening = (f"السلام علیکم! فاروقی اے آئی نیوز کی اے آئی فلیش میں خوش آمدید۔ "
+               f"{d.get('open_sub') or 'دنیا بھر سے مصنوعی ذہانت کی تازہ خبریں'}۔")
+    closing = "یہ تھیں آج کی اہم خبریں۔ ہمارے چینل کو سبسکرائب کیجیے، اور مزید خبروں کے لیے ہمارے ساتھ جڑے رہیے۔ اللہ حافظ۔"
+    ws = voices([opening] + [it["h"] for it in d["items"]] + [closing], tmp)
     ws = [B._trim(w, tmp / f"ft{i}.wav") for i, w in enumerate(ws)]
     parts, t = [], 0.0
 
@@ -150,13 +152,15 @@ def build(d: dict, tmp: Path) -> tuple[Path, Path]:
     whoosh = tmp / "whoosh.wav"
     B._ff("-i", str(B.A / "sting.wav"), "-t", "0.45", "-af", "volume=0.5,afade=t=out:st=0.2:d=0.25", "-ar", "44100", "-ac", "2",
           "-c:a", "pcm_s16le", str(whoosh))
-    for i, w in enumerate(ws[1:]):
+    for i, w in enumerate(ws[1:-1]):
         a0, _ = add(whoosh)
         add(w)
         _, b1 = add(B._sil(0.35, tmp / f"fg{i}.wav"))
         d["items"][i]["t0"], d["items"][i]["t1"] = round(a0, 2), round(b1, 2)
     end_t = t
-    add(B._sil(2.6, tmp / "fend.wav"))
+    add(B._sil(0.2, tmp / "fend0.wav"))
+    add(ws[-1])
+    add(B._sil(1.2, tmp / "fend.wav"))
     lst = tmp / "flist.txt"
     lst.write_text("".join(f"file '{p}'\n" for p in parts))
     voice = tmp / "fvoice.wav"
