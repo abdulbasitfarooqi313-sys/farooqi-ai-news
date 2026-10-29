@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion='1.0.0' dir='rtl' lang='ur' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta charset='utf-8'/>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+<meta content='#0a1550' name='theme-color'/>
+<link href='https://raw.githubusercontent.com/abdulbasitfarooqi313-sys/farooqi-ai-news/main/studio/logo_round.png' rel='icon' type='image/png'/>
+<link href='https://raw.githubusercontent.com/abdulbasitfarooqi313-sys/farooqi-ai-news/main/studio/logo_round.png' rel='apple-touch-icon'/>
+<title><b:if cond='data:view.isHomepage'>فاروقی اے آئی نیوز — مصنوعی ذہانت کی خبریں، آسان اردو میں<b:else/><data:view.title.escaped/> | فاروقی اے آئی نیوز</b:if></title>
+<b:if cond='data:view.isHomepage'>
+<meta content='فاروقی اے آئی نیوز: مصنوعی ذہانت (AI) کی دنیا کی تازہ ترین، مستند اور تصدیق شدہ خبریں — آسان اردو میں۔ نیوز بلیٹن، اے آئی فلیش اور تجزیے۔' name='description'/>
+</b:if>
+<meta content='https://raw.githubusercontent.com/abdulbasitfarooqi313-sys/farooqi-ai-news/main/studio/logo_round.png' property='og:image'/>
+<meta content='ur_PK' property='og:locale'/>
+<b:include data='blog' name='all-head-content'/>
+<link href='https://fonts.googleapis.com' rel='preconnect'/>
+<link href='https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&amp;family=Inter:wght@400;600;800&amp;display=swap' rel='stylesheet'/>
+<b:skin><![CDATA[
+/* ============ فاروقی اے آئی نیوز — بلاگ تھیم ============
+   برانڈ: گہرا نیلا #0a1550 · سنہرا #e2b84f · ہلکا نیلا #7cc4ff */
+@font-face{font-family:'Jameel Noori Web';font-display:swap;
+  src:local('Jameel Noori Nastaleeq'),local('JameelNooriNastaleeq'),
+      url('https://cdn.jsdelivr.net/gh/abdulbasitfarooqi313-sys/farooqi-ai-news@main/fonts/jameel-noori.ttf') format('truetype')}
+:root{
+  --navy:#0a1550; --navy2:#15286a; --deep:#050b33; --gold:#e2b84f; --gold2:#ffe39a; --gold3:#d4a53d; --sky:#7cc4ff;
+  --ink:#141a33; --muted:#5d6480; --line:#e3e6ef; --bg:#f4f5f9; --card:#fff; --red:#c8202f;
+  --r:14px; --shadow:0 1px 2px rgba(10,21,80,.06),0 10px 30px rgba(10,21,80,.08);
+  --ur:'Jameel Noori Web','Jameel Noori Nastaleeq','Noto Nastaliq Urdu',serif;
+  --en:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ur);font-size:19px;line-height:2.1;-webkit-font-smoothing:antialiased}
+a{color:var(--navy);text-decoration:none}
+a:hover{color:var(--gold3)}
+img{max-width:100%;height:auto}
+.wrap{max-width:1200px;margin:0 auto;padding:0 18px}
+
+/* اوپر کی پٹی */
+.topbar{background:var(--deep);color:#cfe0ff;font-size:15px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:40px}
+.topbar .soc{display:flex;gap:8px;direction:ltr}
+.topbar .soc a{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:rgba(124,196,255,.12);color:var(--gold2);font:700 12px var(--en)}
+.topbar .soc a:hover{background:var(--gold);color:var(--navy)}
+
+/* سرخی */
+.masthead{background:radial-gradient(900px 380px at 75% 0,#1b3482 0,var(--navy) 55%,var(--deep) 100%);color:#fff;position:relative;overflow:hidden}
+.masthead:after{content:"";position:absolute;inset:0;opacity:.07;background-image:linear-gradient(#9fc3ff 1px,transparent 1px),linear-gradient(90deg,#9fc3ff 1px,transparent 1px);background-size:44px 44px;pointer-events:none}
+.masthead .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:22px;padding-bottom:22px;position:relative;z-index:1}
+.brand{display:flex;align-items:center;gap:16px}
+.brand img{width:92px;height:92px;border-radius:50%;box-shadow:0 0 0 4px var(--gold),0 0 30px rgba(124,196,255,.45)}
+.brand h1{margin:0;font-size:46px;line-height:1.5;font-weight:normal}
+.brand h1 a{color:#fff}
+.brand h1 b{font-weight:normal;color:var(--gold2)}
+.brand p{margin:0;color:#cfe0ff;font-size:18px;line-height:1.8}
+@media(max-width:700px){
+  .masthead .wrap{flex-direction:column;align-items:stretch;gap:12px;padding-top:16px;padding-bottom:16px}
+  .brand{gap:12px}.brand img{width:64px;height:64px}
+  .brand h1{font-size:30px;white-space:nowrap}.brand p{font-size:15px}
+  .masthead .yt-cta{align-self:center;font-size:17px;padding:4px 18px 8px}
+  .single .head,.single .body{padding-left:16px;padding-right:16px}.single h1{font-size:28px}
+  .share,.note,.related{padding-left:16px;padding-right:16px}.note{margin-left:16px;margin-right:16px}
+}
+.yt-cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(180deg,var(--gold2),var(--gold3));color:var(--navy)!important;padding:6px 22px 10px;border-radius:999px;font-size:20px;box-shadow:0 8px 24px rgba(0,0,0,.25);white-space:nowrap}
+.yt-cta i{display:inline-block;width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-right:11px solid var(--red)}
+
+/* مینو */
+.nav{background:var(--navy);border-top:1px solid rgba(124,196,255,.15);border-bottom:4px solid var(--gold);position:sticky;top:0;z-index:20}
+.nav .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav .wrap::-webkit-scrollbar{display:none}
+.nav a{color:#e8eeff;padding:6px 16px 10px;font-size:19px;white-space:nowrap;border-bottom:3px solid transparent}
+.nav a:hover,.nav a.on{color:var(--gold2);border-bottom-color:var(--gold2)}
+
+/* بریکنگ پٹی */
+.ticker{background:#fff;border-bottom:1px solid var(--line)}
+.ticker .wrap{display:flex;align-items:center;gap:14px;min-height:46px;overflow:hidden}
+.ticker b{flex:none;background:var(--red);color:#fff;font-weight:normal;padding:0 16px 4px;border-radius:6px;font-size:17px}
+.ticker .run{flex:1;overflow:hidden;white-space:nowrap;position:relative;height:40px}
+.ticker .run div{position:absolute;right:0;top:0;white-space:nowrap;animation:tk 60s linear infinite;font-size:17px;line-height:2.3}
+.ticker .run a{margin-left:34px;color:var(--ink)}
+.ticker .run a:before{content:"◆";color:var(--gold3);margin-left:10px;font-size:11px}
+@keyframes tk{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+
+/* ترتیب */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:28px;margin:26px auto 40px}
+@media(max-width:960px){.layout{grid-template-columns:1fr}}
+.sec-t{display:flex;align-items:center;gap:12px;margin:6px 0 16px;font-size:26px;color:var(--navy)}
+.sec-t:after{content:"";flex:1;height:3px;background:linear-gradient(90deg,transparent,var(--gold))}
+
+/* نمایاں خبر */
+.hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);margin-bottom:26px}
+@media(max-width:720px){.hero{grid-template-columns:1fr}}
+.hero .im{min-height:300px;background:linear-gradient(135deg,var(--navy),var(--navy2)) center/cover}
+.hero .tx{padding:22px 26px}
+.hero h2{margin:6px 0 8px;font-size:32px;line-height:1.65;font-weight:normal}
+.hero p{margin:0;color:var(--muted);font-size:18px}
+
+/* کارڈ */
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .2s}
+.card:hover{transform:translateY(-3px)}
+.card .im{display:block;aspect-ratio:16/9;background:linear-gradient(135deg,var(--navy),var(--navy2)) center/cover;position:relative}
+.card .im .noimg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.card .im .noimg img{width:84px;height:84px;border-radius:50%;opacity:.9}
+.card .bd{padding:14px 18px 18px;flex:1;display:flex;flex-direction:column}
+.card h3{margin:4px 0 6px;font-size:23px;line-height:1.7;font-weight:normal}
+.card p{margin:0 0 10px;color:var(--muted);font-size:17px;line-height:1.95;flex:1}
+.lbl{display:inline-block;background:var(--navy);color:var(--gold2)!important;font-size:14px;line-height:1.9;padding:0 12px 3px;border-radius:6px;margin-left:6px}
+.lbl.fl{background:var(--red);color:#fff!important}
+.meta{color:var(--muted);font-size:15px;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.meta .d{font-family:var(--en);font-size:13px;direction:ltr}
+.more{color:var(--gold3);font-size:17px}
+
+/* سائیڈ بار */
+.side .box{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:18px 20px;margin-bottom:22px}
+.side h4{margin:0 0 10px;font-size:22px;font-weight:normal;color:var(--navy);border-bottom:3px solid var(--gold);padding-bottom:6px}
+.side .yt{background:radial-gradient(500px 300px at 80% 0,#1b3482,var(--navy) 60%,var(--deep));color:#fff;text-align:center}
+.side .yt h4{color:var(--gold2);border-color:rgba(226,184,79,.5)}
+.side .yt img{width:96px;height:96px;border-radius:50%;box-shadow:0 0 0 4px var(--gold)}
+.side .yt p{color:#cfe0ff;font-size:17px;margin:8px 0 14px}
+.side ol{margin:0;padding:0;list-style:none;counter-reset:n}
+.side ol li{counter-increment:n;display:flex;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:17px;line-height:1.9}
+.side ol li:before{content:counter(n);flex:none;width:30px;height:30px;border-radius:50%;background:var(--navy);color:var(--gold2);font:700 14px/30px var(--en);text-align:center;margin-top:6px}
+.side .sched li{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed var(--line);font-size:17px}
+.side .sched{margin:0;padding:0;list-style:none}
+.side .sched b{font-weight:normal;color:var(--gold3)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags a{background:var(--bg);border:1px solid var(--line);padding:0 12px 4px;border-radius:999px;font-size:16px}
+
+/* خبر کا صفحہ */
+.single{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+.single .head{padding:26px 30px 10px}
+.crumb{font-size:15px;color:var(--muted)}
+.single h1{margin:6px 0 10px;font-size:38px;line-height:1.7;font-weight:normal;color:var(--navy)}
+.single .body{padding:6px 30px 26px;font-size:20px;line-height:2.25}
+.single .body h2,.single .body h3{color:var(--navy);font-weight:normal;line-height:1.8;border-right:5px solid var(--gold);padding-right:12px;margin:26px 0 8px}
+.single .body img{border-radius:10px}
+.single .body iframe{width:100%;aspect-ratio:16/9;height:auto;border:0;border-radius:12px}
+.single .body blockquote{margin:16px 0;padding:10px 18px;background:#fbf6e6;border-right:5px solid var(--gold);border-radius:8px}
+.single .body .src,.single .body small{color:var(--muted);font-size:16px}
+.single .body a{color:#1f4fbf;text-decoration:underline}
+.share{display:flex;flex-wrap:wrap;gap:8px;padding:16px 30px;border-top:1px solid var(--line);background:#fafbfe;align-items:center}
+.share span{color:var(--muted);font-size:16px;margin-left:6px}
+.share a,.share button{border:0;cursor:pointer;color:#fff;padding:2px 16px 6px;border-radius:999px;font:17px var(--ur)}
+.s-wa{background:#25d366}.s-fb{background:#1877f2}.s-x{background:#111}.s-tg{background:#229ed9}.s-cp{background:var(--navy)}
+.note{margin:0 30px 24px;padding:12px 18px;background:#f1f5ff;border-radius:10px;color:var(--muted);font-size:16px;line-height:2}
+.related{padding:0 30px 26px}
+
+.pager{display:flex;justify-content:space-between;margin:24px 0}
+.pager a{background:var(--navy);color:var(--gold2);padding:4px 22px 8px;border-radius:999px}
+.empty{background:var(--card);border-radius:var(--r);padding:30px;text-align:center;color:var(--muted)}
+
+/* فوٹر */
+footer{background:var(--deep);color:#c9d6f5;margin-top:30px;border-top:5px solid var(--gold)}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:28px;padding:36px 0 20px}
+@media(max-width:820px){.fgrid{grid-template-columns:1fr}}
+footer h5{margin:0 0 10px;font-size:22px;font-weight:normal;color:var(--gold2)}
+footer p{margin:0;font-size:17px;line-height:2}
+footer ul{margin:0;padding:0;list-style:none}
+footer li{padding:2px 0;font-size:17px}
+footer a{color:#e8eeff}
+footer .flogo{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+footer .flogo img{width:64px;height:64px;border-radius:50%;box-shadow:0 0 0 3px var(--gold)}
+.fbar{border-top:1px solid rgba(124,196,255,.15);padding:14px 0 18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:15px;color:#9fb0d9}
+#totop{position:fixed;left:18px;bottom:18px;width:46px;height:46px;border-radius:50%;background:var(--gold);color:var(--navy);font:700 22px/46px var(--en);text-align:center;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.3s;z-index:30}
+#totop.on{opacity:1;pointer-events:auto}
+]]></b:skin>
+</head>
+<body>
+<div class='topbar'>
+  <div class='wrap'>
+    <span id='today'>فاروقی اے آئی نیوز</span>
+    <div class='soc'>
+      <a href='https://www.youtube.com/@farooqiainews' rel='noopener' target='_blank' title='YouTube'>YT</a>
+      <a href='#' id='fb-link' rel='noopener' target='_blank' title='Facebook'>f</a>
+      <a href='#' id='x-link' rel='noopener' target='_blank' title='X'>X</a>
+      <a href='#' id='wa-link' rel='noopener' target='_blank' title='WhatsApp'>WA</a>
+    </div>
+  </div>
+</div>
+
+<header class='masthead'>
+  <div class='wrap'>
+    <div class='brand'>
+      <a expr:href='data:blog.homepageUrl'><img alt='فاروقی اے آئی نیوز' height='92' src='https://raw.githubusercontent.com/abdulbasitfarooqi313-sys/farooqi-ai-news/main/studio/logo_round.png' width='92'/></a>
+      <div>
+        <h1><a expr:href='data:blog.homepageUrl'>فاروقی <b>اے آئی</b> نیوز</a></h1>
+        <p>مصنوعی ذہانت کی دنیا — مستند خبریں، آسان اردو میں</p>
+      </div>
+    </div>
+    <a class='yt-cta' href='https://www.youtube.com/@farooqiainews?sub_confirmation=1' rel='noopener' target='_blank'><i>&#8203;</i>یوٹیوب پر سبسکرائب کریں</a>
+  </div>
+</header>
+
+<nav class='nav'>
+  <div class='wrap'>
+    <a expr:class='data:view.isHomepage ? &quot;on&quot; : &quot;&quot;' expr:href='data:blog.homepageUrl'>ہوم</a>
+    <a expr:href='data:blog.homepageUrl + &quot;search/label/بلیٹن&quot;'>نیوز بلیٹن</a>
+    <a expr:href='data:blog.homepageUrl + &quot;search/label/اے آئی فلیش&quot;'>اے آئی فلیش</a>
+    <a expr:href='data:blog.homepageUrl + &quot;search/label/کمپنیاں&quot;'>کمپنیاں</a>
+    <a expr:href='data:blog.homepageUrl + &quot;search/label/ٹولز&quot;'>ٹولز</a>
+    <a expr:href='data:blog.homepageUrl + &quot;search/label/پاکستان&quot;'>پاکستان</a>
+    <a expr:href='data:blog.homepageUrl + &quot;p/about.html&quot;'>ہمارے بارے میں</a>
+    <a expr:href='data:blog.homepageUrl + &quot;p/contact.html&quot;'>رابطہ</a>
+  </div>
+</nav>
+
+<div class='ticker'>
+  <div class='wrap'><b>تازہ ترین</b><div class='run'><div id='tick'>فاروقی اے آئی نیوز — مصنوعی ذہانت کی مستند خبریں، آسان اردو میں</div></div></div>
+</div>
+
+<div class='wrap layout'>
+  <main>
+    <b:section class='main' id='main' maxwidgets='1' showaddelement='false'>
+      <b:widget id='Blog1' locked='true' title='خبریں' type='Blog' version='2' visible='true'>
+        <b:widget-settings>
+          <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+          <b:widget-setting name='postsPerPage'>13</b:widget-setting>
+        </b:widget-settings>
+        <b:includable id='main'>
+          <b:if cond='data:view.isSingleItem'>
+            <b:loop values='data:posts' var='post'>
+              <article class='single'>
+                <div class='head'>
+                  <div class='crumb'><a expr:href='data:blog.homepageUrl'>ہوم</a>
+                    <b:loop values='data:post.labels' var='label'> ‹ <a expr:href='data:label.url'><data:label.name/></a></b:loop>
+                  </div>
+                  <h1><data:post.title/></h1>
+                  <div class='meta'>
+                    <b:if cond='!data:view.isPage'><span class='d'><data:post.date/></span></b:if>
+                    <b:loop values='data:post.labels' var='label'>
+                      <a expr:class='data:label.name == &quot;اے آئی فلیش&quot; ? &quot;lbl fl&quot; : &quot;lbl&quot;' expr:href='data:label.url'><data:label.name/></a>
+                    </b:loop>
+                    <span id='rtime'>&#8203;</span>
+                  </div>
+                </div>
+                <div class='body' id='postbody'><data:post.body/></div>
+                <b:if cond='!data:view.isPage'>
+                  <div class='share'>
+                    <span>شیئر کریں:</span>
+                    <a class='s-wa' expr:href='&quot;https://wa.me/?text=&quot; + data:post.url' rel='noopener' target='_blank'>واٹس ایپ</a>
+                    <a class='s-fb' expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.url' rel='noopener' target='_blank'>فیس بک</a>
+                    <a class='s-x' expr:href='&quot;https://twitter.com/intent/tweet?url=&quot; + data:post.url' rel='noopener' target='_blank'>ایکس</a>
+                    <a class='s-tg' expr:href='&quot;https://t.me/share/url?url=&quot; + data:post.url' rel='noopener' target='_blank'>ٹیلیگرام</a>
+                    <button class='s-cp' expr:data-u='data:post.url' onclick='navigator.clipboard.writeText(this.getAttribute(&quot;data-u&quot;));this.textContent=&quot;کاپی ہو گیا ✓&quot;' type='button'>لنک کاپی</button>
+                  </div>
+                  <div class='note'>یہ خبر معتبر بین الاقوامی ذرائع کی بنیاد پر تیار کی گئی ہے؛ ماخذ کے لنک خبر کے اندر دیے گئے ہیں۔ کسی غلطی کی نشاندہی کے لیے <a expr:href='data:blog.homepageUrl + &quot;p/contact.html&quot;'>رابطہ کریں</a>۔</div>
+                  <div class='related'><div class='sec-t'>مزید خبریں</div><div class='grid' id='related'>&#8203;</div></div>
+                </b:if>
+              </article>
+            </b:loop>
+          <b:else/>
+            <b:if cond='data:view.isHomepage'><div class='sec-t'>تازہ ترین خبریں</div></b:if>
+            <b:if cond='data:view.isLabelSearch'><div class='sec-t'><data:view.search.label/></div></b:if>
+            <b:if cond='data:posts.empty'>
+              <div class='empty'>ابھی یہاں کوئی خبر نہیں — نئی خبریں جلد آئیں گی۔</div>
+            </b:if>
+            <div class='grid' id='postgrid'>
+              <b:loop index='i' values='data:posts' var='post'>
+                <article expr:class='(data:i == 0 and data:view.isHomepage) ? &quot;card first&quot; : &quot;card&quot;'>
+                  <a class='im' expr:href='data:post.url'>
+                    <b:if cond='data:post.featuredImage'>
+                      <img alt='' expr:src='resizeImage(data:post.featuredImage, 720, &quot;16:9&quot;)' loading='lazy' style='width:100%;height:100%;object-fit:cover;display:block'/>
+                    <b:else/>
+                      <span class='noimg'><img alt='' src='https://raw.githubusercontent.com/abdulbasitfarooqi313-sys/farooqi-ai-news/main/studio/logo_round.png'/></span>
+                    </b:if>
+                  </a>
+                  <div class='bd'>
+                    <div class='meta'>
+                      <b:loop values='data:post.labels' var='label'>
+                        <a expr:class='data:label.name == &quot;اے آئی فلیش&quot; ? &quot;lbl fl&quot; : &quot;lbl&quot;' expr:href='data:label.url'><data:label.name/></a>
+                      </b:loop>
+                      <span class='d'><data:post.date/></span>
+                    </div>
+                    <h3><a expr:href='data:post.url'><data:post.title/></a></h3>
+                    <p><data:post.snippets.short/></p>
+                    <a class='more' expr:href='data:post.url'>پوری خبر پڑھیں ←</a>
+                  </div>
+                </article>
+              </b:loop>
+            </div>
+            <div class='pager'>
+              <b:if cond='data:newerPageUrl'><a expr:href='data:newerPageUrl'>→ نئی خبریں</a><b:else/><span>&#8203;</span></b:if>
+              <b:if cond='data:olderPageUrl'><a expr:href='data:olderPageUrl'>پرانی خبریں ←</a></b:if>
+            </div>
+          </b:if>
+        </b:includable>
+      </b:widget>
+    </b:section>
+  </main>
+
+  <aside class='side'>
+    <div class='box yt'>
+      <img alt='' src='https://raw.githubusercontent.com/abdulbasitfarooqi313-sys/farooqi-ai-news/main/studio/logo_round.png'/>
+      <h4>یوٹیوب پر دیکھیں</h4>
+      <p>نیوز بلیٹن، اے آئی فلیش اور تجزیے — ہر روز شام 5 بجے (سعودی) · 7 بجے (پاکستان)</p>
+      <a class='yt-cta' href='https://www.youtube.com/@farooqiainews?sub_confirmation=1' rel='noopener' target='_blank'><i>&#8203;</i>سبسکرائب کریں</a>
+    </div>
+    <div class='box'>
+      <h4>تازہ خبریں</h4>
+      <ol id='latest'><li>لوڈ ہو رہا ہے…</li></ol>
+    </div>
+    <div class='box'>
+      <h4>ہفتہ وار پروگرام</h4>
+      <ul class='sched'>
+        <li><span>نیوز بلیٹن</span><b>ہفتہ · پیر · بدھ</b></li>
+        <li><span>اے آئی فلیش</span><b>اتوار · منگل · جمعرات</b></li>
+        <li><span>اے آئی بیٹھک (پوڈکاسٹ)</span><b>جمعہ · جلد</b></li>
+      </ul>
+    </div>
+    <div class='box'>
+      <h4>موضوعات</h4>
+      <div class='tags' id='tags'>&#8203;</div>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class='wrap'>
+    <div class='fgrid'>
+      <div>
+        <div class='flogo'><img alt='' src='https://raw.githubusercontent.com/abdulbasitfarooqi313-sys/farooqi-ai-news/main/studio/logo_round.png'/><h5>فاروقی اے آئی نیوز</h5></div>
+        <p>مصنوعی ذہانت (AI) کی دنیا کی تازہ ترین، مستند اور تصدیق شدہ خبریں — آسان اردو میں۔ ہماری ہر خبر معتبر بین الاقوامی ذرائع کی بنیاد پر تیار ہوتی ہے اور ماخذ کا لنک ساتھ دیا جاتا ہے۔</p>
+      </div>
+      <div>
+        <h5>صفحات</h5>
+        <ul>
+          <li><a expr:href='data:blog.homepageUrl + &quot;p/about.html&quot;'>ہمارے بارے میں</a></li>
+          <li><a expr:href='data:blog.homepageUrl + &quot;p/contact.html&quot;'>رابطہ</a></li>
+          <li><a expr:href='data:blog.homepageUrl + &quot;p/privacy-policy.html&quot;'>رازداری کی پالیسی</a></li>
+          <li><a expr:href='data:blog.homepageUrl + &quot;p/terms.html&quot;'>شرائط و ضوابط</a></li>
+          <li><a expr:href='data:blog.homepageUrl + &quot;p/disclaimer.html&quot;'>دستبرداری</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>ہم سے جڑیں</h5>
+        <ul>
+          <li><a href='https://www.youtube.com/@farooqiainews' rel='noopener' target='_blank'>یوٹیوب: @farooqiainews</a></li>
+          <li><a expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot;'>آر ایس ایس فیڈ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class='fbar'><span>© <span id='yr'>2026</span> فاروقی اے آئی نیوز — جملہ حقوق محفوظ ہیں</span><span>نئے آفاق کی دریافت</span></div>
+  </div>
+</footer>
+<a href='#' id='totop' title='اوپر'>↑</a>
+
+<script>
+//<![CDATA[
+(function(){
+  /* ── اپنے سوشل لنک یہاں لکھیں (خالی ہوں تو بٹن چھپ جاتا ہے) ── */
+  var SOCIAL={fb:'', x:'', wa:''};
+  [['fb','fb-link'],['x','x-link'],['wa','wa-link']].forEach(function(p){var a=document.getElementById(p[1]);if(!a)return;if(SOCIAL[p[0]])a.href=SOCIAL[p[0]];else a.style.display='none';});
+  try{document.getElementById('today').textContent=new Date().toLocaleDateString('ur-PK',{weekday:'long',day:'numeric',month:'long',year:'numeric'});}catch(e){}
+  try{document.getElementById('yr').textContent=new Date().getFullYear();}catch(e){}
+  var top=document.getElementById('totop');
+  window.addEventListener('scroll',function(){top.classList.toggle('on',window.scrollY>600);});
+  top.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});
+
+  /* پڑھنے کا وقت */
+  var pb=document.getElementById('postbody'),rt=document.getElementById('rtime');
+  if(pb&&rt){var w=(pb.textContent||'').trim().split(/\s+/).length;rt.textContent='پڑھنے کا وقت: '+Math.max(1,Math.round(w/180))+' منٹ';}
+
+  /* پہلی خبر نمایاں */
+  var first=document.querySelector('.card.first'),grid=document.getElementById('postgrid');
+  if(first&&grid){var im=first.querySelector('.im'),h=first.querySelector('h3'),p=first.querySelector('p'),m=first.querySelector('.meta');
+    var hero=document.createElement('article');hero.className='hero';
+    var src=(im.querySelector('img[style]')||{}).src||'',LG='https://raw.githubusercontent.com/abdulbasitfarooqi313-sys/farooqi-ai-news/main/studio/logo_round.png';
+    hero.innerHTML='<a class="im" href="'+h.querySelector('a').href+'" style="display:flex;align-items:center;justify-content:center;background-color:#0a1550;'+(src?'background-image:url('+src+')':'')+'">'+(src?'':'<img src="'+LG+'" style="width:130px;height:130px;border-radius:50%" alt=""/>')+'</a><div class="tx">'+m.outerHTML+'<h2>'+h.innerHTML+'</h2><p>'+(p?p.innerHTML:'')+'</p><a class="more" href="'+h.querySelector('a').href+'">پوری خبر پڑھیں ←</a></div>';
+    grid.parentNode.insertBefore(hero,grid);first.remove();}
+
+  /* فیڈ: بریکنگ پٹی، تازہ خبریں، موضوعات، مزید خبریں */
+  function H(x){var d=document.createElement('div');d.textContent=x;return d.innerHTML;}
+  function href(e){var l=e.link||[];for(var i=0;i<l.length;i++){if(l[i].rel==='alternate')return l[i].href;}return '#';}
+  function thumb(e){return e.media$thumbnail?e.media$thumbnail.url.replace(/\/s\d+(-c)?\//,'/w640-h360-c/').replace(/=s\d+(-c)?$/,'=w640-h360-c'):'';}
+  fetch('/feeds/posts/default?alt=json&max-results=25').then(function(r){return r.json();}).then(function(j){
+    var es=(j.feed&&j.feed.entry)||[];if(!es.length)return;
+    document.getElementById('tick').innerHTML=es.slice(0,12).map(function(e){return '<a href="'+href(e)+'">'+H(e.title.$t)+'</a>';}).join('');
+    document.getElementById('latest').innerHTML=es.slice(0,6).map(function(e){return '<li><a href="'+href(e)+'">'+H(e.title.$t)+'</a></li>';}).join('');
+    var cats={};(j.feed.category||[]).forEach(function(c){cats[c.term]=1;});
+    document.getElementById('tags').innerHTML=Object.keys(cats).slice(0,24).map(function(t){return '<a href="/search/label/'+encodeURIComponent(t)+'">'+H(t)+'</a>';}).join('');
+    var rel=document.getElementById('related');
+    if(rel){var here=location.href.split('?')[0].split('#')[0].replace(/^https?:/,''),n=0,out='';
+      es.forEach(function(e){if(n>=4)return;var u=href(e);if(u.split('?')[0].replace(/^https?:/,'')===here)return;n++;var t=thumb(e);
+        out+='<article class="card"><a class="im" href="'+u+'" style="background-image:url('+t+')"></a><div class="bd"><h3><a href="'+u+'">'+H(e.title.$t)+'</a></h3><a class="more" href="'+u+'">پڑھیں ←</a></div></article>';});
+      rel.innerHTML=out;}
+  }).catch(function(){});
+})();
+//]]>
+</script>
+</body>
+</html>
