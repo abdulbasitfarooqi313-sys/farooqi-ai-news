@@ -882,7 +882,9 @@ def deliver(video: Path, thumb: Path, sd: dict, d: dict, key: str | None = None,
               ("▶️ یوٹیوب", "ٹیگ (Tags)", _tags_line(sd["tags"])), ("▶️ یوٹیوب", "پلے لسٹ (Playlist)", "فاروقی اے آئی نیوز — روزانہ بلیٹن"),
               ("▶️ یوٹیوب", "پن کمنٹ", so.get("pinned", "")), ("📘 فیس بک", "پوسٹ", so.get("facebook", "")),
               ("📸 انسٹاگرام", "کیپشن", so.get("instagram", "")), ("🎵 ٹک ٹاک", "کیپشن", so.get("tiktok", "")),
-              ("✖️ X", "پوسٹ", so.get("x", "")), ("💬 واٹس ایپ", "پیغام / اسٹیٹس", so.get("whatsapp", ""))]
+              ("✖️ X", "پوسٹ", so.get("x", "")), ("💼 لنکڈ اِن", "پوسٹ", so.get("linkedin", "")),
+              ("🧵 تھریڈز", "پوسٹ", so.get("threads", "")), ("👻 سنیپ چیٹ", "کیپشن", so.get("snapchat", "")),
+              ("📝 بلاگ", "SEO", so.get("blog", "")), ("💬 واٹس ایپ", "پیغام / اسٹیٹس", so.get("whatsapp", ""))]
     say("✅ <b>یوٹیوب اسٹوڈیو</b>: عنوان، تفصیل، ٹیگ نیچے سے پیسٹ کریں · Thumbnail اوپر والی تصویر · "
                  "Audience: Not made for kids · Language: Urdu · Category: <b>Science &amp; Technology</b> · "
                  "End screen: Subscribe + اگلی ویڈیو (آخری 20 سیکنڈ) · شائع ہونے کے بعد پن کمنٹ۔")
@@ -926,6 +928,12 @@ def make(feedback: str | None = None) -> None:
         assemble(body, out)
         thumb = thumbnail(d, tmp / "thumb.jpg", tmp)
         sd = seo(d, tl, _dur(A / "intro.mp4"))
+        try:
+            from . import seo as SEO
+            SEO.attach("bulletin", _today(), d, sd, [s_["headline"] for s_ in d["stories"]],
+                       [s_.get("link", "") for s_ in d["stories"] if s_.get("link")])
+        except Exception as e:
+            print("SEO پیکیج نہیں بنا:", e)
         vmid, mids = deliver(out, thumb, sd, d)
         ytinfo = _yt_upload(out, thumb, sd)
         try:                                            # جانچ کے لیے نقل (GitHub Release)
@@ -1006,6 +1014,39 @@ def tick(force: bool = False) -> None:
 SIDE = {"-r": ("redo_r", "roundup.yml"), "-f": ("redo_f", "flash.yml"), "-p": ("redo_p", "podcast.yml"), "-w": ("redo_w", "reserve.yml")}   # دن کی کلید کا آخری حصہ → (دوبارہ کا نشان، ورک فلو)
 
 
+KIND_UR = {"f": "⚡ فلیش", "p": "🎙️ پوڈکاسٹ", "w": "📘 لفظ", "r": "📰 راؤنڈ اپ"}
+STATUS_UR = {"pending": "⏳ آپ کے ✅ کا انتظار", "approved": "✅ منظور", "redo": "🔄 دوبارہ بن رہی", "skipped": "⛔ منسوخ"}
+YT_UR = {"public": "🟢 پبلک", "private": "🔒 Private", "unlisted": "🔗 Unlisted"}
+
+
+def status_report(ns: dict) -> str:
+    """/status — پچھلی 10 ویڈیوز: ٹیلیگرام منظوری + یوٹیوب پر اصل حالت (یوٹیوب سے تازہ)"""
+    items = sorted(ns.get("days", {}).items())[-10:]
+    live = {}
+    ids = [v["yt"] for _, v in items if v.get("yt")]
+    if ids and yt.enabled():
+        try:
+            j = requests.get("https://www.googleapis.com/youtube/v3/videos", params={"part": "status", "id": ",".join(ids)},
+                             headers={"Authorization": f"Bearer {yt._token()}"}, timeout=30).json()
+            live = {it["id"]: it["status"] for it in j.get("items", [])}
+        except Exception as e:
+            print("یوٹیوب حالت:", e)
+    lines = ["📊 <b>فاروقی اے آئی نیوز — حالت</b>"]
+    for day, v in reversed(items):
+        kind = KIND_UR.get(day[-1], "📺 بلیٹن") if day[-2] == "-" else "📺 بلیٹن"
+        st = STATUS_UR.get(v.get("status"), v.get("status") or "")
+        if v.get("yt"):
+            l = live.get(v["yt"], {})
+            ys = YT_UR.get(l.get("privacyStatus"), "❓ نہیں ملی")
+            if l.get("publishAt"):
+                ys = f"⏰ شیڈول ({l['publishAt'][:16].replace('T', ' ')} UTC)"
+            ys += f" — https://youtu.be/{v['yt']}"
+        else:
+            ys = "یوٹیوب پر اپلوڈ نہیں"
+        lines.append(f"\n<b>{day[:10]}</b> · {kind}\n{st} · {ys}")
+    return "\n".join(lines)[:4000]
+
+
 def poll() -> None:
     """اے آئی نیوز کے اپنے بوٹ کے بٹن (✅/❌) اور ویڈیو پر Reply والی ہدایت"""
     ns = read_json(STATE) if STATE.exists() else {}
@@ -1068,6 +1109,9 @@ def poll() -> None:
             tg_call("sendMessage", chat_id=me, text="📺 فاروقی اے آئی نیوز — جڑ گیا ✅ روزانہ بلیٹن دوپہر تقریباً 2 بجے یہاں آئے گا۔")
         elif (msg := up.get("message")) and str(msg.get("chat", {}).get("id")) == me:
             rt, text = msg.get("reply_to_message"), (msg.get("text") or "").strip()
+            if text.split("@")[0] in ("/status", "/halat", "حالت", "/حالت"):
+                tg_call("sendMessage", chat_id=me, text=status_report(ns), parse_mode="HTML", link_preview_options={"is_disabled": True})
+                continue
             if rt and text and rt.get("message_id") == (ns.get("podcast") or {}).get("mid"):
                 from . import podcast                   # موضوعات والے پیغام پر Reply = اپنا موضوع
                 podcast.on_custom(ns, text, me)

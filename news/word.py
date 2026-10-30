@@ -192,6 +192,11 @@ def make(sample: bool = False, feedback: str | None = None) -> bool:
                                   "#shorts #اے_آئی #آج_کا_اے_آئی_لفظ #فاروقی_اے_آئی_نیوز")[:4900],
           "tags": list(dict.fromkeys((d.get("tags") or []) + [d["term"], d.get("en", ""), "آج کا اے آئی لفظ", "AI Urdu", "shorts"]))}
     key = B._today() + "-w"
+    try:
+        from . import seo as SEO
+        SEO.attach("word", key, d, sd, [d["term"], d["meaning"], d["example"], d["script"]])
+    except Exception as e:
+        print("SEO پیکیج نہیں بنا:", e)
     d["stories"] = [{"headline": f"آج کا اے آئی لفظ: {d['term']}"}]
     vmid, mids = B.deliver(final, B.ROOT / "word_thumb.jpg", sd, d, key=key, label=f"📘 آج کا اے آئی لفظ — «{d['term']}»",
                            size=(1080, 1920), when=when)

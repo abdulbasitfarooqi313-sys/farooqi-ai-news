@@ -266,6 +266,11 @@ def make(sample: bool = False, feedback: str | None = None) -> Path:
                                       + "\n\n🎬 Photos: Pexels / Pixabay\nآواز: اے آئی\n\n#shorts #اے_آئی #AINews #فاروقی_اے_آئی_نیوز")[:4900],
               "tags": list(dict.fromkeys((d.get("tags") or []) + ["اے آئی فلیش", "AI News Urdu", "فاروقی اے آئی نیوز", "shorts"]))}
         key = B._today() + "-f"
+        try:
+            from . import seo as SEO
+            SEO.attach("flash", key, d, sd, [it["h"] for it in d["items"]], [it.get("link", "") for it in d["items"] if it.get("link")])
+        except Exception as e:
+            print("SEO پیکیج نہیں بنا:", e)
         d["stories"] = [{"headline": it["h"]} for it in d["items"]]
         vmid, mids = B.deliver(final, B.ROOT / "flash_thumb.jpg", sd, d, key=key, label=f"اے آئی فلیش — {n} سرخیاں", size=(1080, 1920))
         ytinfo = B._yt_upload(final, None, sd)

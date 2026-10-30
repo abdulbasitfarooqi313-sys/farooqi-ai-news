@@ -367,6 +367,11 @@ def make(sample: bool = False, feedback: str | None = None) -> Path:
                                       + "\n\nآوازیں: اے آئی · یہ سرمایہ کاری کا مشورہ نہیں۔\n\n#اے_آئی_بیٹھک #پوڈکاسٹ #AINews #فاروقی_اے_آئی_نیوز")[:4900],
               "tags": list(dict.fromkeys((d.get("tags") or []) + ["اے آئی بیٹھک", "اردو پوڈکاسٹ", "AI Podcast Urdu", "فاروقی اے آئی نیوز"]))}
         key = B._today() + "-p"
+        try:
+            from . import seo as SEO
+            SEO.attach("podcast", key, d, sd, [l["t"][:160] for l in d["lines"]], [x.get("link", "") for x in d.get("sources", []) if x.get("link")])
+        except Exception as e:
+            print("SEO پیکیج نہیں بنا:", e)
         d["stories"] = [{"headline": d["title"]}]
         vmid, mids = B.deliver(final, B.ROOT / "podcast_thumb.jpg", sd, d, key=key,
                                label=f"🎙️ اے آئی بیٹھک — «{d['title']}»" + ("" if engine == "gemini" else " (مائیکروسافٹ آوازیں)"))
