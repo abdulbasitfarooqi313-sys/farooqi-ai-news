@@ -25,6 +25,48 @@ def tts(prompt):
                           {"speaker": "Sarah", "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": "Aoede"}}},
                           {"speaker": "Ahmed", "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": "Orus"}}}]}}}})
 import os, time, asyncio
+def gem_line(text, voice, keys):
+    """ٹریلر والا طریقہ: ایک وقت میں ایک آواز۔ کوٹا ختم ہو تو اگلی چابی۔"""
+    while keys:
+        r = requests.post("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent",
+                          params={"key": keys[0]}, timeout=240, json={
+                              "contents": [{"parts": [{"text": "Read the following Urdu text aloud in a warm, natural podcast tone:\n\n" + text}]}],
+                              "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {
+                                  "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}})
+        c = (r.json().get("candidates") or [{}])[0] if r.ok else {}
+        if c.get("content"):
+            return c["content"]["parts"][0]["inlineData"]
+        print("TTS_TRY", r.status_code, c.get("finishReason"), r.text[:120].replace("\n", " "))
+        if r.status_code == 429:
+            m = re.search(r'"retryDelay":\s*"(\d+)', r.text)
+            if re.search(r"PerDay|per_day|limit: 0", r.text, flags=re.I) or not m:
+                keys.pop(0); print("TTS_KEY next"); continue
+            time.sleep(int(m.group(1)) + 3); continue
+        return None
+    return None
+
+
+if os.environ.get("POD_TTS") == "gemini1":
+    keys = [k for k in (os.environ.get("GEMINI_API_KEY"), os.environ.get("GEMINI_BACKUP_KEY")) if k]
+    V = {"Sarah": "Aoede", "Ahmed": "Orus"}
+    pcm, rate, ok = b"", 24000, True
+    for i, l in enumerate(lines):
+        if i:
+            time.sleep(22)                                   # مفت حد: فی منٹ 3 درخواستیں
+        part = gem_line(l["t"].strip(), V[l["s"]], keys) or (time.sleep(8) or gem_line(l["t"].strip(), V[l["s"]], keys))
+        if not part:
+            print("TTS_FAIL line", i, "→ edge"); ok = False; break
+        rate = int(re.search(r"rate=(\d+)", part.get("mimeType", "rate=24000")).group(1))
+        pcm += base64.b64decode(part["data"]) + b"\x00\x00" * int(rate * 0.3)
+    if ok:
+        with wave.open("pod.wav", "wb") as w:
+            w.setnchannels(1); w.setsampwidth(2); w.setframerate(rate); w.writeframes(pcm)
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", "pod.wav", "-af", "loudnorm=I=-16:TP=-1.5", "-c:a", "aac", "-b:a", "128k",
+                        "podcast-namuna.m4a"], check=True)
+        Path("pod_script.json").write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
+        print("TOPIC", d.get("topic"), "| lines", len(lines), "| gemini one-voice-at-a-time")
+        sys.exit(0)
+    os.environ["POD_TTS"] = "edge"
 if os.environ.get("POD_TTS") == "edge":                 # مائیکروسافٹ کی مفت اردو آوازیں (کوئی کوٹا نہیں) — مالک کی ہدایت پر نمونے کے لیے
     import edge_tts
     V = {"Sarah": "ur-PK-UzmaNeural", "Ahmed": "ur-PK-AsadNeural"}
