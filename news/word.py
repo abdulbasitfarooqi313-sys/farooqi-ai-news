@@ -42,7 +42,7 @@ SYSTEM = """آپ «فاروقی اے آئی نیوز» کے روزانہ شار�
 سختی سے: درست، مستند معلومات؛ کوئی عدد/دعویٰ گھڑنا نہیں؛ انگریزی اصطلاح اردو رسم الخط میں (Prompt = پرامپٹ)؛ کوئی انگریزی حرف، ایموجی، بریکٹ نہیں۔
 صرف JSON: {"term": "اصطلاح اردو رسم الخط میں (1 تا 3 الفاظ)", "en": "English term", "script": "بولا جانے والا متن",
  "meaning": "اسکرین پر: ایک مختصر جملے کی تعریف (8 تا 14 الفاظ)", "example": "اسکرین پر: مختصر مثال (8 تا 14 الفاظ)",
- "photo_query": "Pixabay/Pexels تصویر کی تلاش، انگریزی 2 تا 4 الفاظ (موضوع کا منظر، کوئی شخص یا برانڈ نہیں)",
+ "photo_query": "Pixabay تصویر کی تلاش، انگریزی 2 تا 4 الفاظ — صرف اشیا/ٹیکنالوجی کا منظر (کمپیوٹر، سرکٹ، روبوٹ، فون…)، کوئی انسان، چہرہ یا برانڈ نہیں",
  "youtube_title": "عنوان (اردو، زیادہ سے زیادہ 70 حروف)", "summary": "تفصیل کے 1 تا 2 جملے", "tags": ["10 تا 14 ٹیگ اردو/انگریزی"]}"""
 
 
@@ -98,6 +98,29 @@ def _edge_voice(text: str, dest: Path) -> Path:
     return _norm(mp3, dest, pad=0.1)
 
 
+NO_PEOPLE = ("woman", "man", "girl", "boy", "person", "people", "child", "face", "female", "male", "lady", "portrait", "human",
+             "businessman", "businesswoman", "student", "kid", "hand", "hands", "model", "selfie")
+
+
+def _photo_no_people(q: str, dest: Path) -> str | None:
+    """Pixabay کی کھڑی تصویر جس کے ٹیگ میں کوئی انسان نہ ہو (مالک: تصاویر میں چہرے نہیں)"""
+    key = os.environ.get("PIXABAY_API_KEY", "").strip()
+    if not key:
+        return None
+    try:
+        r = requests.get("https://pixabay.com/api/", timeout=30, params={"key": key, "q": q, "image_type": "photo",
+                         "orientation": "vertical", "safesearch": "true", "per_page": 40, "min_height": 1600})
+        for h in r.json().get("hits", []):
+            tags = (h.get("tags") or "").lower()
+            if any(re.search(rf"\b{b}\b", tags) for b in NO_PEOPLE):
+                continue
+            dest.write_bytes(requests.get(h.get("largeImageURL") or h["webformatURL"], timeout=60).content)
+            return B._b64(dest, "image/jpeg")
+    except Exception as e:
+        print("تصویر نہیں ملی:", e)
+    return None
+
+
 def build(d: dict, voice: Path, tmp: Path) -> tuple[Path, Path]:
     voice = B._trim(voice, tmp / "v.trim.wav")
     vd = B._dur(voice)
@@ -115,7 +138,7 @@ def build(d: dict, voice: Path, tmp: Path) -> tuple[Path, Path]:
     caps = _chunks(d["script"], lead, lead + vd, max_words=6)
     used: set = set()
     q = d.get("photo_query") or "artificial intelligence technology"
-    photo = F.photo(q, tmp / "p.jpg", used) or F.photo_pixabay(q, tmp / "p.jpg", used) or ""
+    photo = _photo_no_people(q, tmp / "p.jpg") or _photo_no_people("artificial intelligence technology abstract", tmp / "p.jpg") or ""
     data = {"term": d["term"], "n": d["n"], "meaning": d["meaning"], "example": d["example"], "caps": caps, "photo": photo,
             "t_meaning": round(lead + vd * 0.22, 2), "t_example": round(lead + vd * 0.5, 2), "end_t": round(lead + vd + 0.3, 2), "dur": round(dur, 2)}
     html = (B.A / "word.html").read_text(encoding="utf-8")

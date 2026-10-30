@@ -43,6 +43,7 @@ const U=n=>String(n).padStart(3,'0').replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d])
 if(NF.photo)$('ph').style.backgroundImage=`url('${NF.photo}')`;
 $('num').textContent='لفظ نمبر '+U(NF.n); document.querySelector('#term .t').textContent=NF.term;
 document.querySelector('#mean .x').textContent=NF.meaning; document.querySelector('#ex .x').textContent=NF.example;
+function place(){const m=$('mean');$('ex').style.top=(m.offsetTop+m.offsetHeight+34)+'px';const e=$('ex');$('cap').style.top=Math.max(1500,e.offsetTop+e.offsetHeight+50)+'px'}
 const ease=x=>1-Math.pow(1-Math.max(0,Math.min(1,x)),3);
 function render(t){
  const p=t/NF.dur;
@@ -53,5 +54,5 @@ function render(t){
  $('end').style.opacity=t>=NF.end_t?Math.min(1,(t-NF.end_t)/0.35):0;
  $('prog').style.width=(1080*Math.min(1,p))+'px';
 }
-document.fonts.ready.then(()=>{render(0);document.title='ready'});
+document.fonts.ready.then(()=>{place();render(0);document.title='ready'});
 </script></body></html>
