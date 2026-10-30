@@ -182,6 +182,8 @@ def _gem(text: str, voice: str, keys: list[str]) -> dict | None:
                 "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}})
         if keys[0] == gemini_key():
             B.tts_note()
+        else:
+            B.tts_note_backup()
         c = (r.json().get("candidates") or [{}])[0] if r.ok else {}
         if c.get("content"):
             return c["content"]["parts"][0]["inlineData"]
@@ -204,22 +206,33 @@ def _gem(text: str, voice: str, keys: list[str]) -> dict | None:
     return None
 
 
-def voices(lines: list[dict], tmp: Path) -> tuple[list[Path], str]:
+def _wav(part: dict, raw: Path) -> Path:
+    rate = int(re.search(r"rate=(\d+)", part.get("mimeType", "rate=24000")).group(1))
+    with wave.open(str(raw), "wb") as w:
+        w.setnchannels(1); w.setsampwidth(2); w.setframerate(rate); w.writeframes(base64.b64decode(part["data"]))
+    return raw
+
+
+def voices(lines: list[dict], tmp: Path, cached: dict | None = None) -> tuple[list[Path], str]:
+    """cached: جمعرات کی رات ریزرو چابی سے پہلے سے بنی باریاں {نمبر: فائل} — صرف باقی جمعہ کو بنتی ہیں"""
+    cached = cached or {}
     keys = [k for k in (gemini_key() if B.tts_used() < B.TTS_LIMIT else None, os.environ.get("GEMINI_BACKUP_KEY", "").strip()) if k]
     out = []
-    if os.environ.get("POD_TTS", "gemini") == "gemini" and keys:
+    if os.environ.get("POD_TTS", "gemini") == "gemini" and (keys or len(cached) == len(lines)):
+        first = True
         for i, l in enumerate(lines):
-            if i:
+            if i in cached:
+                out.append(B._trim(_norm(cached[i], tmp / f"c{i}.n.wav", pad=0.1), tmp / f"c{i}.wav"))
+                continue
+            if not first:
                 time.sleep(22)                                  # مفت حد: فی منٹ 3 درخواستیں
+            first = False
             part = _gem(l["t"], VOICES[l["s"]], keys)
             if not part:
                 print(f"جیمنائی باری {i + 1} پر رک گیا — پوری گفتگو مائیکروسافٹ کی آوازوں میں")
                 out = []
                 break
-            rate = int(re.search(r"rate=(\d+)", part.get("mimeType", "rate=24000")).group(1))
-            raw = tmp / f"g{i}.raw.wav"
-            with wave.open(str(raw), "wb") as w:
-                w.setnchannels(1); w.setsampwidth(2); w.setframerate(rate); w.writeframes(base64.b64decode(part["data"]))
+            raw = _wav(part, tmp / f"g{i}.raw.wav")
             out.append(B._trim(_norm(raw, tmp / f"g{i}.n.wav", pad=0.1), tmp / f"g{i}.wav"))
         if out:
             return out, "gemini"
@@ -242,8 +255,8 @@ def voices(lines: list[dict], tmp: Path) -> tuple[list[Path], str]:
 
 # ---------------- ویڈیو ----------------
 
-def build(d: dict, tmp: Path) -> tuple[Path, Path, str]:
-    ws, engine = voices(d["lines"], tmp)
+def build(d: dict, tmp: Path, cached: dict | None = None) -> tuple[Path, Path, str]:
+    ws, engine = voices(d["lines"], tmp, cached)
     parts, t = [], 0.0
 
     def add(p: Path):
@@ -328,11 +341,17 @@ def make(sample: bool = False, feedback: str | None = None) -> Path:
         suggest(send=not sample)
         st = read_json(B.STATE)
         topic = _topic({"podcast": st.get("podcast_sample")} if sample else st)
-    d = script(topic, feedback)
+    cdir, cached = _cache_dir(), {}
+    if not sample and not feedback and (cdir / "script.json").exists():     # جمعرات کی رات کی پیشگی تیاری
+        d = read_json(cdir / "script.json")
+        cached = {int(p.stem): p for p in cdir.glob("*.m4a")}
+        print(f"پیشگی تیار اسکرپٹ؛ {len(cached)} باریاں پہلے سے آواز میں")
+    else:
+        d = script(topic, feedback)
     print("موضوع:", d["topic"], "| باریاں:", len(d["lines"]), "| الفاظ:", sum(len(l["t"].split()) for l in d["lines"]))
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
-        out, thumb, engine = build(d, tmp)
+        out, thumb, engine = build(d, tmp, cached)
         import shutil
         final = B.ROOT / "podcast.mp4"
         shutil.copy(out, final)
@@ -359,7 +378,57 @@ def make(sample: bool = False, feedback: str | None = None) -> Path:
     st.pop("redo_p", None)
     st["days"] = dict(sorted(st["days"].items())[-60:])
     write_json(B.STATE, st)
+    import shutil
+    shutil.rmtree(B.ROOT / "cache" / "podcast", ignore_errors=True)     # پیشگی آوازیں استعمال ہو چکیں
     return final
+
+
+def _cache_dir(friday: dt.date | None = None) -> Path:
+    if friday is None:
+        today = dt.datetime.now(B.TZ).date()
+        friday = today + dt.timedelta(days=(POD_DAY - today.weekday()) % 7)
+    return B.ROOT / "cache" / "podcast" / friday.isoformat()
+
+
+def prevoice(max_req: int) -> int:
+    """جمعرات کی رات (ریزرو چابی کی بچت سے): کل کے پوڈکاسٹ کا اسکرپٹ + جتنی باریاں ہو سکیں آواز میں — صرف دوسری چابی۔
+    جمعہ کو صرف باقی باریاں پہلی چابی سے بنتی ہیں۔ لوٹاتا ہے: کتنی درخواستیں لگیں۔"""
+    key = os.environ.get("GEMINI_BACKUP_KEY", "").strip()
+    if not key or max_req < 1:
+        return 0
+    cdir = _cache_dir()
+    cdir.mkdir(parents=True, exist_ok=True)
+    if (cdir / "script.json").exists():
+        d = read_json(cdir / "script.json")
+    else:
+        st = read_json(B.STATE) if B.STATE.exists() else {}
+        topic = _topic(st)
+        if topic is None:
+            print("اس ہفتے کا موضوع نہیں (بدھ کی فہرست نہیں گئی) — پیشگی تیاری نہیں")
+            return 0
+        d = script(topic)
+        write_json(cdir / "script.json", d)
+    used = 0
+    with tempfile.TemporaryDirectory() as td:
+        tmp = Path(td)
+        for i, l in enumerate(d["lines"]):
+            dest = cdir / f"{i}.m4a"
+            if dest.exists():
+                continue
+            if used >= max_req:
+                break
+            if used:
+                time.sleep(22)
+            keys = [key]
+            part = _gem(l["t"], VOICES[l["s"]], keys)
+            used += 1
+            if not part:
+                print(f"پیشگی آواز باری {i + 1} پر رکی")
+                break
+            raw = _wav(part, tmp / f"p{i}.wav")
+            B._ff("-i", str(raw), "-ac", "1", "-c:a", "aac", "-b:a", "96k", str(dest))
+    print(f"🎙️ پیشگی تیاری: {len(list(cdir.glob('*.m4a')))}/{len(d['lines'])} باریاں ({used} درخواستیں)")
+    return used
 
 
 def tick(force: bool = False) -> None:

@@ -228,6 +228,22 @@ def tts_note(n: int = 1) -> None:
     write_json(TTS_LEDGER, led)
 
 
+TTS_BACKUP_LEDGER = ROOT / "state" / "tts_backup.json"   # ریزرو (دوسری) چابی کی گنتی — رات کا «بچت والا کام» اسی سے فیصلہ کرتا ہے
+
+
+def backup_used() -> int:
+    led = read_json(TTS_BACKUP_LEDGER) if TTS_BACKUP_LEDGER.exists() else {}
+    return int(led.get(_pt_day(), 0))
+
+
+def tts_note_backup(n: int = 1) -> None:
+    led = read_json(TTS_BACKUP_LEDGER) if TTS_BACKUP_LEDGER.exists() else {}
+    day = _pt_day()
+    led = {k: v for k, v in led.items() if k >= (dt.date.fromisoformat(day) - dt.timedelta(days=7)).isoformat()}
+    led[day] = int(led.get(day, 0)) + n
+    write_json(TTS_BACKUP_LEDGER, led)
+
+
 def tts_guard(need: int, what: str) -> None:
     """حفاظتی تالا: کام شروع کرنے سے پہلے — بچت 2 سے کم ہونے کا خطرہ ہو تو نہیں چلے گا"""
     used = tts_used()
@@ -257,6 +273,8 @@ def _speak(texts: list[str], voice: str, tmp: Path, tag: str) -> list[Path]:
                                       "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}})
             if not _BACKUP["on"]:
                 tts_note()
+            else:
+                tts_note_backup()
             if r.status_code == 429:
                 if re.search(r"PerDay|per_day|per day|RequestsPerDay|limit: 0", r.text, flags=re.I):
                     if not _BACKUP["on"] and os.environ.get("GEMINI_BACKUP_KEY", "").strip():
@@ -838,7 +856,7 @@ def news_chat():
 
 
 def deliver(video: Path, thumb: Path, sd: dict, d: dict, key: str | None = None, label: str = "آج کا بلیٹن",
-            size: tuple = (1920, 1080)) -> list:
+            size: tuple = (1920, 1080), when: dt.datetime | None = None) -> list:
     day = key or _today()
     so = d.get("social") or {}
     mins = _dur(video)
@@ -851,7 +869,7 @@ def deliver(video: Path, thumb: Path, sd: dict, d: dict, key: str | None = None,
     record_start()
     say(f"📺 <b>فاروقی اے آئی نیوز — {urdu_date()}</b>\n{label} ({int(mins // 60)}:{int(mins % 60):02d} منٹ)، "
                  f"تھمب نیل، اور یوٹیوب / سوشل میڈیا کا پورا پیکیج۔ ویڈیو پسند ہے تو ✅، دوبارہ بنوانی ہو تو ❌ "
-                 f"(یا ویڈیو پر Reply کر کے لکھیں کیا بدلنا ہے)۔\n\n⏰ <b>اپلوڈ کا وقت: {_upload_time()}</b>")
+                 f"(یا ویڈیو پر Reply کر کے لکھیں کیا بدلنا ہے)۔\n\n⏰ <b>اپلوڈ کا وقت: {_upload_time(when)}</b>")
     vmid = send_video(chat, video, caption=f"📺 فاروقی اے آئی نیوز — {urdu_date()}\n" + "\n".join(f"{i + 1}. {s['headline']}" for i, s in enumerate(d["stories"])),
                       width=size[0], height=size[1],
                          buttons=[[{"text": "✅ منظور", "callback_data": f"nok:{day}"}, {"text": "❌ دوبارہ بنائیں", "callback_data": f"nno:{day}"}]])
@@ -941,12 +959,17 @@ def _hm(x: dt.datetime) -> str:
     return f"{(x.hour - 1) % 12 + 1}:{x.minute:02d}"
 
 
-def _upload_time() -> str:
-    t = _upload_dt()
-    return f"آج {_hm(t)} بجے سعودی وقت ({_hm(t + dt.timedelta(hours=2))} بجے پاکستان)"
+def _when_text(t: dt.datetime) -> str:
+    now = dt.datetime.now(TZ)
+    day = "آج" if t.date() == now.date() else ("کل" if t.date() == now.date() + dt.timedelta(days=1) else urdu_date(t.date()))
+    return f"{day} {_hm(t)} بجے سعودی وقت ({_hm(t + dt.timedelta(hours=2))} بجے پاکستان)"
 
 
-def _yt_upload(video: Path, thumb: Path, sd: dict, playlist: bool | str = True) -> dict:
+def _upload_time(t: dt.datetime | None = None) -> str:
+    return _when_text(t or _upload_dt())
+
+
+def _yt_upload(video: Path, thumb: Path, sd: dict, playlist: bool | str = True, when: dt.datetime | None = None) -> dict:
     """یوٹیوب پر Private اپلوڈ (✅ کے بعد ہی پبلک) — ناکامی پر بلیٹن نہیں رکتا، ٹیلیگرام پر اطلاع"""
     if not yt.enabled():
         return {}
@@ -957,10 +980,10 @@ def _yt_upload(video: Path, thumb: Path, sd: dict, playlist: bool | str = True) 
         LOG.append(f"یوٹیوب: {e}")
         send_text(chat, f"⚠️ یوٹیوب پر خودکار اپلوڈ نہ ہو سکا: {str(e)[:300]}\nاوپر کے پیکیج سے ہاتھ سے لگا دیں۔", html=False)
         return {}
-    when = _upload_dt()
+    when = when or _upload_dt()
     notes = "".join(f"\n• {n}" for n in r["notes"])
     send_text(chat, f"📤 یوٹیوب پر <b>Private</b> اپلوڈ ہو گیا (ابھی صرف آپ کو نظر آئے گا):\n{r['url']}\n\n"
-                    f"✅ دبائیں گے تو {_upload_time()} خود پبلک ہو جائے گا۔ ❌ پر Private ہی رہے گا۔{notes}")
+                    f"✅ دبائیں گے تو {_upload_time(when)} خود پبلک ہو جائے گا۔ ❌ پر Private ہی رہے گا۔{notes}")
     return {"yt": r["id"], "yt_at": when.isoformat()}
 
 
@@ -980,7 +1003,7 @@ def tick(force: bool = False) -> None:
     make(feedback=(redo or {}).get("feedback") if isinstance(redo, dict) else None)
 
 
-SIDE = {"-r": ("redo_r", "roundup.yml"), "-f": ("redo_f", "flash.yml"), "-p": ("redo_p", "podcast.yml")}   # دن کی کلید کا آخری حصہ → (دوبارہ کا نشان، ورک فلو)
+SIDE = {"-r": ("redo_r", "roundup.yml"), "-f": ("redo_f", "flash.yml"), "-p": ("redo_p", "podcast.yml"), "-w": ("redo_w", "reserve.yml")}   # دن کی کلید کا آخری حصہ → (دوبارہ کا نشان، ورک فلو)
 
 
 def poll() -> None:

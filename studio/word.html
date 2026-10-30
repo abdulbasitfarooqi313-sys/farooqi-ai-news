@@ -1,0 +1,57 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:NQ;src:url('__NQFONT__')}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#05070f;font-family:NQ,serif}
+#ph{position:absolute;inset:-60px;background-size:cover;background-position:center}
+#dim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,11,42,.55) 0%,rgba(5,11,42,.35) 30%,rgba(5,11,42,.82) 62%,#050b2a 100%)}
+#top{position:absolute;right:0;top:0;width:900px;height:170px;background:linear-gradient(90deg,#0a1550,#15286a);clip-path:polygon(9% 0,100% 0,100% 100%,0 100%);border-bottom:6px solid #e2b84f}
+#top .l{position:absolute;right:190px;top:12px;font-size:76px;line-height:1.6;color:#fff;direction:rtl;white-space:nowrap}
+#top .l b{font-weight:normal;color:#ffe39a}
+#brand{position:absolute;right:28px;top:18px;width:136px;height:136px;border-radius:50%;background:url('__LOGO__') center/cover;box-shadow:0 0 0 5px #e2b84f,0 0 28px rgba(124,196,255,.7)}
+#num{position:absolute;left:40px;top:44px;font-size:44px;line-height:1.7;color:#0a1550;background:#e2b84f;border-radius:40px;padding:0 30px 6px;direction:rtl}
+#term{position:absolute;left:70px;right:70px;top:430px;text-align:center;direction:rtl}
+#term .k{display:inline-block;font-size:46px;color:#cfe0ff;margin-bottom:10px}
+#term .t{display:block;font-size:150px;line-height:1.55;color:#0a1550;background:linear-gradient(135deg,#ffe39a,#e2b84f 60%,#d4a53d);border-radius:30px;padding:10px 40px 40px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.card{position:absolute;left:70px;right:70px;direction:rtl;text-align:right;border-radius:26px;background:rgba(10,21,80,.88);border-right:10px solid #e2b84f;padding:18px 40px 30px;opacity:0}
+.card .h{font-size:40px;color:#ffe39a}
+.card .x{font-size:54px;line-height:1.75;color:#fff}
+#mean{top:960px}#ex{top:1200px}
+#ex{border-right-color:#7cc4ff}#ex .h{color:#9fd4ff}
+#cap{position:absolute;left:60px;right:60px;top:1500px;text-align:center;direction:rtl;font-size:60px;line-height:1.7;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.9)}
+#cap span{background:rgba(5,11,42,.75);border-radius:16px;padding:0 24px 10px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+#b2{position:absolute;left:0;right:0;bottom:0;height:170px;background:linear-gradient(180deg,rgba(10,21,80,0),#0a1550 60%)}
+#b2 .t{position:absolute;right:160px;bottom:44px;font-size:48px;color:#ffe39a;direction:rtl}
+#brand2{position:absolute;right:40px;bottom:30px;width:100px;height:100px;border-radius:50%;background:url('__LOGO__') center/cover;box-shadow:0 0 0 4px #e2b84f}
+#prog{position:absolute;left:0;bottom:0;height:10px;width:0;background:linear-gradient(90deg,#d4a53d,#ffe39a)}
+#end{position:absolute;inset:0;background:radial-gradient(1200px 1400px at 50% 40%,#15286a,#0a1550 55%,#050b33);opacity:0}
+#end .lg{position:absolute;left:390px;top:440px;width:300px;height:300px;border-radius:50%;background:url('__LOGO__') center/cover;box-shadow:0 0 0 8px #e2b84f,0 0 60px rgba(124,196,255,.6)}
+#end .a{position:absolute;left:0;right:0;top:830px;text-align:center;font-size:76px;color:#ffe39a;direction:rtl}
+#end .sub{position:absolute;left:290px;top:1020px;width:500px;height:120px;border-radius:24px;background:linear-gradient(180deg,#ffe39a,#d4a53d);color:#0a1550;font-size:60px;line-height:1.7;text-align:center}
+#end .m{position:absolute;left:0;right:0;top:1200px;text-align:center;font-size:48px;color:#cfe0ff;direction:rtl}
+</style></head><body>
+<div id="ph"></div><div id="dim"></div>
+<div id="top"><div class="l">آج کا <b>اے آئی لفظ</b></div></div><div id="brand"></div><div id="num"></div>
+<div id="term"><div class="k">آج کا لفظ</div><div class="t"></div></div>
+<div class="card" id="mean"><div class="h">مطلب</div><div class="x"></div></div>
+<div class="card" id="ex"><div class="h">مثال</div><div class="x"></div></div>
+<div id="cap"></div>
+<div id="b2"><div class="t">فاروقی اے آئی نیوز</div></div><div id="brand2"></div><div id="prog"></div>
+<div id="end"><div class="lg"></div><div class="a">ہر روز ایک نیا لفظ</div><div class="sub">سبسکرائب کریں</div><div class="m">مصنوعی ذہانت، آسان اردو میں</div></div>
+<script>
+const NF=__NFDATA__, $=id=>document.getElementById(id);
+const U=n=>String(n).padStart(3,'0').replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+if(NF.photo)$('ph').style.backgroundImage=`url('${NF.photo}')`;
+$('num').textContent='لفظ نمبر '+U(NF.n); document.querySelector('#term .t').textContent=NF.term;
+document.querySelector('#mean .x').textContent=NF.meaning; document.querySelector('#ex .x').textContent=NF.example;
+const ease=x=>1-Math.pow(1-Math.max(0,Math.min(1,x)),3);
+function render(t){
+ const p=t/NF.dur;
+ $('ph').style.transform=`scale(${1.05+0.1*p}) translateY(${-30*p}px)`;
+ const k=ease(t/0.6); $('term').style.opacity=k; $('term').style.transform=`scale(${0.85+0.15*k})`;
+ [['mean',NF.t_meaning],['ex',NF.t_example]].forEach(([id,t0])=>{const e=ease((t-t0)/0.45);$(id).style.opacity=e;$(id).style.transform=`translateX(${(1-e)*-80}px)`});
+ const c=NF.caps.find(x=>t>=x.t0&&t<x.t1+0.1); $('cap').innerHTML=c?`<span>${c.text.replace(/[&<>]/g,'')}</span>`:'';
+ $('end').style.opacity=t>=NF.end_t?Math.min(1,(t-NF.end_t)/0.35):0;
+ $('prog').style.width=(1080*Math.min(1,p))+'px';
+}
+document.fonts.ready.then(()=>{render(0);document.title='ready'});
+</script></body></html>
