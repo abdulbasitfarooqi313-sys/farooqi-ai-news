@@ -1034,6 +1034,9 @@ def poll() -> None:
                 podcast.on_pick(ns, week, int(i or 0), chat)
                 continue
             d = ns.setdefault("days", {}).setdefault(day, {})
+            if d.get("status") == "skipped":            # مائیکروسافٹ آواز والی/منسوخ قسط — نہ شائع، نہ دوبارہ
+                tg_call("sendMessage", chat_id=chat, text="ℹ️ یہ قسط منسوخ ہے (اصل آواز جیمنائی والی نہیں) — شائع نہیں ہوگی، Private ہی رہے گی۔")
+                continue
             if action == "nok":
                 d["status"] = "approved"
                 if d.get("yt") and yt.enabled():
