@@ -177,7 +177,7 @@
    "yt_at": "2026-10-29T22:00:00+03:00"
   },
   "2026-10-30-p": {
-   "status": "pending",
+   "status": "skipped",
    "vmid": 95,
    "mids": [
     94,

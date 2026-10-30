@@ -154,16 +154,7 @@ def voices(texts: list[str], tmp: Path) -> list[Path]:
     جیمنائی ناکام ہو (کوٹا یا خالی جواب) تو مائیکروسافٹ کی آواز — تاکہ فلیش رکے نہیں (ٹیلیگرام پر اطلاع)۔"""
     if os.environ.get("FLASH_TTS", "gemini") == "edge":
         return _edge(texts, tmp)
-    try:
-        return B._speak(texts, B.ANCHOR_VOICE, tmp, "fl")
-    except Exception as e:
-        B.LOG.append(f"فلیش: جیمنائی آواز نہ بنی ({str(e)[:120]}) — مائیکروسافٹ کی آواز")
-        print(B.LOG[-1])
-        try:
-            send_text(B.news_chat(), "ℹ️ آج کی اے آئی فلیش میں جیمنائی کی آواز نہ بن سکی، اس لیے مائیکروسافٹ کی اردو آواز لگائی گئی ہے۔", html=False)
-        except Exception:
-            pass
-        return _edge(texts, tmp)
+    return B._speak(texts, B.ANCHOR_VOICE, tmp, "fl")     # مالک کا اصول: اصل فلیش صرف جیمنائی آواز؛ ناکام ہو تو اگلے وقت پر دوبارہ
 
 
 def build(d: dict, tmp: Path) -> tuple[Path, Path]:

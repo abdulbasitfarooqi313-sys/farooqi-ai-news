@@ -236,10 +236,8 @@ def voices(lines: list[dict], tmp: Path, cached: dict | None = None) -> tuple[li
             out.append(B._trim(_norm(raw, tmp / f"g{i}.n.wav", pad=0.1), tmp / f"g{i}.wav"))
         if out:
             return out, "gemini"
-        try:
-            send_text(B.news_chat(), "ℹ️ آج کی «اے آئی بیٹھک» میں جیمنائی کی آواز پوری نہ بن سکی، اس لیے مائیکروسافٹ کی اردو آوازیں لگائی گئی ہیں۔", html=False)
-        except Exception:
-            pass
+    if os.environ.get("POD_TTS", "gemini") != "edge":   # مالک کا اصول: اصل قسط صرف جیمنائی آواز — مائیکروسافٹ صرف نمونے میں
+        raise RuntimeError("جیمنائی آواز نہ بن سکی (کوٹا/خرابی) — اگلے مقررہ وقت پر دوبارہ کوشش ہوگی")
     import edge_tts
     for i, l in enumerate(lines):
         mp3 = tmp / f"e{i}.mp3"
