@@ -166,7 +166,7 @@ def script(topic: dict | str, feedback: str | None = None) -> dict:
 
 def _gem(text: str, voice: str, keys: list[str]) -> dict | None:
     """ایک باری، ایک آواز۔ پہلی چابی کا روزانہ کوٹا ختم → دوسری۔ OTHER پر ایک بار دوبارہ۔"""
-    other = 0
+    other = wait429 = 0
     while keys:
         r = requests.post(TTS_URL, params={"key": keys[0]}, timeout=240, json={
             "contents": [{"parts": [{"text": "Read the following Urdu text aloud in a warm, natural podcast tone:\n\n" + text}]}],
@@ -180,10 +180,14 @@ def _gem(text: str, voice: str, keys: list[str]) -> dict | None:
         print("TTS", r.status_code, c.get("finishReason"), r.text[:140].replace("\n", " "))
         if r.status_code == 429:
             m = re.search(r'"retryDelay":\s*"(\d+)', r.text)
-            if re.search(r"PerDay|per_day|limit: 0", r.text, flags=re.I) or not m:
+            if re.search(r"PerDay|per_day", r.text, flags=re.I):      # اس چابی کا آج کا کوٹا ختم → اگلی چابی
                 keys.pop(0)
                 continue
-            time.sleep(min(65, int(m.group(1)) + 3))
+            wait429 += 1                                              # فی منٹ کی حد: رک کر دوبارہ (چابی ضائع نہ ہو)
+            if wait429 > 3:
+                keys.pop(0)
+                continue
+            time.sleep(min(65, int(m.group(1)) + 3) if m else 62)
             continue
         other += 1
         if other > 1:
@@ -308,6 +312,8 @@ def _topic(st: dict):
 
 
 def make(sample: bool = False, feedback: str | None = None) -> Path:
+    if sample:                                          # مالک کا اصول: نمونہ = مائیکروسافٹ آواز، اصل قسط = جیمنائی
+        os.environ["POD_TTS"] = "edge"
     st = read_json(B.STATE) if B.STATE.exists() else {}
     topic = _topic(st)
     if topic is None:                                   # بدھ کو فہرست نہ گئی ہو تو ابھی بنا کر پہلا موضوع

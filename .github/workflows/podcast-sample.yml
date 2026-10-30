@@ -18,7 +18,7 @@ jobs:
           GEMINI_NEWS_KEY: ${{ secrets.GEMINI_NEWS_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_BACKUP_KEY: ${{ secrets.GEMINI_BACKUP_KEY }}
-          POD_TTS: gemini1
+          POD_TTS: edge        # مالک کا اصول: نمونے ہمیشہ مائیکروسافٹ آواز سے
         run: |
           set +e
           PYTHONPATH=. python -u lab/podcast_sample.py > out.txt 2>&1; rc=$?

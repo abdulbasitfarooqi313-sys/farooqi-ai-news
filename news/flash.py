@@ -241,6 +241,8 @@ def build(d: dict, tmp: Path) -> tuple[Path, Path]:
 
 
 def make(sample: bool = False, feedback: str | None = None) -> Path:
+    if sample:                                          # مالک کا اصول: نمونہ = مائیکروسافٹ آواز، اصل فلیش = جیمنائی
+        os.environ["FLASH_TTS"] = "edge"
     if os.environ.get("FLASH_TTS", "gemini") == "gemini":
         B.tts_guard(TTS_NEED, "اے آئی فلیش")
     allitems = B.fetch(max_age_h=MAX_AGE_H, feeds=FEEDS, per_feed=40)
