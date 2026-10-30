@@ -1,5 +1,5 @@
 """«اے آئی بیٹھک» — 2 منٹ کا نمونہ: سارہ اور احمد کی گفتگو (جیمنائی، ایک ہی درخواست میں دو آوازیں)"""
-import base64, json, re, subprocess, sys, wave
+import base64, json, os, re, subprocess, sys, wave
 from pathlib import Path
 import requests
 from news.base import generate_json, gemini_key
@@ -9,7 +9,7 @@ items = B.fetch(max_age_h=24 * 7)
 listing = "\n".join(f"[{i+1}] {it['title']} — {it['source']}: {it['summary'][:300]}" for i, it in enumerate(items[:40]))
 SYS = """آپ اردو پوڈکاسٹ «اے آئی بیٹھک» (فاروقی اے آئی نیوز) کے اسکرپٹ رائٹر ہیں۔ میزبان: سارہ (خاتون، سوال اٹھاتی ہیں، عام ناظر کی نمائندہ) اور احمد (مرد، ٹیک کے ماہر، آسان مثالوں سے سمجھاتے ہیں)۔
 دی گئی خبروں میں سے اس ہفتے کا سب سے دلچسپ ایک موضوع چنیں۔ گفتگو قدرتی، دوستانہ، بے تکلف مگر شائستہ اردو میں — چھوٹے جملے، ردِعمل («اچھا!»، «بالکل»، «یہ تو کمال ہے»)، ایک دوسرے کی بات آگے بڑھانا۔
-سختی سے: صرف دی گئی خبروں کے حقائق؛ کوئی عدد، نام یا دعویٰ اپنی طرف سے نہیں۔ انگریزی نام اردو رسم الخط میں۔ کوئی بریکٹ، ایموجی یا ہدایت نہیں — صرف بولا جانے والا متن۔
+سختی سے: صرف دی گئی خبروں کے حقائق؛ کوئی عدد، نام یا دعویٰ اپنی طرف سے نہیں۔ انگریزی نام اردو رسم الخط میں۔ سرمایہ کاری کا کوئی مشورہ نہیں (کون سا شیئر یا کرپٹو خریدیں/بیچیں وغیرہ) — صرف خبر اور اس کا عام فہم مطلب۔ کوئی بریکٹ، ایموجی یا ہدایت نہیں — صرف بولا جانے والا متن۔
 یہ پہلے 2 منٹ ہیں: سارہ کا خوش آمدید، موضوع کا تعارف، 8 تا 12 باریاں، کل تقریباً 260 تا 300 الفاظ، آخر میں سارہ کا ایک سوال جس پر بات جاری رہے۔
 صرف JSON: {"topic": "موضوع (اردو)", "lines": [{"s": "Sarah" یا "Ahmed", "t": "متن"}]}"""
 d = generate_json(SYS, "اس ہفتے کی AI خبریں:\n" + listing)
@@ -19,7 +19,7 @@ prompt = ("TTS the following Urdu podcast conversation between Sarah and Ahmed. 
           "conversational pace:\n\n" + conv)
 def tts(prompt):
   return requests.post("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent",
-                  params={"key": gemini_key()}, timeout=300, json={
+                  params={"key": os.environ.get("GEMINI_BACKUP_KEY") or gemini_key()}, timeout=300, json={
                       "contents": [{"parts": [{"text": prompt}]}],
                       "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {"multiSpeakerVoiceConfig": {"speakerVoiceConfigs": [
                           {"speaker": "Sarah", "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": "Aoede"}}},
@@ -42,12 +42,14 @@ if os.environ.get("POD_TTS") == "edge":                 # مائیکروسافٹ
     Path("pod_script.json").write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
     print("TOPIC", d.get("topic"), "| lines", len(lines), "| edge voices")
     sys.exit(0)
-CH = int(__import__("os").environ.get("POD_CHUNK", "4"))
+CH = int(os.environ.get("POD_CHUNK") or -(-len(lines) // 3))   # زیادہ سے زیادہ 3 درخواستیں
 pcm, rate = b"", 24000
-for k in range(0, len(lines), CH):
+for n, k in enumerate(range(0, len(lines), CH)):
+    if n:
+        time.sleep(22)                                   # مفت حد: فی منٹ 3 درخواستیں
     part_txt = "\n".join(f"{l['s']}: {l['t'].strip()}" for l in lines[k:k + CH])
     c = {}
-    for attempt in range(2):
+    for attempt in range(1):                             # کوئی دوبارہ کوشش نہیں — کوٹا بچانا
         r = tts("TTS the following conversation between Sarah and Ahmed:\n" + part_txt)
         c = (r.json().get("candidates") or [{}])[0] if r.ok else {}
         if r.ok and c.get("content"):
