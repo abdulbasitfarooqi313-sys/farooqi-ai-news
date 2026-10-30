@@ -175,6 +175,97 @@
    "kind": "flash",
    "yt": "zcly-QYVNRo",
    "yt_at": "2026-10-29T22:00:00+03:00"
+  },
+  "2026-10-30-p": {
+   "status": "pending",
+   "vmid": 95,
+   "mids": [
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101
+   ],
+   "kind": "podcast",
+   "voice": "edge",
+   "yt": "SxyeAe7MZxg",
+   "yt_at": "2026-10-30T17:00:00+03:00"
   }
+ },
+ "podcast": {
+  "week": "2026-10-28",
+  "options": [
+   {
+    "title": "سائبر سیکیورٹی اور اے آئی ہیکنگ کے نئے خطرات",
+    "why": "ڈیجیٹل دنیا سے وابستہ نوجوانوں اور پیشہ ور افراد کے لیے ہیکنگ اور آن لائن تحفظ کے طریقے جاننا ضروری ہے۔",
+    "facts": [
+     {
+      "title": "The humans burning out on AI's cyber frontlines - Axios",
+      "source": "Axios",
+      "summary": "The humans burning out on AI's cyber frontlines Axios",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9FY05JNW5XZlh4YjBya2dVY3RsNDV0NldydW4xRUk3LXE4bnFnRmY3OUt5SUFjV2hocHNlRmN0SHE0TFQtY0xlN0dpMXUtbUNlWEkwUG83VGE0cHhWbzk5TXJSZmVrb0UxR0JpMkhINzY5dG9XWWtUX1BIUQ?oc=5"
+     },
+     {
+      "title": "A 'code red' for cybersecurity? How to prepare for a possible wave of AI hacking - ABC News - Breaking News, Latest News and Videos",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "summary": "A 'code red' for cybersecurity? How to prepare for a possible wave of AI hacking ABC News - Breaking News, Latest News and Videos",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOd3ZFM29RdVNxcXU4YWFmaWlNdGFaSDJIVWY0YTNVcDY2bmc0cEp2Tl9WTThINHpBWDJMbFdQMGw3Q1dEdnpkeWtyYUFoVjBwZkNzUEczN2RNc2dJRk10T05vSmZlX0ZvMmJObVhPdkxHU21vSkpKX0I0azY3MXVPUmlKczM2ZmljQ0xKcXdwMnp3QXRJaktTaW5IX1LSAaIBQVVfeXFMT3lBaHN3aUhXWXlCUnB6X1VLclItWUw5VWl5TVhZNXlxZ0g1VEROZ0NlSGJsc0RiNDlGVnpBRk9qWDFGSWdBYkdQUlVUNTVIajkwLUFxRWF5TUZDZlhaMUVUY3FLYWExMUFvVG1UalM0OGQ4THhnZVpJTjFSVF8tRm5xMm9nRjdYal9sMDd5TEpHSmdBMjlna0NLSVl1cDFWZUxR?oc=5"
+     },
+     {
+      "title": "Analysis | Worried about a new wave of AI hacks? Take these steps right now. - The Washington Post",
+      "source": "The Washington Post",
+      "summary": "Analysis | Worried about a new wave of AI hacks? Take these steps right now. The Washington Post",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPLTU3RC1zMk92Nzc4NnpGQW5ReE9mT3dFTTdobk1tSnZxUDNwX3Q1SHNuTFFGMXF5QWU4Y28yNHdEOGtuYjdFY3VwbkZWZm4xbEI5SzBIeFlnRU95RjJEY0VoRW1GRjdTRHdGalJHeUp5N3B1REJGWVZLNjhGVEphSG1VOVY2RGRqeTFSLXRrbzFaZ29xbHpqaEpWQkVVMVVob2JxUXo5b1otQlBZRXpaY3VR?oc=5"
+     }
+    ]
+   },
+   {
+    "title": "دفتری ملازمتوں اور بھرتی میں اے آئی کا کردار",
+    "why": "ملازمت کے متلاشی طلبہ اور ملازمین کے لیے یہ جاننا اہم ہے کہ ادارے انتخاب اور دفتری کاموں میں ٹیکنالوجی کیسے استعمال کر رہے ہیں۔",
+    "facts": [
+     {
+      "title": "What is it like to work when your co-workers are AI agents? - The Guardian",
+      "source": "The Guardian",
+      "summary": "What is it like to work when your co-workers are AI agents? The Guardian",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBMTWZZb2xlZjZraTZvWUVlRVFKMDZhaWNWQnF1Z2pTaDNUS051dHA4U1E2dlBJdEJYd2NJTDR1ZWptd3BDYU4xR2RVUnJYZDhPaDVuT3E2V2ZpcW5HUlhNZE1UcVpvcG1samZyODBCVGw2TXBDRDRz?oc=5"
+     },
+     {
+      "title": "Most firms now use AI in HR processes, with human sign-off required 85% of the time: Survey - CNA",
+      "source": "CNA",
+      "summary": "Most firms now use AI in HR processes, with human sign-off required 85% of the time: Survey CNA",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQUWROS1NmNGhFLUFjbjR5djU5MVZqNlJ5Q0V3RmVueXMyRWFCSEdUdG5DWE9lWEl0M1o3QThYZ0ZlYl9NM0RkS21pbHoyNVE3ZlZGUmREazJRb2pQcTBINWlhMEFIQkJ0MEw2NTdpNXFGMjNlWWNtQWdkVkRyQU9yVGZtV1hOVVVBWG45WU0yTUJZV3hsNU5XR1MySFJpQmZG?oc=5"
+     },
+     {
+      "title": "Nearly half of S’pore employers who use AI in HR do so for recruitment: SNEF survey - The Straits Times",
+      "source": "The Straits Times",
+      "summary": "Nearly half of S’pore employers who use AI in HR do so for recruitment: SNEF survey The Straits Times",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOdloxeVNFc1lpb0ZLd2l0dGF5R1R6UU52SzNRZHNjVENOYWF6SkpCQTBWcmM2YU9LNUZ5X08xTGJmcWpKQm4ybkNTNDlEZU00Y1g1Z3F4S09Kc2lWVVcxbVprTk1DMDA4MmMtcUJ5Y19MOXF4RGQ4a3l2WTBjc25WWVZVYTBiSWd0NXVnS2FGLU41VDExbHg4dHhvYk9tbjBvd3VLRkVvWVJlZlpMVUxxZ1NpbGJNaHFpWEE?oc=5"
+     }
+    ]
+   },
+   {
+    "title": "ڈیٹا سینٹرز اور بجلی کی کھپت کے ماحولیاتی مسائل",
+    "why": "ٹیکنالوجی کے پھیلاؤ کے ساتھ توانائی کی بڑھتی ضروریات اور ماحول پر پڑنے والے اثرات کو سمجھنا ناظرین کے لیے مفید ہے۔",
+    "facts": [
+     {
+      "title": "AI’s real bottleneck is electricity. Who will pay for it? - Al Jazeera",
+      "source": "Al Jazeera",
+      "summary": "AI’s real bottleneck is electricity. Who will pay for it? Al Jazeera",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQWFk0cW15cnpHMGtuQXRIV3hvY0dnTEV3emYyWGRNRXVndGI2T1hDcnVUVmxrUlB6WDhINk1WUHdQeDY4LXE3NnhCQ3gydjltRXcwTTRmWE91RFFRN0hlaExjLXRQODFQX1ZYV00yczM1ejk5Q2pvdGNkcUM4Y2FGb0ZTd3l1Y3VTSUNhRndSZ211SjJKM1pXaHhudzNOaEZwZVHSAacBQVVfeXFMTk00eFBoNjZMMjEwOWEzQVZPdDZ0TjQ3RWh1N3ptT3k2cW80ODFoSkQwNnllTDhpcEhHb2hETzZyWUs2TTlwMHZmQjE3MW1FYXl2VVd1REwyTlp5RUwtcWV0TWl2a3VCU1EwaFVBbmNjV1lwY1psang0OW1Pa1R5ekhnWU1MWnI2bXR2Z0FJQzhSQTVUUTI1bFdyOWlHdzlHT2d0UDNrS0U?oc=5"
+     },
+     {
+      "title": "The hidden environmental cost of AI data centers - DW.com",
+      "source": "DW.com",
+      "summary": "The hidden environmental cost of AI data centers DW.com",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWUpYbjhCemF4MnFWUVZVY1BoSlIzZGhaMFhoaW5lX01rek9Oc0otYWZhcW0zenZHRWpISjNVUTlONncxSVNRR0pfUE5aZmZpcl9NRjJsRW5TMmZWOTJ5RDEtREdhZndkdWliVU1BN3VuNlhHWjdXS01QX2ZTMWhiS0txaExpclNJ0gGIAUFVX3lxTE14UGg0b2FyUW5pVW1PNF9LYnlkVVhIVElxeHE2bzVwazQ0ZVZGUkRFRHcwcFlZVGx5OWVMTnRwdGlVMThpRkRzd2FzMGZQajNid09wVmxITUwtRjNrVVppaFc5Z2ZuVXk4TnN3aVZIckN5aUFXN3RyV1Z5NHBZWU5YcWVwdURoUGE?oc=5"
+     }
+    ]
+   }
+  ],
+  "mid": 93,
+  "pick": null
  }
 }
