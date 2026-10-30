@@ -1,0 +1,96 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:NQ;src:url('__NQFONT__')}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#050b2a;font-family:NQ,serif}
+#bg{position:absolute;inset:0;background:radial-gradient(1300px 800px at 50% 45%,#16296a 0%,#0a1544 55%,#050b2a 100%)}
+#grid{position:absolute;inset:0;opacity:.06;background-image:linear-gradient(#9fc3ff 1px,transparent 1px),linear-gradient(90deg,#9fc3ff 1px,transparent 1px);background-size:80px 80px}
+.rtl{direction:rtl}
+/* header */
+#hd{position:absolute;right:70px;top:38px;display:flex;align-items:center;gap:26px;direction:rtl}
+#hd .lg{width:118px;height:118px;border-radius:50%;background:url('__LOGO__') center/cover;box-shadow:0 0 0 5px #e2b84f,0 0 30px rgba(124,196,255,.5)}
+#hd .n{font-size:74px;line-height:1.35;color:#ffe39a}
+#hd .s{font-size:34px;color:#cfdcff;margin-top:-6px}
+#date{position:absolute;left:70px;top:62px;font-size:34px;line-height:1.7;color:#0a1550;background:#e2b84f;padding:0 26px 6px;border-radius:30px;direction:rtl}
+#topic{position:absolute;left:150px;right:150px;top:196px;text-align:center;direction:rtl;font-size:46px;line-height:1.6;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#topic b{color:#ffe39a;font-weight:normal}
+#rule{position:absolute;left:560px;right:560px;top:290px;height:3px;background:linear-gradient(90deg,transparent,#e2b84f,transparent)}
+/* hosts */
+.host{position:absolute;top:330px;width:620px;height:410px;border-radius:34px;background:rgba(8,16,56,.72);border:3px solid rgba(255,255,255,.08);text-align:center;transition:none}
+#hS{right:220px}#hA{left:220px}
+.host .av{position:absolute;left:50%;top:34px;width:210px;height:210px;margin-left:-105px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+#hS .av{background:radial-gradient(circle at 35% 30%,#ffe9b0,#e2b84f 55%,#a77d1f)}
+#hA .av{background:radial-gradient(circle at 35% 30%,#bff4ff,#22d3ee 55%,#0e7490)}
+.host .av svg{width:110px;height:110px}
+.host .nm{position:absolute;left:0;right:0;top:250px;font-size:64px;line-height:1.4;color:#fff;direction:rtl}
+.host .rl{position:absolute;left:0;right:0;top:332px;font-size:30px;color:#9fb4e8;direction:rtl}
+.eq{position:absolute;left:50%;top:268px;width:0;height:0}
+.eq i{position:absolute;bottom:0;width:10px;border-radius:5px}
+#hS .eq i{background:#ffe39a}#hA .eq i{background:#7de8ff}
+.eqL{left:-300px}.eqR{left:200px}
+/* caption */
+#cap{position:absolute;left:170px;right:170px;top:790px;height:170px;border-radius:26px;background:rgba(4,10,40,.85);border-top:5px solid #e2b84f;direction:rtl;display:flex;align-items:center;padding:0 40px;gap:30px}
+#cap .who{flex:none;font-size:40px;line-height:1.7;padding:0 26px 6px;border-radius:30px;color:#0a1550}
+#cap .tx{flex:1;font-size:58px;line-height:1.75;color:#fff;text-align:center;white-space:nowrap;overflow:hidden}
+#prog{position:absolute;left:0;bottom:0;height:9px;width:0;background:linear-gradient(90deg,#d4a53d,#ffe39a)}
+#wm{position:absolute;left:70px;bottom:40px;font-size:30px;color:rgba(207,220,255,.55);direction:rtl}
+/* open / end */
+.ov{position:absolute;inset:0;background:radial-gradient(1200px 900px at 50% 45%,#15286a,#0a1550 55%,#050b2a);opacity:0}
+.ov .lg{position:absolute;left:810px;top:150px;width:300px;height:300px;border-radius:50%;background:url('__LOGO__') center/cover;box-shadow:0 0 0 8px #e2b84f,0 0 70px rgba(124,196,255,.6)}
+.ov .a{position:absolute;left:0;right:0;top:500px;text-align:center;font-size:130px;line-height:1.4;color:#ffe39a}
+.ov .b{position:absolute;left:150px;right:150px;top:720px;text-align:center;font-size:56px;line-height:1.6;color:#fff;direction:rtl}
+.ov .sub{position:absolute;left:660px;top:720px;width:600px;height:130px;border-radius:26px;background:linear-gradient(180deg,#ffe39a,#d4a53d);color:#0a1550;font-size:66px;line-height:1.75;text-align:center}
+.ov .m{position:absolute;left:0;right:0;top:880px;text-align:center;font-size:44px;color:#cfdcff;direction:rtl}
+/* thumbnail */
+body.th #cap,body.th #topic,body.th #prog,body.th #wm,body.th .eq,body.th .host .rl,body.th #rule{display:none}
+body.th .host{top:560px;height:380px;width:480px}
+body.th #hS{right:90px}body.th #hA{left:90px}
+#tt{display:none;position:absolute;left:120px;right:120px;top:200px;text-align:center;direction:rtl;font-size:108px;line-height:1.5;color:#fff;text-shadow:0 8px 30px rgba(0,0,0,.6)}
+#tt b{display:inline-block;font-weight:normal;font-size:52px;color:#0a1550;background:#e2b84f;border-radius:14px;padding:0 30px 8px;margin-bottom:20px}
+body.th #tt{display:block}
+</style></head><body>
+<div id="bg"></div><div id="grid"></div>
+<div id="hd"><div class="lg"></div><div><div class="n">اے آئی بیٹھک</div><div class="s">فاروقی اے آئی نیوز · ہفتہ وار پوڈکاسٹ</div></div></div>
+<div id="date"></div>
+<div id="topic"></div><div id="rule"></div>
+<div class="host" id="hS"><div class="av">__MIC__</div><div class="eq"></div><div class="nm">سارہ</div><div class="rl">میزبان</div></div>
+<div class="host" id="hA"><div class="av">__MIC__</div><div class="eq"></div><div class="nm">احمد</div><div class="rl">ٹیک ماہر</div></div>
+<div id="tt"></div>
+<div id="cap"><div class="who"></div><div class="tx"></div></div>
+<div id="wm">youtube.com · فاروقی اے آئی نیوز</div>
+<div id="prog"></div>
+<div class="ov" id="open"><div class="lg"></div><div class="a">اے آئی بیٹھک</div><div class="b" id="otopic"></div></div>
+<div class="ov" id="end"><div class="lg"></div><div class="a">شکریہ!</div><div class="sub">سبسکرائب کریں</div><div class="m">ہر جمعہ نئی قسط · کمنٹ میں اپنی رائے ضرور دیں</div></div>
+<script>
+const MIC='<svg viewBox="0 0 64 64"><rect x="22" y="6" width="20" height="34" rx="10" fill="#0a1550"/><path d="M14 30a18 18 0 0 0 36 0" stroke="#0a1550" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M32 48v9M22 58h20" stroke="#0a1550" stroke-width="5" stroke-linecap="round"/></svg>';
+document.querySelectorAll('.av').forEach(a=>a.innerHTML=MIC);
+const NF=__NFDATA__, FPS=25, $=id=>document.getElementById(id);
+const esc=s=>(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+$('date').textContent=NF.date; $('topic').innerHTML='آج کا موضوع: <b>'+esc(NF.title)+'</b>';
+$('otopic').textContent=NF.title; $('tt').innerHTML='<b>پوڈکاسٹ</b><br>'+esc(NF.title);
+const NB=14, bars={};
+['hS','hA'].forEach(h=>{const eq=document.querySelector('#'+h+' .eq');bars[h]=[];
+ for(let i=0;i<NB;i++){const b=document.createElement('i');const side=i<NB/2;b.style.left=(side?(-300+i*16):(200+(i-NB/2)*16))+'px';eq.appendChild(b);bars[h].push({e:b,k:.55+.45*Math.abs(Math.sin(i*2.3+1)),ph:i*0.9})}});
+const ease=x=>1-Math.pow(1-Math.max(0,Math.min(1,x)),3);
+const COL={Sarah:'#e2b84f',Ahmed:'#22d3ee'}, NAME={Sarah:'سارہ',Ahmed:'احمد'};
+function render(f){
+ const t=f/FPS, e=NF.e[f]||0;
+ $('open').style.opacity=t<NF.open_end-0.4?1:Math.max(0,1-(t-(NF.open_end-0.4))/0.4);
+ $('end').style.opacity=t>=NF.end_t?Math.min(1,(t-NF.end_t)/0.4):0;
+ const tu=NF.turns.find(x=>t>=x.t0-0.2&&t<x.t1+0.3);
+ const who=tu?tu.s:null;
+ [['hS','Sarah'],['hA','Ahmed']].forEach(([h,s])=>{
+  const el=$(h), on=who===s;
+  el.style.opacity=on?1:0.5; el.style.transform=`scale(${on?1.03:0.97})`;
+  el.style.borderColor=on?COL[s]:'rgba(255,255,255,.08)'; el.style.boxShadow=on?`0 0 50px ${COL[s]}66`:'none';
+  bars[h].forEach(b=>{const v=on?Math.max(.08,e*b.k*(0.7+0.3*Math.sin(t*14+b.ph))):.05;b.e.style.height=(8+120*v)+'px';b.e.style.top=(-4-60*v)+'px'});
+ });
+ const c=NF.caps.find(x=>t>=x.t0&&t<x.t1+0.15);
+ if(c){$('cap').style.opacity=1;$('cap').querySelector('.tx').textContent=c.text;const w=$('cap').querySelector('.who');w.textContent=NAME[c.s];w.style.background=COL[c.s]}
+ else $('cap').style.opacity=t>NF.open_end&&t<NF.end_t?1:0;
+ if(!c&&!who)$('cap').querySelector('.tx').textContent='';
+ $('prog').style.width=(1920*Math.min(1,t/NF.dur))+'px';
+}
+function thumb(){document.body.classList.add('th');['hS','hA'].forEach(h=>{$(h).style.opacity=1;$(h).style.transform='none';$(h).style.borderColor=h=='hS'?'#e2b84f':'#22d3ee'});$('open').style.opacity=0;$('end').style.opacity=0}
+function unthumb(){document.body.classList.remove('th')}
+document.fonts.ready.then(()=>{render(0);document.title='ready'});
+</script></body></html>

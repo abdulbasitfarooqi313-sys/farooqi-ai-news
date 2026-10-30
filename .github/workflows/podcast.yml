@@ -1,0 +1,80 @@
+# 🎙️ اے آئی بیٹھک — بدھ: 3 موضوع ٹیلیگرام پر (مالک چنے) · جمعہ: ~5 منٹ پوڈکاسٹ (سارہ/احمد) → ٹیلیگرام ✅/❌ + یوٹیوب Private → ✅ پر شام 5 بجے
+name: AI Baithak podcast
+
+on:
+  schedule:
+    - cron: "0 7 * * 3"     # بدھ 10 بجے صبح (سعودی) — موضوعات
+    - cron: "0 9 * * 5"     # جمعہ 12 بجے دوپہر — پوڈکاسٹ (جیمنائی آواز کا کوٹا نیا ہونے کے بعد)
+    - cron: "0 11 * * 5"    # جمعہ 2 بجے — نہ بنا ہو تو
+  push:
+    paths: ["state/podcast_run_now"]    # جانچ کے لیے فوری رن (فائل میں: sample / suggest / force)
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "دوبارہ بنائیں: yes"
+        required: false
+        default: "no"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bulletin
+  cancel-in-progress: false
+
+jobs:
+  podcast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Run
+        env:
+          GEMINI_NEWS_KEY: ${{ secrets.GEMINI_NEWS_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_BACKUP_KEY: ${{ secrets.GEMINI_BACKUP_KEY }}
+          NEWS_BOT_TOKEN: ${{ secrets.NEWS_BOT_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          MODE=""
+          if [ "${{ github.event_name }}" = "push" ]; then MODE=$(head -c 20 state/podcast_run_now | tr -dc 'a-z'); POD_TTS=$(sed -n 2p state/podcast_run_now | tr -dc 'a-z'); export POD_TTS=${POD_TTS:-gemini}; fi
+          if [ "${{ github.event.schedule }}" = "0 7 * * 3" ]; then MODE=suggest; fi
+          if [ "${{ github.event.inputs.force }}" = "yes" ]; then MODE=force; fi
+          python -m news.podcast $MODE
+      - name: Keep a review copy
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -f podcast.mp4 ] || exit 0
+          T="podcast-$(TZ=Asia/Riyadh date +%F)"
+          gh release delete "$T" -y --cleanup-tag 2>/dev/null || true
+          gh release create "$T" --title "$T" --notes "review copy" podcast.mp4 podcast_thumb.jpg || true
+      - name: Save
+        if: always()
+        run: |
+          git config user.name "ai-news-bot"
+          git config user.email "ai-news-bot@users.noreply.github.com"
+          for f in state/news.json state/tts_usage.json state/podcast_last.json; do [ -f "$f" ] && git add "$f"; done; true
+          git diff --cached --quiet && exit 0
+          git commit -m "پوڈکاسٹ"
+          for i in 1 2 3; do git pull --rebase --autostash -X theirs && git push && exit 0; sleep 10; done; echo "push ناکام"; exit 1
+
+      - name: Alert on failure
+        if: failure()
+        env:
+          TOKEN: ${{ secrets.NEWS_BOT_TOKEN || secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT_SECRET: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          CHAT=$(python3 -c "import json;print(json.load(open('state/news.json')).get('chat',''))" 2>/dev/null); CHAT=${CHAT:-$CHAT_SECRET}
+          curl -s -X POST "https://api.telegram.org/bot$TOKEN/sendMessage" --data-urlencode "chat_id=$CHAT" \
+            --data-urlencode "text=⚠️ اے آئی نیوز: «${{ github.workflow }}» ناکام ہو گیا۔ یہ لنک Jules یا Claude کو دکھائیں: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" >/dev/null || true

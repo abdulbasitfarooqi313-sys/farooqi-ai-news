@@ -946,13 +946,13 @@ def _upload_time() -> str:
     return f"آج {_hm(t)} بجے سعودی وقت ({_hm(t + dt.timedelta(hours=2))} بجے پاکستان)"
 
 
-def _yt_upload(video: Path, thumb: Path, sd: dict) -> dict:
+def _yt_upload(video: Path, thumb: Path, sd: dict, playlist: bool | str = True) -> dict:
     """یوٹیوب پر Private اپلوڈ (✅ کے بعد ہی پبلک) — ناکامی پر بلیٹن نہیں رکتا، ٹیلیگرام پر اطلاع"""
     if not yt.enabled():
         return {}
     chat = news_chat()
     try:
-        r = yt.upload(video, thumb, sd["youtube_title"], sd["youtube_description"], sd["tags"])
+        r = yt.upload(video, thumb, sd["youtube_title"], sd["youtube_description"], sd["tags"], playlist=playlist)
     except Exception as e:
         LOG.append(f"یوٹیوب: {e}")
         send_text(chat, f"⚠️ یوٹیوب پر خودکار اپلوڈ نہ ہو سکا: {str(e)[:300]}\nاوپر کے پیکیج سے ہاتھ سے لگا دیں۔", html=False)
@@ -980,7 +980,7 @@ def tick(force: bool = False) -> None:
     make(feedback=(redo or {}).get("feedback") if isinstance(redo, dict) else None)
 
 
-SIDE = {"-r": ("redo_r", "roundup.yml"), "-f": ("redo_f", "flash.yml")}   # دن کی کلید کا آخری حصہ → (دوبارہ کا نشان، ورک فلو)
+SIDE = {"-r": ("redo_r", "roundup.yml"), "-f": ("redo_f", "flash.yml"), "-p": ("redo_p", "podcast.yml")}   # دن کی کلید کا آخری حصہ → (دوبارہ کا نشان، ورک فلو)
 
 
 def poll() -> None:
@@ -1005,6 +1005,11 @@ def poll() -> None:
                 tg_call("answerCallbackQuery", callback_query_id=cb["id"], text="ٹھیک ہے")
             except Exception:
                 pass
+            if action == "ptopic":                       # «اے آئی بیٹھک» کا موضوع
+                from . import podcast
+                week, _, i = day.partition("|")
+                podcast.on_pick(ns, week, int(i or 0), chat)
+                continue
             d = ns.setdefault("days", {}).setdefault(day, {})
             if action == "nok":
                 d["status"] = "approved"
@@ -1028,7 +1033,7 @@ def poll() -> None:
                 else:
                     ns["redo"] = {"day": day, "feedback": None}
                     dispatch = dispatch or True
-                tg_call("sendMessage", chat_id=chat, text="🔄 نیا بلیٹن بن رہا ہے (تقریباً 20–30 منٹ)۔ "
+                tg_call("sendMessage", chat_id=chat, text="🔄 نیا بن رہا ہے (تقریباً 20–40 منٹ)۔ "
                          "کوئی خاص تبدیلی چاہیے تو اگلی بار ویڈیو پر Reply کر کے لکھیں۔")
         elif (msg := up.get("message")) and not me and msg.get("chat", {}).get("type") == "private" \
                 and (msg.get("text") or "").startswith("/start"):
@@ -1037,6 +1042,10 @@ def poll() -> None:
             tg_call("sendMessage", chat_id=me, text="📺 فاروقی اے آئی نیوز — جڑ گیا ✅ روزانہ بلیٹن دوپہر تقریباً 2 بجے یہاں آئے گا۔")
         elif (msg := up.get("message")) and str(msg.get("chat", {}).get("id")) == me:
             rt, text = msg.get("reply_to_message"), (msg.get("text") or "").strip()
+            if rt and text and rt.get("message_id") == (ns.get("podcast") or {}).get("mid"):
+                from . import podcast                   # موضوعات والے پیغام پر Reply = اپنا موضوع
+                podcast.on_custom(ns, text, me)
+                continue
             day = next((k for k, v in ns.get("days", {}).items() if rt and v.get("vmid") == rt.get("message_id")), None)
             if day and text:
                 ns[SIDE[day[-2:]][0] if day[-2:] in SIDE else "redo"] = {"day": day, "feedback": text}

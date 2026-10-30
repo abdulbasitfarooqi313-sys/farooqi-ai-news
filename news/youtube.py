@@ -68,7 +68,7 @@ def _iso(t: dt.datetime) -> str:
     return t.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
 
 
-def upload(video: Path, thumb: Path | None, title: str, desc: str, tags: list[str], playlist: bool = True) -> dict:
+def upload(video: Path, thumb: Path | None, title: str, desc: str, tags: list[str], playlist: bool | str = True) -> dict:
     """Private اپلوڈ → {"id", "url", "notes": [...]}۔ تھمب نیل/پلے لسٹ ناکام ہوں تو notes میں، اپلوڈ نہیں رکتا۔"""
     tok = _token()
     meta = {
@@ -103,7 +103,7 @@ def upload(video: Path, thumb: Path | None, title: str, desc: str, tags: list[st
     try:
         if not playlist:
             return {"id": vid, "url": f"https://youtu.be/{vid}", "notes": notes}
-        pl = _playlist(tok)
+        pl = _playlist(tok, playlist if isinstance(playlist, str) else PLAYLIST)
         _check(requests.post(f"{API}/playlistItems", params={"part": "snippet"}, headers=_h(tok), timeout=30,
                              json={"snippet": {"playlistId": pl, "resourceId": {"kind": "youtube#video", "videoId": vid}}}),
                "پلے لسٹ")
@@ -112,20 +112,21 @@ def upload(video: Path, thumb: Path | None, title: str, desc: str, tags: list[st
     return {"id": vid, "url": f"https://youtu.be/{vid}", "notes": notes}
 
 
-def _playlist(tok: str) -> str:
+def _playlist(tok: str, name: str = PLAYLIST) -> str:
     page = None
     while True:
         j = _check(requests.get(f"{API}/playlists", headers=_h(tok), timeout=30,
                                 params={"part": "snippet", "mine": "true", "maxResults": 50, **({"pageToken": page} if page else {})}),
                    "پلے لسٹیں")
         for it in j.get("items", []):
-            if it["snippet"]["title"].strip() == PLAYLIST:
+            if it["snippet"]["title"].strip() == name:
                 return it["id"]
         page = j.get("nextPageToken")
         if not page:
             break
     j = _check(requests.post(f"{API}/playlists", params={"part": "snippet,status"}, headers=_h(tok), timeout=30, json={
-        "snippet": {"title": PLAYLIST, "description": "مصنوعی ذہانت کی دنیا کی اہم خبریں، آسان اردو میں — ہر پیر، بدھ اور ہفتہ۔",
+        "snippet": {"title": name, "description": ("مصنوعی ذہانت کی دنیا کی اہم خبریں، آسان اردو میں — ہر پیر، بدھ اور ہفتہ۔" if name == PLAYLIST
+                                                  else "ہر جمعہ: سارہ اور احمد کے ساتھ مصنوعی ذہانت کے ایک اہم موضوع پر آسان اردو میں گفتگو۔"),
                     "defaultLanguage": "ur"},
         "status": {"privacyStatus": "public"}}), "نئی پلے لسٹ")
     return j["id"]
