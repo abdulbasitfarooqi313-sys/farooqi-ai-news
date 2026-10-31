@@ -2,9 +2,9 @@ name: YouTube key check
 on:
   workflow_dispatch:
   push:
-    paths: [".github/workflows/yt-check.yml", "lab/yt_check.py", "lab/pixabay_check.py", "lab/backup_key_check.py", "lab/blog_check.py", "lab/yt_token_check.py", "lab/yt_status.py", "news/blog.py"]
+    paths: [".github/workflows/yt-check.yml", "lab/yt_check.py", "lab/pixabay_check.py", "lab/backup_key_check.py", "lab/blog_check.py", "lab/yt_token_check.py", "lab/yt_status.py", "news/blog.py", "lab/blog_backfill.py"]
 permissions:
-  contents: read
+  contents: write
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -13,7 +13,7 @@ jobs:
       - run: pip install requests
       - run: |
           set +e
-          (python lab/yt_token_check.py; PYTHONPATH=. python -m news.blog check) > out.txt 2>&1; rc=$?
+          PYTHONPATH=. python lab/blog_backfill.py > out.txt 2>&1; rc=$?
           while IFS= read -r l; do echo "::notice::$l"; done < out.txt
           exit $rc
         env:
@@ -23,3 +23,11 @@ jobs:
           BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           GEMINI_BACKUP_KEY: ${{ secrets.GEMINI_BACKUP_KEY }}
+      - name: Save
+        if: always()
+        run: |
+          git config user.name "ai-news-bot"; git config user.email "ai-news-bot@users.noreply.github.com"
+          git add state/blog.json 2>/dev/null; git add -A state/blog_queue 2>/dev/null; true
+          git diff --cached --quiet && exit 0
+          git commit -m "بلاگ: پرانا مواد"
+          for i in 1 2 3; do git pull --rebase --autostash -X theirs && git push && exit 0; sleep 5; done
