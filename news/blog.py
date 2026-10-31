@@ -96,7 +96,7 @@ def story_post(s: dict) -> dict:
 def _video_block(title: str) -> str:
     # یوٹیوب آئی ڈی ✅ کے وقت معلوم ہوتی ہے — یہاں نشان، publish() میں بدلا جاتا ہے
     return ('<div style="text-align:center"><img alt="' + E(title) + '" src="https://i.ytimg.com/vi/__YT__/__THUMB__.jpg" '
-            'style="width:100%;border-radius:14px"/></div>\n<h2>ویڈیو دیکھیں</h2>\n'
+            'style="width:100%;border-radius:14px;filter:brightness(1.12) contrast(1.15) saturate(1.3)"/></div>\n<h2>ویڈیو دیکھیں</h2>\n'
             '<iframe src="https://www.youtube.com/embed/__YT__" title="' + E(title) + '" allowfullscreen="" loading="lazy"></iframe>')
 
 
