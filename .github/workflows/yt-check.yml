@@ -13,7 +13,7 @@ jobs:
       - run: pip install requests
       - run: |
           set +e
-          PYTHONPATH=. python -m news.blog check > out.txt 2>&1; rc=$?
+          (python lab/yt_token_check.py; PYTHONPATH=. python -m news.blog check) > out.txt 2>&1; rc=$?
           while IFS= read -r l; do echo "::notice::$l"; done < out.txt
           exit $rc
         env:
