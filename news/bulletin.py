@@ -1087,6 +1087,14 @@ def poll() -> None:
                         d["yt_status"] = mode
                         msg = (f"✅ منظور — یوٹیوب پر {_hm(when)} بجے سعودی ({_hm(when + dt.timedelta(hours=2))} بجے پاکستان) خود پبلک ہو جائے گا:"
                                if mode == "scheduled" else "✅ منظور — یوٹیوب پر ابھی پبلک کر دیا:") + f"\nhttps://youtu.be/{d['yt']}"
+                        try:                                    # بلاگ پوسٹ اسی وقت کے لیے
+                            from . import blog
+                            if blog.enabled():
+                                bu = blog.publish(day, d["yt"], when)
+                                if bu:
+                                    msg += f"\n📝 بلاگ پوسٹ (ویڈیو کے ساتھ لائیو): {bu}"
+                        except Exception as e:
+                            msg += f"\n⚠️ بلاگ پوسٹ نہ ہو سکی: {str(e)[:150]}"
                     except Exception as e:
                         msg = f"✅ منظور — مگر یوٹیوب پر پبلک/شیڈول نہ ہو سکا: {str(e)[:250]}\nیوٹیوب اسٹوڈیو میں ہاتھ سے پبلک کر دیں: https://youtu.be/{d['yt']}"
                 else:

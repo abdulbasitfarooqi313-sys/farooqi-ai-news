@@ -86,4 +86,9 @@ def attach(kind: str, key: str, d: dict, sd: dict, points: list[str] | None = No
     if b:
         d["social"]["blog"] = f"عنوان: {b.get('title', '')}\nتفصیل (meta): {b.get('meta_description', '')}\nلیبل: {', '.join(b.get('labels', []))}\nURL: {b.get('slug', '')}"
     save(key, pkg)
+    try:                                                # بلاگ پوسٹ کا مسودہ (✅ پر شائع)
+        from . import blog
+        blog.prepare(kind, key, d, sd)
+    except Exception as e:
+        print("بلاگ مسودہ نہیں بنا:", e)
     return pkg

@@ -2,7 +2,7 @@ name: YouTube key check
 on:
   workflow_dispatch:
   push:
-    paths: [".github/workflows/yt-check.yml", "lab/yt_check.py", "lab/pixabay_check.py", "lab/backup_key_check.py", "lab/blog_check.py", "lab/yt_token_check.py", "lab/yt_status.py"]
+    paths: [".github/workflows/yt-check.yml", "lab/yt_check.py", "lab/pixabay_check.py", "lab/backup_key_check.py", "lab/blog_check.py", "lab/yt_token_check.py", "lab/yt_status.py", "news/blog.py"]
 permissions:
   contents: read
 jobs:
@@ -13,12 +13,13 @@ jobs:
       - run: pip install requests
       - run: |
           set +e
-          PYTHONPATH=. python lab/yt_status.py > out.txt 2>&1; rc=$?
+          PYTHONPATH=. python -m news.blog check > out.txt 2>&1; rc=$?
           while IFS= read -r l; do echo "::notice::$l"; done < out.txt
           exit $rc
         env:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           GEMINI_BACKUP_KEY: ${{ secrets.GEMINI_BACKUP_KEY }}
