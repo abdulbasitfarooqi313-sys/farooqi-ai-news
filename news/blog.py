@@ -95,7 +95,7 @@ def story_post(s: dict) -> dict:
 
 def _video_block(title: str) -> str:
     # یوٹیوب آئی ڈی ✅ کے وقت معلوم ہوتی ہے — یہاں نشان، publish() میں بدلا جاتا ہے
-    return ('<div style="text-align:center"><img alt="' + E(title) + '" src="https://i.ytimg.com/vi/__YT__/maxresdefault.jpg" '
+    return ('<div style="text-align:center"><img alt="' + E(title) + '" src="https://i.ytimg.com/vi/__YT__/__THUMB__.jpg" '
             'style="width:100%;border-radius:14px"/></div>\n<h2>ویڈیو دیکھیں</h2>\n'
             '<iframe src="https://www.youtube.com/embed/__YT__" title="' + E(title) + '" allowfullscreen="" loading="lazy"></iframe>')
 
@@ -181,7 +181,9 @@ def publish(key: str, yt_id: str, when: dt.datetime) -> str:
     tok = _token()
     bid = _blog_id(tok)
     h = {"Authorization": f"Bearer {tok}"}
-    body = {"kind": "blogger#post", "title": p["title"], "labels": p["labels"], "content": p["html"].replace("__YT__", yt_id)}
+    thumb = "hqdefault" if p.get("kind") in ("flash", "word") else "maxresdefault"   # شارٹس کی maxres تصویر نہیں ہوتی (دھندلی/خالی آتی ہے)
+    body = {"kind": "blogger#post", "title": p["title"], "labels": p["labels"],
+            "content": p["html"].replace("__YT__", yt_id).replace("__THUMB__", thumb)}
     if p.get("pid"):                                    # پہلے سے بنا ڈرافٹ — ویڈیو کا لنک ڈال کر وہی شائع
         r = requests.patch(f"{API}/blogs/{bid}/posts/{p['pid']}", headers=h, json=body, timeout=60)
     else:

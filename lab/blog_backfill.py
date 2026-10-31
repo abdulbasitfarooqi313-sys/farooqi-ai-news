@@ -1,57 +1,13 @@
-"""ایک بار (2): مینو کے موضوعات بھرنا — پرانے 3 بلیٹن کی ہر خبر الگ پوسٹ (اصل تاریخ پر)، اور موجودہ پوسٹس نوٹو نستعلیق + موضوعاتی لیبل"""
-import datetime as dt, json, sys
-from pathlib import Path
+"""ایک بار (3): فلیش پوسٹ کی تصویر — شارٹ کی maxres تصویر نہیں ہوتی، hqdefault لگائیں"""
+import sys
 sys.path.insert(0, ".")
 import requests
 from news import blog
-from news.base import read_json, write_json
-
-tok = blog._token(); bid = blog._blog_id(tok); h = {"Authorization": f"Bearer {tok}"}; API = blog.API
-st = read_json(blog.STATE) if blog.STATE.exists() else {}
-done = st.setdefault("stories", {})
-import re
-seen = []
-def words(t): return set(w for w in re.findall(r"\w+", t) if len(w) > 2)
-def dup(t): return any(len(words(t) & w) / max(1, len(words(t) | w)) > 0.4 for w in seen)
-
-# 1) پرانے بلیٹن کی خبریں
-for f in sorted(Path("lab/backfill").glob("script_*.json")):
-    day = f.stem.split("_")[1]
-    when = dt.datetime.fromisoformat(day + "T17:00:00+03:00")
-    for i, x in enumerate(read_json(f).get("stories", [])):
-        k = f"{day}-{i}"
-        if k in done or dup(x["headline"]):
-            print("BLOG skip (same story)", k); continue
-        seen.append(words(x["headline"]))
-        import time; time.sleep(45)                      # Blogger کی رفتار کی حد (429) سے بچاؤ
-        sp = blog.story_post(x)
-        r = requests.post(f"{API}/blogs/{bid}/posts", params={"isDraft": "true"}, headers=h, timeout=60,
-                          json={"kind": "blogger#post", "title": sp["title"], "labels": sp["labels"], "content": sp["html"]})
-        if not r.ok:
-            print("BLOG ❌", k, r.status_code, r.text[:80].replace("\n", " ")); break
-        pid = r.json()["id"]
-        pr = requests.post(f"{API}/blogs/{bid}/posts/{pid}/publish", headers=h, timeout=60,
-                           params={"publishDate": when.astimezone(dt.timezone.utc).isoformat().replace("+00:00", "Z")})
-        done[k] = pr.json().get("url", "") if pr.ok else f"draft {pid}"
-        print("BLOG", k, sp["labels"], done[k])
-write_json(blog.STATE, st)
-
-# 1b) ایک ہی خبر دو بار (24 اور 26 اکتوبر) — دوسری پوسٹ واپس ڈرافٹ (حذف نہیں)
-if not st.get("dup_reverted"):
-    g = requests.get(f"{API}/blogs/{bid}/posts/bypath", params={"path": "/2026/10/blog-post_26.html"}, headers=h, timeout=30)
-    if g.ok:
-        rv = requests.post(f"{API}/blogs/{bid}/posts/{g.json()['id']}/revert", headers=h, timeout=30)
-        print("BLOG dup → draft", rv.status_code); st["dup_reverted"] = rv.ok; write_json(blog.STATE, st)
-
-# 2) موجودہ شائع پوسٹس: نستعلیق + لیبل
-fl = read_json(Path("state/flash_last.json"))
-extra = {"2026-10-29-f": ["اے آئی فلیش"] + blog.topics(" ".join(i["h"] + " " + i.get("country", "") for i in fl["items"]), [i.get("company") for i in fl["items"]]),
-         "trailer": ["چینل کا تعارف"]}
-for key, labs in extra.items():
-    pid = st.get("posts", {}).get(key, {}).get("id")
-    if not pid:
-        continue
-    g = requests.get(f"{API}/blogs/{bid}/posts/{pid}", headers=h, timeout=30).json()
-    body = {"title": g["title"], "content": blog.wrap(g.get("content", "")), "labels": list(dict.fromkeys((g.get("labels") or []) + labs))}
-    r = requests.patch(f"{API}/blogs/{bid}/posts/{pid}", headers=h, json=body, timeout=60)
-    print("BLOG fix", key, r.status_code, body["labels"])
+from news.base import read_json
+tok = blog._token(); bid = blog._blog_id(tok); h = {"Authorization": f"Bearer {tok}"}
+st = read_json(blog.STATE)
+pid = st["posts"]["2026-10-29-f"]["id"]
+g = requests.get(f"{blog.API}/blogs/{bid}/posts/{pid}", headers=h, timeout=30).json()
+c = g["content"].replace("/maxresdefault.jpg", "/hqdefault.jpg")
+r = requests.patch(f"{blog.API}/blogs/{bid}/posts/{pid}", headers=h, json={"title": g["title"], "content": c, "labels": g.get("labels", [])}, timeout=60)
+print("BLOG flash thumb", r.status_code)
