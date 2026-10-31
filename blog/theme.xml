@@ -81,7 +81,7 @@ img{max-width:100%;height:auto}
 .ticker .run div{position:absolute;right:0;top:0;white-space:nowrap;animation:tk 150s linear infinite;font-size:17px;line-height:2.3}
 .ticker .run a{margin-left:34px;color:var(--ink)}
 .ticker .run a:before{content:"◆";color:var(--gold3);margin-left:10px;font-size:11px}
-@keyframes tk{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+@keyframes tk{from{transform:translateX(0)}to{transform:translateX(50%)}}
 
 /* ترتیب */
 .layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:28px;margin:26px auto 40px}
@@ -416,7 +416,8 @@ footer .flogo img{width:64px;height:64px;border-radius:50%;box-shadow:0 0 0 3px 
     var es=(j.feed&&j.feed.entry)||[];if(!es.length)return;
     document.getElementById('tick').innerHTML=es.slice(0,12).map(function(e){return '<a href="'+href(e)+'">'+H(e.title.$t)+'</a>';}).join('');
     /* رفتار: ہر سیکنڈ تقریباً 45 پکسل — آرام سے پڑھی جا سکے */
-    try{var tk=document.getElementById('tick'),run=tk.parentNode;tk.style.animationDuration=Math.max(60,Math.round((tk.scrollWidth+run.offsetWidth)/45))+'s';}catch(x){}
+    /* پٹی: فوراً نظر آئے، بغیر وقفے کے گھومے (متن دو بار)، رفتار ~45 پکسل فی سیکنڈ */
+    try{var tk=document.getElementById('tick');tk.innerHTML=tk.innerHTML+tk.innerHTML;tk.style.animationDuration=Math.max(40,Math.round(tk.scrollWidth/2/45))+'s';}catch(x){}
     document.getElementById('latest').innerHTML=es.slice(0,6).map(function(e){return '<li><a href="'+href(e)+'">'+H(e.title.$t)+'</a></li>';}).join('');
     var cats={};(j.feed.category||[]).forEach(function(c){cats[c.term]=1;});
     document.getElementById('tags').innerHTML=Object.keys(cats).slice(0,24).map(function(t){return '<a href="/search/label/'+encodeURIComponent(t)+'">'+H(t)+'</a>';}).join('');
