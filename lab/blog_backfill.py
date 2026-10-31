@@ -23,11 +23,12 @@ for f in sorted(Path("lab/backfill").glob("script_*.json")):
         if k in done or dup(x["headline"]):
             print("BLOG skip (same story)", k); continue
         seen.append(words(x["headline"]))
+        import time; time.sleep(45)                      # Blogger کی رفتار کی حد (429) سے بچاؤ
         sp = blog.story_post(x)
         r = requests.post(f"{API}/blogs/{bid}/posts", params={"isDraft": "true"}, headers=h, timeout=60,
                           json={"kind": "blogger#post", "title": sp["title"], "labels": sp["labels"], "content": sp["html"]})
         if not r.ok:
-            print("BLOG ❌", k, r.status_code, r.text[:150]); continue
+            print("BLOG ❌", k, r.status_code, r.text[:80].replace("\n", " ")); break
         pid = r.json()["id"]
         pr = requests.post(f"{API}/blogs/{bid}/posts/{pid}/publish", headers=h, timeout=60,
                            params={"publishDate": when.astimezone(dt.timezone.utc).isoformat().replace("+00:00", "Z")})
