@@ -357,6 +357,11 @@ footer .flogo img{width:64px;height:64px;border-radius:50%;box-shadow:0 0 0 3px 
 <script>
 //<![CDATA[
 (function(){
+
+  /* یوٹیوب ویڈیو: پوسٹ میں iframe کی جگہ div (تاکہ Blogger یوٹیوب کی چھوٹی دھندلی تصویر کو پوسٹ کی تصویر نہ بنائے) — یہاں ویڈیو چلانے کا خانہ بنتا ہے */
+  function ytfix(){document.querySelectorAll('.yt-embed[data-yt]:not([data-done])').forEach(function(d){d.setAttribute('data-done','1');var id=d.getAttribute('data-yt');if(!/^[\w-]{6,}$/.test(id))return;
+    d.innerHTML='<iframe src="https://www.youtube.com/embed/'+id+'" title="video" allowfullscreen loading="lazy" style="width:100%;aspect-ratio:16/9;height:auto;border:0;border-radius:12px"></iframe>';});}
+  ytfix();try{new MutationObserver(ytfix).observe(document.body,{childList:true,subtree:true});}catch(x){}
   /* ── اپنے سوشل لنک یہاں لکھیں (خالی ہوں تو بٹن چھپ جاتا ہے) ── */
   var SOCIAL={fb:'https://www.facebook.com/farooqiainews', x:'', wa:''};
   [['fb','fb-link'],['x','x-link'],['wa','wa-link']].forEach(function(p){var a=document.getElementById(p[1]);if(!a)return;if(SOCIAL[p[0]])a.href=SOCIAL[p[0]];else a.style.display='none';});
@@ -370,8 +375,8 @@ footer .flogo img{width:64px;height:64px;border-radius:50%;box-shadow:0 0 0 3px 
   var LOGO='https://raw.githubusercontent.com/abdulbasitfarooqi313-sys/farooqi-ai-news/main/studio/logo_round.png';
   function esc(x){var d=document.createElement('div');d.textContent=x||'';return d.innerHTML;}
   function alt(e){var l=e.link||[];for(var i=0;i<l.length;i++){if(l[i].rel==='alternate')return l[i].href;}return '#';}
-  function img(e){if(e.media$thumbnail)return e.media$thumbnail.url.replace(/\/s\d+(-c)?\//,'/w720-h405-c/').replace(/=s\d+(-c)?$/,'=w720-h405-c');
-    var m=((e.content||e.summary||{}).$t||'').match(/<img[^>]+src=["']([^"']+)/);return m?m[1]:'';}
+  function img(e){var m=((e.content||e.summary||{}).$t||'').match(/<img[^>]+src=["']([^"']+)/);if(m)return m[1];
+    if(e.media$thumbnail)return e.media$thumbnail.url.replace(/\/s\d+(-c)?\//,'/w720-h405-c/').replace(/=s\d+(-c)?$/,'=w720-h405-c');return '';}
   function txt(e,n){var d=document.createElement('div');d.innerHTML=((e.summary||e.content||{}).$t||'');var t=(d.textContent||'').replace(/\s+/g,' ').trim();return t.length>n?t.slice(0,n)+'…':t;}
   function labs(e){return (e.category||[]).map(function(c){return '<a class="lbl'+(c.term==='اے آئی فلیش'?' fl':'')+'" href="/search/label/'+encodeURIComponent(c.term)+'">'+esc(c.term)+'</a>';}).join('');}
   function day(e){return (e.published&&e.published.$t||'').slice(0,10);}
@@ -415,7 +420,7 @@ footer .flogo img{width:64px;height:64px;border-radius:50%;box-shadow:0 0 0 3px 
   /* فیڈ: بریکنگ پٹی، تازہ خبریں، موضوعات، مزید خبریں */
   function H(x){var d=document.createElement('div');d.textContent=x;return d.innerHTML;}
   function href(e){var l=e.link||[];for(var i=0;i<l.length;i++){if(l[i].rel==='alternate')return l[i].href;}return '#';}
-  function thumb(e){return e.media$thumbnail?e.media$thumbnail.url.replace(/\/s\d+(-c)?\//,'/w640-h360-c/').replace(/=s\d+(-c)?$/,'=w640-h360-c'):'';}
+  function thumb(e){return img(e);}
   fetch('/feeds/posts/default?alt=json&max-results=25').then(function(r){return r.json();}).then(function(j){
     var es=(j.feed&&j.feed.entry)||[];if(!es.length)return;
     document.getElementById('tick').innerHTML=es.slice(0,12).map(function(e){return '<a href="'+href(e)+'">'+H(e.title.$t)+'</a>';}).join('');

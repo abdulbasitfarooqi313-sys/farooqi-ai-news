@@ -97,7 +97,7 @@ def _video_block(title: str, img: str = "") -> str:
     # یوٹیوب آئی ڈی ✅ کے وقت معلوم ہوتی ہے — یہاں نشان، publish() میں بدلا جاتا ہے
     return ('<div style="text-align:center"><img alt="' + E(title) + '" src="' + (img or "https://i.ytimg.com/vi/__YT__/__THUMB__.jpg") + '" '
             'style="width:100%;border-radius:14px;filter:brightness(1.12) contrast(1.15) saturate(1.3)"/></div>\n<h2>ویڈیو دیکھیں</h2>\n'
-            '<iframe src="https://www.youtube.com/embed/__YT__" title="' + E(title) + '" allowfullscreen="" loading="lazy"></iframe>')
+            '<div class="yt-embed" data-yt="__YT__" style="text-align:center;margin:10px 0"><a href="https://youtu.be/__YT__" target="_blank" rel="noopener">▶ ویڈیو یوٹیوب پر دیکھیں</a></div>')
 
 
 def _src(name: str, link: str) -> str:
