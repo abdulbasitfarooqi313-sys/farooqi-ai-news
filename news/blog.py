@@ -56,7 +56,41 @@ def _blog_id(tok: str) -> str:
 
 def _labels(kind: str, sd: dict) -> list[str]:
     seo_l = ((sd.get("seo") or {}).get("blog") or {}).get("labels") or []
-    return list(dict.fromkeys([KIND_LABEL.get(kind, "خبریں")] + [l for l in seo_l if l and len(l) < 30]))[:6]
+    return list(dict.fromkeys([KIND_LABEL.get(kind, "خبریں")] + [l for l in seo_l if l and len(l) < 30]))[:5]
+
+
+TOOLS_RX = re.compile(r"ٹول|ایپ\b|ایپس|ایپلی کیشن|چیٹ\s?جی\s?پی\s?ٹی|جیمنائی|کوپائلٹ|سافٹ ویئر|اسسٹنٹ|براؤزر|\btools?\b|\bapps?\b", re.I)
+FONT_WRAP = ('<div dir="rtl" style="font-family:\'Noto Nastaliq Urdu\',\'Jameel Noori Nastaleeq\',serif;line-height:2.3;text-align:right">', "</div>")
+
+
+def wrap(h: str) -> str:
+    """ہر پوسٹ نوٹو نستعلیق میں (تھیم کے علاوہ پوسٹ کے اندر بھی، تاکہ فیڈ/ای میل میں بھی وہی رہے)"""
+    return h if h.startswith(FONT_WRAP[0]) else FONT_WRAP[0] + h + FONT_WRAP[1]
+
+
+def topics(text: str, companies: list[str] | None = None, places: list[str] | None = None) -> list[str]:
+    """مینو کے موضوعات: کمپنیاں، ٹولز، پاکستان"""
+    out = []
+    if any((c or "").strip() for c in (companies or [])):
+        out.append("کمپنیاں")
+    if TOOLS_RX.search(text or ""):
+        out.append("ٹولز")
+    if "پاکستان" in (text or "") or any("پاکستان" in (p or "") for p in (places or [])):
+        out.append("پاکستان")
+    return out
+
+
+def story_post(s: dict) -> dict:
+    """بلیٹن کی ہر خبر الگ پوسٹ (مینو کے موضوعات بھرنے کے لیے)"""
+    r = s.get("reporter") or {}
+    body = (f"<p><b>{E(s.get('lead', ''))}</b></p><p>{E(s.get('vo', ''))}</p>"
+            + ("<ul>" + "".join(f"<li>{E(p)}</li>" for p in s.get("points", [])) + "</ul>" if s.get("points") else "")
+            + (f"<h2>نامہ نگار کی رپورٹ</h2><p>{E(r.get('report', ''))}</p>" if r.get("report") else "")
+            + (f"<blockquote>{E(s['comment'])}</blockquote>" if s.get("comment") else "")
+            + (f"<p><small>مقام: {E(s['location'])}</small></p>" if s.get("location") else "")
+            + _src(s.get("source", ""), s.get("link", "")))
+    txt = " ".join([s.get("headline", ""), s.get("lead", ""), s.get("vo", ""), s.get("location", "")])
+    return {"title": s["headline"], "html": wrap(body), "labels": ["بلیٹن"] + topics(txt, [s.get("company")], [s.get("location")])}
 
 
 def _video_block(title: str) -> str:
@@ -114,7 +148,13 @@ def prepare(kind: str, key: str, d: dict, sd: dict) -> None:
     parts.append('<p>مزید ویڈیوز کے لیے <a href="https://www.youtube.com/@farooqiainews?sub_confirmation=1" target="_blank" rel="noopener">'
                  'فاروقی اے آئی نیوز کو یوٹیوب پر سبسکرائب کریں</a>۔</p>')
     QUEUE.mkdir(parents=True, exist_ok=True)
-    rec = {"kind": kind, "title": title, "labels": _labels(kind, sd), "html": "\n".join(parts)}
+    alltext = " ".join([title] + [x.get("headline", "") + " " + x.get("vo", "") + " " + x.get("location", "") for x in d.get("stories", [])]
+                       + [x.get("h", "") + " " + x.get("country", "") for x in d.get("items", [])] + [l.get("t", "") for l in d.get("lines", [])])
+    comps = [x.get("company") for x in d.get("stories", []) + d.get("items", [])]
+    labs = list(dict.fromkeys(_labels(kind, sd) + topics(alltext, comps)))[:8]
+    rec = {"kind": kind, "title": title, "labels": labs, "html": wrap("\n".join(parts))}
+    if kind == "bulletin":
+        rec["stories"] = [story_post(x) for x in d.get("stories", [])]
     if enabled():                                       # مالک: ہر تحریر Blogger میں محفوظ (ڈرافٹ = آرکائیو)؛ ✅ پر شائع
         try:
             tok = _token()
@@ -156,6 +196,15 @@ def publish(key: str, yt_id: str, when: dt.datetime) -> str:
     if not r.ok:
         raise RuntimeError(f"بلاگ اشاعت: {r.status_code} {r.text[:200]}")
     url = r.json().get("url", "")
+    for i, sp in enumerate(p.get("stories", [])):         # ہر خبر الگ پوسٹ، اسی وقت
+        try:
+            sp_html = sp["html"].replace("</div>", f'<p>پورا بلیٹن دیکھیں: <a href="{url}">{E(p["title"])}</a></p></div>', 1) if url else sp["html"]
+            rr = requests.post(f"{API}/blogs/{bid}/posts", params={"isDraft": "true"}, headers=h, timeout=60,
+                               json={"kind": "blogger#post", "title": sp["title"], "labels": sp["labels"], "content": sp_html})
+            if rr.ok:
+                requests.post(f"{API}/blogs/{bid}/posts/{rr.json()['id']}/publish", params=params, headers=h, timeout=60)
+        except Exception as e:
+            print("خبر کی پوسٹ:", e)
     st = read_json(STATE) if STATE.exists() else {}
     st.setdefault("posts", {})[key] = {"id": pid, "url": url, "at": when.isoformat()}
     write_json(STATE, st)
