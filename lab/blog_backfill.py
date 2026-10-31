@@ -36,6 +36,13 @@ for f in sorted(Path("lab/backfill").glob("script_*.json")):
         print("BLOG", k, sp["labels"], done[k])
 write_json(blog.STATE, st)
 
+# 1b) ایک ہی خبر دو بار (24 اور 26 اکتوبر) — دوسری پوسٹ واپس ڈرافٹ (حذف نہیں)
+if not st.get("dup_reverted"):
+    g = requests.get(f"{API}/blogs/{bid}/posts/bypath", params={"path": "/2026/10/blog-post_26.html"}, headers=h, timeout=30)
+    if g.ok:
+        rv = requests.post(f"{API}/blogs/{bid}/posts/{g.json()['id']}/revert", headers=h, timeout=30)
+        print("BLOG dup → draft", rv.status_code); st["dup_reverted"] = rv.ok; write_json(blog.STATE, st)
+
 # 2) موجودہ شائع پوسٹس: نستعلیق + لیبل
 fl = read_json(Path("state/flash_last.json"))
 extra = {"2026-10-29-f": ["اے آئی فلیش"] + blog.topics(" ".join(i["h"] + " " + i.get("country", "") for i in fl["items"]), [i.get("company") for i in fl["items"]]),
