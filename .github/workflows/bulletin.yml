@@ -43,7 +43,11 @@ jobs:
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
           BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
-        run: python -m news.bulletin ${{ github.event.inputs.force == 'yes' && 'force' || '' }}
+        run: |
+          set +e
+          python -m news.bulletin ${{ github.event.inputs.force == 'yes' && 'force' || '' }}; rc=$?
+          [ $rc = 0 ] || { [ -f state/news_error.txt ] && grep -E "Error|error|File \"/home" state/news_error.txt | tail -6 | while IFS= read -r l; do echo "::notice::$l"; done; }
+          exit $rc
       - name: Keep a review copy
         if: always()
         env:
@@ -58,7 +62,7 @@ jobs:
         run: |
           git config user.name "ai-news-bot"
           git config user.email "ai-news-bot@users.noreply.github.com"
-          for f in state/news.json state/news_error.txt state/tts_usage.json state/tts_backup.json; do [ -f "$f" ] && git add "$f"; done; git add -A state/seo state/blog_queue 2>/dev/null; true
+          for f in state/news.json state/news_error.txt state/tts_usage.json state/tts_backup.json; do [ -f "$f" ] && git add "$f"; done; git add -A state/seo state/blog_queue 2>/dev/null || true; true
           git add -A cache state/script_*.json state/hook_bank.json state/competitor_ids.json 2>/dev/null || true
           git diff --cached --quiet && exit 0
           git commit -m "بلیٹن"

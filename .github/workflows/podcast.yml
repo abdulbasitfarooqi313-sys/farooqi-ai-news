@@ -65,7 +65,7 @@ jobs:
         run: |
           git config user.name "ai-news-bot"
           git config user.email "ai-news-bot@users.noreply.github.com"
-          for f in state/news.json state/tts_usage.json state/tts_backup.json state/podcast_last.json; do [ -f "$f" ] && git add "$f"; done; git add -A state/seo state/blog_queue 2>/dev/null; git add -A cache/podcast 2>/dev/null; true
+          for f in state/news.json state/tts_usage.json state/tts_backup.json state/podcast_last.json; do [ -f "$f" ] && git add "$f"; done; git add -A state/seo state/blog_queue 2>/dev/null || true; git add -A cache/podcast 2>/dev/null || true
           git diff --cached --quiet && exit 0
           git commit -m "پوڈکاسٹ"
           for i in 1 2 3; do git pull --rebase --autostash -X theirs && git push && exit 0; sleep 10; done; echo "push ناکام"; exit 1
