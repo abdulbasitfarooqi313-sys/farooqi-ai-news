@@ -1,416 +1,315 @@
 {
- "summary": "Today's AI discussions are shifting heavily toward practical data extraction tools, accessible workflow automation, and user privacy safeguards. Channel creators can win by showing beginners simple, step-by-step demonstrations of free open-source tools rather than covering speculative tech headlines.",
+ "summary": "Privacy concerns and interface updates like ChatGPT Dots are dominating community discussions on Reddit and Hacker News today. Toolscape can capitalized on this by delivering clear, practical tutorials on ChatGPT features, open-source document extractors like Documind, and privacy-focused AI utilities.",
  "topics": [
   {
-   "title": "Documind Open-Source Document Parsing",
-   "why": "It gives beginners a free way to extract structured tables and text from messy PDFs without paying for enterprise software.",
+   "title": "ChatGPT Dots Feature & Data Controls",
+   "why": "Users on Reddit are actively asking how Dots work while raising concerns about data sharing settings.",
    "trend": 10,
+   "sources": [
+    "reddit.com",
+    "Skill Leap AI",
+    "The AI Advantage"
+   ]
+  },
+  {
+   "title": "Documind Open-Source Document Parsing",
+   "why": "Show HN highlights Documind as a free way to convert unstructured documents into structured tables.",
+   "trend": 9,
    "sources": [
     "hnrss.org"
    ]
   },
   {
-   "title": "IFTTT.ai Automated Workflows",
-   "why": "It allows non-technical users to build automated app connections using simple plain English prompts.",
-   "trend": 9,
-   "sources": [
-    "producthunt.com"
-   ]
-  },
-  {
-   "title": "AI Privacy Policy Scanner",
-   "why": "It instantly highlights whether websites sell personal data before users sign up or agree to terms.",
+   "title": "AI Privacy Policy Reader Tools",
+   "why": "Hacker News posted an open-source AI tool that scans privacy policies to reveal sites selling user data.",
    "trend": 8,
    "sources": [
     "hnrss.org"
    ]
   },
   {
-   "title": "Viggle JST-2 Video Generation",
-   "why": "Creators are looking for free character animation tools that don't require high-end graphic hardware.",
+   "title": "Claude Boss Monitoring & Off-Topic Reports",
+   "why": "Mashable reports on Claude's new feature that alerts managers when employee activity strays off-topic.",
    "trend": 7,
-   "sources": [
-    "producthunt.com"
-   ]
-  },
-  {
-   "title": "Anthropic Claude AI Spend & Task Tracking",
-   "why": "Managers and freelancers are evaluating Claude's new usage reporting tools to see where budget and time go.",
-   "trend": 6,
    "sources": [
     "news.google.com"
    ]
   },
   {
-   "title": "Open-Source AI Drawing Animator",
-   "why": "It offers an easy, fun way for parents and creators to bring static sketches and kids' art to life.",
+   "title": "Canva Brush & Image AI Alternatives",
+   "why": "ProductHunt launched Canva Brush while Reddit users look for non-ChatGPT image generation tools.",
+   "trend": 6,
+   "sources": [
+    "producthunt.com",
+    "reddit.com"
+   ]
+  },
+  {
+   "title": "Open-Source AI for Children's Drawing Animation",
+   "why": "Hacker News showcased an open-source tool that turns simple hand-drawn sketches into animations.",
    "trend": 5,
    "sources": [
     "hnrss.org"
    ]
   },
   {
-   "title": "Suno MCP Music Protocol Integration",
-   "why": "Musicians and content creators want to trigger AI audio generation directly inside their developer tools.",
+   "title": "SparkBots AI No-Code Assistant Builder",
+   "why": "Featured on ProductHunt as a fast way to launch custom bots powered by Jev without code.",
    "trend": 4,
    "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "Polylane for ChatGPT",
-   "why": "ChatGPT power users are seeking better UI extensions to organize long conversation threads.",
+   "title": "Teable Mobile No-Code Database",
+   "why": "ProductHunt launched Teable Mobile for managing cloud databases and workflows on phones.",
    "trend": 3,
    "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "MIT Ultra-Fast Image Generation Model",
-   "why": "Speed improvements in image generation make real-time design tutorials significantly more practical.",
+   "title": "Disney AI Vacation Planning Tool",
+   "why": "News outlets tested Disney World's new itinerary planning chatbot for park visitors.",
    "trend": 2,
    "sources": [
-    "hnrss.org"
+    "news.google.com"
    ]
   },
   {
-   "title": "Voxel51 Multimodal Dataset Curation",
-   "why": "Developers working with images and text need free ways to filter and organize visual training data.",
+   "title": "Uber $1,500 Monthly AI Limit",
+   "why": "Hacker News discusses how high enterprise caps signal shift in AI tool pricing models.",
    "trend": 1,
    "sources": [
-    "producthunt.com"
+    "hnrss.org"
    ]
   }
  ],
  "packages": [
   {
+   "topic": "ChatGPT Dots Feature & Data Controls",
+   "competitors": "Skill Leap AI and The AI Advantage covered Dots in short overview videos when it first launched. They missed showing beginners step-by-step how to manage memory settings and prevent personal training opt-ins.",
+   "angle": "A clear, 6-minute beginner guide showing how to use ChatGPT Dots for daily tasks while keeping your data private.",
+   "viral": {
+    "score": 72,
+    "why": "ChatGPT UI changes create immediate search traffic from confused users, but it is an incremental update rather than a new model release."
+   },
+   "long": {
+    "title": "How to Use ChatGPT Dots Step by Step",
+    "thumb": "Master ChatGPT Dots",
+    "hook": "In the next 6 minutes, you will learn how to use ChatGPT Dots to organize your work notes automatically. You will also see how to adjust your settings so your personal conversations stay private.",
+    "outline": [
+     "What ChatGPT Dots are and where to find them",
+     "Step 1: Setting up your first Dot workflow",
+     "Step 2: Organizing project notes into structured outputs",
+     "How to prevent OpenAI from using your conversations for training",
+     "One limitation to keep in mind when using Dots daily",
+     "Summary and recommended next steps"
+    ]
+   },
+   "shorts": [
+    {
+     "title": "What Are ChatGPT Dots?",
+     "hook": "Stop wasting time searching for past ChatGPT chats.",
+     "script": "OpenAI added a feature called Dots to help you organize information. Click your profile icon, select settings, and turn on Dots. Now you can tag recurring project contexts without re-typing prompt history every single time. Make sure to check your privacy settings so your default history is not trained on.",
+     "cta": "Subscribe for more quick AI tips."
+    },
+    {
+     "title": "Turn Off This ChatGPT Setting",
+     "hook": "Check your ChatGPT privacy settings right now.",
+     "script": "OpenAI updated how user data is processed for model training. Go to Settings, click Data Controls, and check your training toggles. Turn off model improvement if you work with client documents or personal notes. It takes 10 seconds and keeps your data private.",
+     "cta": "Follow Toolscape for daily privacy guides."
+    }
+   ],
+   "carousel": {
+    "title": "How to Master ChatGPT Dots in 5 Steps",
+    "slides": [
+     "1. Open ChatGPT Settings and navigate to Data Controls.",
+     "2. Enable the new Dots feature in your main interface.",
+     "3. Tag ongoing project files directly inside your active chat.",
+     "4. Use explicit prompts to store repetitive formatting guidelines.",
+     "5. Turn off global model training to protect sensitive notes.",
+     "Save this post to setup your workspace today."
+    ]
+   },
+   "posts": {
+    "x": [
+     "ChatGPT introduced Dots to help organize recurring workflows. Here is a quick guide on how to turn it on and keep your data private.",
+     "Are you using ChatGPT Dots yet? Make sure to check Data Controls in your settings panel so your inputs remain private."
+    ],
+    "facebook": "OpenAI rolled out ChatGPT Dots for organizing project details. Here is a step-by-step walkthrough to get started and manage your privacy controls.",
+    "instagram": "Step-by-step guide to setting up ChatGPT Dots without sharing your private chat history. #ChatGPT #AITools #TechTutorial #Productivity",
+    "linkedin": "A practical walkthrough on using ChatGPT Dots for workplace productivity, including the exact settings needed to protect proprietary data."
+   },
+   "article": {
+    "title": "Beginner Guide to ChatGPT Dots and Privacy Settings",
+    "outline": [
+     "Introduction to ChatGPT Dots",
+     "How to Access Dots in Your Account",
+     "Practical Workplace Use Cases",
+     "Managing Data Privacy and Model Training",
+     "Conclusion and Best Practices"
+    ]
+   }
+  },
+  {
    "topic": "Documind Open-Source Document Parsing",
-   "competitors": "Metics Media and Kevin Stratvert showed standard ChatGPT file uploads but skipped open-source local document extraction tools. They missed showing how to output clean JSON or Excel spreadsheets without hit file limits.",
-   "angle": "A beginner-friendly 6-minute tutorial on converting raw PDF invoices and documents into structured spreadsheets using Documind for free.",
+   "competitors": "Documind is currently trending on Hacker News via creator posts, but main YouTube channels like Jeff Su and Metics Media have not published a dedicated screen-recorded walkthrough for beginners.",
+   "angle": "Extract structured data from PDF forms into clean Excel files using Documind's free open-source tool without writing code.",
    "viral": {
     "score": 58,
-    "why": "Document extraction solves an annoying daily task for office workers, though it lacks viral flashiness."
+    "why": "Document processing is a widespread workplace issue, but open-source installations can alienate non-technical viewers if not simplified."
    },
    "long": {
-    "title": "Turn Any PDF Into a Clean Spreadsheet in 5 Minutes (Free Tool)",
-    "thumb": "PDF to Excel Instantly",
-    "hook": "In the next 5 minutes, you will convert any messy PDF document into a clean spreadsheet automatically. You do not need to copy and paste a single row or pay for expensive software.",
+    "title": "Turn PDF Data into Excel Sheets with Documind AI",
+    "thumb": "PDF To Excel AI",
+    "hook": "Stop copying information from PDF invoices by hand. In the next 5 minutes, you will use a free tool called Documind to turn messy documents into neat spreadsheets automatically.",
     "outline": [
-     "The manual PDF nightmare vs automatic extraction",
-     "Setting up the free open-source tool Documind",
-     "Uploading your first multi-page document",
-     "Defining extraction schema fields step-by-step",
-     "Exporting clean data to CSV or Excel",
-     "One real limitation: handling handwritten scan quality"
+     "The main problem with standard PDF copiers",
+     "What is Documind and why it is free",
+     "Step 1: Uploading your first PDF document",
+     "Step 2: Defining the exact data fields you want to extract",
+     "Step 3: Exporting clean results directly to CSV or Excel",
+     "One limitation when working with low-resolution scans",
+     "Final summary and setup recommendations"
     ]
    },
    "shorts": [
     {
-     "title": "Stop Copy-Pasting PDFs to Excel!",
-     "hook": "If you are still retyping data from PDFs into Excel, stop right now.",
-     "script": "Open Documind on your screen. Drop your PDF file into the drop box. Select the fields you want, like total amount and date. Click export to CSV. Your file is ready in seconds without typing anything.",
-     "cta": "Subscribe to Toolscape for daily free AI workflow tips."
+     "title": "Extract PDF Data Fast",
+     "hook": "Still copying PDF tables into Excel manually?",
+     "script": "Documind is a free open-source AI tool that turns documents into structured data. Just upload your PDF, type the column names you need like total price or date, and it extracts the numbers into a clean table. You can export the file to Excel in seconds.",
+     "cta": "Subscribe for more free tool guides."
     },
     {
-     "title": "Extract PDF Data Free in 30 Sec",
-     "hook": "Here is how to pull clean data from 50 invoices at once for zero dollars.",
-     "script": "Go to Documind. Drag your stack of PDF receipts into the window. Tell the AI what columns you need: Vendor, Date, and Price. It reads every page and outputs a neat spreadsheet ready for accounting.",
-     "cta": "Check the channel for the full step-by-step setup."
+     "title": "Free PDF to Table AI Tool",
+     "hook": "This free tool pulls data straight out of messy documents.",
+     "script": "Instead of paying for expensive document software, try Documind. It uses AI to read unstructured text, invoices, or forms, and turns them into clean JSON or CSV files. It takes less than two minutes to run your first document.",
+     "cta": "Follow for simple productivity tutorials."
     }
    ],
    "carousel": {
-    "title": "Convert PDFs to Excel Automatically (Free)",
+    "title": "Extract PDF Tables to Excel with Documind AI",
     "slides": [
-     "Step 1: Open the free Documind tool",
-     "Step 2: Upload your PDF or scanned file",
-     "Step 3: Highlight the data points you need",
-     "Step 4: Click 'Extract Data'",
-     "Step 5: Export directly to CSV or Excel",
-     "Keep in mind: Scanned handwriting may require double checking"
+     "1. Open Documind in your web browser.",
+     "2. Drag and drop your PDF invoice or report.",
+     "3. Specify the data fields you want to capture.",
+     "4. Preview the extracted table structure instantly.",
+     "5. Click Export to download your clean CSV file.",
+     "Bookmark this for your next admin task."
     ]
    },
    "posts": {
     "x": [
-     "Still manually retyping PDF tables into Excel? Documind turns raw documents into structured spreadsheets for free. Step-by-step guide below.",
-     "Open-source AI tool callout: Documind parses complex PDFs into clean CSV data without monthly subscription fees."
+     "Documind is a free open-source tool that turns PDFs into clean structured data. Here is how to use it in 3 steps.",
+     "Stop copying tables out of documents by hand. Documind extracts custom fields from PDFs into spreadsheets automatically."
     ],
-    "facebook": "Tired of copying text from PDF files into spreadsheets? Learn how to use Documind to automate document parsing for free in under 5 minutes.",
-    "instagram": "Automate your paperwork! Learn how to turn messy PDF invoices into clean spreadsheets using a free open-source tool. #AITools #Productivity #Excel #Documind #OfficeHacks",
-    "linkedin": "Document parsing used to require enterprise software. Today you can use open-source AI tools like Documind to extract structured data from PDFs directly into Excel spreadsheets in minutes."
+    "facebook": "Tired of manual data entry? Documind is a free AI tool that extracts structured tables from PDFs into Excel in minutes. Here is how it works.",
+    "instagram": "Convert PDF files into spreadsheets automatically using Documind AI. #Productivity #AITools #FreeTools #Excel #TechTips",
+    "linkedin": "How to automate document parsing: A 3-step guide using the open-source Documind tool to turn unstructured PDFs into clean Excel sheets."
    },
    "article": {
-    "title": "How to Automate PDF Data Extraction for Free with Documind",
+    "title": "How to Automate Document Parsing with Documind AI",
     "outline": [
-     "Introduction to AI-powered document parsing",
-     "Prerequisites and simple setup guide",
-     "Step-by-step walkthrough: PDF to Excel export",
-     "Comparing Documind to standard ChatGPT file uploads",
-     "Limitations and best practices for clear results"
+     "The Overhead of Manual Document Entry",
+     "What is Documind AI?",
+     "Step-by-Step Document Extraction Tutorial",
+     "Exporting to Excel and CSV Formats",
+     "Comparing Free vs Enterprise Parsing Options"
     ]
    }
   },
   {
-   "topic": "IFTTT.ai Automated Workflows",
-   "competitors": "Nate Herk covered complex technical automations using N8N, which can intimidate non-coders. Matt Wolfe highlighted generic app updates without stepping through a full beginner workflow build.",
-   "angle": "Show non-technical users how to build their first multi-app automation in under 5 minutes using simple English prompts on IFTTT's free plan.",
+   "topic": "AI Privacy Policy Reader Tools",
+   "competitors": "Tech news outlets cover online privacy conceptually, but productivity creators rarely show viewers practical browser tools that audit privacy policies in real time.",
+   "angle": "Use a free browser-based AI policy reader to instantly see which websites sell your data and how to opt out.",
    "viral": {
     "score": 52,
-    "why": "Automation is high-value for productivity, but viewers often drop off if setups look overly technical."
+    "why": "Privacy topics generate high interest on forums, but viewers convert less on safety tools compared to high-utility automation guides."
    },
    "long": {
-    "title": "Build Your First AI Automation in 5 Minutes (No Code)",
-    "thumb": "Auto App Workflows",
-    "hook": "In the next 5 minutes, you will build an automated workflow that connects your apps using plain English prompts. You will never need to write a single line of code.",
+    "title": "Read Any Privacy Policy in 10 Seconds with AI",
+    "thumb": "Stop Data Selling",
+    "hook": "Most websites hide terms that allow them to sell your personal information. In the next 4 minutes, you will set up a free AI reader that highlights privacy risks instantly.",
     "outline": [
-     "Why traditional app integration felt hard",
-     "Creating a free account on IFTTT.ai",
-     "Writing your first natural language prompt recipe",
-     "Connecting Google Docs and email apps step-by-step",
-     "Testing the automatic trigger live on screen",
-     "Real downside: free plan task run limits"
+     "Why traditional privacy policies are unreadable",
+     "How AI privacy scanners work",
+     "Step 1: Installing the free privacy reader extension",
+     "Step 2: Scanning a live shopping website for red flags",
+     "Step 3: Finding hidden data-sharing toggles automatically",
+     "What this tool cannot catch on custom sites",
+     "Summary of privacy steps for beginners"
     ]
    },
    "shorts": [
     {
-     "title": "Connect Any Two Apps with AI",
-     "hook": "You can now connect your favorite apps using simple English sentences.",
-     "script": "Head over to IFTTT.ai. Type what you want to happen, like: 'When I get a starred email, save the attachment to Google Drive.' Connect your accounts, click enable, and let the AI run it automatically.",
-     "cta": "Subscribe for more quick no-code tutorials."
+     "title": "AI Privacy Policy Scanner",
+     "hook": "Do you know which websites sell your personal data?",
+     "script": "Nobody reads privacy policies because they are thousands of words long. An open-source AI reader now summarizes terms in ten seconds. It flags if a site sells your email, tracks location, or trains AI on your posts. Look for free privacy policy AI checkers online to test your favorite sites.",
+     "cta": "Subscribe for simple tech advice."
     },
     {
-     "title": "No-Code AI Automation Trick",
-     "hook": "Still moving data between apps manually every morning?",
-     "script": "Open IFTTT.ai on your phone or PC. Type your automation in plain text. The AI creates the triggers and actions for you instantly. Test it once and save hours every week.",
-     "cta": "Watch the full guide on our YouTube channel."
+     "title": "Stop Websites Selling Your Data",
+     "hook": "This free AI tool reads terms of service for you.",
+     "script": "Before creating an account on a new app, run its privacy page through an AI policy analyzer. It scans for key clauses like third-party data broker sales and opt-out rights. You get a red or green rating before you ever type in your email address.",
+     "cta": "Follow Toolscape for tech privacy tips."
     }
    ],
    "carousel": {
-    "title": "Build Easy AI App Automations for Free",
+    "title": "Scan Privacy Policies in 10 Seconds Using AI",
     "slides": [
-     "Step 1: Sign up for a free IFTTT account",
-     "Step 2: Choose the AI prompt generator",
-     "Step 3: Type your workflow in plain English",
-     "Step 4: Authorize your app connections",
-     "Step 5: Click test to verify the automation",
-     "Note: Free accounts have a limit on monthly runs"
+     "1. Open an AI-powered privacy reader tool.",
+     "2. Paste the link of any terms of service page.",
+     "3. Review the automated safety rating score.",
+     "4. Check flagged points for third-party data sales.",
+     "5. Use provided direct links to opt out of data collection.",
+     "Share this to help friends protect their data online."
     ]
    },
    "posts": {
     "x": [
-     "You don't need to code to automate your work. IFTTT.ai lets you connect apps using standard sentences. Here is how to set up your first workflow.",
-     "Automate repetitive daily tasks without paying for complex software. Simple guide to IFTTT's plain-English automation tool."
+     "Don't read 20-page terms of service agreements. Use an AI privacy reader to see if a site sells your data in 10 seconds.",
+     "New open-source AI tools scan privacy policies instantly to flag data sales and training opt-outs. Here is how to use them."
     ],
-    "facebook": "Want to automate your daily app tasks without learning code? Discover how IFTTT.ai creates automated app workflows from simple English descriptions.",
-    "instagram": "Automate your daily routine without coding! Connect your favorite apps using plain text prompts. #NoCode #Productivity #AITools #Automation #TechTips",
-    "linkedin": "No-code workflow automation has evolved. With IFTTT.ai, professionals can build automated cross-app connections using natural language commands in under five minutes."
+    "facebook": "Protecting your personal data online is easier with AI. Learn how to use free privacy policy readers to catch sites that sell your information.",
+    "instagram": "How to check if a website sells your data in 10 seconds using free AI tools. #CyberSecurity #Privacy #AITools #TechTips #OnlineSafety",
+    "linkedin": "Data privacy simplified: How professionals can leverage AI policy readers to evaluate vendor terms of service in seconds."
    },
    "article": {
-    "title": "A Beginner's Guide to Plain-English AI Automations with IFTTT.ai",
+    "title": "How to Use AI to Read Terms of Service and Protect Your Privacy",
     "outline": [
-     "Understanding prompt-driven app integration",
-     "Setting up your free IFTTT account",
-     "Building your first plain-English recipe step-by-step",
-     "Top 3 everyday automations for beginners",
-     "Free tier constraints and upgrade considerations"
-    ]
-   }
-  },
-  {
-   "topic": "AI Privacy Policy Scanner",
-   "competitors": "Matt Wolfe mentioned online security tools in pass-through list videos, but didn't walk viewers through an active live test on popular sites to verify if data is sold.",
-   "angle": "Demonstrate a free browser-based AI tool that scans length terms of service pages in 5 seconds to show exactly what data you are giving away.",
-   "viral": {
-    "score": 48,
-    "why": "Strong consumer privacy relevance, though viewers treat security tools as utility rather than entertainment."
-   },
-   "long": {
-    "title": "This Free AI Reads Privacy Policies so You Don't Have To",
-    "thumb": "Scan Terms Instantly",
-    "hook": "Before you click 'I Agree' on your next website, let this free AI tool read the fine print for you. In 5 seconds, it exposes whether the site sells your data or tracks your location.",
-    "outline": [
-     "The hidden danger of clicking 'Agree' blindly",
-     "Installing and setting up the free privacy reader",
-     "Scanning a popular social website live on screen",
-     "Understanding the red flag data alerts",
-     "Comparing results across major daily web apps",
-     "Limitation: AI summary accuracy vs full legal review"
-    ]
-   },
-   "shorts": [
-    {
-     "title": "Stop Clicking 'I Agree' Blindly!",
-     "hook": "Do you know what you actually agree to when you sign up for new sites?",
-     "script": "Use this free AI privacy scanner tool. Load any terms of service page and click scan. In five seconds, it lists red flags, like whether they sell your email address or track your browsing history.",
-     "cta": "Subscribe to Toolscape to protect your privacy."
-    },
-    {
-     "title": "Spot Sites Selling Your Data",
-     "hook": "Here is how to check if a website sells your personal data in 5 seconds.",
-     "script": "Open the AI policy reader while on any website. The tool scans thousands of legal words instantly. It gives you a simple green or red rating detailing data collection practices clearly.",
-     "cta": "Full step-by-step tutorial on our main page!"
-    }
-   ],
-   "carousel": {
-    "title": "How to Scan Privacy Policies in 5 Seconds",
-    "slides": [
-     "Step 1: Install the free AI policy reader tool",
-     "Step 2: Navigate to any sign-up page",
-     "Step 3: Click the privacy extension icon",
-     "Step 4: Review the high-risk red flags",
-     "Step 5: Decide whether to accept or opt out",
-     "Reminder: AI summaries highlight key risks but don't replace legal advice"
-    ]
-   },
-   "posts": {
-    "x": [
-     "Stop reading 20-page terms of service agreements. This free AI tool scans privacy policies in 5 seconds and flags data selling instantly.",
-     "Protect your personal info online. Learn how to use open-source AI policy scanners to spot hidden tracking terms before clicking agree."
-    ],
-    "facebook": "Don't sign away your personal privacy! Learn how to use a free AI tool that reads long terms of service pages and tells you if a site sells your data.",
-    "instagram": "Protect your personal privacy online! Read 10-page terms of service documents in 5 seconds using AI. #OnlinePrivacy #Security #AITools #TechHacks #PrivacyPolicy",
-    "linkedin": "Managing personal and corporate digital privacy is vital. Open-source AI privacy readers allow users to audit lengthy terms of service documents for data-sharing risks in seconds."
-   },
-   "article": {
-    "title": "How to Use AI to Read Privacy Policies and Safeguard Your Personal Data",
-    "outline": [
-     "The problem with modern terms of service agreements",
-     "How AI text analysis extracts privacy risks",
-     "Step-by-step guide to running your first privacy scan",
-     "Key red flags to look for during account sign-ups",
-     "Practical limitations of automated legal summaries"
+     "The Problem with Lengthy Terms of Service",
+     "How AI Privacy Analyzers Summarize Fine Print",
+     "Step-by-Step Setup Guide",
+     "Red Flags to Watch For in Data Policies",
+     "Practical Steps to Opt Out of Data Sales"
     ]
    }
   }
  ],
  "hook_patterns": [
   {
-   "pattern": "How I [Achieved Specific Result] with [Tool Name] - Full Guide",
-   "example": "How I Extracted 50 Invoices with Documind - Full Guide"
+   "pattern": "How I [Achieved Result] with [Tool] - Full Guide",
+   "example": "How I Automated PDF Data Entry with Documind - Full Guide"
   },
   {
-   "pattern": "[Tool Name] Just Got a Massive Upgrade 🚀",
-   "example": "IFTTT AI Just Got a Massive Upgrade 🚀"
+   "pattern": "[Tool] Got a Major Upgrade 🚀 These features are coming soon",
+   "example": "ChatGPT Got a Major Upgrade 🚀 How to Use Dots Today"
   },
   {
-   "pattern": "Build Your First [Thing] in [Time] (No Coding)",
-   "example": "Build Your First AI Automation in 5 Minutes (No Coding)"
+   "pattern": "Build Your First [Thing] in 20 Minutes (No Coding)",
+   "example": "Build Your First Custom AI Agent in 10 Minutes (No Coding)"
   },
   {
-   "pattern": "Stop [Doing Common Manual Task] Yourself.",
-   "example": "Stop Reading Privacy Policies Yourself."
+   "pattern": "Stop [Task] Yourself.",
+   "example": "Stop Summarizing Privacy Policies Yourself."
   },
   {
-   "pattern": "The Ultimate Beginner's Guide to [Tool Name]",
-   "example": "The Ultimate Beginner's Guide to Documind"
+   "pattern": "The Biggest [Tool] Update Yet: Meet [Feature]",
+   "example": "The Biggest ChatGPT Update Yet: Meet Dots"
   }
  ],
- "_competitors": [
-  {
-   "channel": "Matt Wolfe",
-   "title": "ANOTHER Flying Car? (Not Tesla / Not AI)",
-   "views": 433016,
-   "date": "2026-10-26",
-   "url": "https://youtu.be/gC18kqOcCEI"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "AI News: 24 Things You Need To Know This Week",
-   "views": 161175,
-   "date": "2026-10-23",
-   "url": "https://youtu.be/TVRCcMlvR10"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "Personal Body Guard Robot - What could go wrong?",
-   "views": 158863,
-   "date": "2026-10-22",
-   "url": "https://youtu.be/dyrNQV0F3Zs"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "11 AI Breakthroughs You Didn’t Know Existed",
-   "views": 155897,
-   "date": "2026-10-21",
-   "url": "https://youtu.be/umGZrkyTRtw"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "Nate Herk Breaks Down His 3 Most Powerful AI Automations",
-   "views": 56976,
-   "date": "2026-10-28",
-   "url": "https://youtu.be/AtjFk9f44HE"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "Old Phones Are Becoming Robots?!?",
-   "views": 52055,
-   "date": "2026-10-24",
-   "url": "https://youtu.be/FiyUagHO37Y"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "Open-Source AI Models Caught Up! (Kimi K3.1 Pro)",
-   "views": 25484,
-   "date": "2026-10-24",
-   "url": "https://youtu.be/u3WV4nf8Jdo"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "Crazy Spy Tech You Can Use For Free!",
-   "views": 25472,
-   "date": "2026-10-27",
-   "url": "https://youtu.be/EUjd_UBApoA"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "3 New Claude Prompts You Need To Try",
-   "views": 19024,
-   "date": "2026-10-19",
-   "url": "https://youtu.be/aIrrq3CLSKM"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "The Robot Butler Will Clean Up After You",
-   "views": 17452,
-   "date": "2026-10-26",
-   "url": "https://youtu.be/B8YFkYY20OY"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "My favorite new image editing tool",
-   "views": 14741,
-   "date": "2026-10-20",
-   "url": "https://youtu.be/VVBszkWK0Io"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "Insane Interactive World Creator (Genie 4)",
-   "views": 13182,
-   "date": "2026-10-28",
-   "url": "https://youtu.be/DZbCL56oz3M"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "5 Prompts With Google's ULTRA Powerful New Model",
-   "views": 13099,
-   "date": "2026-10-21",
-   "url": "https://youtu.be/S2srfNCa50A"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "These ChatGPT Prompts Are Game-Changers!",
-   "views": 9708,
-   "date": "2026-10-23",
-   "url": "https://youtu.be/WSHEBdmahHY"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "3 Critical Tasks AI Can Automate For You",
-   "views": 3865,
-   "date": "2026-10-29",
-   "url": "https://youtu.be/evXFML_Rnc0"
-  }
- ],
+ "_competitors": [],
  "_bank": [
   {
    "channel": "Dan Kieft",

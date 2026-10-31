@@ -1,5 +1,12 @@
 [
  {
+  "channel": "Matt Wolfe",
+  "title": "ANOTHER Flying Car? (Not Tesla / Not AI)",
+  "views": 1179275,
+  "date": "2026-10-26",
+  "url": "https://youtu.be/gC18kqOcCEI"
+ },
+ {
   "channel": "Wes Roth",
   "title": "OpenAI’s “Alien Math” Is Freaking People Out",
   "views": 942092,
@@ -12,13 +19,6 @@
   "views": 497526,
   "date": "2026-10-21",
   "url": "https://youtu.be/ehcBwqyUGjo"
- },
- {
-  "channel": "Matt Wolfe",
-  "title": "ANOTHER Flying Car? (Not Tesla / Not AI)",
-  "views": 433016,
-  "date": "2026-10-26",
-  "url": "https://youtu.be/gC18kqOcCEI"
  },
  {
   "channel": "Matthew Berman",
@@ -113,6 +113,13 @@
  },
  {
   "channel": "Matt Wolfe",
+  "title": "AI News: 24 Things You Need To Know This Week",
+  "views": 164297,
+  "date": "2026-10-23",
+  "url": "https://youtu.be/TVRCcMlvR10"
+ },
+ {
+  "channel": "Matt Wolfe",
   "title": "AI News: Dots, GPT-6.1 Sol, Sonnet 5.5, Gemini 4, and everything you need to know",
   "views": 161534,
   "date": "2026-10-02",
@@ -120,22 +127,15 @@
  },
  {
   "channel": "Matt Wolfe",
-  "title": "AI News: 24 Things You Need To Know This Week",
-  "views": 161175,
-  "date": "2026-10-23",
-  "url": "https://youtu.be/TVRCcMlvR10"
- },
- {
-  "channel": "Matt Wolfe",
   "title": "Personal Body Guard Robot - What could go wrong?",
-  "views": 158863,
+  "views": 159128,
   "date": "2026-10-22",
   "url": "https://youtu.be/dyrNQV0F3Zs"
  },
  {
   "channel": "Matt Wolfe",
   "title": "11 AI Breakthroughs You Didn’t Know Existed",
-  "views": 155897,
+  "views": 157653,
   "date": "2026-10-21",
   "url": "https://youtu.be/umGZrkyTRtw"
  },
@@ -308,6 +308,13 @@
   "url": "https://youtu.be/fHY0sjAejcA"
  },
  {
+  "channel": "Matt Wolfe",
+  "title": "Nate Herk Breaks Down His 3 Most Powerful AI Automations",
+  "views": 68329,
+  "date": "2026-10-28",
+  "url": "https://youtu.be/AtjFk9f44HE"
+ },
+ {
   "channel": "TheAIGRID",
   "title": "Something BIG Is Happening Behind Closed Doors At OpenAI And Anthropic",
   "views": 64610,
@@ -329,13 +336,6 @@
   "url": "https://youtu.be/MFP7CRm2xW4"
  },
  {
-  "channel": "Matt Wolfe",
-  "title": "Nate Herk Breaks Down His 3 Most Powerful AI Automations",
-  "views": 56976,
-  "date": "2026-10-28",
-  "url": "https://youtu.be/AtjFk9f44HE"
- },
- {
   "channel": "Beyond Tahir",
   "title": "The Only AI Tool You Need: Kimi Does It All (12 Minutes)",
   "views": 53865,
@@ -352,7 +352,7 @@
  {
   "channel": "Matt Wolfe",
   "title": "Old Phones Are Becoming Robots?!?",
-  "views": 52055,
+  "views": 52447,
   "date": "2026-10-24",
   "url": "https://youtu.be/FiyUagHO37Y"
  },
@@ -504,6 +504,20 @@
   "url": "https://youtu.be/Ixzw1pc0d4w"
  },
  {
+  "channel": "Matt Wolfe",
+  "title": "Crazy Spy Tech You Can Use For Free!",
+  "views": 26724,
+  "date": "2026-10-27",
+  "url": "https://youtu.be/EUjd_UBApoA"
+ },
+ {
+  "channel": "Matt Wolfe",
+  "title": "Open-Source AI Models Caught Up! (Kimi K3.1 Pro)",
+  "views": 25956,
+  "date": "2026-10-24",
+  "url": "https://youtu.be/u3WV4nf8Jdo"
+ },
+ {
   "channel": "TheAIGRID",
   "title": "Sam Altman Just Made Everyone FURIOUS...",
   "views": 25913,
@@ -511,25 +525,18 @@
   "url": "https://youtu.be/A698Z8C7388"
  },
  {
-  "channel": "Matt Wolfe",
-  "title": "Open-Source AI Models Caught Up! (Kimi K3.1 Pro)",
-  "views": 25484,
-  "date": "2026-10-24",
-  "url": "https://youtu.be/u3WV4nf8Jdo"
- },
- {
-  "channel": "Matt Wolfe",
-  "title": "Crazy Spy Tech You Can Use For Free!",
-  "views": 25472,
-  "date": "2026-10-27",
-  "url": "https://youtu.be/EUjd_UBApoA"
- },
- {
   "channel": "TheAIGRID",
   "title": "Meta Just Unleashed Its Most Powerful AI Yet  (Meta Muse Wonder)",
   "views": 25316,
   "date": "2026-10-13",
   "url": "https://youtu.be/p_kGoHC3-Ys"
+ },
+ {
+  "channel": "Matt Wolfe",
+  "title": "6 AI Updates Worth Knowing & A Bubble-Bursting IPO",
+  "views": 24923,
+  "date": "2026-10-30",
+  "url": "https://youtu.be/eDiQNFa-zYg"
  },
  {
   "channel": "Matthew Berman",
@@ -616,18 +623,18 @@
   "url": "https://youtu.be/tc92psltcEg"
  },
  {
+  "channel": "Matt Wolfe",
+  "title": "The Robot Butler Will Clean Up After You",
+  "views": 17791,
+  "date": "2026-10-26",
+  "url": "https://youtu.be/B8YFkYY20OY"
+ },
+ {
   "channel": "Matthew Berman",
   "title": "Team AMA (and Kimi K3.1 Testing!!)",
   "views": 17649,
   "date": "2026-10-23",
   "url": "https://youtu.be/7fZ1rFcm1nA"
- },
- {
-  "channel": "Matt Wolfe",
-  "title": "The Robot Butler Will Clean Up After You",
-  "views": 17452,
-  "date": "2026-10-26",
-  "url": "https://youtu.be/B8YFkYY20OY"
  },
  {
   "channel": "Asad Ali TV",
@@ -642,6 +649,13 @@
   "views": 16578,
   "date": "2026-09-28",
   "url": "https://youtu.be/pDqIEh0RLXg"
+ },
+ {
+  "channel": "Matt Wolfe",
+  "title": "Insane Interactive World Creator (Genie 4)",
+  "views": 16007,
+  "date": "2026-10-28",
+  "url": "https://youtu.be/DZbCL56oz3M"
  },
  {
   "channel": "Matthew Berman",
@@ -708,15 +722,8 @@
  },
  {
   "channel": "Matt Wolfe",
-  "title": "Insane Interactive World Creator (Genie 4)",
-  "views": 13182,
-  "date": "2026-10-28",
-  "url": "https://youtu.be/DZbCL56oz3M"
- },
- {
-  "channel": "Matt Wolfe",
   "title": "5 Prompts With Google's ULTRA Powerful New Model",
-  "views": 13099,
+  "views": 13221,
   "date": "2026-10-21",
   "url": "https://youtu.be/S2srfNCa50A"
  },
@@ -814,7 +821,7 @@
  {
   "channel": "Matt Wolfe",
   "title": "These ChatGPT Prompts Are Game-Changers!",
-  "views": 9708,
+  "views": 9959,
   "date": "2026-10-23",
   "url": "https://youtu.be/WSHEBdmahHY"
  },
@@ -847,6 +854,13 @@
   "url": "https://youtu.be/kb74_MmsTFM"
  },
  {
+  "channel": "Matt Wolfe",
+  "title": "3 Critical Tasks AI Can Automate For You",
+  "views": 5811,
+  "date": "2026-10-29",
+  "url": "https://youtu.be/evXFML_Rnc0"
+ },
+ {
   "channel": "Matthew Berman",
   "title": "Sam Altman on Why Your Most Important Advice Should Come From People",
   "views": 5497,
@@ -875,18 +889,18 @@
   "url": "https://youtu.be/jeUgtyvvkfs"
  },
  {
-  "channel": "Matt Wolfe",
-  "title": "3 Critical Tasks AI Can Automate For You",
-  "views": 3865,
-  "date": "2026-10-29",
-  "url": "https://youtu.be/evXFML_Rnc0"
- },
- {
   "channel": "Asad Ali TV",
   "title": "ARY Nominated Me for Best Tech YouTuber Award! 🏆 | Pakistan Influencer Awards 2026",
   "views": 3357,
   "date": "2026-10-26",
   "url": "https://youtu.be/GUmvm0fFtVk"
+ },
+ {
+  "channel": "Matt Wolfe",
+  "title": "When a humanoid and a drone become besties",
+  "views": 3067,
+  "date": "2026-10-30",
+  "url": "https://youtu.be/4sGplZdBy6A"
  },
  {
   "channel": "Matt Wolfe",
