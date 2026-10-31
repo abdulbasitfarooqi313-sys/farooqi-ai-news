@@ -69,9 +69,23 @@ def _ff(*args: str) -> None:
 
 
 def _dur(p: Path) -> float:
-    r = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(p)],
-                       capture_output=True, text=True, check=True)
-    return float(r.stdout.strip())
+    """فائل کی لمبائی (سیکنڈ) — کچھ فائلوں میں ffprobe «N/A» دیتا ہے؛ تب اسٹریم، پھر پوری فائل پڑھ کر"""
+    import re as _re
+    for q in ("format=duration", "stream=duration"):
+        r = subprocess.run(["ffprobe", "-v", "error", "-show_entries", q, "-of", "csv=p=0", str(p)], capture_output=True, text=True)
+        for v in r.stdout.split():
+            try:
+                x = float(v.strip().strip(","))
+                if x > 0:
+                    return x
+            except ValueError:
+                pass
+    r = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(p), "-f", "null", "-"], capture_output=True, text=True, timeout=600)
+    t = _re.findall(r"time=(\d+):(\d+):([\d.]+)", r.stderr)
+    if t:
+        h, m, s = t[-1]
+        return int(h) * 3600 + int(m) * 60 + float(s)
+    raise RuntimeError(f"لمبائی معلوم نہ ہو سکی: {p.name}")
 
 
 # ---------------- خبریں ----------------

@@ -41,9 +41,9 @@ def _ff(*args: str) -> None:
 
 
 def _dur(path: Path) -> float:
-    r = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(path)],
-                       capture_output=True, text=True, check=True)
-    return float(r.stdout.strip())
+    """«N/A» سے محفوظ — bulletin._dur والا طریقہ"""
+    from .bulletin import _dur as d
+    return d(path)
 
 
 def _norm(src: Path, dst: Path, pad: float = 0.5) -> Path:
