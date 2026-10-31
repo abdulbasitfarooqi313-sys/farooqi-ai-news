@@ -80,6 +80,14 @@ def prepare(kind: str, key: str, d: dict, sd: dict) -> None:
         parts.append(f"<p><b>{E(b['meta_description'])}</b></p>")
     parts.append(_video_block(title))
     if kind == "bulletin":
+        tr = [d.get("opening", "")] + [x["headline"] for x in d.get("stories", [])] + [d.get("to_details", "")]
+        for x in d.get("stories", []):
+            tr += [x.get("lead", ""), x.get("vo", "")]
+            r = x.get("reporter") or {}
+            if r:
+                tr += [r.get("handoff", ""), "زید: " + r.get("report", ""), r.get("thanks", "")]
+            tr.append(x.get("comment", ""))
+        transcript = [t.strip() for t in tr if (t or "").strip()]
         parts.append("<h2>آج کی اہم خبریں</h2><ol>" + "".join(f"<li>{E(s['headline'])}</li>" for s in d.get("stories", [])) + "</ol>")
         for s in d.get("stories", []):
             parts.append(f"<h2>{E(s['headline'])}</h2><p>{E(s.get('lead', ''))}</p><p>{E(s.get('vo', ''))}</p>"
@@ -87,6 +95,7 @@ def prepare(kind: str, key: str, d: dict, sd: dict) -> None:
                          + (f"<blockquote>{E(s['comment'])}</blockquote>" if s.get("comment") else "")
                          + _src(s.get("source", ""), s.get("link", "")))
     elif kind == "flash":
+        transcript = None
         parts.append("<h2>آج کی اے آئی سرخیاں</h2><ol>" + "".join(
             f"<li>{E(it['h'])}" + (f" <small>({E(it.get('country', ''))})</small>" if it.get("country") else "")
             + (f' — <a href="{E(it["link"])}" rel="nofollow noopener" target="_blank">{E(it.get("source_ur") or it.get("source") or "ماخذ")}</a>' if it.get("link") else "")
@@ -100,10 +109,24 @@ def prepare(kind: str, key: str, d: dict, sd: dict) -> None:
         parts.append("<p><small>یہ گفتگو معلوماتی ہے، سرمایہ کاری کا مشورہ نہیں۔</small></p>")
     elif kind == "word":
         parts.append(f"<h2>{E(d['term'])} کیا ہے؟</h2><p><b>مطلب:</b> {E(d['meaning'])}</p><p><b>مثال:</b> {E(d['example'])}</p><p>{E(d['script'])}</p>")
+    if kind == "bulletin" and transcript:
+        parts.append("<h2>بلیٹن کا مکمل متن</h2>" + "".join(f"<p>{E(t)}</p>" for t in transcript))
     parts.append('<p>مزید ویڈیوز کے لیے <a href="https://www.youtube.com/@farooqiainews?sub_confirmation=1" target="_blank" rel="noopener">'
                  'فاروقی اے آئی نیوز کو یوٹیوب پر سبسکرائب کریں</a>۔</p>')
     QUEUE.mkdir(parents=True, exist_ok=True)
-    write_json(QUEUE / f"{key}.json", {"kind": kind, "title": title, "labels": _labels(kind, sd), "html": "\n".join(parts)})
+    rec = {"kind": kind, "title": title, "labels": _labels(kind, sd), "html": "\n".join(parts)}
+    if enabled():                                       # مالک: ہر تحریر Blogger میں محفوظ (ڈرافٹ = آرکائیو)؛ ✅ پر شائع
+        try:
+            tok = _token()
+            r = requests.post(f"{API}/blogs/{_blog_id(tok)}/posts", params={"isDraft": "true"}, headers={"Authorization": f"Bearer {tok}"},
+                              json={"kind": "blogger#post", "title": rec["title"], "labels": rec["labels"], "content": rec["html"]}, timeout=60)
+            if r.ok:
+                rec["pid"] = r.json()["id"]
+            else:
+                print("بلاگ ڈرافٹ:", r.status_code, r.text[:160])
+        except Exception as e:
+            print("بلاگ ڈرافٹ نہیں بنا:", e)
+    write_json(QUEUE / f"{key}.json", rec)
 
 
 def publish(key: str, yt_id: str, when: dt.datetime) -> str:
@@ -119,10 +142,13 @@ def publish(key: str, yt_id: str, when: dt.datetime) -> str:
     bid = _blog_id(tok)
     h = {"Authorization": f"Bearer {tok}"}
     body = {"kind": "blogger#post", "title": p["title"], "labels": p["labels"], "content": p["html"].replace("__YT__", yt_id)}
-    r = requests.post(f"{API}/blogs/{bid}/posts", params={"isDraft": "true"}, headers=h, json=body, timeout=60)
+    if p.get("pid"):                                    # پہلے سے بنا ڈرافٹ — ویڈیو کا لنک ڈال کر وہی شائع
+        r = requests.patch(f"{API}/blogs/{bid}/posts/{p['pid']}", headers=h, json=body, timeout=60)
+    else:
+        r = requests.post(f"{API}/blogs/{bid}/posts", params={"isDraft": "true"}, headers=h, json=body, timeout=60)
     if not r.ok:
         raise RuntimeError(f"بلاگ: {r.status_code} {r.text[:200]}")
-    pid = r.json()["id"]
+    pid = p.get("pid") or r.json()["id"]
     params = {}
     if when > dt.datetime.now(TZ) + dt.timedelta(minutes=5):
         params["publishDate"] = when.astimezone(dt.timezone.utc).isoformat().replace("+00:00", "Z")

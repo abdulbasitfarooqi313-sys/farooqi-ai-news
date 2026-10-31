@@ -44,6 +44,7 @@ jobs:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
         run: |
           MODE=""
           if [ "${{ github.event_name }}" = "push" ]; then MODE=$(head -c 20 state/podcast_run_now | tr -dc 'a-z'); POD_TTS=$(sed -n 2p state/podcast_run_now | tr -dc 'a-z'); export POD_TTS=${POD_TTS:-gemini}; fi

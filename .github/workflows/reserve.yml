@@ -44,6 +44,7 @@ jobs:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
         run: |
           if [ "${{ github.event_name }}" = "push" ] && grep -q sample state/reserve_run_now; then python -m news.word sample; exit 0; fi
           if [ "${{ github.event.inputs.force }}" = "yes" ]; then python -m news.reserve word; else python -m news.reserve; fi
