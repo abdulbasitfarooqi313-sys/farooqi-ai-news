@@ -194,7 +194,7 @@ def make(sample: bool = False, feedback: str | None = None) -> bool:
     key = B._today() + "-w"
     try:
         from . import seo as SEO
-        SEO.attach("word", key, d, sd, [d["term"], d["meaning"], d["example"], d["script"]])
+        SEO.attach("word", key, d, sd, [d["term"], d["meaning"], d["example"], d["script"]], thumb=B.ROOT / "word_thumb.jpg")
     except Exception as e:
         print("SEO پیکیج نہیں بنا:", e)
     d["stories"] = [{"headline": f"آج کا اے آئی لفظ: {d['term']}"}]

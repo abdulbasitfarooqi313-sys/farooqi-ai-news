@@ -268,7 +268,7 @@ def make(sample: bool = False, feedback: str | None = None) -> Path:
         key = B._today() + "-f"
         try:
             from . import seo as SEO
-            SEO.attach("flash", key, d, sd, [it["h"] for it in d["items"]], [it.get("link", "") for it in d["items"] if it.get("link")])
+            SEO.attach("flash", key, d, sd, [it["h"] for it in d["items"]], [it.get("link", "") for it in d["items"] if it.get("link")], thumb=B.ROOT / "flash_thumb.jpg")
         except Exception as e:
             print("SEO پیکیج نہیں بنا:", e)
         d["stories"] = [{"headline": it["h"]} for it in d["items"]]

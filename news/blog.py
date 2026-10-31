@@ -93,9 +93,9 @@ def story_post(s: dict) -> dict:
     return {"title": s["headline"], "html": wrap(body), "labels": ["بلیٹن"] + topics(txt, [s.get("company")], [s.get("location")])}
 
 
-def _video_block(title: str) -> str:
+def _video_block(title: str, img: str = "") -> str:
     # یوٹیوب آئی ڈی ✅ کے وقت معلوم ہوتی ہے — یہاں نشان، publish() میں بدلا جاتا ہے
-    return ('<div style="text-align:center"><img alt="' + E(title) + '" src="https://i.ytimg.com/vi/__YT__/__THUMB__.jpg" '
+    return ('<div style="text-align:center"><img alt="' + E(title) + '" src="' + (img or "https://i.ytimg.com/vi/__YT__/__THUMB__.jpg") + '" '
             'style="width:100%;border-radius:14px;filter:brightness(1.12) contrast(1.15) saturate(1.3)"/></div>\n<h2>ویڈیو دیکھیں</h2>\n'
             '<iframe src="https://www.youtube.com/embed/__YT__" title="' + E(title) + '" allowfullscreen="" loading="lazy"></iframe>')
 
@@ -104,7 +104,7 @@ def _src(name: str, link: str) -> str:
     return f'<p class="src">ماخذ: <a href="{E(link)}" rel="nofollow noopener" target="_blank">{E(name or "لنک")}</a></p>' if link else ""
 
 
-def prepare(kind: str, key: str, d: dict, sd: dict) -> None:
+def prepare(kind: str, key: str, d: dict, sd: dict, thumb=None) -> None:
     """ویڈیو بنتے ہی پوسٹ کا مسودہ — صرف ریکارڈ، ابھی کچھ شائع نہیں"""
     seo = sd.get("seo") or {}
     b = seo.get("blog") or {}
@@ -112,7 +112,14 @@ def prepare(kind: str, key: str, d: dict, sd: dict) -> None:
     parts = []
     if b.get("meta_description"):
         parts.append(f"<p><b>{E(b['meta_description'])}</b></p>")
-    parts.append(_video_block(title))
+    img = ""
+    if thumb:                                           # ہمارا اپنا صاف تھمب نیل (یوٹیوب کی دھندلی تصویر کی جگہ)
+        try:
+            from .thumbs import wide
+            img = wide(thumb, key)
+        except Exception as e:
+            print("تھمب نیل:", e)
+    parts.append(_video_block(title, img))
     if kind == "bulletin":
         tr = [d.get("opening", "")] + [x["headline"] for x in d.get("stories", [])] + [d.get("to_details", "")]
         for x in d.get("stories", []):

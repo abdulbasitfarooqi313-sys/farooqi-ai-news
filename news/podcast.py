@@ -369,7 +369,7 @@ def make(sample: bool = False, feedback: str | None = None) -> Path:
         key = B._today() + "-p"
         try:
             from . import seo as SEO
-            SEO.attach("podcast", key, d, sd, [l["t"][:160] for l in d["lines"]], [x.get("link", "") for x in d.get("sources", []) if x.get("link")])
+            SEO.attach("podcast", key, d, sd, [l["t"][:160] for l in d["lines"]], [x.get("link", "") for x in d.get("sources", []) if x.get("link")], thumb=B.ROOT / "podcast_thumb.jpg")
         except Exception as e:
             print("SEO پیکیج نہیں بنا:", e)
         d["stories"] = [{"headline": d["title"]}]

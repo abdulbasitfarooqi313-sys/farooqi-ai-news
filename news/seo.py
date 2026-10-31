@@ -76,7 +76,7 @@ def social(pkg: dict) -> dict:
            {"pinned": (pkg.get("youtube") or {}).get("pinned", "")}
 
 
-def attach(kind: str, key: str, d: dict, sd: dict, points: list[str] | None = None, links: list[str] | None = None) -> dict:
+def attach(kind: str, key: str, d: dict, sd: dict, points: list[str] | None = None, links: list[str] | None = None, thumb=None) -> dict:
     """ایک قدم میں: پیکیج بنائیں، یوٹیوب ٹیگ ملائیں، ٹیلیگرام کے سوشل خانے بھریں، state/seo/<key>.json میں محفوظ کریں"""
     pkg = package(kind, sd.get("youtube_title", ""), d.get("summary", ""), points, links)
     sd["tags"] = list(dict.fromkeys((sd.get("tags") or []) + pkg["youtube"].get("tags", [])))[:40]
@@ -88,7 +88,7 @@ def attach(kind: str, key: str, d: dict, sd: dict, points: list[str] | None = No
     save(key, pkg)
     try:                                                # بلاگ پوسٹ کا مسودہ (✅ پر شائع)
         from . import blog
-        blog.prepare(kind, key, d, sd)
+        blog.prepare(kind, key, d, sd, thumb)
     except Exception as e:
         print("بلاگ مسودہ نہیں بنا:", e)
     return pkg

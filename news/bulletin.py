@@ -945,7 +945,7 @@ def make(feedback: str | None = None) -> None:
         try:
             from . import seo as SEO
             SEO.attach("bulletin", _today(), d, sd, [s_["headline"] for s_ in d["stories"]],
-                       [s_.get("link", "") for s_ in d["stories"] if s_.get("link")])
+                       [s_.get("link", "") for s_ in d["stories"] if s_.get("link")], thumb=thumb)
         except Exception as e:
             print("SEO پیکیج نہیں بنا:", e)
         vmid, mids = deliver(out, thumb, sd, d)
