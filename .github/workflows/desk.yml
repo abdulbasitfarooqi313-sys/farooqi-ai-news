@@ -1,0 +1,59 @@
+# روزنامچہ فاروقی — روز صبح 6 بجے (سعودی وقت) تینوں چینلوں کا مواد مرکز؛ اتوار کو نئے مقابل چینلوں کی تلاش
+name: Daily Desk
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+    inputs:
+      niches: { description: "news toolscape nawa (خالی = تینوں)", required: false, default: "" }
+permissions:
+  contents: write
+concurrency: desk
+jobs:
+  desk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Engine (private code)
+        env: { ENGINE_TOKEN: "${{ secrets.ENGINE_TOKEN }}" }
+        run: |
+          if [ -n "$ENGINE_TOKEN" ]; then
+            if git clone -q --depth 1 "https://x-access-token:${ENGINE_TOKEN}@github.com/abdulbasitfarooqi313-sys/farooqi-ai-news-engine" /tmp/engine; then
+              rsync -a --exclude .git --exclude .github --exclude state --exclude media --exclude cache --exclude desk /tmp/engine/ ./
+              rm -rf /tmp/engine; echo "engine: ok"
+            else
+              code=$(curl -s -o /dev/null -w '%{http_code}' -H "Authorization: Bearer $ENGINE_TOKEN" https://api.github.com/repos/abdulbasitfarooqi313-sys/farooqi-ai-news-engine)
+              echo "::warning::engine clone failed (api $code, token len ${#ENGINE_TOKEN}, prefix ${ENGINE_TOKEN:0:11}) — using code in this repo"
+              [ -f news/bulletin.py ] || exit 1
+            fi
+          else echo "::warning::ENGINE_TOKEN missing — using code in this repo"; fi
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install requests json-repair
+      - name: Build desk
+        env:
+          GEMINI_NEWS_KEY: ${{ secrets.GEMINI_NEWS_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python -u -m news.desk ${{ github.event.inputs.niches }}
+      - name: Weekly competitor discovery
+        if: always()
+        run: '[ "$(date -u +%u)" = "7" ] && python -m news.discover || true'
+      - name: Save
+        if: always()
+        run: |
+          git config user.name "news-bot"; git config user.email "news-bot@users.noreply.github.com"
+          git add -A desk state/hook_bank*.json state/competitor_ids.json state/discover.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "روزنامچہ $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase -X theirs && git push && exit 0; sleep 5; done
+
+      - name: Alert on failure
+        if: failure()
+        env:
+          TOKEN: ${{ secrets.NEWS_BOT_TOKEN || secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT_SECRET: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          CHAT=$(python3 -c "import json;print(json.load(open('state/news.json')).get('chat',''))" 2>/dev/null); CHAT=${CHAT:-$CHAT_SECRET}
+          curl -s -X POST "https://api.telegram.org/bot$TOKEN/sendMessage" --data-urlencode "chat_id=$CHAT" \
+            --data-urlencode "text=⚠️ اے آئی نیوز: «${{ github.workflow }}» ناکام ہو گیا۔ یہ لنک Jules یا Claude کو دکھائیں: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" >/dev/null || true

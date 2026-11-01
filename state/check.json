@@ -1,0 +1,7 @@
+{
+ "time": "2026-10-22 03:02",
+ "bot": "@farooqi_ai_news_bot",
+ "chat": "ہے",
+ "gemini_text": "ٹھیک",
+ "gemini_voice": "400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Model tried to generate text, but it should only be used for TTS. Make sure your instructions are clear to only generate audio from a given text transcr"
+}

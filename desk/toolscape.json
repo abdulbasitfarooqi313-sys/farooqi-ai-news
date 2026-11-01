@@ -1,0 +1,420 @@
+{
+ "summary": "Privacy concerns and interface updates like ChatGPT Dots are dominating community discussions on Reddit and Hacker News today. Toolscape can capitalized on this by delivering clear, practical tutorials on ChatGPT features, open-source document extractors like Documind, and privacy-focused AI utilities.",
+ "topics": [
+  {
+   "title": "ChatGPT Dots Feature & Data Controls",
+   "why": "Users on Reddit are actively asking how Dots work while raising concerns about data sharing settings.",
+   "trend": 10,
+   "sources": [
+    "reddit.com",
+    "Skill Leap AI",
+    "The AI Advantage"
+   ]
+  },
+  {
+   "title": "Documind Open-Source Document Parsing",
+   "why": "Show HN highlights Documind as a free way to convert unstructured documents into structured tables.",
+   "trend": 9,
+   "sources": [
+    "hnrss.org"
+   ]
+  },
+  {
+   "title": "AI Privacy Policy Reader Tools",
+   "why": "Hacker News posted an open-source AI tool that scans privacy policies to reveal sites selling user data.",
+   "trend": 8,
+   "sources": [
+    "hnrss.org"
+   ]
+  },
+  {
+   "title": "Claude Boss Monitoring & Off-Topic Reports",
+   "why": "Mashable reports on Claude's new feature that alerts managers when employee activity strays off-topic.",
+   "trend": 7,
+   "sources": [
+    "news.google.com"
+   ]
+  },
+  {
+   "title": "Canva Brush & Image AI Alternatives",
+   "why": "ProductHunt launched Canva Brush while Reddit users look for non-ChatGPT image generation tools.",
+   "trend": 6,
+   "sources": [
+    "producthunt.com",
+    "reddit.com"
+   ]
+  },
+  {
+   "title": "Open-Source AI for Children's Drawing Animation",
+   "why": "Hacker News showcased an open-source tool that turns simple hand-drawn sketches into animations.",
+   "trend": 5,
+   "sources": [
+    "hnrss.org"
+   ]
+  },
+  {
+   "title": "SparkBots AI No-Code Assistant Builder",
+   "why": "Featured on ProductHunt as a fast way to launch custom bots powered by Jev without code.",
+   "trend": 4,
+   "sources": [
+    "producthunt.com"
+   ]
+  },
+  {
+   "title": "Teable Mobile No-Code Database",
+   "why": "ProductHunt launched Teable Mobile for managing cloud databases and workflows on phones.",
+   "trend": 3,
+   "sources": [
+    "producthunt.com"
+   ]
+  },
+  {
+   "title": "Disney AI Vacation Planning Tool",
+   "why": "News outlets tested Disney World's new itinerary planning chatbot for park visitors.",
+   "trend": 2,
+   "sources": [
+    "news.google.com"
+   ]
+  },
+  {
+   "title": "Uber $1,500 Monthly AI Limit",
+   "why": "Hacker News discusses how high enterprise caps signal shift in AI tool pricing models.",
+   "trend": 1,
+   "sources": [
+    "hnrss.org"
+   ]
+  }
+ ],
+ "packages": [
+  {
+   "topic": "ChatGPT Dots Feature & Data Controls",
+   "competitors": "Skill Leap AI and The AI Advantage covered Dots in short overview videos when it first launched. They missed showing beginners step-by-step how to manage memory settings and prevent personal training opt-ins.",
+   "angle": "A clear, 6-minute beginner guide showing how to use ChatGPT Dots for daily tasks while keeping your data private.",
+   "viral": {
+    "score": 72,
+    "why": "ChatGPT UI changes create immediate search traffic from confused users, but it is an incremental update rather than a new model release."
+   },
+   "long": {
+    "title": "How to Use ChatGPT Dots Step by Step",
+    "thumb": "Master ChatGPT Dots",
+    "hook": "In the next 6 minutes, you will learn how to use ChatGPT Dots to organize your work notes automatically. You will also see how to adjust your settings so your personal conversations stay private.",
+    "outline": [
+     "What ChatGPT Dots are and where to find them",
+     "Step 1: Setting up your first Dot workflow",
+     "Step 2: Organizing project notes into structured outputs",
+     "How to prevent OpenAI from using your conversations for training",
+     "One limitation to keep in mind when using Dots daily",
+     "Summary and recommended next steps"
+    ]
+   },
+   "shorts": [
+    {
+     "title": "What Are ChatGPT Dots?",
+     "hook": "Stop wasting time searching for past ChatGPT chats.",
+     "script": "OpenAI added a feature called Dots to help you organize information. Click your profile icon, select settings, and turn on Dots. Now you can tag recurring project contexts without re-typing prompt history every single time. Make sure to check your privacy settings so your default history is not trained on.",
+     "cta": "Subscribe for more quick AI tips."
+    },
+    {
+     "title": "Turn Off This ChatGPT Setting",
+     "hook": "Check your ChatGPT privacy settings right now.",
+     "script": "OpenAI updated how user data is processed for model training. Go to Settings, click Data Controls, and check your training toggles. Turn off model improvement if you work with client documents or personal notes. It takes 10 seconds and keeps your data private.",
+     "cta": "Follow Toolscape for daily privacy guides."
+    }
+   ],
+   "carousel": {
+    "title": "How to Master ChatGPT Dots in 5 Steps",
+    "slides": [
+     "1. Open ChatGPT Settings and navigate to Data Controls.",
+     "2. Enable the new Dots feature in your main interface.",
+     "3. Tag ongoing project files directly inside your active chat.",
+     "4. Use explicit prompts to store repetitive formatting guidelines.",
+     "5. Turn off global model training to protect sensitive notes.",
+     "Save this post to setup your workspace today."
+    ]
+   },
+   "posts": {
+    "x": [
+     "ChatGPT introduced Dots to help organize recurring workflows. Here is a quick guide on how to turn it on and keep your data private.",
+     "Are you using ChatGPT Dots yet? Make sure to check Data Controls in your settings panel so your inputs remain private."
+    ],
+    "facebook": "OpenAI rolled out ChatGPT Dots for organizing project details. Here is a step-by-step walkthrough to get started and manage your privacy controls.",
+    "instagram": "Step-by-step guide to setting up ChatGPT Dots without sharing your private chat history. #ChatGPT #AITools #TechTutorial #Productivity",
+    "linkedin": "A practical walkthrough on using ChatGPT Dots for workplace productivity, including the exact settings needed to protect proprietary data."
+   },
+   "article": {
+    "title": "Beginner Guide to ChatGPT Dots and Privacy Settings",
+    "outline": [
+     "Introduction to ChatGPT Dots",
+     "How to Access Dots in Your Account",
+     "Practical Workplace Use Cases",
+     "Managing Data Privacy and Model Training",
+     "Conclusion and Best Practices"
+    ]
+   }
+  },
+  {
+   "topic": "Documind Open-Source Document Parsing",
+   "competitors": "Documind is currently trending on Hacker News via creator posts, but main YouTube channels like Jeff Su and Metics Media have not published a dedicated screen-recorded walkthrough for beginners.",
+   "angle": "Extract structured data from PDF forms into clean Excel files using Documind's free open-source tool without writing code.",
+   "viral": {
+    "score": 58,
+    "why": "Document processing is a widespread workplace issue, but open-source installations can alienate non-technical viewers if not simplified."
+   },
+   "long": {
+    "title": "Turn PDF Data into Excel Sheets with Documind AI",
+    "thumb": "PDF To Excel AI",
+    "hook": "Stop copying information from PDF invoices by hand. In the next 5 minutes, you will use a free tool called Documind to turn messy documents into neat spreadsheets automatically.",
+    "outline": [
+     "The main problem with standard PDF copiers",
+     "What is Documind and why it is free",
+     "Step 1: Uploading your first PDF document",
+     "Step 2: Defining the exact data fields you want to extract",
+     "Step 3: Exporting clean results directly to CSV or Excel",
+     "One limitation when working with low-resolution scans",
+     "Final summary and setup recommendations"
+    ]
+   },
+   "shorts": [
+    {
+     "title": "Extract PDF Data Fast",
+     "hook": "Still copying PDF tables into Excel manually?",
+     "script": "Documind is a free open-source AI tool that turns documents into structured data. Just upload your PDF, type the column names you need like total price or date, and it extracts the numbers into a clean table. You can export the file to Excel in seconds.",
+     "cta": "Subscribe for more free tool guides."
+    },
+    {
+     "title": "Free PDF to Table AI Tool",
+     "hook": "This free tool pulls data straight out of messy documents.",
+     "script": "Instead of paying for expensive document software, try Documind. It uses AI to read unstructured text, invoices, or forms, and turns them into clean JSON or CSV files. It takes less than two minutes to run your first document.",
+     "cta": "Follow for simple productivity tutorials."
+    }
+   ],
+   "carousel": {
+    "title": "Extract PDF Tables to Excel with Documind AI",
+    "slides": [
+     "1. Open Documind in your web browser.",
+     "2. Drag and drop your PDF invoice or report.",
+     "3. Specify the data fields you want to capture.",
+     "4. Preview the extracted table structure instantly.",
+     "5. Click Export to download your clean CSV file.",
+     "Bookmark this for your next admin task."
+    ]
+   },
+   "posts": {
+    "x": [
+     "Documind is a free open-source tool that turns PDFs into clean structured data. Here is how to use it in 3 steps.",
+     "Stop copying tables out of documents by hand. Documind extracts custom fields from PDFs into spreadsheets automatically."
+    ],
+    "facebook": "Tired of manual data entry? Documind is a free AI tool that extracts structured tables from PDFs into Excel in minutes. Here is how it works.",
+    "instagram": "Convert PDF files into spreadsheets automatically using Documind AI. #Productivity #AITools #FreeTools #Excel #TechTips",
+    "linkedin": "How to automate document parsing: A 3-step guide using the open-source Documind tool to turn unstructured PDFs into clean Excel sheets."
+   },
+   "article": {
+    "title": "How to Automate Document Parsing with Documind AI",
+    "outline": [
+     "The Overhead of Manual Document Entry",
+     "What is Documind AI?",
+     "Step-by-Step Document Extraction Tutorial",
+     "Exporting to Excel and CSV Formats",
+     "Comparing Free vs Enterprise Parsing Options"
+    ]
+   }
+  },
+  {
+   "topic": "AI Privacy Policy Reader Tools",
+   "competitors": "Tech news outlets cover online privacy conceptually, but productivity creators rarely show viewers practical browser tools that audit privacy policies in real time.",
+   "angle": "Use a free browser-based AI policy reader to instantly see which websites sell your data and how to opt out.",
+   "viral": {
+    "score": 52,
+    "why": "Privacy topics generate high interest on forums, but viewers convert less on safety tools compared to high-utility automation guides."
+   },
+   "long": {
+    "title": "Read Any Privacy Policy in 10 Seconds with AI",
+    "thumb": "Stop Data Selling",
+    "hook": "Most websites hide terms that allow them to sell your personal information. In the next 4 minutes, you will set up a free AI reader that highlights privacy risks instantly.",
+    "outline": [
+     "Why traditional privacy policies are unreadable",
+     "How AI privacy scanners work",
+     "Step 1: Installing the free privacy reader extension",
+     "Step 2: Scanning a live shopping website for red flags",
+     "Step 3: Finding hidden data-sharing toggles automatically",
+     "What this tool cannot catch on custom sites",
+     "Summary of privacy steps for beginners"
+    ]
+   },
+   "shorts": [
+    {
+     "title": "AI Privacy Policy Scanner",
+     "hook": "Do you know which websites sell your personal data?",
+     "script": "Nobody reads privacy policies because they are thousands of words long. An open-source AI reader now summarizes terms in ten seconds. It flags if a site sells your email, tracks location, or trains AI on your posts. Look for free privacy policy AI checkers online to test your favorite sites.",
+     "cta": "Subscribe for simple tech advice."
+    },
+    {
+     "title": "Stop Websites Selling Your Data",
+     "hook": "This free AI tool reads terms of service for you.",
+     "script": "Before creating an account on a new app, run its privacy page through an AI policy analyzer. It scans for key clauses like third-party data broker sales and opt-out rights. You get a red or green rating before you ever type in your email address.",
+     "cta": "Follow Toolscape for tech privacy tips."
+    }
+   ],
+   "carousel": {
+    "title": "Scan Privacy Policies in 10 Seconds Using AI",
+    "slides": [
+     "1. Open an AI-powered privacy reader tool.",
+     "2. Paste the link of any terms of service page.",
+     "3. Review the automated safety rating score.",
+     "4. Check flagged points for third-party data sales.",
+     "5. Use provided direct links to opt out of data collection.",
+     "Share this to help friends protect their data online."
+    ]
+   },
+   "posts": {
+    "x": [
+     "Don't read 20-page terms of service agreements. Use an AI privacy reader to see if a site sells your data in 10 seconds.",
+     "New open-source AI tools scan privacy policies instantly to flag data sales and training opt-outs. Here is how to use them."
+    ],
+    "facebook": "Protecting your personal data online is easier with AI. Learn how to use free privacy policy readers to catch sites that sell your information.",
+    "instagram": "How to check if a website sells your data in 10 seconds using free AI tools. #CyberSecurity #Privacy #AITools #TechTips #OnlineSafety",
+    "linkedin": "Data privacy simplified: How professionals can leverage AI policy readers to evaluate vendor terms of service in seconds."
+   },
+   "article": {
+    "title": "How to Use AI to Read Terms of Service and Protect Your Privacy",
+    "outline": [
+     "The Problem with Lengthy Terms of Service",
+     "How AI Privacy Analyzers Summarize Fine Print",
+     "Step-by-Step Setup Guide",
+     "Red Flags to Watch For in Data Policies",
+     "Practical Steps to Opt Out of Data Sales"
+    ]
+   }
+  }
+ ],
+ "hook_patterns": [
+  {
+   "pattern": "How I [Achieved Result] with [Tool] - Full Guide",
+   "example": "How I Automated PDF Data Entry with Documind - Full Guide"
+  },
+  {
+   "pattern": "[Tool] Got a Major Upgrade 🚀 These features are coming soon",
+   "example": "ChatGPT Got a Major Upgrade 🚀 How to Use Dots Today"
+  },
+  {
+   "pattern": "Build Your First [Thing] in 20 Minutes (No Coding)",
+   "example": "Build Your First Custom AI Agent in 10 Minutes (No Coding)"
+  },
+  {
+   "pattern": "Stop [Task] Yourself.",
+   "example": "Stop Summarizing Privacy Policies Yourself."
+  },
+  {
+   "pattern": "The Biggest [Tool] Update Yet: Meet [Feature]",
+   "example": "The Biggest ChatGPT Update Yet: Meet Dots"
+  }
+ ],
+ "_competitors": [],
+ "_bank": [
+  {
+   "channel": "Dan Kieft",
+   "title": "How I Make Realistic AI Videos with Seedance 2.5 - Full Guide",
+   "views": 438120,
+   "date": "2026-10-16",
+   "url": "https://youtu.be/2hJsvDSPWYM"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "ANOTHER Flying Car? (Not Tesla / Not AI)",
+   "views": 433016,
+   "date": "2026-10-26",
+   "url": "https://youtu.be/gC18kqOcCEI"
+  },
+  {
+   "channel": "Dan Kieft",
+   "title": "GPT-6 Astra is Crazy For AI Video",
+   "views": 345633,
+   "date": "2026-09-23",
+   "url": "https://youtu.be/qwGIwxZFc2I"
+  },
+  {
+   "channel": "Nate Herk | AI Automation",
+   "title": "Matt Pocock: The Most Valuable Skill to Learn in the Age of AI",
+   "views": 330504,
+   "date": "2026-10-16",
+   "url": "https://youtu.be/Z8lf5oWKfj0"
+  },
+  {
+   "channel": "Metics Media",
+   "title": "The Ultimate Beginner’s Guide to Hermes Agent",
+   "views": 326703,
+   "date": "2026-10-08",
+   "url": "https://youtu.be/XNcKUSL1CTE"
+  },
+  {
+   "channel": "Kevin Stratvert",
+   "title": "Microsoft Copilot Got a Major Upgrade 🚀 These features are coming to Frontier soon #MicrosoftPartner",
+   "views": 316476,
+   "date": "2026-10-02",
+   "url": "https://youtu.be/2kzuCJ5KLn4"
+  },
+  {
+   "channel": "Futurepedia",
+   "title": "Claude Makes a New Kind of Video - Full Tutorial",
+   "views": 297044,
+   "date": "2026-10-19",
+   "url": "https://youtu.be/Ge1B-Ok1Pfk"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "Google Just Caught Up (Gemini-4 Argon)",
+   "views": 273460,
+   "date": "2026-10-13",
+   "url": "https://youtu.be/eBszYxzE2dk"
+  },
+  {
+   "channel": "Jeff Su",
+   "title": "Personal Agents, Clearly Explained",
+   "views": 270849,
+   "date": "2026-10-13",
+   "url": "https://youtu.be/HdI_aYzgJIg"
+  },
+  {
+   "channel": "Metics Media",
+   "title": "Build Your First AI Agent in 20 Minutes (No Coding)",
+   "views": 221942,
+   "date": "2026-10-19",
+   "url": "https://youtu.be/rCkYVxOX-dI"
+  },
+  {
+   "channel": "Kevin Stratvert",
+   "title": "How to Edit Videos with ChatGPT",
+   "views": 213184,
+   "date": "2026-10-07",
+   "url": "https://youtu.be/cR0TaYikrz8"
+  },
+  {
+   "channel": "Skill Leap AI",
+   "title": "The Biggest ChatGPT Update Yet: Meet dots",
+   "views": 200406,
+   "date": "2026-09-29",
+   "url": "https://youtu.be/gfh6l3DxHK0"
+  },
+  {
+   "channel": "Jeff Su",
+   "title": "Stop Organizing Files Yourself.",
+   "views": 184851,
+   "date": "2026-09-29",
+   "url": "https://youtu.be/peP_o66u-vM"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "AI News: 6 New Models & A Nano Banana Killer",
+   "views": 178981,
+   "date": "2026-10-16",
+   "url": "https://youtu.be/KGcuuhqmPhI"
+  },
+  {
+   "channel": "Dan Kieft",
+   "title": "Suno v6 + Seedance 2.5 is NUTS at Making AI Music Videos",
+   "views": 177199,
+   "date": "2026-10-05",
+   "url": "https://youtu.be/BKDrtzJktO0"
+  }
+ ]
+}

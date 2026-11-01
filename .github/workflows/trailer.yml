@@ -1,0 +1,39 @@
+name: Channel trailer (one-off)
+on:
+  workflow_dispatch:      # one-off: never auto-run on push (a workflow edit re-ran it on 1 Nov 2026)
+permissions:
+  contents: write
+jobs:
+  trailer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Engine (private code)
+        env: { ENGINE_TOKEN: "${{ secrets.ENGINE_TOKEN }}" }
+        run: |
+          if [ -n "$ENGINE_TOKEN" ]; then
+            if git clone -q --depth 1 "https://x-access-token:${ENGINE_TOKEN}@github.com/abdulbasitfarooqi313-sys/farooqi-ai-news-engine" /tmp/engine; then
+              rsync -a --exclude .git --exclude .github --exclude state --exclude media --exclude cache --exclude desk /tmp/engine/ ./
+              rm -rf /tmp/engine; echo "engine: ok"
+            else
+              code=$(curl -s -o /dev/null -w '%{http_code}' -H "Authorization: Bearer $ENGINE_TOKEN" https://api.github.com/repos/abdulbasitfarooqi313-sys/farooqi-ai-news-engine)
+              echo "::warning::engine clone failed (api $code, token len ${#ENGINE_TOKEN}, prefix ${ENGINE_TOKEN:0:11}) — using code in this repo"
+              [ -f news/bulletin.py ] || exit 1
+            fi
+          else echo "::warning::ENGINE_TOKEN missing — using code in this repo"; fi
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -q -r requirements.txt && sudo apt-get install -y -qq ffmpeg >/dev/null
+      - env:
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          GEMINI_BACKUP_KEY: ${{ secrets.GEMINI_BACKUP_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TRAILER_TTS: gemini
+        run: |
+          set +e
+          python -u lab/trailer/trailer.py > out.txt 2>&1; rc=$?
+          grep -E "TRAILER|TTS try|photo fail|Error|Traceback" out.txt | head -8 | while IFS= read -r l; do echo "::notice::$l"; done
+          exit $rc
+      - env: { GH_TOKEN: "${{ github.token }}" }
+        run: gh release create "trailer-$(date -u +%H%M)" --draft --title trailer -n "channel trailer (review)" trailer.mp4

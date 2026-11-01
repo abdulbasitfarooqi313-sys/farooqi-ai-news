@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 916, in <module>
+    tick(force=len(sys.argv) > 1 and sys.argv[1] == "force")
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 827, in tick
+    make(feedback=(redo or {}).get("feedback") if isinstance(redo, dict) else None)
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 796, in make
+    vmid, mids = deliver(out, thumb, sd, d)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 740, in deliver
+    vmid = send_video(chat, video, caption=f"📺 فاروقی اے آئی نیوز — {urdu_date()}\n" + "\n".join(f"{i + 1}. {s['headline']}" for i, s in enumerate(d["stories"])),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/base.py", line 266, in send_video
+    return tg_call("sendVideo", files={"video": (path.name, f, "video/mp4")}, chat_id=chat, caption=caption[:1000],
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/base.py", line 239, in tg_call
+    raise RuntimeError(f"Telegram {method}: {body.get('description')}")
+RuntimeError: Telegram sendVideo: Request Entity Too Large
+
+

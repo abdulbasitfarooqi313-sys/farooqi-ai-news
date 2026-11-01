@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+out_news.mp4
+bulletin.mp4
+# code is fetched from the private engine at run time — never commit it here
+news/
+studio/
+fonts/
+lab/
+blog/
+requirements.txt
+AGENTS.md
+*.py

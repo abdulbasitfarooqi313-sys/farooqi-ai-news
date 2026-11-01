@@ -1,0 +1,52 @@
+name: YouTube key check
+on:
+  workflow_dispatch:
+  push:
+    paths: [".github/workflows/yt-check.yml", "lab/yt_check.py", "lab/pixabay_check.py", "lab/backup_key_check.py", "lab/blog_check.py", "lab/yt_token_check.py", "lab/yt_status.py", "news/blog.py", "lab/tg_debug.py", "lab/blog_backfill.py", "lab/ts_check.py", "lab/yt_delete.py"]
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Engine (private code)
+        env: { ENGINE_TOKEN: "${{ secrets.ENGINE_TOKEN }}" }
+        run: |
+          if [ -n "$ENGINE_TOKEN" ]; then
+            if git clone -q --depth 1 "https://x-access-token:${ENGINE_TOKEN}@github.com/abdulbasitfarooqi313-sys/farooqi-ai-news-engine" /tmp/engine; then
+              rsync -a --exclude .git --exclude .github --exclude state --exclude media --exclude cache --exclude desk /tmp/engine/ ./
+              rm -rf /tmp/engine; echo "engine: ok"
+            else
+              code=$(curl -s -o /dev/null -w '%{http_code}' -H "Authorization: Bearer $ENGINE_TOKEN" https://api.github.com/repos/abdulbasitfarooqi313-sys/farooqi-ai-news-engine)
+              echo "::warning::engine clone failed (api $code, token len ${#ENGINE_TOKEN}, prefix ${ENGINE_TOKEN:0:11}) — using code in this repo"
+              [ -f news/bulletin.py ] || exit 1
+            fi
+          else echo "::warning::ENGINE_TOKEN missing — using code in this repo"; fi
+      - run: pip install requests pillow
+      - run: |
+          set +e
+          echo "::notice::README: $(head -1 README.md)"; ls news | wc -l | sed 's/^/::notice::news files: /'
+          PYTHONPATH=. python lab/yt_delete.py > out.txt 2>&1; rc=$?
+          while IFS= read -r l; do echo "::notice::$l"; done < out.txt
+          exit $rc
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          NEWS_BOT_TOKEN: ${{ secrets.NEWS_BOT_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          GEMINI_BACKUP_KEY: ${{ secrets.GEMINI_BACKUP_KEY }}
+          TOOLSCAPE_BOT_TOKEN: ${{ secrets.TOOLSCAPE_BOT_TOKEN }}
+          TOOLSCAPE_GH_TOKEN: ${{ secrets.TOOLSCAPE_GH_TOKEN }}
+      - name: Save
+        if: always()
+        run: |
+          git config user.name "ai-news-bot"; git config user.email "ai-news-bot@users.noreply.github.com"
+          git add state/news.json state/blog.json 2>/dev/null || true; git add -A state/blog_queue state/stories 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "بلاگ: پرانا مواد"
+          for i in 1 2 3; do git pull --rebase --autostash -X theirs && git push && exit 0; sleep 5; done

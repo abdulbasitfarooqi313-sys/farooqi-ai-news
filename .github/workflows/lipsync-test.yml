@@ -1,0 +1,47 @@
+name: Lipsync test
+on:
+  workflow_dispatch:      # one-off: never auto-run on push (a workflow edit re-ran it on 1 Nov 2026)
+permissions:
+  contents: write
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Engine (private code)
+        env: { ENGINE_TOKEN: "${{ secrets.ENGINE_TOKEN }}" }
+        run: |
+          if [ -n "$ENGINE_TOKEN" ]; then
+            if git clone -q --depth 1 "https://x-access-token:${ENGINE_TOKEN}@github.com/abdulbasitfarooqi313-sys/farooqi-ai-news-engine" /tmp/engine; then
+              rsync -a --exclude .git --exclude .github --exclude state --exclude media --exclude cache --exclude desk /tmp/engine/ ./
+              rm -rf /tmp/engine; echo "engine: ok"
+            else
+              code=$(curl -s -o /dev/null -w '%{http_code}' -H "Authorization: Bearer $ENGINE_TOKEN" https://api.github.com/repos/abdulbasitfarooqi313-sys/farooqi-ai-news-engine)
+              echo "::warning::engine clone failed (api $code, token len ${#ENGINE_TOKEN}, prefix ${ENGINE_TOKEN:0:11}) — using code in this repo"
+              [ -f news/bulletin.py ] || exit 1
+            fi
+          else echo "::warning::ENGINE_TOKEN missing — using code in this repo"; fi
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install
+        run: |
+          sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+          git clone --depth 1 https://github.com/Rudrabha/Wav2Lip.git
+          pip install -q torch==2.1.2 torchvision==0.16.2 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q "numpy==1.23.5" "librosa==0.9.2" "opencv-python==4.8.1.78" tqdm numba edge-tts
+      - name: Lipsync
+        env:
+          TEXT: ${{ inputs.text }}
+        run: |
+          [ -z "$TEXT" ] && unset TEXT
+          bash lab/lipsync.sh 2>&1 | tee lipsync.log
+      - name: Publish
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG=lipsync-test-${{ github.run_number }}
+          gh release create "$TAG" out/lipsync-test.mp4 out/right_sync.mp4 lipsync.log --prerelease --title "$TAG" --notes "Wav2Lip test" || \
+          gh release create "$TAG" lipsync.log --prerelease --title "$TAG" --notes "failed"
