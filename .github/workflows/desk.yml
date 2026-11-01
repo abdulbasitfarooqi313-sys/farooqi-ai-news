@@ -5,7 +5,7 @@ on:
     - cron: "0 3 * * *"
   workflow_dispatch:
     inputs:
-      niches: { description: "news toolscape nawa (خالی = تینوں)", required: false, default: "" }
+      niches: { description: "news toolscape (خالی = دونوں)", required: false, default: "" }
 permissions:
   contents: write
 concurrency: desk
@@ -36,6 +36,15 @@ jobs:
           GEMINI_NEWS_KEY: ${{ secrets.GEMINI_NEWS_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python -u -m news.desk ${{ github.event.inputs.niches }}
+      - name: Post to Daily Desk blog
+        if: always()
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
+          NEWS_BOT_TOKEN: ${{ secrets.NEWS_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python -m news.desk_post || true
       - name: Weekly competitor discovery
         if: always()
         run: '[ "$(date -u +%u)" = "7" ] && python -m news.discover || true'
@@ -43,7 +52,7 @@ jobs:
         if: always()
         run: |
           git config user.name "news-bot"; git config user.email "news-bot@users.noreply.github.com"
-          git add -A desk state/hook_bank*.json state/competitor_ids.json state/discover.json 2>/dev/null || true
+          git add -A desk state/desk_post.json state/hook_bank*.json state/competitor_ids.json state/discover.json 2>/dev/null || true
           git diff --cached --quiet && exit 0
           git commit -m "روزنامچہ $(date -u +%F)"
           for i in 1 2 3; do git pull --rebase -X theirs && git push && exit 0; sleep 5; done
