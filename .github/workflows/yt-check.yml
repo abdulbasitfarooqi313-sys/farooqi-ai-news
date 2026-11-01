@@ -1,4 +1,4 @@
-name: YouTube key check
+name: YouTube key check  # playlists public-only run
 on:
   workflow_dispatch:
   push:
