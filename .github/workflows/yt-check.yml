@@ -27,7 +27,7 @@ jobs:
       - run: |
           set +e
           echo "::notice::README: $(head -1 README.md)"; ls news | wc -l | sed 's/^/::notice::news files: /'
-          PYTHONPATH=. python lab/yt_delete.py > out.txt 2>&1; rc=$?
+          PYTHONPATH=. python -c "import news.bulletin, news.podcast, news.blog, news.word, news.reserve, news.toolscape_peek; print('imports ok')" > out.txt 2>&1; rc=$?
           while IFS= read -r l; do echo "::notice::$l"; done < out.txt
           exit $rc
         env:
