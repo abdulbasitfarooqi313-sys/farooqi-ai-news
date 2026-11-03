@@ -1,4 +1,4 @@
-name: YouTube key check  # tg peek 2
+name: YouTube key check  # tg peek 3
 on:
   workflow_dispatch:
   push:
