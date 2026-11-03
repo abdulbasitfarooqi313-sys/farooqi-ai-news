@@ -1,4 +1,4 @@
-name: YouTube key check  # playlists public-only run
+name: YouTube key check  # playlists report
 on:
   workflow_dispatch:
   push:
@@ -27,7 +27,7 @@ jobs:
       - run: |
           set +e
           echo "::notice::README: $(head -1 README.md)"; ls news | wc -l | sed 's/^/::notice::news files: /'
-          PYTHONPATH=. python -m news.playlists > out.txt 2>&1; rc=$?
+          PYTHONPATH=. python -m news.playlists report > out.txt 2>&1; rc=$?
           while IFS= read -r l; do echo "::notice::$l"; done < out.txt
           exit $rc
         env:
