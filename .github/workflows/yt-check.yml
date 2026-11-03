@@ -1,4 +1,4 @@
-name: YouTube key check  # tg peek 3
+name: YouTube key check  # approve pending
 on:
   workflow_dispatch:
   push:
@@ -27,7 +27,7 @@ jobs:
       - run: |
           set +e
           echo "::notice::README: $(head -1 README.md)"; ls news | wc -l | sed 's/^/::notice::news files: /'
-          PYTHONPATH=. python lab/tg_peek.py > out.txt 2>&1; rc=$?
+          PYTHONPATH=. python lab/approve_pending.py > out.txt 2>&1; rc=$?
           while IFS= read -r l; do echo "::notice::$l"; done < out.txt
           exit $rc
         env:
