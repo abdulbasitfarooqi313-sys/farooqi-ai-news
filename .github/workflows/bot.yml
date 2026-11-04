@@ -17,7 +17,7 @@ concurrency:
 jobs:
   poll:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
       - name: Engine (private code)
@@ -47,6 +47,7 @@ jobs:
           BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
           TOOLSCAPE_BOT_TOKEN: ${{ secrets.TOOLSCAPE_BOT_TOKEN }}
           TOOLSCAPE_GH_TOKEN: ${{ secrets.TOOLSCAPE_GH_TOKEN }}
+          BOT_LOOP_MIN: "26"
         run: python -m news.bulletin pollloop
       - name: Save
         run: |
@@ -62,6 +63,12 @@ jobs:
         run: |
           [ -f /tmp/news_dispatch ] || exit 0
           for wf in $(sort -u /tmp/news_dispatch); do gh workflow run "$wf" --ref "${{ github.ref_name }}" -f force=yes; done
+
+      - name: Next listener (continuous ✅/❌ — public repo, unlimited minutes)
+        if: always() && !cancelled()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run bot.yml --ref "${{ github.ref_name }}" || true
 
       - name: Alert on failure
         if: failure()
