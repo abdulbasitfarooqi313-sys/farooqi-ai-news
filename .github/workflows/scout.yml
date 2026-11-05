@@ -3,7 +3,7 @@
 name: Audience Scout
 on:
   schedule:
-    - cron: "30 5 * * *"     # صبح 8:30 سعودی
+    - cron: "30 8 * * *"     # صبح 11:30 سعودی (جیمنائی کا روزانہ کوٹہ 11 بجے نیا)
     - cron: "30 15 * * *"    # شام 6:30 سعودی
   workflow_dispatch:
     inputs:
@@ -14,7 +14,7 @@ concurrency: scout
 jobs:
   scout:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 75
     steps:
       - uses: actions/checkout@v4
       - name: Engine (private code)
