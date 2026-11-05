@@ -35,6 +35,9 @@ jobs:
         env:
           GEMINI_NEWS_KEY: ${{ secrets.GEMINI_NEWS_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
         run: python -u -m news.desk ${{ github.event.inputs.niches }}
       - name: Post to Daily Desk blog
         if: always()
@@ -55,7 +58,7 @@ jobs:
           git add -A desk state/desk_post.json state/hook_bank*.json state/competitor_ids.json state/discover.json 2>/dev/null || true
           git diff --cached --quiet && exit 0
           git commit -m "روزنامچہ $(date -u +%F)"
-          for i in 1 2 3; do git pull --rebase -X theirs && git push && exit 0; sleep 5; done
+          for i in 1 2 3; do git pull --rebase --autostash -X theirs && git push && exit 0; sleep 5; done
 
       - name: Alert on failure
         if: failure()
