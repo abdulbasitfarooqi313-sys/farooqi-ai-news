@@ -1,0 +1,60 @@
+# 🎓 نوائے فاروقی — تدبرِ قرآن کے ابواب کی ویڈیو، اس پبلک رنر پر (لامحدود منٹ) — مالک کی ہدایت 5 نومبر 2026
+# کوڈ نجی ریپو سے آتا ہے (NAWA_TOKEN)، ویڈیو نوائے فاروقی کے اپنے بوٹ پر آتی ہے، ریکارڈ (state) واپس نجی ریپو میں۔
+# راز صرف GitHub Secrets میں (NAWA_ سے شروع) — لاگ میں کوئی راز نہیں چھاپا جاتا۔
+name: Nawa lesson video
+on:
+  schedule:
+    - cron: "30 8 * * *"      # صبح 11:30 سعودی
+  workflow_dispatch:
+    inputs:
+      chapter: { description: "مثلاً c2 (خالی = اگلے باقی ابواب)", required: false, default: "" }
+permissions:
+  contents: read
+concurrency: nawa-lesson
+jobs:
+  lesson:
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    steps:
+      - name: Nawa code (private)
+        env: { NAWA_TOKEN: "${{ secrets.NAWA_TOKEN }}" }
+        run: |
+          if [ -z "$NAWA_TOKEN" ]; then echo "::warning::NAWA_TOKEN نہیں — نوائے فاروقی کا کام نہیں چلا"; exit 1; fi
+          git clone -q "https://x-access-token:${NAWA_TOKEN}@github.com/nawaefarooqi-bit/nawaefarooqi-agents" nawa-repo
+          echo "nawa: ok"
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: cd nawa-repo && pip install -q -r requirements.txt && sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+      - name: Make lesson
+        working-directory: nawa-repo
+        env:
+          GEMINI_API_KEY: ${{ secrets.NAWA_GEMINI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.NAWA_TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.NAWA_TELEGRAM_CHAT_ID }}
+          GDRIVE_SERVICE_ACCOUNT_JSON: ${{ secrets.NAWA_GDRIVE_SERVICE_ACCOUNT_JSON }}
+          BLOGGER_CLIENT_ID: ${{ secrets.NAWA_BLOGGER_CLIENT_ID }}
+          BLOGGER_CLIENT_SECRET: ${{ secrets.NAWA_BLOGGER_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.NAWA_YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.NAWA_YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.NAWA_YOUTUBE_CLIENT_SECRET }}
+          CH: ${{ github.event.inputs.chapter }}
+        run: python -u -m nawa.lesson_video ${CH:-$(head -1 state/lesson_run_now 2>/dev/null | tr -cd 'c0-9')}
+      - name: Save (private repo)
+        if: always()
+        working-directory: nawa-repo
+        run: |
+          [ -d .git ] || exit 0
+          git config user.name "nawa-media"; git config user.email "nawa-bot@users.noreply.github.com"
+          git add state || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "تدبر قرآن: باب کی ویڈیو (پبلک رنر)"
+          for i in 1 2 3; do git pull -q --rebase --autostash -X theirs && git push -q && exit 0; sleep 10; done
+      - name: Alert on failure
+        if: failure()
+        env:
+          TOKEN: ${{ secrets.NAWA_TELEGRAM_BOT_TOKEN }}
+          CHAT: ${{ secrets.NAWA_TELEGRAM_CHAT_ID }}
+        run: |
+          [ -n "$TOKEN" ] || exit 0
+          curl -s -X POST "https://api.telegram.org/bot$TOKEN/sendMessage" --data-urlencode "chat_id=$CHAT" \
+            --data-urlencode "text=⚠️ نوائے فاروقی (لامحدود رنر): تدبرِ قرآن کی ویڈیو ناکام: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" >/dev/null || true
