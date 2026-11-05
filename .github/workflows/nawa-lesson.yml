@@ -1,13 +1,16 @@
-# 🎓 نوائے فاروقی — تدبرِ قرآن کے ابواب کی ویڈیو، اس پبلک رنر پر (لامحدود منٹ) — مالک کی ہدایت 5 نومبر 2026
+# 🎓 نوائے فاروقی — تدبرِ قرآن کے ابواب کی ویڈیو کا متبادل (لامحدود منٹ) — مالک کی ہدایت 5 نومبر 2026
+# پہلے نوائے فاروقی کے اپنے منٹ (08:30Z)۔ یہ 09:20Z پر دیکھتا ہے: وہاں آج کا رن کامیاب یا جاری ہو تو کچھ نہیں؛
+# منٹ ختم ہونے سے جاب شروع ہی نہ ہوا ہو (یا کوئی رن ہی نہ ہو) تب ہی یہاں بنتی ہے۔ ہاتھ سے چلانے پر جانچ کے بغیر (force)۔
 # کوڈ نجی ریپو سے آتا ہے (NAWA_TOKEN)، ویڈیو نوائے فاروقی کے اپنے بوٹ پر آتی ہے، ریکارڈ (state) واپس نجی ریپو میں۔
 # راز صرف GitHub Secrets میں (NAWA_ سے شروع) — لاگ میں کوئی راز نہیں چھاپا جاتا۔
 name: Nawa lesson video
 on:
   schedule:
-    - cron: "30 8 * * *"      # صبح 11:30 سعودی
+    - cron: "20 9 * * *"      # 12:20 سعودی — صرف متبادل
   workflow_dispatch:
     inputs:
       chapter: { description: "مثلاً c2 (خالی = اگلے باقی ابواب)", required: false, default: "" }
+      force: { description: "جانچ کے بغیر چلاؤ", type: boolean, default: true }
 permissions:
   contents: read
 concurrency: nawa-lesson
@@ -16,16 +19,35 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 345
     steps:
+      - name: Own minutes first?
+        id: need
+        env: { GH_TOKEN: "${{ secrets.NAWA_TOKEN }}", FORCE: "${{ github.event.inputs.force }}" }
+        run: |
+          if [ "$FORCE" = "true" ]; then echo "run=1" >> $GITHUB_OUTPUT; exit 0; fi
+          [ -n "$GH_TOKEN" ] || { echo "run=0" >> $GITHUB_OUTPUT; echo "::warning::NAWA_TOKEN نہیں"; exit 0; }
+          R=nawaefarooqi-bit/nawaefarooqi-agents; today=$(date -u +%F)
+          run=$(gh api "repos/$R/actions/workflows/lesson-video.yml/runs?per_page=5" -q "[.workflow_runs[]|select(.created_at|startswith(\"$today\"))][0]")
+          if [ -z "$run" ] || [ "$run" = "null" ]; then echo "آج وہاں کوئی رن نہیں → یہاں"; echo "run=1" >> $GITHUB_OUTPUT; exit 0; fi
+          st=$(echo "$run" | jq -r .status); co=$(echo "$run" | jq -r .conclusion); id=$(echo "$run" | jq -r .id)
+          echo "وہاں: $st / $co"
+          if [ "$st" != completed ] || [ "$co" = success ]; then echo "run=0" >> $GITHUB_OUTPUT; exit 0; fi
+          steps=$(gh api "repos/$R/actions/runs/$id/jobs" -q '[.jobs[].steps[]?]|length')
+          if [ "${steps:-0}" -le 1 ]; then echo "جاب شروع ہی نہ ہوا (منٹ ختم؟) → یہاں"; echo "run=1" >> $GITHUB_OUTPUT
+          else echo "وہاں کام چل کر ناکام ہوا — دوہرا نہیں بناتے"; echo "run=0" >> $GITHUB_OUTPUT; fi
       - name: Nawa code (private)
+        if: steps.need.outputs.run == '1'
         env: { NAWA_TOKEN: "${{ secrets.NAWA_TOKEN }}" }
         run: |
           if [ -z "$NAWA_TOKEN" ]; then echo "::warning::NAWA_TOKEN نہیں — نوائے فاروقی کا کام نہیں چلا"; exit 1; fi
           git clone -q "https://x-access-token:${NAWA_TOKEN}@github.com/nawaefarooqi-bit/nawaefarooqi-agents" nawa-repo
           echo "nawa: ok"
       - uses: actions/setup-python@v5
+        if: steps.need.outputs.run == '1'
         with: { python-version: "3.12" }
-      - run: cd nawa-repo && pip install -q -r requirements.txt && sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+      - if: steps.need.outputs.run == '1'
+        run: cd nawa-repo && pip install -q -r requirements.txt && sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
       - name: Make lesson
+        if: steps.need.outputs.run == '1'
         working-directory: nawa-repo
         env:
           GEMINI_API_KEY: ${{ secrets.NAWA_GEMINI_API_KEY }}
