@@ -1,292 +1,288 @@
 {
- "summary": "Today's desk focuses on major new tools like Documind and LiveReacting for ChatGPT that beginners can use for free, capitalizing on high search interest in practical AI automation. We are preparing structured step-by-step tutorials and resources to help users bypass repetitive tasks without writing code.",
+ "summary": "Today's content focuses on fresh open-source document parsing tools and rising user frustration over ChatGPT usage limits. We will deliver a step-by-step tutorial on Documind and practical advice on navigating AI tool limits.",
  "topics": [
   {
-   "title": "Show HN: Documind – Open-source AI tool to turn documents into structured data",
-   "why": "It solves an immediate pain point for beginners drowning in unstructured paperwork by providing a free open-source solution.",
+   "title": "ChatGPT usage limits and billing frustration",
+   "why": "Users are complaining across Reddit and Hacker News about hitting usage limits much faster over the past few days.",
    "trend": 10,
+   "sources": [
+    "reddit.com",
+    "hnrss.org"
+   ]
+  },
+  {
+   "title": "Documind Open-Source Document AI",
+   "why": "A newly trending open-source tool that turns messy documents into structured data without paid subscriptions.",
+   "trend": 9,
+   "sources": [
+    "hnrss.org",
+    "producthunt.com"
+   ]
+  },
+  {
+   "title": "MIT High-Resolution Generative AI Tool",
+   "why": "MIT just unveiled a generative AI image tool running 30 times faster, sparking interest in developer testing.",
+   "trend": 8,
    "sources": [
     "hnrss.org"
    ]
   },
   {
-   "title": "LiveReacting for ChatGPT",
-   "why": "Brings interactive AI capabilities into live streaming and real-time workflows, trending on Product Hunt today.",
-   "trend": 9,
+   "title": "LinkedIn AI content training controversy",
+   "why": "Discussions peak as LinkedIn uses user content to train its models, prompting privacy check requests.",
+   "trend": 7,
+   "sources": [
+    "hnrss.org"
+   ]
+  },
+  {
+   "title": "Cosyra productivity tool launch",
+   "why": "Gaining traction on Product Hunt as a new workflow assistant for beginners.",
+   "trend": 6,
    "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "Claude's new AI report card tool gives companies a closer look at costs",
-   "why": "Addresses the massive demand for cost visibility and efficiency tracking in enterprise AI usage.",
-   "trend": 8,
-   "sources": [
-    "news.google.com"
-   ]
-  },
-  {
-   "title": "Can Netflix's new AI tool stop your TV-streaming doomscrolling?",
-   "why": "Mass market consumer interest in using AI for better media recommendations.",
-   "trend": 7,
-   "sources": [
-    "news.google.com",
-    "pcmag.uk"
-   ]
-  },
-  {
-   "title": "Google launches AI-based shopping in Canada",
-   "why": "Directly impacts our Canadian audience by changing how online e-commerce search works.",
-   "trend": 6,
-   "sources": [
-    "news.google.com"
-   ]
-  },
-  {
-   "title": "Basedash Verified dashboards",
-   "why": "Offers a clean, fast way to turn databases into visual dashboards without complex setups.",
+   "title": "Seamcult workflow assistant",
+   "why": "Featured prominently on Product Hunt with positive early user feedback for task management.",
    "trend": 5,
    "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "PasteGuard for Mac",
-   "why": "Solves clipboard security and history management simply for Mac users.",
+   "title": "Google Search restrictions for schools",
+   "why": "Google's new ultimatum regarding AI tools and search access in schools creates widespread news coverage.",
    "trend": 4,
+   "sources": [
+    "news.google.com"
+   ]
+  },
+  {
+   "title": "Anthropic AI verification tool catch",
+   "why": "New verification features come with unexpected costs, drawing debate on crypto and tech forums.",
+   "trend": 3,
+   "sources": [
+    "news.google.com"
+   ]
+  },
+  {
+   "title": "Stitch.ai design assistant",
+   "why": "New creative tool release on Product Hunt aimed at fast asset generation.",
+   "trend": 2,
    "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "Sam Altman / Ram Altman X name change memes",
-   "why": "Massive viral engagement and discussion across Reddit communities regarding OpenAI leadership.",
-   "trend": 3,
-   "sources": [
-    "reddit.com"
-   ]
-  },
-  {
-   "title": "Google will cut Search access for schools that completely block new AI tools",
-   "why": "Major education policy debate affecting schools and students in the US and Canada.",
-   "trend": 2,
-   "sources": [
-    "news.google.com",
-    "nytimes.com"
-   ]
-  },
-  {
-   "title": "Uber's $1,500/month AI limit signal for tool pricing",
-   "why": "Provides a useful pricing benchmark for how companies value and budget software tools.",
+   "title": "Living Brain workspace utility",
+   "why": "Generating steady interest on Product Hunt for personal knowledge organization.",
    "trend": 1,
    "sources": [
-    "hnrss.org"
+    "producthunt.com"
    ]
   }
  ],
  "packages": [
   {
-   "topic": "Show HN: Documind – Open-source AI tool to turn documents into structured data",
-   "competitors": "Competitors like Metics Media and Jeff Su covered general file organization and agents, but missed a simple, free, open-source guide specifically for converting messy PDFs into clean spreadsheets without paid software.",
-   "angle": "We show a complete, beginner-friendly walkthrough of using Documind for free with zero coding required.",
+   "topic": "ChatGPT usage limits and billing frustration",
+   "competitors": "Competitors like Kevin Stratvert and Matt Wolfe covered general updates and news recaps, but missed practical steps on how to monitor and conserve free token usage.",
+   "angle": "We show 3 exact free settings to change right now to stop burning through your daily ChatGPT limit.",
    "viral": {
-    "score": 78,
-    "why": "High search volume for document automation combined with the popularity of open-source tools makes this an instant click for beginners."
+    "score": 52,
+    "why": "High community frustration around limits makes this very searchable, but it requires a practical workaround to satisfy viewers."
    },
    "long": {
-    "title": "Turn Any Messy PDF Into Data With This Free Tool",
-    "thumb": "PDF to Data Free",
-    "hook": "In the next 7 minutes you will turn a messy PDF report into a clean spreadsheet without writing a single line of code. Plus, I will show you the one limitation you need to watch out for.",
+    "title": "Stop Burning Your ChatGPT Limit (3 Settings to Change)",
+    "thumb": "Save ChatGPT Limits",
+    "hook": "In the next 5 minutes you will learn why your ChatGPT limit is running out faster and how to fix it. We are not selling anything, just changing three default settings.",
     "outline": [
-     "What is Documind and why open-source matters",
-     "Accessing the free web version step-by-step",
-     "Uploading your first messy document",
-     "Setting up your data extraction template",
-     "Exporting clean results to CSV",
-     "The main downside: handling scanned images of text",
-     "Quick recap and next steps"
+     "Why limits feel faster this week",
+     "Checking your current account usage page",
+     "Setting default model preferences to save tokens",
+     "Using temporary chats for quick questions",
+     "Free alternatives for basic text tasks",
+     "Recap and subscription advice"
     ]
    },
    "shorts": [
     {
-     "title": "Stop typing PDFs by hand",
-     "hook": "Stop wasting hours typing data from PDFs into Excel by hand.",
-     "script": "Go to Documind on GitHub or their free web portal. Upload any invoice, receipt, or report. Click extract, and watch it build a structured table in seconds. It is completely free, though it struggles with low-quality scans. Try it today and save hours.",
-     "cta": "Subscribe for more free tool guides."
+     "title": "Why ChatGPT Limits Feel Faster",
+     "hook": "Stop using standard mode for simple questions.",
+     "script": "If your ChatGPT limit is running out way faster lately, you are not imagining it. Default model updates are burning more tokens per prompt. Go to your settings, switch your default prompt handling, and use temporary chats for quick lookups to save your quota.",
+     "cta": "Subscribe for more honest AI tips."
     },
     {
-     "title": "Turn documents into data in 30 seconds",
-     "hook": "Here is how to turn any document into structured data for free.",
-     "script": "Open Documind in your browser. Drag and drop your messy PDF file. Select the fields you want to pull out like dates and totals. Hit run, and export the spreadsheet. Hit follow if you want more beginner AI tutorials.",
-     "cta": "Check out our full video for the step-by-step."
+     "title": "Save Your AI Quota",
+     "hook": "Stop wasting prompts on basic edits.",
+     "script": "Before you upgrade your plan, try this. Open settings, locate app preferences, and turn off continuous memory logging for standard queries. You will instantly preserve your daily message count.",
+     "cta": "Check our channel for the full guide."
     }
    ],
    "carousel": {
-    "title": "Turn PDFs Into Data Free",
+    "title": "How to Stop Wasting Your ChatGPT Limit",
     "slides": [
-     "Turn PDFs Into Data Fast",
-     "Step 1: Open Documind",
-     "Step 2: Upload Your Messy PDF",
-     "Step 3: Select Your Fields",
-     "Step 4: Export to Spreadsheet",
-     "The Catch: Poor scans need clear text",
-     "Follow Toolscape for more free tools"
+     "Why your limit runs out faster",
+     "Setting 1: Turn off continuous memory",
+     "Setting 2: Use temporary chats",
+     "Setting 3: Switch default lightweight models",
+     "Bonus: Monitor your exact token usage",
+     "Start saving your prompts today"
     ]
    },
    "posts": {
     "x": [
-     "Tired of typing PDF data into Excel by hand? Documind is a free, open-source tool that turns messy documents into clean spreadsheets in seconds. Full beginner tutorial on our channel today!",
-     "Stop paying for expensive data entry tools. Here is how to use Documind for free to structure your documents with zero coding."
+     "Running out of ChatGPT prompts way faster this week? You are not alone. Here are 3 simple settings to change right now to save your limit.",
+     "Stop wasting tokens on simple text edits. Watch our new step-by-step video to fix your ChatGPT usage drop."
     ],
-    "facebook": "If you spend hours copying data from PDF reports into Excel, you need to see this. We tested Documind, a free open-source tool that structures your documents automatically. Watch our step-by-step guide on YouTube today!",
-    "instagram": "Turn any messy PDF into a clean spreadsheet in seconds without writing code. 📊 Link to our full beginner tutorial in bio! #AItools #Productivity #TechTips",
-    "linkedin": "Document processing doesn't have to be manual or expensive. We tested Documind, an open-source tool that extracts structured data from unstructured files. Watch our complete breakdown on YouTube."
+    "facebook": "Are you noticing your ChatGPT limit running out much faster over the last few days? We tested default settings and found 3 quick changes you can make to preserve your quota. Watch the full step-by-step tutorial on our channel.",
+    "instagram": "Hit your ChatGPT limit too fast this week? We show you 3 settings to change right now to save your daily prompts. Link in bio! #ChatGPT #AITips #Toolscape",
+    "linkedin": "Many professionals are reporting faster depletion of their AI tool limits. Here is a quick breakdown of how to optimize your prompt strategy and settings to maintain productivity without extra costs."
    },
    "article": {
-    "title": "How to Turn Messy PDFs Into Structured Data for Free Using Documind",
+    "title": "How to Fix Fast ChatGPT Limit Depletion in 2026",
     "outline": [
-     "Introduction to Document Automation",
-     "What is Documind?",
-     "Step-by-Step Setup Guide",
-     "Extracting Your First Dataset",
-     "Limitations and What to Watch For",
-     "Conclusion"
+     "Understanding Recent Changes to AI Limits",
+     "Why Default Settings Drain Quotas",
+     "Step 1: Adjusting Memory and History Preferences",
+     "Step 2: Utilizing Temporary Chats",
+     "Step 3: Choosing the Right Model for Simple Tasks",
+     "Conclusion and Free Alternatives"
     ]
    }
   },
   {
-   "topic": "LiveReacting for ChatGPT",
-   "competitors": "Competitors have focused heavily on video generators like Seedance 2.5 and Hermes Agent tutorials, completely missing how chat interfaces can integrate directly with live interaction tools.",
-   "angle": "We focus on a live, step-by-step demonstration of connecting ChatGPT prompts to an interactive stream layout for beginners.",
+   "topic": "Documind Open-Source Document AI",
+   "competitors": "Metics Media and Nate Herk covered complex local agent setups, but missed a simple beginner-friendly walkthrough of Documind with zero coding.",
+   "angle": "We demonstrate Documind step-by-step on screen with a free PDF, showing exact upload clicks and data exports.",
    "viral": {
-    "score": 65,
-    "why": "Combines two massive platforms (ChatGPT and LiveReacting) into a practical workflow for creators and small business owners."
+    "score": 48,
+    "why": "Open-source data extraction tools have strong developer and beginner interest, though niche compared to general video generators."
    },
    "long": {
-    "title": "Add ChatGPT to Your Live Stream With This Free Tool",
-    "thumb": "ChatGPT Live Tool",
-    "hook": "In the next 8 minutes you will connect ChatGPT to a live interactive stream so your audience can trigger real-time AI responses. Let's dive right in.",
+    "title": "Turn Any Messy Document Into Data Free with Documind",
+    "thumb": "Documind Free Tutorial",
+    "hook": "In the next 7 minutes you will turn a messy PDF into a clean structured spreadsheet using the free open-source tool Documind. No coding required.",
     "outline": [
-     "Overview of LiveReacting for ChatGPT",
-     "Creating your free account",
-     "Connecting your chat source",
-     "Setting up custom prompts for live replies",
-     "Running a test broadcast",
-     "The downside: latency on free tiers",
-     "Summary and subscribe"
+     "What Documind does and why it is free",
+     "Downloading and opening the tool locally",
+     "Uploading your first test document",
+     "Configuring extraction fields",
+     "Exporting data to CSV",
+     "One real downside to keep in mind",
+     "Recap and wrap up"
     ]
    },
    "shorts": [
     {
-     "title": "Put ChatGPT in your live stream",
-     "hook": "Want to add automated AI responses to your live streams?",
-     "script": "Use LiveReacting integrated with ChatGPT. It lets you set up automated responses for viewers in real time. Setup takes under five minutes, though free tiers have slight message delays. Give it a try for your next stream.",
-     "cta": "Subscribe for weekly tool guides."
+     "title": "Turn PDFs Into Data Free",
+     "hook": "Stop typing data from PDFs by hand.",
+     "script": "Here is how to use Documind to turn any messy document into structured data for free. Drag and drop your file, select your fields, and export instantly. No monthly subscription needed.",
+     "cta": "Subscribe for weekly open-source tutorials."
     },
     {
-     "title": "Interactive AI streams made easy",
-     "hook": "Here is how to make your live streams interactive using AI.",
-     "script": "Open LiveReacting, link your ChatGPT API or account, and set your rules. Viewers comment and the AI replies live on screen. Hit follow for more beginner tech tutorials.",
-     "cta": "Watch the full video on YouTube."
+     "title": "Free Document AI Tool",
+     "hook": "Extract tables from documents instantly.",
+     "script": "Stop paying for PDF parser tools. Documind is a free open-source app that reads your files and formats them into clean tables in seconds. Watch our full video to set it up step by step.",
+     "cta": "Link to full tutorial on our channel."
     }
    ],
    "carousel": {
-    "title": "AI in Live Streams",
+    "title": "Turn Messy PDFs Into Clean Data Free",
     "slides": [
-     "Add ChatGPT to Your Live Stream",
-     "Step 1: Set Up LiveReacting",
-     "Step 2: Connect Your ChatGPT Account",
-     "Step 3: Write Your Response Rules",
-     "Step 4: Go Live With AI",
-     "The Catch: Free tier message limits",
-     "Subscribe to Toolscape"
+     "Meet Documind: Free Document AI",
+     "Step 1: Open the free platform",
+     "Step 2: Upload your messy PDF or invoice",
+     "Step 3: Select your output data format",
+     "Step 4: Export directly to spreadsheet",
+     "Downside: Requires local setup for heavy files",
+     "Try it today"
     ]
    },
    "posts": {
     "x": [
-     "Want to add AI-powered responses to your live streams? We tested LiveReacting for ChatGPT. Watch our full beginner tutorial on YouTube!",
-     "Make your next broadcast interactive with AI. Here is our step-by-step guide using free tools."
+     "Stop paying monthly fees to parse PDFs. Documind is a new open-source tool that turns documents into structured data for free.",
+     "Want to turn messy paperwork into clean spreadsheets without coding? Our new tutorial walks through Documind step by step."
     ],
-    "facebook": "Hosting a live stream and want automated assistance? Check out our new tutorial on setting up LiveReacting with ChatGPT to handle viewer interactions automatically.",
-    "instagram": "Bring AI into your live streams! We tested out LiveReacting for ChatGPT step-by-step. Full guide on YouTube now. 🎥 #LiveStreaming #ChatGPT #Toolscape",
-    "linkedin": "Exploring real-time AI integration for broadcasts: Here is how creators are using LiveReacting and ChatGPT to streamline audience engagement."
+    "facebook": "Tired of typing data out of PDFs manually? We tested Documind, a new open-source AI tool that turns documents into structured data. Watch our full step-by-step beginner guide on YouTube.",
+    "instagram": "Turn any messy PDF into structured data for free with Documind! Full step-by-step tutorial up on the channel now. #OpenSource #AI #Toolscape",
+    "linkedin": "Document parsing doesn't require expensive software. We look at Documind, an open-source tool helping professionals turn unstructured files into usable data."
    },
    "article": {
-    "title": "How to Integrate ChatGPT Into Your Live Streams Using LiveReacting",
+    "title": "Documind Tutorial: Turn Documents Into Structured Data Free",
     "outline": [
-     "Why Combine Live Streams and AI?",
-     "Getting Started with LiveReacting",
-     "Connecting ChatGPT Step-by-Step",
-     "Best Practices for Live Prompts",
-     "Known Limitations",
-     "Final Thoughts"
+     "Introduction to Documind",
+     "Prerequisites for Getting Started",
+     "Step-by-Step Document Upload and Parsing",
+     "Exporting Your Structured Data",
+     "Pros and Cons of Open-Source Document Tools",
+     "Summary"
     ]
    }
   },
   {
-   "topic": "Claude's new AI report card tool gives companies a closer look at costs",
-   "competitors": "Competitors like Matt Wolfe and Nate Herk covered Claude code mods and updates generally, but missed a beginner-focused guide on how smaller teams can audit their own AI expenses using these new reporting features.",
-   "angle": "We break down Claude's cost report card tool specifically for beginners managing small tool budgets, highlighting hidden costs to avoid.",
+   "topic": "MIT High-Resolution Generative AI Tool",
+   "competitors": "Matt Wolfe and Futurepedia covered general model rollouts, but missed a simple hands-on guide for beginners wanting to test fast image generation.",
+   "angle": "We break down MIT's new generative tool in plain English and show how beginners can test similar fast models online for free.",
    "viral": {
-    "score": 62,
-    "why": "Everyone is worried about AI subscription and API costs right now, making a cost-audit tutorial extremely relevant."
+    "score": 45,
+    "why": "MIT research news attracts broad curiosity, but practical utility for daily beginner tasks is moderate."
    },
    "long": {
-    "title": "How to Use Claude's New Cost Report Card Tool",
-    "thumb": "Claude Cost Audit",
-    "hook": "In the next 6 minutes you will check your exact AI spending and spot hidden inefficiencies using Claude's new report card tool. Let's look at the dashboard together.",
+    "title": "MIT's 30x Faster AI Image Tool Explained for Beginners",
+    "thumb": "MIT Fast AI Tool",
+    "hook": "In the next 6 minutes you will see how MIT's new generative AI tool creates high-resolution images 30 times faster, and how you can try similar fast models today.",
     "outline": [
-     "What is Claude's new report card tool",
-     "Accessing your usage dashboard",
-     "Reading token costs and efficiency metrics",
-     "How to spot and fix expensive prompts",
-     "The downside: only tracks connected enterprise accounts",
-     "Recap and channel outro"
+     "What MIT's new research announcement means",
+     "Why speed matters in generative AI",
+     "Comparing generation times with older tools",
+     "How to test fast open-source image models online",
+     "One limitation of current fast generation models",
+     "Recap and next steps"
     ]
    },
    "shorts": [
     {
-     "title": "Check your AI spending fast",
-     "hook": "Are your AI tool costs getting out of hand?",
-     "script": "Claude's new report card tool helps companies flag expensive inefficiencies and token waste. Open your dashboard, review your metrics, and adjust your usage. Keep in mind it requires team or enterprise plans to unlock full data.",
-     "cta": "Subscribe for more tool breakdowns."
+     "title": "MIT's Fast AI Image Tool",
+     "hook": "Images generated 30 times faster.",
+     "script": "MIT just unveiled a generative AI tool that creates high-resolution images 30 times faster than standard models. Here is what it means for creators and how fast generation is changing workflow speeds.",
+     "cta": "Subscribe for clear AI news breakdowns."
     },
     {
-     "title": "Stop wasting money on AI tokens",
-     "hook": "Here is how to check where your AI budget is going.",
-     "script": "Head over to your Claude account settings and look for the new report card feature. It breaks down your exact token costs per task. Hit follow if you want to save money on software.",
-     "cta": "Watch the full tutorial on YouTube."
+     "title": "Faster AI Generation",
+     "hook": "Wait times for AI images are dropping.",
+     "script": "Imagine generating high-res images instantly instead of waiting minutes. MIT's new breakthrough cuts rendering time dramatically. Watch our full video to understand the tech simply.",
+     "cta": "Full breakdown on our channel."
     }
    ],
    "carousel": {
-    "title": "Cut Your AI Costs",
+    "title": "MIT's 30x Faster AI Tool Explained",
     "slides": [
-     "Audit Your AI Spending",
-     "Step 1: Open Claude Settings",
-     "Step 2: Find the Cost Report Card",
-     "Step 3: Identify Expensive Prompts",
-     "Step 4: Optimize and Save",
-     "The Catch: Requires business tiers",
-     "Follow Toolscape for tips"
+     "MIT's new generative AI breakthrough",
+     "Why speed was a bottleneck before",
+     "How the 30x speed increase works",
+     "What this means for everyday creators",
+     "Downside: Research phase limitations",
+     "Watch our full breakdown on YouTube"
     ]
    },
    "posts": {
     "x": [
-     "Wasting money on AI tokens? Claude's new report card tool flags inefficiencies and tracks exact costs. Here is our beginner guide.",
-     "Stop guessing your software expenses. How to audit your AI usage with Claude's new reporting feature."
+     "MIT just unveiled a generative AI tool that creates high-res images 30 times faster. Here is what you need to know in plain English.",
+     "Tired of waiting for image generation? New research from MIT points to major speed boosts ahead for AI creators."
     ],
-    "facebook": "Trying to keep your team's AI subscription costs down? Claude just released a new report card tool to flag inefficiencies. Watch our quick breakdown on YouTube!",
-    "instagram": "Stop wasting money on AI tokens! 📉 We tested Claude's new cost reporting tool. Full tutorial on YouTube. #AIcosts #Productivity #Tech",
-    "linkedin": "AI cost management is becoming a priority for teams. Here is how Claude's new report card tool helps identify workflow inefficiencies and manage token spending."
+    "facebook": "MIT researchers have built a generative AI tool that creates high-resolution images 30 times faster than previous methods. We break down the news simply on our channel today.",
+    "instagram": "MIT's new AI tool generates high-res images 30x faster! We explain how it works and what it means for beginners. Link in bio. #MIT #AI #Toolscape",
+    "linkedin": "AI generation speed is reaching new milestones. MIT's latest research demonstrates high-resolution image generation 30 times faster, signaling efficiency gains for digital workflows."
    },
    "article": {
-    "title": "How to Audit Your AI Spending Using Claude's New Report Card Tool",
+    "title": "Understanding MIT's New 30x Faster Generative AI Tool",
     "outline": [
-     "The Rise of AI Tool Expenses",
-     "What is Claude's Cost Report Card?",
-     "Step-by-Step Usage Audit",
-     "How to Fix Inefficient Prompts",
-     "Limitations to Keep in Mind",
+     "The Breakthrough Announcement from MIT",
+     "How Generation Speed Has Improved",
+     "Practical Applications for Creators",
+     "Limitations of Current Research Models",
      "Conclusion"
     ]
    }
@@ -294,166 +290,173 @@
  ],
  "hook_patterns": [
   {
-   "pattern": "Clear result + time constraint",
-   "example": "In the next 7 minutes you will turn a messy list into a finished report."
+   "pattern": "ANOTHER [Category]? (Not [Popular Alternative] / Not AI)",
+   "example": "ANOTHER Free Tool? (Not ChatGPT / Not Paid)"
   },
   {
-   "pattern": "Addressing a common daily pain point directly",
-   "example": "Still doing manual data entry when free tools can do it for you?"
+   "pattern": "How I Make Realistic [Output] with [Tool] - Full Guide",
+   "example": "How I Build Simple Workflows with [Tool] - Full Guide"
   },
   {
-   "pattern": "Highlighting a surprising free option vs paid alternatives",
-   "example": "This free open-source tool does what a $50 data app does."
+   "pattern": "Build Your First [Item] in [Number] Minutes (No Coding)",
+   "example": "Build Your First AI Workflow in 10 Minutes (No Coding)"
   },
   {
-   "pattern": "Calling out a major mistake beginners make",
-   "example": "Stop paying for expensive software before checking this setting."
+   "pattern": "I Told [Tool] to \"[Action]\" 100 Times (It Went Too Far)",
+   "example": "I Told ChatGPT to \"Fix My Prompt\" 100 Times (It Went Too Far)"
   },
   {
-   "pattern": "Opening with the exact outcome instead of an intro",
-   "example": "Here is how to build your first automated workflow without writing code."
+   "pattern": "The Ultimate Beginner’s Guide to [Tool]",
+   "example": "The Ultimate Beginner’s Guide to Documind"
   }
  ],
  "_competitors": [
   {
    "channel": "Matt Wolfe",
    "title": "ANOTHER Flying Car? (Not Tesla / Not AI)",
-   "views": 1983789,
+   "views": 2006418,
    "date": "2026-10-26",
    "url": "https://youtu.be/gC18kqOcCEI"
   },
   {
    "channel": "Dan Kieft",
    "title": "How I Make Realistic AI Videos with Seedance 2.5 - Full Guide",
-   "views": 657067,
+   "views": 664112,
    "date": "2026-10-16",
    "url": "https://youtu.be/2hJsvDSPWYM"
   },
   {
    "channel": "Metics Media",
    "title": "Build Your First AI Agent in 20 Minutes (No Coding)",
-   "views": 611688,
+   "views": 628998,
    "date": "2026-10-19",
    "url": "https://youtu.be/rCkYVxOX-dI"
   },
   {
+   "channel": "Nate Herk | AI Automation",
+   "title": "I Told Claude to \"Make it better\" 100 Times (It Went Too Far)",
+   "views": 573973,
+   "date": "2026-10-30",
+   "url": "https://youtu.be/DByAR5Su1Yw"
+  },
+  {
    "channel": "Metics Media",
    "title": "The Ultimate Beginner’s Guide to Hermes Agent",
-   "views": 456369,
+   "views": 462640,
    "date": "2026-10-08",
    "url": "https://youtu.be/XNcKUSL1CTE"
   },
   {
    "channel": "Futurepedia",
    "title": "Claude Makes a New Kind of Video - Full Tutorial",
-   "views": 440769,
+   "views": 444044,
    "date": "2026-10-19",
    "url": "https://youtu.be/Ge1B-Ok1Pfk"
   },
   {
    "channel": "Jeff Su",
    "title": "Personal Agents, Clearly Explained",
-   "views": 311223,
+   "views": 314651,
    "date": "2026-10-13",
    "url": "https://youtu.be/HdI_aYzgJIg"
   },
   {
+   "channel": "Kevin Stratvert",
+   "title": "How to Edit Videos with ChatGPT",
+   "views": 276948,
+   "date": "2026-10-07",
+   "url": "https://youtu.be/cR0TaYikrz8"
+  },
+  {
    "channel": "Metics Media",
    "title": "Master Higgsfield AI in 20 Minutes (Beginner Tutorial)",
-   "views": 189037,
+   "views": 199358,
    "date": "2026-10-21",
    "url": "https://youtu.be/3W1VhiKLNp4"
   },
   {
+   "channel": "Kevin Stratvert",
+   "title": "How to Use OpenAI Codex (Step-by-Step Tutorial)",
+   "views": 195465,
+   "date": "2026-10-08",
+   "url": "https://youtu.be/7XzjQa8z0uc"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "AI News: 6 New Models & A Nano Banana Killer",
+   "views": 182970,
+   "date": "2026-10-16",
+   "url": "https://youtu.be/KGcuuhqmPhI"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "This Tesla Actually Flies (NOT AI)",
+   "views": 174840,
+   "date": "2026-10-16",
+   "url": "https://youtu.be/WXWFmwfo1JA"
+  },
+  {
    "channel": "Nate Herk | AI Automation",
    "title": "Every Claude 2.0 Concept Explained for Normal People",
-   "views": 156091,
+   "views": 173801,
    "date": "2026-10-30",
    "url": "https://youtu.be/tcb5q_6jwvY"
   },
   {
-   "channel": "Dan Kieft",
-   "title": "How To Start Making AI Videos in 2026 (Beginner Guide)",
-   "views": 138432,
-   "date": "2026-10-22",
-   "url": "https://youtu.be/iO9MiefIpVM"
-  },
-  {
-   "channel": "Dan Kieft",
-   "title": "Stop Wasting Credits on AI Video Generators Like Seedance 2.5",
-   "views": 137016,
-   "date": "2026-10-13",
-   "url": "https://youtu.be/KKfaBVM3Jdg"
+   "channel": "Matt Wolfe",
+   "title": "AI News: 24 Things You Need To Know This Week",
+   "views": 170096,
+   "date": "2026-10-23",
+   "url": "https://youtu.be/TVRCcMlvR10"
   },
   {
    "channel": "Matt Wolfe",
-   "title": "AI News: The Only 6 Stories Worth Knowing This Week",
-   "views": 125011,
-   "date": "2026-10-30",
-   "url": "https://youtu.be/eDiQNFa-zYg"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "He Built an AI Board of Billionaires (Free & Open-Source)",
-   "views": 86806,
-   "date": "2026-10-28",
-   "url": "https://youtu.be/AtjFk9f44HE"
-  },
-  {
-   "channel": "Jeff Su",
-   "title": "I knew AI + Notion would be good, but this... wow.",
-   "views": 81877,
-   "date": "2026-10-27",
-   "url": "https://youtu.be/ofzHbyxkpVg"
-  },
-  {
-   "channel": "Dan Kieft",
-   "title": "I Tried Every AI Video Generator - Full Tierlist",
-   "views": 80719,
-   "date": "2026-10-28",
-   "url": "https://youtu.be/tnG3TIULBro"
-  },
-  {
-   "channel": "Kevin Stratvert",
-   "title": "How to Use Grok Bot for Beginners",
-   "views": 79523,
-   "date": "2026-10-27",
-   "url": "https://youtu.be/G6AwOYT-Gbw"
+   "title": "11 AI Breakthroughs You Didn’t Know Existed",
+   "views": 165612,
+   "date": "2026-10-21",
+   "url": "https://youtu.be/umGZrkyTRtw"
   }
  ],
  "_bank": [
   {
    "channel": "Matt Wolfe",
    "title": "ANOTHER Flying Car? (Not Tesla / Not AI)",
-   "views": 1983789,
+   "views": 2006418,
    "date": "2026-10-26",
    "url": "https://youtu.be/gC18kqOcCEI"
   },
   {
    "channel": "Dan Kieft",
    "title": "How I Make Realistic AI Videos with Seedance 2.5 - Full Guide",
-   "views": 657067,
+   "views": 664112,
    "date": "2026-10-16",
    "url": "https://youtu.be/2hJsvDSPWYM"
   },
   {
    "channel": "Metics Media",
    "title": "Build Your First AI Agent in 20 Minutes (No Coding)",
-   "views": 611688,
+   "views": 628998,
    "date": "2026-10-19",
    "url": "https://youtu.be/rCkYVxOX-dI"
   },
   {
+   "channel": "Nate Herk | AI Automation",
+   "title": "I Told Claude to \"Make it better\" 100 Times (It Went Too Far)",
+   "views": 573973,
+   "date": "2026-10-30",
+   "url": "https://youtu.be/DByAR5Su1Yw"
+  },
+  {
    "channel": "Metics Media",
    "title": "The Ultimate Beginner’s Guide to Hermes Agent",
-   "views": 456369,
+   "views": 462640,
    "date": "2026-10-08",
    "url": "https://youtu.be/XNcKUSL1CTE"
   },
   {
    "channel": "Futurepedia",
    "title": "Claude Makes a New Kind of Video - Full Tutorial",
-   "views": 440769,
+   "views": 444044,
    "date": "2026-10-19",
    "url": "https://youtu.be/Ge1B-Ok1Pfk"
   },
@@ -481,9 +484,16 @@
   {
    "channel": "Jeff Su",
    "title": "Personal Agents, Clearly Explained",
-   "views": 311223,
+   "views": 314651,
    "date": "2026-10-13",
    "url": "https://youtu.be/HdI_aYzgJIg"
+  },
+  {
+   "channel": "Kevin Stratvert",
+   "title": "How to Edit Videos with ChatGPT",
+   "views": 276948,
+   "date": "2026-10-07",
+   "url": "https://youtu.be/cR0TaYikrz8"
   },
   {
    "channel": "Matt Wolfe",
@@ -491,13 +501,6 @@
    "views": 273460,
    "date": "2026-10-13",
    "url": "https://youtu.be/eBszYxzE2dk"
-  },
-  {
-   "channel": "Kevin Stratvert",
-   "title": "How to Edit Videos with ChatGPT",
-   "views": 213184,
-   "date": "2026-10-07",
-   "url": "https://youtu.be/cR0TaYikrz8"
   },
   {
    "channel": "Skill Leap AI",
@@ -509,23 +512,16 @@
   {
    "channel": "Metics Media",
    "title": "Master Higgsfield AI in 20 Minutes (Beginner Tutorial)",
-   "views": 189037,
+   "views": 199358,
    "date": "2026-10-21",
    "url": "https://youtu.be/3W1VhiKLNp4"
   },
   {
-   "channel": "Jeff Su",
-   "title": "Stop Organizing Files Yourself.",
-   "views": 184851,
-   "date": "2026-09-29",
-   "url": "https://youtu.be/peP_o66u-vM"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "AI News: 6 New Models & A Nano Banana Killer",
-   "views": 178981,
-   "date": "2026-10-16",
-   "url": "https://youtu.be/KGcuuhqmPhI"
+   "channel": "Kevin Stratvert",
+   "title": "How to Use OpenAI Codex (Step-by-Step Tutorial)",
+   "views": 195465,
+   "date": "2026-10-08",
+   "url": "https://youtu.be/7XzjQa8z0uc"
   }
  ]
 }
