@@ -1,100 +1,95 @@
 {
- "title": "اے آئی ہیکنگ اور سائبر سیکیورٹی کا نیا بحران",
+ "title": "گوگل کا اسکولوں میں اے آئی تنازع",
  "lines": [
   {
    "s": "Sarah",
-   "t": "السلام علیکم ناظرین! اے آئی بیٹھک کے ایک نئے پروگرام میں آپ سب کو خوش آمدید، میں ہوں آپ کی میزبان سارہ۔ آج ہمارے ساتھ اسٹوڈیو میں موجود ہیں ہمارے ٹیکنالوجی ماہر احمد۔ احمد، کیا سائبر سیکیورٹی کی دنیا میں مصنوعی ذہانت کی وجہ سے کوئی بہت بڑا خطرہ یا بحران پیدا ہو رہا ہے؟"
+   "t": "السلام علیکم! اے آئی بیٹھک میں آپ سب کو خوش آمدید کہتی ہوں اور امید ہے آپ خیریت سے ہوں گے۔ میرے ساتھ اسٹوڈیو میں موجود ہیں ہمارے ٹیک ماہر احمد۔ احمد آج ایک بہت ہی دلچسپ اور اہم خبر زیرِ بحث ہے جو اسکولوں اور گوگل کے درمیان تنازع سے متعلق ہے۔ نیویارک ٹائمز اور ایسوسی ایটেড پریس کی رپورٹس کے مطابق گوگل نے ان اسکولوں کے لیے سرچ بند کرنے کا فیصلہ کیا ہے جو مصنوعی ذہانت کو مسترد کرتے ہیں۔ کیا آپ ہمارے ناظرین کو اس کی تفصیل بتانا پسند کریں گے؟"
   },
   {
    "s": "Ahmed",
-   "t": "وعلیکم السلام سارہ۔ جی بالکل، اب معاملہ واقعی کافی سنگین ہوتا جا رہا ہے۔ اے بی سی نیوز کی ایک تازہ رپورٹ میں سائبر سیکیورٹی کے ماہرین نے باقاعدہ کوڈ ریڈ کی تنبیہ جاری کی ہے۔ ان کا کہنا ہے کہ دنیا کو اے آئی ہیکنگ کی ایک نئی اور غیر معمولی لہر کے لیے فوری تیاری کرنی چاہیے۔"
+   "t": "وعلیکم السلام سارہ اور تمام ناظرین! بالکل، یہ خبر کافی بحث کا موضوع بنی ہوئی ہے۔ سی این بی سی اور سی این این کی رپورٹس بتاتی ہیں کہ گوگل نے مؤقف اختیار کیا ہے کہ اگر کوئی اسکول مصنوعی ذہانت کے فیچرز کو بند کرنا چاہے تو وہ ایسا کر سکتے ہیں، لیکن اس کے ساتھ انہیں گوگل سرچ کی سہولت سے بھی ہاتھ دھونا پڑ سکتا ہے۔ یعنی آسان الفاظ میں یوں سمجھیں کہ گوگل چاہتا ہے کہ تعلیمی ادارے اس کی جدید ٹیکنالوجی کو اپنے نظام کا حصہ بنائیں ورنہ انہیں روایتی سرچ انجن تک رسائی نہیں ملے گی۔"
   },
   {
    "s": "Sarah",
-   "t": "کوڈ ریڈ کا انتباہ واقعی فکرمند کر دینے والا ہے۔ عام طور پر تو ہیکنگ انسان یا مخصوص گروہ کرتے رہے ہیں، لیکن اے آئی ہیکنگ کا طریقہ کار کیا ہے اور روایتی سائبر حملوں کے مقابلے میں یہ نیا خطرہ اتنا مختلف کیوں ہے؟"
+   "t": "اچھا! یہ تو ایک بہت ہی کڑا فیصلہ لگتا ہے۔ سی این این کی رپورٹ کے مطابق اس معاملے پر کافی سیاسی ردعمل بھی سامنے آیا ہے اور لوگوں نے تنقید کی ہے کہ گوگل اسکولوں پر اپنی ٹیکنالوجی زبردستی مسلط کر رہا ہے۔ ٹائمز آف انڈیا کے مطابق اس پر گوگل کی طرف سے وضاحت بھی آئی ہے جس میں کمپنی کا کہنا ہے کہ وہ اسکولوں کو دھمکی نہیں دے رہے بلکہ وہ صرف یہ واضح کر رہے ہیں کہ یہ ٹیکنالوجیز کس طرح ایک دوسرے کے ساتھ جڑی ہوئی ہیں۔"
   },
   {
    "s": "Ahmed",
-   "t": "بڑا فرق رفتار اور حجم کا ہے۔ پہلے ہیکرز دستی طور پر گھنٹوں اور دنوں میں سیکیورٹی نقائص ڈھونڈتے تھے۔ اب مصنوعی ذہانت کے ذریعے یہ کام سیکنڈوں میں خودکار طریقے سے ہوتا ہے، جس سے ایک ہی وقت میں بے شمار حملے ممکن ہو جاتے ہیں اور روایتی حفاظتی دیواریں کمزور پڑ جاتی ہیں۔"
+   "t": "بالکل سارہ، آپ نے درست کہا۔ خبر کے مطابق یہ تنازع اس وقت شدت اختیار کر گیا جب کچھ حلقوں کی طرف سے یہ الزام لگایا گیا کہ گوگل اسکولوں کو مصنوعی ذہانت کے استعمال پر مجبور کر رہا ہے۔ گوگل نے اس تنقید کا جواب دیتے ہوئے وضاحت جاری کی اور اس بات کو صاف کرنے کی کوشش کی کہ ان کا مقصد تعلیمی اداروں کو دھمکانا نہیں بلکہ اپنی خدمات کے تکنیکی ڈھانچے کو سمجھانا ہے۔"
   },
   {
    "s": "Sarah",
-   "t": "اچھا، تو اس کا مطلب ہے کہ دفاع کرنے والوں پر بھی دباؤ بہت زیادہ ہوگا۔ لیکن احمد، دوسری طرف تو ہمارے سیکیورٹی ماہرین اور کمپنیاں بھی جدید ٹولز استعمال کر رہی ہیں، تو اصل رکاوٹ کہاں آ رہی ہے؟"
+   "t": "یہ بات تو سمجھ آ گئی کہ ٹیکنالوجی کمپنیاں چاہتی ہیں کہ ان کی نئی مصنوعات ہر جگہ استعمال ہوں۔ لیکن احمد، اگر ہم عام لوگوں اور خصوصاً اپنے ملک پاکستان کے تناظر میں دیکھیں تو اس قسم کے فیصلوں کا ہماری روزمرہ زندگی یا اسکولوں پر کیا اثر پڑ سکتا ہے؟ کیا ہمارے مقامی اسکولوں کو بھی اس طرح کے کسی چلت کا سامنا کرنا پڑ سکتا ہے؟"
   },
   {
    "s": "Ahmed",
-   "t": "رکاوٹ انسانی صلاحیت کی حد ہے۔ ایکسیوس کی ایک حالیہ رپورٹ کے مطابق، سائبر محاذ پر لڑنے والے انسانی ماہرین اب شدید تھکن اور برن آؤٹ کا شکار ہو رہے ہیں۔ اے آئی کی تیز رفتار چوٹوں کو ہر وقت مانیٹر کرنا اور انسان کا مشین کی رفتار سے مقابلہ کرنا اعصابی بوجھ بن چکا ہے۔"
+   "t": "دیکھیں سارہ، جہاں تک پاکستان یا دوسرے ممالک کا تعلق ہے، خبر میں واضح طور پر ان کا کوئی ذکر نہیں کیا گیا۔ لیکن اصولاً یہ صورتحال تمام تعلیمی اداروں کے لیے ایک سوچنے کا مقام ہے۔ دنیا بھر میں اسکول اس کشمکش میں ہیں کہ طلباء کی پڑھائی میں مصنوعی ذہانت کو کیسے اور کتنا شامل کیا جائے، کیونکہ اس سے جہاں سیکھنے کے نئے دروازے کھلتے ہیں وہیں اس کے کچھ خدشات بھی اپنی جگہ موجود ہیں۔"
   },
   {
    "s": "Sarah",
-   "t": "یہ تو تشویشناک بات ہے کہ انسان اس تیز رفتار دباؤ میں تھک رہے ہیں۔ اگر ہم پاکستان اور اپنے عام صارفین کے تناظر میں دیکھیں، تو اس عالمی صورتحال کا ہمارے روزمرہ ڈیجیٹل معمولات پر کیا اثر پڑے گا؟"
+   "t": "بات تو آپ کی بالکل درست ہے۔ اگر اس کے ایک فائدے کی بات کریں تو یقیناً مصنوعی ذہانت طلباء کو پڑھائی میں مدد دے سکتی ہے اور معلومات تک رسائی کو بہت تیز بنا سکتی ہے۔ لیکن دوسری طرف اس کا ایک بڑا خدشہ یہ بھی ہے کہ اسکولوں کو کسی ایک کمپنی کی پالیسی کے آگے بے بس ہونا پڑ سکتا ہے، جیسا کہ ہم نے اس خبر میں دیکھا کہ سرچ تک رسائی ہی خطرے میں پڑ گئی ہے۔"
   },
   {
    "s": "Ahmed",
-   "t": "دیکھیے سارہ، ہم سب کا حساس ڈیٹا، ای میلز اور مالی لین دین کلاؤڈ یا آن لائن سسٹمز پر ہے۔ جب اے آئی سے لیس ہیکنگ پھیلتی ہے تو پاکستان میں موجود چھوٹے ادارے اور عام صارف جلد نشانہ بن سکتے ہیں، کیونکہ کمزور پاس ورڈز یا پرانے سسٹمز کو اے آئی فوراً توڑ سکتی ہے۔"
+   "t": "بالکل، یہ دو دھاری تلوار جیسی بات ہے۔ ناظرین کے لیے اس میں ایک عملی سبق یہ ہے کہ جب بھی ہم کسی نئی ڈیجیٹل ٹیکنالوجی کو اپنے تعلیمی یا روزمرہ کے نظام میں لائیں، تو اس کے تمام پہلوؤں کا بغور جائزہ ضرور لیں۔ ہمیں یہ دیکھنا چاہیے کہ کیا ہم کسی ایک پلیٹ فارم پر حد سے زیادہ انحصار تو نہیں کر رہے، تاکہ بعد میں کسی پابندی کی صورت میں مشکلات سے بچا جا سکے۔"
   },
   {
    "s": "Sarah",
-   "t": "یعنی عام صارف خود کو اس خطرے سے الگ نہیں سمجھ سکتا۔ احمد، کیا اس منظرنامے میں کوئی امید کی کرن یا مثبت بات بھی ہے، یا ہر طرف صرف خدشات ہی ہیں؟"
+   "t": "بہت شکریہ احمد اتنی اچھی وضاحت کے لیے۔ تو ناظرین، آج کی گفتگو کا خلاصہ یہ ہے کہ گوگل نے ان اسکولوں کے لیے سرچ بند کرنے کا فیصلہ کیا ہے جو مصنوعی ذہانت کو استعمال کرنے سے انکار کرتے ہیں، جس پر کافی سیاسی بحث اور تنقید بھی ہوئی ہے، اور کمپنی نے اس پر اپنی صفائی بھی پیش کی ہے۔ اگر آپ کو ہماری آج کی یہ گفتگو پسند آئی تو اے آئی بیٹھک کو ضرور سبسکرائب کریں، گھٹی کے بٹن کو دبائیں، اور کمنٹ میں اپنی رائے کا اظہار ضرور کریں کہ آپ اس بارے میں کیا سوچتے ہیں۔"
   },
   {
    "s": "Ahmed",
-   "t": "مثبت پہلو یہ ہے کہ اس خطرے نے دنیا کو سیکیورٹی خودکار بنانے پر مجبور کر دیا ہے، جس سے مستقبل میں دفاع بھی جدید ہوگا۔ لیکن فوری خدشہ یہ ہے کہ اگر انسانی محافظ مسلسل تھکتے رہے تو اہم ڈیٹا اور اثاثوں کی حفاظت میں بڑی چوک ہو سکتی ہے۔"
-  },
-  {
-   "s": "Sarah",
-   "t": "بالکل درست۔ تو اب دی واشنگٹن پوسٹ کے تجزیے اور ماہرین کی آراء کی روشنی میں، ہمارے دیکھنے والوں کو اپنے تحفظ کے لیے فوری طور پر کون سے عملی اقدامات کرنے چاہییں؟"
-  },
-  {
-   "s": "Ahmed",
-   "t": "دی واشنگٹن پوسٹ کی تجاویز کے مطابق فوری طور پر اپنے تمام بنیادی اکاؤنٹس پر ٹو فیکٹر ویری فکیشن فعال کریں۔ مضبوط پاس ورڈ استعمال کریں، مشکوک ای میلز اور پیغامات سے ہوشیار رہیں اور اپنے فون اور کمپیوٹر کے سسٹمز کو بغیر تاخیر اپ ڈیٹ رکھیں۔"
-  },
-  {
-   "s": "Sarah",
-   "t": "زبردست مشورہ، یعنی احتیاط اور جدید حفاظتی اقدامات ہی اصل بچاؤ ہیں۔ مختصر یہ کہ اے آئی ہیکنگ کا خطرہ کوڈ ریڈ بن چکا ہے، سیکیورٹی ورکرز شدید دباؤ میں ہیں، اس لیے ہم سب کو اپنے ڈیجیٹل تحفظ کی ذاتی ذمہ داری اٹھانی ہوگی۔"
-  },
-  {
-   "s": "Sarah",
-   "t": "ناظرین، کیا آپ نے اپنے اکاؤنٹس کی سیکیورٹی چیک کی ہے؟ کمنٹ سیکشن میں اپنی رائے کا اظہار ضرور کریں اور اگر ویڈیو پسند آئی تو چینل کو سبسکرائب کریں۔ اگلی بیٹھک تک کے لیے سارہ اور احمد کو اجازت دیجیے، اللہ حافظ!"
+   "t": "اپنا بہت خیال رکھیے گا، اللہ حافظ!"
   }
  ],
- "youtube_title": "اے آئی ہیکنگ کا نیا خطرہ: سائبر سیکیورٹی میں کوڈ ریڈ الرٹ",
- "summary": "اس قسط میں سارہ اور احمد نے اے آئی ہیکنگ کی نئی لہر اور سائبر ماہرین کے شدید دباؤ پر بات چیت کی ہے۔ جانیے کہ یہ خطرہ عام صارفین پر کیسے اثر ڈالتا ہے اور دی واشنگٹن پوسٹ و دیگر رپورٹس کے مطابق فوری تحفظ کے لیے کون سے اقدامات ضروری ہیں۔",
+ "youtube_title": "گوگل اور اسکولوں میں اے آئی کا تنازع",
+ "summary": "گوگل کی جانب سے ان اسکولوں کی سرچ بند کرنے کا فیصلہ جو مصنوعی ذہانت کو مسترد کرتے ہیں، اور اس پر ہونے والی سیاسی بحث کی تفصیلات۔",
  "tags": [
-  "سائبر سیکیورٹی",
-  "اے آئی ہیکنگ",
-  "ڈیجیٹل تحفظ",
   "اے آئی بیٹھک",
-  "فاروقی اے آئی نیوز",
-  "ٹیکنالوجی",
+  "گوگل",
+  "اسکول",
   "مصنوعی ذہانت",
-  "پاس ورڈ سیکیورٹی",
-  "آن لائن تحفظ",
-  "Cybersecurity Urdu",
-  "AI Hacking Urdu",
-  "Tech News Urdu",
-  "Code Red Cyber",
-  "Cyber Defense"
+  "ٹیکنالوجی",
+  "تعلیم",
+  "خبریں",
+  "نیویارک ٹائمز",
+  "سی این این",
+  "سی این بی سی",
+  "اے پی نیوز",
+  "اردو پوڈکاسٹ",
+  "ٹیک نیوز"
  ],
- "topic": "سائبر سیکیورٹی اور اے آئی ہیکنگ کے نئے خطرات",
+ "topic": "گوگل اور اسکولوں میں اے آئی کا تنازع",
  "sources": [
   {
-   "title": "The humans burning out on AI's cyber frontlines - Axios",
-   "source": "Axios",
-   "summary": "The humans burning out on AI's cyber frontlines Axios",
-   "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9FY05JNW5XZlh4YjBya2dVY3RsNDV0NldydW4xRUk3LXE4bnFnRmY3OUt5SUFjV2hocHNlRmN0SHE0TFQtY0xlN0dpMXUtbUNlWEkwUG83VGE0cHhWbzk5TXJSZmVrb0UxR0JpMkhINzY5dG9XWWtUX1BIUQ?oc=5"
+   "title": "Google Will Turn Off Search for Schools That Reject A.I. - The New York Times",
+   "source": "The New York Times",
+   "summary": "Google Will Turn Off Search for Schools That Reject A.I. The New York Times",
+   "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPa2ZWRmYyZW9YZng5SmhjYnpjQ213dnRKVjVjNW1rcS1RRFoxVUFKYnl2VlVjMk1abE1kQTE2Qk1Ea09WcHlvMjFNbTREWnhmYXZiTjE5RTY0bUdMZGsyRFRCNDNWQjg0SG90WXlaSVV1d19iV0x4UEVnVlFzS3dyVWZB?oc=5"
   },
   {
-   "title": "A 'code red' for cybersecurity? How to prepare for a possible wave of AI hacking - ABC News - Breaking News, Latest News and Videos",
-   "source": "ABC News - Breaking News, Latest News and Videos",
-   "summary": "A 'code red' for cybersecurity? How to prepare for a possible wave of AI hacking ABC News - Breaking News, Latest News and Videos",
-   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOd3ZFM29RdVNxcXU4YWFmaWlNdGFaSDJIVWY0YTNVcDY2bmc0cEp2Tl9WTThINHpBWDJMbFdQMGw3Q1dEdnpkeWtyYUFoVjBwZkNzUEczN2RNc2dJRk10T05vSmZlX0ZvMmJObVhPdkxHU21vSkpKX0I0azY3MXVPUmlKczM2ZmljQ0xKcXdwMnp3QXRJaktTaW5IX1LSAaIBQVVfeXFMT3lBaHN3aUhXWXlCUnB6X1VLclItWUw5VWl5TVhZNXlxZ0g1VEROZ0NlSGJsc0RiNDlGVnpBRk9qWDFGSWdBYkdQUlVUNTVIajkwLUFxRWF5TUZDZlhaMUVUY3FLYWExMUFvVG1UalM0OGQ4THhnZVpJTjFSVF8tRm5xMm9nRjdYal9sMDd5TEpHSmdBMjlna0NLSVl1cDFWZUxR?oc=5"
+   "title": "Google will cut off search access for students at schools that reject AI - AP News",
+   "source": "AP News",
+   "summary": "Google will cut off search access for students at schools that reject AI AP News",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxObGtOMHhjQzVNYWRRMEw5cTYtWG9OOGREZGRvV3Bqd1EzUGhaUVQzYzdQX0ExMkp1MWdxZEN5LTJyRHYtUzROVldKeTFuSTdWb0VpelMyV2tkaWowU0xfbXBOanlKdGNIV1E3NWVla1YtSkhmRU4tdVZBTXhwY2YxWkFBdGVBaVB4N2VUVUlTZGtfdWJBbWtZVmE1VnM?oc=5"
   },
   {
-   "title": "Analysis | Worried about a new wave of AI hacks? Take these steps right now. - The Washington Post",
-   "source": "The Washington Post",
-   "summary": "Analysis | Worried about a new wave of AI hacks? Take these steps right now. The Washington Post",
-   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPLTU3RC1zMk92Nzc4NnpGQW5ReE9mT3dFTTdobk1tSnZxUDNwX3Q1SHNuTFFGMXF5QWU4Y28yNHdEOGtuYjdFY3VwbkZWZm4xbEI5SzBIeFlnRU95RjJEY0VoRW1GRjdTRHdGalJHeUp5N3B1REJGWVZLNjhGVEphSG1VOVY2RGRqeTFSLXRrbzFaZ29xbHpqaEpWQkVVMVVob2JxUXo5b1otQlBZRXpaY3VR?oc=5"
+   "title": "Google responds to political backlash over removing search from schools that ban AI - CNBC",
+   "source": "CNBC",
+   "summary": "Google responds to political backlash over removing search from schools that ban AI CNBC",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNenhBb3YzeXFrNE9nVmR3QUZTZ3M2RlRleVpqMjZMUll0azhuR2ZtUmwyOEcxeEluUlN4UDdQNU54ak9HTUI2ekY4azRzUk9aTVh5dUJYVnhkTVdPMGtIYjR6V0xmdWlqb3hNRmROVzFmZFNEZlJZZV9DaTRlSGQ4akRkSGxjZ1p2dV92cTFxaEUzMTVCNTByZW42T3ZGS3hUR0JOZzRaYWozM0nSAbABQVVfeXFMTktHaFBsT1hOVXFLTVo2RUhyZHNWbkVUU3FhVjdxczdRT2ZUOXFUakJCV0pHUnNkU2NycUd6NEMxS0ozT2VxRFAtbWpnc2lKUWhBZ3c0NHRFMk9vQ19pNTBxc0NCS1N3TmZqNGdwdUcwbE51by1NdEJiM1pOcl9HQXpiMmwwaklRTWhpVC02anVSMmF2QU8yZThyWVpwUWNJb1lObmVYdDc1S0x4VDFrVmQ?oc=5"
+  },
+  {
+   "title": "Google will let schools turn off AI, but they may also lose Search - CNN",
+   "source": "CNN",
+   "summary": "Google will let schools turn off AI, but they may also lose Search CNN",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE90UHUzNjJORnlISTN0WGhSOTBiZlQ4SHZhSWFZcEpXRXgyS09IMHNvaU1fMnFuRVJIV2laa1c1alUxdVVab0x0a2pCTXJJUExVVkZMYndPM2ptalY2cnlOVk82NE9xUTVYUU9z?oc=5"
+  },
+  {
+   "title": "Google to everyone saying 'company threatened schools over using AI; says: We want to clarify, we are giv - The Times of India",
+   "source": "The Times of India",
+   "summary": "Google to everyone saying 'company threatened schools over using AI; says: We want to clarify, we are giv The Times of India",
+   "link": "https://news.google.com/rss/articles/CBMingJBVV95cUxNRnNoeTFoc2JUSlJUX0VSOHBINDloY3ZKaEVuVUlTaUlyTEd3NmpINGVDeFV4YW5MbUR0cjE3NVRtVlBOdE5Od0tGWlNoRGVhdG9fTFBzWEVsenVzUHpJeWh2eHYxMmRJbVF5XzNydkRTMDZjaU1wNndsMWJmMFlyb3pEX1NlSmpKQ284U1AtQ3EwR2wyT3dhTDJDYWZoU2RzaXFYSVRSZXBCWWl3Smo1TVczR19oN0dnRjR3cVQ2WXFqVnUwTjZYbnJSRURtcGtEWDZyUWdtR0xVUDQ5RGtCMHlpaTFqcldHZjBtbmVzdlFUdUkwNTZaQkRLR05YV2Fzbkx5MUpxSnhQTXJOVDNKbGFyaWVCREw0enZmWDlB0gGjAkFVX3lxTE5xUngxX3Ytd3VtRGVNeWxqNy02T0hITXhHTURBSGI5SGlaemdEUWhYVnhZRWV6VVV0by1mcVJfd1U4eG5RZTQ2Ty1uYjdDbUNYSzlQWVVIOFhvX1Y0QlVBMHFKYS1qT012cjd0VFBqTjl2V0NMN0psbE8zWGJweDh1M0I0dW45SXdfdmQ3OWhKSVMzU2hrNzgtYUNhRXI3T0gzUmwxV0x3Rjlrb09yTzJUMDg3UjZBU29MM3VMTGNobHZkbG9JbE9GY0c3MEdRa3E2Z1FKTmJFSGlVQmllQm5BajNxZmlwUzRfckE3NHBOaHlNeWdva0JHak9NUm41Tnd1LTNBbmsxWTkyMGZnd3dpNTM2M0gxelZJWFFHUUZnbk1vOA?oc=5"
   }
  ]
 }
