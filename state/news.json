@@ -219,7 +219,7 @@
   "applemaytrytoincreaserevenuebydoingsomethingwiththirdpartyai",
   "ycombinatorsgarrytanusesaiagentssomuchhespendsupto200kayearo"
  ],
- "offset": 94696861,
+ "offset": 94696862,
  "chat": 6593456628,
  "days": {
   "2026-10-22": {
@@ -599,7 +599,7 @@
    "yt_at": "2026-11-06T13:00:00+03:00"
   },
   "2026-11-06-p": {
-   "status": "pending",
+   "status": "approved",
    "vmid": 350,
    "mids": [
     349,
@@ -624,7 +624,8 @@
    "kind": "podcast",
    "voice": "gemini",
    "yt": "M4s1N5gD_sw",
-   "yt_at": "2026-11-06T17:00:00+03:00"
+   "yt_at": "2026-11-06T17:00:00+03:00",
+   "yt_status": "public"
   }
  },
  "podcast": {
