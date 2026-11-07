@@ -581,7 +581,9 @@
    "yt_status": "scheduled"
   },
   "2026-11-04": {
-   "status": "approved"
+   "status": "approved",
+   "yt": "ziitHJ_Q6sg",
+   "yt_at": "2026-11-04T18:00:00+03:00"
   },
   "2026-11-05-f": {
    "status": "approved",
@@ -696,7 +698,9 @@
    "yt_status": "scheduled"
   },
   "2026-11-07": {
-   "status": "approved"
+   "status": "approved",
+   "yt": "8dG5O3Q55CE",
+   "yt_at": "2026-11-07T18:00:00+03:00"
   }
  },
  "podcast": {
