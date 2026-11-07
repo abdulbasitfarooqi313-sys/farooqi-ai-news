@@ -259,7 +259,7 @@
   "openaipresidentgregbrockmansayscompanycouldbeiporeadyin2027",
   "claudecannowanalyzeyourspendingwithitsnewpersonalfinancetool"
  ],
- "offset": 94696864,
+ "offset": 94696865,
  "chat": 6593456628,
  "days": {
   "2026-10-22": {
@@ -703,7 +703,7 @@
    "yt_at": "2026-11-07T18:00:00+03:00"
   },
   "2026-11-07-w": {
-   "status": "pending",
+   "status": "approved",
    "vmid": 439,
    "mids": [
     438,
@@ -727,7 +727,8 @@
    ],
    "kind": "word",
    "yt": "tHqhdotFxfM",
-   "yt_at": "2026-11-08T13:00:00+03:00"
+   "yt_at": "2026-11-08T13:00:00+03:00",
+   "yt_status": "scheduled"
   }
  },
  "podcast": {
