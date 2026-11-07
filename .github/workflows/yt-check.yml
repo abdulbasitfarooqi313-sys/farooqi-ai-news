@@ -1,7 +1,7 @@
 name: YouTube key check  # approve pending
 on:
   workflow_dispatch:
-  push:
+  push:  # (release_day صرف ہاتھ سے)
     paths: [".github/workflows/yt-check.yml", "lab/yt_check.py", "lab/pixabay_check.py", "lab/backup_key_check.py", "lab/blog_check.py", "lab/yt_token_check.py", "lab/yt_status.py", "news/blog.py", "lab/tg_debug.py", "lab/blog_backfill.py", "lab/ts_check.py", "lab/yt_delete.py"]
 permissions:
   contents: write
@@ -27,7 +27,7 @@ jobs:
       - run: |
           set +e
           echo "::notice::README: $(head -1 README.md)"; ls news | wc -l | sed 's/^/::notice::news files: /'
-          PYTHONPATH=. python lab/release_day.py 2026-11-07 8dG5O3Q55CE > out.txt 2>&1; rc=$?
+          PYTHONPATH=. python lab/yt_recent.py > out.txt 2>&1; rc=$?
           while IFS= read -r l; do echo "::notice::$l"; done < out.txt
           exit $rc
         env:
