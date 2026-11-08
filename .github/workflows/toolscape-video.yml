@@ -1,0 +1,95 @@
+# 🧰 Toolscape video — fallback on this public runner (unlimited minutes). Owner, 8 Nov 2026:
+# Toolscape's own minutes first (make-video 16:00 UTC Sun/Tue/Thu). At 17:45 UTC this checks: today's run there succeeded
+# or is still running -> nothing. It never started (minutes finished) or does not exist -> make the video here.
+# Private code via TS_TOKEN; secrets TS_* (copied once by Toolscape's copy-secrets.yml). Nothing secret is printed.
+name: Toolscape video (fallback)
+on:
+  schedule:
+    - cron: "45 17 * * 0,2,4"
+  workflow_dispatch:
+    inputs:
+      force: { description: "make it here without checking", type: boolean, default: true }
+permissions:
+  contents: read
+concurrency: toolscape-video
+jobs:
+  video:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      R: hellotoolscape/ai-tube-factory
+    steps:
+      - name: Own minutes first?
+        id: need
+        env: { GH_TOKEN: "${{ secrets.TS_TOKEN }}", FORCE: "${{ github.event.inputs.force }}" }
+        run: |
+          if [ "$FORCE" = "true" ]; then echo "run=1" >> $GITHUB_OUTPUT; exit 0; fi
+          [ -n "$GH_TOKEN" ] || { echo "run=0" >> $GITHUB_OUTPUT; echo "::warning::TS_TOKEN missing"; exit 0; }
+          today=$(date -u +%F)
+          run=$(gh api "repos/$R/actions/workflows/make-video.yml/runs?per_page=5" -q "[.workflow_runs[]|select(.created_at|startswith(\"$today\"))][0]")
+          if [ -z "$run" ] || [ "$run" = "null" ]; then echo "no run there today -> here"; echo "run=1" >> $GITHUB_OUTPUT; exit 0; fi
+          st=$(echo "$run" | jq -r .status); co=$(echo "$run" | jq -r .conclusion); id=$(echo "$run" | jq -r .id)
+          echo "there: $st / $co"
+          if [ "$st" != completed ] || [ "$co" = success ]; then echo "run=0" >> $GITHUB_OUTPUT; exit 0; fi
+          steps=$(gh api "repos/$R/actions/runs/$id/jobs" -q '[.jobs[].steps[]?]|length')
+          if [ "${steps:-0}" -le 1 ]; then echo "job never started (minutes?) -> here"; echo "run=1" >> $GITHUB_OUTPUT
+          else echo "it ran and failed there -> no duplicate"; echo "run=0" >> $GITHUB_OUTPUT; fi
+      - name: Toolscape code (private)
+        if: steps.need.outputs.run == '1'
+        env: { TS_TOKEN: "${{ secrets.TS_TOKEN }}" }
+        run: |
+          [ -n "$TS_TOKEN" ] || { echo "::error::TS_TOKEN missing"; exit 1; }
+          git clone -q "https://x-access-token:${TS_TOKEN}@github.com/$R" ts
+          echo "toolscape: ok"
+      - uses: actions/setup-python@v5
+        if: steps.need.outputs.run == '1'
+        with: { python-version: "3.12" }
+      - if: steps.need.outputs.run == '1'
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-dejavu-core >/dev/null && cd ts && pip install -q -r requirements.txt
+      - name: Research, write and render
+        id: run
+        if: steps.need.outputs.run == '1'
+        working-directory: ts
+        env:
+          GEMINI_API_KEY: ${{ secrets.TS_GEMINI_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.TS_PEXELS_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TS_TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TS_TELEGRAM_CHAT_ID }}
+        run: |
+          set -o pipefail
+          python -u -m pipeline.main all 2>&1 | tee run.log
+      - name: Save + release + Telegram + YouTube (private, ✅/❌)
+        if: steps.run.outcome == 'success'
+        working-directory: ts
+        env:
+          GH_TOKEN: ${{ secrets.TS_TOKEN }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.TS_YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.TS_YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.TS_YOUTUBE_REFRESH_TOKEN }}
+          BLOGGER_REFRESH_TOKEN: ${{ secrets.TS_BLOGGER_REFRESH_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TS_TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TS_TELEGRAM_CHAT_ID }}
+          ID: ${{ steps.run.outputs.video_id }}
+        run: |
+          git config user.name "factory-bot"; git config user.email "factory-bot@users.noreply.github.com"
+          git add queue history.json data; git add -A next_topic.json state/calendar.json 2>/dev/null || true
+          git commit -q -m "New video (public runner): $ID" || true
+          for i in 1 2 3; do git pull -q --rebase -X theirs && git push -q && break; sleep 5; done
+          DIR="output/$ID"; TITLE=$(head -1 "$DIR/UPLOAD_INFO.md" | sed 's/^# //')
+          gh release create "$ID" -R "$R" --title "$TITLE" --notes-file "$DIR/UPLOAD_INFO.md" \
+            "$DIR"/video.mp4 "$DIR"/short_*.mp4 "$DIR"/thumbnail.jpg "$DIR"/captions.srt "$DIR"/script.md || true
+          python -m pipeline.notify "$ID" "https://github.com/$R/releases/tag/$ID" "" || true
+          python -m pipeline.approve upload "$ID"
+          git add state/youtube.json state/blogger.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "YouTube: uploaded $ID (private, public runner)"
+          for i in 1 2 3; do git pull -q --rebase -X theirs && git push -q && exit 0; sleep 5; done
+      - name: Alert on failure
+        if: failure()
+        env:
+          TOKEN: ${{ secrets.TS_TELEGRAM_BOT_TOKEN }}
+          CHAT: ${{ secrets.TS_TELEGRAM_CHAT_ID }}
+        run: |
+          [ -n "$TOKEN" ] || exit 0
+          curl -s -X POST "https://api.telegram.org/bot$TOKEN/sendMessage" --data-urlencode "chat_id=$CHAT" \
+            --data-urlencode "text=⚠️ Toolscape (unlimited runner): video run failed: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" >/dev/null || true
