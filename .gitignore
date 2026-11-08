@@ -11,3 +11,4 @@ blog/
 requirements.txt
 AGENTS.md
 *.py
+ts/

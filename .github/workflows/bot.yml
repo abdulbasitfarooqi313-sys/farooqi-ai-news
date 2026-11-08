@@ -33,6 +33,11 @@ jobs:
               [ -f news/bulletin.py ] || exit 1
             fi
           else echo "::warning::ENGINE_TOKEN missing — using code in this repo"; fi
+      - name: Toolscape code (private) — its ✅/❌ handled here instantly
+        env: { TS_TOKEN: "${{ secrets.TS_TOKEN }}" }
+        run: |
+          [ -n "$TS_TOKEN" ] || exit 0
+          git clone -q --depth 1 "https://x-access-token:${TS_TOKEN}@github.com/hellotoolscape/ai-tube-factory" ts && echo "toolscape: ok" || echo "::warning::toolscape clone failed"
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -q requests
@@ -47,6 +52,14 @@ jobs:
           BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
           TOOLSCAPE_BOT_TOKEN: ${{ secrets.TOOLSCAPE_BOT_TOKEN }}
           TOOLSCAPE_GH_TOKEN: ${{ secrets.TOOLSCAPE_GH_TOKEN }}
+          TS_TELEGRAM_BOT_TOKEN: ${{ secrets.TS_TELEGRAM_BOT_TOKEN }}
+          TS_TELEGRAM_CHAT_ID: ${{ secrets.TS_TELEGRAM_CHAT_ID }}
+          TS_YOUTUBE_CLIENT_ID: ${{ secrets.TS_YOUTUBE_CLIENT_ID }}
+          TS_YOUTUBE_CLIENT_SECRET: ${{ secrets.TS_YOUTUBE_CLIENT_SECRET }}
+          TS_YOUTUBE_REFRESH_TOKEN: ${{ secrets.TS_YOUTUBE_REFRESH_TOKEN }}
+          TS_BLOGGER_REFRESH_TOKEN: ${{ secrets.TS_BLOGGER_REFRESH_TOKEN }}
+          TS_GEMINI_API_KEY: ${{ secrets.TS_GEMINI_API_KEY }}
+          TS_DIR: ts
           BOT_LOOP_MIN: "26"
         run: python -m news.bulletin pollloop
       - name: Save
