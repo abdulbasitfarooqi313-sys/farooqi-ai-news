@@ -9,6 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       force: { description: "make it here without checking", type: boolean, default: true }
+      dry: { description: "test only: check access + clone, make nothing", type: boolean, default: false }
 permissions:
   contents: read
 concurrency: toolscape-video
@@ -36,11 +37,16 @@ jobs:
           else echo "it ran and failed there -> no duplicate"; echo "run=0" >> $GITHUB_OUTPUT; fi
       - name: Toolscape code (private)
         if: steps.need.outputs.run == '1'
-        env: { TS_TOKEN: "${{ secrets.TS_TOKEN }}" }
+        env: { TS_TOKEN: "${{ secrets.TS_TOKEN }}", GH_TOKEN: "${{ secrets.TS_TOKEN }}" }
         run: |
           [ -n "$TS_TOKEN" ] || { echo "::error::TS_TOKEN missing"; exit 1; }
           git clone -q "https://x-access-token:${TS_TOKEN}@github.com/$R" ts
           echo "toolscape: ok"
+          if [ "${{ github.event.inputs.dry }}" = "true" ]; then
+            gh api "repos/$R/actions/workflows/make-video.yml/runs?per_page=1" -q '.workflow_runs[0].status' >/dev/null && echo "actions read: ok"
+            [ -n "${{ secrets.TS_GEMINI_API_KEY }}" ] && echo "secrets: ok"
+            echo "DRY RUN — nothing made"; exit 1
+          fi
       - uses: actions/setup-python@v5
         if: steps.need.outputs.run == '1'
         with: { python-version: "3.12" }
