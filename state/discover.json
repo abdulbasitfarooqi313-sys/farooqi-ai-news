@@ -2,281 +2,281 @@
  "news": [
   {
    "id": "UCvm8V4Dwtz0fbPGbpk7RYAg",
-   "hits": 9,
-   "views": 1518180,
+   "hits": 10,
+   "views": 1609232,
    "titles": [
-    "AI Search: Can you trust what AI tells you? - BBC URDU (44,510)",
-    "Deepfakes: How is AI being used to target women on the internet? - BBC URDU (11,502)",
-    "Can AI wipe out entire humanity? | Sairbeen - BBC URDU (389,891)"
+    "Trillion dollars wipe off as tech stocks plunge over AI slow down fears | Jahan Numa |  BBC URDU (149,112)",
+    "Deepfakes: How is AI being used to target women on the internet? - BBC URDU (11,651)",
+    "Can AI wipe out entire humanity? | Sairbeen - BBC URDU (398,266)"
    ],
    "channel": "BBC News اردو",
    "handle": "/@bbcurdu"
   },
   {
-   "id": "UCN7B-QD0Qgn2boVH5Q0pOWg",
-   "hits": 5,
-   "views": 2067541,
+   "id": "UCupvZG-5ko_eiXAupbDfxWw",
+   "hits": 2,
+   "views": 2865773,
    "titles": [
-    "PHP में सालों पुरानी Security Flaws, AI ने कैसे पता लगाया? (193,179)",
-    "चेहरा किसी का, वीडियो किसी का... AI के खेल में निशाने पर महिलाएं क्यों? (90,152)",
-    "प्रोटेस्ट के डीपफ़ेक वीडियोज़, AI से महिलाओं को यूं बनाया जा रहा निशाना (BBC Hindi) (132,475)"
+    "Why so many AI developers are freaked out about AI (140,121)",
+    "Bill Gates stakes reputation: AI is not like past tech (2,725,652)"
    ],
-   "channel": "BBC News Hindi",
-   "handle": "/@BBCHindi"
+   "channel": "CNN",
+   "handle": "/@CNN"
   },
   {
    "id": "UC_vt34wimdCzdkrzVejwX9g",
-   "hits": 9,
-   "views": 697613,
+   "hits": 6,
+   "views": 745524,
    "titles": [
-    "Experts Warn of the Growing Threat of Inhumane AI | Breaking News | Geo News (584,807)",
-    "Is AI going to become a big threat ?? | Geo News (5,450)",
-    "OpenAI Launches Its Most Powerful AI Model Yet (14,036)"
+    "Experts Warn of the Growing Threat of Inhumane AI | Breaking News | Geo News (586,283)",
+    "Is AI going to become a big threat ?? | Geo News (5,531)",
+    "OpenAI Launches Its Most Powerful AI Model Yet (14,112)"
    ],
    "channel": "Geo News",
    "handle": "/@geonews"
   },
   {
-   "id": "UC13KrBW4je1iUkEhIZO15AQ",
+   "id": "UC1yBKRuGpC1tSM73A0ZjYjQ",
    "hits": 2,
-   "views": 1146618,
+   "views": 1474855,
    "titles": [
-    "AI ने अपनी हदें पार करनी शुरू कर दी हैं? Tech World में क्यों मची हलचल | Kautuk | Saurabh Dwivedi (384,396)",
-    "AI इंसानों को मार देगा - खतरा असली या मोनोपली का खेल? OpenAI - Anthropic और Musk आमने-सामने क्यों? (762,222)"
+    "Panic ERUPTS Over Tech Stock Drop (804,621)",
+    "Elon Musk Sounds Alarm On The AI Bubble (670,234)"
    ],
-   "channel": "Indian Express Hindi",
-   "handle": "/@IEHindi"
+   "channel": "The Young Turks",
+   "handle": "/@TheYoungTurks"
   },
   {
-   "id": "UC16niRr50-MSBwiO3YDb3RA",
+   "id": "UCTR1Tk8SaMO9qw930kIOMHQ",
+   "hits": 1,
+   "views": 1851089,
+   "titles": [
+    "AI Bubble फट गया | China 40% Crash, Google, Intel सब Crash | Binance Hacked | SAGAR SINHA (1,851,089)"
+   ],
+   "channel": "Sagar Sinha ",
+   "handle": "/@coachsagarsinha"
+  },
+  {
+   "id": "UCmTM_hPCeckqN3cPWtYZZcg",
+   "hits": 1,
+   "views": 1619280,
+   "titles": [
+    "Indian Markets Cheer As Global AI Bubble Begins To Burst | $3 Trillion Wiped Out In A Single Day? (1,619,280)"
+   ],
+   "channel": "The Deshbhakt",
+   "handle": "/@thedeshbhakt"
+  },
+  {
+   "id": "UCknLrEdhRCp1aegoMqRaCZg",
+   "hits": 1,
+   "views": 1110037,
+   "titles": [
+    "Trillions lost as investors question the AI boom | DW News (1,110,037)"
+   ],
+   "channel": "DW News",
+   "handle": "/@dwnews"
+  },
+  {
+   "id": "UCN7B-QD0Qgn2boVH5Q0pOWg",
    "hits": 2,
-   "views": 482148,
+   "views": 660838,
    "titles": [
-    "The end of data centres? Apple and Meta’s bet against the cloud | AI Decoded (280,566)",
-    "How AI 'reskins' are stealing human content | BBC News (201,582)"
+    "Superintelligent AI और Frontier AI क्या हैं, इनसे क्यों डर रहे हैं कई लोग? | (BBC Hindi) (440,580)",
+    "AI इंसानों के लिए कब और कैसे बन सकता है ख़तरा? (BBC Hindi) (220,258)"
    ],
-   "channel": "BBC News",
-   "handle": "/@BBCNews"
-  },
-  {
-   "id": "UCc7pPNFBvIhI4iV7m8plJuA",
-   "hits": 1,
-   "views": 632611,
-   "titles": [
-    "AI से अरबपति खुश पर आम लोग परेशान [The Hidden Cost of AI: Life in San Francisco Is Getting Harder] (632,611)"
-   ],
-   "channel": "DW हिन्दी",
-   "handle": "/@dwhindi"
-  },
-  {
-   "id": "UCcmpeVbSSQlZRvHfdC-CRwg",
-   "hits": 2,
-   "views": 323211,
-   "titles": [
-    "AI Out of Control? Experts Warn About Future Risks | Tech Leader Resigns After Big Revelation (42,810)",
-    "AI Out of Control? Experts Warn of a Dangerous Future | What AI Experts Have Discovered | 24 News HD (280,401)"
-   ],
-   "channel": "24 News HD",
-   "handle": "/@24NewsHD"
-  },
-  {
-   "id": "UCDRIjKy6eZOvKtOELtTdeUA",
-   "hits": 1,
-   "views": 459277,
-   "titles": [
-    "'BLACK OCTOBER': AI Cybersecurity NIGHTMARE As BANKS Infiltrated (459,277)"
-   ],
-   "channel": "Breaking Points",
-   "handle": "/@breakingpoints"
-  },
-  {
-   "id": "UChpleBmo18P08aKCIgti38g",
-   "hits": 2,
-   "views": 236782,
-   "titles": [
-    "AI News: 24 Things You Need To Know This Week (102,325)",
-    "11 AI Breakthroughs You Didn’t Know Existed (134,457)"
-   ],
-   "channel": "Matt Wolfe",
-   "handle": "/@mreflow"
-  },
-  {
-   "id": "UC5l7RouTQ60oUjLjt1Nh-UQ",
-   "hits": 2,
-   "views": 224608,
-   "titles": [
-    "It's Happening... AI Just Started the Biggest Internet Nightmare in History (170,478)",
-    "Anthropic Just Dropped DUET: The First AI That Thinks Ahead on Its Own (54,130)"
-   ],
-   "channel": "AI Revolution",
-   "handle": "/@airevolutionx"
-  },
-  {
-   "id": "UC9D7QzaNDP11e4jI4ygU5Xg",
-   "hits": 1,
-   "views": 334337,
-   "titles": [
-    "AI Will Kill Humans by 2030? Why AI Creators Are Scared ! Shubhankar Mishra | (334,337)"
-   ],
-   "channel": "NewsBook",
-   "handle": "/@NewsBookofficial"
-  },
-  {
-   "id": "UCOutOIcn_oho8pyVN3Ng-Pg",
-   "hits": 3,
-   "views": 136128,
-   "titles": [
-    "Bill Gates AI Warning: AI से 1 Billion Deaths का खतरा? क्यों मांगा AI Regulation | AI News (64,253)",
-    "AI Superintelligence Danger Warning:  AI रिसर्चर जैकब कॉक्सन के इस्तीफे से दुनिया भर में हड़कंप (37,768)",
-    "AI Threat To Humanity: 'AI इंसानों को मार देगा' Anthropic के वैज्ञानिकों का खौफनाक दावा! | Anthropic (34,107)"
-   ],
-   "channel": "TV9 Bharatvarsh",
-   "handle": "/@TV9Bharatvarsh"
-  },
-  {
-   "id": "UCrYpceU8cvXNSqaiYC-8hJA",
-   "hits": 1,
-   "views": 229812,
-   "titles": [
-    "AI के बारे में सबसे खतरनाक भविष्यवाणी! क्या 10 साल में खत्म हो जाएगी मानव जाति? (229,812)"
-   ],
-   "channel": "Satya Hindi सत्य हिन्दी",
-   "handle": "/@SatyaHindi"
-  },
-  {
-   "id": "UCeY0bbntWzzVIaj2z3QigXg",
-   "hits": 1,
-   "views": 221146,
-   "titles": [
-    "Bill Gates says AI 'powerful enough' to cause 'a billion deaths' (221,146)"
-   ],
-   "channel": "NBC News",
-   "handle": "/@NBCNews"
+   "channel": "BBC News Hindi",
+   "handle": "/@BBCHindi"
   },
   {
    "id": "UCBi2mrWuNuyYy4gbM6fU18Q",
    "hits": 2,
-   "views": 143146,
+   "views": 484755,
    "titles": [
-    "AI دریافت سائبر ایمرجنسی کا اشارہ کرتی ہے: آپ کو کیا جاننے کی ضرورت ہے۔ (60,035)",
-    "What to know about McDonald's federal lawsuit over AI (83,111)"
+    "اسکولوں میں گوگل اے آئی پر ردعمل (40,603)",
+    "Anthropic’s new warning (444,152)"
    ],
    "channel": "ABC News",
    "handle": "/@ABCNews"
   },
   {
-   "id": "UCmeU2DYiVy80wMBGZzEWnbw",
+   "id": "UCfA29qhHnOQrEr7yjHsP9Jw",
+   "hits": 1,
+   "views": 679999,
+   "titles": [
+    "2030 तक AI कर देगा इंसानों को खत्म? (679,999)"
+   ],
+   "channel": "Abhisar Sharma",
+   "handle": "/@Abhisar_Sharma"
+  },
+  {
+   "id": "UCUMccND2H_CVS0dMZKCPCXA",
+   "hits": 1,
+   "views": 653160,
+   "titles": [
+    "AI bubble finally bursting ?? Market Update !! (653,160)"
+   ],
+   "channel": "FinnovationZ by Prasad",
+   "handle": "/@namaskarprasad"
+  },
+  {
+   "id": "UCJ9Xm9zuJ9w-S7qoDO8N-wA",
+   "hits": 1,
+   "views": 626596,
+   "titles": [
+    "AI Misuse Raises Privacy Concerns, Expert Calls for Public Awareness | AI Blackmail | 365 News (626,596)"
+   ],
+   "channel": "365 News",
+   "handle": "/@365NewsOfficial"
+  },
+  {
+   "id": "UCcmpeVbSSQlZRvHfdC-CRwg",
    "hits": 2,
-   "views": 143046,
+   "views": 328088,
    "titles": [
-    "AI News: Claude Duet Crushes; Amazing Grok Bot Updates; and NotebookLM Upgrade (90,482)",
-    "AI News Week: GPT 5.6, ChatGPT Work, Fable 5 Reset, Cowork Updates and More! (52,564)"
+    "AI Out of Control? Experts Warn About Future Risks | Tech Leader Resigns After Big Revelation (42,878)",
+    "AI Out of Control? Experts Warn of a Dangerous Future | What AI Experts Have Discovered | 24 News HD (285,210)"
    ],
-   "channel": "Paul J Lipsky",
-   "handle": "/@PaulJLipsky"
+   "channel": "24 News HD",
+   "handle": "/@24NewsHD"
   },
   {
-   "id": "UCE0-acFJdnTPUCYlYoiq_fg",
+   "id": "UCKwucPzHZ7zCUIf7If-Wo1g",
    "hits": 1,
-   "views": 190712,
+   "views": 447350,
    "titles": [
-    "AI Expert WARNS: Bunkers Can't Help Them Anymore (190,712)"
+    "Decode: दुनिया में AI Bubble फूटने वाला है? | Sudhir Chaudhary | Data Centres | Trump US Election (447,350)"
    ],
-   "channel": "Neural Nutshell",
-   "handle": "/@TheNeuralNutshell"
+   "channel": "DD News",
+   "handle": "/@DDnews"
   },
   {
-   "id": "UClhHB0_iXbn8Cc0x5YzcvIg",
-   "hits": 1,
-   "views": 168790,
+   "id": "UChpleBmo18P08aKCIgti38g",
+   "hits": 2,
+   "views": 266956,
    "titles": [
-    "Will AI Control Our Money? Yuval Noah Harari's Warning Explained in Hindi (168,790)"
+    "AI News: New ChatGPT & Google Models (14 Updates Worth Knowing) (95,597)",
+    "AI News: 24 Things You Need To Know This Week (171,359)"
    ],
-   "channel": "Khabargaon",
-   "handle": "/@Khabargaon"
+   "channel": "Matt Wolfe",
+   "handle": "/@mreflow"
+  },
+  {
+   "id": "UC9D7QzaNDP11e4jI4ygU5Xg",
+   "hits": 1,
+   "views": 354263,
+   "titles": [
+    "AI Will Kill Humans by 2030? Why AI Creators Are Scared ! Shubhankar Mishra | (354,263)"
+   ],
+   "channel": "NewsBook",
+   "handle": "/@NewsBookofficial"
   },
   {
    "id": "UCUkd37D1efW4k5KkVqCdP4g",
-   "hits": 2,
-   "views": 103791,
+   "hits": 3,
+   "views": 167462,
    "titles": [
-    "Which AI Tool Is Right for You? Step by Step Guide (58,610)",
-    "How to Get Smart, Accurate Answers From ChatGPT (45,181)"
+    "Which AI Tool Is Right for You? Step by Step Guide (62,937)",
+    "Learn AI From Zero to Earning | Complete Roadmap | Faisal Shabbir (58,585)",
+    "How to Get Smart, Accurate Answers From ChatGPT (45,940)"
    ],
    "channel": "Faisal Shabbir",
    "handle": "/@FaisalShabbir"
   },
   {
-   "id": "UC8p1vwvWtl6T73JiExfWs1g",
-   "hits": 2,
-   "views": 103454,
+   "id": "UCoMdktPbSTixAyNGwb-UYkQ",
+   "hits": 1,
+   "views": 296509,
    "titles": [
-    "اینتھروپک کا مجوزہ اے آئی سیفٹی بل صرف حکومت کو انتہائی حالات میں ماڈلز کو بلاک کرنے کی اجازت دیتا ہے۔ (14,417)",
-    "OpenAI unveils new AI agent called \"dots\" (89,037)"
+    "Extinction events, data centre dramas and the US midterms: Why AI stocks lost trillions in one day (296,509)"
    ],
-   "channel": "CBS News",
-   "handle": "/@CBSNews"
+   "channel": "Sky News",
+   "handle": "/@SkyNews"
+  },
+  {
+   "id": "UC0Um3pnZ2WGBEeoA3BX2sKw",
+   "hits": 1,
+   "views": 286026,
+   "titles": [
+    "Google Gemini Hacked 3 Websites | Shocking AI Cybersecurity Incident | Latest Tech News | Hum News (286,026)"
+   ],
+   "channel": "HUM News",
+   "handle": "/@HUMNewsPakistan"
+  },
+  {
+   "id": "UCeY0bbntWzzVIaj2z3QigXg",
+   "hits": 2,
+   "views": 165443,
+   "titles": [
+    "Stock market meltdown over A.I. fears (93,824)",
+    "OpenAI CEO Sam Altman says people need to 'accept some bad things' for the benefits of AI (71,619)"
+   ],
+   "channel": "NBC News",
+   "handle": "/@NBCNews"
+  },
+  {
+   "id": "UCqzK60-oUOEq36uU9B1MMUg",
+   "hits": 1,
+   "views": 236369,
+   "titles": [
+    "Jensen Huang Just Named the Next Wave of AI (236,369)"
+   ],
+   "channel": "Julia McCoy",
+   "handle": "/@JuliaMcCoy"
+  },
+  {
+   "id": "UC5l7RouTQ60oUjLjt1Nh-UQ",
+   "hits": 2,
+   "views": 148659,
+   "titles": [
+    "Anthropic's New Opus 6 Ignites a Terrifying AI Theory (53,452)",
+    "Sam Altman Goes Viral With His Most Explosive AI Statement (95,207)"
+   ],
+   "channel": "AI Revolution",
+   "handle": "/@airevolutionx"
+  },
+  {
+   "id": "UCwpr_shE_KEjoOVFqbwaGYQ",
+   "hits": 3,
+   "views": 92299,
+   "titles": [
+    "AI can end Humanity VERY SOON in HINDI {Future Friday} (32,320)",
+    "AI the GREAT security threat Explained in HINDI {Computer Wednesday} (41,445)",
+    "AI HYPE NEWS of early 2026 in HINDI {Computer Wednesday} (18,534)"
+   ],
+   "channel": "science to technology",
+   "handle": "/@AnupamVipul"
   },
   {
    "id": "UCllefjGak7WtAV3sVcRy9xQ",
    "hits": 1,
-   "views": 153583,
+   "views": 160985,
    "titles": [
-    "How to Learn AI? | اے آئ کیسے سیکھیں؟ (153,583)"
+    "How to Learn AI? | اے آئ کیسے سیکھیں؟ (160,985)"
    ],
    "channel": "Zeeshan Usmani",
    "handle": "/@zusmani78"
   },
   {
-   "id": "UC0cd_-e49hZpWLH3UIwoWRA",
-   "hits": 1,
-   "views": 147224,
+   "id": "UCOutOIcn_oho8pyVN3Ng-Pg",
+   "hits": 2,
+   "views": 93356,
    "titles": [
-    "مصنوعی ذہانت میں حالیہ خبریں: تنقیدی تجزیہ (کونر لیہی کی خاصیت) (147,224)"
+    "80s style AI photos : खुश होकर AI से 80s की फोटो बनाने वाले सावधान! I VIRAL PHOTO TREND (55,276)",
+    "AI Superintelligence Danger Warning:  AI रिसर्चर जैकब कॉक्सन के इस्तीफे से दुनिया भर में हड़कंप (38,080)"
    ],
-   "channel": "Professor Dave Explains",
-   "handle": "/@ProfessorDaveExplains"
-  },
-  {
-   "id": "UChYs-_zjKRYhdMddjx-NPLw",
-   "hits": 1,
-   "views": 141424,
-   "titles": [
-    "AI broke the internet in 72 hours.. (141,424)"
-   ],
-   "channel": "Singh in USA",
-   "handle": "/@SinghinUSA"
-  },
-  {
-   "id": "UCB82Zom1MYh8VV4q7wXkfGA",
-   "hits": 1,
-   "views": 135236,
-   "titles": [
-    "1200 AI Agents Hijacked! Shocking Cyber Attack Leaves AI Developers Stunned | Yasir Rashid Vlog (135,236)"
-   ],
-   "channel": "SUNO NEWS HD",
-   "handle": "/@SUNONewsHD"
-  },
-  {
-   "id": "UCqlYzSgsh5jdtWYfVIBoTDw",
-   "hits": 1,
-   "views": 122637,
-   "titles": [
-    "US banks scramble to control their AI agent activity (122,637)"
-   ],
-   "channel": "Fox News Clips",
-   "handle": "/@FoxNewsChannelClips"
+   "channel": "TV9 Bharatvarsh",
+   "handle": "/@TV9Bharatvarsh"
   }
  ],
  "toolscape": [
   {
    "id": "UCA-mWX9CvCTVFWRMb9bKc9w",
    "hits": 6,
-   "views": 7235966,
+   "views": 6938731,
    "titles": [
-    "You’re not behind (yet): How to learn AI in 18 minutes (3,172,715)",
-    "These Are the Best AI Tools in 2026 (438,679)",
-    "You’re Not Behind (Yet): How to Build Your First AI Agent (Full Guide) (881,903)"
+    "You’re not behind (yet): How to learn AI in 18 minutes (3,304,976)",
+    "These Are the Best AI Tools in 2026 (499,292)",
+    "These Are the Best AI Tools in 2026 (499,292)"
    ],
    "channel": "Dan Martell",
    "handle": "/@danmartell"
@@ -284,34 +284,21 @@
   {
    "id": "UCwAnu01qlnVg1Ai2AbtTMaA",
    "hits": 6,
-   "views": 4259643,
+   "views": 4524894,
    "titles": [
-    "The Only AI Tools You Need (12-Minute Guide) (956,270)",
-    "How I'd Learn AI From Scratch in 2026 (skip the useless 80%) (456,677)",
-    "Learn 95% of ChatGPT Work in Under 20 Minutes (467,078)"
+    "The Only AI Tools You Need (12-Minute Guide) (986,536)",
+    "How I'd Learn AI From Scratch in 2026 (skip the useless 80%) (489,746)",
+    "Learn 95% of ChatGPT Work in Under 20 Minutes (537,770)"
    ],
    "channel": "Jeff Su",
    "handle": "/@JeffSu"
   },
   {
-   "id": "UCfJT_eYDTmDE-ovKaxVE1ig",
-   "hits": 8,
-   "views": 2801146,
-   "titles": [
-    "Claude AI Tutorial for Beginners (Step-by-Step) (1,425,045)",
-    "ChatGPT Work Tutorial for Beginners (65,357)",
-    "ChatGPT Tutorial for Beginners: How to Actually Get Work Done with AI (108,760)"
-   ],
-   "channel": "Kevin Stratvert",
-   "handle": "/@KevinStratvert"
-  },
-  {
    "id": "UCRDhrUdd9yoVoFFQqadR4FQ",
-   "hits": 2,
-   "views": 5158255,
+   "hits": 1,
+   "views": 5495960,
    "titles": [
-    "Learn Full Excel Course from Basic to Advanced with AI | Excel AI Masterclass 2026 (5,061,307)",
-    "Excel AI Masterclass 2026 | Learn Excel Automation & Formulas with ChatGPT (96,948)"
+    "Learn Full Excel Course from Basic to Advanced with AI | Excel AI Masterclass 2026 (5,495,960)"
    ],
    "channel": "Satish Dhawale",
    "handle": "/@Satish_Dhawale"
@@ -319,57 +306,123 @@
   {
    "id": "UCaNk22cLid93kifuVbVapcQ",
    "hits": 7,
-   "views": 1065379,
+   "views": 1087090,
    "titles": [
-    "How to Actually Use AI Tools in 2026 (Full Guide) (36,196)",
-    "The Best FREE AI Tools Right Now (2026) (68,720)",
-    "The 7 Best FREE AI Tools in 2026 (Backed by Data) (56,171)"
+    "How to Actually Use AI Tools in 2026 (Full Guide) (37,965)",
+    "The 7 Best FREE AI Tools in 2026 (Backed by Data) (59,496)",
+    "The Best FREE AI Tools Right Now (2026) (74,896)"
    ],
    "channel": "Parker Prompts",
    "handle": "/@parkerprompts"
   },
   {
-   "id": "UCuwpzP90g1LuGk6JUNms_AQ",
+   "id": "UC4ZVkG3RQPzvZk7alIVjcCg",
    "hits": 2,
-   "views": 2177700,
+   "views": 2843682,
    "titles": [
-    "The Ultimate Beginner’s Guide to Claude AI (1,848,646)",
-    "Build Your First AI Agent in 20 Minutes (No Coding) (329,054)"
+    "The One AI Agent For The Top 1%, Build Your Own AI Executive Assistant (344,481)",
+    "4 AI Agents To Automate 99% Of Your Life (2,499,201)"
+   ],
+   "channel": "Sandeep Swadia",
+   "handle": "/@SandeepSwadia"
+  },
+  {
+   "id": "UCrHDY6lrJ8NXCKxFppomr3A",
+   "hits": 1,
+   "views": 2514144,
+   "titles": [
+    "Learn Full Excel course from Basic to Advanced with A.I. | Excel with A.I Masterclass (2,514,144)"
+   ],
+   "channel": "Learn More",
+   "handle": "/@Learn_More_Pro"
+  },
+  {
+   "id": "UCuwpzP90g1LuGk6JUNms_AQ",
+   "hits": 1,
+   "views": 2455849,
+   "titles": [
+    "The Ultimate Beginner’s Guide to Claude AI (2,455,849)"
    ],
    "channel": "Metics Media",
    "handle": "/@MeticsMedia"
   },
   {
-   "id": "UCQDUUk_bGw4CQrKlbhsS79w",
-   "hits": 3,
-   "views": 1113195,
+   "id": "UC3LCokV1C_1HGI4W5rftmvQ",
+   "hits": 2,
+   "views": 1318023,
    "titles": [
-    "FREE AI Tools To Create Videos & Images 😳🔥 (Full Beginner Tutorial 2026) (344,827)",
-    "How To Create 1–30 Minute AI Videos (Step-by-Step) | Faceless YouTube Automation Tutorial (423,541)",
-    "FREE AI Tools To Create Videos & Images 😳🔥 (Full Beginner Tutorial 2026) (344,827)"
+    "FULL Claude Tutorial For Beginners in 2026! (FULL COURSE) (1,194,916)",
+    "FULL ChatGPT Tutorial For Beginners in 2026! (FULL COURSE) (123,107)"
+   ],
+   "channel": "Productive Dude",
+   "handle": "/@ProductiveDude"
+  },
+  {
+   "id": "UCfJT_eYDTmDE-ovKaxVE1ig",
+   "hits": 4,
+   "views": 762626,
+   "titles": [
+    "ChatGPT Tutorial for Beginners: How to Actually Get Work Done with AI (120,802)",
+    "ChatGPT Work Tutorial for Beginners (68,423)",
+    "How to Use Claude for Excel (Step-by-Step Tutorial) (290,264)"
+   ],
+   "channel": "Kevin Stratvert",
+   "handle": "/@KevinStratvert"
+  },
+  {
+   "id": "UC2ojq-nuP8ceeHqiroeKhBA",
+   "hits": 3,
+   "views": 736825,
+   "titles": [
+    "I Tried 100+ AI Tools. These 7 Are the Best (113,250)",
+    "GPT-6 Astra Finally Solves AI Video Editing (full guide) (353,432)",
+    "Claude has completely changed how I edit videos (270,143)"
+   ],
+   "channel": "Nate Herk | AI Automation",
+   "handle": "/@nateherk"
+  },
+  {
+   "id": "UCQDUUk_bGw4CQrKlbhsS79w",
+   "hits": 2,
+   "views": 748404,
+   "titles": [
+    "FREE AI Tools To Create Videos & Images 😳🔥 (Full Beginner Tutorial 2026) (374,202)",
+    "FREE AI Tools To Create Videos & Images 😳🔥 (Full Beginner Tutorial 2026) (374,202)"
    ],
    "channel": "Wokobucci coach ",
    "handle": "/@Wokobuccicoach"
   },
   {
-   "id": "UCdR7eGozLjafYMTd2BFnJaQ",
-   "hits": 4,
-   "views": 796004,
+   "id": "UC0yHbz4OxdQFwmVX2BBQqLg",
+   "hits": 5,
+   "views": 350144,
    "titles": [
-    "How to Use CapCut AI Tools Better than 99% of Editors (57,019)",
-    "How to Start Making AI Videos In 2026 (Beginner to Advanced) (290,196)",
-    "How to Use CapCut AI Tools Better than 99% of Editors (57,019)"
+    "How To Use AI in 2026: AI Tools Explained for Beginners (127,325)",
+    "ULTIMATE Claude Tutorial: How to Use Claude AI for Beginners in 2026 (51,096)",
+    "How to Use ChatGPT Work – AI Workflow Automation Guide 2026 (25,761)"
    ],
-   "channel": "Youri van Hofwegen",
-   "handle": "/@Yourivanhofwegen"
+   "channel": "AI Master",
+   "handle": "/@iamAImaster"
+  },
+  {
+   "id": "UCxZC-5v-UccF6FXGI7VXgoQ",
+   "hits": 3,
+   "views": 506309,
+   "titles": [
+    "Ultimate AI Guide | Learn AI From Scratch (Beginner to Pro) (39,493)",
+    "Master AI in 20 Minutes | Complete AI Crash Course for Beginners (290,390)",
+    "Complete AI Crash Course for Beginners | Learn AI from Scratch (176,426)"
+   ],
+   "channel": "The iScale",
+   "handle": "/@theiScale"
   },
   {
    "id": "UCNTF-wvDFIqOWStO71PQfeg",
    "hits": 2,
-   "views": 629729,
+   "views": 642201,
    "titles": [
-    "Create a Full Excel Dashboard with One Prompt Using Claude AI (in Just 2 Minutes) (307,998)",
-    "Create a Excel Dashboard in 2 Minutes Using Claude AI (321,731)"
+    "Create a Excel Dashboard in 2 Minutes Using Claude AI (326,817)",
+    "Create a Full Excel Dashboard with One Prompt Using Claude AI (in Just 2 Minutes) (315,384)"
    ],
    "channel": "Vedakarna",
    "handle": "/@Vedakarna."
@@ -377,10 +430,10 @@
   {
    "id": "UCdDtsDwI7U9k78w6PAyGfSA",
    "hits": 2,
-   "views": 625192,
+   "views": 641507,
    "titles": [
-    "✅Excel Complete Tutorial with A.I in just 60 minutes ! (173,213)",
-    "I Automated My Excel Work with Claude AI🚀 (451,979)"
+    "✅Excel Complete Tutorial with A.I in just 60 minutes ! (175,224)",
+    "I Automated My Excel Work with Claude AI🚀 (466,283)"
    ],
    "channel": "Accounts Expert",
    "handle": "/@Accounts_Experts"
@@ -388,19 +441,30 @@
   {
    "id": "UCsBjURrPoezykLs9EqgamOA",
    "hits": 1,
-   "views": 924738,
+   "views": 933397,
    "titles": [
-    "7 new open source AI tools you need right now… (924,738)"
+    "7 new open source AI tools you need right now… (933,397)"
    ],
    "channel": "Fireship",
    "handle": "/@Fireship"
   },
   {
+   "id": "UClXAalunTPaX1YV185DWUeg",
+   "hits": 2,
+   "views": 601991,
+   "titles": [
+    "Free AI Tools So Good They're Making Paid Versions Obsolete (541,552)",
+    "I Cancelled My AI Subscriptions. These 10 Free Tools Hit Harder (60,439)"
+   ],
+   "channel": "Vaibhav Sisinty",
+   "handle": "/@vaibhavsisinty"
+  },
+  {
    "id": "UCZaZQHs5x6kb3yXkoreKL_A",
    "hits": 1,
-   "views": 809262,
+   "views": 876858,
    "titles": [
-    "Learn AI Basics in 10 Mins | Complete Beginner Guide | Basics to Advanced (809,262)"
+    "Learn AI Basics in 10 Mins | Complete Beginner Guide | Basics to Advanced (876,858)"
    ],
    "channel": "CynoHub",
    "handle": "/@cynohub"
@@ -408,332 +472,233 @@
   {
    "id": "UCdNj_PP__5kKtjZabuEjbqA",
    "hits": 3,
-   "views": 367204,
+   "views": 394258,
    "titles": [
-    "Master AI Video Editing in 25 Minutes (Full Course) (149,329)",
-    "How To Create AI Videos of Yourself with AI VFX - Full Course (87,275)",
-    "I Tried AI Video Editing for 8 Days - Here’s what DOES work (130,600)"
+    "Master AI Video Editing in 25 Minutes (Full Course) (168,498)",
+    "How To Create AI Videos of Yourself with AI VFX - Full Course (91,677)",
+    "I Tried AI Video Editing for 8 Days - Here’s what DOES work (134,083)"
    ],
    "channel": "Dan Kieft",
    "handle": "/@Dankieft"
   },
   {
-   "id": "UC_RovKmk0OCbuZjA8f08opw",
+   "id": "UCdR7eGozLjafYMTd2BFnJaQ",
    "hits": 2,
-   "views": 445120,
+   "views": 460234,
    "titles": [
-    "ChatGPT Work Completely Changes How You Use ChatGPT (full guide) (195,654)",
-    "How to Create Insane Motion Graphics With Claude (for free) (249,466)"
+    "Best FREE AI Video Generators (Backed by Data) (134,701)",
+    "How to Start Making AI Videos In 2026 (Beginner to Advanced) (325,533)"
    ],
-   "channel": "Futurepedia",
-   "handle": "/@futurepedia_io"
-  },
-  {
-   "id": "UC0yHbz4OxdQFwmVX2BBQqLg",
-   "hits": 4,
-   "views": 261133,
-   "titles": [
-    "How To Use AI in 2026: AI Tools Explained for Beginners (110,062)",
-    "ULTIMATE ChatGPT Guide: How to Use ChatGPT-6 For Beginners in 2026 (10,836)",
-    "10 AI Productivity Tools for Everyday Life (Work Less) (12,160)"
-   ],
-   "channel": "AI Master",
-   "handle": "/@iamAImaster"
-  },
-  {
-   "id": "UC2ojq-nuP8ceeHqiroeKhBA",
-   "hits": 2,
-   "views": 427145,
-   "titles": [
-    "I Tried 100+ AI Tools. These 7 Are the Best (79,889)",
-    "GPT-6 Astra Finally Solves AI Video Editing (full guide) (347,256)"
-   ],
-   "channel": "Nate Herk | AI Automation",
-   "handle": "/@nateherk"
-  },
-  {
-   "id": "UCcIXc5mJsHVYTZR1maL5l9w",
-   "hits": 1,
-   "views": 626372,
-   "titles": [
-    "Full AI Prompting Course with Andrew Ng (626,372)"
-   ],
-   "channel": "DeepLearningAI",
-   "handle": "/@Deeplearningai"
+   "channel": "Youri van Hofwegen",
+   "handle": "/@Yourivanhofwegen"
   },
   {
    "id": "UCMbdQplFb-X4SyrCG4PLI7A",
    "hits": 2,
-   "views": 415785,
+   "views": 427375,
    "titles": [
-    "HOW TO LEARN & Master AI in 2026 ? (Complete Powerful 7-step ROADMAP) (410,996)",
-    "TOP 10 AI Productivity Tools for Day-to-Day Life in 2026 ! #ai (4,789)"
+    "HOW TO LEARN & Master AI in 2026 ? (Complete Powerful 7-step ROADMAP) (422,527)",
+    "TOP 10 AI Productivity Tools for Day-to-Day Life in 2026 ! #ai (4,848)"
    ],
    "channel": "Tejas AI",
    "handle": "/@Tejas_AIz"
   },
   {
-   "id": "UClXAalunTPaX1YV185DWUeg",
-   "hits": 1,
-   "views": 526694,
+   "id": "UCmeU2DYiVy80wMBGZzEWnbw",
+   "hits": 2,
+   "views": 411542,
    "titles": [
-    "Free AI Tools So Good They're Making Paid Versions Obsolete (526,694)"
+    "Every ChatGPT Work Concept Explained for Normal People (183,202)",
+    "How To Master The New ChatGPT Work (Free Course) (228,340)"
    ],
-   "channel": "Vaibhav Sisinty",
-   "handle": "/@vaibhavsisinty"
+   "channel": "Paul J Lipsky",
+   "handle": "/@PaulJLipsky"
   },
   {
    "id": "UCO66zvpQorlNfs_7hFCfmaw",
    "hits": 3,
-   "views": 251800,
+   "views": 261093,
    "titles": [
-    "How to Use ChatGPT Work - Complete Beginner Guide (66,157)",
-    "How to Use AI Agent Mode in Microsoft Excel (Step-by-Step) (82,733)",
-    "How to use Copilot in Excel - The Complete Beginners Course (102,910)"
+    "How to Use ChatGPT Work - Complete Beginner Guide (69,280)",
+    "How to Use AI Agent Mode in Microsoft Excel (Step-by-Step) (85,373)",
+    "How to use Copilot in Excel - The Complete Beginners Course (106,440)"
    ],
    "channel": "Teacher's Tech",
    "handle": "/@TeachersTech"
   },
   {
+   "id": "UCoOae5nYA7VqaXzerajD0lg",
+   "hits": 1,
+   "views": 471900,
+   "titles": [
+    "I Tried Fully Automating My Video Editing With AI (RAW RESULTS) (471,900)"
+   ],
+   "channel": "Ali Abdaal",
+   "handle": "/@aliabdaal"
+  },
+  {
    "id": "UCkVfrGwV-iG9bSsgCbrNPxQ",
    "hits": 1,
-   "views": 451314,
+   "views": 470562,
    "titles": [
-    "This Open Source Tool Removes AI's Safety Filters (451,314)"
+    "This Open Source Tool Removes AI's Safety Filters (470,562)"
    ],
    "channel": "Better Stack",
    "handle": "/@betterstack"
-  },
-  {
-   "id": "UCde0vB0fTwC8AT3sJofFV0w",
-   "hits": 3,
-   "views": 175613,
-   "titles": [
-    "AI Tutorial for Beginners 2026: How To Use AI & Build ANYTHING (32,380)",
-    "Best FREE AI Agent Tools That Actually Work in 2026 (I Tried All) (85,604)",
-    "Best FREE AI App Builders That Actually Work in 2026 (I Tried All) (57,629)"
-   ],
-   "channel": "Mikey No Code",
-   "handle": "/@mikeynocode"
-  },
-  {
-   "id": "UC8InP-esc63o3eBUPiMXNGQ",
-   "hits": 1,
-   "views": 346026,
-   "titles": [
-    "Create Long AI Videos for FREE | Step-by-Step AI Video Tutorial 🚀 (346,026)"
-   ],
-   "channel": "Hello Tejaa",
-   "handle": "/@HelloTejaa"
-  },
-  {
-   "id": "UCTQuKo8v0PaPCvk5aRxc_Yg",
-   "hits": 1,
-   "views": 330244,
-   "titles": [
-    "12 Life-Changing Ways To Use ChatGPT in 2026 (330,244)"
-   ],
-   "channel": "Charlie Chang",
-   "handle": "/@CharlieChang"
-  },
-  {
-   "id": "UCXZCJLdBC09xxGZ6gcdrc6A",
-   "hits": 1,
-   "views": 287218,
-   "titles": [
-    "Get started with ChatGPT Work (287,218)"
-   ],
-   "channel": "OpenAI",
-   "handle": "/@OpenAI"
   }
  ],
  "nawa": [
   {
    "id": "UCzgV-jMrs4U7if8pEnvrpSg",
-   "hits": 7,
-   "views": 6856478,
+   "hits": 10,
+   "views": 8697231,
    "titles": [
-    "Surah Al-Kahf (سورة الكهف) Beautiful voice HD With Urdu & Hindi Translation (1,468,710)",
-    "Surah An-Nur Full with Urdu & Hindi Translation | Beautiful Emotional Recitation | Learn Quran Urdu (364,053)",
-    "Surah Taha Full  | With Urdu & Hindi Translation | Beautiful Voice | Muhammad Hijazi | Hindi Tarjuma (853,855)"
+    "Surah Al-Kahf (سورة الكهف) Beautiful voice HD With Urdu & Hindi Translation (1,490,741)",
+    "Surah Maryam | سورة مريم | With Urdu Tarjuma | Story of Hazrat Maryam (عليه السلام) Beautiful voice  (976,003)",
+    "Surah Al-Kahf (سورة الكهف) Beautiful voice HD With Urdu & Hindi Translation (1,490,741)"
    ],
    "channel": "Learn Quran Urdu",
    "handle": "/@LearnQuran-Urdu"
   },
   {
-   "id": "UCXL_qkvCsQ8kXPLvEU1mo_Q",
-   "hits": 12,
-   "views": 1069626,
+   "id": "UCPZ3cBoCORqp4pNZOx9FQIA",
+   "hits": 9,
+   "views": 1180077,
    "titles": [
-    "Make Istighfar Allah Will Pull You Out of Every Darkness - Surah Al-Baqarah Tafsir | Nouman Ali Khan (188,570)",
-    "[URDU] Quran Can Change Your Life Forever - Learn the Quran Before It's Too Late | Nouman Ali Khan (117,419)",
-    "[URDU] Purify Your Heart, Understand the Qur’an, and Embrace Taqwa | Nouman Ali Khan (156,243)"
+    "Details Of Ayatul Kursi | Interpretation of the Quran | Muhammad Tasleem Raza (438,299)",
+    "Detailed Of Surah An-Naba | Tafseer e Quran by Muhammad Tasleem Raza (22,769)",
+    "Detailed Of Surah AR-Rehman | Tafseer e Quran by Muhammad Tasleem Raza (21,441)"
+   ],
+   "channel": "Muhammad Tasleem Raza",
+   "handle": "/@muhammadtasleemraza5497"
+  },
+  {
+   "id": "UCXL_qkvCsQ8kXPLvEU1mo_Q",
+   "hits": 8,
+   "views": 1232124,
+   "titles": [
+    "Make Istighfar Allah Will Pull You Out of Every Darkness - Surah Al-Baqarah Tafsir | Nouman Ali Khan (219,187)",
+    "[URDU] Quran Can Change Your Life Forever - Learn the Quran Before It's Too Late | Nouman Ali Khan (130,495)",
+    "[URDU] Stop Aiming in the Dark — Let the Quran Guide You | Nouman Ali Khan (38,078)"
    ],
    "channel": "Nouman Ali Urdu Lectures",
    "handle": "/@NoumanAliUrduLectures"
   },
   {
-   "id": "UC2-G_gdWC3GXrnSPgYYJr6g",
-   "hits": 12,
-   "views": 666158,
-   "titles": [
-    "Quran Para 19 With Urdu Translation | Quran Urdu Translation (9,687)",
-    "Quran Para 19 With Urdu Translation | Quran Urdu Translation (9,687)",
-    "Quran Para 17 With Urdu Translation | Quran Urdu Translation (35,742)"
-   ],
-   "channel": "Quran Islamic Series 100",
-   "handle": "/@QuranIslamicSeries100"
-  },
-  {
    "id": "UCDo4UZSq6Fn6HP40U1mjVKA",
    "hits": 1,
-   "views": 3174193,
+   "views": 1628473,
    "titles": [
-    "Why Surah Al-Ikhlas was revealed ? I The World’s First AI-Visualized Quran Series! (3,174,193)"
+    "Story Behind Surah Nas I The World’s First AI-Visualized Quran Series! (1,628,473)"
    ],
    "channel": "Really Maktoob",
    "handle": "/@ReallyMaktoob"
   },
   {
    "id": "UCSs5mehC-g9qDmIZWFe0a6Q",
-   "hits": 3,
-   "views": 535869,
+   "hits": 2,
+   "views": 632547,
    "titles": [
-    "Surah Muzzammil with Urdu Translation | Quran Tilawat Beautiful Voice | Hindi Tarjuma | EP02 (394,938)",
-    "Surah Al Kahf With Urdu Translation By Qari Mansoor Ghaznawi I Urdu And Hindi Tarjuma | 40 (56,657)",
-    "Surah Al Kahf With Urdu Translation By Qari Mansoor Ghaznawi I Urdu And Hindi Tarjuma | 37 (84,274)"
+    "Surah Muzzammil with Urdu Translation | Quran Tilawat Beautiful Voice | Hindi Tarjuma | EP02 (466,732)",
+    "Surah Al Kahf With Urdu Translation By Qari Mansoor Ghaznawi I Urdu And Hindi Tarjuma | 42 (165,815)"
    ],
    "channel": "Muhammad Ali",
    "handle": "/@Muhammad_Ali"
   },
   {
-   "id": "UCLIwTaNBtheYEVnbYqoGkxQ",
-   "hits": 3,
-   "views": 279786,
+   "id": "UC2-G_gdWC3GXrnSPgYYJr6g",
+   "hits": 6,
+   "views": 209578,
    "titles": [
-    "Why Surah Yaseen Was Revealed | The Heart of the Quran Tafseer in Islam | The Story of Surah Yaseen (134,325)",
-    "Surah Al-QARIAH Tafseer | Why Surah QARIAH Was Revealed | Surah Qariah And Muhammad ﷺ  (11,135)",
-    "Why Surah Yaseen Was Revealed | The Heart of the Quran Tafseer in Islam | The Story of Surah Yaseen (134,326)"
+    "Quran Para 22 With Urdu Translation | Quran Urdu Translation (17,040)",
+    "Quran Para 21 With Urdu Translation | Quran Urdu Translation (38,795)",
+    "Quran Para 22 With Urdu Translation | Quran Urdu Translation (17,040)"
    ],
-   "channel": "Daniyal Voice",
-   "handle": "/@Danialstories-rc3zp"
+   "channel": "Quran Islamic Series 100",
+   "handle": "/@QuranIslamicSeries100"
   },
   {
    "id": "UCTwkuNzcL44wKOF7MxBZ4iw",
    "hits": 2,
-   "views": 329622,
+   "views": 205911,
    "titles": [
-    "Daurah Quran Urdu | دورہ قرآن اردو | Juzz 01 | Class 01 | Ustadah Aisha Khalid (164,812)",
-    "Daurah Quran Urdu | دورہ قرآن اردو | Juzz 01 | Class 01 | Ustadah Aisha Khalid (164,810)"
+    "Daurah Quran Urdu | دورہ قرآن اردو | Juzz 01 | Class 01 | Ustadah Aisha Khalid (165,882)",
+    "Live Quran tafseer and Hadith class. Surat التکاثر۰ in sha Allah (40,029)"
    ],
    "channel": "Islam with Aisha",
    "handle": "/@IslamwithAisha"
   },
   {
-   "id": "UCKN1yHkLZBWc0dLP1RND9UA",
-   "hits": 1,
-   "views": 433840,
+   "id": "UCm-r5VNOk2_oE93Z9lAtppg",
+   "hits": 7,
+   "views": 48453,
    "titles": [
-    "Surah An-Nisa Full Explained (433,840)"
+    "Dawrah-e-Quran 2026 | Juz 30 Quran Tafseer in Urdu | Para 30 Explanation | Dr. Farhat Hashmi (5,100)",
+    "Dawrah e Quran 2026 | Juz 17 Tafseer in Urdu | Para 17 Complete Explanation by Dr. Farhat Hashmi (5,055)",
+    "Juzz 04 Complete Tafseer | Daurah e Quran 2026 | Aasan Urdu Tarjuma by Dr  Farhat Hashmi (11,251)"
    ],
-   "channel": "Religious TV",
-   "handle": "/@ReligiousTvs"
-  },
-  {
-   "id": "UCUzFHVWjiAnRYiTVyQTlogw",
-   "hits": 1,
-   "views": 399607,
-   "titles": [
-    "🧐 Khayaalat ka Rukh Badlo | Iman Afroz Waqia | Mufti Taqi Usmani Bayan | Islamic Stream (399,607)"
-   ],
-   "channel": "Islamic Stream",
-   "handle": "/@Islamicstream"
-  },
-  {
-   "id": "UCPZ3cBoCORqp4pNZOx9FQIA",
-   "hits": 3,
-   "views": 165939,
-   "titles": [
-    "Detailed Explanation of Surah Ad-Duha | Quranic Exegesis | Muhammad Tasleem Raza (76,121)",
-    "Detailed Explanation of Surah Ad-Duha | Quranic Exegesis | Muhammad Tasleem Raza (76,121)",
-    "Detailed Explanation of Surat Al-Infitar | Tafseer of the Quran by Muhammad Tasleem Raza (13,697)"
-   ],
-   "channel": "Muhammad Tasleem Raza",
-   "handle": "/@muhammadtasleemraza5497"
-  },
-  {
-   "id": "UCEbS-VfbIH7l59QQVsMDZJA",
-   "hits": 3,
-   "views": 124934,
-   "titles": [
-    "[URDU] Read The Quran Understanding | A Serious Warning from Allah | Nouman Ali Khan (49,164)",
-    "[URDU] The Opening  SecretsOf The Quran That Will Surprise You | Nouman Ali Khan (37,885)",
-    "[URDU] The Opening  SecretsOf The Quran That Will Surprise You | Nouman Ali Khan (37,885)"
-   ],
-   "channel": "Nouman Ali Urdu",
-   "handle": "/@NoumanAliUrdu-f7o"
+   "channel": "FARHAT SPEAKS",
+   "handle": "/@FARHATSPEAKS"
   },
   {
    "id": "UCRtiU-lpcBSi-ipFKyfIkug",
    "hits": 2,
-   "views": 97190,
+   "views": 117751,
    "titles": [
-    "[Urdu] Ep 28: Preserved Beauty in Paradise | Allamal Quran: Study of Surah Ar-Rahman (24,797)",
-    "[Urdu] Ep 5: Do Trees Really Prostrate? | Allamal Quran: A Study of Surah Ar-Rahman (72,393)"
+    "[Urdu] Ep 28: Preserved Beauty in Paradise | Allamal Quran: Study of Surah Ar-Rahman (24,990)",
+    "[Urdu] Ep 4: The One Gift Only Humans Were Given | Allamal Quran: A Study of Surah Ar-Rahman (92,761)"
    ],
    "channel": "Nouman Ali Khan - Official - Bayyinah",
    "handle": "/@bayyinah"
   },
   {
-   "id": "UCRBK3xn9eJ-JVFzu716tWbA",
-   "hits": 3,
-   "views": 69587,
-   "titles": [
-    "Surah Fatihah Urdu translation / Urdu Tafseer / learn Quran easily at home (18,979)",
-    "Surah Fatihah Urdu translation / Urdu Tafseer / learn Quran easily at home (18,979)",
-    "Surah Baqarah Urdu translation / Part 1 / verse 01-05 / Urdu Tafser / learn Quran easily at home (31,629)"
-   ],
-   "channel": "Learn Quran Easily At Home",
-   "handle": "/@learnQuranEasilyAtHome"
-  },
-  {
    "id": "UCx6vIPIXiPufILRRTnJWP6w",
    "hits": 1,
-   "views": 122013,
+   "views": 131039,
    "titles": [
-    "🩵Surah Al Waqiah💫 | Jannat aur Dozakh 🥺| Akhirat ki Sachai🔥 | By Engineer Muhammad Ali Mirza❣️⏩ (122,013)"
+    "🩵Surah Al Waqiah💫 | Jannat aur Dozakh 🥺| Akhirat ki Sachai🔥 | By Engineer Muhammad Ali Mirza❣️⏩ (131,039)"
    ],
    "channel": "Muslims Vocal Tale ",
    "handle": "/@MuslimsVocalTale"
   },
   {
-   "id": "UCltz7yk3CmFV31FqTcH1vGQ",
+   "id": "UCkGmCQfx77pYG_RGSyud9lw",
    "hits": 1,
-   "views": 80556,
+   "views": 103388,
    "titles": [
-    "Tafseer e Qur'an | Para 1 | Shaikh Jalaluddin Qasmi Hafizahullah | 2026 (80,556)"
+    "Surah At-Tariq & The Pulsar Star Secret | What is the Knocking Star? | Sahil Adeem Explains (103,388)"
    ],
-   "channel": "Nida e Haq Official",
-   "handle": "/@NidaeHaqOfficial"
+   "channel": "Youth Vibe",
+   "handle": "/@YouthVibe2"
   },
   {
-   "id": "UCVv4kOwH0QUPtdjs2YB_HtA",
+   "id": "UCF9irAFSQveMM2_9FIWivtA",
    "hits": 1,
-   "views": 54463,
+   "views": 93589,
    "titles": [
-    "Stories of the Qur'an Complete Book Explained in Urdu | Ibn Katheer | قصص القرآن (54,463)"
+    "Extended Lecture | Surah Jinn tafseer @EngineerMuhammadAliMirzaClips  (93,589)"
    ],
-   "channel": "Between the Lines Review ",
-   "handle": "/@BetweenTheLinesReview"
+   "channel": "FATAWA ADVENTURES ",
+   "handle": "/@FATAWAADVENTURES"
+  },
+  {
+   "id": "UCEbS-VfbIH7l59QQVsMDZJA",
+   "hits": 1,
+   "views": 38938,
+   "titles": [
+    "[URDU] The Opening  SecretsOf The Quran That Will Surprise You | Nouman Ali Khan (38,938)"
+   ],
+   "channel": "Nouman Ali Urdu",
+   "handle": "/@NoumanAliUrdu-f7o"
   },
   {
    "id": "UClWAEdwWAyXmegxMWguhj0w",
-   "hits": 10,
-   "views": 5980,
+   "hits": 7,
+   "views": 7636,
    "titles": [
-    "Mufti Taqi Usmani | Asaan Tarjuma E Quran | Tafseer Surah Alaq | Quran Ki Tafseer | AL-ALAQ (578)",
-    "Mufti Taqi Usmani | Asaan Tarjuma E Quran | Tafseer Surah Zilzaal | Quran Ki Tafseer | AL-ZILZAL (559)",
-    "Mufti Taqi Usmani | Asaan Tarjuma E Quran | Tafseer Surah Alam Nashrah | Quran Ki Tafseer (286)"
+    "Mufti Taqi Usmani | Asaan Tarjuma E Quran | Tafseer Surah Qadr | AL-QADR | LAYLA TUL QADR Bayan (297)",
+    "Mufti Taqi Usmani | Asaan Tarjuma E Quran | Tafseer Surah Alam Nashrah | Quran Ki Tafseer (325)",
+    "Mufti Taqi Usmani | Asaan Tarjuma E Quran | Tafseer Surah Shams | Quran Ki Tafseer | ASH-SHAMS (578)"
    ],
    "channel": "Quran - Dars O Bayan Ki Roshni",
    "handle": "/@QuranDarsOBayanKiRoshni"
@@ -741,87 +706,118 @@
   {
    "id": "UCP4du10OI499eW5TF92BDVg",
    "hits": 1,
-   "views": 13700,
+   "views": 15109,
    "titles": [
-    "(Urdu) Hazrat Musa (AS) Ki Zindagi Ke Raaz | Quran Tafseer in Urdu | Ustad Nouman Ali Khan | Part 1 (13,700)"
+    "(Urdu) Hazrat Musa (AS) Ki Zindagi Ke Raaz | Quran Tafseer in Urdu | Ustad Nouman Ali Khan | Part 1 (15,109)"
    ],
    "channel": "Ustad Nouman Ali ",
    "handle": "/@ustadnoumanalikhan-7-86"
   },
   {
-   "id": "UCm-r5VNOk2_oE93Z9lAtppg",
+   "id": "UCLIwTaNBtheYEVnbYqoGkxQ",
    "hits": 1,
-   "views": 10917,
+   "views": 12145,
    "titles": [
-    "Daurah-e-Quran Para Number 2 (Sayaqool) Tafseer in Urdu | Dr. Farhat Hashmi 2026 (10,917)"
+    "Surah Al-QARIAH Tafseer | Why Surah QARIAH Was Revealed | Surah Qariah And Muhammad ﷺ  (12,145)"
    ],
-   "channel": "FARHAT SPEAKS",
-   "handle": "/@FARHATSPEAKS"
+   "channel": "Daniyal Voice",
+   "handle": "/@Danialstories-rc3zp"
   },
   {
    "id": "UC1QVPLdd972vdOlLz__kycQ",
    "hits": 1,
-   "views": 8473,
+   "views": 8495,
    "titles": [
-    "Ahle Hadeeson Ne Shabbir Usmani Ki Tafseer Ko Saudi Mein Kyun Rukwayi by Shaikh Kifayatullah Sanabil (8,473)"
+    "Ahle Hadeeson Ne Shabbir Usmani Ki Tafseer Ko Saudi Mein Kyun Rukwayi by Shaikh Kifayatullah Sanabil (8,495)"
    ],
    "channel": "iPlus TV ikhtilaf Ka Hal",
    "handle": "/@iPlusTVikhtilafKaHal"
   },
   {
-   "id": "UCugso2JBgB376-Jtt4AXd_Q",
-   "hits": 1,
-   "views": 5261,
-   "titles": [
-    "Tafseer Rooh ul Maani ka Taaruf | رُوح المعانی فی تفسیر القرآن | Maulana Mufti Muhammad ZarWali Khan (5,261)"
-   ],
-   "channel": "Jamia Ahsan",
-   "handle": "/@JamiaAhsan"
-  },
-  {
-   "id": "UC8y7jqjDMfqTSIkCyMbDWfw",
-   "hits": 3,
-   "views": 2130,
-   "titles": [
-    "Tafseer Ibn e Kaseer Arabic Urdu | Episode No 1 | تفسیر ابن کثیر عربی اردو مکمل تشریح قرآن (1,144)",
-    "Tafseer Ibn e Kaseer Arabic Urdu | Episode No 4 | تفسیر ابن کثیر عربی اردو مکمل تشریح قرآن (696)",
-    "Tafseer Ibn e Kaseer Arabic Urdu | Episode No 2 | تفسیر ابن کثیر عربی اردو مکمل تشریح قرآن (290)"
-   ],
-   "channel": "Understand The Quran",
-   "handle": "/@Understandthequran-Skp"
-  },
-  {
-   "id": "UCPfRQ-CUSzSdlZUeiYo0k5Q",
-   "hits": 2,
-   "views": 2408,
-   "titles": [
-    "Surah Anfal Full Tafseer | Deep Quran Explanation by Dr Israr Ahmad (1,204)",
-    "Surah Anfal Full Tafseer | Deep Quran Explanation by Dr Israr Ahmad (1,204)"
-   ],
-   "channel": "Bayan e Israr",
-   "handle": "/@Bayaneisrar"
-  },
-  {
    "id": "UCE2oY4S4wOu6WofU2YbfWsw",
-   "hits": 2,
-   "views": 2095,
+   "hits": 3,
+   "views": 2911,
    "titles": [
-    "Dars e Quran - Ba-Mutaliq Hazrat Shaikh Abdul Qadir Jilani RA - 16 Sep 2026 - ARY Qtv (1,106)",
-    "Dars e Quran - Ba-Mutaliq Hazrat Shaikh Abdul Qadir Jilani RA - 22 Sep 2026 - ARY Qtv (989)"
+    "Dars e Quran - Ba-Mutaliq Hazrat Shaikh Abdul Qadir Jilani RA - 22 Sep 2026 - ARY Qtv (1,001)",
+    "Dars e Quran - Ba-Mutaliq Hazrat Shaikh Abdul Qadir Jilani RA - 16 Sep 2026 - ARY Qtv (1,114)",
+    "Dars e Quran - 26 Sep 2026 - ARY Qtv (796)"
    ],
    "channel": "ARY Qtv",
    "handle": "/@ARYQtvofficial"
   },
   {
-   "id": "UCy5vbh1GEJtw_DWXBh-_bfg",
-   "hits": 2,
-   "views": 1814,
+   "id": "UCugso2JBgB376-Jtt4AXd_Q",
+   "hits": 1,
+   "views": 5382,
    "titles": [
-    "Dawrah-e-Quran 2026: Para 25 | Ramadan Tafseer Series with Urdu Translation | Dr. Farhat Hashmi (907)",
-    "Dawrah-e-Quran 2026: Para 25 | Ramadan Tafseer Series with Urdu Translation | Dr. Farhat Hashmi (907)"
+    "Tafseer Rooh ul Maani ka Taaruf | رُوح المعانی فی تفسیر القرآن | Maulana Mufti Muhammad ZarWali Khan (5,382)"
    ],
-   "channel": "Dr Farhat Hashmi Daily Reminders ",
-   "handle": "/@DrFarhatHashmiDailyReminders"
+   "channel": "Jamia Ahsan",
+   "handle": "/@JamiaAhsan"
+  },
+  {
+   "id": "UCPfRQ-CUSzSdlZUeiYo0k5Q",
+   "hits": 2,
+   "views": 2888,
+   "titles": [
+    "Surah Anfal Full Tafseer | Deep Quran Explanation by Dr Israr Ahmad (1,444)",
+    "Surah Anfal Full Tafseer | Deep Quran Explanation by Dr Israr Ahmad (1,444)"
+   ],
+   "channel": "Bayan e Israr",
+   "handle": "/@Bayaneisrar"
+  },
+  {
+   "id": "UCGbRWUwKjlDafpEoa97GsWA",
+   "hits": 2,
+   "views": 2396,
+   "titles": [
+    "21) Surah Al-Anbiya Complete Tafseer By Dr. Israr Ahmed | Understanding Quran| Great Islamic Scholar (2,050)",
+    "32) Surah As-Sajdah Translation and Tafseer Urdu - Hindi | Dr Israr Ahmed | Quran Explained (346)"
+   ],
+   "channel": "Great Islamic Scholars 2.0",
+   "handle": "/@GreatIslamicScholars2.0"
+  },
+  {
+   "id": "UC8y7jqjDMfqTSIkCyMbDWfw",
+   "hits": 2,
+   "views": 1461,
+   "titles": [
+    "Tafseer Ibn e Kaseer Arabic Urdu | Episode No 1 | تفسیر ابن کثیر عربی اردو مکمل تشریح قرآن (1,167)",
+    "Tafseer Ibn e Kaseer Arabic Urdu | Episode No 2 | تفسیر ابن کثیر عربی اردو مکمل تشریح قرآن (294)"
+   ],
+   "channel": "Understand The Quran",
+   "handle": "/@Understandthequran-Skp"
+  },
+  {
+   "id": "UCDWhbRz6wtn1L6wtDblFdFQ",
+   "hits": 1,
+   "views": 1483,
+   "titles": [
+    "Surah DUKHAN Tafseer in Urdu | سورۃ الدخان | Dr Israr Ahmed | Allah is My Best Friend Forever  (1,483)"
+   ],
+   "channel": "Allah is My Best Friend Forever",
+   "handle": "/@Allahismybestfriendforever"
+  },
+  {
+   "id": "UCjYpV5iLn7mLwaYJrcrdqsw",
+   "hits": 2,
+   "views": 653,
+   "titles": [
+    "🌙 سورۃ الملک — اردو ترجمہ اور تفسیر | Surah Mulk Urdu Translation & Tafseer (533)",
+    "🌙 سورۃ الملک — اردو ترجمہ اور تفسیر | (120)"
+   ],
+   "channel": "Quranlearn",
+   "handle": "/@Quranlearn-v4q"
+  },
+  {
+   "id": "UCwubFRqWhNq4hmCKlZ9WKog",
+   "hits": 1,
+   "views": 814,
+   "titles": [
+    "Dawrah-e-Quran 2026 | Juz 9 Complete Tafseer in Urdu | Para 9 Detailed Explanation Dr. Farhat Hashmi (814)"
+   ],
+   "channel": "Dr Farhat Hashmi02",
+   "handle": "/@DrFarhatHashmi_2-e8c"
   }
  ]
 }
