@@ -1,0 +1,18 @@
+# 🔍 عارضی: NAWA_TOKEN کی جانچ (کوئی قیمت نہیں چھپتی، صرف حیثیت)
+name: Token check
+on: workflow_dispatch
+permissions: {}
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - env: { T: "${{ secrets.NAWA_TOKEN }}" }
+        run: |
+          echo "len=${#T} prefix=${T:0:11} spaces=$(printf '%s' "$T" | tr -cd ' \n\r\t' | wc -c)"
+          for u in user repos/nawaefarooqi-bit/nawaefarooqi-agents repos/nawaefarooqi-bit/nawaefarooqi-agents/contents/README.md repos/nawaefarooqi-bit/nawaefarooqi-agents/actions/workflows; do
+            code=$(curl -s -o /tmp/o -w '%{http_code}' -H "Authorization: Bearer $T" -H "Accept: application/vnd.github+json" "https://api.github.com/$u")
+            echo "$u → $code $(jq -r '.login // .full_name // .message // (.total_count|tostring) // empty' /tmp/o 2>/dev/null | head -c 80)"
+          done
+          curl -s -D - -o /dev/null -H "Authorization: Bearer $T" https://api.github.com/repos/nawaefarooqi-bit/nawaefarooqi-agents/contents/README.md | grep -i "x-accepted-github-permissions\|x-github-sso" || true
+          git ls-remote "https://x-access-token:${T}@github.com/nawaefarooqi-bit/nawaefarooqi-agents" HEAD 2>&1 | sed 's/[0-9a-f]\{40\}/<sha>/' | head -3
