@@ -60,9 +60,7 @@ jobs:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           OPENVERSE_CLIENT_ID: ${{ secrets.OPENVERSE_CLIENT_ID }}
           OPENVERSE_CLIENT_SECRET: ${{ secrets.OPENVERSE_CLIENT_SECRET }}
-          NEWS_STYLE: explainer        # مالک 9 نومبر: بغیر اینکر (faceless) — پوری اسکرین مناظر، خاکے، کارڈ
-          NEWS_ANCHOR: "off"
-          NEWS_ORDER: cold             # پہلے شہ سرخیاں → چھوٹا انٹرو → خوش آمدید → تفصیل
+          # بغیر اینکر انداز (NEWS_STYLE: explainer, NEWS_ANCHOR: "off", NEWS_ORDER: cold) — مالک کے اطمینان تک صرف نمونوں میں
         run: |
           set +e
           python -m news.bulletin ${{ github.event.inputs.force == 'yes' && 'force' || '' }}; rc=$?
