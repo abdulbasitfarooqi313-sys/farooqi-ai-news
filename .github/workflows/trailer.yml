@@ -14,7 +14,7 @@ jobs:
         run: |
           if [ -n "$ENGINE_TOKEN" ]; then
             if git clone -q --depth 1 "https://x-access-token:${ENGINE_TOKEN}@github.com/abdulbasitfarooqi313-sys/farooqi-ai-news-engine" /tmp/engine; then
-              rsync -a --exclude .git --exclude .github --exclude state --exclude media --exclude cache --exclude desk /tmp/engine/ ./
+              rsync -a --exclude .git --exclude .gitignore --exclude .github --exclude state --exclude media --exclude cache --exclude desk /tmp/engine/ ./
               rm -rf /tmp/engine; echo "engine: ok"
             else
               code=$(curl -s -o /dev/null -w '%{http_code}' -H "Authorization: Bearer $ENGINE_TOKEN" https://api.github.com/repos/abdulbasitfarooqi313-sys/farooqi-ai-news-engine)
