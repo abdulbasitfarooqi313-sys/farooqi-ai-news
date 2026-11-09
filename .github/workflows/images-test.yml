@@ -20,3 +20,14 @@ jobs:
           OPENVERSE_CLIENT_ID: ${{ secrets.OPENVERSE_CLIENT_ID }}
           OPENVERSE_CLIENT_SECRET: ${{ secrets.OPENVERSE_CLIENT_SECRET }}
         run: python -u -m news.openimages
+      - name: Which key is which (no values printed)
+        env:
+          PX: ${{ secrets.PEXELS_API_KEY }}
+          PB: ${{ secrets.PIXABAY_API_KEY }}
+        run: |
+          echo "PEXELS_API_KEY len ${#PX}; PIXABAY_API_KEY len ${#PB}"
+          for n in PX PB; do v=${!n}; [ -n "$v" ] || { echo "$n empty"; continue; }
+            a=$(curl -s -o /dev/null -w '%{http_code}' -H "Authorization: $v" "https://api.pexels.com/v1/search?query=robot&per_page=1")
+            b=$(curl -s -o /dev/null -w '%{http_code}' "https://pixabay.com/api/?key=$v&q=robot&per_page=3")
+            c=$(curl -s -o /dev/null -w '%{http_code}' "https://pixabay.com/api/videos/?key=$v&q=robot&per_page=3")
+            echo "$n: pexels=$a pixabay=$b pixabay_videos=$c"; done
