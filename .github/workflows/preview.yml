@@ -49,4 +49,4 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           T=preview-${{ github.run_number }}
-          F=$(ls out/preview.mp4 out/thumb.jpg out/tl.json out/ranges.json 2>/dev/null); gh release create "$T" $F preview.log --prerelease --title "$T" --notes sample || gh release create "$T" preview.log --prerelease --title "$T" --notes failed
+          F=$(ls out/preview.mp4 out/thumb.jpg out/tl.json out/ranges.json 2>/dev/null || true); gh release create "$T" $F preview.log --prerelease --title "$T" --notes sample || gh release create "$T" preview.log --prerelease --title "$T" --notes failed
