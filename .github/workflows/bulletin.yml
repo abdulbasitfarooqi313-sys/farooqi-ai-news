@@ -56,6 +56,13 @@ jobs:
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
           BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          OPENVERSE_CLIENT_ID: ${{ secrets.OPENVERSE_CLIENT_ID }}
+          OPENVERSE_CLIENT_SECRET: ${{ secrets.OPENVERSE_CLIENT_SECRET }}
+          NEWS_STYLE: explainer        # مالک 9 نومبر: بغیر اینکر (faceless) — پوری اسکرین مناظر، خاکے، کارڈ
+          NEWS_ANCHOR: "off"
+          NEWS_ORDER: cold             # پہلے شہ سرخیاں → چھوٹا انٹرو → خوش آمدید → تفصیل
         run: |
           set +e
           python -m news.bulletin ${{ github.event.inputs.force == 'yes' && 'force' || '' }}; rc=$?
