@@ -1,0 +1,22 @@
+# 🖼️ تصاویر کی جانچ (Openverse → Wikimedia) — صرف دستی، کچھ شائع نہیں ہوتا
+name: Images test
+on: { workflow_dispatch: {} }
+permissions: { contents: read }
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Engine
+        env: { ENGINE_TOKEN: "${{ secrets.ENGINE_TOKEN }}" }
+        run: |
+          git clone -q --depth 1 "https://x-access-token:${ENGINE_TOKEN}@github.com/abdulbasitfarooqi313-sys/farooqi-ai-news-engine" /tmp/engine
+          rsync -a --exclude .git --exclude .gitignore --exclude .github --exclude state --exclude media --exclude cache --exclude desk /tmp/engine/ ./
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q requests pyyaml
+      - env:
+          OPENVERSE_CLIENT_ID: ${{ secrets.OPENVERSE_CLIENT_ID }}
+          OPENVERSE_CLIENT_SECRET: ${{ secrets.OPENVERSE_CLIENT_SECRET }}
+        run: python -u -m news.openimages
