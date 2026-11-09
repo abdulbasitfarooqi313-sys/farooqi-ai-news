@@ -299,7 +299,7 @@
   "whyanewreportonanthropicautomatingaidevelopmentisalarmingres",
   "openaivaluedat125trillionasrivalanthropicnearsitsipo"
  ],
- "offset": 94696867,
+ "offset": 94696868,
  "chat": 6593456628,
  "days": {
   "2026-10-22": {
@@ -827,7 +827,7 @@
    "yt_status": "scheduled"
   },
   "2026-11-09": {
-   "status": "pending",
+   "status": "approved",
    "vmid": 530,
    "mids": [
     529,
@@ -858,7 +858,8 @@
     "ایلوس پریسلے اور ایمینم کے مالکان نے اے آئی میوزک پلیٹ فارم سونو پر مقدمہ کر دیا"
    ],
    "yt": "C9YGlLkcL7k",
-   "yt_at": "2026-11-09T22:00:00+03:00"
+   "yt_at": "2026-11-09T22:00:00+03:00",
+   "yt_status": "scheduled"
   }
  },
  "podcast": {
