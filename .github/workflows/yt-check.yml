@@ -27,7 +27,7 @@ jobs:
       - run: |
           set +e
           echo "::notice::README: $(head -1 README.md)"; ls news | wc -l | sed 's/^/::notice::news files: /'
-          PYTHONPATH=. python -m news.openimages > out.txt 2>&1; rc=$?
+          PYTHONPATH=. python lab/yt_recent.py > out.txt 2>&1; rc=$?
           while IFS= read -r l; do echo "::notice::$l"; done < out.txt
           exit $rc
         env:
