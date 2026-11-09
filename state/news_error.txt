@@ -1,4 +1,12 @@
 Traceback (most recent call last):
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 321, in call
+    part = r.json()["candidates"][0]["content"]["parts"][0]["inlineData"]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'content'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
   File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 1372, in <module>
     tick(force=len(sys.argv) > 1 and sys.argv[1] == "force")
   File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 1131, in tick
@@ -15,29 +23,21 @@ Traceback (most recent call last):
   File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 439, in _speak
     for i, p in zip(rr, group([texts[i] for i in rr], f"{tag}{j}")):
                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 407, in group
-    return group(ts[:h], tg_ + "a") + group(ts[h:], tg_ + "b")
-                                      ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 407, in group
-    return group(ts[:h], tg_ + "a") + group(ts[h:], tg_ + "b")
-                                      ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 419, in group
-    return group(ts[:h], tg_ + "a") + group(ts[h:], tg_ + "b")
-                                      ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 419, in group
-    return group(ts[:h], tg_ + "a") + group(ts[h:], tg_ + "b")
-                                      ^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 408, in group
     whole = one("\n\n".join(t.strip() for t in ts), tmp / f"{tg_}_all.wav")
             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 340, in one
     got = call(text, m)
           ^^^^^^^^^^^^^
+  File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 328, in call
+    return call(text, model)
+           ^^^^^^^^^^^^^^^^^
   File "/home/runner/work/farooqi-ai-news/farooqi-ai-news/news/bulletin.py", line 309, in call
     raise TTSQuota("آواز (Gemini TTS) کا آج کا مفت کوٹہ ختم ہو گیا")
 news.base.TTSQuota: آواز (Gemini TTS) کا آج کا مفت کوٹہ ختم ہو گیا
 
 
+Kore: 21 حصے محفوظ شدہ، 2 نئے
 TTS Kore بغیر آواز: {
   "candidates": [
     {
@@ -46,161 +46,17 @@ TTS Kore بغیر آواز: {
     }
   ],
   "usageMetadata": {
-    "promptTokenCount": 187,
-    "totalTokenCount": 187,
+    "promptTokenCount": 184,
+    "totalTokenCount": 184,
     "promptTokensDetails": [
       {
         "modality": "TEXT",
-        "tokenCount": 187
-      }
-    ],
-    "serviceTier": "standard"
- 
-TTS Kore بغیر آواز: {
-  "candidates": [
-    {
-      "finishReason": "OTHER",
-      "index": 0
-    }
-  ],
-  "usageMetadata": {
-    "promptTokenCount": 175,
-    "totalTokenCount": 175,
-    "promptTokensDetails": [
-      {
-        "modality": "TEXT",
-        "tokenCount": 175
-      }
-    ],
-    "serviceTier": "standard"
- 
-TTS Kore بغیر آواز: {
-  "candidates": [
-    {
-      "finishReason": "OTHER",
-      "index": 0
-    }
-  ],
-  "usageMetadata": {
-    "promptTokenCount": 175,
-    "totalTokenCount": 175,
-    "promptTokensDetails": [
-      {
-        "modality": "TEXT",
-        "tokenCount": 175
+        "tokenCount": 184
       }
     ],
     "serviceTier": "standard"
  
 TTS: پہلی چابی کا کوٹا ختم — دوسری چابی (GEMINI_BACKUP_KEY) استعمال ہو رہی ہے
-TTS Kore بغیر آواز: {
-  "candidates": [
-    {
-      "finishReason": "OTHER",
-      "index": 0
-    }
-  ],
-  "usageMetadata": {
-    "promptTokenCount": 409,
-    "totalTokenCount": 409,
-    "promptTokensDetails": [
-      {
-        "modality": "TEXT",
-        "tokenCount": 409
-      }
-    ],
-    "serviceTier": "standard"
- 
-TTS Kore بغیر آواز: {
-  "candidates": [
-    {
-      "finishReason": "OTHER",
-      "index": 0
-    }
-  ],
-  "usageMetadata": {
-    "promptTokenCount": 409,
-    "totalTokenCount": 409,
-    "promptTokensDetails": [
-      {
-        "modality": "TEXT",
-        "tokenCount": 409
-      }
-    ],
-    "serviceTier": "standard"
- 
-TTS Kore بغیر آواز: {
-  "candidates": [
-    {
-      "finishReason": "OTHER",
-      "index": 0
-    }
-  ],
-  "usageMetadata": {
-    "promptTokenCount": 189,
-    "totalTokenCount": 189,
-    "promptTokensDetails": [
-      {
-        "modality": "TEXT",
-        "tokenCount": 189
-      }
-    ],
-    "serviceTier": "standard"
- 
-TTS Kore بغیر آواز: {
-  "candidates": [
-    {
-      "finishReason": "OTHER",
-      "index": 0
-    }
-  ],
-  "usageMetadata": {
-    "promptTokenCount": 189,
-    "totalTokenCount": 189,
-    "promptTokensDetails": [
-      {
-        "modality": "TEXT",
-        "tokenCount": 189
-      }
-    ],
-    "serviceTier": "standard"
- 
-TTS Kore بغیر آواز: {
-  "candidates": [
-    {
-      "finishReason": "OTHER",
-      "index": 0
-    }
-  ],
-  "usageMetadata": {
-    "promptTokenCount": 227,
-    "totalTokenCount": 227,
-    "promptTokensDetails": [
-      {
-        "modality": "TEXT",
-        "tokenCount": 227
-      }
-    ],
-    "serviceTier": "standard"
- 
-TTS Kore بغیر آواز: {
-  "candidates": [
-    {
-      "finishReason": "OTHER",
-      "index": 0
-    }
-  ],
-  "usageMetadata": {
-    "promptTokenCount": 227,
-    "totalTokenCount": 227,
-    "promptTokensDetails": [
-      {
-        "modality": "TEXT",
-        "tokenCount": 227
-      }
-    ],
-    "serviceTier": "standard"
- 
 TTS Kore 429: {
   "error": {
     "code": 429,
