@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "sample = نمونہ (Edge آواز)"
+        description: "sample = ایک نمونہ · all = پانچوں ڈیزائن کے نمونے · real = اصل"
         required: false
         default: "sample"
 
@@ -20,7 +20,7 @@ concurrency:
 jobs:
   tech:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - name: Engine (private code)
@@ -63,16 +63,16 @@ jobs:
           BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
         run: |
           python -m playwright install --with-deps chromium >/dev/null 2>&1 || true
-          if [ "${{ github.event.inputs.mode }}" = "real" ]; then python -m news.tech; else python -m news.tech sample; fi
+          case "${{ github.event.inputs.mode }}" in real) python -m news.tech ;; all) python -m news.tech sample all ;; *) python -m news.tech sample ;; esac
       - name: Keep a review copy
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          [ -f tech.mp4 ] || exit 0
+          ls tech*.mp4 >/dev/null 2>&1 || exit 0
           T="tech-$(TZ=Asia/Riyadh date +%F)"
           gh release delete "$T" -y --cleanup-tag 2>/dev/null || true
-          gh release create "$T" --title "$T" --notes "review copy" tech.mp4 tech_thumb.jpg || true
+          gh release create "$T" --title "$T" --notes "review copy" $(ls tech*.mp4 tech_thumb.jpg 2>/dev/null) || true
       - name: Save
         if: always() && github.event.inputs.mode == 'real'
         run: |
