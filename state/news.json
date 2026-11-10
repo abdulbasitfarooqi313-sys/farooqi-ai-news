@@ -339,7 +339,7 @@
   "spotifysaidjgetsnewvoicespersonalitiesandanoptionforlesschat",
   "ringknownforitsdoorbellcameraslaunchesahomesecuritydroneanda"
  ],
- "offset": 94696868,
+ "offset": 94696869,
  "chat": 6593456628,
  "days": {
   "2026-10-22": {
@@ -902,7 +902,7 @@
    "yt_status": "scheduled"
   },
   "2026-11-11": {
-   "status": "pending",
+   "status": "approved",
    "vmid": 575,
    "mids": [
     574,
@@ -933,7 +933,8 @@
     "نیویارک میں اے آئی سیفٹی قانون نافذ، اوپن اے آئی اور انتھروپک کے لیے رجسٹریشن لازمی قرار"
    ],
    "yt": "fpDQCC9KY0I",
-   "yt_at": "2026-11-11T17:00:00+03:00"
+   "yt_at": "2026-11-11T17:00:00+03:00",
+   "yt_status": "scheduled"
   }
  },
  "podcast": {
