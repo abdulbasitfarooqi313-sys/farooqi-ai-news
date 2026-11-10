@@ -1,8 +1,11 @@
-# 🔭 «ٹیک دریافت» — ابھی صرف نمونہ (Edge آواز، ٹیلیگرام پر)۔ اصل (ٹولزکیپ چابی کی بچت، صبح 9 بجے) مالک کی منظوری کے بعد۔
+# 🔭 «ٹیک دریافت» — مالک (11 نومبر 2026): ہفتے میں دو بار، پیر اور جمعرات صبح 9 بجے سعودی۔
+# آواز صرف ٹولزکیپ کی جیمنائی چابی کی بچت سے (کوٹا 10–11 بجے نیا ہوتا ہے، اس لیے ٹولزکیپ کا کام متاثر نہیں)۔ پانچ ڈیزائن باری باری۔
 name: Tech Daryaft
 
 
 on:
+  schedule:
+    - cron: "7 6 * * 1,4"     # پیر، جمعرات 9:07 صبح (سعودی)
   workflow_dispatch:
     inputs:
       mode:
@@ -63,7 +66,8 @@ jobs:
           BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
         run: |
           python -m playwright install --with-deps chromium >/dev/null 2>&1 || true
-          case "${{ github.event.inputs.mode }}" in real) python -m news.tech ;; all) python -m news.tech sample all ;; *) python -m news.tech sample ;; esac
+          M="${{ github.event.inputs.mode }}"; [ "${{ github.event_name }}" = "schedule" ] && M=real
+          case "$M" in real) python -m news.tech ;; all) python -m news.tech sample all ;; *) python -m news.tech sample ;; esac
       - name: Keep a review copy
         if: always()
         env:
@@ -74,7 +78,7 @@ jobs:
           gh release delete "$T" -y --cleanup-tag 2>/dev/null || true
           gh release create "$T" --title "$T" --notes "review copy" $(ls tech*.mp4 tech_thumb.jpg 2>/dev/null) || true
       - name: Save
-        if: always() && github.event.inputs.mode == 'real'
+        if: always() && (github.event_name == 'schedule' || github.event.inputs.mode == 'real')
         run: |
           git config user.name "ai-news-bot"
           git config user.email "ai-news-bot@users.noreply.github.com"
