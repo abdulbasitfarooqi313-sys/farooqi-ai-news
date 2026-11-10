@@ -45,6 +45,8 @@ jobs:
         env:
           GEMINI_NEWS_KEY: ${{ secrets.GEMINI_NEWS_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_TTS_KEY: ${{ secrets.GEMINI_TTS_BULLETIN }}     # اس کام کی آواز کا اپنا پروجیکٹ
+          TTS_JOB: bulletin
           GEMINI_BACKUP_KEY: ${{ secrets.GEMINI_BACKUP_KEY }}
           NEWS_BOT_TOKEN: ${{ secrets.NEWS_BOT_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -70,7 +72,7 @@ jobs:
         run: |
           git config user.name "ai-news-bot"
           git config user.email "ai-news-bot@users.noreply.github.com"
-          for f in state/news.json state/news_error.txt state/tts_usage.json state/tts_backup.json; do [ -f "$f" ] && git add "$f"; done; true
+          for f in state/news.json state/news_error.txt state/tts_usage.json state/tts_usage_*.json state/tts_backup.json; do [ -f "$f" ] && git add "$f"; done; true
           git add -A cache state/roundup_*.json 2>/dev/null || true
           git diff --cached --quiet && exit 0
           git commit -m "راؤنڈ اپ"

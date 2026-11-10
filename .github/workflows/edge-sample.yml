@@ -1,0 +1,30 @@
+# 🎙️ Edge کی اردو آوازوں کا نمونہ (مرد/خاتون) — صرف سننے کے لیے، ٹیلیگرام پر بھیجتا ہے۔ اصل کام میں استعمال نہیں ہوتا۔
+name: Edge voice sample
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q edge-tts
+      - name: Make samples
+        run: |
+          T="السلام علیکم، فاروقی اے آئی نیوز میں خوش آمدید۔ آج کی سب سے بڑی خبر یہ ہے کہ مصنوعی ذہانت کی دنیا میں ایک نیا ماڈل سامنے آیا ہے، جو اردو سمیت کئی زبانیں پہلے سے بہتر سمجھتا ہے۔ آئیے دیکھتے ہیں اس کی تفصیل۔"
+          edge-tts --voice ur-PK-UzmaNeural --text "$T" --write-media edge-female-uzma.mp3
+          edge-tts --voice ur-PK-AsadNeural --text "$T" --write-media edge-male-asad.mp3
+          ls -la *.mp3
+      - uses: actions/upload-artifact@v4
+        with: { name: edge-samples, path: "*.mp3" }
+      - name: Send to Telegram
+        env:
+          TOKEN: ${{ secrets.NEWS_BOT_TOKEN || secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT_SECRET: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          CHAT=$(python3 -c "import json;print(json.load(open('state/news.json')).get('chat',''))" 2>/dev/null); CHAT=${CHAT:-$CHAT_SECRET}
+          for f in edge-female-uzma.mp3:"خاتون — Uzma (Edge)" edge-male-asad.mp3:"مرد — Asad (Edge)"; do
+            curl -s -F "chat_id=$CHAT" -F "audio=@${f%%:*}" -F "caption=🎙️ نمونہ: ${f#*:}" "https://api.telegram.org/bot$TOKEN/sendAudio" | head -c 80; echo
+          done
