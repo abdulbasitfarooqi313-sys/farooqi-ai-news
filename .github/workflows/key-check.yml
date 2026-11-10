@@ -17,12 +17,13 @@ jobs:
           K_PODCAST: ${{ secrets.GEMINI_TTS_PODCAST }}
           K_MAIN: ${{ secrets.GEMINI_API_KEY }}
           K_BACKUP: ${{ secrets.GEMINI_BACKUP_KEY }}
+          K_NAWA: ${{ secrets.NAWA_GEMINI_API_KEY }}
           NAWA_TOKEN: ${{ secrets.NAWA_TOKEN }}
           TOKEN: ${{ secrets.NEWS_BOT_TOKEN || secrets.TELEGRAM_BOT_TOKEN }}
           CHAT_SECRET: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           msg="🔑 Gemini چابیوں کی جانچ (کوٹا خرچ نہیں):"
-          for n in BULLETIN FLASH PODCAST MAIN BACKUP; do
+          for n in BULLETIN FLASH PODCAST MAIN BACKUP NAWA; do
             v="K_$n"; k="${!v}"
             if [ -z "$k" ]; then r="❌ Secret خالی/موجود نہیں"
             else
