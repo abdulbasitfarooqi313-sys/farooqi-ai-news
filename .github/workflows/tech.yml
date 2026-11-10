@@ -47,6 +47,9 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_BACKUP_KEY: ${{ secrets.GEMINI_BACKUP_KEY }}
           TS_GEMINI_API_KEY: ${{ secrets.TS_GEMINI_API_KEY }}
+          GEMINI_TTS_BULLETIN: ${{ secrets.GEMINI_TTS_BULLETIN }}
+          GEMINI_TTS_FLASH: ${{ secrets.GEMINI_TTS_FLASH }}
+          GEMINI_TTS_PODCAST: ${{ secrets.GEMINI_TTS_PODCAST }}
           NEWS_BOT_TOKEN: ${{ secrets.NEWS_BOT_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
