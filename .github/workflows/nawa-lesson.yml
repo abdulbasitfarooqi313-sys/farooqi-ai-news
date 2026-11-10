@@ -62,7 +62,7 @@ jobs:
           CH: ${{ github.event.inputs.chapter }}
         run: python -u -m nawa.lesson_video ${CH:-$(head -1 state/lesson_run_now 2>/dev/null | tr -cd 'c0-9')}
       - name: Save (private repo)
-        if: always()
+        if: always() && steps.need.outputs.run == '1' && hashFiles('nawa-repo/.git/HEAD') != ''
         working-directory: nawa-repo
         run: |
           [ -d .git ] || exit 0
