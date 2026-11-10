@@ -1,6 +1,9 @@
 # 🎙️ نمونہ (مالک 10 نومبر): دو AI اینکرز اردو (Microsoft آواز) میں — ہونٹ Kaggle کے مفت GPU پر LatentSync سے۔ روز کے نظام سے الگ۔
 name: Lipsync sample
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      fetch_only: { description: "Kaggle پر بنا ہوا نتیجہ ہی لاؤ", type: boolean, default: false }
 permissions: {}
 jobs:
   s:
@@ -26,14 +29,16 @@ jobs:
           U="$KAGGLE_USERNAME"; D=/tmp/ds; K=/tmp/kn; mkdir -p $D $K
           cp /tmp/w/f_crop.mp4 /tmp/w/m_crop.mp4 /tmp/w/f.wav /tmp/w/m.wav $D/
           printf '{"title":"farooqi-lipsync-in","id":"%s/farooqi-lipsync-in","licenses":[{"name":"CC0-1.0"}]}' "$U" > $D/dataset-metadata.json
+          if [ "${{ inputs.fetch_only }}" != "true" ]; then
           kaggle datasets create -p $D -q 2>&1 | tail -2 || true
           kaggle datasets version -p $D -m "run $GITHUB_RUN_NUMBER" -q 2>&1 | tail -2 || true
           for i in $(seq 1 40); do st=$(kaggle datasets status "$U/farooqi-lipsync-in" 2>&1 | tail -1); echo "dataset: $st"; [ "$st" = ready ] && break; case "$st" in *Error*|*error*) exit 1;; esac; sleep 15; done
           cp eng/lab/lipsync/kaggle_run.py $K/
           printf '{"id":"%s/farooqi-lipsync-sample","title":"farooqi-lipsync-sample","code_file":"kaggle_run.py","language":"python","kernel_type":"script","is_private":true,"enable_gpu":true,"enable_internet":true,"machine_shape":"NvidiaTeslaT4","dataset_sources":["%s/farooqi-lipsync-in"],"competition_sources":[],"kernel_sources":[]}' "$U" "$U" > $K/kernel-metadata.json
           kaggle kernels push -p $K
-          for i in $(seq 1 200); do sleep 30; st=$(kaggle kernels status "$U/farooqi-lipsync-sample" 2>&1 | tail -1); echo "$i $st"
-            case "$st" in *complete*|*error*|*cancel*) break;; esac; done
+          fi
+          for i in $(seq 1 200); do st=$(kaggle kernels status "$U/farooqi-lipsync-sample" 2>&1 | tail -1); echo "$i $st"
+            case "$(echo "$st" | tr A-Z a-z)" in *complete*|*error*|*cancel*) break;; esac; sleep 30; done
           mkdir -p /tmp/ko && kaggle kernels output "$U/farooqi-lipsync-sample" -p /tmp/ko || true
           ls -la /tmp/ko; tail -c 6000 /tmp/ko/*.log 2>/dev/null | tr -d '\r' | tail -60 || true
           cp /tmp/ko/f_out.mp4 /tmp/ko/m_out.mp4 /tmp/w/
