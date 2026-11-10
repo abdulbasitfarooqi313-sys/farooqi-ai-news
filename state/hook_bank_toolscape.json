@@ -7,25 +7,25 @@
   "url": "https://youtu.be/gC18kqOcCEI"
  },
  {
+  "channel": "Metics Media",
+  "title": "Build Your First AI Agent in 20 Minutes (No Coding)",
+  "views": 703300,
+  "date": "2026-10-19",
+  "url": "https://youtu.be/rCkYVxOX-dI"
+ },
+ {
+  "channel": "Dan Kieft",
+  "title": "How I Make Realistic AI Videos with Seedance 2.5 - Full Guide",
+  "views": 693111,
+  "date": "2026-10-16",
+  "url": "https://youtu.be/2hJsvDSPWYM"
+ },
+ {
   "channel": "Nate Herk | AI Automation",
   "title": "I Told Claude to \"Make it better\" 100 Times (It Went Too Far)",
   "views": 686685,
   "date": "2026-10-30",
   "url": "https://youtu.be/DByAR5Su1Yw"
- },
- {
-  "channel": "Dan Kieft",
-  "title": "How I Make Realistic AI Videos with Seedance 2.5 - Full Guide",
-  "views": 684386,
-  "date": "2026-10-16",
-  "url": "https://youtu.be/2hJsvDSPWYM"
- },
- {
-  "channel": "Metics Media",
-  "title": "Build Your First AI Agent in 20 Minutes (No Coding)",
-  "views": 683617,
-  "date": "2026-10-19",
-  "url": "https://youtu.be/rCkYVxOX-dI"
  },
  {
   "channel": "Metics Media",
@@ -58,7 +58,7 @@
  {
   "channel": "Jeff Su",
   "title": "Personal Agents, Clearly Explained",
-  "views": 324110,
+  "views": 328226,
   "date": "2026-10-13",
   "url": "https://youtu.be/HdI_aYzgJIg"
  },
@@ -86,7 +86,7 @@
  {
   "channel": "Metics Media",
   "title": "Master Higgsfield AI in 20 Minutes (Beginner Tutorial)",
-  "views": 226401,
+  "views": 237513,
   "date": "2026-10-21",
   "url": "https://youtu.be/3W1VhiKLNp4"
  },
@@ -177,7 +177,7 @@
  {
   "channel": "Dan Kieft",
   "title": "How To Start Making AI Videos in 2026 (Beginner Guide)",
-  "views": 151924,
+  "views": 156446,
   "date": "2026-10-22",
   "url": "https://youtu.be/iO9MiefIpVM"
  },
@@ -198,7 +198,7 @@
  {
   "channel": "Dan Kieft",
   "title": "Stop Wasting Credits on AI Video Generators Like Seedance 2.5",
-  "views": 141831,
+  "views": 143199,
   "date": "2026-10-13",
   "url": "https://youtu.be/KKfaBVM3Jdg"
  },
@@ -212,30 +212,44 @@
  {
   "channel": "Matt Wolfe",
   "title": "AI News: The Only 6 Stories Worth Knowing This Week",
-  "views": 130652,
+  "views": 131347,
   "date": "2026-10-30",
   "url": "https://youtu.be/eDiQNFa-zYg"
  },
  {
   "channel": "Futurepedia",
   "title": "Claude 2.0 Is Here. EVERYTHING in 15 Minutes",
-  "views": 114281,
+  "views": 124731,
   "date": "2026-11-03",
   "url": "https://youtu.be/tM0dwXhOv2o"
  },
  {
   "channel": "Matt Wolfe",
   "title": "AI News: New ChatGPT & Google Models (14 Updates Worth Knowing)",
-  "views": 109365,
+  "views": 121066,
   "date": "2026-11-06",
   "url": "https://youtu.be/IrAHINf0M6E"
  },
  {
+  "channel": "Kevin Stratvert",
+  "title": "How to Use Ollama (Free Local AI)",
+  "views": 120604,
+  "date": "2026-11-05",
+  "url": "https://youtu.be/btMoPRHz8eM"
+ },
+ {
   "channel": "Dan Kieft",
   "title": "I Tried Every AI Video Generator - Full Tierlist",
-  "views": 105083,
+  "views": 111219,
   "date": "2026-10-28",
   "url": "https://youtu.be/tnG3TIULBro"
+ },
+ {
+  "channel": "Kevin Stratvert",
+  "title": "How to Use Grok Bot for Beginners",
+  "views": 104052,
+  "date": "2026-10-27",
+  "url": "https://youtu.be/G6AwOYT-Gbw"
  },
  {
   "channel": "Nate Herk | AI Automation",
@@ -252,11 +266,11 @@
   "url": "https://youtu.be/xBSLmwVTsRc"
  },
  {
-  "channel": "Kevin Stratvert",
-  "title": "How to Use Grok Bot for Beginners",
-  "views": 99753,
+  "channel": "Jeff Su",
+  "title": "I knew AI + Notion would be good, but this... wow.",
+  "views": 96592,
   "date": "2026-10-27",
-  "url": "https://youtu.be/G6AwOYT-Gbw"
+  "url": "https://youtu.be/ofzHbyxkpVg"
  },
  {
   "channel": "Skill Leap AI",
@@ -266,13 +280,6 @@
   "url": "https://youtu.be/F1PEICLlEBk"
  },
  {
-  "channel": "Kevin Stratvert",
-  "title": "How to Use Ollama (Free Local AI)",
-  "views": 95461,
-  "date": "2026-11-05",
-  "url": "https://youtu.be/btMoPRHz8eM"
- },
- {
   "channel": "Matt Wolfe",
   "title": "He Built an AI Board of Billionaires (Free & Open-Source)",
   "views": 93009,
@@ -280,11 +287,25 @@
   "url": "https://youtu.be/AtjFk9f44HE"
  },
  {
-  "channel": "Jeff Su",
-  "title": "I knew AI + Notion would be good, but this... wow.",
-  "views": 92768,
-  "date": "2026-10-27",
-  "url": "https://youtu.be/ofzHbyxkpVg"
+  "channel": "Nate Herk | AI Automation",
+  "title": "Every AI Business Ranked from Worst to Best",
+  "views": 92214,
+  "date": "2026-11-05",
+  "url": "https://youtu.be/O3g_m2i2IGU"
+ },
+ {
+  "channel": "Metics Media",
+  "title": "Higgsfield AI Tutorial for Beginners (2026) | Step-by-Step",
+  "views": 91480,
+  "date": "2026-10-30",
+  "url": "https://youtu.be/Mt91SiQotOU"
+ },
+ {
+  "channel": "Matt Wolfe",
+  "title": "How I Get Claude To Edit My Videos (Step-By-Step)",
+  "views": 91301,
+  "date": "2026-11-04",
+  "url": "https://youtu.be/ep4psgAFOqc"
  },
  {
   "channel": "Skill Leap AI",
@@ -294,20 +315,6 @@
   "url": "https://youtu.be/XQtvloPXap4"
  },
  {
-  "channel": "Nate Herk | AI Automation",
-  "title": "Every AI Business Ranked from Worst to Best",
-  "views": 86673,
-  "date": "2026-11-05",
-  "url": "https://youtu.be/O3g_m2i2IGU"
- },
- {
-  "channel": "Metics Media",
-  "title": "Higgsfield AI Tutorial for Beginners (2026) | Step-by-Step",
-  "views": 85527,
-  "date": "2026-10-30",
-  "url": "https://youtu.be/Mt91SiQotOU"
- },
- {
   "channel": "The AI Advantage",
   "title": "New Claude Motion is Insane",
   "views": 85284,
@@ -315,18 +322,18 @@
   "url": "https://youtu.be/qZqZ02AsYiA"
  },
  {
-  "channel": "Matt Wolfe",
-  "title": "How I Get Claude To Edit My Videos (Step-By-Step)",
-  "views": 84432,
-  "date": "2026-11-04",
-  "url": "https://youtu.be/ep4psgAFOqc"
+  "channel": "Kevin Stratvert",
+  "title": "ChatGPT Dots Tutorial for Beginners",
+  "views": 81830,
+  "date": "2026-10-20",
+  "url": "https://youtu.be/-I9Csc3khis"
  },
  {
   "channel": "Kevin Stratvert",
-  "title": "ChatGPT Dots Tutorial for Beginners",
-  "views": 79878,
-  "date": "2026-10-20",
-  "url": "https://youtu.be/-I9Csc3khis"
+  "title": "Hermes Agent Tutorial for Beginners (FREE & Local)",
+  "views": 74770,
+  "date": "2026-10-23",
+  "url": "https://youtu.be/wETSpF4ef6E"
  },
  {
   "channel": "Kevin Stratvert",
@@ -336,11 +343,11 @@
   "url": "https://youtu.be/FsTq4NPIBqY"
  },
  {
-  "channel": "Kevin Stratvert",
-  "title": "Hermes Agent Tutorial for Beginners (FREE & Local)",
-  "views": 71268,
-  "date": "2026-10-23",
-  "url": "https://youtu.be/wETSpF4ef6E"
+  "channel": "Matt Wolfe",
+  "title": "Anthropic's Fable 5.2 is the World’s Best AI Model",
+  "views": 71842,
+  "date": "2026-11-09",
+  "url": "https://youtu.be/2TM8W66NI_8"
  },
  {
   "channel": "Nate Herk | AI Automation",
@@ -387,7 +394,7 @@
  {
   "channel": "Kevin Stratvert",
   "title": "Surface Laptop Ultra: Who Is This Actually For?",
-  "views": 59132,
+  "views": 59560,
   "date": "2026-10-16",
   "url": "https://youtu.be/ExOodQdeBo4"
  },
@@ -399,18 +406,25 @@
   "url": "https://youtu.be/V0PzEBcnAdk"
  },
  {
+  "channel": "Metics Media",
+  "title": "Build $10,000 Websites using ChatGPT (Ultimate Guide)",
+  "views": 54689,
+  "date": "2026-10-25",
+  "url": "https://youtu.be/-7jk1Y7AU7w"
+ },
+ {
+  "channel": "Metics Media",
+  "title": "Master Hermes Agent in 20 Minutes (Beginner Tutorial)",
+  "views": 53658,
+  "date": "2026-10-28",
+  "url": "https://youtu.be/q5RagIqBtjc"
+ },
+ {
   "channel": "Nate Herk | AI Automation",
   "title": "/roast-room: How I Use Claude to Think Like the Top 1%",
   "views": 53596,
   "date": "2026-10-22",
   "url": "https://youtu.be/DSS1Yqb6-qE"
- },
- {
-  "channel": "Metics Media",
-  "title": "Build $10,000 Websites using ChatGPT (Ultimate Guide)",
-  "views": 53582,
-  "date": "2026-10-25",
-  "url": "https://youtu.be/-7jk1Y7AU7w"
  },
  {
   "channel": "Matt Wolfe",
@@ -427,18 +441,18 @@
   "url": "https://youtu.be/8FBvRYDQWow"
  },
  {
-  "channel": "Metics Media",
-  "title": "Master Hermes Agent in 20 Minutes (Beginner Tutorial)",
-  "views": 52260,
-  "date": "2026-10-28",
-  "url": "https://youtu.be/q5RagIqBtjc"
- },
- {
   "channel": "Parker Prompts",
   "title": "Grok 4.7 + Grok Bot Is CHEATING (Only $20 NOW!)",
-  "views": 51196,
+  "views": 51376,
   "date": "2026-10-13",
   "url": "https://youtu.be/OPThXcTW9Rk"
+ },
+ {
+  "channel": "Skill Leap AI",
+  "title": "Claude Can Now Create 3D",
+  "views": 51128,
+  "date": "2026-10-28",
+  "url": "https://youtu.be/3LIeUZJBpeo"
  },
  {
   "channel": "Parker Prompts",
@@ -448,11 +462,18 @@
   "url": "https://youtu.be/dP-0nt4U2QE"
  },
  {
-  "channel": "Skill Leap AI",
-  "title": "Claude Can Now Create 3D",
-  "views": 50182,
-  "date": "2026-10-28",
-  "url": "https://youtu.be/3LIeUZJBpeo"
+  "channel": "Parker Prompts",
+  "title": "Gemini Canvas Gives You Superpowers, Here's How to Unlock It",
+  "views": 48889,
+  "date": "2026-10-29",
+  "url": "https://youtu.be/iHHa3bafFFY"
+ },
+ {
+  "channel": "Nate Herk | AI Automation",
+  "title": "I Studied 10,000 AI Websites… Here’s what I learned",
+  "views": 48781,
+  "date": "2026-11-09",
+  "url": "https://youtu.be/mImbbszCjCI"
  },
  {
   "channel": "The AI Advantage",
@@ -469,16 +490,23 @@
   "url": "https://youtu.be/Bd8-geZPwI4"
  },
  {
-  "channel": "Parker Prompts",
-  "title": "Gemini Canvas Gives You Superpowers, Here's How to Unlock It",
-  "views": 48140,
+  "channel": "Kevin Stratvert",
+  "title": "How to Use Remotion with ChatGPT",
+  "views": 47587,
+  "date": "2026-10-30",
+  "url": "https://youtu.be/9PwpJpJJ3IY"
+ },
+ {
+  "channel": "Kevin Stratvert",
+  "title": "How to Create an Excel Dashboard with Copilot",
+  "views": 46470,
   "date": "2026-10-29",
-  "url": "https://youtu.be/iHHa3bafFFY"
+  "url": "https://youtu.be/YgcEesCDIkw"
  },
  {
   "channel": "AI Master",
   "title": "ChatGPT + MiniMax Design: How to Make Motion Graphics with AI (Full AI Workflow)",
-  "views": 45847,
+  "views": 45933,
   "date": "2026-10-30",
   "url": "https://youtu.be/TrSjEBArbD0"
  },
@@ -490,18 +518,18 @@
   "url": "https://youtu.be/nJut4s0DTx8"
  },
  {
-  "channel": "Kevin Stratvert",
-  "title": "How to Use Remotion with ChatGPT",
-  "views": 45069,
-  "date": "2026-10-30",
-  "url": "https://youtu.be/9PwpJpJJ3IY"
- },
- {
   "channel": "Nate Herk | AI Automation",
   "title": "I Turned Codex Into My AI Operating System",
-  "views": 44286,
+  "views": 45358,
   "date": "2026-11-02",
   "url": "https://youtu.be/_EChYLC3Vag"
+ },
+ {
+  "channel": "AI Master",
+  "title": "Gemini Just Became Free — You Don’t Need a Google AI Subscription",
+  "views": 44683,
+  "date": "2026-11-07",
+  "url": "https://youtu.be/1iySkKc4tyw"
  },
  {
   "channel": "Nate Herk | AI Automation",
@@ -511,18 +539,18 @@
   "url": "https://youtu.be/2U8jn2M7g7U"
  },
  {
-  "channel": "Kevin Stratvert",
-  "title": "How to Create an Excel Dashboard with Copilot",
-  "views": 43127,
-  "date": "2026-10-29",
-  "url": "https://youtu.be/YgcEesCDIkw"
- },
- {
   "channel": "Nate Herk | AI Automation",
   "title": "Claude Opus 5.5 is my video editor",
   "views": 41986,
   "date": "2026-10-16",
   "url": "https://youtu.be/gNMN-7D9130"
+ },
+ {
+  "channel": "Metics Media",
+  "title": "Build the PERFECT WordPress Website with AI (Full Guide)",
+  "views": 41550,
+  "date": "2026-11-03",
+  "url": "https://youtu.be/p6sPn17Rm_Q"
  },
  {
   "channel": "AI Master",
@@ -532,11 +560,25 @@
   "url": "https://youtu.be/NGIyBkfXNQ8"
  },
  {
+  "channel": "The AI Advantage",
+  "title": "How I Edit My Videos with Claude",
+  "views": 40001,
+  "date": "2026-11-04",
+  "url": "https://youtu.be/fS-88gtHXIg"
+ },
+ {
   "channel": "Metics Media",
   "title": "WordPress - Full Course for Beginners (2026)",
   "views": 39437,
   "date": "2026-09-27",
   "url": "https://youtu.be/3pEGqrE1aaQ"
+ },
+ {
+  "channel": "Skill Leap AI",
+  "title": "Claude Duet Is Here: The End of Prompting?",
+  "views": 39435,
+  "date": "2026-11-03",
+  "url": "https://youtu.be/ZdXXv-0aPfI"
  },
  {
   "channel": "Nate Herk | AI Automation",
@@ -553,32 +595,25 @@
   "url": "https://youtu.be/7bE0PCee01Y"
  },
  {
-  "channel": "Metics Media",
-  "title": "Build the PERFECT WordPress Website with AI (Full Guide)",
-  "views": 38460,
-  "date": "2026-11-03",
-  "url": "https://youtu.be/p6sPn17Rm_Q"
- },
- {
   "channel": "Parker Prompts",
   "title": "Give Me 14 Minutes, I'll Teach You 97% of Obsidian",
-  "views": 36874,
+  "views": 37240,
   "date": "2026-10-16",
   "url": "https://youtu.be/y27oP8A8S9s"
  },
  {
   "channel": "Metics Media",
   "title": "Full Hermes Agent Setup Tutorial: Step-by-Step Walkthrough",
-  "views": 36841,
+  "views": 37210,
   "date": "2026-10-26",
   "url": "https://youtu.be/knZBpQddnJc"
  },
  {
-  "channel": "Skill Leap AI",
-  "title": "Claude Duet Is Here: The End of Prompting?",
-  "views": 36331,
-  "date": "2026-11-03",
-  "url": "https://youtu.be/ZdXXv-0aPfI"
+  "channel": "Metics Media",
+  "title": "Run Claude Code 24/7 on a VPS (Always-On AI Agent Tutorial)",
+  "views": 36599,
+  "date": "2026-10-14",
+  "url": "https://youtu.be/nzAdaWt6oxM"
  },
  {
   "channel": "Kevin Stratvert",
@@ -586,13 +621,6 @@
   "views": 36306,
   "date": "2026-10-14",
   "url": "https://youtu.be/8SV_Dj9Kebo"
- },
- {
-  "channel": "Metics Media",
-  "title": "Run Claude Code 24/7 on a VPS (Always-On AI Agent Tutorial)",
-  "views": 36226,
-  "date": "2026-10-14",
-  "url": "https://youtu.be/nzAdaWt6oxM"
  },
  {
   "channel": "Jeff Su",
@@ -616,13 +644,6 @@
   "url": "https://youtu.be/GnFFcLnmWuQ"
  },
  {
-  "channel": "AI Master",
-  "title": "Gemini Just Became Free — You Don’t Need a Google AI Subscription",
-  "views": 35181,
-  "date": "2026-11-07",
-  "url": "https://youtu.be/1iySkKc4tyw"
- },
- {
   "channel": "Nate Herk | AI Automation",
   "title": "McKinsey Explains: Build an AI Operating System",
   "views": 34484,
@@ -632,21 +653,14 @@
  {
   "channel": "Parker Prompts",
   "title": "Gemini 4 Argon Is Finally Here (And It's REALLY Good)",
-  "views": 34218,
+  "views": 34326,
   "date": "2026-10-24",
   "url": "https://youtu.be/aejlgh-gtF4"
  },
  {
-  "channel": "The AI Advantage",
-  "title": "How I Edit My Videos with Claude",
-  "views": 33307,
-  "date": "2026-11-04",
-  "url": "https://youtu.be/fS-88gtHXIg"
- },
- {
   "channel": "Parker Prompts",
   "title": "This FREE Claude Skill Is INSANE at AI Videos (Opus 5.5)",
-  "views": 32603,
+  "views": 32744,
   "date": "2026-10-23",
   "url": "https://youtu.be/hZkd4Iy-4lE"
  },
@@ -656,6 +670,13 @@
   "views": 32463,
   "date": "2026-10-24",
   "url": "https://youtu.be/OMy4hCP8uSc"
+ },
+ {
+  "channel": "Parker Prompts",
+  "title": "Grok Bot Tutorial for Beginners: How to Set Up Your First AI Agent",
+  "views": 32133,
+  "date": "2026-11-08",
+  "url": "https://youtu.be/xHYp3LvPCTA"
  },
  {
   "channel": "Skill Leap AI",
@@ -674,23 +695,37 @@
  {
   "channel": "Matt Wolfe",
   "title": "A real-life speeder bike from Return of the Jedi (Not AI)",
-  "views": 30316,
+  "views": 30601,
   "date": "2026-11-03",
   "url": "https://youtu.be/PRAY_SewRxI"
  },
  {
   "channel": "The AI Advantage",
+  "title": "ChatGPT Images 2.6 Is Here: GIFs, Dot Upgrades & More",
+  "views": 30407,
+  "date": "2026-11-06",
+  "url": "https://youtu.be/5LkRDoGVook"
+ },
+ {
+  "channel": "The AI Advantage",
   "title": "Don't Buy Another App Until You See This",
-  "views": 29953,
+  "views": 30351,
   "date": "2026-10-29",
   "url": "https://youtu.be/dc3pgMqhRzI"
  },
  {
   "channel": "The AI Advantage",
   "title": "ChatGPT & Grok Bot: 7 Useful Updates for Everyday Life",
-  "views": 29869,
+  "views": 30134,
   "date": "2026-10-30",
   "url": "https://youtu.be/MNiurW07nLs"
+ },
+ {
+  "channel": "Kevin Stratvert",
+  "title": "How to Use ChatGPT Voice - Step-by-Step for Beginners",
+  "views": 28791,
+  "date": "2026-10-19",
+  "url": "https://youtu.be/RT318f4qsQ4"
  },
  {
   "channel": "Matt Wolfe",
@@ -700,23 +735,23 @@
   "url": "https://youtu.be/EUjd_UBApoA"
  },
  {
-  "channel": "Kevin Stratvert",
-  "title": "How to Use ChatGPT Voice - Step-by-Step for Beginners",
-  "views": 28554,
-  "date": "2026-10-19",
-  "url": "https://youtu.be/RT318f4qsQ4"
- },
- {
   "channel": "Parker Prompts",
   "title": "How the Top 1% Make Cinematic AI Videos (FREE System)",
-  "views": 28195,
+  "views": 28328,
   "date": "2026-10-20",
   "url": "https://youtu.be/LIK6ZayNndU"
  },
  {
+  "channel": "Kevin Stratvert",
+  "title": "How to Use Grok – Complete Beginner's Tutorial (2026)",
+  "views": 27566,
+  "date": "2026-10-28",
+  "url": "https://youtu.be/lGSQV0lIGus"
+ },
+ {
   "channel": "Parker Prompts",
   "title": "Meta Muse Just Got a MASSIVE Upgrade (Muse Wonder)",
-  "views": 27424,
+  "views": 27551,
   "date": "2026-10-15",
   "url": "https://youtu.be/EAKbhcMLrlM"
  },
@@ -735,13 +770,6 @@
   "url": "https://youtu.be/zbpk2a53hfI"
  },
  {
-  "channel": "The AI Advantage",
-  "title": "ChatGPT Images 2.6 Is Here: GIFs, Dot Upgrades & More",
-  "views": 26915,
-  "date": "2026-11-06",
-  "url": "https://youtu.be/5LkRDoGVook"
- },
- {
   "channel": "Nate Herk | AI Automation",
   "title": "Which AI tool do you use the most? Claude vs everything else",
   "views": 26522,
@@ -756,6 +784,13 @@
   "url": "https://youtu.be/NmN6jn6IiMA"
  },
  {
+  "channel": "Futurepedia",
+  "title": "Top 15 Tricks for INSTANTLY Better Claude Designs",
+  "views": 26247,
+  "date": "2026-11-04",
+  "url": "https://youtu.be/rU5llKCPPwI"
+ },
+ {
   "channel": "Nate Herk | AI Automation",
   "title": "Alex Hormozi, Jeff Bezos, and Warren Buffet help me make decisions",
   "views": 26088,
@@ -763,11 +798,11 @@
   "url": "https://youtu.be/kj60zAD8lLU"
  },
  {
-  "channel": "Kevin Stratvert",
-  "title": "How to Use Grok – Complete Beginner's Tutorial (2026)",
-  "views": 25892,
-  "date": "2026-10-28",
-  "url": "https://youtu.be/lGSQV0lIGus"
+  "channel": "Matt Wolfe",
+  "title": "Claude Code Just Called My Phone",
+  "views": 25748,
+  "date": "2026-11-07",
+  "url": "https://youtu.be/A5SfzBD6M3o"
  },
  {
   "channel": "Nate Herk | AI Automation",
@@ -789,13 +824,6 @@
   "views": 24868,
   "date": "2026-10-10",
   "url": "https://youtu.be/xF7fISoiTrI"
- },
- {
-  "channel": "Futurepedia",
-  "title": "Top 15 Tricks for INSTANTLY Better Claude Designs",
-  "views": 24510,
-  "date": "2026-11-04",
-  "url": "https://youtu.be/rU5llKCPPwI"
  },
  {
   "channel": "AI Master",
@@ -821,7 +849,7 @@
  {
   "channel": "Kevin Stratvert",
   "title": "How to Create PowerPoint Presentations with AI (Genspark Tutorial)",
-  "views": 23607,
+  "views": 23734,
   "date": "2026-10-26",
   "url": "https://youtu.be/QmE1YuNPbiM"
  },
@@ -833,6 +861,13 @@
   "url": "https://youtu.be/OawSCIZdZmU"
  },
  {
+  "channel": "Parker Prompts",
+  "title": "7 Hermes Agent Skills You NEED to Install Today",
+  "views": 22534,
+  "date": "2026-10-31",
+  "url": "https://youtu.be/gcQCedWUHkE"
+ },
+ {
   "channel": "Futurepedia",
   "title": "The Ultimate Image Generator Showdown",
   "views": 22222,
@@ -840,11 +875,11 @@
   "url": "https://youtu.be/QLv4WCKVqd0"
  },
  {
-  "channel": "Parker Prompts",
-  "title": "7 Hermes Agent Skills You NEED to Install Today",
-  "views": 21630,
-  "date": "2026-10-31",
-  "url": "https://youtu.be/gcQCedWUHkE"
+  "channel": "Skill Leap AI",
+  "title": "You Won’t Believe the Websites Claude Can Build Now",
+  "views": 21277,
+  "date": "2026-11-05",
+  "url": "https://youtu.be/6m9Wihe9sJ8"
  },
  {
   "channel": "Parker Prompts",
@@ -868,16 +903,23 @@
   "url": "https://youtu.be/DZbCL56oz3M"
  },
  {
+  "channel": "Parker Prompts",
+  "title": "ChatGPT Work Gives You Superpowers, Here's How to Unlock It",
+  "views": 20495,
+  "date": "2026-11-02",
+  "url": "https://youtu.be/Q8CkwmY7BME"
+ },
+ {
   "channel": "Metics Media",
   "title": "How to Make a Website in 10 Minutes (using AI)",
-  "views": 19852,
+  "views": 20010,
   "date": "2026-10-17",
   "url": "https://youtu.be/5nkJKNQAi8I"
  },
  {
   "channel": "Matt Wolfe",
   "title": "Glasses That Make You Telepathic",
-  "views": 19745,
+  "views": 19798,
   "date": "2026-10-31",
   "url": "https://youtu.be/_9R7QOhJh-o"
  },
@@ -889,25 +931,18 @@
   "url": "https://youtu.be/aIrrq3CLSKM"
  },
  {
-  "channel": "Matt Wolfe",
-  "title": "Claude Code Just Called My Phone",
-  "views": 19052,
-  "date": "2026-11-07",
-  "url": "https://youtu.be/A5SfzBD6M3o"
+  "channel": "AI Master",
+  "title": "How to Set Up Claude for Small Business (AI Automation Guide)",
+  "views": 19054,
+  "date": "2026-10-31",
+  "url": "https://youtu.be/e8Ywi7AprYw"
  },
  {
-  "channel": "Parker Prompts",
-  "title": "ChatGPT Work Gives You Superpowers, Here's How to Unlock It",
-  "views": 18929,
-  "date": "2026-11-02",
-  "url": "https://youtu.be/Q8CkwmY7BME"
- },
- {
-  "channel": "Skill Leap AI",
-  "title": "You Won’t Believe the Websites Claude Can Build Now",
-  "views": 18465,
-  "date": "2026-11-05",
-  "url": "https://youtu.be/6m9Wihe9sJ8"
+  "channel": "Kevin Stratvert",
+  "title": "Video Editor with Customizable Templates: Build a Full Video Fast",
+  "views": 18390,
+  "date": "2026-10-30",
+  "url": "https://youtu.be/Df_FbS8PxTE"
  },
  {
   "channel": "Matt Wolfe",
@@ -918,17 +953,10 @@
  },
  {
   "channel": "AI Master",
-  "title": "How to Set Up Claude for Small Business (AI Automation Guide)",
-  "views": 18114,
-  "date": "2026-10-31",
-  "url": "https://youtu.be/e8Ywi7AprYw"
- },
- {
-  "channel": "Kevin Stratvert",
-  "title": "Video Editor with Customizable Templates: Build a Full Video Fast",
-  "views": 18079,
-  "date": "2026-10-30",
-  "url": "https://youtu.be/Df_FbS8PxTE"
+  "title": "How to Install DLSS 5 on ANY RTX GPU in One Click! (Full Tutorial)",
+  "views": 17756,
+  "date": "2026-11-08",
+  "url": "https://youtu.be/B_JmRIabBa4"
  },
  {
   "channel": "The AI Advantage",
@@ -945,11 +973,32 @@
   "url": "https://youtu.be/4O0VWfZZsj4"
  },
  {
+  "channel": "Matt Wolfe",
+  "title": "That is Some Crazy Fabric",
+  "views": 16836,
+  "date": "2026-11-07",
+  "url": "https://youtu.be/w3z3Fa7ACt8"
+ },
+ {
   "channel": "Nate Herk | AI Automation",
   "title": "What's your favorite AI model?",
-  "views": 16397,
+  "views": 16492,
   "date": "2026-11-04",
   "url": "https://youtu.be/wuTk_G_UtCI"
+ },
+ {
+  "channel": "Parker Prompts",
+  "title": "7 NEW Claude Mods Use Cases (Try These Now)",
+  "views": 16337,
+  "date": "2026-11-07",
+  "url": "https://youtu.be/a0BqNDnPM2I"
+ },
+ {
+  "channel": "Kevin Stratvert",
+  "title": "vidIQ Tutorial for Beginners (Step-by-Step)",
+  "views": 16326,
+  "date": "2026-11-03",
+  "url": "https://youtu.be/I_192sI3UPM"
  },
  {
   "channel": "Kevin Stratvert",
@@ -973,32 +1022,11 @@
   "url": "https://youtu.be/VVBszkWK0Io"
  },
  {
-  "channel": "Parker Prompts",
-  "title": "Grok Bot Tutorial for Beginners: How to Set Up Your First AI Agent",
-  "views": 15652,
-  "date": "2026-11-08",
-  "url": "https://youtu.be/xHYp3LvPCTA"
- },
- {
-  "channel": "Parker Prompts",
-  "title": "7 NEW Claude Mods Use Cases (Try These Now)",
-  "views": 15261,
-  "date": "2026-11-07",
-  "url": "https://youtu.be/a0BqNDnPM2I"
- },
- {
   "channel": "Nate Herk | AI Automation",
   "title": "Which AI tool do people at Oracle AI World use the most?",
-  "views": 15233,
+  "views": 15299,
   "date": "2026-11-03",
   "url": "https://youtu.be/iboJevEybdg"
- },
- {
-  "channel": "Kevin Stratvert",
-  "title": "vidIQ Tutorial for Beginners (Step-by-Step)",
-  "views": 15187,
-  "date": "2026-11-03",
-  "url": "https://youtu.be/I_192sI3UPM"
  },
  {
   "channel": "AI Master",
@@ -1009,10 +1037,10 @@
  },
  {
   "channel": "Matt Wolfe",
-  "title": "That is Some Crazy Fabric",
-  "views": 14473,
-  "date": "2026-11-07",
-  "url": "https://youtu.be/w3z3Fa7ACt8"
+  "title": "This controls games characters AND robots",
+  "views": 14460,
+  "date": "2026-11-08",
+  "url": "https://youtu.be/jKjir4-HmQI"
  },
  {
   "channel": "AI Master",
@@ -1058,6 +1086,13 @@
  },
  {
   "channel": "Matt Wolfe",
+  "title": "What will people REALLY use these for?",
+  "views": 12318,
+  "date": "2026-11-05",
+  "url": "https://youtu.be/hniPlxcQ7X4"
+ },
+ {
+  "channel": "Matt Wolfe",
   "title": "AI Design Hack Saves HOURS",
   "views": 12170,
   "date": "2026-10-08",
@@ -1066,16 +1101,23 @@
  {
   "channel": "Nate Herk | AI Automation",
   "title": "Do you say please to AI?",
-  "views": 11786,
+  "views": 11810,
   "date": "2026-11-02",
   "url": "https://youtu.be/1I2dLDAFNaY"
  },
  {
+  "channel": "AI Master",
+  "title": "1000+ Hours of Learning Claude Code in 25 Minutes (Beginner to Pro Tutorial)",
+  "views": 11754,
+  "date": "2026-11-04",
+  "url": "https://youtu.be/ec0StkHdO18"
+ },
+ {
   "channel": "Matt Wolfe",
-  "title": "What will people REALLY use these for?",
-  "views": 11704,
-  "date": "2026-11-05",
-  "url": "https://youtu.be/hniPlxcQ7X4"
+  "title": "Generate Worlds in Real-Time (Free & Open Source)",
+  "views": 11512,
+  "date": "2026-11-02",
+  "url": "https://youtu.be/lZes3U_WIug"
  },
  {
   "channel": "Matt Wolfe",
@@ -1085,11 +1127,11 @@
   "url": "https://youtu.be/b0jA6fkGsk8"
  },
  {
-  "channel": "Matt Wolfe",
-  "title": "Generate Worlds in Real-Time (Free & Open Source)",
-  "views": 11377,
-  "date": "2026-11-02",
-  "url": "https://youtu.be/lZes3U_WIug"
+  "channel": "Futurepedia",
+  "title": "Free Claude 2.0 Setup Guide",
+  "views": 11085,
+  "date": "2026-11-06",
+  "url": "https://youtu.be/BMsezHlEVW4"
  },
  {
   "channel": "Matt Wolfe",
@@ -1101,7 +1143,7 @@
  {
   "channel": "Matt Wolfe",
   "title": "Would you be excited to see this at Disneyland?",
-  "views": 10527,
+  "views": 10578,
   "date": "2026-11-02",
   "url": "https://youtu.be/h5SNFLIZl_U"
  },
@@ -1113,13 +1155,6 @@
   "url": "https://youtu.be/gyTcoQlibdk"
  },
  {
-  "channel": "AI Master",
-  "title": "1000+ Hours of Learning Claude Code in 25 Minutes (Beginner to Pro Tutorial)",
-  "views": 10375,
-  "date": "2026-11-04",
-  "url": "https://youtu.be/ec0StkHdO18"
- },
- {
   "channel": "Matt Wolfe",
   "title": "These ChatGPT Prompts Are Game-Changers!",
   "views": 10325,
@@ -1129,21 +1164,21 @@
  {
   "channel": "Metics Media",
   "title": "Hostinger Wordpress Tutorial 2026 - Full Website Setup Guide",
-  "views": 9958,
+  "views": 10144,
   "date": "2026-10-11",
   "url": "https://youtu.be/Ns6sfNYHYjc"
  },
  {
   "channel": "Kevin Stratvert",
   "title": "This AI Lets You Edit Presentations by Drawing! 🤯",
-  "views": 9955,
+  "views": 10048,
   "date": "2026-10-26",
   "url": "https://youtu.be/2Ly7Q6H4bWg"
  },
  {
   "channel": "Futurepedia",
   "title": "Claude just made motion graphics with zero video generator",
-  "views": 9893,
+  "views": 9912,
   "date": "2026-10-20",
   "url": "https://youtu.be/2gVfS19Hudk"
  },
@@ -1162,37 +1197,37 @@
   "url": "https://youtu.be/XQuRgVP9-Sc"
  },
  {
-  "channel": "Futurepedia",
-  "title": "Free Claude 2.0 Setup Guide",
-  "views": 9485,
-  "date": "2026-11-06",
-  "url": "https://youtu.be/BMsezHlEVW4"
- },
- {
   "channel": "Matt Wolfe",
   "title": "When a humanoid and a drone become besties",
-  "views": 9123,
+  "views": 9161,
   "date": "2026-10-30",
   "url": "https://youtu.be/4sGplZdBy6A"
  },
  {
   "channel": "Nate Herk | AI Automation",
+  "title": "Do people say please to AI?",
+  "views": 9069,
+  "date": "2026-11-06",
+  "url": "https://youtu.be/16lpGeMZlzY"
+ },
+ {
+  "channel": "Nate Herk | AI Automation",
   "title": "Favorite person in AI? Asking people at Oracle AI World",
-  "views": 9063,
+  "views": 9064,
   "date": "2026-11-04",
   "url": "https://youtu.be/eJqHvjD4060"
  },
  {
-  "channel": "Matt Wolfe",
-  "title": "This controls games characters AND robots",
-  "views": 9048,
-  "date": "2026-11-08",
-  "url": "https://youtu.be/jKjir4-HmQI"
+  "channel": "Futurepedia",
+  "title": "Claude 2 0 powerful code features for maximum organization",
+  "views": 9044,
+  "date": "2026-11-07",
+  "url": "https://youtu.be/3VTn_1SNktA"
  },
  {
   "channel": "Futurepedia",
   "title": "Claude video generator creates amazing storyboards",
-  "views": 8611,
+  "views": 8645,
   "date": "2026-10-27",
   "url": "https://youtu.be/KgYS_jaHdYo"
  },
@@ -1204,23 +1239,16 @@
   "url": "https://youtu.be/I9ja4gEbBiI"
  },
  {
-  "channel": "AI Master",
-  "title": "How to Install DLSS 5 on ANY RTX GPU in One Click! (Full Tutorial)",
-  "views": 8515,
-  "date": "2026-11-08",
-  "url": "https://youtu.be/B_JmRIabBa4"
- },
- {
   "channel": "Matt Wolfe",
   "title": "3 Critical Tasks AI Can Automate For You",
-  "views": 8382,
+  "views": 8431,
   "date": "2026-10-29",
   "url": "https://youtu.be/evXFML_Rnc0"
  },
  {
   "channel": "Futurepedia",
   "title": "Claude just got rebuilt so hard an engineer called it Claude 2.0",
-  "views": 8145,
+  "views": 8287,
   "date": "2026-11-04",
   "url": "https://youtu.be/WLJC4s8Nh1M"
  },
@@ -1232,16 +1260,30 @@
   "url": "https://youtu.be/fP4_LH2CrB8"
  },
  {
+  "channel": "AI Master",
+  "title": "How to Make AI Video Ads With Just a Product Photo (AI Marketing Tutorial)",
+  "views": 7715,
+  "date": "2026-10-31",
+  "url": "https://youtu.be/gGscsK57CE0"
+ },
+ {
+  "channel": "AI Master",
+  "title": "Ultimate Gemini Guide: How to Use Gemini 4 Argon (Beginner to Pro)",
+  "views": 7536,
+  "date": "2026-11-06",
+  "url": "https://youtu.be/42DKLSfo10E"
+ },
+ {
   "channel": "Futurepedia",
   "title": "Claude video generator turns your single prompt into a stylized movie",
-  "views": 7375,
+  "views": 7384,
   "date": "2026-10-21",
   "url": "https://youtu.be/KZRUdQYU4dI"
  },
  {
   "channel": "Futurepedia",
   "title": "Claude video style database for free",
-  "views": 7283,
+  "views": 7293,
   "date": "2026-10-22",
   "url": "https://youtu.be/xr024WjmJUY"
  },
@@ -1267,51 +1309,51 @@
   "url": "https://youtu.be/MCgavq9YpP0"
  },
  {
+  "channel": "Metics Media",
+  "title": "How to Design a Shopify Store for a Clothing Brand (2026)",
+  "views": 6890,
+  "date": "2026-11-05",
+  "url": "https://youtu.be/CwI1hvi-Zgc"
+ },
+ {
   "channel": "AI Master",
-  "title": "How to Make AI Video Ads With Just a Product Photo (AI Marketing Tutorial)",
-  "views": 6467,
-  "date": "2026-10-31",
-  "url": "https://youtu.be/gGscsK57CE0"
+  "title": "How to Create Viral AI Influencers With Higgsfield AI (Step-By-Step Guide)",
+  "views": 6842,
+  "date": "2026-11-02",
+  "url": "https://youtu.be/Q2vLbqB_mww"
  },
  {
   "channel": "AI Master",
   "title": "Ultimate Jev Tutorial: How to Set Up & Use Jev AI for Beginners",
-  "views": 6444,
+  "views": 6591,
   "date": "2026-10-29",
   "url": "https://youtu.be/yM8hWPvot-A"
  },
  {
   "channel": "Nate Herk | AI Automation",
-  "title": "Do people say please to AI?",
-  "views": 6341,
-  "date": "2026-11-06",
-  "url": "https://youtu.be/16lpGeMZlzY"
- },
- {
-  "channel": "Nate Herk | AI Automation",
   "title": "The dumbest things people have asked AI",
-  "views": 6294,
+  "views": 6306,
   "date": "2026-11-02",
   "url": "https://youtu.be/z8qXJFlcqlM"
  },
  {
-  "channel": "AI Master",
-  "title": "Ultimate Gemini Guide: How to Use Gemini 4 Argon (Beginner to Pro)",
-  "views": 6289,
-  "date": "2026-11-06",
-  "url": "https://youtu.be/42DKLSfo10E"
+  "channel": "Metics Media",
+  "title": "Hostinger WooCommerce Tutorial (2026) - Full Setup Guide",
+  "views": 5931,
+  "date": "2026-11-01",
+  "url": "https://youtu.be/dPUjUIXnbc4"
  },
  {
-  "channel": "Metics Media",
-  "title": "How to Design a Shopify Store for a Clothing Brand (2026)",
-  "views": 6136,
+  "channel": "Nate Herk | AI Automation",
+  "title": "Describe AI agents in 2027 in one word",
+  "views": 5917,
   "date": "2026-11-05",
-  "url": "https://youtu.be/CwI1hvi-Zgc"
+  "url": "https://youtu.be/P-zrKj-odIE"
  },
  {
   "channel": "Nate Herk | AI Automation",
   "title": "AI co-founder or human co-founder?",
-  "views": 5831,
+  "views": 5858,
   "date": "2026-11-03",
   "url": "https://youtu.be/fkeK5J7sjpI"
  },
@@ -1323,32 +1365,25 @@
   "url": "https://youtu.be/R706jvQfQMM"
  },
  {
-  "channel": "Metics Media",
-  "title": "Hostinger WooCommerce Tutorial (2026) - Full Setup Guide",
-  "views": 5733,
-  "date": "2026-11-01",
-  "url": "https://youtu.be/dPUjUIXnbc4"
- },
- {
-  "channel": "Nate Herk | AI Automation",
-  "title": "Describe AI agents in 2027 in one word",
-  "views": 5724,
-  "date": "2026-11-05",
-  "url": "https://youtu.be/P-zrKj-odIE"
- },
- {
-  "channel": "AI Master",
-  "title": "How to Create Viral AI Influencers With Higgsfield AI (Step-By-Step Guide)",
-  "views": 5709,
-  "date": "2026-11-02",
-  "url": "https://youtu.be/Q2vLbqB_mww"
- },
- {
   "channel": "The AI Advantage",
   "title": "The Meetings Plugin in ChatGPT",
   "views": 5657,
   "date": "2026-10-12",
   "url": "https://youtu.be/A6nf3vplEPY"
+ },
+ {
+  "channel": "The AI Advantage",
+  "title": "How I Use Claude in My Video Edits",
+  "views": 5530,
+  "date": "2026-11-05",
+  "url": "https://youtu.be/L0fLLr5Oej0"
+ },
+ {
+  "channel": "Metics Media",
+  "title": "Hostinger WordPress Tutorial 2026 - Full Course for Beginners",
+  "views": 5492,
+  "date": "2026-11-08",
+  "url": "https://youtu.be/TX8djQV2wKo"
  },
  {
   "channel": "Futurepedia",
@@ -1358,11 +1393,11 @@
   "url": "https://youtu.be/RxB56eE5BRc"
  },
  {
-  "channel": "The AI Advantage",
-  "title": "How I Use Claude in My Video Edits",
-  "views": 5221,
-  "date": "2026-11-05",
-  "url": "https://youtu.be/L0fLLr5Oej0"
+  "channel": "Futurepedia",
+  "title": "Claude video generator is a game changer",
+  "views": 5199,
+  "date": "2026-10-24",
+  "url": "https://youtu.be/RsidPYy61Fg"
  },
  {
   "channel": "Kevin Stratvert",
@@ -1372,11 +1407,11 @@
   "url": "https://youtu.be/3HQNVSbcllI"
  },
  {
-  "channel": "Futurepedia",
-  "title": "Claude video generator is a game changer",
-  "views": 5184,
-  "date": "2026-10-24",
-  "url": "https://youtu.be/RsidPYy61Fg"
+  "channel": "The AI Advantage",
+  "title": "OpenAI Dots: New Updates",
+  "views": 5145,
+  "date": "2026-11-02",
+  "url": "https://youtu.be/KItEnnHeNz0"
  },
  {
   "channel": "The AI Advantage",
@@ -1386,18 +1421,11 @@
   "url": "https://youtu.be/wtm2Dl1PHtk"
  },
  {
-  "channel": "Futurepedia",
-  "title": "Claude 2 0 powerful code features for maximum organization",
-  "views": 5042,
+  "channel": "Nate Herk | AI Automation",
+  "title": "Would you pick an AI co-founder or a human one?",
+  "views": 4872,
   "date": "2026-11-07",
-  "url": "https://youtu.be/3VTn_1SNktA"
- },
- {
-  "channel": "The AI Advantage",
-  "title": "OpenAI Dots: New Updates",
-  "views": 5023,
-  "date": "2026-11-02",
-  "url": "https://youtu.be/KItEnnHeNz0"
+  "url": "https://youtu.be/9qvqlSxgzgk"
  },
  {
   "channel": "AI Master",
@@ -1414,18 +1442,18 @@
   "url": "https://youtu.be/rAKVvImQcEQ"
  },
  {
+  "channel": "Nate Herk | AI Automation",
+  "title": "Would you let AI text for you for a week?",
+  "views": 4564,
+  "date": "2026-11-05",
+  "url": "https://youtu.be/UD_F6EJ86PY"
+ },
+ {
   "channel": "AI Master",
   "title": "How to Build a Real-Time AI Avatar With Claude (Voice AI Agent Tutorial)",
   "views": 4440,
   "date": "2026-10-15",
   "url": "https://youtu.be/DqUewrLQQfg"
- },
- {
-  "channel": "Nate Herk | AI Automation",
-  "title": "Would you let AI text for you for a week?",
-  "views": 4411,
-  "date": "2026-11-05",
-  "url": "https://youtu.be/UD_F6EJ86PY"
  },
  {
   "channel": "The AI Advantage",
@@ -1442,18 +1470,25 @@
   "url": "https://youtu.be/BXG4h1KLUTs"
  },
  {
+  "channel": "The AI Advantage",
+  "title": "ChatGPT Just Doubled Its Usage Limits!",
+  "views": 4038,
+  "date": "2026-11-02",
+  "url": "https://youtu.be/IFruWOvf098"
+ },
+ {
   "channel": "AI Master",
   "title": "How to Build a Fully Functional Web App with Claude AI (No Code)",
-  "views": 3959,
+  "views": 3987,
   "date": "2026-10-30",
   "url": "https://youtu.be/MZ3hEzqjJTg"
  },
  {
-  "channel": "The AI Advantage",
-  "title": "ChatGPT Just Doubled Its Usage Limits!",
-  "views": 3947,
-  "date": "2026-11-02",
-  "url": "https://youtu.be/IFruWOvf098"
+  "channel": "Futurepedia",
+  "title": "Claude's Artifacts now even more powerful",
+  "views": 3859,
+  "date": "2026-11-05",
+  "url": "https://youtu.be/zl2APMcV-mk"
  },
  {
   "channel": "AI Master",
@@ -1463,6 +1498,20 @@
   "url": "https://youtu.be/xWeOZLyQT14"
  },
  {
+  "channel": "Nate Herk | AI Automation",
+  "title": "What's the dumbest thing you've asked AI?",
+  "views": 3789,
+  "date": "2026-11-06",
+  "url": "https://youtu.be/EN9IcNncjxE"
+ },
+ {
+  "channel": "The AI Advantage",
+  "title": "Grok Bot Just Got Pages!",
+  "views": 3710,
+  "date": "2026-11-03",
+  "url": "https://youtu.be/aOV21mHETXQ"
+ },
+ {
   "channel": "Skill Leap AI",
   "title": "The Gemini Feature Nobody’s Using",
   "views": 3691,
@@ -1470,11 +1519,11 @@
   "url": "https://youtu.be/BGJELJSCpmc"
  },
  {
-  "channel": "The AI Advantage",
-  "title": "Grok Bot Just Got Pages!",
-  "views": 3606,
-  "date": "2026-11-03",
-  "url": "https://youtu.be/aOV21mHETXQ"
+  "channel": "Kevin Stratvert",
+  "title": "You’ve Tried ChatGPT. But Have You Tried Grok? 🤖",
+  "views": 3602,
+  "date": "2026-11-09",
+  "url": "https://youtu.be/frXyEsq-qao"
  },
  {
   "channel": "Metics Media",
@@ -1499,10 +1548,10 @@
  },
  {
   "channel": "Futurepedia",
-  "title": "Claude's Artifacts now even more powerful",
-  "views": 3483,
-  "date": "2026-11-05",
-  "url": "https://youtu.be/zl2APMcV-mk"
+  "title": "using Claude video generator to add captions and timestamps",
+  "views": 3444,
+  "date": "2026-10-23",
+  "url": "https://youtu.be/eMFpzUYNv3o"
  },
  {
   "channel": "Futurepedia",
@@ -1513,24 +1562,10 @@
  },
  {
   "channel": "Futurepedia",
-  "title": "using Claude video generator to add captions and timestamps",
-  "views": 3421,
-  "date": "2026-10-23",
-  "url": "https://youtu.be/eMFpzUYNv3o"
- },
- {
-  "channel": "Futurepedia",
   "title": "Your Personalized AI Plan, Free | Futurepedia 2.0",
   "views": 3412,
   "date": "2026-10-20",
   "url": "https://youtu.be/qXlgk8VExhI"
- },
- {
-  "channel": "Nate Herk | AI Automation",
-  "title": "Would you pick an AI co-founder or a human one?",
-  "views": 3384,
-  "date": "2026-11-07",
-  "url": "https://youtu.be/9qvqlSxgzgk"
  },
  {
   "channel": "Metics Media",
@@ -1554,18 +1589,18 @@
   "url": "https://youtu.be/at1DSU0dZkE"
  },
  {
-  "channel": "Nate Herk | AI Automation",
-  "title": "What's the dumbest thing you've asked AI?",
-  "views": 3270,
-  "date": "2026-11-06",
-  "url": "https://youtu.be/EN9IcNncjxE"
- },
- {
   "channel": "Futurepedia",
   "title": "Futurepedia 2.0 is live!",
-  "views": 3212,
+  "views": 3227,
   "date": "2026-10-28",
   "url": "https://youtu.be/isalixh-V0c"
+ },
+ {
+  "channel": "Matt Wolfe",
+  "title": "This Airtaxi is Ready For Primetime!",
+  "views": 3220,
+  "date": "2026-11-10",
+  "url": "https://youtu.be/GcFRheDNh5U"
  },
  {
   "channel": "The AI Advantage",
@@ -1575,25 +1610,18 @@
   "url": "https://youtu.be/nRuMcliU_uo"
  },
  {
-  "channel": "Metics Media",
-  "title": "Delaware LLC - How to Start an LLC in Delaware in 10 Minutes (2026)",
-  "views": 3125,
-  "date": "2026-09-30",
-  "url": "https://youtu.be/_44QkCeAI7g"
- },
- {
   "channel": "The AI Advantage",
   "title": "Still looking for the best AI bot for you?",
-  "views": 3118,
+  "views": 3127,
   "date": "2026-10-23",
   "url": "https://youtu.be/iOc6f6Dt10A"
  },
  {
   "channel": "Metics Media",
-  "title": "Hostinger WordPress Tutorial 2026 - Full Course for Beginners",
-  "views": 3088,
-  "date": "2026-11-08",
-  "url": "https://youtu.be/TX8djQV2wKo"
+  "title": "Delaware LLC - How to Start an LLC in Delaware in 10 Minutes (2026)",
+  "views": 3125,
+  "date": "2026-09-30",
+  "url": "https://youtu.be/_44QkCeAI7g"
  },
  {
   "channel": "Metics Media",
@@ -1619,9 +1647,16 @@
  {
   "channel": "Nate Herk | AI Automation",
   "title": "Would you let AI answer your texts for a week?",
-  "views": 2901,
+  "views": 2916,
   "date": "2026-11-01",
   "url": "https://youtu.be/sOK6kSXff0M"
+ },
+ {
+  "channel": "AI Master",
+  "title": "How to Automate Instagram DMs With Claude AI (Beginner's Guide)",
+  "views": 2862,
+  "date": "2026-11-06",
+  "url": "https://youtu.be/YUxvBstwv9U"
  },
  {
   "channel": "Nate Herk | AI Automation",
@@ -1632,8 +1667,22 @@
  },
  {
   "channel": "Skill Leap AI",
+  "title": "Turn a floor plan into a 3D house you can walk through with Claude",
+  "views": 2710,
+  "date": "2026-11-02",
+  "url": "https://youtu.be/pKHOq0HiEQU"
+ },
+ {
+  "channel": "Kevin Stratvert",
+  "title": "How to Use Claude Code for FREE with Ollama",
+  "views": 2638,
+  "date": "2026-11-10",
+  "url": "https://youtu.be/NkkAwdm2k7s"
+ },
+ {
+  "channel": "Skill Leap AI",
   "title": "Claude Built Something Insane",
-  "views": 2611,
+  "views": 2623,
   "date": "2026-10-29",
   "url": "https://youtu.be/i2VQk5z2nWM"
  },
@@ -1645,11 +1694,25 @@
   "url": "https://youtu.be/i7S52771wOw"
  },
  {
-  "channel": "Skill Leap AI",
-  "title": "Turn a floor plan into a 3D house you can walk through with Claude",
-  "views": 2548,
-  "date": "2026-11-02",
-  "url": "https://youtu.be/pKHOq0HiEQU"
+  "channel": "AI Master",
+  "title": "How to Use AI Voice Typing in Any App (Speech to Text Guide) | Typeless",
+  "views": 2571,
+  "date": "2026-11-07",
+  "url": "https://youtu.be/ppLYqflktAk"
+ },
+ {
+  "channel": "The AI Advantage",
+  "title": "ChatGPT Can Make GIFs Now!",
+  "views": 2506,
+  "date": "2026-11-09",
+  "url": "https://youtu.be/iZm0eJm-YNQ"
+ },
+ {
+  "channel": "The AI Advantage",
+  "title": "Find Files Instantly with AI",
+  "views": 2486,
+  "date": "2026-11-04",
+  "url": "https://youtu.be/DaOAGnkueB0"
  },
  {
   "channel": "Matt Wolfe",
@@ -1657,6 +1720,13 @@
   "views": 2479,
   "date": "2026-09-28",
   "url": "https://youtu.be/hx42whM7NsY"
+ },
+ {
+  "channel": "Skill Leap AI",
+  "title": "Claude Duet Sends Me a Daily Morning Brief",
+  "views": 2458,
+  "date": "2026-11-07",
+  "url": "https://youtu.be/izIlbtrFw0c"
  },
  {
   "channel": "Metics Media",
@@ -1673,13 +1743,6 @@
   "url": "https://youtu.be/GmIqYqDOOkg"
  },
  {
-  "channel": "AI Master",
-  "title": "How to Set Up Instagram DM Automation with Claude AI (Manychat Alternative)",
-  "views": 2427,
-  "date": "2026-11-06",
-  "url": "https://youtu.be/YUxvBstwv9U"
- },
- {
   "channel": "The AI Advantage",
   "title": "My Favorite Use Case for AI Agents",
   "views": 2400,
@@ -1687,37 +1750,30 @@
   "url": "https://youtu.be/kgS10xZhPzI"
  },
  {
-  "channel": "The AI Advantage",
-  "title": "Find Files Instantly with AI",
-  "views": 2399,
-  "date": "2026-11-04",
-  "url": "https://youtu.be/DaOAGnkueB0"
- },
- {
   "channel": "Skill Leap AI",
   "title": "The Gemini 4 Prompt Trick Nobody Uses",
-  "views": 2386,
+  "views": 2394,
   "date": "2026-10-27",
   "url": "https://youtu.be/ZmSOFij8m-8"
  },
  {
-  "channel": "AI Master",
-  "title": "How to Use AI Voice Typing in Any App (Speech to Text Guide) | Typeless",
-  "views": 2372,
-  "date": "2026-11-07",
-  "url": "https://youtu.be/ppLYqflktAk"
- },
- {
   "channel": "Skill Leap AI",
   "title": "You Haven't Seen Claude Do This Before",
-  "views": 2357,
+  "views": 2363,
   "date": "2026-10-28",
   "url": "https://youtu.be/MbJvMvNCW1k"
  },
  {
+  "channel": "Futurepedia",
+  "title": "One Claude chat can run all your other chats",
+  "views": 2354,
+  "date": "2026-11-09",
+  "url": "https://youtu.be/JMrZEdQrHP8"
+ },
+ {
   "channel": "Skill Leap AI",
   "title": "Gemini 4 Just Did Something Wild",
-  "views": 2314,
+  "views": 2319,
   "date": "2026-10-23",
   "url": "https://youtu.be/vruT2g_d_9k"
  },
@@ -1729,9 +1785,16 @@
   "url": "https://youtu.be/6YEtBN76MK0"
  },
  {
+  "channel": "Skill Leap AI",
+  "title": "The Hidden ChatGPT Feature Almost Nobody Uses",
+  "views": 2218,
+  "date": "2026-11-09",
+  "url": "https://youtu.be/lNzVM7KIeGI"
+ },
+ {
   "channel": "The AI Advantage",
   "title": "iCloud Mail & Calendar Are Now in ChatGPT!",
-  "views": 2151,
+  "views": 2213,
   "date": "2026-11-02",
   "url": "https://youtu.be/LhBOXOdPqEo"
  },
@@ -1765,10 +1828,31 @@
  },
  {
   "channel": "Skill Leap AI",
-  "title": "Claude Duet Sends Me a Daily Morning Brief",
-  "views": 1972,
-  "date": "2026-11-07",
-  "url": "https://youtu.be/izIlbtrFw0c"
+  "title": "I Can't Believe Claude Made This",
+  "views": 1986,
+  "date": "2026-11-06",
+  "url": "https://youtu.be/gPtB8Vkay40"
+ },
+ {
+  "channel": "Skill Leap AI",
+  "title": "Most People Use Claude the Wrong Way",
+  "views": 1986,
+  "date": "2026-11-09",
+  "url": "https://youtu.be/blDMSLpFCzw"
+ },
+ {
+  "channel": "The AI Advantage",
+  "title": "Switch ChatGPT Accounts in Seconds!",
+  "views": 1982,
+  "date": "2026-11-09",
+  "url": "https://youtu.be/YKsFWC39qok"
+ },
+ {
+  "channel": "Skill Leap AI",
+  "title": "Build a website with Claude without writing code",
+  "views": 1967,
+  "date": "2026-11-05",
+  "url": "https://youtu.be/OIzVkR-ZLK4"
  },
  {
   "channel": "AI Master",
@@ -1785,11 +1869,11 @@
   "url": "https://youtu.be/nc2ocx3ST8Q"
  },
  {
-  "channel": "Skill Leap AI",
-  "title": "Build a website with Claude without writing code",
-  "views": 1875,
-  "date": "2026-11-05",
-  "url": "https://youtu.be/OIzVkR-ZLK4"
+  "channel": "AI Master",
+  "title": "How to Save 90% of Your Claude Tokens — Full Model Management Guide",
+  "views": 1838,
+  "date": "2026-11-09",
+  "url": "https://youtu.be/-l6H36dG1r8"
  },
  {
   "channel": "Nate Herk | AI Automation",
@@ -1797,13 +1881,6 @@
   "views": 1831,
   "date": "2026-10-31",
   "url": "https://youtu.be/F9YdbCwBX3c"
- },
- {
-  "channel": "Skill Leap AI",
-  "title": "I Can't Believe Claude Made This",
-  "views": 1769,
-  "date": "2026-11-06",
-  "url": "https://youtu.be/gPtB8Vkay40"
  },
  {
   "channel": "Futurepedia",
@@ -1827,6 +1904,13 @@
   "url": "https://youtu.be/cF67F-XpDOA"
  },
  {
+  "channel": "Futurepedia",
+  "title": "Claude designs look generic until you do this.",
+  "views": 1562,
+  "date": "2026-11-09",
+  "url": "https://youtu.be/6w9PtRnSP50"
+ },
+ {
   "channel": "Skill Leap AI",
   "title": "ChatGPT Work hack that will save you hours! #chatgpt",
   "views": 1533,
@@ -1834,9 +1918,16 @@
   "url": "https://youtu.be/aZ7BhQamWto"
  },
  {
+  "channel": "The AI Advantage",
+  "title": "3 New Dots Updates You Should Know About",
+  "views": 1340,
+  "date": "2026-11-09",
+  "url": "https://youtu.be/k8zxn8OvTYU"
+ },
+ {
   "channel": "Skill Leap AI",
   "title": "Build a live QuickBooks dashboard with Claude",
-  "views": 1314,
+  "views": 1323,
   "date": "2026-10-31",
   "url": "https://youtu.be/qowkbEXwdyE"
  },
@@ -1850,7 +1941,7 @@
  {
   "channel": "Skill Leap AI",
   "title": "Turn a business plan PDF into a 3D venue with Claude Code",
-  "views": 761,
+  "views": 774,
   "date": "2026-10-30",
   "url": "https://youtu.be/OwpRYuvHXTc"
  },
@@ -1862,6 +1953,13 @@
   "url": "https://youtu.be/PDaXjakAdSo"
  },
  {
+  "channel": "Metics Media",
+  "title": "How to Start an LLC in New York in 15 Minutes (2026) - Step-by-Step",
+  "views": 592,
+  "date": "2026-11-10",
+  "url": "https://youtu.be/JYRi2IVVT5U"
+ },
+ {
   "channel": "AI Master",
   "title": "Turn Complex Workflows into Clear AI Infographics",
   "views": 566,
@@ -1869,10 +1967,24 @@
   "url": "https://youtu.be/paerDj0-ObA"
  },
  {
-  "channel": "Skill Leap AI",
-  "title": "The Hidden ChatGPT Feature Almost Nobody Uses",
-  "views": 368,
+  "channel": "The AI Advantage",
+  "title": "Let Claude Help You Understand Your Spending",
+  "views": 445,
   "date": "2026-11-09",
-  "url": "https://youtu.be/lNzVM7KIeGI"
+  "url": "https://youtu.be/sRxngr7JfVc"
+ },
+ {
+  "channel": "AI Master",
+  "title": "Stop Logging Out Between Claude Accounts!",
+  "views": 443,
+  "date": "2026-11-09",
+  "url": "https://youtu.be/7nL6qSfwcTY"
+ },
+ {
+  "channel": "AI Master",
+  "title": "Why AI Voices Sound Fake (And How to Fix It)",
+  "views": 46,
+  "date": "2026-11-10",
+  "url": "https://youtu.be/B8Oa_kDCvZo"
  }
 ]
