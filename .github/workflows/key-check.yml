@@ -17,6 +17,7 @@ jobs:
           K_PODCAST: ${{ secrets.GEMINI_TTS_PODCAST }}
           K_MAIN: ${{ secrets.GEMINI_API_KEY }}
           K_BACKUP: ${{ secrets.GEMINI_BACKUP_KEY }}
+          NAWA_TOKEN: ${{ secrets.NAWA_TOKEN }}
           TOKEN: ${{ secrets.NEWS_BOT_TOKEN || secrets.TELEGRAM_BOT_TOKEN }}
           CHAT_SECRET: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
@@ -32,5 +33,14 @@ jobs:
             fi
             echo "$n: $r"; msg="$msg"$'\n'"$n: $r"
           done
+          # NAWA_TOKEN: نوائے فاروقی کے نجی ریپو تک رسائی (کلون + پُش اجازت + Actions پڑھنا)
+          if [ -z "$NAWA_TOKEN" ]; then r="❌ Secret خالی"
+          else
+            c=$(git ls-remote "https://x-access-token:${NAWA_TOKEN}@github.com/nawaefarooqi-bit/nawaefarooqi-agents" HEAD >/dev/null 2>&1 && echo ok || echo no)
+            pu=$(curl -s -H "Authorization: Bearer $NAWA_TOKEN" https://api.github.com/repos/nawaefarooqi-bit/nawaefarooqi-agents | python3 -c "import json,sys;print(json.load(sys.stdin).get('permissions',{}).get('push'))" 2>/dev/null)
+            ac=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: Bearer $NAWA_TOKEN" "https://api.github.com/repos/nawaefarooqi-bit/nawaefarooqi-agents/actions/runs?per_page=1")
+            [ "$c" = ok ] && [ "$pu" = True ] && [ "$ac" = 200 ] && r="✅ ٹھیک (کلون، پُش، Actions)" || r="❌ کلون:$c پُش:$pu Actions:$ac"
+          fi
+          echo "NAWA_TOKEN: $r"; msg="$msg"$'\n'"NAWA_TOKEN: $r"
           CHAT=$(python3 -c "import json;print(json.load(open('state/news.json')).get('chat',''))" 2>/dev/null); CHAT=${CHAT:-$CHAT_SECRET}
           curl -s -d "chat_id=$CHAT" --data-urlencode "text=$msg" "https://api.telegram.org/bot$TOKEN/sendMessage" >/dev/null
