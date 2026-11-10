@@ -4,12 +4,14 @@ on:
   workflow_dispatch:
     inputs:
       fetch_only: { description: "Kaggle پر بنا ہوا نتیجہ ہی لاؤ", type: boolean, default: false }
-permissions: {}
+permissions: { contents: read }
 jobs:
   s:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
+      - uses: actions/checkout@v4
+        with: { path: pub, sparse-checkout: state }
       - name: Engine
         env: { ENGINE_TOKEN: "${{ secrets.ENGINE_TOKEN }}" }
         run: |
@@ -46,8 +48,9 @@ jobs:
         working-directory: eng
         run: python -u lab/lipsync/post.py /tmp/w /tmp/w/anchors_sample.mp4
       - name: Send to Telegram
-        env: { TOKEN: "${{ secrets.TELEGRAM_BOT_TOKEN }}", CHAT: "${{ secrets.TELEGRAM_CHAT_ID }}" }
+        env: { TOKEN: "${{ secrets.NEWS_BOT_TOKEN || secrets.TELEGRAM_BOT_TOKEN }}", CHAT0: "${{ secrets.TELEGRAM_CHAT_ID }}" }
         run: |
+          CHAT=$(jq -r '.chat // empty' pub/state/news.json 2>/dev/null); CHAT=${CHAT:-$CHAT0}
           curl -s -F "chat_id=$CHAT" -F "video=@/tmp/w/anchors_sample.mp4" -F "supports_streaming=true" \
             -F "caption=🎙️ نمونہ: دو AI اینکر اردو میں (Microsoft آواز، ہونٹ Kaggle GPU پر LatentSync سے) — صرف آزمائش، کہیں شائع نہیں" \
             "https://api.telegram.org/bot$TOKEN/sendVideo" | head -c 200
