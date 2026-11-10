@@ -36,10 +36,12 @@ jobs:
           # NAWA_TOKEN: نوائے فاروقی کے نجی ریپو تک رسائی (کلون + پُش اجازت + Actions پڑھنا)
           if [ -z "$NAWA_TOKEN" ]; then r="❌ Secret خالی"
           else
-            c=$(git ls-remote "https://x-access-token:${NAWA_TOKEN}@github.com/nawaefarooqi-bit/nawaefarooqi-agents" HEAD >/dev/null 2>&1 && echo ok || echo no)
+            if git ls-remote "https://x-access-token:${NAWA_TOKEN}@github.com/nawaefarooqi-bit/nawaefarooqi-agents" HEAD >/dev/null 2>gerr; then c=ok; else c=no; echo "git: $(head -c 300 gerr)"; fi
+            ct=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: Bearer $NAWA_TOKEN" "https://api.github.com/repos/nawaefarooqi-bit/nawaefarooqi-agents/contents/")
+            echo "contents api: $ct"; curl -s -I -H "Authorization: Bearer $NAWA_TOKEN" https://api.github.com/repos/nawaefarooqi-bit/nawaefarooqi-agents | grep -i "x-accepted-github-permissions\|github-authentication-token-expiration\|x-oauth"
             pu=$(curl -s -H "Authorization: Bearer $NAWA_TOKEN" https://api.github.com/repos/nawaefarooqi-bit/nawaefarooqi-agents | python3 -c "import json,sys;print(json.load(sys.stdin).get('permissions',{}).get('push'))" 2>/dev/null)
             ac=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: Bearer $NAWA_TOKEN" "https://api.github.com/repos/nawaefarooqi-bit/nawaefarooqi-agents/actions/runs?per_page=1")
-            [ "$c" = ok ] && [ "$pu" = True ] && [ "$ac" = 200 ] && r="✅ ٹھیک (کلون، پُش، Actions)" || r="❌ کلون:$c پُش:$pu Actions:$ac"
+            [ "$c" = ok ] && [ "$pu" = True ] && [ "$ac" = 200 ] && r="✅ ٹھیک (کلون، پُش، Actions)" || r="❌ کلون:$c مواد:$ct Actions:$ac"
           fi
           echo "NAWA_TOKEN: $r"; msg="$msg"$'\n'"NAWA_TOKEN: $r"
           CHAT=$(python3 -c "import json;print(json.load(open('state/news.json')).get('chat',''))" 2>/dev/null); CHAT=${CHAT:-$CHAT_SECRET}
