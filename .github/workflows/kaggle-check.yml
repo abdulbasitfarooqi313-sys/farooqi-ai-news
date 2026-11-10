@@ -1,0 +1,15 @@
+# 🔍 عارضی: Kaggle چابی کی جانچ (قیمت نہیں چھپتی)
+name: Kaggle check
+on: workflow_dispatch
+permissions: {}
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - env: { K: "${{ secrets.KAGGLE_KEY }}", U: "${{ secrets.KAGGLE_USERNAME }}" }
+        run: |
+          echo "key len=${#K} prefix=${K:0:5} spaces=$(printf '%s' "$K" | tr -cd ' \n\r\t' | wc -c) user=$U"
+          pip install -q -U kaggle >/dev/null 2>&1; kaggle --version
+          export KAGGLE_API_TOKEN="$K" KAGGLE_USERNAME="$U"
+          kaggle kernels list --mine 2>&1 | head -5 || true
