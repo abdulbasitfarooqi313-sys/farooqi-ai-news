@@ -15,7 +15,7 @@ jobs:
         with: { python-version: "3.12" }
       - run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
-          pip install -q edge-tts kaggle
+          pip install -q edge-tts kaggle six
       - name: Prep (voice + crops)
         working-directory: eng
         run: python -u lab/lipsync/prep.py lab/lipsync/src.mp4 /tmp/w
@@ -28,7 +28,7 @@ jobs:
           printf '{"title":"farooqi-lipsync-in","id":"%s/farooqi-lipsync-in","licenses":[{"name":"CC0-1.0"}]}' "$U" > $D/dataset-metadata.json
           kaggle datasets create -p $D -q 2>&1 | tail -2 || true
           kaggle datasets version -p $D -m "run $GITHUB_RUN_NUMBER" -q 2>&1 | tail -2 || true
-          for i in $(seq 1 40); do st=$(kaggle datasets status "$U/farooqi-lipsync-in" 2>&1 | tail -1); echo "dataset: $st"; [ "$st" = ready ] && break; sleep 15; done
+          for i in $(seq 1 40); do st=$(kaggle datasets status "$U/farooqi-lipsync-in" 2>&1 | tail -1); echo "dataset: $st"; [ "$st" = ready ] && break; case "$st" in *Error*|*error*) exit 1;; esac; sleep 15; done
           cp eng/lab/lipsync/kaggle_run.py $K/
           printf '{"id":"%s/farooqi-lipsync-sample","title":"farooqi-lipsync-sample","code_file":"kaggle_run.py","language":"python","kernel_type":"script","is_private":true,"enable_gpu":true,"enable_internet":true,"machine_shape":"NvidiaTeslaT4","dataset_sources":["%s/farooqi-lipsync-in"],"competition_sources":[],"kernel_sources":[]}' "$U" "$U" > $K/kernel-metadata.json
           kaggle kernels push -p $K
