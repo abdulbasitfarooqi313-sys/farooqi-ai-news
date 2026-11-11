@@ -48,7 +48,9 @@
      "fit_why": "ہمارے چینل کے ناظرین آف لائن اور مفت اے آئی ٹولز کی معلومات میں شدید دلچسپی رکھتے ہیں، جو لوکل اے آئی کے رجحان سے بالکل مطابقت رکھتا ہے۔"
     }
    },
-   "on": "2026-11-11"
+   "on": "2026-11-11",
+   "id": "0ab2282f09",
+   "status": "new"
   },
   {
    "channel": "Matthew Berman",
@@ -93,7 +95,9 @@
      "fit_why": "یہ موضوع ہمارے چینل کے فاسٹ پیسڈ، جدید AI اپڈیٹس اور شارٹ ہٹ نیوز فارمیٹ پر مکمل پورا اترتا ہے۔"
     }
    },
-   "on": "2026-11-11"
+   "on": "2026-11-11",
+   "id": "0b86b0430b",
+   "status": "new"
   }
  ],
  "toolscape": [
@@ -141,7 +145,9 @@
      "fit_why": "It transforms a viral, passive-viewing meme concept into a practical, hands-on tutorial that beginners can follow directly on Claude's free browser interface without terminal setup."
     }
    },
-   "on": "2026-11-11"
+   "on": "2026-11-11",
+   "id": "8c5618b447",
+   "status": "new"
   },
   {
    "channel": "Futurepedia",
@@ -186,7 +192,9 @@
      "fit_why": "It perfectly matches our faceless, screen-recorded tutorial format while addressing high viewer demand for practical, step-by-step guidance on top-tier AI tools."
     }
    },
-   "on": "2026-11-11"
+   "on": "2026-11-11",
+   "id": "974311b69f",
+   "status": "new"
   }
  ]
 }
