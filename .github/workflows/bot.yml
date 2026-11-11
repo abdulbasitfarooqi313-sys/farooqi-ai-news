@@ -60,13 +60,15 @@ jobs:
           TS_BLOGGER_REFRESH_TOKEN: ${{ secrets.TS_BLOGGER_REFRESH_TOKEN }}
           TS_GEMINI_API_KEY: ${{ secrets.TS_GEMINI_API_KEY }}
           TS_DIR: ts
+          GEMINI_NEWS_KEY: ${{ secrets.GEMINI_NEWS_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           BOT_LOOP_MIN: "26"
         run: python -m news.bulletin pollloop
       - name: Save
         run: |
           git config user.name "ai-news-bot"
           git config user.email "ai-news-bot@users.noreply.github.com"
-          git add state/news.json || true; git add state/yt_slots.json 2>/dev/null || true; git add state/yt_public.json 2>/dev/null || true; git add state/public_watch.json 2>/dev/null || true; git add state/blog.json 2>/dev/null || true; git add -A state/blog_queue 2>/dev/null || true
+          git add state/news.json || true; git add state/yt_slots.json state/outliers.json 2>/dev/null || true; git add state/yt_public.json 2>/dev/null || true; git add state/public_watch.json 2>/dev/null || true; git add state/blog.json 2>/dev/null || true; git add -A state/blog_queue 2>/dev/null || true
           git diff --cached --quiet && exit 0
           git commit -m "بوٹ: حیثیت"
           for i in 1 2 3; do git pull --rebase --autostash -X theirs && git push && exit 0; sleep 10; done; exit 1
