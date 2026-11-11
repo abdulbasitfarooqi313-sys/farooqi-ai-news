@@ -1,0 +1,18 @@
+# 🧪 Groq کا نمونہ — جیمنائی کے ساتھ موازنہ، ٹیلیگرام پر۔ سسٹم میں کچھ نہیں بدلتا۔
+name: Groq sample
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          NEWS_BOT_TOKEN: ${{ secrets.NEWS_BOT_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 -u tools/groq_sample.py
