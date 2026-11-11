@@ -1,0 +1,31 @@
+name: key-diag (temporary)
+on: { push: { paths: [".github/workflows/key-diag.yml"] } }
+jobs:
+  d:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          K1: ${{ secrets.GEMINI_NEWS_KEY }}
+          K2: ${{ secrets.GEMINI_API_KEY }}
+          K3: ${{ secrets.GEMINI_BACKUP_KEY }}
+          K4: ${{ secrets.TS_GEMINI_API_KEY }}
+          K5: ${{ secrets.NAWA_GEMINI_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import os, hashlib, json, urllib.request
+          names = {"K1": "GEMINI_NEWS_KEY (اے آئی نیوز)", "K2": "GEMINI_API_KEY (اے آئی نیوز)", "K3": "GEMINI_BACKUP_KEY (ریزرو)",
+                   "K4": "TS_GEMINI_API_KEY (ٹول اسکیپ)", "K5": "NAWA_GEMINI_API_KEY (نوا)"}
+          seen = {}
+          for k, n in names.items():
+              v = os.environ.get(k, "").strip()
+              if not v:
+                  print(f"{n}: نہیں لگی"); continue
+              h = hashlib.sha256(v.encode()).hexdigest()[:6]
+              same = seen.get(h); seen.setdefault(h, n)
+              try:
+                  r = json.load(urllib.request.urlopen(f"https://generativelanguage.googleapis.com/v1beta/models?pageSize=1&key={v}", timeout=20))
+                  ok = "چل رہی ہے"
+              except Exception as e:
+                  ok = f"نہیں چلی ({getattr(e, 'code', type(e).__name__)})"
+              print(f"{n}: لگی ہے، {ok}, نشان {h}" + (f" — یہ وہی چابی ہے جو {same}" if same else ""))
+          PY
