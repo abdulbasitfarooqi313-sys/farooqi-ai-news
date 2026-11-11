@@ -1,0 +1,22 @@
+name: ts-diag (temporary)
+on: { push: { paths: [".github/workflows/ts-diag.yml"] } }
+jobs:
+  d:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          A: ${{ secrets.TOOLSCAPE_BOT_TOKEN }}
+          C: ${{ secrets.TELEGRAM_CHAT_ID }}
+          D: ${{ secrets.TS_TELEGRAM_CHAT_ID }}
+        run: |
+          python3 - <<'PY'
+          import os, json, urllib.request as U
+          A, C, D = (os.environ[k].strip() for k in "ACD")
+          print("D set", bool(D), "C==D", C == D)
+          ups = json.load(U.urlopen(f"https://api.telegram.org/bot{A}/getUpdates?timeout=0"))["result"]
+          print("updates", len(ups))
+          for u in ups[-15:]:
+              cb = u.get("callback_query") or {}; m = u.get("message") or {}
+              f = str((cb.get("from") or m.get("from") or {}).get("id"))
+              print("  ", u["update_id"], cb.get("data", "")[:20], "==C", f == C, "==D", f == D)
+          PY
