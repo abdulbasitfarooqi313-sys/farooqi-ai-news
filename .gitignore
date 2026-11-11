@@ -12,3 +12,6 @@ requirements.txt
 AGENTS.md
 *.py
 ts/
+
+# نگران: کوئی راز نہیں، انجن کا کوڈ نہیں — پبلک رہ سکتا ہے
+!tools/watchdog.py
