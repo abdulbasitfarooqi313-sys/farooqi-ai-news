@@ -62,6 +62,7 @@ jobs:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           OPENVERSE_CLIENT_ID: ${{ secrets.OPENVERSE_CLIENT_ID }}
           OPENVERSE_CLIENT_SECRET: ${{ secrets.OPENVERSE_CLIENT_SECRET }}
+          NEWS_LOOK: tv             # 📺 ٹی وی انداز — مالک کی منظوری 11 نومبر 2026
           # بغیر اینکر انداز (NEWS_STYLE: explainer, NEWS_ANCHOR: "off", NEWS_ORDER: cold) — مالک کے اطمینان تک صرف نمونوں میں
         run: |
           set +e
