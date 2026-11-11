@@ -1,81 +1,86 @@
 {
- "summary": "Today's AI landscape highlights open-source productivity utilities alongside Meta's low-cost model releases like Muse Ember. Beginners are actively searching for simple tools to automate file processing and privacy audits without paying heavy monthly subscriptions.",
+ "summary": "Today's desk focuses on the impending retirement of OpenAI's Standard Voice Mode and the rollout of Anthropic's new office suite tools. We will provide clear, beginner-friendly workarounds and tutorials tailored to our US, UK, and Canadian audience.",
  "topics": [
   {
-   "title": "Documind Open-Source Document Parsing",
-   "why": "Document automation is trending on Hacker News with open-source tools converting unstructured PDFs into clean data.",
+   "title": "OpenAI Retiring Standard Voice Mode on December 11",
+   "why": "Massive backlash and user frustration on Reddit as OpenAI prepares to kill Standard Voice Mode on December 11th.",
    "trend": 10,
    "sources": [
-    "hnrss.org"
+    "reddit.com"
    ]
   },
   {
-   "title": "Meta Muse Ember Model Launch",
-   "why": "Meta released a low-cost AI model targeting budget-conscious AI workflow integration.",
+   "title": "Anthropic Office Tools Suite",
+   "why": "Anthropic is taking on Microsoft by unveiling its own AI-powered office suite ahead of an IPO.",
    "trend": 9,
    "sources": [
+    "Bloomberg.com",
+    "The Verge",
     "news.google.com"
    ]
   },
   {
-   "title": "AI Privacy Policy Readers",
-   "why": "Open-source privacy tools that scan terms of service for hidden data selling are gaining traction on Hacker News.",
+   "title": "Seedream 5.5 by ByteDance",
+   "why": "Trending new AI media release on Product Hunt capturing creator interest.",
    "trend": 8,
    "sources": [
-    "hnrss.org"
+    "producthunt.com"
    ]
   },
   {
-   "title": "Open-Source AI Children's Drawing Animator",
-   "why": "Visual animation tools are popular for casual creative projects across tech forums.",
+   "title": "MiniMax H3-Image",
+   "why": "New image generation tool gaining traction among creators on Product Hunt.",
    "trend": 7,
    "sources": [
-    "hnrss.org"
+    "producthunt.com"
    ]
   },
   {
-   "title": "Meshy 3D AI Editing Tools",
-   "why": "Recent reviews show growing interest in beginner-friendly 3D mesh editing with text prompts.",
+   "title": "Scribe v3 by ElevenLabs",
+   "why": "Latest audio and transcription update from ElevenLabs making waves.",
    "trend": 6,
    "sources": [
-    "news.google.com"
+    "producthunt.com"
    ]
   },
   {
-   "title": "AI Recipe Modifiers in Consumer Apps",
-   "why": "Major publications are covering practical consumer applications like recipe customizing with AI.",
+   "title": "Adobe AI Agents and Creative Tools",
+   "why": "Adobe MAX brought new AI agent capabilities to Photoshop, Premiere, and Firefly.",
    "trend": 5,
    "sources": [
+    "TechCrunch",
+    "AppleInsider",
     "news.google.com"
    ]
   },
   {
-   "title": "Lottie AI Motion Graphics",
-   "why": "Product Hunt launched web-based AI tools simplifying vector graphics animation.",
+   "title": "Mitra MCP",
+   "why": "Developer productivity tool trending on Product Hunt.",
    "trend": 4,
    "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "ChatGPT Usage Limits and Beginner Tips",
-   "why": "Reddit users are actively discussing strict account limits and practical workaround strategies for daily prompts.",
+   "title": "Apify AI Agent Capabilities",
+   "why": "New server actors and agent capabilities announced to support growing demand.",
    "trend": 3,
    "sources": [
-    "reddit.com"
+    "Yahoo Finance UK",
+    "news.google.com"
    ]
   },
   {
-   "title": "MIT High-Speed Image Generation",
-   "why": "Researchers unveiled faster generative models making local image creation realistic for basic hardware.",
+   "title": "Nod by n8n",
+   "why": "Workflow automation tool gaining discussion among beginner builders.",
    "trend": 2,
    "sources": [
-    "hnrss.org"
+    "producthunt.com"
    ]
   },
   {
-   "title": "Inspo Design and Prompt Discovery",
-   "why": "New curation platforms help beginner creators find proven prompts for daily tasks.",
+   "title": "Muse Ember by Meta",
+   "why": "New Meta experimental tool listed and discussed on Product Hunt.",
    "trend": 1,
    "sources": [
     "producthunt.com"
@@ -84,334 +89,348 @@
  ],
  "packages": [
   {
-   "topic": "Documind Open-Source Document Parsing",
-   "competitors": "Kevin Stratvert covered Excel Copilot dashboards while Nate Herk focused on Codex file setups. Both missed showing a free, step-by-step open-source tool that extracts clean tables from messy PDF invoices without coding.",
-   "angle": "Show beginners how to convert any PDF report into a clean spreadsheet in under five minutes using free open-source software.",
+   "topic": "OpenAI Retiring Standard Voice Mode on December 11",
+   "competitors": "Competitors are covering general AI updates or complaining about features, but they missed a step-by-step tutorial on what users can do right now to adapt before December 11.",
+   "angle": "We show 3 practical workarounds to replace Standard Voice Mode for free before the December 11 deadline.",
    "viral": {
-    "score": 58,
-    "why": "PDF data extraction is a daily headache for office workers, and open-source free tools beat paid alternatives."
+    "score": 82,
+    "why": "Mass panic and anger on Reddit regarding the December 11 deadline makes this highly searched and timely."
    },
    "long": {
-    "title": "Turn Any PDF into a Spreadsheet in 5 Minutes (Free AI)",
-    "thumb": "PDF To Excel Free",
-    "hook": "In the next five minutes, you will convert a multi-page PDF document into an organized Excel table without typing anything by hand. Most online converters break formatting, but this free open-source AI tool parses exact data fields automatically.",
+    "title": "ChatGPT Standard Voice is Ending: 3 Free Alternatives",
+    "thumb": "ChatGPT Voice Ending",
+    "hook": "In the next 6 minutes you will set up three free voice alternatives before ChatGPT Standard Voice retires on December 11. No paid subscription required.",
     "outline": [
-     "The problem with copy-pasting text from PDF files",
-     "Setting up Documind on a web browser without code",
-     "Uploading sample invoices and bank statements",
-     "Defining clean data fields for automatic extraction",
-     "Exporting structured results directly to CSV or Excel",
-     "One real downside: processing scanned handwriting requires extra setup",
-     "Summary and next recommended workflow tutorial"
+     "Why OpenAI is retiring Standard Voice Mode on December 11",
+     "Alternative 1: Setting up native desktop voice features",
+     "Alternative 2: Using free browser extensions for read-aloud",
+     "Alternative 3: Using mobile app workarounds",
+     "Step-by-step test of audio quality",
+     "Summary of your best free option"
     ]
    },
    "shorts": [
     {
-     "title": "Extract PDF Tables in Seconds",
-     "hook": "Stop copy-pasting tables from PDF documents by hand.",
-     "script": "If you ever receive PDF receipts or reports, manual data entry takes hours. Instead, upload your file to Documind. Define the fields you need, like dates, amounts, and vendor names. The AI reads the entire document and generates a clean CSV file you can open straight in Google Sheets. It runs free and preserves your layout.",
-     "cta": "Subscribe to Toolscape for daily free AI workflow guides."
+     "title": "ChatGPT Voice is Gone Dec 11",
+     "hook": "Stop what you're doing: ChatGPT Standard Voice is retiring on December 11.",
+     "script": "OpenAI is officially killing Standard Voice Mode on December 11, and users are not happy. If you rely on it daily, here are two free ways to replace it right now. First, open your settings and test the updated desktop mode. Second, use our free recommended tool in the pinned comment. Try this today before the deadline.",
+     "cta": "Subscribe for more tool updates."
     },
     {
-     "title": "Free PDF to Excel AI Tool",
-     "hook": "This free tool converts scanned PDFs into clean Excel files.",
-     "script": "Most PDF converters scramble your rows and columns. Documind uses open-source AI models to understand document structure. Simply drag your file into the dashboard, select target fields, and download structured data. You do not need a paid subscription or technical skills to use it.",
-     "cta": "Check the channel for the full screen-by-screen setup."
+     "title": "Keep Talking to ChatGPT",
+     "hook": "Here is how to keep using voice chat after December 11.",
+     "script": "Worried about ChatGPT retiring Standard Voice on December 11? You don't have to lose your workflow. Download the desktop app update today and check out these alternative settings. It takes less than two minutes to set up. Save this video so you don't forget.",
+     "cta": "Check our channel for the full guide."
     }
    ],
    "carousel": {
-    "title": "How to Convert Any PDF to Excel with AI",
+    "title": "ChatGPT Voice Ending Dec 11? 3 Free Fixes",
     "slides": [
-     "Step 1: Open the free Documind dashboard in your browser.",
-     "Step 2: Upload your messy PDF invoice or report.",
-     "Step 3: Type the column names you want to extract.",
-     "Step 4: Let the AI parse the document text.",
-     "Step 5: Click export to download a clean CSV file.",
-     "Limitation: Low-quality scans may require clear text pre-processing."
+     "ChatGPT Standard Voice is retiring on December 11",
+     "Why users are upset and what is changing",
+     "Fix 1: Update your desktop app settings today",
+     "Fix 2: Use free alternative voice tools",
+     "Fix 3: Adjust your prompt workflow for text",
+     "Watch our full YouTube tutorial for the exact steps"
     ]
    },
    "posts": {
     "x": [
-     "Stop copy-pasting data from messy PDFs. Open-source AI tool Documind extracts tables directly into Excel for free. Step-by-step setup guide:",
-     "You don't need a $20 monthly subscription to clean up business invoices. Free AI tools can parse structured fields from documents in under 5 minutes."
+     "ChatGPT Standard Voice mode is officially retiring on December 11. Here is how you can prepare and find free workarounds in under 5 minutes: [link]",
+     "Are you upset about OpenAI retiring Standard Voice on December 11? We tested 3 free alternatives you can start using today: [link]"
     ],
-    "facebook": "Manual data entry from PDF files is slow and frustrating. In our new tutorial, learn how to use Documind to turn scanned documents and reports into clean Excel spreadsheets for free.",
-    "instagram": "Extract structured data from any PDF report without manual typing. Tap our channel link to see the full free tool tutorial. #aitools #productivity #tech #excel #pdf",
-    "linkedin": "Automating document data processing no longer requires costly enterprise software. Here is a simple, step-by-step workflow using open-source AI to parse unstructured PDFs directly into structured tabular formats."
+    "facebook": "OpenAI announced it is retiring ChatGPT Standard Voice Mode on December 11. If you use voice daily, this change will affect your workflow. We tested 3 free alternatives and put together a step-by-step guide to help you transition smoothly. Watch the full tutorial here: [link]",
+    "instagram": "ChatGPT Standard Voice is shutting down on December 11. 🛑 Don't get caught off guard—we tested 3 free tools to replace it. Link in bio for the full step-by-step tutorial! #ChatGPT #AITools #TechNews #Productivity",
+    "linkedin": "With OpenAI retiring Standard Voice Mode on December 11, many professionals are looking for reliable alternatives. We tested free tools and desktop options to keep your workflow uninterrupted. Watch our guide: [link]"
    },
    "article": {
-    "title": "How to Extract Structured Data from PDFs with Free AI Tools",
+    "title": "How to Prepare for ChatGPT Standard Voice Retiring on December 11",
     "outline": [
-     "The Challenges of Manual PDF Data Extraction",
-     "Overview of Open-Source AI Parser Documind",
-     "Step-by-Step Guide: From Raw PDF to Spreadsheet",
-     "Handling Edge Cases and Complex Formatting",
-     "Comparing Open-Source Parsers with Paid Enterprise Software"
+     "Introduction to the December 11 Deadline",
+     "Why OpenAI is Changing Voice Modes",
+     "Top 3 Free Alternatives You Can Use Today",
+     "Step-by-Step Setup Guide",
+     "Conclusion"
     ]
    }
   },
   {
-   "topic": "Meta Muse Ember Model Launch",
-   "competitors": "Matt Wolfe summarized recent news announcements from Anthropic and OpenAI, while Futurepedia reviewed Claude features. Neither demonstrated practical beginner use cases for Meta's low-cost Muse Ember model.",
-   "angle": "Demonstrate three daily writing tasks beginners can execute on Meta Muse Ember for a fraction of paid API costs.",
+   "topic": "Anthropic Office Tools Suite",
+   "competitors": "Competitors like Bloomberg and The Verge covered the business and IPO aspects, but they missed a beginner walkthrough showing how to actually use the new Anthropic office tools for daily tasks.",
+   "angle": "We give a step-by-step beginner walkthrough of the new Anthropic office suite with zero technical jargon.",
    "viral": {
-    "score": 52,
-    "why": "Meta releases generate broad search interest, and budget-focused tutorials perform consistently well."
+    "score": 78,
+    "why": "Directly challenging Microsoft office tools with an AI-first suite is major news that beginners want to test immediately."
    },
    "long": {
-    "title": "Meta Muse Ember: Free Low-Cost AI Guide for Beginners",
-    "thumb": "Meta Muse Ember Guide",
-    "hook": "Meta just released Muse Ember, a low-cost AI model designed to run everyday tasks for cheap. In this video, you will see how it handles writing, summarizing, and basic planning compared to paid subscriptions.",
+    "title": "Anthropic's New Office Suite: Beginner Tutorial",
+    "thumb": "Anthropic Office Suite",
+    "hook": "In the next 8 minutes you will test Anthropic's new office tools and create your first document without paying for Microsoft Office.",
     "outline": [
-     "What Meta Muse Ember is and why pricing matters",
-     "Accessing the model interface without complex API setup",
-     "Test 1: Drafting clear emails and summaries",
-     "Test 2: Editing long text documents",
-     "Test 3: Generating simple step-by-step outlines",
-     "One key drawback: weaker performance on advanced math and coding",
-     "Final verdict and recommended usage tips"
+     "What is Anthropic's new office suite",
+     "How to access the new tools for free",
+     "Step 1: Creating your first document",
+     "Step 2: Using built-in AI editing features",
+     "Comparing speed with traditional tools",
+     "One downside: current template limitations",
+     "Summary and next steps"
     ]
    },
    "shorts": [
     {
-     "title": "Meta Released a Budget AI Model",
-     "hook": "Meta just dropped a low-cost AI model called Muse Ember.",
-     "script": "If you are tired of paying monthly subscriptions for basic writing tasks, Meta's new Muse Ember model aims to lower costs. It handles everyday text editing, email drafting, and content summarization quickly. While it is not designed for heavy coding, it works great for standard daily office work.",
-     "cta": "Subscribe for more budget-friendly AI breakdowns."
+     "title": "Anthropic's New Office Suite",
+     "hook": "Anthropic just launched its own office suite to take on Microsoft.",
+     "script": "Anthropic just dropped a brand new office suite ahead of their IPO, and it's built entirely around AI. You can write documents, organize notes, and format text instantly. Here is how to access it in under two minutes. Follow along to try it out.",
+     "cta": "Subscribe for weekly tool guides."
     },
     {
-     "title": "Save Money with Meta Muse Ember",
-     "hook": "Do you really need a $20 AI subscription?",
-     "script": "Meta's latest model release, Muse Ember, focuses on low-cost efficiency. We tested it on regular writing tasks against expensive models. For summarization and drafting, the output is surprisingly close while costing a fraction to run.",
-     "cta": "Watch our full test video on Toolscape."
+     "title": "Ditch Microsoft for Anthropic?",
+     "hook": "Can Anthropic's new office tools replace Word?",
+     "script": "Anthropic just released an AI-powered office suite to rival Microsoft and Google. I tested it out so you don't have to. The interface is clean, fast, and completely beginner-friendly. Watch our full video to see how it works.",
+     "cta": "Check the pinned comment for the link."
     }
    ],
    "carousel": {
-    "title": "What You Need to Know About Meta Muse Ember",
+    "title": "Anthropic Office Suite: First Look",
     "slides": [
-     "1. Meta released Muse Ember as a low-cost AI model.",
-     "2. Designed for high speed and light computational tasks.",
-     "3. Ideal for summarizing documents and drafting emails.",
-     "4. Significantly cheaper to run than flagship models.",
-     "5. Downside: Struggles with complex logic and computer code.",
-     "6. Conclusion: Great for budget-focused everyday writing."
+     "Anthropic just launched a new office suite",
+     "Built to take on Microsoft and Google",
+     "Feature 1: AI document generation",
+     "Feature 2: Clean, distraction-free interface",
+     "The downside: limited templates right now",
+     "Watch our full YouTube tutorial to try it free"
     ]
    },
    "posts": {
     "x": [
-     "Meta just launched Muse Ember, focusing on low-cost AI workflows. Here is what beginners need to know about its performance and pricing:",
-     "Looking for budget AI tools? Meta Muse Ember offers light writing and summarization at a fraction of standard API costs."
+     "Anthropic just launched its own AI office suite to take on Microsoft. We tested it out and made a beginner walkthrough: [link]",
+     "Is Anthropic's new office suite better than Microsoft Word? Here is our first look and step-by-step guide: [link]"
     ],
-    "facebook": "Meta's new Muse Ember model is designed for everyday tasks without expensive computing overhead. Check out our breakdown of how it handles real-world writing, editing, and planning tasks.",
-    "instagram": "Meta released Muse Ember to make AI tools more affordable. Watch our screen-by-screen testing guide. #metaai #aiupdates #techguide #aitools #learning",
-    "linkedin": "Meta has introduced Muse Ember, targeting low-cost efficiency in conversational tasks. We evaluated its effectiveness for everyday document editing and business communication."
+    "facebook": "Anthropic has officially unveiled its own AI-powered office suite, challenging Microsoft and Google. If you want to see how it works and whether it can help your daily workflow, check out our step-by-step beginner tutorial: [link]",
+    "instagram": "Anthropic just launched a brand new office suite! 🖥️ We tested it out to see if it can really replace Microsoft Word and Google Docs. Watch our full tutorial via the link in our bio! #Anthropic #AItools #Productivity #TechTutorial",
+    "linkedin": "Anthropic's new office suite is here, positioning itself as a direct competitor to Microsoft. We put together a clear, beginner-friendly guide on how to test it for your daily work: [link]"
    },
    "article": {
-    "title": "Meta Muse Ember Explained: Features, Performance, and Use Cases",
+    "title": "Anthropic Office Suite Tutorial: Everything Beginners Need to Know",
     "outline": [
-     "Introduction to Meta's Low-Cost Model Strategy",
-     "Key Architectural Differences in Muse Ember",
-     "Practical Benchmarks: Email, Summarization, and Content Drafting",
-     "Where Ember Falls Short Compared to Flagship Models",
-     "How Beginners Can Access and Implement Ember"
+     "Overview of Anthropic's New Office Tools",
+     "How It Compares to Microsoft and Google",
+     "Step-by-Step Guide to Your First Document",
+     "Pros and Cons for Daily Users",
+     "Conclusion"
     ]
    }
   },
   {
-   "topic": "AI Privacy Policy Readers",
-   "competitors": "Matt Wolfe and Dan Kieft highlighted video generators and tech news, missing simple consumer-focused privacy tools that analyze web tracking terms for non-technical users.",
-   "angle": "Show how to use a free AI privacy tool to scan website terms of service and find hidden data tracking in 30 seconds.",
+   "topic": "Seedream 5.5 by ByteDance",
+   "competitors": "Competitors like Dan Kieft covered Seedance 2.5, but they missed a dedicated, beginner-focused walkthrough of the newer Seedream 5.5 image and video workflow on a free plan.",
+   "angle": "We show how beginners can use Seedream 5.5 for free step-by-step without wasting credits.",
    "viral": {
-    "score": 49,
-    "why": "Privacy concerns are widely shared, and showing clear visual privacy flags builds strong click-through curiosity."
+    "score": 75,
+    "why": "AI video and image generation tutorials consistently pull massive view counts when kept simple for beginners."
    },
    "long": {
-    "title": "Use This Free AI Tool to Scan Hidden Privacy Terms",
-    "thumb": "Expose Privacy Hacks",
-    "hook": "In less than three minutes, you can check if your favorite websites are selling your personal data. Most privacy policies are thousands of words long, but this free AI tool highlights hidden tracking clauses instantly.",
+    "title": "Seedream 5.5 Beginner Guide: How to Make AI Videos Free",
+    "thumb": "Seedream 5.5 Guide",
+    "hook": "In the next 7 minutes you will generate your first realistic AI video using Seedream 5.5 on a free plan.",
     "outline": [
-     "Why nobody reads standard terms of service agreements",
-     "Introducing open-source privacy scanning tools",
-     "Testing a popular shopping site live on screen",
-     "Understanding flagged data collection terms",
-     "How to run a quick audit on any website address",
-     "One downside: AI summaries can occasionally miss legal nuances",
-     "Recap and practical steps to secure personal info"
+     "What is Seedream 5.5 by ByteDance",
+     "How to sign up for the free tier",
+     "Step 1: Writing your first prompt",
+     "Step 2: Choosing camera and motion settings",
+     "Step 3: Rendering and downloading your clip",
+     "One downside: free credit limits",
+     "Summary and next tutorial"
     ]
    },
    "shorts": [
     {
-     "title": "Check If Sites Sell Your Data",
-     "hook": "This free AI tool reads long privacy policies for you.",
-     "script": "Nobody reads terms of service agreements. But open-source AI privacy tools can scan any privacy policy in seconds. Paste a web link, and the AI alerts you if the site sells your location, search history, or personal details to third parties.",
-     "cta": "Subscribe to Toolscape to protect your privacy online."
+     "title": "Try Seedream 5.5 Free",
+     "hook": "Here is how to make realistic AI videos with Seedream 5.5 for free.",
+     "script": "ByteDance just released Seedream 5.5, and the video quality is incredible. You don't need a paid subscription to get started. Just follow these three simple steps to generate your first clip in under two minutes. Let's dive in.",
+     "cta": "Subscribe for more free tool guides."
     },
     {
-     "title": "Spot Hidden Tracking Terms Fast",
-     "hook": "Find out what websites do with your personal data.",
-     "script": "Companies hide questionable data clauses deep inside long legal documents. Using open-source AI checkers, you get a quick bullet-point summary of what data is collected and shared. It takes under 30 seconds to audit any site before signing up.",
-     "cta": "See full step-by-step tutorial on our channel."
+     "title": "Seedream 5.5 First Impressions",
+     "hook": "Stop wasting credits on old AI video tools.",
+     "script": "Seedream 5.5 is out and it changes everything for beginner creators. The motion quality is much smoother than previous versions. Watch our full step-by-step tutorial to see how to use the free tier today.",
+     "cta": "Check our channel for the full video."
     }
    ],
    "carousel": {
-    "title": "How to Audit Any Privacy Policy with AI",
+    "title": "Seedream 5.5: Free AI Video Guide",
     "slides": [
-     "Step 1: Copy the URL of any website privacy page.",
-     "Step 2: Paste the link into the free AI privacy reader.",
-     "Step 3: Review flagged items regarding personal data.",
-     "Step 4: Check if your email or location is sold to third parties.",
-     "Step 5: Make informed choices before creating new accounts.",
-     "Note: Use outputs as a quick guide, not formal legal advice."
+     "How to use Seedream 5.5 for free",
+     "Step 1: Create your free account",
+     "Step 2: Write a simple motion prompt",
+     "Step 3: Adjust camera settings",
+     "The downside: watch out for credit limits",
+     "Watch our full YouTube tutorial for the exact clicks"
     ]
    },
    "posts": {
     "x": [
-     "Stop scrolling past long terms of service pages. Use free AI tools to scan privacy policies and reveal data selling in seconds:",
-     "Most people sign away data rights without reading. Free open-source AI tools summarize complex privacy policies into plain English."
+     "Want to test Seedream 5.5 without paying? Here is our step-by-step beginner guide to making AI videos for free: [link]",
+     "ByteDance's Seedream 5.5 is here. We tested the free tier so you can make your first AI video today: [link]"
     ],
-    "facebook": "Ever wonder what happens to your personal data when you click accept? Learn how to use simple AI tools to scan length legal policies and highlight data sharing terms instantly.",
-    "instagram": "Protect your personal information online. Learn how to scan privacy policies using AI in seconds. Link in channel bio! #dataprivacy #aitools #onlineprivacy #tech #cybersecurity",
-    "linkedin": "Consumer privacy awareness is growing. Here is how modern open-source AI text parsing tools allow users to audit lengthy terms of service documents for hidden data-sharing clauses."
+    "facebook": "ByteDance's Seedream 5.5 is one of the newest AI video generators getting attention. If you want to try it without spending money, we put together a simple, step-by-step beginner tutorial. Watch it here: [link]",
+    "instagram": "Create your first AI video with Seedream 5.5! 🎬 We tested the free plan step-by-step so you don't waste your credits. Link in bio! #Seedream #AIVideo #ContentCreator #FreeTools",
+    "linkedin": "AI video generation keeps improving. We tested ByteDance's Seedream 5.5 free tier and put together a straightforward tutorial for professionals exploring creative tools: [link]"
    },
    "article": {
-    "title": "How to Use AI Tools to Decode Complex Privacy Policies",
+    "title": "Seedream 5.5 Beginner Tutorial: How to Make AI Videos Free",
     "outline": [
-     "The Problem with Lengthy Legal Terms of Service",
-     "How Natural Language Processing Identifies Data Risks",
-     "Step-by-Step Walkthrough of Free AI Privacy Readers",
-     "Key Red Flags to Look for in Website Policies",
-     "Best Practices for Personal Data Security"
+     "Introduction to Seedream 5.5",
+     "Accessing the Free Tier",
+     "Writing Effective Motion Prompts",
+     "Step-by-Step Generation Guide",
+     "Conclusion"
     ]
    }
   }
  ],
  "hook_patterns": [
   {
-   "pattern": "In the next [X] minutes you will [clear result] (No [pain point])",
-   "example": "In the next 5 minutes you will convert messy PDF reports into clean spreadsheets (No coding needed)."
+   "pattern": "Result + timeframe framing",
+   "example": "In the next 6 minutes you will set up three free voice alternatives before ChatGPT Standard Voice retires on December 11."
   },
   {
-   "pattern": "Stop [common manual task] by hand",
-   "example": "Stop copy-pasting tables from PDF documents by hand."
+   "pattern": "Addressing an urgent upcoming deadline or policy change",
+   "example": "Stop what you're doing: ChatGPT Standard Voice is retiring on December 11."
   },
   {
-   "pattern": "This free tool does what a $[X] app does",
-   "example": "This free open-source tool parses complex documents just like expensive enterprise software."
+   "pattern": "Challenging popular tools with a free alternative",
+   "example": "In the next 8 minutes you will test Anthropic's new office tools and create your first document without paying for Microsoft Office."
   },
   {
-   "pattern": "I tested [Tool/Model] so you don't have to",
-   "example": "I tested Meta's new Muse Ember model on daily work tasks so you don't have to."
+   "pattern": "Direct beginner call-out with no prior experience needed",
+   "example": "In the next 7 minutes you will generate your first realistic AI video using Seedream 5.5 on a free plan."
   },
   {
-   "pattern": "Do you really need [expensive subscription/item]?",
-   "example": "Do you really need a $20 monthly AI subscription for basic text editing?"
+   "pattern": "Warning against wasting credits or time on old methods",
+   "example": "Stop wasting credits on old AI video generators when the new free version does this."
   }
  ],
  "_competitors": [
   {
    "channel": "Metics Media",
    "title": "Build Your First AI Agent in 20 Minutes (No Coding)",
-   "views": 703300,
+   "views": 719474,
    "date": "2026-10-19",
-   "url": "https://youtu.be/rCkYVxOX-dI"
+   "url": "https://youtu.be/rCkYVxOX-dI",
+   "desc": "A chatbot waits for your next message. An AI agent keeps working while you sleep. In this beginner tutorial, you'll build your first AI agent with no coding. Hermes Agent runs on its own server and messages you on Telegram.\n✅ Hostinger VPS (Exclusive 10% Discount): https://meticsmedia.com/hermes-MEG\n✅ Nous Portal ($15 Off Your First Month): https://meticsmedia.com/nous-MEG\n\nThis step-by-step AI agent tutorial is made for complete beginners. First, you'll learn what makes an AI agent different from a chatbot like ChatGPT or Claude. Then you'll see why we use Hermes Agent. It's a free, open-source agent from Nous Research. You'll deploy it on a Hostinger VPS with a one-click template and log i"
   },
   {
    "channel": "Dan Kieft",
    "title": "How I Make Realistic AI Videos with Seedance 2.5 - Full Guide",
-   "views": 693111,
+   "views": 700369,
    "date": "2026-10-16",
-   "url": "https://youtu.be/2hJsvDSPWYM"
+   "url": "https://youtu.be/2hJsvDSPWYM",
+   "desc": "Learn How To Make Ultra Realistic AI Videos with Seedance 2.5\nCreate AI Videos here 👉 http://dankieft.com/higgsfield\n\nLink to all my prompts 👉 https://how-to-make-realistic-footage.vercel.app/\n\nIn this video I teach you how to create realistic ai videos using Seedance 2.5. We will go over various different techniques in which I explain which ai models you should use, how to prompt ai and how to generate cool looking videos. Make sure to watch the entire video to fully understand how my workflow works.\n\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.in"
   },
   {
    "channel": "Jeff Su",
    "title": "Personal Agents, Clearly Explained",
-   "views": 328226,
+   "views": 330960,
    "date": "2026-10-13",
-   "url": "https://youtu.be/HdI_aYzgJIg"
+   "url": "https://youtu.be/HdI_aYzgJIg",
+   "desc": "📧 Join my free AI Essentials newsletter - https://www.jeffsu.org/newsletter/?utm_source=youtube&utm_medium=video&utm_campaign=v212\n\nAlready using #ChatGPT, Claude, or Gemini and wondering whether personal AI agents are worth your time? A chatbot can summarize one health report, a do-it-yourself agent can compare it with your history, and personal agents like #Muse, Dots, and Grok Bot can offer help before you ask.\n\nThe difference is how much your AI remembers and how much work you need to do. Personal Agents are easier to start using, while your own #AI Workspace gives you more control and memory files you can move between tools. Your choice also depends on privacy and ecosystem lock-in.\n\n*T"
   },
   {
    "channel": "Metics Media",
    "title": "Master Higgsfield AI in 20 Minutes (Beginner Tutorial)",
-   "views": 237513,
+   "views": 247098,
    "date": "2026-10-21",
-   "url": "https://youtu.be/3W1VhiKLNp4"
+   "url": "https://youtu.be/3W1VhiKLNp4",
+   "desc": "This Higgsfield AI tutorial walks you through everything you need to know as a beginner. Go from generating your first image all the way to a finished video, step by step.\n✅ Higgsfield (Best Deal): https://meticsmedia.com/higgsfield-PXS\n\nLearn how to use Higgsfield AI to create images, videos, and voiceovers, even if you’ve never used an AI generator before. After a quick tour of the dashboard, you’ll generate a product mockup using your own logo as a reference, turn it into a video with sound, and create a voiceover from a simple script. Then we bring it all together inside Cinema Studio, where you save a character, a location, and a product as reusable elements and combine them into a real"
   },
   {
    "channel": "Dan Kieft",
    "title": "How To Start Making AI Videos in 2026 (Beginner Guide)",
-   "views": 156446,
+   "views": 159759,
    "date": "2026-10-22",
-   "url": "https://youtu.be/iO9MiefIpVM"
+   "url": "https://youtu.be/iO9MiefIpVM",
+   "desc": "How To Start Making AI Video in 2026 (Beginner Guide)\nCreat AI Video with Higgsfield 👉 http://dankieft.com/higgsfield\n\n\nAll of my prompts: https://start-making-ai-videos.vercel.app/\n\n\nIn this video I teach you everything you need to know in order to start creating AI videos on higgsfield. We will go over prompting, workflows, references ai images and ai videos. by the end of this you know exactly how to start making videos on higgsfield\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.instagram.com/dan.kieft/"
   },
   {
    "channel": "Dan Kieft",
    "title": "Stop Wasting Credits on AI Video Generators Like Seedance 2.5",
-   "views": 143199,
+   "views": 144183,
    "date": "2026-10-13",
-   "url": "https://youtu.be/KKfaBVM3Jdg"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "AI News: The Only 6 Stories Worth Knowing This Week",
-   "views": 131347,
-   "date": "2026-10-30",
-   "url": "https://youtu.be/eDiQNFa-zYg"
-  },
-  {
-   "channel": "Futurepedia",
-   "title": "Claude 2.0 Is Here. EVERYTHING in 15 Minutes",
-   "views": 124731,
-   "date": "2026-11-03",
-   "url": "https://youtu.be/tM0dwXhOv2o"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "AI News: New ChatGPT & Google Models (14 Updates Worth Knowing)",
-   "views": 121066,
-   "date": "2026-11-06",
-   "url": "https://youtu.be/IrAHINf0M6E"
+   "url": "https://youtu.be/KKfaBVM3Jdg",
+   "desc": "Stop Wasting Credits on AI video generator like Seedance 2.5\nTry Higgsfield API here 👉 http://dankieft.com/higgsfield\n\nAI Model selecter👉 https://ai-video-model-selector.vercel.app/\n\nAI Video Generators can get expensive quickly. Especially if you're using models like Seedance 2.5 you can burn through a lot of credits fast. In this video I teach you 3 different methods on how you can save credits so that you can have better results without breaking the bank. \n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.instagram.com/dan.kieft/"
   },
   {
    "channel": "Kevin Stratvert",
    "title": "How to Use Ollama (Free Local AI)",
-   "views": 120604,
+   "views": 134569,
    "date": "2026-11-05",
-   "url": "https://youtu.be/btMoPRHz8eM"
+   "url": "https://youtu.be/btMoPRHz8eM",
+   "desc": "Learn how to install and use Ollama on Windows to run AI models locally for free. In this beginner tutorial, we'll set up Ollama without an account, choose a local model, chat with AI, ask follow-up questions, and analyze a PDF on your computer. Then we'll connect Ollama to OpenCode and build a website with AI that creates files directly on your PC. Once you've downloaded a local model, you can use it offline. Cloud models are optional and work differently; this tutorial focuses on local AI.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Ollama: https://ollama.com/\n- Download Ollama for Windows: https://ollama.com/download/windows\n- OpenCode: https://opencode.ai/\n- Download OpenCode: https://opencode"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "AI News: The Only 6 Stories Worth Knowing This Week",
+   "views": 131827,
+   "date": "2026-10-30",
+   "url": "https://youtu.be/eDiQNFa-zYg",
+   "desc": "Check out Warp Factories here: http://warp.dev/mreflow\n\nThis week’s biggest AI news: OpenAI’s GPT-6.1 Terra brings faster computer use at a lower API cost, and Google’s Genie 4 brings real-time AI worlds to life. We’re also covering Gemini 4 Carbon, Kimi K3.1 Pro, and Anthropic’s IPO filing.\n\nSharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/matt"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "Anthropic's Fable 5.2 is the World’s Best AI Model",
+   "views": 131675,
+   "date": "2026-11-09",
+   "url": "https://youtu.be/2TM8W66NI_8",
+   "desc": "Fable 5.2 from Anthropic just dropped today. Here's the details.\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\nResources From Today's Video:\nLaunch Post: https://www.anthropic.com/claude-fable-and-mythos-5-2\nMatt Berman Gears of War: https://x.com/MatthewBerman/status/2119871207206158459\nAlex’s Examples: https://x.com/The_Alex/status/2119884217261892083\nPeter Yang Animation: h"
+  },
+  {
+   "channel": "Futurepedia",
+   "title": "Claude 2.0 Is Here. EVERYTHING in 15 Minutes",
+   "views": 130153,
+   "date": "2026-11-03",
+   "url": "https://youtu.be/tM0dwXhOv2o",
+   "desc": "*Free Claude 2.0 Setup Kit:* https://clickhubspot.com/o2iu\n\nMore from Futurepedia:\n👉 Get your free AI plan on Futurepedia 2.0: https://clickhubspot.com/691m\n\nSummary:\nAnthropic completely rebuilt the Claude desktop app, and it's a big enough change that one of the engineers who worked on Claude Code called it basically a v2. I cover everything that's new and how to get the most out of it, from the new artifacts to the new Code layout, ways to keep Claude working while you're away, new ways to multitask and mods.\nI go through the new Home and Code tabs, the new artifact formats (docs, slides, design, dashboards and motion), the session rail and context breakdown, sections, side chats, split v"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "AI News: New ChatGPT & Google Models (14 Updates Worth Knowing)",
+   "views": 124420,
+   "date": "2026-11-06",
+   "url": "https://youtu.be/IrAHINf0M6E",
+   "desc": "See what Optimizely’s Virtual Teammates can automate for you at http://optimizely.com/mattwolfe\n\nThis week’s AI news covers OpenAI’s GPT-Image 2.6, Google Gemini Omni 1.2 Flash, and the latest AI tools for creating images, generating videos, and getting things done. Watch demos of ChatGPT’s animated GIF creation and image editing, Google’s free AI video generation, and Grokbot’s new phone call feature.\n\nWe also explore Pruna’s PH3 Image and Pika H3 Flex open-weight models, plus voice and video calls with Meta Muse. Then, catch up on Claude’s bank account integration, Kimi K3.1 Pro, GPT-6 Cyber, and more in the rapid-fire roundup.\n\nWhich update will you actually use? Let me know in the commen"
   },
   {
    "channel": "Dan Kieft",
    "title": "I Tried Every AI Video Generator - Full Tierlist",
-   "views": 111219,
+   "views": 115426,
    "date": "2026-10-28",
-   "url": "https://youtu.be/tnG3TIULBro"
+   "url": "https://youtu.be/tnG3TIULBro",
+   "desc": "Find out what the Best AI Video Generator is in 2026!\nTry out all models 👉 https://tolt.link/tierlist\n\nI tested the 6 most popular AI video generators of 2026 in an 8-round head-to-head battle to find out which one is ACTUALLY the best. Seedance 2.5, Wan 3.0, MiniMax H3 Max, Flux 3, Kling 4.0 Flash and Gemini Omni 1.1 Flash all got the exact same prompts and the same references — then I ranked every single round on a tier list, counted the points, and added up exactly how many credits each model burned.\n\nAll My prompts:\nhttps://best-video-generator.vercel.app/\n\nOpenArt Arena:\nhttps://openart.ai/arena\n\n0:00 Intro\n1:21 The contenders\n2:11 Rules & judging criteria\n2:45 Round 1: Prompt adherence"
   },
   {
    "channel": "Kevin Stratvert",
    "title": "How to Use Grok Bot for Beginners",
-   "views": 104052,
+   "views": 107228,
    "date": "2026-10-27",
-   "url": "https://youtu.be/G6AwOYT-Gbw"
+   "url": "https://youtu.be/G6AwOYT-Gbw",
+   "desc": "This Grok Bot tutorial for beginners shows you how to build your first AI team, with bots that watch your inbox, keep your books, and answer support tickets on their own.\n💵 Get 50% off QuickBooks Online ➜ https://quickbooks.kevinstratvert.com/\n\nFirst, you'll see what Grok Bot costs, including the 7-day free trial and the cheapest paid plans, and where everything lives in the app.\n\nNext, you'll build your first bot, which connects to Gmail right from the chat and starts watching your inbox for new catering orders on its own.\n\nThen you'll teach it how you like things done, so it remembers your writing rules every time it drafts an email.\n\nAlong the way, you'll learn how to use Grok Bot the way"
   },
   {
    "channel": "Jeff Su",
    "title": "I knew AI + Notion would be good, but this... wow.",
-   "views": 96592,
+   "views": 99289,
    "date": "2026-10-27",
-   "url": "https://youtu.be/ofzHbyxkpVg"
+   "url": "https://youtu.be/ofzHbyxkpVg",
+   "desc": "Grab my free Cowork Toolkit: https://coworkacademy.ai/toolkit?utm_source=youtube&utm_medium=video&utm_campaign=v213\n\nIf your #AI keeps creating Notion pages you have to fix, it needs to learn how YOU work. In this video, I’ll show you how to teach Claude and #ChatGPT your database, template, and formatting preferences so they can handle the tedious work for you.\n\nYou’ll start with tasks and notes, save your preferences in a reusable Notion Conventions file, and see how the same process scales to entire projects with linked tasks and deliverables. It works with Claude, ChatGPT, or Gemini, so you can keep the Notion setup you already use.\n\n*TIMESTAMPS*\n00:00 Manage Your ENTIRE Notion Setup wit"
   },
   {
    "channel": "Nate Herk | AI Automation",
    "title": "Every AI Business Ranked from Worst to Best",
-   "views": 92214,
+   "views": 96317,
    "date": "2026-11-05",
-   "url": "https://youtu.be/O3g_m2i2IGU"
-  },
-  {
-   "channel": "Metics Media",
-   "title": "Higgsfield AI Tutorial for Beginners (2026) | Step-by-Step",
-   "views": 91480,
-   "date": "2026-10-30",
-   "url": "https://youtu.be/Mt91SiQotOU"
+   "url": "https://youtu.be/O3g_m2i2IGU",
+   "desc": "FREE First Client SOP: https://app.aiautomationsociety.ai/optin/first-client-SOP/?utm_source=youtube&utm_medium=organic&utm_content=ai-business-ranked-from-worst-to-best&sl=yt_ai-business-ranked-from-worst-to-best\nHow I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=ai-business-ranked-from-worst-to-best&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=ai-business-ranked-from-worst-to-best&hcategory=youtube-videos&utm_campaign=free-group\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www"
   }
  ],
  "_bank": [
@@ -425,16 +444,18 @@
   {
    "channel": "Metics Media",
    "title": "Build Your First AI Agent in 20 Minutes (No Coding)",
-   "views": 703300,
+   "views": 719474,
    "date": "2026-10-19",
-   "url": "https://youtu.be/rCkYVxOX-dI"
+   "url": "https://youtu.be/rCkYVxOX-dI",
+   "desc": "A chatbot waits for your next message. An AI agent keeps working while you sleep. In this beginner tutorial, you'll build your first AI agent with no coding. Hermes Agent runs on its own server and messages you on Telegram.\n✅ Hostinger VPS (Exclusive 10% Discount): https://meticsmedia.com/hermes-MEG\n✅ Nous Portal ($15 Off Your First Month): https://meticsmedia.com/nous-MEG\n\nThis step-by-step AI agent tutorial is made for complete beginners. First, you'll learn what makes an AI agent different from a chatbot like ChatGPT or Claude. Then you'll see why we use Hermes Agent. It's a free, open-source agent from Nous Research. You'll deploy it on a Hostinger VPS with a one-click template and log i"
   },
   {
    "channel": "Dan Kieft",
    "title": "How I Make Realistic AI Videos with Seedance 2.5 - Full Guide",
-   "views": 693111,
+   "views": 700369,
    "date": "2026-10-16",
-   "url": "https://youtu.be/2hJsvDSPWYM"
+   "url": "https://youtu.be/2hJsvDSPWYM",
+   "desc": "Learn How To Make Ultra Realistic AI Videos with Seedance 2.5\nCreate AI Videos here 👉 http://dankieft.com/higgsfield\n\nLink to all my prompts 👉 https://how-to-make-realistic-footage.vercel.app/\n\nIn this video I teach you how to create realistic ai videos using Seedance 2.5. We will go over various different techniques in which I explain which ai models you should use, how to prompt ai and how to generate cool looking videos. Make sure to watch the entire video to fully understand how my workflow works.\n\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.in"
   },
   {
    "channel": "Nate Herk | AI Automation",
@@ -465,18 +486,19 @@
    "url": "https://youtu.be/qwGIwxZFc2I"
   },
   {
+   "channel": "Jeff Su",
+   "title": "Personal Agents, Clearly Explained",
+   "views": 330960,
+   "date": "2026-10-13",
+   "url": "https://youtu.be/HdI_aYzgJIg",
+   "desc": "📧 Join my free AI Essentials newsletter - https://www.jeffsu.org/newsletter/?utm_source=youtube&utm_medium=video&utm_campaign=v212\n\nAlready using #ChatGPT, Claude, or Gemini and wondering whether personal AI agents are worth your time? A chatbot can summarize one health report, a do-it-yourself agent can compare it with your history, and personal agents like #Muse, Dots, and Grok Bot can offer help before you ask.\n\nThe difference is how much your AI remembers and how much work you need to do. Personal Agents are easier to start using, while your own #AI Workspace gives you more control and memory files you can move between tools. Your choice also depends on privacy and ecosystem lock-in.\n\n*T"
+  },
+  {
    "channel": "Nate Herk | AI Automation",
    "title": "Matt Pocock: The Most Valuable Skill to Learn in the Age of AI",
    "views": 330504,
    "date": "2026-10-16",
    "url": "https://youtu.be/Z8lf5oWKfj0"
-  },
-  {
-   "channel": "Jeff Su",
-   "title": "Personal Agents, Clearly Explained",
-   "views": 328226,
-   "date": "2026-10-13",
-   "url": "https://youtu.be/HdI_aYzgJIg"
   },
   {
    "channel": "Kevin Stratvert",
@@ -502,9 +524,10 @@
   {
    "channel": "Metics Media",
    "title": "Master Higgsfield AI in 20 Minutes (Beginner Tutorial)",
-   "views": 237513,
+   "views": 247098,
    "date": "2026-10-21",
-   "url": "https://youtu.be/3W1VhiKLNp4"
+   "url": "https://youtu.be/3W1VhiKLNp4",
+   "desc": "This Higgsfield AI tutorial walks you through everything you need to know as a beginner. Go from generating your first image all the way to a finished video, step by step.\n✅ Higgsfield (Best Deal): https://meticsmedia.com/higgsfield-PXS\n\nLearn how to use Higgsfield AI to create images, videos, and voiceovers, even if you’ve never used an AI generator before. After a quick tour of the dashboard, you’ll generate a product mockup using your own logo as a reference, turn it into a video with sound, and create a voiceover from a simple script. Then we bring it all together inside Cinema Studio, where you save a character, a location, and a product as reusable elements and combine them into a real"
   },
   {
    "channel": "Nate Herk | AI Automation",

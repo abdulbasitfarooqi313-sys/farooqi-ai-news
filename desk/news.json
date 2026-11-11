@@ -1,417 +1,431 @@
 {
- "summary": "آج کے بلیٹن میں اینتھروپک کے 70 ارب ڈالر کے آئی پی او کی بازگشت اور کلاڈ فیبل 5.2 کے سائنسی اور سائبر کارنامے سرِ فہرست ہیں۔ ساتھ ہی اوپن اے آئی اور اینڈیا کے گرد گھیرا تنگ ہونے کی اہم خبریں بھی شامل ہیں۔",
+ "summary": "آج کے بلیٹن میں اینتھروپک کے تاریخی آئی پی او اور وال اسٹریٹ پر اس کے اثرات کی خبریں سر فہرست ہیں۔ ساتھ ہی اوپن اے آئی کے نئے کاروباری ٹولز اور دنیا بھر میں مصنوعی ذہانت کے بڑھتے ہوئے مالی دباؤ کا جائزہ لیا گیا ہے۔",
  "topics": [
   {
-   "title": "اینتھروپک کا 70 ارب ڈالر کا آئی پی او اور کلاڈ فیبل 5.2 ماڈل",
-   "why": "اس وقت مارکیٹ میں سب سے بڑی ہلچل اینتھروپک کے آئی پی او اور اس کے نئے طاقتور ماڈلز کی رونمائی پر ہے جو بلیک ہول فزکس اور سائبر حملوں کو حل کر رہے ہیں۔",
+   "title": "اینتھروپک کا 1.4 ٹریلین ڈالر کا تاریخی آئی پی او",
+   "why": "مصنوعی ذہانت کی تاریخ کا سب سے بڑا شیئر بازار کا اجرا سامنے آ رہا ہے جس نے وال اسٹریٹ میں ہلچل مچا دی ہے۔",
    "trend": 10,
    "sources": [
     "روئٹرز",
     "بلومبرگ",
-    "ٹیک کرنچ",
-    "دی ورج"
+    "فااننشل ٹائمز"
    ]
   },
   {
-   "title": "اینڈیا کے سی ای او جینسن ہوانگ کی ذاتی زندگی اور چینی جاسوسی کا اسکینڈل",
-   "why": "ٹیکنالوجی کی دنیا میں ہلچل مچی ہوئی ہے کیونکہ اینڈیا کے سربراہ جینسن ہوانگ پر تحقیقات شروع ہو گئی ہیں جس سے کمپنی کا مستقبل خطرے میں ہے۔",
+   "title": "اوپن اے آئی کے بھاری مالی نقصانات اور آمدنی میں اضافہ",
+   "why": "کمپنی کی سہ ماہی آمدنی 10 ارب ڈالر تک پہنچنے کے باوجود بھاری نقصانات کا انکشاف ہوا ہے۔",
    "trend": 9,
    "sources": [
-    "ٹیک کرنچ",
-    "دی ورج",
-    "ریڈِٹ"
+    "وال اسٹریٹ جرنل",
+    "روئٹرز"
    ]
   },
   {
-   "title": "اوپن اے آئی کی جانب سے ڈین ڈرِسکول کی سائبر سیکیورٹی میں تقرری اور 11 ارب ڈالر کی فنڈنگ",
-   "why": "اوپن اے آئی نے امریکی فوج کے سابق سیکرٹری کو اہم عہدے پر تعینات کر دیا ہے اور مزید سرمایہ کاری حاصل کر لی ہے۔",
+   "title": "اوپن اے آئی کا بزنس چیٹ جی پی ٹی اور کاروباری پروفائلز",
+   "why": "کاروباروں کے لیے نئے اے آئی ایجنٹس اور تصدیق شدہ پروفائلز کا اجراء کر دیا گیا ہے۔",
    "trend": 8,
    "sources": [
-    "وال اسٹریٹ جرنل",
-    "ٹیک کرنچ"
+    "ٹیک کرنچ",
+    "دی ورج"
    ]
   },
   {
-   "title": "آسٹریلیا کی جانب سے اے آئی کے حکومتی سیکیورٹی بریچ کے بعد سخت ضوابط",
-   "why": "اوپن اے آئی کے سیکیورٹی بریچ کے بعد آسٹریلیا نے اے آئی ریگولیٹر بنانے اور لازمی خلاف ورزی کی رپورٹنگ کا فیصلہ کیا ہے۔",
+   "title": "اینتھروپک کا کلاڈ میٹنگز اور نیا آفس سوٹ",
+   "why": "دفتر کے کاموں اور میٹنگز کو خودکار منصوبوں میں بدلنے والا نیا ٹول پیش کیا گیا ہے۔",
    "trend": 7,
    "sources": [
-    "روئٹرز",
-    "الجزیرہ"
+    "ٹیک کرنچ",
+    "دی ورج"
    ]
   },
   {
-   "title": "گوگل کے نئے ٹی پی یو اور مارکیٹ میں اے آئی کریڈٹ کا تناؤ",
-   "why": "کورویو بانڈ ییلڈ میں اضافے اور گوگل کے نئے ٹینسر پروسیسنگ یونٹس (TPUs) کی آمد سے ہارڈویئر کی جنگ تیز ہو گئی ہے۔",
+   "title": "گوگل کا جیمینی 4 کاربن اور ایجنٹ سوارم فیچر",
+   "why": "گوگل کی جانب سے نئے طاقتور اے آئی ماڈل کا اجراء کیا گیا ہے جو مارکیٹ میں مقابلہ سخت کر رہا ہے۔",
    "trend": 6,
    "sources": [
-    "ریڈِٹ",
-    "ایچ این آر ایس ایس"
+    "دی ورج",
+    "دی اے آئی گرڈ"
    ]
   },
   {
-   "title": "میٹا کا نیا ہلکا ماڈل 'میوز امبر' اور ایجنٹ ایگزیکیوشن",
-   "why": "میٹا کی جانب سے ایجنٹس کے لیے ایک نیا ہلکا ماڈل جاری کیا گیا ہے جو مصنوعی ذہانت کی رفتار کو مزید تیز کرے گا۔",
+   "title": "کلود فیبل 5.2 کے ذریعے ایک ہزار اے آئی ایجنٹس کا تعاون",
+   "why": "رپورٹس کے مطابق اے آئی ماڈلز نے مل کر صرف آٹھ دنوں میں ایک پورا آپریٹنگ سسٹم تیار کر لیا ہے۔",
    "trend": 5,
    "sources": [
-    "ٹیک کرنچ"
+    "ریڈِٹ",
+    "میتھیو برمین"
    ]
   },
   {
-   "title": "ڈزنی اور ایڈوب کی جانب سے جنریٹو اے آئی ٹولز کا مشترکہ آغاز",
-   "why": "کریئیٹو انڈسٹری میں بڑی تبدیلیاں آ رہی ہیں جہاں یہ دونوں بڑے ادارے مل کر نئے اے آئی ٹولز بنا رہے ہیں۔",
+   "title": "اینڈیا کے گرد گھومتی کارپوریٹ اور جاسوسی کی کہلیاں",
+   "why": "چپس کی تجارت اور کارپوریٹ سیکیورٹی سے متعلق نئے اسکینڈلز سامنے آ رہے ہیں۔",
    "trend": 4,
    "sources": [
-    "دی ورج"
+    "ٹیک کرنچ",
+    "فااننشل ٹائمز"
    ]
   },
   {
-   "title": "اوٹربیس اے آئی کا 30 سے زائد زبانوں میں گفتگو کو فالو کرنے کا فیچر",
-   "why": "پیداواری صلاحیت بڑھانے والے ٹولز میں زبان کی رکاوٹیں ختم کرنے کے لیے ایک بڑی اپ ڈیٹ آ گئی ہے۔",
+   "title": "اے آئی کوڈنگ اور تکنیکی قرض کا بحران",
+   "why": "ہیکرز اور سیکیورٹی کی خرابیوں کے باعث اوپن سورس اے آئی کے مستقبل پر سوالات اٹھ رہے ہیں۔",
    "trend": 3,
    "sources": [
+    "ایچ این آر ایس جی",
     "ٹیک کرنچ"
    ]
   },
   {
-   "title": "ایپل کی پچاس ڈالر کی 'انٹیلی جنس یوسیج پیکس' سروس",
-   "why": "ایپل نے اپنے اے آئی فیچرز تک رسائی کو وسیع کرنے کے لیے نئے پیکجز کا اعلان کیا ہے۔",
+   "title": "نیویارک میں اے آئی سیفٹی کا نیا قانون نافذ",
+   "why": "ٹیکنالوجی کمپنیوں پر حکومتی نگرانی اور ضابطے سخت کیے جا رہے ہیں۔",
    "trend": 2,
    "sources": [
-    "دی ورج"
+    "ٹیک کرنچ",
+    "بلومبرگ"
    ]
   },
   {
-   "title": "چین کی تجارتی پلس کا ایک ٹریلین ڈالر سے تجاوز",
-   "why": "اے آئی کے عروج کی وجہ سے چین کی برآمدات اور تجارتی سرپلس میں تاریخی اضافہ ریکارڈ کیا گیا ہے۔",
+   "title": "فیس بک اور ڈیپ فیک اشتہارات کا 16 ارب ڈالر کا فراڈ",
+   "why": "دستاویزات سے انکشاف ہوا ہے کہ بڑے پلیٹ فارمز پر فراڈ اشتہارات سے بڑی آمدنی حاصل کی جا رہی ہے۔",
    "trend": 1,
    "sources": [
-    "روئٹرز",
-    "یورو نیوز"
+    "ایچ این آر ایس جی"
    ]
   }
  ],
  "packages": [
   {
-   "topic": "اینتھروپک کا 70 ارب ڈالر کا آئی پی او اور کلاڈ فیبل 5.2 ماڈل",
-   "competitors": "ویس روتھ اور میتھیو برمین نے اینتھروپک کے نئے ماڈلز پر تفصیلی ویڈیوز بنائیں لیکن آئی پی او کی مالیاتی گہرائی اور ریٹریکٹ ہونے والے دستاویزات پر بات نہیں کی۔",
-   "angle": "ہم اس ویڈیو میں صرف ماڈل کی تعریف کے بجائے اس بات کا تجزیہ کریں گے کہ 70 ارب ڈالر کے اس آئی پی او کے واپس لینے سے سرمایہ کاروں کو کیا نقصان پہنچا۔",
+   "topic": "اینتھروپک کا 1.4 ٹریلین ڈالر کا تاریخی آئی پی او",
+   "competitors": "میتھیو برمین اور دی اے آئی گرڈ نے اینتھروپک کے ماڈلز کی کارکردگی پر بات کی لیکن وال اسٹریٹ پر اس کے شیئر بازار کے اثرات اور 1.4 ٹریلین ڈالر کی ویلیو پر تفصیلی روشنی نہیں ڈالی۔",
+   "angle": "ہم نے اس بات کا جائزہ لیا ہے کہ یہ تاریخی آئی پی او عام سرمایہ کاروں اور عالمی معیشت کے لیے کیا معنی رکھتا ہے۔",
    "viral": {
-    "score": 82,
-    "why": "اینتھروپک کا نام اس وقت یوٹیوب پر سب سے زیادہ دیکھا جا رہا ہے اور آئی پی او کا تنازعہ عام ناظرین کے لیے بھی دلچسپ ہے۔"
+    "score": 65,
+    "why": "ٹیکنالوجی کی دنیا میں مالیاتی منڈیوں کی یہ سب سے بڑی خبر ہے جو ہر سرمایہ کار کی توجہ کھینچ رہی ہے۔"
    },
    "long": {
-    "title": "اینتھروپک کا 70 ارب ڈالر کا آئی پی او اچانک واپس کیوں لیا گیا؟",
-    "thumb": "اینتھروپک کا بڑا دھماکہ",
-    "hook": "مصنوعی ذہانت کی دنیا کی بڑی کمپنی اینتھروپک نے اپنا ستر ارب ڈالر کا آئی پی او اچانک واپس لے لیا ہے، اور ساتھ ہی کلاڈ کا نیا ماڈل بھی پیش کر دیا ہے۔",
+    "title": "اینتھروپک کا 1.4 ٹریلین ڈالر کا آئی پی او: اے آئی دنیا کا سب سے بڑا مالی معرکہ",
+    "thumb": "اینتھروپک کا بڑا آئی پی او",
+    "hook": "مصنوعی ذہانت کی تاریخ کا سب سے بڑا مالیاتی قدم اٹھایا جا رہا ہے۔ اینتھروپک نے اپنے شیئر بازار میں اجرا کی قیمت کا باضابطہ اعلان کر دیا ہے۔",
     "outline": [
-     "اینتھروپک کے آئی پی او کی دستاویزات لیک ہونے کی مکمل کہانی",
-     "کلاڈ فیبل 5.2 اور متھوس ماڈلز کی حیرت انگیز سائنسی صلاحیتیں",
-     "بلیک ہول فزکس اور سائبر سیکیورٹی بینچ مارک کے نتائج",
-     "سرمایہ کاروں میں کیوں کھلبلی مچی ہوئی ہے؟",
-     "ماہرین کی آراء اور مستقبل کی پیشگوئیاں"
+     "اینتھروپک کے آئی پی او کی تفصیلات اور قیمت",
+     "وال اسٹریٹ اور سرمایہ کاروں کا ردعمل",
+     "ایمیزون اور گوگل کو ملنے والے مالی فوائد",
+     "بانیوں کے حصص اور کیش آؤٹ کی تفصیلات",
+     "اے آئی مارکیٹ میں ممکنہ خطرات اور اصلاحات"
     ]
    },
    "shorts": [
     {
-     "title": "اینتھروپک کا آئی پی او تنازعہ",
-     "hook": "کیا اینتھروپک کا ستر ارب ڈالر کا آئی پی او ڈوب گیا؟",
-     "script": "مصنوعی ذہانت کی کمپنی اینتھروپک نے اپنے آئی پی او کی فائلنگ بینکوں کو بھیجی اور پھر فوراً واپس لے لی۔ اس دوران ان کا نیا ماڈل کلاڈ فیبل پانچ اعشاریہ دو بھی سامنے آیا ہے جو فزکس کے مشکل ترین مسائل حل کر رہا ہے۔ دیکھیے پوری خبر ہمارے چینل پر۔",
-     "cta": "مزید خبروں کے لیے چینل کو سبسکرائب کریں۔"
+     "title": "اینتھروپک کا اربوں ڈالر کا آئی پی او",
+     "hook": "کیا اینتھروپک کا نیا آئی پی او دنیا بدل دے گا؟",
+     "script": "مصنوعی ذہانت کی کمپنی اینتھروپک نے ایک اعشاریہ چار ٹریلین ڈالر کی ویلیو کے ساتھ اپنے حصص بازار میں لانے کا اعلان کر دیا ہے۔ اس تاریخی قدم سے وال اسٹریٹ میں ہلچل مچ گئی ہے اور بڑے سرمایہ کار میدان میں آ گئے ہیں۔ مزید خبروں کے لیے فاروقی اے آئی نیوز کو سبسکرائب کریں۔",
+     "cta": "چینل کو سبسکرائب کریں"
     },
     {
-     "title": "کلاڈ فیبل 5.2 کی طاقت",
-     "hook": "اے آئی ماڈل نے ناممکن کام کر دکھایا!",
-     "script": "اینتھروپک کے نئے کلاڈ فیبل پانچ اعشاریہ دو ماڈل نے سائبر حملوں کے ٹیسٹ میں جی پی ٹی سکس کو بھی پیچھے چھوڑ دیا ہے۔ یہ ماڈل اب بلیک ہول فزکس کے مسائل خود حل کر رہا ہے۔",
-     "cta": "بیل آئیکن دبانا نہ بھولیں۔"
+     "title": "اینتھروپک کے آئی پی او کی حقیقت",
+     "hook": "ٹیکنالوجی مارکیٹ کا سب سے بڑا مالی معرکہ شروع ہو چکا ہے۔",
+     "script": "روئٹرز اور بلومبرگ کی رپورٹس کے مطابق اینتھروپک کے آئی پی او نے تمام ریکارڈ توڑ دیے ہیں۔ اس شیئر بازار کے اجرا سے بانیوں کو بھی کروڑوں ڈالر مل رہے ہیں۔ دیکھنا یہ ہے کہ کیا یہ رفتار برقرار رہتی ہے۔",
+     "cta": "مکمل تفصیلات کے لیے چینل وزت کریں"
     }
    ],
    "carousel": {
-    "title": "اینتھروپک کا بڑا قدم اور آئی پی او",
+    "title": "اینتھروپک کا تاریخی آئی پی او",
     "slides": [
-     "اینتھروپک نے ستر ارب ڈالر کا آئی پی او پلان جاری کر کے واپس لے لیا",
-     "کلاڈ فیبل 5.2 ماڈل نے سائنسی دنیا میں تہلکہ مچا دیا",
-     "بلیک ہول فزکس کے پیچیدہ مسائل اب اے آئی حل کر رہا ہے",
-     "سرمایہ کاروں میں غیر یقینی صورتحال برقرار",
-     "مکمل تفصیلات کے لیے ہمارا نیا بلیبیٹن ملاحظہ کریں"
+     "اینتھروپک کا 1.4 ٹریلین ڈالر کا آئی پی او",
+     "شیئر کی قیمت ستر سے اٹھتر ڈالر مقرر",
+     "وال اسٹریٹ میں اے آئی کی زبردست لہر",
+     "ایمیزون اور گوگل کو اربوں کے فوائد",
+     "ساتوں بانیوں کا اڑھائی سو ملین ڈالر کیش آؤٹ",
+     "سرمایہ کاروں کے لیے نئے خطرات اور مواقع"
     ]
    },
    "posts": {
     "x": [
-     "اینتھروپک کا ۷۰ ارب ڈالر کا آئی پی او پلان اچانک واپس لے لیا گیا، جبکہ کلاڈ فیبل ۵.۲ ماڈل نے سائنسی تحقیق میں نئی تاریخ رقم کر دی ہے۔ #Anthropic #AIUpdate",
-     "کیا مصنوعی ذہانت کا سب سے بڑا مالیاتی بحران شروع ہونے والا ہے؟ جانیے آج کے بلیٹن میں۔ #AINEWS #Claude"
+     "اینتھروپک نے ۱.۴ ٹریلین ڈالر کی ویلیو کے ساتھ اپنے تاریخی آئی پی او کا آغاز کر دیا ہے۔ وال اسٹریٹ میں ہلچل مچ گئی ہے! #Anthropic #AIIPO",
+     "کیا اینتھروپک کا نیا شیئر بازار کا اجرا اے آئی انڈسٹری کا رخ بدل دے گا؟ جانیے تمام تفصیلات۔"
     ],
-    "facebook": "اینتھروپک کی جانب سے 70 ارب ڈالر کے آئی پی او کی دستاویزات جاری کرنے کے بعد انہیں فوری طور پر واپس لینے پر مالیاتی منڈیوں میں ہلچل مچ گئی ہے۔ دوسری طرف کلاڈ فیبل 5.2 ماڈل نے بلیک ہول فزکس کے مسائل حل کر کے سب کو حیران کر دیا ہے۔ مکمل خبر کے لیے ویڈیو دیکھیں۔",
-    "instagram": "اینتھروپک کے نئے آئی پی او اور کلاڈ فیبل 5.2 کی حیرت انگیز تفصیلات۔ کیا اے آئی مارکیٹ میں کوئی بڑا طوفان آنے والا ہے؟ لنک بائیو میں موجود ہے۔ #AI #TechNews #Anthropic #Claude",
-    "linkedin": "مصنوعی ذہانت کے معاشی اور تکنیکی منظرنامے میں بڑی تبدیلیاں۔ اینتھروپک کا آئی پی او تنازعہ اور نئے ماڈلز کے کاروباری اثرات کا جائزہ۔"
+    "facebook": "اینتھروپک نے مصنوعی ذہانت کی تاریخ کا سب سے بڑا مالیاتی قدم اٹھاتے ہوئے ۱.۴ ٹریلین ڈالر کے آئی پی او کا اعلان کر دیا ہے۔ روئٹرز اور بلومبرگ کے مطابق اس سے وال اسٹریٹ میں نیا جوش پیدا ہو گیا ہے۔ مکمل تفصیلات کے لیے ویڈیو دیکھیں۔",
+    "instagram": "اینتھروپک کا تاریخی آئی پی او اور وال اسٹریٹ کی ہلچل۔ جانیے اس بڑی خبر کے تمام حقائق۔ #Anthropic #AI #TechNews #FarooqiAINews",
+    "linkedin": "مصنوعی ذہانت کی معیشت میں ایک اور سنگ میل: اینتھروپک کے ۱.۴ ٹریلین ڈالر کے آئی پی او نے عالمی مالیاتی منڈیوں کی توجہ کھینچ لی ہے۔"
    },
    "article": {
-    "title": "اینتھروپک کا 70 ارب ڈالر کا متنازعہ آئی پی او اور کلاڈ فیبل 5.2 کی دھمک",
+    "title": "اینتھروپک کا ۱.۴ ٹریلین ڈالر کا آئی پی او: اے آئی مارکیٹ کا نیا موڑ",
     "outline": [
-     "تعارف: اے آئی مارکیٹ کی تازہ ترین ہلچل",
-     "آئی پی او کی دستاویزات کا اجرا اور ان کی واپسی کی کہانی",
-     "کلاڈ فیبل 5.2 اور متھوس ماڈلز کی تکنیکی برتری",
-     "بلیک ہول فزکس اور سائبر سیکیورٹی پر اثرات",
-     "سرمایہ کاروں کے لیے آئندہ کا لائحہ عمل"
+     "آغاز اور مالیاتی تفصیلات",
+     "وال اسٹریٹ پر اثرات",
+     "بڑے سرمایہ کاروں کا کردار",
+     "ممکنہ خطرات اور مستقبل کا منظرنامہ"
     ]
    }
   },
   {
-   "topic": "اینڈیا کے سی ای او جینسن ہوانگ کی ذاتی زندگی اور چینی جاسوسی کا اسکینڈل",
-   "competitors": "دی اے آئی گرڈ اور دی ورج نے اس اسکینڈل کو خبروں میں جگہ دی لیکن اینڈیا کے اسٹاک پر اس کے براہ راست طویل مدتی اثرات پر بات نہیں کی۔",
-   "angle": "ہم اس خبر میں غیر جانبدارانہ انداز میں صرف انٹیلی جنس میمو اور وایس یونیورسٹی کے ماہرین کے تخمینے پر بات کریں گے کہ آیا جینسن ہوانگ کی نوکری واقعی خطرے میں ہے۔",
+   "topic": "اوپن اے آئی کے بھاری مالی نقصانات اور آمدنی میں اضافہ",
+   "competitors": "ویس روتھ اور دیگر چینلز نے نئی ماڈل کی صلاحیتوں پر بات کی لیکن اوپن اے آئی کے مالیاتی کھاتوں، دس ارب ڈالر کی آمدنی اور ساتھ ہی جاری بھاری نقصانات پر تفصیلی بات نہیں کی۔",
+   "angle": "ہم نے مالیاتی رپورٹس کی بنیاد پر تجزیہ کیا ہے کہ اتنی زیادہ آمدنی کے باوجود نقصانات کیوں بڑھ رہے ہیں۔",
    "viral": {
-    "score": 75,
-    "why": "ٹیکنالوجی انڈسٹری کے سب سے بڑے نام اینڈیا کے سی ای او کے بارے میں یہ اسکینڈل بہت زیادہ زیرِ بحث ہے۔"
+    "score": 58,
+    "why": "اوپن اے آئی کے مالی معاملات اور آمدنی کے اعداد و شمار ناظرین میں ہمیشہ مقبول رہتے ہیں۔"
    },
    "long": {
-    "title": "کیا اینڈیا کے سی ای او جینسن ہوانگ کی نوکری خطرے میں ہے؟",
-    "thumb": "جینسن ہوانگ کا بڑا اسکینڈل",
-    "hook": "مصنوعی ذہانت کی سلطنت کے سب سے بڑے رہنما یعنی اینڈیا کے سی ای او جینسن ہوانگ ایک نئے اور سنگین اسکینڈل کی زد میں آ گئے ہیں۔",
+    "title": "اوپن اے آئی کی آمدنی دس ارب ڈالر تک پہنچ گئی مگر نقصانات میں بھی اضافہ",
+    "thumb": "اوپن اے آئی کی مالیاتی رپورٹ",
+    "hook": "وال اسٹریٹ جرنل کی نئی رپورٹ کے مطابق اوپن اے آئی کی سہ ماہی آمدنی میں پچاس فیصد اضافہ ہوا ہے لیکن اس کے ساتھ اخراجات بھی آسمان کو چھو رہے ہیں۔",
     "outline": [
-     "امریکہ کے انٹیلی جنس میمو کا انکشاف",
-     "چینی جاسوسی کے الزامات اور اینڈیا کی اندرونی تحقیقات",
-     "پبلک ریلیشن فرم کی خدمات اور میڈیا کی رپورٹنگ",
-     "یونیورسٹی کے ماہرین کا تخمینہ: کیا نوکری پچاس پچاس پر ہے؟",
-     "اینڈیا کے حصص اور کاروبار پر اس کا کیا اثر پڑ رہا ہے؟"
+     "سہ ماہی آمدنی کے تازہ ترین اعداد و شمار",
+     "کمپنی کو ہونے والے بھاری مالی نقصانات کی وجوہات",
+     "اوپن اے آئی کی نئی کاروباری حکمت عملی",
+     "صنعت پر اس مالی دباؤ کے اثرات"
     ]
    },
    "shorts": [
     {
-     "title": "اینڈیا کے سی ای او پر تحقیقات",
-     "hook": "کیا اینڈیا کے سربراہ کی نوکری جانے والی ہے؟",
-     "script": "اینڈیا کے سی ای او جینسن ہوانگ کے ایک مبینہ چینی جاسوس کے ساتھ تعلقات پر کمپنی نے باضابطہ تحقیقات شروع کر دی ہیں۔ انٹیلی جنس میمو کے مطابق یہ معاملہ اب بہت سنگین ہو چکا ہے۔",
-     "cta": "مزید اپ ڈیٹس کے لیے چینل وزٹ کریں۔"
+     "title": "اوپن اے آئی کی مالی حالت",
+     "hook": "اربوں ڈالر کما کر بھی اوپن اے آئی گھاٹے میں کیوں ہے؟",
+     "script": "وال اسٹریٹ جرنل کی رپورٹ کے مطابق اوپن اے آئی کی سہ ماہی آمدنی دس ارب ڈالر تک پہنچ گئی ہے، لیکن اس کے باوجود کمپنی کو بھاری نقصانات کا سامنا ہے۔ اے آئی کی دنیا کے مالی راز جاننے کے لیے فاروقی اے آئی نیوز دیکھیں۔",
+     "cta": "مزید جاننے کے لیے سبسکرائب کریں"
     },
     {
-     "title": "اینڈیا اسکینڈل کی حقیقت",
-     "hook": "ٹیکنالوجی کی دنیا کا سب سے بڑا بم پھٹ گیا!",
-     "script": "جینسن ہوانگ کی ذاتی زندگی اور چینی تعلقات پر بننے والی کہانیاں اب اینڈیا کے مستقبل کو متاثر کر رہی ہیں۔ ماہرین کے مطابق صورتحال پچاس پچاس ہے۔",
-     "cta": "چینل کو سبسکرائب کرنا نہ بھولیں۔"
+     "title": "اوپن اے آئی کی دس ارب ڈالر کی آمدنی",
+     "hook": "کیا مصنوعی ذہانت کا کاروبار مہنگا سودا بن گیا ہے؟",
+     "script": "اوپن اے آئی کی آمدنی میں پچاس فیصد اضافہ ہوا ہے مگر اخراجات نے تمام ریکارڈ توڑ دیے ہیں۔ آنے والے دنوں میں اس کا مارکیٹ پر کیا اثر پڑے گا؟ جانیिए ہمارے ساتھ۔",
+     "cta": "مکمل بلیٹن دیکھیں"
     }
    ],
    "carousel": {
-    "title": "اینڈیا کے سی ای او کا اسکینڈل",
+    "title": "اوپن اے آئی کی مالیاتی حقیقت",
     "slides": [
-     "اینڈیا کے سی ای او جینسن ہوانگ ایک نئے اسکینڈل کی زد میں",
-     "امریکہ کے انٹیلی جنس میمو میں چینی جاسوس کا ذکر",
-     "کمپنی کی جانب سے باضابطہ تحقیقات کا آغاز",
-     "کیا اینڈیا کا مستقبل خطرے میں ہے؟",
-     "مکمل تجزیہ ہمارے چینل پر ملاحظہ کریں"
+     "سہ ماہی آمدنی دس ارب ڈالر تک پہنچ گئی",
+     "آمدنی میں پچاس فیصد کا نمایاں اضافہ",
+     "اس کے باوجود بھاری مالی نقصانات جاری",
+     "وال اسٹریٹ جرنل کی خصوصی رپورٹ",
+     "کمپنی کے کاروباری اخراجات کا دباؤ",
+     "مستقبل کی مالی حکمت عملی"
     ]
    },
    "posts": {
     "x": [
-     "اینڈیا کے سی ای او جینسن ہوانگ کے مبینہ تعلقات اور چینی جاسوسی کے اسکینڈل پر کمپنی نے تحقیقات شروع کر دی ہیں۔ #Nvidia #JensenHuang",
-     "کیا ٹیکنالوجی کی دنیا کے سب سے طاقتور شخص کی نوکری خطرے میں ہے؟ جانیے تازہ ترین رپورٹ میں۔ #TechNews"
+     "وال اسٹریٹ جرنل کی رپورٹ: اوپن اے آئی کی سہ ماہی آمدنی ۱۰ ارب ڈالر ہو گئی، لیکن نقصانات بھی برقرار ہیں۔ #OpenAI #FinancialNews",
+     "کیا بڑھتی ہوئی آمدنی کے باوجود اوپن اے آئی کا ماڈل مالی طور پر پائیدار ہے؟ جانیے تازہ ترین رپورٹ میں۔"
     ],
-    "facebook": "اینڈیا کے سربراہ جینسن ہوانگ کے گرد گھیرا تنگ ہو گیا ہے۔ امریکی انٹیلی جنس میمو اور مبینہ چینی جاسوس کے اسکینڈل پر کمپنی نے تحقیقات شروع کر دی ہیں۔ دیکھیے اس خبر کا تفصیلی تجزیہ۔",
-    "instagram": "اینڈیا کے سی ای او جینسن ہوانگ کا اسکینڈل اور اس کے کارپوریٹ دنیا پر اثرات۔ مکمل تفصیلات کے لیے لنک ملاحظہ کریں۔ #Nvidia #TechUpdate #BusinessNews",
-    "linkedin": "کارپوریٹ گورننس اور اے آئی لیڈرشپ: اینڈیا کے حالیہ بحران اور اس کے کاروباری اثرات کا جائزہ۔"
+    "facebook": "اوپن اے آئی کے مالی معاملات پر بڑی خبر سامنے آ گئی ہے۔ سہ ماہی آمدنی دس ارب ڈالر تک پہنچنے کے باوجود کمپنی کو شدید نقصانات کا سامنا ہے۔ مکمل تفصیلات ہماری نئی ویڈیو میں۔",
+    "instagram": "اوپن اے آئی کی مالیاتی رپورٹ: آمدنی میں اضافہ لیکن نقصانات بھی جاری۔ #OpenAI #TechNews #Business #FarooqiAINews",
+    "linkedin": "ٹیکنالوجی انڈسٹری کا مالیاتی تجزیہ: اوپن اے آئی کی دس ارب ڈالر کی آمدنی اور بڑھتے ہوئے اخراجات کا نیا منظرنامہ۔"
    },
    "article": {
-    "title": "اینڈیا کے سی ای او جینسن ہوانگ کا اسکینڈل: حقیقت کیا ہے؟",
+    "title": "اوپن اے آئی کی مالی رپورٹ: آمدنی میں اضافہ اور نقصانات کا بوجھ",
     "outline": [
-     "تعارف: اینڈیا اور جینسن ہوانگ کی کامیابی کا سفر",
-     "مبینہ چینی جاسوسی کا اسکینڈل اور انٹیلی جنس میمو",
-     "کمپنی کی تحقیقات اور پبلک ریلیشن کا کردار",
-     "ماہرین کے تخمینے اور کاروباری اثرات",
-     "نتیجہ اور آئندہ کے امکانات"
+     "آمدنی کے نئے ریکارڈ",
+     "مالی نقصانات کی وجوہات",
+     "کاروباری اخراجات کا تجزیہ",
+     "مستقبل کے چیلنجز"
     ]
    }
   },
   {
-   "topic": "اوپن اے آئی کی جانب سے ڈین ڈرِسکول کی سائبر سیکیورٹی میں تقرری اور 11 ارب ڈالر کی فنڈنگ",
-   "competitors": "میتھیو برمین نے فنڈنگ اور ماڈلز پر بات کی لیکن سابق آرمی سیکرٹری کی بطور سائبر سیکیورٹی سربراہ تقرری پر کم روشنی ڈالی۔",
-   "angle": "ہم اس بات پر روشنی ڈالیں گے کہ اوپن اے آئی کس طرح فوجی پس منظر رکھنے والے افراد کو اپنی سیکیورٹی میں شامل کر کے حکومتی دباؤ کا مقابلہ کر رہی ہے۔",
+   "topic": "اوپن اے آئی کا بزنس چیٹ جی پی ٹی اور کاروباری پروفائلز",
+   "competitors": "دی ورج اور ٹیک کرنچ نے نئے بزنس ٹولز کا تعارف کرایا لیکن روایتی گوگل سرچ اور کاروباری مارکیٹ پر اس کے براہ راست اثرات کو اردو ناظرین کے لیے نہیں سمجھایا گیا۔",
+   "angle": "ہم نے عام کاروباری افراد کے لیے اس کے فائدے اور گوگل کے ساتھ مقابلے کے تناظر میں بات کی ہے۔",
    "viral": {
-    "score": 71,
-    "why": "اوپن اے آئی کی فنڈنگ اور سیکیورٹی کی تبدیلیاں ناظرین کی توجہ حاصل کرتی ہیں۔"
+    "score": 52,
+    "why": "کاروبار اور چیٹ جی پی ٹی کے نئے فیچرز سے جڑے ٹولز سامعین کے لیے انتہائی کارآمد ہوتے ہیں۔"
    },
    "long": {
-    "title": "اوپن اے آئی نے گیارہ ارب ڈالر کی فنڈنگ کے ساتھ فوج کے سابق افسر کو کیوں رکھا؟",
-    "thumb": "اوپن اے آئی کی بڑی تقرری",
-    "hook": "اوپن اے آئی نے اپنی سیکیورٹی کو فول پروف بنانے کے لیے امریکی فوج کے سابق سیکرٹری کو اہم عہدے پر تعینات کر دیا ہے۔",
+    "title": "اوپن اے آئی کا بزنس چیٹ جی پی ٹی: کیا اب گوگل کی اجارہ داری ختم ہونے والی ہے؟",
+    "thumb": "بزنس چیٹ جی پی ٹی کا اجراء",
+    "hook": "ٹیک کرنچ اور دی ورج کی رپورٹس کے مطابق اوپن اے آئی نے نئے کاروباری پروفائلز اور تصدیق شدہ بزنس ایجنٹس کا آغاز کر دیا ہے۔",
     "outline": [
-     "اوپن اے آئی کی نئی گیارہ ارب ڈالر کی فنڈنگ اور کارپوریٹ ویلیو",
-     "سابق آرمی سیکرٹری ڈین ڈرِسکول کی سائبر سیکیورٹی میں تعیناتی",
-     "حکومتی اور سیکیورٹی چیلنجز سے نمٹنے کی حکمت عملی",
-     "مصنوعی ذہانت کے حفاظتی معیارات میں تبدیلی",
-     "مستقبل کے منصوبوں پر ایک نظر"
+     "بزنس چیٹ جی پی ٹی اور نئے پروفائلز کی تفصیلات",
+     "گوگل کے ساتھ براہ راست مقابلہ",
+     "کاروباروں کے لیے اس کے عملی فوائد",
+     "صارفین کے لیے اے آئی ایجنٹس کا استعمال"
     ]
    },
    "shorts": [
     {
-     "title": "اوپن اے آئی کی بڑی تقرری",
-     "hook": "اوپن اے آئی نے فوج کے سابق سیکرٹری کو رکھ لیا!",
-     "script": "اوپن اے آئی نے اپنی سائبر سیکیورٹی کو مضبوط کرنے کے لیے امریکی فوج کے سابق سیکرٹری ڈین ڈرِسکول کو اہم ذمہ داری سونپ دی ہے۔ ساتھ ہی کمپنی نے گیارہ ارب ڈالر کی نئی فنڈنگ بھی حاصل کر لی ہے۔",
-     "cta": "مزید خبروں کے لیے سبسکرائب کریں۔"
+     "title": "بزنس چیٹ جی پی ٹی آ گیا",
+     "hook": "کیا چیٹ جی پی ٹی اب گوگل کی جگہ لے گا؟",
+     "script": "اوپن اے آئی نے نئے بزنس پروفائلز اور تصدیق شدہ ایجنٹس متعارف کرا دیے ہیں، جس سے چیٹ جی پی ٹی تھوڑا بہت گوگل جیسا بنتا جا رہا ہے۔ کاروباری دنیا کی اس بڑی تبدیلی کو جاننے کے لیے فاروقی اے آئی نیوز ملاحظہ کریں۔",
+     "cta": "چینل کو سبسکرائب کریں"
     },
     {
-     "title": "اوپن اے آئی کی فنڈنگ",
-     "hook": "اوپن اے آئی کی ویلیو میں زبردست اضافہ!",
-     "script": "اوپن اے آئی نے گیارہ ارب ڈالر کی اضافی فنڈنگ حاصل کر کے اپنی پوزیشن مزید مستحکم کر لی ہے۔ اب دیکھنا یہ ہے کہ یہ رقم کہاں استعمال ہوگی۔",
-     "cta": "بیل آئیکن پریس کریں۔"
+     "title": "اوپن اے آئی کا نیا کاروباری ٹूल",
+     "hook": "اپنے کاروبار کو اب چیٹ جی پی ٹی پر تصدیق کروائیں۔",
+     "script": "ٹیک کرنچ کے مطابق اوپن اے آئی نے کاروباری اداروں کے لیے نئے فیچرز جاری کر دیے ہیں۔ اب کمپنیاں براہ راست صارفین تک بہتر انداز میں پہنچ سکیں گی۔",
+     "cta": "تفصیلات کے لیے ویڈیو دیکھیں"
     }
    ],
    "carousel": {
-    "title": "اوپن اے آئی کی نئی تبدیلیاں",
+    "title": "بزنس چیٹ جی پی ٹی کی خصوصیات",
     "slides": [
-     "اوپن اے آئی نے گیارہ ارب ڈالر کی فنڈنگ حاصل کر لی",
-     "سابق آرمی سیکرٹری ڈین ڈرِسکول کی سائبر سیکیورٹی میں تقرری",
-     "حکومتی ضوابط اور سیکیورٹی کے سخت اقدامات",
-     "مصنوعی ذہانت کی صنعت میں بڑھتا ہوا مقابلہ",
-     "تفصیلی خبر کے لیے ہمارا چینل وزٹ کریں"
+     "اوپن اے آئی کا نیا کاروباری اقدام",
+     "تصدیق شدہ بزنس ایجنٹس کا اجراء",
+     "گوگل کے متبادل کے طور پر پہچان",
+     "کاروباروں کے لیے آسان رسائی",
+     "گاہکوں سے رابطے کا نیا طریقہ",
+     "ڈیجیٹل مارکیٹ میں نئی جنگ"
     ]
    },
    "posts": {
     "x": [
-     "اوپن اے آئی نے فوج کے سابق سیکرٹری ڈین ڈرِسکول کو سائبر سیکیورٹی کے شعبے میں اہم ذمہ داری سونپ دی ہے۔ #OpenAI #CyberSecurity",
-     "گیارہ ارب ڈالر کی نئی فنڈنگ کے ساتھ اوپن اے آئی کا اگلا قدم کیا ہوگا؟ جانیے آج کے بلیٹن میں۔ #AI"
+     "اوپن اے آئی نے نئے بزنس پروفائلز متعارف کرا دیے ہیں، جس سے چیٹ جی پی ٹی اب گوگل کے مزید قریب ہو گیا ہے۔ #ChatGPT #OpenAI",
+     "کاروباروں کے لیے بڑی خبر: اب چیٹ جی پی ٹی پر تصدیق شدہ بزنس ایجنٹس دستیاب ہیں۔"
     ],
-    "facebook": "اوپن اے آئی نے اپنی سیکیورٹی کو مزید سخت کرنے کے لیے امریکی فوج کے سابق سیکرٹری کو شامل کر لیا ہے جبکہ کمپنی نے گیارہ ارب ڈالر کی نئی فنڈنگ بھی لے لی ہے۔ مکمل خبر کے لیے ویڈیو دیکھیں۔",
-    "instagram": "اوپن اے آئی کی نئی فنڈنگ اور سیکیورٹی کی بڑی تبدیلیاں۔ لنک بائیو میں موجود ہے۔ #OpenAI #TechNews #ArtificialIntelligence",
-    "linkedin": "اوپن اے آئی کی کارپوریٹ حکمت عملی اور سائبر سیکیورٹی کے شعبے میں اہم تقرریوں کا تجزیہ۔"
+    "facebook": "اوپن اے آئی نے کاروباروں کے لیے نئے پروفائلز اور اے آئی ایجنٹس کا اجراء کر دیا ہے۔ اس قدم سے گوگل کے ساتھ مقابلہ مزید سخت ہو گیا ہے۔ مکمل تفصیلات ہماری ویڈیو میں ملاحظہ کریں۔",
+    "instagram": "اوپن اے آئی کا نیا بزنس چیٹ جی پی ٹی اور کارپوریٹ پروفائلز۔ #OpenAI #Business #AI #FarooqiAINews",
+    "linkedin": "ڈیجیٹل مارکیٹنگ میں نیا موڑ: اوپن اے آئی کے نئے بزنس ایجنٹس اور کارپوریٹ پروفائلز کا تعارف۔"
    },
    "article": {
-    "title": "اوپن اے آئی کی نئی فنڈنگ اور سیکیورٹی میں اعلیٰ فوجی افسر کی تقرری",
+    "title": "بزنس چیٹ جی پی ٹی: کارپوریٹ دنیا کے لیے اوپن اے آئی کا نیا قدم",
     "outline": [
-     "تعارف: اوپن اے آئی کا مالیاتی اور انتظامی سفر",
-     "گیارہ ارب ڈالر کی فنڈنگ اور نئی مارکیٹ ویلیو",
-     "ڈین ڈرِسکول کی بطور سائبر سیکیورٹی سربراہ آمد",
-     "حکومتی ضوابط اور سیکیورٹی کے چیلنجز",
-     "نتیجہ"
+     "نئے بزنس پروفائلز کا تعارف",
+     "گوگل کے ساتھ کاروباری مقابلہ",
+     "کمپنیوں کے لیے فوائد",
+     "مستقبل کا لائحہ عمل"
     ]
    }
   }
  ],
  "hook_patterns": [
   {
-   "pattern": "بڑے نام کے ساتھ کسی خوفناک یا اچانک تبدیلی کا اشارہ دینا",
-   "example": "اوپن اے آئی کی خفیہ حکمت عملی نے سب کو چونکا دیا"
+   "pattern": "بڑے ادارے یا شخصیت کا نام لے کر ان کے مالی یا تکنیکی بحران کی طرف اشارہ کرنا",
+   "example": "اینتھروپک کا ۱.۴ ٹریلین ڈالر کا آئی پی او: اے آئی دنیا کا سب سے بڑا مالی معرکہ"
   },
   {
-   "pattern": "موجودہ ماڈل یا ٹیکنالوجی کے بارے میں ناقابل یقین دعویٰ پیش کرنا",
-   "example": "کلاڈ کا نیا ماڈل فزکس کے ناممکن مسائل حل کرنے لگا"
+   "pattern": "کسی نئی تبدیلی سے گوگل یا روایتی نظام کو درپیش خطرے کو بیان کرنا",
+   "example": "اوپن اے آئی کا بزنس چیٹ جی پی ٹی: کیا اب گوگل کی اجارہ داری ختم ہونے والی ہے؟"
   },
   {
-   "pattern": "کسی بڑے تنازعہ یا اسکینڈل کو سوالیہ انداز میں سامنے لانا",
-   "example": "کیا ٹیکنالوجی کی دنیا کا سب سے بڑا سی ای او اپنی نوکری بچا پائے گا؟"
+   "pattern": "آمدنی اور نقصانات کے تضاد کو حیرت انگیز انداز میں سامنے رکھنا",
+   "example": "اوپن اے آئی کی آمدنی دس ارب ڈالر تک پہنچ گئی مگر نقصانات میں بھی اضافہ"
   },
   {
-   "pattern": "مارکیٹ کی اچانک گراوٹ یا پالیسی تبدیلی پر بات کرنا",
-   "example": "ستر ارب ڈالر کا پلان اچانک کیوں رول بیک کر لیا گیا؟"
+   "pattern": "مارکیٹ میں آنے والی کسی تاریخی اور بڑی تبدیلی پر سوالیہ نشان لگانا",
+   "example": "کیا اینتھروپک کا نیا شیئر بازار کا اجرا پوری انڈسٹری کو ہلا کر رکھ دے گا؟"
   },
   {
-   "pattern": "سابقہ ریکارڈز یا بینچ مارکس کے ٹوٹنے کا اعلان کرنا",
-   "example": "اس نئے اے آئی ٹول نے تمام پرانے ریکارڈ توڑ دیے ہیں"
+   "pattern": "کمپنی کے نئے اور طاقتور ٹولز کو عام آدمی اور کاروبار سے جوڑنا",
+   "example": "کاروباروں کے لیے بڑی خبر: اوپن اے آئی نے نئے تصدیق شدہ ایجنٹس جاری کر دیے"
   }
  ],
  "_competitors": [
   {
    "channel": "Wes Roth",
    "title": "they’re shutting it DOWN",
-   "views": 504223,
+   "views": 504387,
    "date": "2026-10-21",
-   "url": "https://youtu.be/ehcBwqyUGjo"
+   "url": "https://youtu.be/ehcBwqyUGjo",
+   "desc": "AI helped uncover something dangerous in the software behind a huge part of the internet. Government websites went offline as a precaution while defenders raced to respond. Here's how OpenAI and Google's models helped researchers uncover PHP2Shell, why finding the flaws was only the beginning, and what you can do to protect yourself.\n\n______________________________________________\nMy Links 🔗\n➡️ Twitter: https://x.com/WesRothMoney\n➡️ AI Newsletter: https://natural20.beehiiv.com/subscribe\n\nWant to work with me?\nBrand, sponsorship & business inquiries: wesroth@smoothmedia.co\n______________________________________________\n\nSOURCES:\n\nDutch government: precautionary website shutdowns:\nhttps://www."
   },
   {
    "channel": "TheAIGRID",
    "title": "Grok 5 Could Be The Most Powerful AI Ever Created",
-   "views": 393045,
+   "views": 404629,
    "date": "2026-11-01",
-   "url": "https://youtu.be/KlG0VyhIzBU"
+   "url": "https://youtu.be/KlG0VyhIzBU",
+   "desc": "🎓 Learn AI With Me For Free - https://www.skool.com/the-aigrid-community-1726\n🌐Subscribe To My Newsletter - https://aigrid.beehiiv.com/subscribe\nGet your Free AGI Preparedness Guide - https://theaigrid.kit.com/agi\n\n🐤 Follow Me on Twitter https://twitter.com/TheAiGrid\n\n\n\nWelcome to TheAIGRID — the place to learn AI for free. I create simple, practical videos that help beginners, creators, entrepreneurs, and business owners understand artificial intelligence, AI tools, automation, AI agents, robotics, ChatGPT, Claude, Gemini, and the future of technology. Whether you want AI tutorials, tool breakdowns, beginner guides, or explanations of the latest breakthroughs, this channel gives you the kno"
   },
   {
    "channel": "Wes Roth",
    "title": "OpenAI just broke physics...",
-   "views": 357166,
+   "views": 357885,
    "date": "2026-10-27",
-   "url": "https://youtu.be/lskEzJ7ixw0"
+   "url": "https://youtu.be/lskEzJ7ixw0",
+   "desc": "OpenAI says its AI has disproved the Exponential Time Hypothesis, challenging a barrier that shaped decades of computer science. Could there be shortcuts through problems we thought were impossibly hard? We unpack the connection to P versus NP, what a practical breakthrough could mean for encryption and AI, and the idea of a “cheat code” to the universe.\n\n______________________________________________\nMy Links 🔗\n➡️ Twitter: https://x.com/WesRothMoney\n➡️ AI Newsletter: https://natural20.beehiiv.com/subscribe\n\nWant to work with me?\nBrand, sponsorship & business inquiries: wesroth@smoothmedia.co\n______________________________________________\n\nSOURCES:\n\nOpenAI’s announcement:\nhttps://openai.com/"
   },
   {
    "channel": "Wes Roth",
    "title": "it's WORSE than we thought...",
-   "views": 305344,
+   "views": 305487,
    "date": "2026-10-24",
-   "url": "https://youtu.be/eK7Sn0_zHQw"
+   "url": "https://youtu.be/eK7Sn0_zHQw",
+   "desc": "Try Crusoe Intelligence Foundry and get $5 in free credits:\nhttps://console.crusoecloud.com/request-foundry?utm_source=wesroth&utm_medium=influencer&utm_campaign=mi-su-credits\n\nSign up to Crusoe Intelligence Foundry and get $5 in free credits. Explore Serverless Inference and Serverless Fine-Tuning. \n\nNo promo code needed.\n\nThanks to Crusoe for sponsoring this video. \n\n______________________________________________\nMy Links 🔗\n➡️ Twitter: https://x.com/WesRothMoney\n➡️ AI Newsletter: https://natural20.beehiiv.com/subscribe\n\nWant to work with me?\nBrand, sponsorship & business inquiries: wesroth@smoothmedia.co\n______________________________________________\n\nSOURCES:\n\nOpenAI on the critical PHP v"
   },
   {
    "channel": "Wes Roth",
    "title": "GEMINI 4 ARGON IS WEIRD...",
-   "views": 288223,
+   "views": 288368,
    "date": "2026-10-14",
-   "url": "https://youtu.be/NL0yDYXAQ0E"
-  },
-  {
-   "channel": "Matthew Berman",
-   "title": "They did it...",
-   "views": 248637,
-   "date": "2026-11-03",
-   "url": "https://youtu.be/r0cJOa9MZsE"
-  },
-  {
-   "channel": "Matthew Berman",
-   "title": "The most important paper in AI right now",
-   "views": 212856,
-   "date": "2026-11-04",
-   "url": "https://youtu.be/j09uV1oAuIo"
+   "url": "https://youtu.be/NL0yDYXAQ0E",
+   "desc": "Google is back, but Gemini 4 Argon feels very different. I tested Google’s polished demos, built my own games, and found a powerful model with some strange habits. We also explore its robotics capabilities and what Google’s safety findings reveal about shortcuts that stopped showing up in the model’s reasoning.\n\n______________________________________________\nMy Links 🔗\n➡️ Twitter: https://x.com/WesRothMoney\n➡️ AI Newsletter: https://natural20.beehiiv.com/subscribe\n\nWant to work with me?\nBrand, sponsorship & business inquiries: wesroth@smoothmedia.co\n______________________________________________\n\nSOURCES:\n\nGoogle — Gemini 4 Argon launch:\nhttps://blog.google/innovation-and-ai/models-and-resea"
   },
   {
    "channel": "Matthew Berman",
    "title": "Fable 5.2 is ridiculous",
-   "views": 209534,
+   "views": 269622,
    "date": "2026-11-09",
-   "url": "https://youtu.be/0vNyVMDFdkg"
+   "url": "https://youtu.be/0vNyVMDFdkg",
+   "desc": "Check out Eight Sleep's Pod 6: https://www.eightsleep.com/matthewberman\nUse code 'MATTHEWBERMAN' for up to $200 off\n\nJoin My Newsletter for Regular AI Updates 👇🏼\nhttps://forwardfuture.com\n\nCheck out my tests:\nPhoton Image Editor — https://claude.ai/artifact/WbkND2LEF984GAVpKvdBBs\nQuadrille Spreadsheet — https://claude.ai/artifact/NPxoR5gnxVVsXnyPAkKpYS\nBullet vs Water Balloon — https://claude.ai/artifact/BUvLhCGMEaoqL76Vp2Joru\nConsciousness Proof Attempt — https://claude.ai/artifact/N3zY7tMuVWGcUAyYihS36g\nForward Future Homepage Redesign — https://claude.ai/artifact/A8AgVMoCLuY27QQUwr4J3B\n\nMy Links 🔗\n👉🏻 X: https://x.com/matthewberman\n👉🏻 Forward Future X: https://x.com/forwardfuture\n👉🏻 Instag"
+  },
+  {
+   "channel": "Matthew Berman",
+   "title": "They did it...",
+   "views": 250619,
+   "date": "2026-11-03",
+   "url": "https://youtu.be/r0cJOa9MZsE",
+   "desc": "Check out the NVIDIA RTX Spark Laptop: https://nvda.ws/4BmZphI\n\nJoin My Newsletter for Regular AI Updates 👇🏼\nhttps://forwardfuture.com\n\nCheck out what I've built: https://github.com/Forward-Future\nhttps://unfold-lantern-465d.here.now/ \n\nMy Links 🔗\n👉🏻 X: https://x.com/matthewberman\n👉🏻 Forward Future X: https://x.com/forwardfuture\n👉🏻 Instagram: https://www.instagram.com/matthewberman_ai\n👉🏻 Discord: https://discord.gg/u7wTTGWhuJ\n👉🏻 Spotify: https://open.spotify.com/show/6dBxDwxtHl1hpqHhfoXmy8\n\nMedia/Sponsorship Inquiries ✅ \nhttps://bit.ly/44TC45V\n\nLinks:\nhttps://getartcraft.com/"
+  },
+  {
+   "channel": "Matthew Berman",
+   "title": "The most important paper in AI right now",
+   "views": 216268,
+   "date": "2026-11-04",
+   "url": "https://youtu.be/j09uV1oAuIo",
+   "desc": "Use Code 'Matt' for $100 in Kylon credits: https://kylon.io/matt2\n\nJoin My Newsletter for Regular AI Updates 👇🏼\nhttps://forwardfuture.com\n\nMy Links 🔗\n👉🏻 X: https://x.com/matthewberman\n👉🏻 Forward Future X: https://x.com/forwardfuture\n👉🏻 Instagram: https://www.instagram.com/matthewberman_ai\n👉🏻 Discord: https://discord.gg/u7wTTGWhuJ\n👉🏻 Spotify: https://open.spotify.com/show/6dBxDwxtHl1hpqHhfoXmy8\n\nMedia/Sponsorship Inquiries ✅ \nhttps://bit.ly/44TC45V\n\nLinks:\nhttps://rikiyat.github.io/blog/weight-space-programming/"
   },
   {
    "channel": "Wes Roth",
    "title": "Anthropic just built it...",
-   "views": 201531,
+   "views": 207507,
    "date": "2026-11-06",
-   "url": "https://youtu.be/2lt4P_xGFL8"
-  },
-  {
-   "channel": "TheAIGRID",
-   "title": "Sam Altman Just Issued His Scariest Warning Yet",
-   "views": 198691,
-   "date": "2026-10-28",
-   "url": "https://youtu.be/x6jBcI5FtXc"
-  },
-  {
-   "channel": "Wes Roth",
-   "title": "AI just BROKE all of the software industry...",
-   "views": 198471,
-   "date": "2026-10-15",
-   "url": "https://youtu.be/EmaXeEdlJkI"
+   "url": "https://youtu.be/2lt4P_xGFL8",
+   "desc": "what's Anthropic building in there?\nthey just REDACTED most of their internal audit\none of their models just broke ALL benchmarks\n\n______________________________________________\n\nMy Links 🔗\n\n➡️ Twitter: https://x.com/WesRothMoney\n➡️ AI Newsletter: https://natural20.beehiiv.com/subscribe\n\nWant to work with me?\nBrand, sponsorship & business inquiries: wesroth@smoothmedia.co\n\n______________________________________________\n\nSOURCES:\n\nMETR Anthropic AI R&D Acceleration Assessment:\nhttps://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/\n\nMETR Review of Anthropic's August 2026 Risk Report R&D Section:\nhttps://metr.org/blog/2026-11-05-rd-section-anthropic-risk-report-august-2026-re"
   },
   {
    "channel": "TheAIGRID",
    "title": "The AI Godfather Just Proved The Entire AI Industry Wrong",
-   "views": 197077,
+   "views": 207095,
    "date": "2026-11-05",
-   "url": "https://youtu.be/_fEqQa5hBmI"
+   "url": "https://youtu.be/_fEqQa5hBmI",
+   "desc": "Yann LeCun has spent years telling the AI industry it's making a huge mistake, and a new paper might be the strongest evidence yet that LeCun was right. In \"Proving and Improving the Platonic Representation Hypothesis with JEPAs\", Randall Balestriero and Yann LeCun show that a 109 million parameter JEPA beat language models up to 72 billion parameters on how well it lines up with the way image models see the world, with about 42x less training data. In this video I explain what LeCun actually found, in plain English, and what it could mean if this idea is scaled up.\n\n⏱️ Chapters\n0:00 Intro\n1:33 Who Yann LeCun is (and why I keep talking about LeCun)\n4:25 The mistake LeCun says the AI industry"
+  },
+  {
+   "channel": "TheAIGRID",
+   "title": "Sam Altman Just Issued His Scariest Warning Yet",
+   "views": 198944,
+   "date": "2026-10-28",
+   "url": "https://youtu.be/x6jBcI5FtXc",
+   "desc": "🎓 Learn AI With Me For Free - https://www.skool.com/the-aigrid-community-1726\n🌐Subscribe To My Newsletter - https://aigrid.beehiiv.com/subscribe\nGet your Free AGI Preparedness Guide - https://theaigrid.kit.com/agi\n\n🐤 Follow Me on Twitter https://twitter.com/TheAiGrid\n\nWelcome to TheAIGRID — the place to learn AI for free. I create simple, practical videos that help beginners, creators, entrepreneurs, and business owners understand artificial intelligence, AI tools, automation, AI agents, robotics, ChatGPT, Claude, Gemini, and the future of technology. Whether you want AI tutorials, tool breakdowns, beginner guides, or explanations of the latest breakthroughs, this channel gives you the knowl"
+  },
+  {
+   "channel": "Wes Roth",
+   "title": "AI just BROKE all of the software industry...",
+   "views": 198609,
+   "date": "2026-10-15",
+   "url": "https://youtu.be/EmaXeEdlJkI",
+   "desc": "Minecraft in GTA. Mario in Elden Ring. And software companies suddenly competing with their own customers. AI is changing how people modify games and rebuild the tools they use, so I tried it myself. Here's what people are making, how to get started, and why some of the possibilities get uncomfortable fast.\n\n______________________________________________\nMy Links 🔗\n➡️ Twitter: https://x.com/WesRothMoney\n➡️ AI Newsletter: https://natural20.beehiiv.com/subscribe\n\nWant to work with me?\nBrand, sponsorship & business inquiries: wesroth@smoothmedia.co\n______________________________________________\n\nSOURCES:\n\nMario in Elden Ring:\nhttps://github.com/deltarooo/er-mario\n\nMinecraft in GTA V:\nhttps://gi"
+  },
+  {
+   "channel": "Wes Roth",
+   "title": "NOTHING will be smarter than Fable 5.2...",
+   "views": 188892,
+   "date": "2026-11-10",
+   "url": "https://youtu.be/h76wUNmRqxc",
+   "desc": "Anthropic just released Claude Fable 5.2 and Claude Mythos 5.2, and while it is easily the most capable public model in the world across long-horizon coding, robotics, hardware design, and theoretical physics, the biggest story is buried in the fine print. For the first time, Anthropic admits it deliberately limited Fable 5.2 during training on accelerator kernel optimization and LLM architecture research so those specific skills stay capped at Opus 5.5 levels. We break down how today's release confirms Fable 5.2 is METR's Model 3, why the unreleased Model 4 and Anthropic's secret NanoGPT-style autonomous experiment scaffold are grazing the recursive self-improvement threshold, and test Fabl"
   },
   {
    "channel": "Matthew Berman",
    "title": "Kimi K3.1 weights OUT, open source computer use, SOTA image model, science model, Pika H3: AI NEWS",
-   "views": 169665,
+   "views": 171272,
    "date": "2026-11-05",
-   "url": "https://youtu.be/-M62vWrZh54"
+   "url": "https://youtu.be/-M62vWrZh54",
+   "desc": "So much open source!!!\n\nJoin My Newsletter for Regular AI Updates 👇🏼\nhttps://forwardfuture.com\n\nAlready a member? Claim your Frontier Pass here: https://forwardfuture.com/frontier-pass\n\nMy Links 🔗\n👉🏻 X: https://x.com/matthewberman\n👉🏻 Forward Future X: https://x.com/forwardfuture\n👉🏻 Instagram: https://www.instagram.com/matthewberman_ai\n👉🏻 Discord: https://discord.gg/u7wTTGWhuJ\n👉🏻 Spotify: https://open.spotify.com/show/6dBxDwxtHl1hpqHhfoXmy8\n\nMedia/Sponsorship Inquiries ✅ \nhttps://bit.ly/44TC45V\n\nChapters:\n00:00 Intro\n00:37 Kimi K3.1 Pro\n02:53 NorthCUA\n04:35 Pruna P-H3-Image\n07:14 Sarvam PRISM\n08:23 Hydrogen 1.0\n10:02 Perplexity Embed v2 Context\n10:51 Qwen3.5 4B 3D Coder\n12:17 Pika H3 Flex\n14:"
   },
   {
    "channel": "AI Explained",
    "title": "AI Labs Warn Race Makes Breach ‘Inevitable’",
-   "views": 157833,
+   "views": 157938,
    "date": "2026-10-12",
-   "url": "https://youtu.be/C4Sq3Rot8FU"
-  },
-  {
-   "channel": "Matthew Berman",
-   "title": "Deepseek crushed everyone",
-   "views": 153562,
-   "date": "2026-10-28",
-   "url": "https://youtu.be/DDZ-a6bAn3Y"
+   "url": "https://youtu.be/C4Sq3Rot8FU",
+   "desc": "In the week that software got reverse engineered, Sam Altman warned 6.1 Astra ‘tipped toward [breach risk], and Muse Wonder showed the race isn’t slowing, I try to step back and show where it is all going, on current trends. Agree or disagree, it is certainly interesting times.\n\nExclusives, and ad-free early access vids ($9!): https://www.patreon.com/AIExplained\n\nChapters:\n00:00 - Introduction\n0:41 Part 1: The Forthcoming Breach\n8:43 Part 2: Why the Labs Keep Racing\n15:41 Part 3: Why the Next 18 Months Are Hard to Predict\n\n\nSam Altman: the accident risk, Vanity Fair: https://www.vanityfair.com/story/sam-altman-exclusive-interview-part-2\n\nDario Amodei: We Must Pace the Frontier: https://dario"
   }
  ],
  "_bank": [
@@ -432,9 +446,10 @@
   {
    "channel": "Wes Roth",
    "title": "they’re shutting it DOWN",
-   "views": 504223,
+   "views": 504387,
    "date": "2026-10-21",
-   "url": "https://youtu.be/ehcBwqyUGjo"
+   "url": "https://youtu.be/ehcBwqyUGjo",
+   "desc": "AI helped uncover something dangerous in the software behind a huge part of the internet. Government websites went offline as a precaution while defenders raced to respond. Here's how OpenAI and Google's models helped researchers uncover PHP2Shell, why finding the flaws was only the beginning, and what you can do to protect yourself.\n\n______________________________________________\nMy Links 🔗\n➡️ Twitter: https://x.com/WesRothMoney\n➡️ AI Newsletter: https://natural20.beehiiv.com/subscribe\n\nWant to work with me?\nBrand, sponsorship & business inquiries: wesroth@smoothmedia.co\n______________________________________________\n\nSOURCES:\n\nDutch government: precautionary website shutdowns:\nhttps://www."
   },
   {
    "channel": "Matthew Berman",
@@ -446,9 +461,10 @@
   {
    "channel": "TheAIGRID",
    "title": "Grok 5 Could Be The Most Powerful AI Ever Created",
-   "views": 393045,
+   "views": 404629,
    "date": "2026-11-01",
-   "url": "https://youtu.be/KlG0VyhIzBU"
+   "url": "https://youtu.be/KlG0VyhIzBU",
+   "desc": "🎓 Learn AI With Me For Free - https://www.skool.com/the-aigrid-community-1726\n🌐Subscribe To My Newsletter - https://aigrid.beehiiv.com/subscribe\nGet your Free AGI Preparedness Guide - https://theaigrid.kit.com/agi\n\n🐤 Follow Me on Twitter https://twitter.com/TheAiGrid\n\n\n\nWelcome to TheAIGRID — the place to learn AI for free. I create simple, practical videos that help beginners, creators, entrepreneurs, and business owners understand artificial intelligence, AI tools, automation, AI agents, robotics, ChatGPT, Claude, Gemini, and the future of technology. Whether you want AI tutorials, tool breakdowns, beginner guides, or explanations of the latest breakthroughs, this channel gives you the kno"
   },
   {
    "channel": "Wes Roth",
@@ -460,9 +476,10 @@
   {
    "channel": "Wes Roth",
    "title": "OpenAI just broke physics...",
-   "views": 357166,
+   "views": 357885,
    "date": "2026-10-27",
-   "url": "https://youtu.be/lskEzJ7ixw0"
+   "url": "https://youtu.be/lskEzJ7ixw0",
+   "desc": "OpenAI says its AI has disproved the Exponential Time Hypothesis, challenging a barrier that shaped decades of computer science. Could there be shortcuts through problems we thought were impossibly hard? We unpack the connection to P versus NP, what a practical breakthrough could mean for encryption and AI, and the idea of a “cheat code” to the universe.\n\n______________________________________________\nMy Links 🔗\n➡️ Twitter: https://x.com/WesRothMoney\n➡️ AI Newsletter: https://natural20.beehiiv.com/subscribe\n\nWant to work with me?\nBrand, sponsorship & business inquiries: wesroth@smoothmedia.co\n______________________________________________\n\nSOURCES:\n\nOpenAI’s announcement:\nhttps://openai.com/"
   },
   {
    "channel": "AI Explained",
@@ -474,9 +491,10 @@
   {
    "channel": "Wes Roth",
    "title": "it's WORSE than we thought...",
-   "views": 305344,
+   "views": 305487,
    "date": "2026-10-24",
-   "url": "https://youtu.be/eK7Sn0_zHQw"
+   "url": "https://youtu.be/eK7Sn0_zHQw",
+   "desc": "Try Crusoe Intelligence Foundry and get $5 in free credits:\nhttps://console.crusoecloud.com/request-foundry?utm_source=wesroth&utm_medium=influencer&utm_campaign=mi-su-credits\n\nSign up to Crusoe Intelligence Foundry and get $5 in free credits. Explore Serverless Inference and Serverless Fine-Tuning. \n\nNo promo code needed.\n\nThanks to Crusoe for sponsoring this video. \n\n______________________________________________\nMy Links 🔗\n➡️ Twitter: https://x.com/WesRothMoney\n➡️ AI Newsletter: https://natural20.beehiiv.com/subscribe\n\nWant to work with me?\nBrand, sponsorship & business inquiries: wesroth@smoothmedia.co\n______________________________________________\n\nSOURCES:\n\nOpenAI on the critical PHP v"
   },
   {
    "channel": "AI Explained",
@@ -488,9 +506,10 @@
   {
    "channel": "Wes Roth",
    "title": "GEMINI 4 ARGON IS WEIRD...",
-   "views": 288223,
+   "views": 288368,
    "date": "2026-10-14",
-   "url": "https://youtu.be/NL0yDYXAQ0E"
+   "url": "https://youtu.be/NL0yDYXAQ0E",
+   "desc": "Google is back, but Gemini 4 Argon feels very different. I tested Google’s polished demos, built my own games, and found a powerful model with some strange habits. We also explore its robotics capabilities and what Google’s safety findings reveal about shortcuts that stopped showing up in the model’s reasoning.\n\n______________________________________________\nMy Links 🔗\n➡️ Twitter: https://x.com/WesRothMoney\n➡️ AI Newsletter: https://natural20.beehiiv.com/subscribe\n\nWant to work with me?\nBrand, sponsorship & business inquiries: wesroth@smoothmedia.co\n______________________________________________\n\nSOURCES:\n\nGoogle — Gemini 4 Argon launch:\nhttps://blog.google/innovation-and-ai/models-and-resea"
   },
   {
    "channel": "Matt Wolfe",
@@ -501,24 +520,27 @@
   },
   {
    "channel": "Matthew Berman",
+   "title": "Fable 5.2 is ridiculous",
+   "views": 269622,
+   "date": "2026-11-09",
+   "url": "https://youtu.be/0vNyVMDFdkg",
+   "desc": "Check out Eight Sleep's Pod 6: https://www.eightsleep.com/matthewberman\nUse code 'MATTHEWBERMAN' for up to $200 off\n\nJoin My Newsletter for Regular AI Updates 👇🏼\nhttps://forwardfuture.com\n\nCheck out my tests:\nPhoton Image Editor — https://claude.ai/artifact/WbkND2LEF984GAVpKvdBBs\nQuadrille Spreadsheet — https://claude.ai/artifact/NPxoR5gnxVVsXnyPAkKpYS\nBullet vs Water Balloon — https://claude.ai/artifact/BUvLhCGMEaoqL76Vp2Joru\nConsciousness Proof Attempt — https://claude.ai/artifact/N3zY7tMuVWGcUAyYihS36g\nForward Future Homepage Redesign — https://claude.ai/artifact/A8AgVMoCLuY27QQUwr4J3B\n\nMy Links 🔗\n👉🏻 X: https://x.com/matthewberman\n👉🏻 Forward Future X: https://x.com/forwardfuture\n👉🏻 Instag"
+  },
+  {
+   "channel": "Matthew Berman",
    "title": "They did it...",
-   "views": 248637,
+   "views": 250619,
    "date": "2026-11-03",
-   "url": "https://youtu.be/r0cJOa9MZsE"
+   "url": "https://youtu.be/r0cJOa9MZsE",
+   "desc": "Check out the NVIDIA RTX Spark Laptop: https://nvda.ws/4BmZphI\n\nJoin My Newsletter for Regular AI Updates 👇🏼\nhttps://forwardfuture.com\n\nCheck out what I've built: https://github.com/Forward-Future\nhttps://unfold-lantern-465d.here.now/ \n\nMy Links 🔗\n👉🏻 X: https://x.com/matthewberman\n👉🏻 Forward Future X: https://x.com/forwardfuture\n👉🏻 Instagram: https://www.instagram.com/matthewberman_ai\n👉🏻 Discord: https://discord.gg/u7wTTGWhuJ\n👉🏻 Spotify: https://open.spotify.com/show/6dBxDwxtHl1hpqHhfoXmy8\n\nMedia/Sponsorship Inquiries ✅ \nhttps://bit.ly/44TC45V\n\nLinks:\nhttps://getartcraft.com/"
   },
   {
    "channel": "Matthew Berman",
    "title": "The most important paper in AI right now",
-   "views": 212856,
+   "views": 216268,
    "date": "2026-11-04",
-   "url": "https://youtu.be/j09uV1oAuIo"
-  },
-  {
-   "channel": "Matthew Berman",
-   "title": "Fable 5.2 is ridiculous",
-   "views": 209534,
-   "date": "2026-11-09",
-   "url": "https://youtu.be/0vNyVMDFdkg"
+   "url": "https://youtu.be/j09uV1oAuIo",
+   "desc": "Use Code 'Matt' for $100 in Kylon credits: https://kylon.io/matt2\n\nJoin My Newsletter for Regular AI Updates 👇🏼\nhttps://forwardfuture.com\n\nMy Links 🔗\n👉🏻 X: https://x.com/matthewberman\n👉🏻 Forward Future X: https://x.com/forwardfuture\n👉🏻 Instagram: https://www.instagram.com/matthewberman_ai\n👉🏻 Discord: https://discord.gg/u7wTTGWhuJ\n👉🏻 Spotify: https://open.spotify.com/show/6dBxDwxtHl1hpqHhfoXmy8\n\nMedia/Sponsorship Inquiries ✅ \nhttps://bit.ly/44TC45V\n\nLinks:\nhttps://rikiyat.github.io/blog/weight-space-programming/"
   }
  ]
 }
