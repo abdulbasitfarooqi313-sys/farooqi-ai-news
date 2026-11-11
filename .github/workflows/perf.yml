@@ -1,0 +1,69 @@
+# 📊 ہفتہ وار کارکردگی رپورٹ — تینوں چینل (ہر اتوار صبح 9 بجے سعودی)
+name: Weekly report
+on:
+  schedule:
+    - cron: "0 6 * * 0"
+  workflow_dispatch:
+    inputs:
+      dry: { description: "صرف لاگ میں (ٹیلیگرام نہیں): yes", required: false, default: "no" }
+permissions:
+  contents: write
+concurrency: perf
+jobs:
+  perf:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Engine (private code)
+        env: { ENGINE_TOKEN: "${{ secrets.ENGINE_TOKEN }}" }
+        run: |
+          if [ -n "$ENGINE_TOKEN" ]; then
+            if git clone -q --depth 1 "https://x-access-token:${ENGINE_TOKEN}@github.com/abdulbasitfarooqi313-sys/farooqi-ai-news-engine" /tmp/engine; then
+              rsync -a --exclude .git --exclude .gitignore --exclude .github --exclude state --exclude media --exclude cache --exclude desk /tmp/engine/ ./
+              rm -rf /tmp/engine; echo "engine: ok"
+            else
+              code=$(curl -s -o /dev/null -w '%{http_code}' -H "Authorization: Bearer $ENGINE_TOKEN" https://api.github.com/repos/abdulbasitfarooqi313-sys/farooqi-ai-news-engine)
+              echo "::warning::engine clone failed (api $code, token len ${#ENGINE_TOKEN}, prefix ${ENGINE_TOKEN:0:11}) — using code in this repo"
+              [ -f news/bulletin.py ] || exit 1
+            fi
+          else echo "::warning::ENGINE_TOKEN missing — using code in this repo"; fi
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install requests json-repair
+      - name: Report
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_NEWS_KEY: ${{ secrets.GEMINI_NEWS_KEY }}
+          GEMINI_BACKUP_KEY: ${{ secrets.GEMINI_BACKUP_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          NEWS_BOT_TOKEN: ${{ secrets.NEWS_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          TS_YOUTUBE_CLIENT_ID: ${{ secrets.TS_YOUTUBE_CLIENT_ID }}
+          TS_YOUTUBE_CLIENT_SECRET: ${{ secrets.TS_YOUTUBE_CLIENT_SECRET }}
+          TS_YOUTUBE_REFRESH_TOKEN: ${{ secrets.TS_YOUTUBE_REFRESH_TOKEN }}
+          NAWA_YOUTUBE_CLIENT_ID: ${{ secrets.NAWA_YOUTUBE_CLIENT_ID }}
+          NAWA_YOUTUBE_CLIENT_SECRET: ${{ secrets.NAWA_YOUTUBE_CLIENT_SECRET }}
+          NAWA_YOUTUBE_REFRESH_TOKEN: ${{ secrets.NAWA_YOUTUBE_REFRESH_TOKEN }}
+        run: python -u -m news.perf ${{ github.event.inputs.dry == 'yes' && 'dry' || '' }}
+      - name: Save
+        if: always()
+        run: |
+          git config user.name "news-bot"; git config user.email "news-bot@users.noreply.github.com"
+          git add state/perf.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "ہفتہ وار رپورٹ $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase --autostash -X theirs && git push && exit 0; sleep 5; done
+
+      - name: Alert on failure
+        if: failure()
+        env:
+          TOKEN: ${{ secrets.NEWS_BOT_TOKEN || secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT_SECRET: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          CHAT=$(python3 -c "import json;print(json.load(open('state/news.json')).get('chat',''))" 2>/dev/null); CHAT=${CHAT:-$CHAT_SECRET}
+          curl -s -X POST "https://api.telegram.org/bot$TOKEN/sendMessage" --data-urlencode "chat_id=$CHAT" \
+            --data-urlencode "text=⚠️ اے آئی نیوز: «${{ github.workflow }}» ناکام ہو گیا۔ یہ لنک Jules یا Claude کو دکھائیں: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" >/dev/null || true

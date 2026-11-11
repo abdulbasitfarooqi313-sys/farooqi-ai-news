@@ -27,6 +27,7 @@ WATCH = [
     ("اے آئی نیوز — ٹیک دریافت", OWN, "tech.yml", "GH", "tech.yml", {"mode": "real"}),
     ("روزنامچہ فاروقی", OWN, "desk.yml", "GH", "desk.yml", {}),
     ("وائرل مقابل", OWN, "outliers.yml", "GH", "outliers.yml", {}),
+    ("ہفتہ وار رپورٹ", OWN, "perf.yml", "GH", "perf.yml", {}),
     ("ٹول اسکیپ — ویڈیو", TS, "make-video.yml", "TS", "toolscape-video.yml", {"force": "true"}),
     ("ٹول اسکیپ — ویڈیو (متبادل رنر)", OWN, "toolscape-video.yml", "GH", "toolscape-video.yml", {"force": "true"}),
     ("نوائے فاروقی — سبق کی ویڈیو", NAWA, "lesson-video.yml", "NAWA", "nawa-lesson.yml", {"force": "true"}),
