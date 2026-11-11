@@ -46,7 +46,7 @@ jobs:
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
         run: |
-          if [ "${{ github.event_name }}" = "push" ] && grep -q resend state/outliers_run_now; then python -u -m news.outlier resend; exit 0; fi
+          if [ "${{ github.event_name }}" = "push" ] && grep -q resend state/outliers_run_now; then python -u -m news.outlier $(cat state/outliers_run_now); exit 0; fi
           python -u -m news.outlier ${{ github.event.inputs.niches }}
       - name: Save
         if: always()
