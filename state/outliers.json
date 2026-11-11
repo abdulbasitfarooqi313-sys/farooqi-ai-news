@@ -96,8 +96,9 @@
    },
    "on": "2026-11-11",
    "id": "0b86b0430b",
-   "status": "new",
-   "regen": 1
+   "status": "queued",
+   "regen": 1,
+   "tries": 0
   }
  ],
  "toolscape": [
