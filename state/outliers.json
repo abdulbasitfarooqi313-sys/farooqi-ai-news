@@ -1,0 +1,192 @@
+{
+ "seen": [
+  "https://youtu.be/0vNyVMDFdkg",
+  "https://youtu.be/DByAR5Su1Yw",
+  "https://youtu.be/tM0dwXhOv2o",
+  "https://youtu.be/r0cJOa9MZsE"
+ ],
+ "news": [
+  {
+   "channel": "Matthew Berman",
+   "title": "They did it...",
+   "views": 250361,
+   "date": "2026-11-03",
+   "url": "https://youtu.be/r0cJOa9MZsE",
+   "desc": "Check out the NVIDIA RTX Spark Laptop: https://nvda.ws/4BmZphI\n\nJoin My Newsletter for Regular AI Updates 👇🏼\nhttps://forwardfuture.com\n\nCheck out what I've built: https://github.com/Forward-Future\nhttps://unfold-lantern-465d.here.now/ \n\nMy Links 🔗\n👉🏻 X: https://x.com/matthewberman\n👉🏻 Forward Future X: https://x.com/forwardfuture\n👉🏻 Instagram: https://www.instagram.com/matthewberman_ai\n👉🏻 Discord: https://discord.gg/u7wTTGWhuJ\n👉🏻 Spotify: https://open.spotify.com/show/6dBxDwxtHl1hpqHhfoXmy8\n\nMedia/Sponsorship Inquiries ✅ \nhttps://bit.ly/44TC45V\n\nLinks:\nhttps://getartcraft.com/",
+   "base": 18334,
+   "ratio": 13.7,
+   "age": 8,
+   "plan": {
+    "analysis": {
+     "hook_strategy": "انتہائی تجسس آمیز عنوان (Curiosity Gap)۔ نام بتائے بغیر صرف یہ کہنا کہ 'انہوں نے کر دکھایا'، دیکھنے والے کے ذہن میں فوری سوال پیدا کرتا ہے کہ آخر کس نے اور کیا بڑا کارنامہ سرانجام دیا۔",
+     "core_narrative": "اوپن سورس یا کسی معروف ٹیک کمپنی نے ایک ایسا نیا ماڈل یا ہارڈویئر فیچر ممکن بنا دیا ہے جسے پہلے ناممکن یا ناقابل رسائی سمجھا جاتا تھا، خاص طور پر عام لیپ ٹاپ پر لوکل اے آئی چلانے کے حوالے سے۔",
+     "pain_points": [
+      "بھاری اور طاقتور اے آئی ماڈلز چلانے کے لیے مہنگے کلاؤڈ سسٹمز کا محتاج ہونا۔",
+      "اوپن سورس اور لوکل اے آئی کی کارکردگی کا بڑی کمپنیوں سے پیچھے رہ جانا۔",
+      "عام صارف کے لیپ ٹاپ یا جی پی یو پر جدید ترین ماڈلز کا سست چلنا۔"
+     ],
+     "visual_cues": "ایک پراسرار تھمب نیل جس میں کوئی شاندار گرافکس کارڈ، ڈیسک ٹاپ سکرین پر گرین ٹیکسٹ، یا کسی ناممکن ٹیسٹ کا گراف 100 فیصد تک مکمل ہوتا دکھایا گیا ہو۔"
+    },
+    "ours": {
+     "title": "اب اپنے لیپ ٹاپ پر بغیر انٹرنیٹ بڑا AI ماڈل کیسے چلائیں؟ مکمل حقیقت",
+     "hook": "کیا اب آپ کو مہنگے کلاؤڈ سرورز کی ضرورت نہیں پڑے گی؟ لوکل اے آئی ماڈلز اب اتنے ہلکے ہو چکے ہیں کہ آپ کے لیپ ٹاپ پر بغیر انٹرنیٹ چل سکتے ہیں۔",
+     "body": [
+      "اے آئی کی دنیا میں اس وقت سب سے بڑی دوڑ کلاؤڈ سے نکل کر آپ کے اپنے کمپیوٹر پر شفٹ ہونے کی ہے۔",
+      "نئی اوپٹیمائزیشن اور کوانٹائزیشن تکنیکوں کے ذریعے اب طاقتور ریزننگ ماڈلز بھی عام جی پی یو لیپ ٹاپس پر چلائے جا رہے ہیں۔",
+      "اس کا سب سے بڑا فائدہ یہ ہے کہ آپ کا ڈیٹا مکمل طور پر محفوظ رہتا ہے اور آپ کو انٹرنیٹ یا ماہانہ فیس کی ضرورت نہیں ہوتی۔",
+      "ٹیک انڈسٹری میں اب این ویڈیا اور اوپن سورس ڈویلپرز ایسے ٹولز لارہے ہیں جو کوڈنگ اور ریسرچ کا کام آف لائن ممکن بنا دیتے ہیں۔",
+      "تاہم، کم ریم یا پرانے پروسیسرز پر اب بھی یہ ماڈلز سلو ہو سکتے ہیں، اس لیے صحیح ماڈل سائز کا چناؤ ضروری ہے۔"
+     ],
+     "extra_value": "ایک عملی حل: اگر آپ کے پاس 8 یا 16 جی بی ریم ہے تو آپ 'Ollama' یا 'LM Studio' انسٹال کر کے 8B یا اس سے چھوٹے کوانٹائزڈ ماڈلز جیسے Llama-3 یا Qwen-2.5 آف لائن مفت آزما سکتے ہیں۔",
+     "cta": "کیا آپ اپنے ذاتی ڈیٹا کی حفاظت کے لیے لوکل اے آئی استعمال کرنا پسند کریں گے یا کلاؤڈ سروسز پر ہی بھروسہ رکھیں گے؟ کمنٹس میں بتائیں اور روزانہ کی اے آئی اپڈیٹس کے لیے سبسکرائب کریں۔",
+     "thumbnail_prompt": "A sleek modern laptop glowing on a clean tech desk in a dark room, emitting vibrant cyan and purple data streams, showing a high-tech terminal window with 100% completed status, cinematic lighting, ultra-realistic 3D render, minimalist with bold text 'LOCAL AI READY', no human faces, no real logos.",
+     "fact_check": [
+      "نئے کوانٹائزڈ اوپن سورس ماڈلز کی کم سے کم ہارڈویئر ضروریات (RAM اور VRAM) کی تصدیق کریں۔",
+      "کیا واقعی جدید ریزننگ ماڈلز بغیر کلاؤڈ کے مناسب رفتار پر لیپ ٹاپ پر چل رہے ہیں، ٹوکن پر سیکنڈ سپیڈ کی جانچ کریں۔"
+     ],
+     "fit": 9,
+     "fit_why": "ہمارے چینل کے ناظرین آف لائن اور مفت اے آئی ٹولز کی معلومات میں شدید دلچسپی رکھتے ہیں، جو لوکل اے آئی کے رجحان سے بالکل مطابقت رکھتا ہے۔"
+    }
+   },
+   "on": "2026-11-11"
+  },
+  {
+   "channel": "Matthew Berman",
+   "title": "Fable 5.2 is ridiculous",
+   "views": 259773,
+   "date": "2026-11-09",
+   "url": "https://youtu.be/0vNyVMDFdkg",
+   "desc": "Check out Eight Sleep's Pod 6: https://www.eightsleep.com/matthewberman\nUse code 'MATTHEWBERMAN' for up to $200 off\n\nJoin My Newsletter for Regular AI Updates 👇🏼\nhttps://forwardfuture.com\n\nCheck out my tests:\nPhoton Image Editor — https://claude.ai/artifact/WbkND2LEF984GAVpKvdBBs\nQuadrille Spreadsheet — https://claude.ai/artifact/NPxoR5gnxVVsXnyPAkKpYS\nBullet vs Water Balloon — https://claude.ai/artifact/BUvLhCGMEaoqL76Vp2Joru\nConsciousness Proof Attempt — https://claude.ai/artifact/N3zY7tMuVWGcUAyYihS36g\nForward Future Homepage Redesign — https://claude.ai/artifact/A8AgVMoCLuY27QQUwr4J3B\n\nMy Links 🔗\n👉🏻 X: https://x.com/matthewberman\n👉🏻 Forward Future X: https://x.com/forwardfuture\n👉🏻 Instag",
+   "base": 19077,
+   "ratio": 13.6,
+   "age": 2,
+   "plan": {
+    "analysis": {
+     "hook_strategy": "عنوان میں شدید تجسس اور حیرت کا عنصر ('ridiculous') استعمال کیا گیا ہے تاکہ ناظرین یہ دیکھنے پر مجبور ہو جائیں کہ اس نئے AI ماڈل میں ایسا کیا غیر معمولی ہے۔",
+     "core_narrative": "Fable 5.2 کے مختلف عملی تجربات (ایپس، گیمز، اور کوڈنگ) دکھا کر اس کی حقیقی طاقت اور صلاحیتوں کا تجزیہ کرنا۔",
+     "pain_points": [
+      "نئی AI ٹیکنالوجی کی معلومات سے محروم رہنے کا ڈر (FOMO)",
+      "یہ نہ سمجھ آنا کہ کون سا AI ٹول واقعی کام کا ہے اور کون سا صرف ہائپ",
+      "بغیر کوڈنگ کے اپنے ڈیجیٹل آلات یا ایپس بنانے کی خواہش"
+     ],
+     "visual_cues": "تھمب نیل میں غالباً سکرین شاٹس، کوڈ آؤٹ پٹ، یا کسی پیچیدہ سیمولیشن کا گرافک اور بڑا بولڈ ٹیکسٹ استعمال ہوا ہوگا (تصویر میں چہرہ واضح نہیں)۔"
+    },
+    "ours": {
+     "title": "Fable 5.2 کیا واقعی اتنا طاقتور ہے؟ جدید AI ماڈل کا سچ",
+     "hook": "کیا AI صرف سوالوں کے جواب دینے تک محدود ہے؟ Fable 5.2 نے منٹوں میں مکمل ایپس اور سیمولیشنز بنا کر ٹیک دنیا کو حیران کر دیا ہے۔",
+     "body": [
+      "Fable 5.2 اے آئی کی دنیا میں ایک نیا اور طاقتور ماڈل بن کر سامنے آیا ہے جو پیچیدہ کام منٹوں میں کر رہا ہے۔",
+      "یہ ماڈل صرف ٹیکسٹ تیار نہیں کرتا بلکہ انٹرایکٹو گیمز، امیج ایڈیٹرز اور سپریڈ شیٹس خود بخود کوڈ کر سکتا ہے۔",
+      "حالیہ ٹیسٹس کے مطابق اس کی فزکس سیمولیشن اور ڈیٹا پروسیسنگ پچھلے ماڈلز کے مقابلے میں کافی تیز ہے۔",
+      "عام صارفین کے لیے اس کا بڑا فائدہ یہ ہے کہ بغیر کوڈنگ سیکھے پیچیدہ ڈیجیٹل پروڈکٹس کا سٹرکچر تیار کیا جا سکتا ہے۔",
+      "تاہم، مکمل اور تجارتی ایپس بنانے کے لیے ابھی بھی انسان کی دیکھ بھال اور درست پرامپٹ کی ضرورت ہے۔"
+     ],
+     "extra_value": "اگر آپ ایسے پروٹو ٹائپس مفت بنانا چاہتے ہیں تو Claude Artifacts یا Vercel v0 کا استعمال کر کے بغیر کسی فیس کے لائیو ایپس کا تجربہ کر سکتے ہیں۔",
+     "cta": "آپ کے خیال میں کیا AI جلد مکمل ڈیولپرز کی جگہ لے لے گا؟ کمنٹس میں بتائیں اور روزانہ AI کی خبروں کے لیے 'فاروقی اے آئی نیوز' کو سبسکرائب کریں۔",
+     "thumbnail_prompt": "Futuristic 3D glowing AI neural network mesh with neon blue and cyan grid, holographic web app wireframe floating in dark space, minimalist bold typography saying 'FABLE 5.2', ultra sharp, cinematic lighting, no human faces.",
+     "fact_check": [
+      "Fable 5.2 کی سرکاری ریلیز اور اس کے اصل ڈویلپر/کمپنی کی تصدیق کریں۔",
+      "کیا یہ ماڈل عام عوام کے لیے دستیاب ہے یا فی الحال محدود بیٹا/API موڈ میں ہے۔",
+      "Claude Artifacts اور Vercel v0 کی موجودہ مفت حدود اور فیچرز کی تصدیق کریں۔"
+     ],
+     "fit": 9,
+     "fit_why": "یہ موضوع ہمارے چینل کے فاسٹ پیسڈ، جدید AI اپڈیٹس اور شارٹ ہٹ نیوز فارمیٹ پر مکمل پورا اترتا ہے۔"
+    }
+   },
+   "on": "2026-11-11"
+  }
+ ],
+ "toolscape": [
+  {
+   "channel": "Nate Herk | AI Automation",
+   "title": "I Told Claude to \"Make it better\" 100 Times (It Went Too Far)",
+   "views": 733772,
+   "date": "2026-10-30",
+   "url": "https://youtu.be/DByAR5Su1Yw",
+   "desc": "FREE Scrollcraft Website Design Skill: https://app.aiautomationsociety.ai/optin/scrollcraft/?utm_source=youtube&utm_medium=organic&utm_content=make-it-better&sl=yt_make-it-better\nHow I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=make-it-better&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=make-it-better&hcategory=youtube-videos&utm_campaign=free-group\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nI gave Claude Code a horrible coffee shop",
+   "base": 9477,
+   "ratio": 77.4,
+   "age": 12,
+   "plan": {
+    "analysis": {
+     "hook_strategy": "Extreme iteration curiosity gap ('100 Times') paired with a dramatic consequence ('It Went Too Far') to see AI's creative limits.",
+     "core_narrative": "Feeding Claude a deliberately bad starter website and repeatedly prompting it to improve the output until the design evolves from basic to absurdly over-engineered.",
+     "pain_points": [
+      "Prompt fatigue: not knowing how to guide AI design beyond vague prompts like 'make it look better'",
+      "AI code bloat: AI models adding unnecessary complexity when asked to improve simple projects",
+      "Workflow inefficiency: spending hours iterating without getting production-ready frontend code"
+     ],
+     "visual_cues": "Before-and-after interface comparison, glowing code terminal or visual web preview escalating in complexity across stages."
+    },
+    "ours": {
+     "title": "Can You Build a Website by Just Telling Claude to 'Make It Better'?",
+     "hook": "Telling Claude to simply 'make it better' usually gives you a bloated, broken layout within three prompts. Let's test what happens when you do it ten times, and the exact three words that actually fix it.",
+     "body": [
+      "Open Claude.ai on the free tier and enable Artifacts in your settings so you can preview web code live in your browser.",
+      "Paste in a bare-bones, single-file HTML starter page for a local bakery and ask Claude to render the initial preview.",
+      "Run the blind test: type 'make it better' three consecutive times without extra context, and watch how the CSS adds unneeded gradients, broken animations, and layout clutter.",
+      "Reset the prompt and apply the 'Constraint Iteration' rule: tell Claude to improve only typography and visual hierarchy while keeping layout elements unchanged.",
+      "Run iteration two by asking Claude to convert the styling to modern Tailwind CSS and add a working dark mode toggle.",
+      "Run iteration three with a functional request: tell Claude to add an interactive order calculator using vanilla JavaScript inside the existing artifact.",
+      "Click the download icon in the Artifact window to export your clean, production-ready HTML file and host it free on Netlify Drop."
+     ],
+     "extra_value": "The 'One-Property Iteration Rule': a copy-paste prompt template that forces Claude to change only one specific layer (typography, layout, or state) per turn, preventing AI hallucinated styling regressions.",
+     "cta": "Did Claude's design get better or worse on your test? Let me know in the comments, and subscribe to Toolscape for practical AI workflows every week.",
+     "thumbnail_prompt": "Minimalist split-screen comparison on a dark slate background. Left side shows a simple monochrome web wireframe with a red caution badge. Right side shows a sleek modern UI dashboard glowing with cyan accents and clean cards. In the center, a 3D glowing circular arrow loop connects both screens. Minimal bold text at top: '10 ITERATIONS LATER'. Crisp 3D render, no human faces, no real brand logos.",
+     "fact_check": [
+      "Verify that Claude Artifacts remains accessible on the free plan of Claude.ai at the time of recording.",
+      "Verify that Netlify Drop still supports direct drag-and-drop HTML folder hosting without requiring an active paid subscription."
+     ],
+     "fit": 9,
+     "fit_why": "It transforms a viral, passive-viewing meme concept into a practical, hands-on tutorial that beginners can follow directly on Claude's free browser interface without terminal setup."
+    }
+   },
+   "on": "2026-11-11"
+  },
+  {
+   "channel": "Futurepedia",
+   "title": "Claude 2.0 Is Here. EVERYTHING in 15 Minutes",
+   "views": 129251,
+   "date": "2026-11-03",
+   "url": "https://youtu.be/tM0dwXhOv2o",
+   "desc": "*Free Claude 2.0 Setup Kit:* https://clickhubspot.com/o2iu\n\nMore from Futurepedia:\n👉 Get your free AI plan on Futurepedia 2.0: https://clickhubspot.com/691m\n\nSummary:\nAnthropic completely rebuilt the Claude desktop app, and it's a big enough change that one of the engineers who worked on Claude Code called it basically a v2. I cover everything that's new and how to get the most out of it, from the new artifacts to the new Code layout, ways to keep Claude working while you're away, new ways to multitask and mods.\nI go through the new Home and Code tabs, the new artifact formats (docs, slides, design, dashboards and motion), the session rail and context breakdown, sections, side chats, split v",
+   "base": 4564,
+   "ratio": 28.3,
+   "age": 8,
+   "plan": {
+    "analysis": {
+     "hook_strategy": "Major update hype combined with a complete masterclass promise ('Claude 2.0 Is Here. EVERYTHING in 15 Minutes'), driving high FOMO for AI productivity users.",
+     "core_narrative": "Claude's desktop app underwent a stealth v2 redesign; here is a fast-paced tour of every new workflow feature, from interactive artifacts to split view multitasking.",
+     "pain_points": [
+      "Struggling to keep track of rapid AI interface updates and missing out on productivity gains",
+      "Cluttered chat histories and context overflow when handling complex projects in a standard chatbot window",
+      "Needing all-in-one workspaces (slides, dashboards, code) without toggling between five different third-party apps"
+     ],
+     "visual_cues": "High-contrast dark mode desktop UI screenshot, split-screen views showing code alongside rendered interactive artifacts, glowing badge or clean text overlay."
+    },
+    "ours": {
+     "title": "The New Claude Desktop Setup: Complete Practical Walkthrough",
+     "hook": "Anthropic just gave Claude Desktop a massive interface redesign, but most creators are still using it like a basic chatbot. Let's fix that in five practical steps.",
+     "body": [
+      "First, download and open the official Claude Desktop app, then log in using your standard free Anthropic account.",
+      "Notice the new Session Rail on the left: click the split-view toggle so your workspace opens side-by-side with your active chat.",
+      "Next, type this prompt: 'Create an interactive project tracker dashboard using artifacts' to trigger the new multi-format rendering engine directly inside your desktop window.",
+      "Instead of restarting a conversation when you make a mistake, open a Side Chat from the right edge to test revisions without bloating your main session context.",
+      "Check the Context Breakdown indicator at the bottom bar to monitor your token usage before asking Claude to finalize your output."
+     ],
+     "extra_value": "How to export interactive Claude artifacts directly into standalone HTML files that work offline on your computer without requiring an active Claude Pro subscription.",
+     "cta": "Which of these interface upgrades solves your biggest AI bottleneck? Drop your answer in the comments and subscribe to Toolscape for clear, step-by-step AI tutorials.",
+     "thumbnail_prompt": "A modern sleek dual-pane software interface glowing on a minimal desk monitor, dark mode aesthetics with subtle purple and electric blue lighting accents, clean tech aesthetic, bold text reading 'NEW WORKFLOW', 3D render, no human faces, no real logos or brand marks.",
+     "fact_check": [
+      "Verify whether the redesigned session rail and context breakdown features are currently available to free users or restricted to Claude Pro/Team accounts.",
+      "Confirm current platform availability (macOS vs Windows) for the latest Claude Desktop update.",
+      "Verify the exact terminology Anthropic officially uses for the side chat and artifact features to avoid misnaming UI elements."
+     ],
+     "fit": 9,
+     "fit_why": "It perfectly matches our faceless, screen-recorded tutorial format while addressing high viewer demand for practical, step-by-step guidance on top-tier AI tools."
+    }
+   },
+   "on": "2026-11-11"
+  }
+ ]
+}
