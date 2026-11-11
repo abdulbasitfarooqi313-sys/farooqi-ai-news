@@ -1,0 +1,66 @@
+# 📘📸 Facebook + Instagram اپلوڈنگ ایجنٹ — ہر چینل اپنے پیج پر، YouTube پر پبلک ہوتے ہی (مالک، 11 نومبر 2026)۔
+# پبلک رنر (لامحدود منٹ)۔ check = صرف پیجز کے نام پڑھنا (کچھ پوسٹ نہیں)۔ پہلی بار seed = پرانی ویڈیوز پوسٹ نہ ہوں۔
+name: Facebook Instagram
+on:
+  schedule:
+    - cron: "11,41 * * * *"
+  workflow_dispatch:
+    inputs:
+      mode: { description: "check | seed | run", required: false, default: "check" }
+permissions:
+  contents: write
+concurrency:
+  group: meta
+  cancel-in-progress: false
+jobs:
+  meta:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Engine (private code)
+        env: { ENGINE_TOKEN: "${{ secrets.ENGINE_TOKEN }}" }
+        run: |
+          if [ -n "$ENGINE_TOKEN" ]; then
+            if git clone -q --depth 1 "https://x-access-token:${ENGINE_TOKEN}@github.com/abdulbasitfarooqi313-sys/farooqi-ai-news-engine" /tmp/engine; then
+              rsync -a --exclude .git --exclude .gitignore --exclude .github --exclude state --exclude media --exclude cache --exclude desk /tmp/engine/ ./
+              rm -rf /tmp/engine; echo "engine: ok"
+            else
+              code=$(curl -s -o /dev/null -w '%{http_code}' -H "Authorization: Bearer $ENGINE_TOKEN" https://api.github.com/repos/abdulbasitfarooqi313-sys/farooqi-ai-news-engine)
+              echo "::warning::engine clone failed (api $code, token len ${#ENGINE_TOKEN}, prefix ${ENGINE_TOKEN:0:11}) — using code in this repo"
+              [ -f news/bulletin.py ] || exit 1
+            fi
+          else echo "::warning::ENGINE_TOKEN missing — using code in this repo"; fi
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -q requests
+      - name: Run
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          NEWS_BOT_TOKEN: ${{ secrets.NEWS_BOT_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          FB_PAGE_ID_NEWS: ${{ secrets.FB_PAGE_ID_NEWS }}
+          FB_PAGE_TOKEN_NEWS: ${{ secrets.FB_PAGE_TOKEN_NEWS }}
+          IG_USER_ID_NEWS: ${{ secrets.IG_USER_ID_NEWS }}
+          FB_PAGE_ID_NAWA: ${{ secrets.FB_PAGE_ID_NAWA }}
+          FB_PAGE_TOKEN_NAWA: ${{ secrets.FB_PAGE_TOKEN_NAWA }}
+          IG_USER_ID_NAWA: ${{ secrets.IG_USER_ID_NAWA }}
+          FB_PAGE_ID_TOOLSCAPE: ${{ secrets.FB_PAGE_ID_TOOLSCAPE }}
+          FB_PAGE_TOKEN_TOOLSCAPE: ${{ secrets.FB_PAGE_TOKEN_TOOLSCAPE }}
+          IG_USER_ID_TOOLSCAPE: ${{ secrets.IG_USER_ID_TOOLSCAPE }}
+        run: |
+          M="${{ github.event.inputs.mode }}"; [ "${{ github.event_name }}" = "schedule" ] && M=run
+          if [ "$M" = run ] && [ -z "$FB_PAGE_TOKEN_NEWS" ]; then echo "Secrets ابھی نہیں"; exit 0; fi
+          if [ "$M" = run ] && [ ! -f state/meta_posted.json ]; then python -m news.meta seed; fi
+          python -m news.meta "${M:-check}"
+      - name: Save
+        if: always()
+        run: |
+          [ -f state/meta_posted.json ] || exit 0
+          git config user.name "ai-news-bot"; git config user.email "ai-news-bot@users.noreply.github.com"
+          git add state/meta_posted.json; git diff --cached --quiet && exit 0
+          git commit -m "Facebook/Instagram ریکارڈ"
+          for i in 1 2 3; do git pull --rebase --autostash -X theirs && git push && exit 0; sleep 10; done; exit 1
