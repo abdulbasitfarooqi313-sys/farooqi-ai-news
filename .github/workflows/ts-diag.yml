@@ -5,18 +5,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - env:
-          A: ${{ secrets.TOOLSCAPE_BOT_TOKEN }}
-          C: ${{ secrets.TELEGRAM_CHAT_ID }}
-          D: ${{ secrets.TS_TELEGRAM_CHAT_ID }}
+          T1: ${{ secrets.TS_TOKEN }}
+          T2: ${{ secrets.TOOLSCAPE_GH_TOKEN }}
         run: |
-          python3 - <<'PY'
-          import os, json, urllib.request as U
-          A, C, D = (os.environ[k].strip() for k in "ACD")
-          print("D set", bool(D), "C==D", C == D)
-          ups = json.load(U.urlopen(f"https://api.telegram.org/bot{A}/getUpdates?timeout=0"))["result"]
-          print("updates", len(ups))
-          for u in ups[-15:]:
-              cb = u.get("callback_query") or {}; m = u.get("message") or {}
-              f = str((cb.get("from") or m.get("from") or {}).get("id"))
-              print("  ", u["update_id"], cb.get("data", "")[:20], "==C", f == C, "==D", f == D)
-          PY
+          for n in T1 T2; do
+            t=${!n}; [ -n "$t" ] || { echo "$n missing"; continue; }
+            rm -rf r; git clone -q --depth 1 "https://x-access-token:${t}@github.com/hellotoolscape/ai-tube-factory" r && echo "$n clone ok" || { echo "$n clone fail"; continue; }
+            cd r; git config user.name x; git config user.email x@x; git commit -q --allow-empty -m test
+            git push --dry-run -q 2>&1 | tail -2; echo "$n push-dry exit $?"
+            curl -s -H "Authorization: Bearer $t" https://api.github.com/repos/hellotoolscape/ai-tube-factory | python3 -c "import json,sys;print('$n perms',json.load(sys.stdin).get('permissions'))"
+            cd ..
+          done
