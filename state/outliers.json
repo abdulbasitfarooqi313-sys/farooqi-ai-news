@@ -1,9 +1,10 @@
 {
  "seen": [
-  "https://youtu.be/0vNyVMDFdkg",
-  "https://youtu.be/DByAR5Su1Yw",
+  "https://youtu.be/l21b1qBP-zE",
   "https://youtu.be/tM0dwXhOv2o",
-  "https://youtu.be/r0cJOa9MZsE"
+  "https://youtu.be/r0cJOa9MZsE",
+  "https://youtu.be/0vNyVMDFdkg",
+  "https://youtu.be/DByAR5Su1Yw"
  ],
  "news": [
   {
@@ -196,6 +197,71 @@
    "on": "2026-11-11",
    "id": "974311b69f",
    "status": "new"
+  }
+ ],
+ "latest": {
+  "nawa": {
+   "on": "2026-11-11",
+   "list": [
+    {
+     "title": "Fajr Namaz Mein Konsi Surah Parhni Chahiye 😮 || Sunnat Ka Sahi Tariqa || Dr Farhat Hashmi",
+     "channel": "FARHAT SPEAKS",
+     "views": 1631,
+     "ratio": 7.1,
+     "age": 9,
+     "url": "https://youtu.be/l21b1qBP-zE",
+     "short": null
+    }
+   ]
+  }
+ },
+ "nawa": [
+  {
+   "channel": "FARHAT SPEAKS",
+   "title": "Fajr Namaz Mein Konsi Surah Parhni Chahiye 😮 || Sunnat Ka Sahi Tariqa || Dr Farhat Hashmi",
+   "views": 1631,
+   "date": "2026-11-02",
+   "url": "https://youtu.be/l21b1qBP-zE",
+   "desc": "**Fajr Namaz Mein Konsi Surah Parhni Chahiye?** Is aham sawal ka jawab jaaniye Dr Farhat Hashmi ke is Islami bayan mein. Fajr ki namaz mein Quran ki tilawat aur Nabi Kareem ﷺ ki Sunnat ke mutabiq namaz ada karne ke bare mein rehnumai hasil karein.\n\nIs bayan mein Fajr Namaz ki suraton, Quran ki tilawat aur namaz ke ahkam se mutaliq aham maloomat samajhne ki koshish karein, taake aap apni ibadat ko ilm aur samajh ke saath behtar bana sakein.\n\n🌙 **Is Bayan Mein Aap Jaanenge:**\n- Fajr Namaz mein konsi Surah parhi ja sakti hai?\n- Fajr ki namaz mein Quran ki tilawat ki ahmiyat\n- Fajr Namaz ke mutaliq Sunnat ki rehnumai\n- Namaz mein surah parhne ke bunyadi masail\n- Fajr ki namaz mein khushu aur taw",
+   "base": 229,
+   "ratio": 7.1,
+   "age": 9,
+   "id": "dfcdad5549",
+   "plan": {
+    "analysis": {
+     "hook_strategy": "تجسس اور رہنمائی (Curiosity & Practical Guidance) — روزمرہ کی عبادت کو سنت کے عین مطابق سنوارنے کی خواہش اور یہ جاننے کا تجسس کہ فجر میں کونسی سورتیں پڑھنا افضل ہے۔",
+     "core_narrative": "فجر کی نماز میں نبی کریم ﷺ کی سنتِ قرات کی وضاحت تاکہ نمازی اپنی صبح کا آغاز درست اور پرسکون طریقے سے کر سکیں۔",
+     "pain_points": [
+      "یہ الجھن کہ فجر کی نماز میں سنت کے مطابق کن سورتوں کی تلاوت کرنی چاہیے۔",
+      "نماز میں خشوع و خضوع اور یکسوئی کی کمی۔",
+      "مسنون طریقہ نہ جاننے کا احساس اور کم علمی کی پریشانی۔"
+     ],
+     "visual_cues": "غیر واضح (متن سے حتمی معلوم نہیں)، تاہم عموماً صبحِ صادق کے مناظر، گھڑی کا وقت، یا محراب و جائے نماز کے پرسکون بصری خاکے استعمال کیے جاتے ہیں۔"
+    },
+    "ours": {
+     "title": "فجر کی نماز میں نبی کریم ﷺ کن سورتوں کی تلاوت فرماتے تھے؟",
+     "hook": "کیا آپ جانتے ہیں کہ قرآنِ کریم نے فجر کے وقت کی تلاوت کے لیے ایک خاص گواہی کا ذکر کیا ہے، اور رسول اللہ ﷺ فجر کی نماز کو کس قدر پرسکون اور پرتاثیر بناتے تھے؟",
+     "body": [
+      "فجر کا وقت ایسا مبارک لمحہ ہے جب انسان نیند قربان کر کے اپنے رب کے حضور حاضر ہوتا ہے۔",
+      "سورۃ الاسراء کی آیت نمبر 78 میں فجر کے وقت کی قرات کو فرشتوں کی حاضری اور خصوصی مشاہدے کا وقت قرار دیا گیا ہے۔",
+      "صحیح احادیث کے مطابق، نبی کریم ﷺ فجر کی دو سنتوں میں عموماً سورۃ الکافرون اور سورۃ الاخلاص کی تلاوت فرماتے تھے۔",
+      "جبکہ فجر کی فرض نماز میں آپ ﷺ ٹھہر ٹھہر کر طوالِ مفصل یعنی نسبتاً تفصیلی سورتیں، مثلاً سورۃ ق یا سورۃ التکویر جیسی سورتیں تلاوت فرماتے تھے۔",
+      "اس کا اصل مقصد صرف الفاظ دہرانا نہیں، بلکہ دن کی شروعات اللہ کے کلام پر تدبر اور دل کے سکون کے ساتھ کرنا تھا۔"
+     ],
+     "extra_value": "ایک عملی مشورہ: فجر کی نماز کے لیے ایسی چھوٹی یا درمیانی سورتیں منتخب کریں جن کا اردو ترجمہ اور مفہوم آپ کو اچھی طرح یاد ہو، تاکہ نماز کی تلاوت روٹین کے بجائے دل پر اثر کرنے والی بن جائے۔",
+     "cta": "آپ فجر کی نماز میں عموماً کس سورت کی تلاوت کرتے ہیں؟ کمنٹس میں ضرور بتائیے۔ فہمِ قرآن کے اس پرسکون سفر کے لیے چینل کو سبسکرائب کیجیے۔",
+     "thumbnail_prompt": "Cinematic pre-dawn twilight sky with soft blue and golden morning glow, an open holy book on a wooden rehal in a tranquil mosque courtyard, warm subtle light, no human faces, peaceful and contemplative atmosphere. Text in bold minimal Arabic typography: 'فجر اور قرآن'",
+     "fact_check": [
+      "سورۃ الاسراء آیت نمبر 78 کا مفہوم اور اس میں فجر کی قرات پر فرشتوں کی حاضری کا حوالہ مستند تفسیر سے جانچیں۔",
+      "فجر کی سنتوں میں سورۃ الکافرون اور سورۃ الاخلاص کی قرات کی روایت (صحیح مسلم / کتبِ حدیث) سے تصدیق کریں۔",
+      "فجر کے فرائض میں نبی کریم ﷺ کی طرف سے سورۃ ق یا دیگر طوالِ مفصل کی تلاوت کی احادیث کو مستند مآخذ سے چیک کریں۔"
+     ],
+     "fit": 9,
+     "fit_why": "یہ موضوع ہمارے چینل کے بنیادی مقصد یعنی تدبرِ قرآن، مسنون رہنمائی اور بغیر چہروں کے پرسکون اندازِ بیان کے ساتھ سو فیصد میل کھاتا ہے۔"
+    }
+   },
+   "status": "new",
+   "on": "2026-11-11"
   }
  ]
 }
