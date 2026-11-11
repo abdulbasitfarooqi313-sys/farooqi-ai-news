@@ -938,94 +938,70 @@
   }
  },
  "podcast": {
-  "week": "2026-11-04",
+  "week": "2026-11-11",
   "options": [
    {
-    "title": "گوگل اور اسکولوں میں اے آئی کا تنازع",
-    "why": "تعلیمی اداروں میں اے آئی کے استعمال اور پابندی پر گوگل کے اقدامات اور ردعمل کی تفصیلات۔",
+    "title": "یونیورسٹی امتحانات کی جانچ میں اے آئی کے چیلنجز",
+    "why": "طلباء اور اساتذہ کے لیے یہ سمجھنا ضروری ہے کہ مصنوعی ذہانت کے باعث اسائنمنٹس اور روایتی امتحانی طریقوں میں کیا تبدیلیاں ناگزیر ہو رہی ہیں۔",
     "facts": [
      {
-      "title": "Google Will Turn Off Search for Schools That Reject A.I. - The New York Times",
-      "source": "The New York Times",
-      "summary": "Google Will Turn Off Search for Schools That Reject A.I. The New York Times",
-      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPa2ZWRmYyZW9YZng5SmhjYnpjQ213dnRKVjVjNW1rcS1RRFoxVUFKYnl2VlVjMk1abE1kQTE2Qk1Ea09WcHlvMjFNbTREWnhmYXZiTjE5RTY0bUdMZGsyRFRCNDNWQjg0SG90WXlaSVV1d19iV0x4UEVnVlFzS3dyVWZB?oc=5"
+      "title": "AI has made it ‘close to impossible’ to assess university coursework, regulator says - The Guardian",
+      "source": "The Guardian",
+      "summary": "AI has made it ‘close to impossible’ to assess university coursework, regulator says The Guardian",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQcnRuQjZGUU9xbUxieGFPbU9Yal9meFoxVlhVUkVCcm1DRVdrcE5LZzZEQlZJWFk2Y3k1LXNYTmZKOWd3dHh0TjFER0hScGJNUmlwWm9KaU9mOGZRMnV5TU5YeS1pd210Vmk1cUJ0VlJtV3k1aFNid3hvcl9yRlBpRWlVTDlVVVlYS295SUstY3B3Q19YOF8tTU81UkZmaWhZWF9QbkhjRWdKVlpQSXE1Qg?oc=5"
      },
      {
-      "title": "Google will cut off search access for students at schools that reject AI - AP News",
-      "source": "AP News",
-      "summary": "Google will cut off search access for students at schools that reject AI AP News",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxObGtOMHhjQzVNYWRRMEw5cTYtWG9OOGREZGRvV3Bqd1EzUGhaUVQzYzdQX0ExMkp1MWdxZEN5LTJyRHYtUzROVldKeTFuSTdWb0VpelMyV2tkaWowU0xfbXBOanlKdGNIV1E3NWVla1YtSkhmRU4tdVZBTXhwY2YxWkFBdGVBaVB4N2VUVUlTZGtfdWJBbWtZVmE1VnM?oc=5"
+      "title": "Students passing university assessments in minutes using AI, regulator warns - BBC",
+      "source": "BBC",
+      "summary": "Students passing university assessments in minutes using AI, regulator warns BBC",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9JMEFla0ZySldPbjB4ZkR0NFBsbFhQWG9FdTJWaU5XRmNVOGF2VjBKelU2Y2R5MEJubTNYSU5qT21DY0pQN1V1M0RHMElpSHg2YXh3QmxvLW9rb1F1WkE?oc=5"
      },
      {
-      "title": "Google responds to political backlash over removing search from schools that ban AI - CNBC",
-      "source": "CNBC",
-      "summary": "Google responds to political backlash over removing search from schools that ban AI CNBC",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNenhBb3YzeXFrNE9nVmR3QUZTZ3M2RlRleVpqMjZMUll0azhuR2ZtUmwyOEcxeEluUlN4UDdQNU54ak9HTUI2ekY4azRzUk9aTVh5dUJYVnhkTVdPMGtIYjR6V0xmdWlqb3hNRmROVzFmZFNEZlJZZV9DaTRlSGQ4akRkSGxjZ1p2dV92cTFxaEUzMTVCNTByZW42T3ZGS3hUR0JOZzRaYWozM0nSAbABQVVfeXFMTktHaFBsT1hOVXFLTVo2RUhyZHNWbkVUU3FhVjdxczdRT2ZUOXFUakJCV0pHUnNkU2NycUd6NEMxS0ozT2VxRFAtbWpnc2lKUWhBZ3c0NHRFMk9vQ19pNTBxc0NCS1N3TmZqNGdwdUcwbE51by1NdEJiM1pOcl9HQXpiMmwwaklRTWhpVC02anVSMmF2QU8yZThyWVpwUWNJb1lObmVYdDc1S0x4VDFrVmQ?oc=5"
-     },
-     {
-      "title": "Google will let schools turn off AI, but they may also lose Search - CNN",
-      "source": "CNN",
-      "summary": "Google will let schools turn off AI, but they may also lose Search CNN",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE90UHUzNjJORnlISTN0WGhSOTBiZlQ4SHZhSWFZcEpXRXgyS09IMHNvaU1fMnFuRVJIV2laa1c1alUxdVVab0x0a2pCTXJJUExVVkZMYndPM2ptalY2cnlOVk82NE9xUTVYUU9z?oc=5"
-     },
-     {
-      "title": "Google to everyone saying 'company threatened schools over using AI; says: We want to clarify, we are giv - The Times of India",
-      "source": "The Times of India",
-      "summary": "Google to everyone saying 'company threatened schools over using AI; says: We want to clarify, we are giv The Times of India",
-      "link": "https://news.google.com/rss/articles/CBMingJBVV95cUxNRnNoeTFoc2JUSlJUX0VSOHBINDloY3ZKaEVuVUlTaUlyTEd3NmpINGVDeFV4YW5MbUR0cjE3NVRtVlBOdE5Od0tGWlNoRGVhdG9fTFBzWEVsenVzUHpJeWh2eHYxMmRJbVF5XzNydkRTMDZjaU1wNndsMWJmMFlyb3pEX1NlSmpKQ284U1AtQ3EwR2wyT3dhTDJDYWZoU2RzaXFYSVRSZXBCWWl3Smo1TVczR19oN0dnRjR3cVQ2WXFqVnUwTjZYbnJSRURtcGtEWDZyUWdtR0xVUDQ5RGtCMHlpaTFqcldHZjBtbmVzdlFUdUkwNTZaQkRLR05YV2Fzbkx5MUpxSnhQTXJOVDNKbGFyaWVCREw0enZmWDlB0gGjAkFVX3lxTE5xUngxX3Ytd3VtRGVNeWxqNy02T0hITXhHTURBSGI5SGlaemdEUWhYVnhZRWV6VVV0by1mcVJfd1U4eG5RZTQ2Ty1uYjdDbUNYSzlQWVVIOFhvX1Y0QlVBMHFKYS1qT012cjd0VFBqTjl2V0NMN0psbE8zWGJweDh1M0I0dW45SXdfdmQ3OWhKSVMzU2hrNzgtYUNhRXI3T0gzUmwxV0x3Rjlrb09yTzJUMDg3UjZBU29MM3VMTGNobHZkbG9JbE9GY0c3MEdRa3E2Z1FKTmJFSGlVQmllQm5BajNxZmlwUzRfckE3NHBOaHlNeWdva0JHak9NUm41Tnd1LTNBbmsxWTkyMGZnd3dpNTM2M0gxelZJWFFHUUZnbk1vOA?oc=5"
+      "title": "Embrace paper exams to combat AI cheating, warns UK universities regulator - Financial Times",
+      "source": "Financial Times",
+      "summary": "Embrace paper exams to combat AI cheating, warns UK universities regulator Financial Times",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNaUg2enEtekhQRDNKbWcyS1kxdE5zd3BpU1ZKVlFiZUo2bGhqWFlMU2tqR0QwTnQydDl5bXdJX21iMWotYXhKWjE1MzZscFh5ZTdqQmRQaUVPOUE3dklTSllpS19TaWx5ZnM5UDJKNDVVNWtLQzJrU2kwWWlmbGc0dzVHdU8?oc=5"
      }
     ]
    },
    {
-    "title": "اے آئی ایجنٹس سے خطرات اور ان کا 'کل সুইচ'",
-    "why": "غیر متوقع طور پر کام کرنے والے اے آئی ایجنٹس اور ان کو روکنے کے لیے حفاظتی اقدامات۔",
+    "title": "فری لانسنگ اور پیشہ ورانہ کام پر اے آئی اثرات",
+    "why": "پاکستانی نوجوانوں اور فری لانسرز کے لیے یہ جاننا اہم ہے کہ مصنوعی ذہانت کس طرح روزگار اور مختلف شعبوں میں مہارتوں کو تبدیل کر رہی ہے۔",
     "facts": [
      {
-      "title": "Apple warns of risks related to AI agents behaving in 'unintended or unpredictable' ways - CNBC",
-      "source": "CNBC",
-      "summary": "Apple warns of risks related to AI agents behaving in 'unintended or unpredictable' ways CNBC",
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNNVJIWkp5OFN3T2lxV05NUmlFaUt4UzFTQlo4dGZnOEJ3SDJiS1lSX1hqSkY4a3BUenltR1Jpc0JXdU02VEkwaGhQLWdKdm9fSHZwV2NnMHFCdE94b0dSY0dJdm9JMHlvYzNKNW52RmkyYkpTNTdkVDc0RW82SG5XQV9tM0szTDVuMlRDWFdRc1hEaGRPTXdlbGF4Yzl4ZWJGSFRua19td9IBrAFBVV95cUxQRGNRVF9HVC11VTEwM2phOGtXbEZoVzhRekRQNW5VX0o0VGNtbEp0RGk0cjFNcW5YQjNEclQ3a3pONmh1LUE2SkhMdVhhcWN2VDVWR19yU0pxNFhBWGxLY05GRjJWVEpNdGNYaGlyeTRnTkowVjJWaXZ4VTBOZ1pWSndqaGM4RnM2V1kxcEtuaWhFX3h1Y2ZPSDFCMXpObzloblpGYU1fcVgwOV93?oc=5"
+      "title": "Work at the Frontier: AI’s effect on freelance work - OpenAI",
+      "source": "OpenAI",
+      "summary": "Work at the Frontier: AI’s effect on freelance work OpenAI",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9jbjZqUWRlTUJ3MkZPVlYzd2hSb3A2aDlBOG5zckhFZjVEZFlQc3diU0lxOVhwLUFHTnNRMy1SSlgyRGxhOVpsV2w4MHNFOElOSFBQRlNnSDV4eDloc2V0R3lnUQ?oc=5"
      },
      {
-      "title": "CrowdStrike launches AI kill switch that it says can stop internal agents that go rogue - CNBC",
-      "source": "CNBC",
-      "summary": "CrowdStrike launches AI kill switch that it says can stop internal agents that go rogue CNBC",
-      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQY2hvQXJrTkR2WVQzQ3lkTUNrczVfcXc2VEVSbW5tQ2hhb0pQSk5MZ0xsNjBCcW5FdlJxeTZSeF80MUw3b2hhcWk3NG5LR0RxX0pkY1ZDUWdFaWdSekJnX0Npemh1ME1TbEl3WVBtUlNmVjNyNFlpWFhHcXlvWC05U3NR0gGHAUFVX3lxTE1kb2tRX0VwdjZndEhueklPNmxSOEFMdzI4d21MajNrVlh3QW02c0hGaWxiWWRnREQ3cl9fMnU4WXVpYXZkVEk2QmlQR2RldHlQUXNtVHdMdEUtUndhUjBEYTBjNkZELTVXclUtMWpIZGhfYTJnU0FpN3JObC1Wb0s0RG45UXM5SQ?oc=5"
-     },
-     {
-      "title": "CrowdStrike's new kill switch can stop rogue AI agents in their tracks, CEO says - CNBC",
-      "source": "CNBC",
-      "summary": "CrowdStrike's new kill switch can stop rogue AI agents in their tracks, CEO says CNBC",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPTGk5Z3RYZDNLZmJIN2FraWVkTm9paXBOd0w0c0lTQ2p1Z2lXZjhzR0VnTjJCVk5UU1pGRG5sTElvY3hhYW5Ta19pN1dHNzcwZW9PSDFoLXlBcTBQVFlSbFZYQWxPaXE1WHFVOFZUTHZ0ZTlWLTBpNjE3cnRPWllZYlVDUjRmaVY0QXgzODRxLW1nSmw3VXBLV0EyZENMeDVkU24tR2VwTmZoYmJnOFI3QVp6am9md9IBuwFBVV95cUxNTmsxR1FYWlNubkpfbXhSNmZDcmlhWjBWb3ZETDRnOVd2VWp4bU11Rmg0Rnc4b2hnLUF5WEJtWE0tT0EwdGswZE54ODhRWl9EYWYzLW93S2ZhVDFOTWRXSFg5WWN4TS1IdGJ3YnNMb2JEdDU2cnlkb2JPVl9HcnNJdUNkLU9BaXdFWkxDMkRYNXBqSnBQNGlDd1gwQW5uZzhvLWJsTnZaR3otbEZSVUxjamNUdlhKN0poblR3?oc=5"
-     },
-     {
-      "title": "Crowdstrike gives enterprises an ‘off switch’ for misbehaving AI agents: Here’s what it does - The Indian Express",
-      "source": "The Indian Express",
-      "summary": "Crowdstrike gives enterprises an ‘off switch’ for misbehaving AI agents: Here’s what it does The Indian Express",
-      "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNX2pVVXFzelRtVGNtWmlNMXZxNjZ5Z3dXLU9DZjN5ckRmYUh1dThuTU45NF9mV1p0d2FON2pNQ3hPeGp0aTd4MmVCRjM3UXl4M01GZ3hITVNROEpGU3ktSUh6X3Rfa0paOFpLYktfMUdnTGNzeVYtbGRaWnotYng2NHdlb1daZi00aldaWmt0SFhKV0lxaE9hakpQN25NUnNuZmVJQlZ5YmJPZ1pYNlBvRThBZ2VmWDBDbFpDQmY2ajZqY1plQ01iVGVINm9jTUVuQVlEVjZ0WUpqR2JBWEZBTlVHNjhRZmJoejNZOHRMM2ZCZkkxWDFfejAtd9IBggJBVV95cUxNR0Q2Nmt5bXY1Y0ZOT0QyU3NKRmRGdUpCLTVNblVWTFdpVXV0R0lVcjBnLWVqbkpfS195WDJ0a0I2clVjMTlTNTNTWkJSUDNqUGtEeThXT3N3UUdLRHFlc0ViVWhYWXo2SkxydDk1UGpZbkIyLW9icXFwY0dhTmFHNXFRdjczcHZYbHlNaW5GWjViZHM1T29iU3lJTlBoekZleVhmZTdYR19RODNKWUU1RHpjTjdiM0hucXBPbFBVNWJfSy1hNTVuM1BudEZJanVPdTFYa01kUmVLaEtsbDFiYnRrLWpJVmlmWURSb0M2ekVlUTd3LVNDb1N0SE9uMDJ3UWc?oc=5"
-     },
-     {
-      "title": "Apple sends AI warning, tells it is not immune to attacks by AI Agents; they may send communication or ma - The Times of India",
-      "source": "The Times of India",
-      "summary": "Apple sends AI warning, tells it is not immune to attacks by AI Agents; they may send communication or ma The Times of India",
-      "link": "https://news.google.com/rss/articles/CBMirwJBVV95cUxPY0lEWVNRRjVvekVXY0kwamJnMmpqdnllWi1GbFdhN0FrMDdwWkt1VTlkWEFldXRrdEdWOUF5OW5saExGcWxjdmZfNFhEM3RSdGdWMTlrRUhTcEJta3NuaGpzR3RYNllseHhWUE5rbUpwdEc3VEZscFVJUHVMQkxMTkZXUnJxbm51bzlfWVlBZkNNUE9QazNhRnEzRDRNMFBmUmJRZnBTaDJudTI0d1RJNlVDd3ZabzdHaGpvTlhta0ZPaUs4dk01QlFSVVY0QU56NlgtSVJhODF1ODVwSGJtNU1Oay1EVTRpYUlJZWVkZ3VBR01GYWlwMGtrU09IdkdTQmtpU1oyZ0xzUTJJczJ1RzU4ZlRycWRBTWxrclVVNmpoWjFWa3JtU0hRWkR6NkHSAbQCQVVfeXFMUFVMWk9hN2U1cEpYTExNQ1E5d0l6T0N0M3hYRHd5Z21hWWw3ekJndjNFTlhSb05YdkNNSk5LSDBCRHh4ZWY1SGplajRjdXBuTm9HcFZ1aWxyaHVfTUl3cV9nUVFfbnpoQTNYRnhFTVdfSjlvTWpQTTdwa1dTN1dna2YyOHRVU1U3Tzd2aE9DaUotcm52b0dsSWh4Yk9VT3pPdzBsZUlNeEVGc1NXNW8zVmNlbEFUU2kwTTVpbmR4TFhZdXEwcmpOeEJiTHlrN1lEV1RNNXFYNTc5V0pMRFo4aFJyQmlSc0Z1SHdzNUFHWWNtNTZlTXUwT2R2Ym40ME1rR21fcjhoblZycWwyak9DalRmODlPQUQ2VVJwcXBHM2o0d3c3V1FZX3RDUlJmZGhTSXZIZnc?oc=5"
+      "title": "Singapore’s accountancy sector adds jobs, raises pay as firms prepare workers for AI - The Straits Times",
+      "source": "The Straits Times",
+      "summary": "Singapore’s accountancy sector adds jobs, raises pay as firms prepare workers for AI The Straits Times",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQMkZZcW1BbGc1UkVRVXQyY0dtZXhVdkM2Q3FpSzdudnYzVHBKZ3ZZd2t4NE5IODVyRl9OeXhHZ1g1SExDYnFDM3pGZ0hUVHMxUE5xdnRqYzdoajZwaFNkTmNLWUZaeUJvMXBPVmtkTGpablRLaHhWUllrY2F6QUR1d2xEN2JaTmZ6cWx1bFZLeGZMTFBsM0xDN0E0WUpxREp6Y1k4V0g0cHdHb3o4ZXc?oc=5"
      }
     ]
    },
    {
-    "title": "اے آئی ماڈلز کے خودکار ہیکنگ کے تجربات",
-    "why": "انتھروپک کے اے آئی ماڈلز کی جانب سے ٹیسٹ کے دوران خودکار طریقے سے تنظیموں کو ہیک کرنے کا واقعہ۔",
+    "title": "اے آئی کمپنیوں پر نئے حکومتی قوانین اور نگرانی",
+    "why": "ٹیکنالوجی استعمال کرنے والے صارفین اور پیشہ ور افراد کے تحفظ کے لیے دنیا بھر میں متعارف کروائے جانے والے نئے حفاظتی قوانین کو سمجھنا اہم ہے۔",
     "facts": [
      {
-      "title": "Anthropic says its AI models hacked 3 organizations on their own during tests - ABC News - Breaking News, Latest News and Videos",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "summary": "Anthropic says its AI models hacked 3 organizations on their own during tests ABC News - Breaking News, Latest News and Videos",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQX3ZqRkZfWUw5X3dBbVVkUzh3NGVXTXdrOEIwOVRGUHdTeTRaaURSWS1DYVA3aXdUREVFeTM1ZnF0Mm91bzJTb0R6OWR3a0VwaFBPQmFqeVRuQjdrUFZSSFpmbjMzSGZEX2xCeE84c3A2Q3dpRnlEcVZ5MFhLVUE5b0lwUml2eWFacWZDVHJsaVh5VVJMZjZRdmlNSWlkQW1Wa2Rkb3Jn0gGrAUFVX3lxTE9RRnJFaXBvLVJUT0NMMXRtN0JscFBCQTIzRHlQUFdYMjJ2bnZkQ080WGZQYUtqTGNaZTZidWljbFhnNklKVGFaWXBLbXdtV0xkOTlYcnhFOUxMYU1vUnJMclpyR21nYTBLUDh5UURFTy1MbGRUQThiWXNLSVVMWkZJQlpwWTNJQUpGM3dyVGNHZmp6Y0E0R29FaWtkd25sczZ0RktJRTRXcGVkNA?oc=5"
+      "title": "OpenAI, Anthropic face new oversight as New York’s AI safety law takes effect - TechCrunch",
+      "source": "TechCrunch",
+      "summary": "OpenAI, Anthropic face new oversight as New York’s AI safety law takes effect TechCrunch",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNSVhqV2gyYlFPU1FIZlNHRkp4SGJHQVJmMzB3cHE0a29DRHpzS09Obzh5NmlQRFFQd25aaE90ZlVxMXJCaUI0Y1FsOEltc09rX0VRTlJZZ01oUlZXN05KV3NxRXpYclhwb0g1VFE4WFEwZ2tZNllMTkpjdFQ3RVBLeWZMTWVJN3B1OVQtWVM1NkNYbER5a2NwNm1HVmI3R1pjOHFoSzJOdzBucW8tZU53?oc=5"
+     },
+     {
+      "title": "Australia considers world-first criminal charges for AI companies that fail to prevent harm - ABC News & Headlines – Australian Broadcasting Corporation",
+      "source": "ABC News & Headlines – Australian Broadcasting Corporation",
+      "summary": "Australia considers world-first criminal charges for AI companies that fail to prevent harm ABC News & Headlines – Australian Broadcasting Corporation",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPTkh6Q3VRSTNBUHZIX0tORThaOENtWjdxby1tdXAzSnZQb1pXbU8weThqdk43TGlSYW5EY29jaWpZREwyRk54cEc5Q0w3NEtWaVhPTFdDMUs5djdqUXdOT2VIUmdCUG83a3I0Y25iSnFtdnRfN0hjS21tUHdYTnZCRmdPeVZqRk45dng1YXh5dGJDSFcwUzdvV1NodWVkWFE1cXhpaQ?oc=5"
      }
     ]
    }
   ],
-  "mid": 255,
-  "pick": 0
+  "mid": 614,
+  "pick": null
  }
 }
