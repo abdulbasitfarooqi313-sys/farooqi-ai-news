@@ -50,7 +50,8 @@
    },
    "on": "2026-11-11",
    "id": "0ab2282f09",
-   "status": "new"
+   "status": "queued",
+   "tries": 0
   },
   {
    "channel": "Matthew Berman",
