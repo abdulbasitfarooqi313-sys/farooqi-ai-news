@@ -12,6 +12,7 @@ on:
     inputs:
       job: { description: "approve | replace | build", required: true, default: "approve" }
       weeks: { description: "build: کتنے ہفتے", required: false, default: "8" }
+      mod: { description: "py: ماڈیول اور دلائل، مثلاً pipeline.recover <vid> <day>", required: false, default: "" }
 permissions:
   contents: read
   actions: write
@@ -43,12 +44,13 @@ jobs:
       - name: Install
         working-directory: ts
         run: |
-          if [ "$JOB" = approve ]; then pip install -q requests; else
+          if [ "$JOB" = approve ] || [ "$JOB" = py ]; then pip install -q requests; else
             sudo apt-get install -y -qq fonts-dejavu-core >/dev/null; pip install -q -r requirements.txt; fi
       - name: Work
         working-directory: ts
         env:
           WEEKS: ${{ github.event.inputs.weeks }}
+          MOD: ${{ github.event.inputs.mod }}
         run: |
           case "$JOB" in
           approve)
@@ -70,6 +72,7 @@ jobs:
           PY
             ;;
           build) python -u -m pipeline.topic_calendar build ${WEEKS:-8} ;;
+          py) python -u -m $MOD ;;
           *) echo "::error::نامعلوم کام: $JOB"; exit 1 ;;
           esac
       - name: Save (private repo)
