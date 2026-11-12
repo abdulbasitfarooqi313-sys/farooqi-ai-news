@@ -1,0 +1,36 @@
+name: ya-diag (temporary)
+on: { push: { paths: [".github/workflows/ya-diag.yml"] } }
+jobs:
+  d:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          I: ${{ secrets.NAWA_YT_ANALYTICS_CLIENT_ID }}
+          S: ${{ secrets.NAWA_YT_ANALYTICS_CLIENT_SECRET }}
+          T: ${{ secrets.NAWA_YT_ANALYTICS_TOKEN }}
+          YI: ${{ secrets.NAWA_YOUTUBE_CLIENT_ID }}
+          YS: ${{ secrets.NAWA_YOUTUBE_CLIENT_SECRET }}
+          YT: ${{ secrets.NAWA_YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import os, json, urllib.request, urllib.parse, urllib.error
+          i, s, t = (os.environ[k].strip() for k in "IST")
+          print("RESULT set:", bool(i), bool(s), bool(t), "| ID ok:", i.endswith(".apps.googleusercontent.com"), "| SECRET ok:", s.startswith("GOCSPX-"), "| TOKEN ok:", t.startswith("1//"))
+          if not (i and s and t): raise SystemExit
+          def tok(i, s, t):
+              d = urllib.parse.urlencode({"client_id": i, "client_secret": s, "refresh_token": t, "grant_type": "refresh_token"}).encode()
+              return json.load(urllib.request.urlopen("https://oauth2.googleapis.com/token", d, timeout=30))["access_token"]
+          try:
+              a = tok(i, s, t)
+          except urllib.error.HTTPError as e:
+              print("RESULT ERROR", e.code, e.read().decode()[:200]); raise SystemExit
+          y = tok(*(os.environ[k].strip() for k in ("YI", "YS", "YT")))
+          q = urllib.parse.urlencode({"ids": "channel==MINE", "startDate": "2026-10-01", "endDate": "2026-11-11", "metrics": "views", "dimensions": "video", "sort": "-views", "maxResults": 3})
+          try:
+              rows = json.load(urllib.request.urlopen(urllib.request.Request("https://youtubeanalytics.googleapis.com/v2/reports?" + q, headers={"Authorization": "Bearer " + a}), timeout=30)).get("rows", [])
+          except urllib.error.HTTPError as e:
+              print("RESULT ANALYTICS ERROR", e.code, e.read().decode()[:300]); raise SystemExit
+          ch = json.load(urllib.request.urlopen(urllib.request.Request("https://www.googleapis.com/youtube/v3/videos?part=snippet&id=" + ",".join(r[0] for r in rows), headers={"Authorization": "Bearer " + y}), timeout=30))
+          for v in ch.get("items", []): print("RESULT", v["snippet"]["channelTitle"], "|", v["snippet"]["title"][:50])
+          print("RESULT rows:", len(rows))
+          PY
