@@ -1,0 +1,29 @@
+name: ya-diag (temporary)
+on: { push: { paths: [".github/workflows/ya-diag.yml"] } }
+jobs:
+  d:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          I: ${{ secrets.TS_YT_ANALYTICS_CLIENT_ID }}
+          S: ${{ secrets.TS_YT_ANALYTICS_CLIENT_SECRET }}
+          T: ${{ secrets.TS_YT_ANALYTICS_TOKEN }}
+          YI: ${{ secrets.TS_YOUTUBE_CLIENT_ID }}
+          YS: ${{ secrets.TS_YOUTUBE_CLIENT_SECRET }}
+          YT: ${{ secrets.TS_YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import os, json, urllib.request, urllib.parse
+          def tok(i, s, t):
+              d = urllib.parse.urlencode({"client_id": os.environ[i].strip(), "client_secret": os.environ[s].strip(), "refresh_token": os.environ[t].strip(), "grant_type": "refresh_token"}).encode()
+              return json.load(urllib.request.urlopen("https://oauth2.googleapis.com/token", d, timeout=30))["access_token"]
+          a = tok("I", "S", "T"); y = tok("YI", "YS", "YT")
+          q = urllib.parse.urlencode({"ids": "channel==MINE", "startDate": "2026-10-01", "endDate": "2026-11-11", "metrics": "views", "dimensions": "video", "sort": "-views", "maxResults": 5})
+          rows = json.load(urllib.request.urlopen(urllib.request.Request("https://youtubeanalytics.googleapis.com/v2/reports?" + q, headers={"Authorization": "Bearer " + a}), timeout=30)).get("rows", [])
+          ids = ",".join(r[0] for r in rows)
+          ch = json.load(urllib.request.urlopen(urllib.request.Request("https://www.googleapis.com/youtube/v3/videos?part=snippet&id=" + ids, headers={"Authorization": "Bearer " + y}), timeout=30))
+          for v in ch.get("items", []):
+              print("RESULT", v["snippet"]["channelTitle"], "|", v["snippet"]["title"][:60])
+          me = json.load(urllib.request.urlopen(urllib.request.Request("https://www.googleapis.com/youtube/v3/channels?part=snippet&mine=true", headers={"Authorization": "Bearer " + y}), timeout=30))
+          print("RESULT upload-token channel:", me["items"][0]["snippet"]["title"])
+          PY
