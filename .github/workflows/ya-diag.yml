@@ -1,0 +1,19 @@
+name: ya-diag (temporary)
+on: { push: { paths: [".github/workflows/ya-diag.yml"] } }
+jobs:
+  d:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          I: ${{ secrets.YT_ANALYTICS_CLIENT_ID }}
+          S: ${{ secrets.YT_ANALYTICS_CLIENT_SECRET }}
+          T: ${{ secrets.YT_ANALYTICS_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import os, json, urllib.request, urllib.parse, urllib.error
+          d = urllib.parse.urlencode({"client_id": os.environ["I"].strip(), "client_secret": os.environ["S"].strip(), "refresh_token": os.environ["T"].strip(), "grant_type": "refresh_token"}).encode()
+          try:
+              r = json.load(urllib.request.urlopen("https://oauth2.googleapis.com/token", d, timeout=30)); print("RESULT OK", r.get("scope"))
+          except urllib.error.HTTPError as e:
+              print("RESULT ERROR", e.code, json.loads(e.read().decode()))
+          PY
