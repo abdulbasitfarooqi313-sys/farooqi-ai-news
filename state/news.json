@@ -339,7 +339,7 @@
   "spotifysaidjgetsnewvoicespersonalitiesandanoptionforlesschat",
   "ringknownforitsdoorbellcameraslaunchesahomesecuritydroneanda"
  ],
- "offset": 94696876,
+ "offset": 94696877,
  "chat": 6593456628,
  "days": {
   "2026-10-22": {
@@ -965,7 +965,7 @@
    "yt_status": "scheduled"
   },
   "2026-11-12-w2": {
-   "status": "pending",
+   "status": "approved",
    "vmid": 652,
    "mids": [
     651,
@@ -989,7 +989,8 @@
    ],
    "kind": "word",
    "yt": "NAzM1sLMf8E",
-   "yt_at": "2026-11-13T13:00:00+03:00"
+   "yt_at": "2026-11-13T13:00:00+03:00",
+   "yt_status": "scheduled"
   }
  },
  "podcast": {
