@@ -213,6 +213,101 @@
      "short": null
     }
    ]
+  },
+  "news": {
+   "on": "2026-11-12",
+   "list": [
+    {
+     "title": "Anthropic's Fable 5.2 is the World’s Best AI Model",
+     "channel": "Matt Wolfe",
+     "views": 147773,
+     "ratio": 8.4,
+     "age": 3,
+     "url": "https://youtu.be/2TM8W66NI_8",
+     "short": null
+    },
+    {
+     "title": "AI News: New ChatGPT & Google Models (14 Updates Worth Knowing)",
+     "channel": "Matt Wolfe",
+     "views": 126579,
+     "ratio": 7.2,
+     "age": 6,
+     "url": "https://youtu.be/IrAHINf0M6E",
+     "short": null
+    },
+    {
+     "title": "Grok 5 Could Be The Most Powerful AI Ever Created",
+     "channel": "TheAIGRID",
+     "views": 417334,
+     "ratio": 6.2,
+     "age": 11,
+     "url": "https://youtu.be/KlG0VyhIzBU",
+     "short": null
+    },
+    {
+     "title": "How I Get Claude To Edit My Videos (Step-By-Step)",
+     "channel": "Matt Wolfe",
+     "views": 99392,
+     "ratio": 5.7,
+     "age": 8,
+     "url": "https://youtu.be/ep4psgAFOqc",
+     "short": null
+    },
+    {
+     "title": "5 Best Government Apps in Pakistan | CNIC Renewal, Driving License & Token Tax",
+     "channel": "Asad Ali TV",
+     "views": 81166,
+     "ratio": 3.6,
+     "age": 9,
+     "url": "https://youtu.be/ofJQ4kUMMNo",
+     "short": null
+    },
+    {
+     "title": "Fable 5.2 is ridiculous",
+     "channel": "Matthew Berman",
+     "views": 291867,
+     "ratio": 3.5,
+     "age": 3,
+     "url": "https://youtu.be/0vNyVMDFdkg",
+     "short": null
+    },
+    {
+     "title": "Easypaisa vs JazzCash | Which Is Better in Pakistan?",
+     "channel": "Asad Ali TV",
+     "views": 71670,
+     "ratio": 3.2,
+     "age": 11,
+     "url": "https://youtu.be/LMN0xGg_GJ4",
+     "short": null
+    },
+    {
+     "title": "The AI Godfather Just Proved The Entire AI Industry Wrong",
+     "channel": "TheAIGRID",
+     "views": 214126,
+     "ratio": 3.2,
+     "age": 7,
+     "url": "https://youtu.be/_fEqQa5hBmI",
+     "short": null
+    },
+    {
+     "title": "Claude Fable 5.2 Just Changed Everything",
+     "channel": "TheAIGRID",
+     "views": 230195,
+     "ratio": 3.1,
+     "age": 2,
+     "url": "https://youtu.be/GipTWtfaiLs",
+     "short": null
+    },
+    {
+     "title": "They did it...",
+     "channel": "Matthew Berman",
+     "views": 252043,
+     "ratio": 3.0,
+     "age": 9,
+     "url": "https://youtu.be/r0cJOa9MZsE",
+     "short": null
+    }
+   ]
   }
  },
  "nawa": [
