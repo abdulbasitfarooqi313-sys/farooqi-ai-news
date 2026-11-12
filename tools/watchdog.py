@@ -32,6 +32,10 @@ WATCH = [
     ("ٹول اسکیپ — ویڈیو (متبادل رنر)", OWN, "toolscape-video.yml", "GH", "toolscape-video.yml", {"force": "true"}),
     ("نوائے فاروقی — سبق کی ویڈیو", NAWA, "lesson-video.yml", "NAWA", "nawa-lesson.yml", {"force": "true"}),
     ("نوائے فاروقی — سبق (متبادل رنر)", OWN, "nawa-lesson.yml", "GH", "nawa-lesson.yml", {"force": "true"}),
+    # مالک (12 نومبر 2026): سیریز کے شارٹس اور لمبی ویڈیو — ناکامی پر دوبارہ کوشش لامحدود رنر پر
+    ("نوائے فاروقی — سیریز شارٹس", NAWA, "media.yml", "NAWA", "nawa-video-fallback.yml", {"job": "media", "force": "true"}),
+    ("نوائے فاروقی — لمبی ویڈیو", NAWA, "long-video.yml", "NAWA", "nawa-video-fallback.yml", {"job": "long", "force": "true"}),
+    ("ٹول اسکیپ — منظوری اور پلے لسٹ", OWN, "toolscape-jobs.yml", "GH", "toolscape-jobs.yml", {"job": "approve"}),
 ]
 TOK = {"GH": os.environ.get("GH_TOKEN", ""), "TS": os.environ.get("TS_TOKEN", ""), "NAWA": os.environ.get("NAWA_TOKEN", "")}
 
