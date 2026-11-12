@@ -1,16 +1,16 @@
 {
  "news": {
-  "date": "2026-11-11",
+  "date": "2026-11-12",
   "file": "desk/news.html",
   "label": "AI News",
-  "title": "روزنامچہ — فاروقی اے آئی نیوز — 2026-11-11",
-  "hash": "4f2e6425b0ab"
+  "title": "روزنامچہ — فاروقی اے آئی نیوز — 2026-11-12",
+  "hash": "943a902d718b"
  },
  "toolscape": {
-  "date": "2026-11-11",
+  "date": "2026-11-12",
   "file": "desk/toolscape.html",
   "label": "Toolscape",
-  "title": "روزنامچہ — Toolscape — 2026-11-11",
-  "hash": "35c0d871f3cb"
+  "title": "روزنامچہ — Toolscape — 2026-11-12",
+  "hash": "890ace83632b"
  }
 }

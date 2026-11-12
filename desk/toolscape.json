@@ -1,321 +1,325 @@
 {
- "summary": "Today's desk focuses on the impending retirement of OpenAI's Standard Voice Mode and the rollout of Anthropic's new office suite tools. We will provide clear, beginner-friendly workarounds and tutorials tailored to our US, UK, and Canadian audience.",
+ "summary": "Today's landscape is dominated by Anthropic's newly launched AI office suite alongside a growing user push toward local, privacy-focused open-source tools like Documind and Hermes Agent. Toolscape can capitalize on these trends by delivering zero-hype, step-by-step tutorials showing beginners how to use these new tools for free.",
  "topics": [
   {
-   "title": "OpenAI Retiring Standard Voice Mode on December 11",
-   "why": "Massive backlash and user frustration on Reddit as OpenAI prepares to kill Standard Voice Mode on December 11th.",
+   "title": "Anthropic AI Office Suite Launch",
+   "why": "Anthropic unveiled a new suite of office productivity tools ahead of its IPO to directly compete with Microsoft and Google.",
    "trend": 10,
    "sources": [
-    "reddit.com"
+    "Bloomberg",
+    "Fortune",
+    "Matt Wolfe"
    ]
   },
   {
-   "title": "Anthropic Office Tools Suite",
-   "why": "Anthropic is taking on Microsoft by unveiling its own AI-powered office suite ahead of an IPO.",
+   "title": "Documind Open-Source Document AI",
+   "why": "Documind hit the top of HackerNews for its open-source ability to convert complex unstructured PDFs into clean tabular data.",
    "trend": 9,
    "sources": [
-    "Bloomberg.com",
-    "The Verge",
-    "news.google.com"
+    "HackerNews",
+    "ProductHunt"
    ]
   },
   {
-   "title": "Seedream 5.5 by ByteDance",
-   "why": "Trending new AI media release on Product Hunt capturing creator interest.",
+   "title": "Hermes Agent Local Setup",
+   "why": "Local AI agent workflows are trending heavily as users seek free, private alternatives to paid cloud subscriptions.",
    "trend": 8,
    "sources": [
-    "producthunt.com"
+    "Metics Media",
+    "Kevin Stratvert"
    ]
   },
   {
-   "title": "MiniMax H3-Image",
-   "why": "New image generation tool gaining traction among creators on Product Hunt.",
+   "title": "Adobe Photoshop & Firefly AI Agents",
+   "why": "Adobe introduced automated AI agent workflows directly inside Photoshop and Premiere for creative automation.",
    "trend": 7,
    "sources": [
-    "producthunt.com"
+    "TechCrunch",
+    "Google News"
    ]
   },
   {
-   "title": "Scribe v3 by ElevenLabs",
-   "why": "Latest audio and transcription update from ElevenLabs making waves.",
+   "title": "Databricks Autonomous Genie AI",
+   "why": "Databricks launched Genie to automate complex data analysis for non-technical knowledge workers.",
    "trend": 6,
    "sources": [
-    "producthunt.com"
+    "Databricks",
+    "Fortune"
    ]
   },
   {
-   "title": "Adobe AI Agents and Creative Tools",
-   "why": "Adobe MAX brought new AI agent capabilities to Photoshop, Premiere, and Firefly.",
+   "title": "ChatGPT Standard Voice & Prompt Changes",
+   "why": "Community backlash is peaking on Reddit over ChatGPT removing Standard Voice and increasing clarifying follow-up questions.",
    "trend": 5,
    "sources": [
-    "TechCrunch",
-    "AppleInsider",
-    "news.google.com"
+    "Reddit r/ChatGPT",
+    "Skill Leap AI"
    ]
   },
   {
-   "title": "Mitra MCP",
-   "why": "Developer productivity tool trending on Product Hunt.",
+   "title": "Claude Code with Free Ollama Local Models",
+   "why": "Developers and beginners are pairing Claude Code interface with local open-source models to run coding workflows for zero cost.",
    "trend": 4,
    "sources": [
-    "producthunt.com"
+    "Kevin Stratvert",
+    "HackerNews"
    ]
   },
   {
-   "title": "Apify AI Agent Capabilities",
-   "why": "New server actors and agent capabilities announced to support growing demand.",
+   "title": "MIT 30x Faster Image Generation AI",
+   "why": "MIT researchers unveiled a model architecture capable of generating high-resolution images 30 times faster than current tools.",
    "trend": 3,
    "sources": [
-    "Yahoo Finance UK",
-    "news.google.com"
+    "HackerNews",
+    "Inside Higher Ed"
    ]
   },
   {
-   "title": "Nod by n8n",
-   "why": "Workflow automation tool gaining discussion among beginner builders.",
+   "title": "AI Privacy Policy Readers",
+   "why": "A new open-source tool that scans terms of service to tell users which sites sell personal data gained rapid traction online.",
    "trend": 2,
    "sources": [
-    "producthunt.com"
+    "HackerNews"
    ]
   },
   {
-   "title": "Muse Ember by Meta",
-   "why": "New Meta experimental tool listed and discussed on Product Hunt.",
+   "title": "Sendr V4 for Automated GTM Workflows",
+   "why": "Sendr V4 launched on ProductHunt as a visual builder for sales and go-to-market automation.",
    "trend": 1,
    "sources": [
-    "producthunt.com"
+    "ProductHunt"
    ]
   }
  ],
  "packages": [
   {
-   "topic": "OpenAI Retiring Standard Voice Mode on December 11",
-   "competitors": "Competitors are covering general AI updates or complaining about features, but they missed a step-by-step tutorial on what users can do right now to adapt before December 11.",
-   "angle": "We show 3 practical workarounds to replace Standard Voice Mode for free before the December 11 deadline.",
+   "topic": "Anthropic AI Office Suite Launch",
+   "competitors": "Matt Wolfe and Skill Leap AI covered the Anthropic announcement from a tech news perspective. They missed showing a clear step-by-step walkthrough of how everyday workers can use the free features today.",
+   "angle": "A practical 8-minute tutorial showing beginners how to automate daily document tasks using Anthropic's free office tools.",
    "viral": {
-    "score": 82,
-    "why": "Mass panic and anger on Reddit regarding the December 11 deadline makes this highly searched and timely."
+    "score": 68,
+    "why": "High search interest driven by major news coverage, but enterprise productivity topics usually cap around mid-tier virality for general audiences."
    },
    "long": {
-    "title": "ChatGPT Standard Voice is Ending: 3 Free Alternatives",
-    "thumb": "ChatGPT Voice Ending",
-    "hook": "In the next 6 minutes you will set up three free voice alternatives before ChatGPT Standard Voice retires on December 11. No paid subscription required.",
+    "title": "How to Use Anthropic's New Free AI Office Tools (Step-by-Step)",
+    "thumb": "Free AI Office",
+    "hook": "In the next 7 minutes, you will set up Anthropic's new office tools to write reports and clean up spreadsheets automatically. You do not need a paid subscription or technical experience to follow along.",
     "outline": [
-     "Why OpenAI is retiring Standard Voice Mode on December 11",
-     "Alternative 1: Setting up native desktop voice features",
-     "Alternative 2: Using free browser extensions for read-aloud",
-     "Alternative 3: Using mobile app workarounds",
-     "Step-by-step test of audio quality",
-     "Summary of your best free option"
+     "Overview of Anthropic's new office tool ecosystem",
+     "Setting up your free account step-by-step",
+     "Automating document drafting with the main interface",
+     "Cleaning and organizing spreadsheet data",
+     "Connecting office tools to your existing daily apps",
+     "One limitation to keep in mind regarding file limits",
+     "Summary and next recommended workflow video"
     ]
    },
    "shorts": [
     {
-     "title": "ChatGPT Voice is Gone Dec 11",
-     "hook": "Stop what you're doing: ChatGPT Standard Voice is retiring on December 11.",
-     "script": "OpenAI is officially killing Standard Voice Mode on December 11, and users are not happy. If you rely on it daily, here are two free ways to replace it right now. First, open your settings and test the updated desktop mode. Second, use our free recommended tool in the pinned comment. Try this today before the deadline.",
-     "cta": "Subscribe for more tool updates."
+     "title": "Anthropic Just Released Free Office Tools",
+     "hook": "Anthropic just released free AI office tools to take on Google Docs.",
+     "script": "If you spend hours drafting documents or organizing tables, this free tool handles it in seconds. Go to Anthropic's platform, create a free account, and open the new office workspace. Paste in any raw text or data, select your format, and watch it generate structured documents automatically. It runs entirely in your browser with no setup required.",
+     "cta": "Subscribe to Toolscape for daily free AI tutorials."
     },
     {
-     "title": "Keep Talking to ChatGPT",
-     "hook": "Here is how to keep using voice chat after December 11.",
-     "script": "Worried about ChatGPT retiring Standard Voice on December 11? You don't have to lose your workflow. Download the desktop app update today and check out these alternative settings. It takes less than two minutes to set up. Save this video so you don't forget.",
-     "cta": "Check our channel for the full guide."
+     "title": "Stop Paying for Office AI Tools",
+     "hook": "You can now use Anthropic's office AI tools completely free.",
+     "script": "Instead of paying $20 a month for enterprise subscriptions, Anthropic launched office automation features for everyone. Open the workspace, upload your file, and ask the assistant to summarize or reformat it. It structures raw notes into polished team updates in under a minute.",
+     "cta": "Check the description for the step-by-step guide."
     }
    ],
    "carousel": {
-    "title": "ChatGPT Voice Ending Dec 11? 3 Free Fixes",
+    "title": "Master Anthropic's New Office Tools in 5 Steps",
     "slides": [
-     "ChatGPT Standard Voice is retiring on December 11",
-     "Why users are upset and what is changing",
-     "Fix 1: Update your desktop app settings today",
-     "Fix 2: Use free alternative voice tools",
-     "Fix 3: Adjust your prompt workflow for text",
-     "Watch our full YouTube tutorial for the exact steps"
+     "1. Navigate to the free Anthropic office workspace.",
+     "2. Upload your raw document, PDF, or text file.",
+     "3. Choose your target output format like email or report.",
+     "4. Click generate to organize your data into clean sections.",
+     "5. Export directly to your desktop for free."
     ]
    },
    "posts": {
     "x": [
-     "ChatGPT Standard Voice mode is officially retiring on December 11. Here is how you can prepare and find free workarounds in under 5 minutes: [link]",
-     "Are you upset about OpenAI retiring Standard Voice on December 11? We tested 3 free alternatives you can start using today: [link]"
+     "Anthropic just launched its new AI office tools to compete with Microsoft Copilot. Here is how to use the free plan step by step: https://youtube.com",
+     "Tired of manual office work? Anthropic's new office features let you turn raw notes into clean reports in seconds."
     ],
-    "facebook": "OpenAI announced it is retiring ChatGPT Standard Voice Mode on December 11. If you use voice daily, this change will affect your workflow. We tested 3 free alternatives and put together a step-by-step guide to help you transition smoothly. Watch the full tutorial here: [link]",
-    "instagram": "ChatGPT Standard Voice is shutting down on December 11. 🛑 Don't get caught off guard—we tested 3 free tools to replace it. Link in bio for the full step-by-step tutorial! #ChatGPT #AITools #TechNews #Productivity",
-    "linkedin": "With OpenAI retiring Standard Voice Mode on December 11, many professionals are looking for reliable alternatives. We tested free tools and desktop options to keep your workflow uninterrupted. Watch our guide: [link]"
+    "facebook": "Anthropic released a new suite of office tools that anyone can use for free. In today's step-by-step video, we show you how to set up your account and automate your daily writing tasks in under 8 minutes.",
+    "instagram": "Anthropic just launched new free AI office tools! Swipe through to see how you can use them today to automate your daily tasks. #AI #Productivity #Anthropic #Toolscape",
+    "linkedin": "Anthropic has officially entered the office productivity space with a new suite of AI tools designed to streamline document creation and data organization. Here is a clear guide on how to leverage the free tier for your daily workflow."
    },
    "article": {
-    "title": "How to Prepare for ChatGPT Standard Voice Retiring on December 11",
+    "title": "Beginner's Guide to Anthropic's New Free AI Office Suite",
     "outline": [
-     "Introduction to the December 11 Deadline",
-     "Why OpenAI is Changing Voice Modes",
-     "Top 3 Free Alternatives You Can Use Today",
+     "Introduction to Anthropic Office Tools",
+     "How to Access the Free Workspace",
+     "Step 1: Document Automation Walkthrough",
+     "Step 2: Spreadsheet Data Cleanup",
+     "Key Limitations of the Free Tier"
+    ]
+   }
+  },
+  {
+   "topic": "Documind Open-Source Document AI",
+   "why": "Documind hit the top of HackerNews for its open-source ability to convert complex unstructured PDFs into clean tabular data.",
+   "competitors": "Tech blogs covered Documind's code repository on GitHub. Competitors like Jeff Su covered PDF summarize tools, but missed showing a simple non-programmer workflow to extract table data into Excel.",
+   "angle": "Show beginners how to turn messy PDFs into organized Excel spreadsheets using a free open-source tool without writing code.",
+   "viral": {
+    "score": 58,
+    "why": "Document processing is a high-utility problem for office workers, ensuring consistent view counts without relying on sensational news."
+   },
+   "long": {
+    "title": "Turn Any PDF into an Excel Table for Free (Documind Tutorial)",
+    "thumb": "PDF to Excel AI",
+    "hook": "In the next 6 minutes, you will convert any scanned PDF or receipt into a clean Excel table. You will use a free open-source tool called Documind, and you do not need to write a single line of code.",
+    "outline": [
+     "The common problem with copying PDF table data",
+     "What is Documind and why it is free",
+     "Setting up Documind in your browser step-by-step",
+     "Uploading a complex PDF document",
+     "Defining custom data fields to extract",
+     "Exporting your final table directly to CSV or Excel",
+     "Final tips for processing multi-page documents"
+    ]
+   },
+   "shorts": [
+    {
+     "title": "Extract PDF Data to Excel in Seconds",
+     "hook": "Stop copying and pasting tables from PDF files manually.",
+     "script": "An open-source AI tool called Documind extracts data from any PDF automatically. Just upload your document, list the columns you want like dates, names, or prices, and click run. The tool scans every page and builds a clean table you can export straight to Excel.",
+     "cta": "Subscribe to Toolscape for more simple AI workflows."
+    },
+    {
+     "title": "Best Free Open Source PDF Tool",
+     "hook": "This free open-source tool converts PDFs to structured spreadsheets.",
+     "script": "Documind reads complex documents and turns them into organized data tables. Drag your PDF into the interface, select your desired schema, and let the AI extract every row automatically. It handles invoices, receipts, and multi-page reports with zero manual typing.",
+     "cta": "Watch the full step-by-step video on our channel."
+    }
+   ],
+   "carousel": {
+    "title": "How to Turn PDFs into Excel Tables with Documind",
+    "slides": [
+     "1. Open the free Documind web application.",
+     "2. Drag and drop your target PDF file.",
+     "3. Specify the data fields you want to extract.",
+     "4. Run the extraction process in one click.",
+     "5. Download your clean dataset as an Excel file."
+    ]
+   },
+   "posts": {
+    "x": [
+     "Documind is a free open-source AI tool that turns unstructured PDFs into clean Excel tables. Here is how to use it without coding: https://youtube.com",
+     "Never copy-paste data from a PDF again. Documind extracts tables automatically for free."
+    ],
+    "facebook": "Copying tables out of PDF files by hand takes hours. Today we review Documind, a free open-source tool that turns complex documents into clean Excel spreadsheets automatically.",
+    "instagram": "Convert messy PDFs into structured Excel tables in under 5 minutes using Documind! Full beginner walkthrough on our channel. #PDF #Excel #AITools #Toolscape",
+    "linkedin": "Data extraction from unstructured documents remains a major bottleneck for operations teams. Here is a step-by-step tutorial on using Documind to automate PDF to CSV workflows cleanly."
+   },
+   "article": {
+    "title": "How to Extract PDF Data to Excel with Free Open-Source AI",
+    "outline": [
+     "Why PDF Copy-Pasting Fails",
+     "What is Documind?",
      "Step-by-Step Setup Guide",
-     "Conclusion"
+     "Configuring Data Extraction Schemas",
+     "Exporting Results to CSV and Excel"
     ]
    }
   },
   {
-   "topic": "Anthropic Office Tools Suite",
-   "competitors": "Competitors like Bloomberg and The Verge covered the business and IPO aspects, but they missed a beginner walkthrough showing how to actually use the new Anthropic office tools for daily tasks.",
-   "angle": "We give a step-by-step beginner walkthrough of the new Anthropic office suite with zero technical jargon.",
+   "topic": "Hermes Agent Local Setup",
+   "why": "Local AI agent workflows are trending heavily as users seek free, private alternatives to paid cloud subscriptions.",
+   "competitors": "Metics Media and Kevin Stratvert posted tutorials on Hermes Agent, but spent most of their time in terminal windows. They missed a streamlined guide for non-technical users who want simple local installation.",
+   "angle": "A simple 10-minute guide to installing and running your own private local AI agent on Windows or Mac with no coding required.",
    "viral": {
-    "score": 78,
-    "why": "Directly challenging Microsoft office tools with an AI-first suite is major news that beginners want to test immediately."
+    "score": 64,
+    "why": "Local AI agents are currently peak trending topics in the tutorial space, offering strong click-through potential when simplified."
    },
    "long": {
-    "title": "Anthropic's New Office Suite: Beginner Tutorial",
-    "thumb": "Anthropic Office Suite",
-    "hook": "In the next 8 minutes you will test Anthropic's new office tools and create your first document without paying for Microsoft Office.",
+    "title": "Build Your Own Local AI Agent in 10 Minutes (No Code)",
+    "thumb": "Free Local Agent",
+    "hook": "In the next 10 minutes, you will install a fully private AI agent on your computer that runs completely offline. It costs nothing to use, keeps your data private, and requires zero coding background.",
     "outline": [
-     "What is Anthropic's new office suite",
-     "How to access the new tools for free",
-     "Step 1: Creating your first document",
-     "Step 2: Using built-in AI editing features",
-     "Comparing speed with traditional tools",
-     "One downside: current template limitations",
-     "Summary and next steps"
+     "Why local AI agents are safer and completely free",
+     "Downloading the simple installer for Windows and Mac",
+     "Selecting the right free open-source model",
+     "Configuring your first local agent task",
+     "Testing the agent on a web research assignment",
+     "Managing local memory and computer storage",
+     "Recap and recommended local model pairings"
     ]
    },
    "shorts": [
     {
-     "title": "Anthropic's New Office Suite",
-     "hook": "Anthropic just launched its own office suite to take on Microsoft.",
-     "script": "Anthropic just dropped a brand new office suite ahead of their IPO, and it's built entirely around AI. You can write documents, organize notes, and format text instantly. Here is how to access it in under two minutes. Follow along to try it out.",
-     "cta": "Subscribe for weekly tool guides."
+     "title": "Run a Private AI Agent on Your Computer",
+     "hook": "You can run your own AI agent locally without paying a monthly fee.",
+     "script": "Local AI agents like Hermes let you execute tasks completely offline on your own machine. Download the free desktop app, select your open-source model, and start giving it instructions. Your data never leaves your computer, and you never hit a message cap.",
+     "cta": "Subscribe to Toolscape for the complete installation guide."
     },
     {
-     "title": "Ditch Microsoft for Anthropic?",
-     "hook": "Can Anthropic's new office tools replace Word?",
-     "script": "Anthropic just released an AI-powered office suite to rival Microsoft and Google. I tested it out so you don't have to. The interface is clean, fast, and completely beginner-friendly. Watch our full video to see how it works.",
-     "cta": "Check the pinned comment for the link."
+     "title": "Free Local AI Agent Setup Guide",
+     "hook": "Stop paying subscriptions for AI agents when you can run them free.",
+     "script": "Setting up a private local agent takes less than 10 minutes. Download the free installation file, pick a lightweight model, and launch your agent interface. It handles web tasks and file sorting right on your desktop with total privacy.",
+     "cta": "Full step-by-step video available now on our channel."
     }
    ],
    "carousel": {
-    "title": "Anthropic Office Suite: First Look",
+    "title": "5 Steps to Set Up a Free Private AI Agent",
     "slides": [
-     "Anthropic just launched a new office suite",
-     "Built to take on Microsoft and Google",
-     "Feature 1: AI document generation",
-     "Feature 2: Clean, distraction-free interface",
-     "The downside: limited templates right now",
-     "Watch our full YouTube tutorial to try it free"
+     "1. Download the local agent installer for your OS.",
+     "2. Choose a free lightweight model like Llama or Mistral.",
+     "3. Launch the desktop application interface.",
+     "4. Assign your agent a simple task like organizing text.",
+     "5. Run your automation locally with zero subscription fees."
     ]
    },
    "posts": {
     "x": [
-     "Anthropic just launched its own AI office suite to take on Microsoft. We tested it out and made a beginner walkthrough: [link]",
-     "Is Anthropic's new office suite better than Microsoft Word? Here is our first look and step-by-step guide: [link]"
+     "Want to run AI agents locally for free? Hermes Agent lets you execute tasks privately on your computer. Here is the beginner setup guide: https://youtube.com",
+     "Keep your data private by running local AI agents on your desktop. Here is how to set it up in 10 minutes."
     ],
-    "facebook": "Anthropic has officially unveiled its own AI-powered office suite, challenging Microsoft and Google. If you want to see how it works and whether it can help your daily workflow, check out our step-by-step beginner tutorial: [link]",
-    "instagram": "Anthropic just launched a brand new office suite! 🖥️ We tested it out to see if it can really replace Microsoft Word and Google Docs. Watch our full tutorial via the link in our bio! #Anthropic #AItools #Productivity #TechTutorial",
-    "linkedin": "Anthropic's new office suite is here, positioning itself as a direct competitor to Microsoft. We put together a clear, beginner-friendly guide on how to test it for your daily work: [link]"
+    "facebook": "You don't need a monthly subscription to use powerful AI agents. Today's video shows you how to install a complete local AI agent on your desktop for free in just 10 minutes.",
+    "instagram": "Run your own private AI agent offline! Swipe through for the quick setup guide. #LocalAI #Privacy #AITools #Toolscape",
+    "linkedin": "Data privacy is a primary concern when deploying AI workflows. Learn how to install and configure local AI agents on desktop operating systems without subscription overhead."
    },
    "article": {
-    "title": "Anthropic Office Suite Tutorial: Everything Beginners Need to Know",
+    "title": "Complete Beginner Guide to Running Private AI Agents Locally",
     "outline": [
-     "Overview of Anthropic's New Office Tools",
-     "How It Compares to Microsoft and Google",
-     "Step-by-Step Guide to Your First Document",
-     "Pros and Cons for Daily Users",
-     "Conclusion"
-    ]
-   }
-  },
-  {
-   "topic": "Seedream 5.5 by ByteDance",
-   "competitors": "Competitors like Dan Kieft covered Seedance 2.5, but they missed a dedicated, beginner-focused walkthrough of the newer Seedream 5.5 image and video workflow on a free plan.",
-   "angle": "We show how beginners can use Seedream 5.5 for free step-by-step without wasting credits.",
-   "viral": {
-    "score": 75,
-    "why": "AI video and image generation tutorials consistently pull massive view counts when kept simple for beginners."
-   },
-   "long": {
-    "title": "Seedream 5.5 Beginner Guide: How to Make AI Videos Free",
-    "thumb": "Seedream 5.5 Guide",
-    "hook": "In the next 7 minutes you will generate your first realistic AI video using Seedream 5.5 on a free plan.",
-    "outline": [
-     "What is Seedream 5.5 by ByteDance",
-     "How to sign up for the free tier",
-     "Step 1: Writing your first prompt",
-     "Step 2: Choosing camera and motion settings",
-     "Step 3: Rendering and downloading your clip",
-     "One downside: free credit limits",
-     "Summary and next tutorial"
-    ]
-   },
-   "shorts": [
-    {
-     "title": "Try Seedream 5.5 Free",
-     "hook": "Here is how to make realistic AI videos with Seedream 5.5 for free.",
-     "script": "ByteDance just released Seedream 5.5, and the video quality is incredible. You don't need a paid subscription to get started. Just follow these three simple steps to generate your first clip in under two minutes. Let's dive in.",
-     "cta": "Subscribe for more free tool guides."
-    },
-    {
-     "title": "Seedream 5.5 First Impressions",
-     "hook": "Stop wasting credits on old AI video tools.",
-     "script": "Seedream 5.5 is out and it changes everything for beginner creators. The motion quality is much smoother than previous versions. Watch our full step-by-step tutorial to see how to use the free tier today.",
-     "cta": "Check our channel for the full video."
-    }
-   ],
-   "carousel": {
-    "title": "Seedream 5.5: Free AI Video Guide",
-    "slides": [
-     "How to use Seedream 5.5 for free",
-     "Step 1: Create your free account",
-     "Step 2: Write a simple motion prompt",
-     "Step 3: Adjust camera settings",
-     "The downside: watch out for credit limits",
-     "Watch our full YouTube tutorial for the exact clicks"
-    ]
-   },
-   "posts": {
-    "x": [
-     "Want to test Seedream 5.5 without paying? Here is our step-by-step beginner guide to making AI videos for free: [link]",
-     "ByteDance's Seedream 5.5 is here. We tested the free tier so you can make your first AI video today: [link]"
-    ],
-    "facebook": "ByteDance's Seedream 5.5 is one of the newest AI video generators getting attention. If you want to try it without spending money, we put together a simple, step-by-step beginner tutorial. Watch it here: [link]",
-    "instagram": "Create your first AI video with Seedream 5.5! 🎬 We tested the free plan step-by-step so you don't waste your credits. Link in bio! #Seedream #AIVideo #ContentCreator #FreeTools",
-    "linkedin": "AI video generation keeps improving. We tested ByteDance's Seedream 5.5 free tier and put together a straightforward tutorial for professionals exploring creative tools: [link]"
-   },
-   "article": {
-    "title": "Seedream 5.5 Beginner Tutorial: How to Make AI Videos Free",
-    "outline": [
-     "Introduction to Seedream 5.5",
-     "Accessing the Free Tier",
-     "Writing Effective Motion Prompts",
-     "Step-by-Step Generation Guide",
-     "Conclusion"
+     "Benefits of Local AI vs Cloud Subscriptions",
+     "Hardware Requirements for Beginners",
+     "Step 1: Downloading the Local Agent App",
+     "Step 2: Selecting Lightweight Open Models",
+     "Running Your First Offline Workflow"
     ]
    }
   }
  ],
  "hook_patterns": [
   {
-   "pattern": "Result + timeframe framing",
-   "example": "In the next 6 minutes you will set up three free voice alternatives before ChatGPT Standard Voice retires on December 11."
+   "pattern": "In the next [X] minutes you will [CLEAR RESULT]. You do not need [PAIN POINT].",
+   "example": "In the next 7 minutes you will build a complete web app. You do not need any coding experience to follow along."
   },
   {
-   "pattern": "Addressing an urgent upcoming deadline or policy change",
-   "example": "Stop what you're doing: ChatGPT Standard Voice is retiring on December 11."
+   "pattern": "Stop doing [COMMON TASK] by hand. This free tool does it in [TIME].",
+   "example": "Stop sorting client receipts by hand. This free tool organizes your expenses in 30 seconds."
   },
   {
-   "pattern": "Challenging popular tools with a free alternative",
-   "example": "In the next 8 minutes you will test Anthropic's new office tools and create your first document without paying for Microsoft Office."
+   "pattern": "[TOOL NAME] just got a major update that lets you [SPECIFIC BENEFIT] for free.",
+   "example": "Claude just got a major update that lets you edit videos for free."
   },
   {
-   "pattern": "Direct beginner call-out with no prior experience needed",
-   "example": "In the next 7 minutes you will generate your first realistic AI video using Seedream 5.5 on a free plan."
+   "pattern": "How to get [PAID FEATURE] without paying for a subscription.",
+   "example": "How to get automated AI agent features without paying for a monthly subscription."
   },
   {
-   "pattern": "Warning against wasting credits or time on old methods",
-   "example": "Stop wasting credits on old AI video generators when the new free version does this."
+   "pattern": "I tested [NUMBER] tools for [TASK] so you only need to use this one.",
+   "example": "I tested 10 free AI video tools so you only need to use this one."
   }
  ],
  "_competitors": [
   {
    "channel": "Metics Media",
    "title": "Build Your First AI Agent in 20 Minutes (No Coding)",
-   "views": 719474,
+   "views": 734499,
    "date": "2026-10-19",
    "url": "https://youtu.be/rCkYVxOX-dI",
    "desc": "A chatbot waits for your next message. An AI agent keeps working while you sleep. In this beginner tutorial, you'll build your first AI agent with no coding. Hermes Agent runs on its own server and messages you on Telegram.\n✅ Hostinger VPS (Exclusive 10% Discount): https://meticsmedia.com/hermes-MEG\n✅ Nous Portal ($15 Off Your First Month): https://meticsmedia.com/nous-MEG\n\nThis step-by-step AI agent tutorial is made for complete beginners. First, you'll learn what makes an AI agent different from a chatbot like ChatGPT or Claude. Then you'll see why we use Hermes Agent. It's a free, open-source agent from Nous Research. You'll deploy it on a Hostinger VPS with a one-click template and log i"
@@ -323,7 +327,7 @@
   {
    "channel": "Dan Kieft",
    "title": "How I Make Realistic AI Videos with Seedance 2.5 - Full Guide",
-   "views": 700369,
+   "views": 707114,
    "date": "2026-10-16",
    "url": "https://youtu.be/2hJsvDSPWYM",
    "desc": "Learn How To Make Ultra Realistic AI Videos with Seedance 2.5\nCreate AI Videos here 👉 http://dankieft.com/higgsfield\n\nLink to all my prompts 👉 https://how-to-make-realistic-footage.vercel.app/\n\nIn this video I teach you how to create realistic ai videos using Seedance 2.5. We will go over various different techniques in which I explain which ai models you should use, how to prompt ai and how to generate cool looking videos. Make sure to watch the entire video to fully understand how my workflow works.\n\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.in"
@@ -331,7 +335,7 @@
   {
    "channel": "Jeff Su",
    "title": "Personal Agents, Clearly Explained",
-   "views": 330960,
+   "views": 333679,
    "date": "2026-10-13",
    "url": "https://youtu.be/HdI_aYzgJIg",
    "desc": "📧 Join my free AI Essentials newsletter - https://www.jeffsu.org/newsletter/?utm_source=youtube&utm_medium=video&utm_campaign=v212\n\nAlready using #ChatGPT, Claude, or Gemini and wondering whether personal AI agents are worth your time? A chatbot can summarize one health report, a do-it-yourself agent can compare it with your history, and personal agents like #Muse, Dots, and Grok Bot can offer help before you ask.\n\nThe difference is how much your AI remembers and how much work you need to do. Personal Agents are easier to start using, while your own #AI Workspace gives you more control and memory files you can move between tools. Your choice also depends on privacy and ecosystem lock-in.\n\n*T"
@@ -339,7 +343,7 @@
   {
    "channel": "Metics Media",
    "title": "Master Higgsfield AI in 20 Minutes (Beginner Tutorial)",
-   "views": 247098,
+   "views": 256107,
    "date": "2026-10-21",
    "url": "https://youtu.be/3W1VhiKLNp4",
    "desc": "This Higgsfield AI tutorial walks you through everything you need to know as a beginner. Go from generating your first image all the way to a finished video, step by step.\n✅ Higgsfield (Best Deal): https://meticsmedia.com/higgsfield-PXS\n\nLearn how to use Higgsfield AI to create images, videos, and voiceovers, even if you’ve never used an AI generator before. After a quick tour of the dashboard, you’ll generate a product mockup using your own logo as a reference, turn it into a video with sound, and create a voiceover from a simple script. Then we bring it all together inside Cinema Studio, where you save a character, a location, and a product as reusable elements and combine them into a real"
@@ -347,15 +351,23 @@
   {
    "channel": "Dan Kieft",
    "title": "How To Start Making AI Videos in 2026 (Beginner Guide)",
-   "views": 159759,
+   "views": 162992,
    "date": "2026-10-22",
    "url": "https://youtu.be/iO9MiefIpVM",
    "desc": "How To Start Making AI Video in 2026 (Beginner Guide)\nCreat AI Video with Higgsfield 👉 http://dankieft.com/higgsfield\n\n\nAll of my prompts: https://start-making-ai-videos.vercel.app/\n\n\nIn this video I teach you everything you need to know in order to start creating AI videos on higgsfield. We will go over prompting, workflows, references ai images and ai videos. by the end of this you know exactly how to start making videos on higgsfield\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.instagram.com/dan.kieft/"
   },
   {
+   "channel": "Matt Wolfe",
+   "title": "Anthropic's Fable 5.2 is the World’s Best AI Model",
+   "views": 146731,
+   "date": "2026-11-09",
+   "url": "https://youtu.be/2TM8W66NI_8",
+   "desc": "Fable 5.2 from Anthropic just dropped today. Here's the details.\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\nResources From Today's Video:\nLaunch Post: https://www.anthropic.com/claude-fable-and-mythos-5-2\nMatt Berman Gears of War: https://x.com/MatthewBerman/status/2119871207206158459\nAlex’s Examples: https://x.com/The_Alex/status/2119884217261892083\nPeter Yang Animation: h"
+  },
+  {
    "channel": "Dan Kieft",
    "title": "Stop Wasting Credits on AI Video Generators Like Seedance 2.5",
-   "views": 144183,
+   "views": 145118,
    "date": "2026-10-13",
    "url": "https://youtu.be/KKfaBVM3Jdg",
    "desc": "Stop Wasting Credits on AI video generator like Seedance 2.5\nTry Higgsfield API here 👉 http://dankieft.com/higgsfield\n\nAI Model selecter👉 https://ai-video-model-selector.vercel.app/\n\nAI Video Generators can get expensive quickly. Especially if you're using models like Seedance 2.5 you can burn through a lot of credits fast. In this video I teach you 3 different methods on how you can save credits so that you can have better results without breaking the bank. \n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.instagram.com/dan.kieft/"
@@ -363,31 +375,15 @@
   {
    "channel": "Kevin Stratvert",
    "title": "How to Use Ollama (Free Local AI)",
-   "views": 134569,
+   "views": 145107,
    "date": "2026-11-05",
    "url": "https://youtu.be/btMoPRHz8eM",
    "desc": "Learn how to install and use Ollama on Windows to run AI models locally for free. In this beginner tutorial, we'll set up Ollama without an account, choose a local model, chat with AI, ask follow-up questions, and analyze a PDF on your computer. Then we'll connect Ollama to OpenCode and build a website with AI that creates files directly on your PC. Once you've downloaded a local model, you can use it offline. Cloud models are optional and work differently; this tutorial focuses on local AI.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Ollama: https://ollama.com/\n- Download Ollama for Windows: https://ollama.com/download/windows\n- OpenCode: https://opencode.ai/\n- Download OpenCode: https://opencode"
   },
   {
-   "channel": "Matt Wolfe",
-   "title": "AI News: The Only 6 Stories Worth Knowing This Week",
-   "views": 131827,
-   "date": "2026-10-30",
-   "url": "https://youtu.be/eDiQNFa-zYg",
-   "desc": "Check out Warp Factories here: http://warp.dev/mreflow\n\nThis week’s biggest AI news: OpenAI’s GPT-6.1 Terra brings faster computer use at a lower API cost, and Google’s Genie 4 brings real-time AI worlds to life. We’re also covering Gemini 4 Carbon, Kimi K3.1 Pro, and Anthropic’s IPO filing.\n\nSharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/matt"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "Anthropic's Fable 5.2 is the World’s Best AI Model",
-   "views": 131675,
-   "date": "2026-11-09",
-   "url": "https://youtu.be/2TM8W66NI_8",
-   "desc": "Fable 5.2 from Anthropic just dropped today. Here's the details.\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\nResources From Today's Video:\nLaunch Post: https://www.anthropic.com/claude-fable-and-mythos-5-2\nMatt Berman Gears of War: https://x.com/MatthewBerman/status/2119871207206158459\nAlex’s Examples: https://x.com/The_Alex/status/2119884217261892083\nPeter Yang Animation: h"
-  },
-  {
    "channel": "Futurepedia",
    "title": "Claude 2.0 Is Here. EVERYTHING in 15 Minutes",
-   "views": 130153,
+   "views": 133076,
    "date": "2026-11-03",
    "url": "https://youtu.be/tM0dwXhOv2o",
    "desc": "*Free Claude 2.0 Setup Kit:* https://clickhubspot.com/o2iu\n\nMore from Futurepedia:\n👉 Get your free AI plan on Futurepedia 2.0: https://clickhubspot.com/691m\n\nSummary:\nAnthropic completely rebuilt the Claude desktop app, and it's a big enough change that one of the engineers who worked on Claude Code called it basically a v2. I cover everything that's new and how to get the most out of it, from the new artifacts to the new Code layout, ways to keep Claude working while you're away, new ways to multitask and mods.\nI go through the new Home and Code tabs, the new artifact formats (docs, slides, design, dashboards and motion), the session rail and context breakdown, sections, side chats, split v"
@@ -395,7 +391,7 @@
   {
    "channel": "Matt Wolfe",
    "title": "AI News: New ChatGPT & Google Models (14 Updates Worth Knowing)",
-   "views": 124420,
+   "views": 126406,
    "date": "2026-11-06",
    "url": "https://youtu.be/IrAHINf0M6E",
    "desc": "See what Optimizely’s Virtual Teammates can automate for you at http://optimizely.com/mattwolfe\n\nThis week’s AI news covers OpenAI’s GPT-Image 2.6, Google Gemini Omni 1.2 Flash, and the latest AI tools for creating images, generating videos, and getting things done. Watch demos of ChatGPT’s animated GIF creation and image editing, Google’s free AI video generation, and Grokbot’s new phone call feature.\n\nWe also explore Pruna’s PH3 Image and Pika H3 Flex open-weight models, plus voice and video calls with Meta Muse. Then, catch up on Claude’s bank account integration, Kimi K3.1 Pro, GPT-6 Cyber, and more in the rapid-fire roundup.\n\nWhich update will you actually use? Let me know in the commen"
@@ -403,7 +399,7 @@
   {
    "channel": "Dan Kieft",
    "title": "I Tried Every AI Video Generator - Full Tierlist",
-   "views": 115426,
+   "views": 119714,
    "date": "2026-10-28",
    "url": "https://youtu.be/tnG3TIULBro",
    "desc": "Find out what the Best AI Video Generator is in 2026!\nTry out all models 👉 https://tolt.link/tierlist\n\nI tested the 6 most popular AI video generators of 2026 in an 8-round head-to-head battle to find out which one is ACTUALLY the best. Seedance 2.5, Wan 3.0, MiniMax H3 Max, Flux 3, Kling 4.0 Flash and Gemini Omni 1.1 Flash all got the exact same prompts and the same references — then I ranked every single round on a tier list, counted the points, and added up exactly how many credits each model burned.\n\nAll My prompts:\nhttps://best-video-generator.vercel.app/\n\nOpenArt Arena:\nhttps://openart.ai/arena\n\n0:00 Intro\n1:21 The contenders\n2:11 Rules & judging criteria\n2:45 Round 1: Prompt adherence"
@@ -411,7 +407,7 @@
   {
    "channel": "Kevin Stratvert",
    "title": "How to Use Grok Bot for Beginners",
-   "views": 107228,
+   "views": 111433,
    "date": "2026-10-27",
    "url": "https://youtu.be/G6AwOYT-Gbw",
    "desc": "This Grok Bot tutorial for beginners shows you how to build your first AI team, with bots that watch your inbox, keep your books, and answer support tickets on their own.\n💵 Get 50% off QuickBooks Online ➜ https://quickbooks.kevinstratvert.com/\n\nFirst, you'll see what Grok Bot costs, including the 7-day free trial and the cheapest paid plans, and where everything lives in the app.\n\nNext, you'll build your first bot, which connects to Gmail right from the chat and starts watching your inbox for new catering orders on its own.\n\nThen you'll teach it how you like things done, so it remembers your writing rules every time it drafts an email.\n\nAlong the way, you'll learn how to use Grok Bot the way"
@@ -419,15 +415,23 @@
   {
    "channel": "Jeff Su",
    "title": "I knew AI + Notion would be good, but this... wow.",
-   "views": 99289,
+   "views": 101316,
    "date": "2026-10-27",
    "url": "https://youtu.be/ofzHbyxkpVg",
    "desc": "Grab my free Cowork Toolkit: https://coworkacademy.ai/toolkit?utm_source=youtube&utm_medium=video&utm_campaign=v213\n\nIf your #AI keeps creating Notion pages you have to fix, it needs to learn how YOU work. In this video, I’ll show you how to teach Claude and #ChatGPT your database, template, and formatting preferences so they can handle the tedious work for you.\n\nYou’ll start with tasks and notes, save your preferences in a reusable Notion Conventions file, and see how the same process scales to entire projects with linked tasks and deliverables. It works with Claude, ChatGPT, or Gemini, so you can keep the Notion setup you already use.\n\n*TIMESTAMPS*\n00:00 Manage Your ENTIRE Notion Setup wit"
   },
   {
+   "channel": "Metics Media",
+   "title": "Higgsfield AI Tutorial for Beginners (2026) | Step-by-Step",
+   "views": 100195,
+   "date": "2026-10-30",
+   "url": "https://youtu.be/Mt91SiQotOU",
+   "desc": "This Higgsfield AI tutorial for beginners shows you how to use Higgsfield AI, from your first AI image to a finished 4K video, without wasting credits.\n✅ Higgsfield (Best Deal): https://meticsmedia.com/higgsfield-TBR\n\nIn this Higgsfield AI tutorial for beginners, you'll learn how to use Higgsfield AI from your very first AI image all the way to a finished 4K video. We start by choosing the right plan and taking a quick tour, so you know where everything is. Then you'll create and edit AI images, turn them into AI videos with models like Seedance and Kling, and use Elements to keep your characters and products consistent in every shot. You'll also see how to build a multi-shot video, when Cin"
+  },
+  {
    "channel": "Nate Herk | AI Automation",
    "title": "Every AI Business Ranked from Worst to Best",
-   "views": 96317,
+   "views": 99791,
    "date": "2026-11-05",
    "url": "https://youtu.be/O3g_m2i2IGU",
    "desc": "FREE First Client SOP: https://app.aiautomationsociety.ai/optin/first-client-SOP/?utm_source=youtube&utm_medium=organic&utm_content=ai-business-ranked-from-worst-to-best&sl=yt_ai-business-ranked-from-worst-to-best\nHow I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=ai-business-ranked-from-worst-to-best&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=ai-business-ranked-from-worst-to-best&hcategory=youtube-videos&utm_campaign=free-group\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www"
@@ -444,7 +448,7 @@
   {
    "channel": "Metics Media",
    "title": "Build Your First AI Agent in 20 Minutes (No Coding)",
-   "views": 719474,
+   "views": 734499,
    "date": "2026-10-19",
    "url": "https://youtu.be/rCkYVxOX-dI",
    "desc": "A chatbot waits for your next message. An AI agent keeps working while you sleep. In this beginner tutorial, you'll build your first AI agent with no coding. Hermes Agent runs on its own server and messages you on Telegram.\n✅ Hostinger VPS (Exclusive 10% Discount): https://meticsmedia.com/hermes-MEG\n✅ Nous Portal ($15 Off Your First Month): https://meticsmedia.com/nous-MEG\n\nThis step-by-step AI agent tutorial is made for complete beginners. First, you'll learn what makes an AI agent different from a chatbot like ChatGPT or Claude. Then you'll see why we use Hermes Agent. It's a free, open-source agent from Nous Research. You'll deploy it on a Hostinger VPS with a one-click template and log i"
@@ -452,7 +456,7 @@
   {
    "channel": "Dan Kieft",
    "title": "How I Make Realistic AI Videos with Seedance 2.5 - Full Guide",
-   "views": 700369,
+   "views": 707114,
    "date": "2026-10-16",
    "url": "https://youtu.be/2hJsvDSPWYM",
    "desc": "Learn How To Make Ultra Realistic AI Videos with Seedance 2.5\nCreate AI Videos here 👉 http://dankieft.com/higgsfield\n\nLink to all my prompts 👉 https://how-to-make-realistic-footage.vercel.app/\n\nIn this video I teach you how to create realistic ai videos using Seedance 2.5. We will go over various different techniques in which I explain which ai models you should use, how to prompt ai and how to generate cool looking videos. Make sure to watch the entire video to fully understand how my workflow works.\n\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.in"
@@ -488,7 +492,7 @@
   {
    "channel": "Jeff Su",
    "title": "Personal Agents, Clearly Explained",
-   "views": 330960,
+   "views": 333679,
    "date": "2026-10-13",
    "url": "https://youtu.be/HdI_aYzgJIg",
    "desc": "📧 Join my free AI Essentials newsletter - https://www.jeffsu.org/newsletter/?utm_source=youtube&utm_medium=video&utm_campaign=v212\n\nAlready using #ChatGPT, Claude, or Gemini and wondering whether personal AI agents are worth your time? A chatbot can summarize one health report, a do-it-yourself agent can compare it with your history, and personal agents like #Muse, Dots, and Grok Bot can offer help before you ask.\n\nThe difference is how much your AI remembers and how much work you need to do. Personal Agents are easier to start using, while your own #AI Workspace gives you more control and memory files you can move between tools. Your choice also depends on privacy and ecosystem lock-in.\n\n*T"
@@ -524,7 +528,7 @@
   {
    "channel": "Metics Media",
    "title": "Master Higgsfield AI in 20 Minutes (Beginner Tutorial)",
-   "views": 247098,
+   "views": 256107,
    "date": "2026-10-21",
    "url": "https://youtu.be/3W1VhiKLNp4",
    "desc": "This Higgsfield AI tutorial walks you through everything you need to know as a beginner. Go from generating your first image all the way to a finished video, step by step.\n✅ Higgsfield (Best Deal): https://meticsmedia.com/higgsfield-PXS\n\nLearn how to use Higgsfield AI to create images, videos, and voiceovers, even if you’ve never used an AI generator before. After a quick tour of the dashboard, you’ll generate a product mockup using your own logo as a reference, turn it into a video with sound, and create a voiceover from a simple script. Then we bring it all together inside Cinema Studio, where you save a character, a location, and a product as reusable elements and combine them into a real"
