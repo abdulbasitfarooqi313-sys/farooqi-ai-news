@@ -60,6 +60,7 @@ jobs:
           TS_BLOGGER_REFRESH_TOKEN: ${{ secrets.TS_BLOGGER_REFRESH_TOKEN }}
           TS_GEMINI_API_KEY: ${{ secrets.TS_GEMINI_API_KEY }}
           TS_DIR: ts
+          PUB_DISPATCH_TOKEN: ${{ github.token }}
           GEMINI_NEWS_KEY: ${{ secrets.GEMINI_NEWS_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           BOT_LOOP_MIN: "26"

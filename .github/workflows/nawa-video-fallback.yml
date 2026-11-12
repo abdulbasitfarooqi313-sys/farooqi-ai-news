@@ -1,0 +1,104 @@
+# 🎬 نوائے فاروقی — سیریز کے شارٹس (media) اور لمبی ویڈیو (long-video) کا متبادل۔ مالک کی ہدایت 12 نومبر 2026:
+# «پہلے اپنے منٹ؛ جیسے ہی منٹ ختم ہوں تو خود لامحدود والے پر»۔ (سبق والی ویڈیو کا متبادل: nawa-lesson.yml)
+# نجی ریپو میں آج کا رن «منٹ ختم ہونے سے شروع ہی نہ ہوا» ہو (جاب کے ≤1 قدم) تب ہی یہاں بنتی ہے۔
+# رن ہی نہ ملے تو انتظار (GitHub کا شیڈول دیر سے بھی چلتا ہے) — اگلی جانچ پر دوبارہ دیکھا جاتا ہے۔ ایک وقت میں ایک ہی بار۔
+# شیڈول: «* * *» = media، «* * 0-6» = long (روزانہ ہی، صرف پہچان کے لیے)۔
+name: Nawa video fallback
+run-name: "Nawa fallback ${{ github.event.inputs.job || (endsWith(github.event.schedule, '0-6') && 'long' || 'media') }}"
+on:
+  schedule:
+    - cron: "55 8 * * *"      # media (نجی: 08:20Z cron + 07:40Z Apps Script)
+    - cron: "45 9 * * *"
+    - cron: "20 18 * * *"     # media (نجی: 17:40Z)
+    - cron: "5 19 * * *"
+    - cron: "55 9 * * 0-6"    # long (نجی: 09:15Z)
+    - cron: "45 10 * * 0-6"
+  workflow_dispatch:
+    inputs:
+      job: { description: "media | long", required: true, default: "media" }
+      force: { description: "جانچ کے بغیر چلاؤ", type: boolean, default: false }
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: nawa-fallback-${{ github.event.inputs.job || (endsWith(github.event.schedule, '0-6') && 'long' || 'media') }}
+  cancel-in-progress: false
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    timeout-minutes: 160
+    env:
+      JOB: ${{ github.event.inputs.job || (endsWith(github.event.schedule, '0-6') && 'long' || 'media') }}
+    steps:
+      - name: Own minutes first?
+        id: need
+        env:
+          GH_TOKEN: ${{ secrets.NAWA_TOKEN }}
+          OWN: ${{ github.token }}
+          FORCE: ${{ github.event.inputs.force }}
+        run: |
+          if [ "$FORCE" = "true" ]; then echo "run=1" >> $GITHUB_OUTPUT; exit 0; fi
+          [ -n "$GH_TOKEN" ] || { echo "::warning::NAWA_TOKEN نہیں"; echo "run=0" >> $GITHUB_OUTPUT; exit 0; }
+          R=nawaefarooqi-bit/nawaefarooqi-agents
+          WF=$([ "$JOB" = long ] && echo long-video.yml || echo media.yml)
+          since=$(date -u -d '-150 min' +%FT%TZ)
+          # یہاں پچھلے ڈھائی گھنٹے میں بن چکی ہو تو دوبارہ نہیں
+          made=$(GH_TOKEN=$OWN gh api "repos/$GITHUB_REPOSITORY/actions/workflows/nawa-video-fallback.yml/runs?per_page=10&created=>=$since" \
+                 -q "[.workflow_runs[]|select(.display_title==\"Nawa fallback $JOB\" and .id!=$GITHUB_RUN_ID and .conclusion==\"success\")|.id]|.[]")
+          for id in $made; do
+            ok=$(GH_TOKEN=$OWN gh api "repos/$GITHUB_REPOSITORY/actions/runs/$id/jobs" -q '[.jobs[].steps[]?|select(.name=="Make" and .conclusion=="success")]|length')
+            [ "${ok:-0}" -gt 0 ] && { echo "یہاں پہلے ہی بن چکی ($id)"; echo "run=0" >> $GITHUB_OUTPUT; exit 0; }
+          done
+          runs=$(gh api "repos/$R/actions/workflows/$WF/runs?per_page=6&created=>=$since" -q '.workflow_runs')
+          n=$(echo "$runs" | jq 'length')
+          if [ "${n:-0}" = 0 ]; then echo "وہاں ابھی کوئی رن نہیں — انتظار"; echo "run=0" >> $GITHUB_OUTPUT; exit 0; fi
+          if echo "$runs" | jq -e 'any(.[]; .status!="completed" or .conclusion=="success")' >/dev/null; then
+            echo "وہاں اپنے منٹوں پر چل رہا/ہو گیا"; echo "run=0" >> $GITHUB_OUTPUT; exit 0; fi
+          id=$(echo "$runs" | jq -r '.[0].id')
+          steps=$(gh api "repos/$R/actions/runs/$id/jobs" -q '[.jobs[].steps[]?]|length')
+          if [ "${steps:-0}" -le 1 ]; then echo "جاب شروع ہی نہ ہوا (منٹ ختم) → یہاں"; echo "run=1" >> $GITHUB_OUTPUT
+          else echo "وہاں کام چل کر ناکام ہوا — واچ ڈاگ دیکھے گا، دوہرا نہیں"; echo "run=0" >> $GITHUB_OUTPUT; fi
+      - name: Nawa code (private)
+        if: steps.need.outputs.run == '1'
+        env: { NAWA_TOKEN: "${{ secrets.NAWA_TOKEN }}" }
+        run: git clone -q "https://x-access-token:${NAWA_TOKEN}@github.com/nawaefarooqi-bit/nawaefarooqi-agents" nawa-repo
+      - uses: actions/setup-python@v5
+        if: steps.need.outputs.run == '1'
+        with: { python-version: "3.12" }
+      - if: steps.need.outputs.run == '1'
+        run: cd nawa-repo && pip install -q -r requirements.txt && sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+      - name: Make
+        if: steps.need.outputs.run == '1'
+        working-directory: nawa-repo
+        env:
+          GEMINI_API_KEY: ${{ secrets.NAWA_GEMINI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.NAWA_TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.NAWA_TELEGRAM_CHAT_ID }}
+          GDRIVE_SERVICE_ACCOUNT_JSON: ${{ secrets.NAWA_GDRIVE_SERVICE_ACCOUNT_JSON }}
+          BLOGGER_CLIENT_ID: ${{ secrets.NAWA_BLOGGER_CLIENT_ID }}
+          BLOGGER_CLIENT_SECRET: ${{ secrets.NAWA_BLOGGER_CLIENT_SECRET }}
+          BLOGGER_REFRESH_TOKEN: ${{ secrets.NAWA_BLOGGER_REFRESH_TOKEN }}
+          BLOGGER_BLOG_ID: ${{ secrets.NAWA_BLOGGER_BLOG_ID }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.NAWA_YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.NAWA_YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.NAWA_YOUTUBE_CLIENT_SECRET }}
+        run: |
+          if [ "$JOB" = long ]; then python -u -m nawa.long_video; else
+            python -u -m nawa.media; python -u -m nawa.yt_queue || echo "::warning::yt_queue ناکام"; fi
+      - name: Save (private repo)
+        if: always() && steps.need.outputs.run == '1' && hashFiles('nawa-repo/.git/HEAD') != ''
+        working-directory: nawa-repo
+        run: |
+          git config user.name "nawa-media"; git config user.email "nawa-bot@users.noreply.github.com"
+          git add archive state || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "میڈیا ($JOB) — لامحدود رنر"
+          for i in 1 2 3; do git pull -q --rebase --autostash -X theirs && git push -q && exit 0; sleep 10; done; echo "push ناکام"; exit 1
+      - name: Alert on failure
+        if: failure()
+        env:
+          TOKEN: ${{ secrets.NAWA_TELEGRAM_BOT_TOKEN }}
+          CHAT: ${{ secrets.NAWA_TELEGRAM_CHAT_ID }}
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot$TOKEN/sendMessage" --data-urlencode "chat_id=$CHAT" \
+            --data-urlencode "text=⚠️ نوائے فاروقی: ویڈیو کا متبادل ($JOB، لامحدود رنر) ناکام۔ یہ لنک Claude کو دکھائیں: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" >/dev/null || true

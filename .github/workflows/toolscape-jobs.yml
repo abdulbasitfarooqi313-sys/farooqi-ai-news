@@ -1,0 +1,86 @@
+# 🧰 ٹول اسکیپ کے اضافی کام — لامحدود منٹوں پر (مالک کی ہدایت 12 نومبر 2026: تینوں چینل کے اضافی کام یہاں)۔
+#   approve  : ✅/❌ بٹن + نئی پبلک ویڈیوز پلے لسٹ میں (ہر 6 گھنٹے احتیاطاً؛ فوری راستہ: Bot ورک فلو کا toolscape_peek)
+#   replace  : «بدلو N» / منظور شدہ وائرل خاکے سے کیلنڈر کا موضوع بدلنا (جیمنائی سرچ 20+ منٹ)
+#   build    : پورا کیلنڈر (~8 ہفتے) + PDF
+# کوڈ نجی ریپو سے (TS_TOKEN)، راز TS_ سابقے سے، ریکارڈ واپس نجی ریپو میں۔ ویڈیو بنانا ٹول اسکیپ کے اپنے منٹوں پر ہی رہتا ہے۔
+name: Toolscape jobs
+run-name: "Toolscape ${{ github.event.inputs.job || 'approve' }}"
+on:
+  schedule:
+    - cron: "7 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      job: { description: "approve | replace | build", required: true, default: "approve" }
+      weeks: { description: "build: کتنے ہفتے", required: false, default: "8" }
+permissions:
+  contents: read
+  actions: write
+concurrency:
+  group: toolscape-${{ github.event.inputs.job || 'approve' }}
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    env:
+      JOB: ${{ github.event.inputs.job || 'approve' }}
+      GEMINI_API_KEY: ${{ secrets.TS_GEMINI_API_KEY }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TS_TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TS_TELEGRAM_CHAT_ID }}
+      YOUTUBE_CLIENT_ID: ${{ secrets.TS_YOUTUBE_CLIENT_ID }}
+      YOUTUBE_CLIENT_SECRET: ${{ secrets.TS_YOUTUBE_CLIENT_SECRET }}
+      YOUTUBE_REFRESH_TOKEN: ${{ secrets.TS_YOUTUBE_REFRESH_TOKEN }}
+      BLOGGER_REFRESH_TOKEN: ${{ secrets.TS_BLOGGER_REFRESH_TOKEN }}
+    steps:
+      - name: Toolscape code (private)
+        env: { TS_TOKEN: "${{ secrets.TS_TOKEN }}" }
+        run: |
+          [ -n "$TS_TOKEN" ] || { echo "::error::TS_TOKEN نہیں"; exit 1; }
+          git clone -q "https://x-access-token:${TS_TOKEN}@github.com/hellotoolscape/ai-tube-factory" ts
+          cd ts && git config user.name "factory-bot" && git config user.email "factory-bot@users.noreply.github.com"
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Install
+        working-directory: ts
+        run: |
+          if [ "$JOB" = approve ]; then pip install -q requests; else
+            sudo apt-get install -y -qq fonts-dejavu-core >/dev/null; pip install -q -r requirements.txt; fi
+      - name: Work
+        working-directory: ts
+        env:
+          WEEKS: ${{ github.event.inputs.weeks }}
+        run: |
+          case "$JOB" in
+          approve)
+            python -m pipeline.approve poll || echo "::warning::buttons failed"
+            python -m pipeline.playlists || echo "::warning::playlists failed"
+            if python -c "import json,sys; sys.exit(0 if json.load(open('state/calendar.json')).get('replace') else 1)" 2>/dev/null; then
+              echo "replace=1" >> "$GITHUB_ENV"; fi ;;
+          replace)
+            python -u - <<'PY'
+          from pipeline import topic_calendar as TC
+          c = TC.load(); todo = c.get("replace", [])
+          done = []
+          for n in todo:
+              g = TC.replace(int(n))
+              c = TC.load(); c["replace"] = [x for x in c.get("replace", []) if x != n]; TC.save(c)
+              done.append(f"#{n}: {g['title']}" if g else f"#{n}: نہیں بدلا جا سکا")
+          if done:
+              TC.send("🔄 بدلے گئے موضوعات:\n" + "\n".join(done) + "\n↩️ غلط ہو تو لکھیں: واپس N")
+          PY
+            ;;
+          build) python -u -m pipeline.topic_calendar build ${WEEKS:-8} ;;
+          *) echo "::error::نامعلوم کام: $JOB"; exit 1 ;;
+          esac
+      - name: Save (private repo)
+        if: always()
+        working-directory: ts
+        run: |
+          for f in state/youtube.json state/blogger.json state/calendar.json; do [ -e "$f" ] && git add "$f"; done; true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Toolscape: $JOB (unlimited runner)"
+          for i in 1 2 3; do git pull -q --rebase -X theirs && git push -q && exit 0; sleep 5; done; echo "push failed"; exit 1
+      - name: Replace topics (long Gemini search) → separate run
+        if: env.replace == '1'
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: gh workflow run toolscape-jobs.yml -R "$GITHUB_REPOSITORY" -f job=replace || true
