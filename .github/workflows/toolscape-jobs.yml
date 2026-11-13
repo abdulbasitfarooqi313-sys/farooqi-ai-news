@@ -82,7 +82,7 @@ jobs:
           for f in state/youtube.json state/blogger.json state/calendar.json; do [ -e "$f" ] && git add "$f"; done; true
           git diff --cached --quiet && exit 0
           git commit -q -m "Toolscape: $JOB (unlimited runner)"
-          for i in 1 2 3; do git pull -q --rebase -X theirs && git push -q && exit 0; sleep 5; done; echo "push failed"; exit 1
+          for i in 1 2 3; do git pull -q --rebase --autostash -X theirs && git push -q && exit 0; sleep 5; done; echo "push failed"; exit 1
       - name: Replace topics (long Gemini search) → separate run
         if: env.replace == '1'
         env: { GH_TOKEN: "${{ github.token }}" }

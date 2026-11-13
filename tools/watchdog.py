@@ -72,8 +72,10 @@ def ts_made_today() -> bool:
     """ٹول اسکیپ کی آج کی ویڈیو پہلے ہی اپلوڈ ہو چکی؟ (تب ناکامی اپلوڈ کے بعد کی تھی — دوبارہ بنانا دوہرا ہوگا)"""
     try:
         y = json.loads(api(f"repos/{TS}/contents/state/youtube.json", TOK["TS"], raw=True))
-        today = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d")
-        return any(str(k).startswith(today) for k in y.get("videos", {}))
+        now = dt.datetime.now(dt.timezone.utc)
+        days = {(now - dt.timedelta(days=d)).strftime("%Y-%m-%d") for d in (0, 1)}
+        # ریکارڈ کی چابی یوٹیوب ID ہوتی ہے؛ تاریخ «vid» میں ہے (13 نومبر کی اصلاح — پہلے یہ جانچ کبھی میچ نہیں کرتی تھی)
+        return any(str(v.get("vid", ""))[:10] in days for v in y.get("videos", {}).values() if isinstance(v, dict))
     except Exception as e:
         print("ts state:", type(e).__name__)
         return True                                  # معلوم نہ ہو سکے تو احتیاط: دوبارہ نہ بناؤ

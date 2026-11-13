@@ -80,7 +80,7 @@ jobs:
           git config user.name "factory-bot"; git config user.email "factory-bot@users.noreply.github.com"
           git add queue history.json data; git add -A next_topic.json state/calendar.json 2>/dev/null || true
           git commit -q -m "New video (public runner): $ID" || true
-          for i in 1 2 3; do git pull -q --rebase -X theirs && git push -q && break; sleep 5; done
+          for i in 1 2 3; do git pull -q --rebase --autostash -X theirs && git push -q && break; sleep 5; done
           DIR="output/$ID"; TITLE=$(head -1 "$DIR/UPLOAD_INFO.md" | sed 's/^# //')
           gh release create "$ID" -R "$R" --title "$TITLE" --notes-file "$DIR/UPLOAD_INFO.md" \
             "$DIR"/video.mp4 "$DIR"/short_*.mp4 "$DIR"/thumbnail.jpg "$DIR"/captions.srt "$DIR"/script.md || true
@@ -89,7 +89,7 @@ jobs:
           git add state/youtube.json state/blogger.json 2>/dev/null || true
           git diff --cached --quiet && exit 0
           git commit -q -m "YouTube: uploaded $ID (private, public runner)"
-          for i in 1 2 3; do git pull -q --rebase -X theirs && git push -q && exit 0; sleep 5; done
+          for i in 1 2 3; do git pull -q --rebase --autostash -X theirs && git push -q && exit 0; sleep 5; done
       - name: Alert on failure
         if: failure() && github.event.inputs.dry != 'true'
         env:
