@@ -1020,7 +1020,32 @@
    "yt_status": "scheduled"
   },
   "2026-11-13-p": {
-   "status": "approved"
+   "status": "approved",
+   "vmid": 744,
+   "mids": [
+    743,
+    744,
+    745,
+    746,
+    747,
+    748,
+    749,
+    750,
+    751,
+    752,
+    753,
+    754,
+    755,
+    756,
+    757,
+    758,
+    759,
+    760
+   ],
+   "kind": "podcast",
+   "voice": "gemini",
+   "yt": "_Am6LDd4vKY",
+   "yt_at": "2026-11-13T19:00:00+03:00"
   },
   "2026-11-13-w": {
    "status": "approved",
