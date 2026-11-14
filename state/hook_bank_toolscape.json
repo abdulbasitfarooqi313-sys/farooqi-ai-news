@@ -9,7 +9,7 @@
  {
   "channel": "Metics Media",
   "title": "Build Your First AI Agent in 20 Minutes (No Coding)",
-  "views": 748917,
+  "views": 760268,
   "date": "2026-10-19",
   "url": "https://youtu.be/rCkYVxOX-dI",
   "desc": "A chatbot waits for your next message. An AI agent keeps working while you sleep. In this beginner tutorial, you'll build your first AI agent with no coding. Hermes Agent runs on its own server and messages you on Telegram.\n✅ Hostinger VPS (Exclusive 10% Discount): https://meticsmedia.com/hermes-MEG\n✅ Nous Portal ($15 Off Your First Month): https://meticsmedia.com/nous-MEG\n\nThis step-by-step AI agent tutorial is made for complete beginners. First, you'll learn what makes an AI agent different from a chatbot like ChatGPT or Claude. Then you'll see why we use Hermes Agent. It's a free, open-source agent from Nous Research. You'll deploy it on a Hostinger VPS with a one-click template and log i"
@@ -17,7 +17,7 @@
  {
   "channel": "Dan Kieft",
   "title": "How I Make Realistic AI Videos with Seedance 2.5 - Full Guide",
-  "views": 713688,
+  "views": 718570,
   "date": "2026-10-16",
   "url": "https://youtu.be/2hJsvDSPWYM",
   "desc": "Learn How To Make Ultra Realistic AI Videos with Seedance 2.5\nCreate AI Videos here 👉 http://dankieft.com/higgsfield\n\nLink to all my prompts 👉 https://how-to-make-realistic-footage.vercel.app/\n\nIn this video I teach you how to create realistic ai videos using Seedance 2.5. We will go over various different techniques in which I explain which ai models you should use, how to prompt ai and how to generate cool looking videos. Make sure to watch the entire video to fully understand how my workflow works.\n\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.in"
@@ -89,7 +89,7 @@
  {
   "channel": "Metics Media",
   "title": "Master Higgsfield AI in 20 Minutes (Beginner Tutorial)",
-  "views": 264824,
+  "views": 271437,
   "date": "2026-10-21",
   "url": "https://youtu.be/3W1VhiKLNp4",
   "desc": "This Higgsfield AI tutorial walks you through everything you need to know as a beginner. Go from generating your first image all the way to a finished video, step by step.\n✅ Higgsfield (Best Deal): https://meticsmedia.com/higgsfield-PXS\n\nLearn how to use Higgsfield AI to create images, videos, and voiceovers, even if you’ve never used an AI generator before. After a quick tour of the dashboard, you’ll generate a product mockup using your own logo as a reference, turn it into a video with sound, and create a voiceover from a simple script. Then we bring it all together inside Cinema Studio, where you save a character, a location, and a product as reusable elements and combine them into a real"
@@ -151,6 +151,14 @@
   "url": "https://youtu.be/TVRCcMlvR10"
  },
  {
+  "channel": "Dan Kieft",
+  "title": "How To Start Making AI Videos in 2026 (Beginner Guide)",
+  "views": 169080,
+  "date": "2026-10-22",
+  "url": "https://youtu.be/iO9MiefIpVM",
+  "desc": "How To Start Making AI Video in 2026 (Beginner Guide)\nCreat AI Video with Higgsfield 👉 http://dankieft.com/higgsfield\n\n\nAll of my prompts: https://start-making-ai-videos.vercel.app/\n\n\nIn this video I teach you everything you need to know in order to start creating AI videos on higgsfield. We will go over prompting, workflows, references ai images and ai videos. by the end of this you know exactly how to start making videos on higgsfield\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.instagram.com/dan.kieft/"
+ },
+ {
   "channel": "Matt Wolfe",
   "title": "11 AI Breakthroughs You Didn’t Know Existed",
   "views": 167021,
@@ -158,12 +166,12 @@
   "url": "https://youtu.be/umGZrkyTRtw"
  },
  {
-  "channel": "Dan Kieft",
-  "title": "How To Start Making AI Videos in 2026 (Beginner Guide)",
-  "views": 166391,
-  "date": "2026-10-22",
-  "url": "https://youtu.be/iO9MiefIpVM",
-  "desc": "How To Start Making AI Video in 2026 (Beginner Guide)\nCreat AI Video with Higgsfield 👉 http://dankieft.com/higgsfield\n\n\nAll of my prompts: https://start-making-ai-videos.vercel.app/\n\n\nIn this video I teach you everything you need to know in order to start creating AI videos on higgsfield. We will go over prompting, workflows, references ai images and ai videos. by the end of this you know exactly how to start making videos on higgsfield\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.instagram.com/dan.kieft/"
+  "channel": "Kevin Stratvert",
+  "title": "How to Use Ollama (Free Local AI)",
+  "views": 163814,
+  "date": "2026-11-05",
+  "url": "https://youtu.be/btMoPRHz8eM",
+  "desc": "Learn how to install and use Ollama on Windows to run AI models locally for free. In this beginner tutorial, we'll set up Ollama without an account, choose a local model, chat with AI, ask follow-up questions, and analyze a PDF on your computer. Then we'll connect Ollama to OpenCode and build a website with AI that creates files directly on your PC. Once you've downloaded a local model, you can use it offline. Cloud models are optional and work differently; this tutorial focuses on local AI.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Ollama: https://ollama.com/\n- Download Ollama for Windows: https://ollama.com/download/windows\n- OpenCode: https://opencode.ai/\n- Download OpenCode: https://opencode"
  },
  {
   "channel": "Matt Wolfe",
@@ -187,17 +195,9 @@
   "url": "https://youtu.be/dyrNQV0F3Zs"
  },
  {
-  "channel": "Kevin Stratvert",
-  "title": "How to Use Ollama (Free Local AI)",
-  "views": 154764,
-  "date": "2026-11-05",
-  "url": "https://youtu.be/btMoPRHz8eM",
-  "desc": "Learn how to install and use Ollama on Windows to run AI models locally for free. In this beginner tutorial, we'll set up Ollama without an account, choose a local model, chat with AI, ask follow-up questions, and analyze a PDF on your computer. Then we'll connect Ollama to OpenCode and build a website with AI that creates files directly on your PC. Once you've downloaded a local model, you can use it offline. Cloud models are optional and work differently; this tutorial focuses on local AI.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Ollama: https://ollama.com/\n- Download Ollama for Windows: https://ollama.com/download/windows\n- OpenCode: https://opencode.ai/\n- Download OpenCode: https://opencode"
- },
- {
   "channel": "Matt Wolfe",
   "title": "Anthropic's Fable 5.2 is the World’s Best AI Model",
-  "views": 153943,
+  "views": 157367,
   "date": "2026-11-09",
   "url": "https://youtu.be/2TM8W66NI_8",
   "desc": "Fable 5.2 from Anthropic just dropped today. Here's the details.\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\nResources From Today's Video:\nLaunch Post: https://www.anthropic.com/claude-fable-and-mythos-5-2\nMatt Berman Gears of War: https://x.com/MatthewBerman/status/2119871207206158459\nAlex’s Examples: https://x.com/The_Alex/status/2119884217261892083\nPeter Yang Animation: h"
@@ -227,7 +227,7 @@
  {
   "channel": "Futurepedia",
   "title": "Claude 2.0 Is Here. EVERYTHING in 15 Minutes",
-  "views": 135594,
+  "views": 137623,
   "date": "2026-11-03",
   "url": "https://youtu.be/tM0dwXhOv2o",
   "desc": "*Free Claude 2.0 Setup Kit:* https://clickhubspot.com/o2iu\n\nMore from Futurepedia:\n👉 Get your free AI plan on Futurepedia 2.0: https://clickhubspot.com/691m\n\nSummary:\nAnthropic completely rebuilt the Claude desktop app, and it's a big enough change that one of the engineers who worked on Claude Code called it basically a v2. I cover everything that's new and how to get the most out of it, from the new artifacts to the new Code layout, ways to keep Claude working while you're away, new ways to multitask and mods.\nI go through the new Home and Code tabs, the new artifact formats (docs, slides, design, dashboards and motion), the session rail and context breakdown, sections, side chats, split v"
@@ -250,7 +250,7 @@
  {
   "channel": "Matt Wolfe",
   "title": "AI News: New ChatGPT & Google Models (14 Updates Worth Knowing)",
-  "views": 128305,
+  "views": 129485,
   "date": "2026-11-06",
   "url": "https://youtu.be/IrAHINf0M6E",
   "desc": "See what Optimizely’s Virtual Teammates can automate for you at http://optimizely.com/mattwolfe\n\nThis week’s AI news covers OpenAI’s GPT-Image 2.6, Google Gemini Omni 1.2 Flash, and the latest AI tools for creating images, generating videos, and getting things done. Watch demos of ChatGPT’s animated GIF creation and image editing, Google’s free AI video generation, and Grokbot’s new phone call feature.\n\nWe also explore Pruna’s PH3 Image and Pika H3 Flex open-weight models, plus voice and video calls with Meta Muse. Then, catch up on Claude’s bank account integration, Kimi K3.1 Pro, GPT-6 Cyber, and more in the rapid-fire roundup.\n\nWhich update will you actually use? Let me know in the commen"
@@ -258,7 +258,7 @@
  {
   "channel": "Dan Kieft",
   "title": "I Tried Every AI Video Generator - Full Tierlist",
-  "views": 123844,
+  "views": 126621,
   "date": "2026-10-28",
   "url": "https://youtu.be/tnG3TIULBro",
   "desc": "Find out what the Best AI Video Generator is in 2026!\nTry out all models 👉 https://tolt.link/tierlist\n\nI tested the 6 most popular AI video generators of 2026 in an 8-round head-to-head battle to find out which one is ACTUALLY the best. Seedance 2.5, Wan 3.0, MiniMax H3 Max, Flux 3, Kling 4.0 Flash and Gemini Omni 1.1 Flash all got the exact same prompts and the same references — then I ranked every single round on a tier list, counted the points, and added up exactly how many credits each model burned.\n\nAll My prompts:\nhttps://best-video-generator.vercel.app/\n\nOpenArt Arena:\nhttps://openart.ai/arena\n\n0:00 Intro\n1:21 The contenders\n2:11 Rules & judging criteria\n2:45 Round 1: Prompt adherence"
@@ -266,42 +266,66 @@
  {
   "channel": "Kevin Stratvert",
   "title": "How to Use Grok Bot for Beginners",
-  "views": 115454,
+  "views": 118658,
   "date": "2026-10-27",
   "url": "https://youtu.be/G6AwOYT-Gbw",
   "desc": "This Grok Bot tutorial for beginners shows you how to build your first AI team, with bots that watch your inbox, keep your books, and answer support tickets on their own.\n💵 Get 50% off QuickBooks Online ➜ https://quickbooks.kevinstratvert.com/\n\nFirst, you'll see what Grok Bot costs, including the 7-day free trial and the cheapest paid plans, and where everything lives in the app.\n\nNext, you'll build your first bot, which connects to Gmail right from the chat and starts watching your inbox for new catering orders on its own.\n\nThen you'll teach it how you like things done, so it remembers your writing rules every time it drafts an email.\n\nAlong the way, you'll learn how to use Grok Bot the way"
  },
  {
+  "channel": "Futurepedia",
+  "title": "Claude Makes 3D Animations Easy Now",
+  "views": 114147,
+  "date": "2026-11-12",
+  "url": "https://youtu.be/ZxaMmG71g8c",
+  "desc": "*Build 3D Animated Explainer Videos with Claude (37 Ready-Made Styles):* https://clickhubspot.com/777a\n\nMore from Futurepedia:\n👉 Get your free AI plan on Futurepedia 2.0: https://clickhubspot.com/691m\n\nSummary:\nClaude can now make stunning 3D animations in almost any style, and it's surprisingly easy. In this video I break down how it works using Three.js (and how it differs from the frame-by-frame JavaScript method from my last motion graphics video), then walk through making one from a single prompt. I also show off my free 3D Style Atlas: 37 ready-made styles you can copy and paste into Claude, with built-in sound effects and a voiceover mode that syncs the animation to your narration.\n\nC"
+ },
+ {
   "channel": "Metics Media",
   "title": "Higgsfield AI Tutorial for Beginners (2026) | Step-by-Step",
-  "views": 104393,
+  "views": 107254,
   "date": "2026-10-30",
   "url": "https://youtu.be/Mt91SiQotOU",
   "desc": "This Higgsfield AI tutorial for beginners shows you how to use Higgsfield AI, from your first AI image to a finished 4K video, without wasting credits.\n✅ Higgsfield (Best Deal): https://meticsmedia.com/higgsfield-TBR\n\nIn this Higgsfield AI tutorial for beginners, you'll learn how to use Higgsfield AI from your very first AI image all the way to a finished 4K video. We start by choosing the right plan and taking a quick tour, so you know where everything is. Then you'll create and edit AI images, turn them into AI videos with models like Seedance and Kling, and use Elements to keep your characters and products consistent in every shot. You'll also see how to build a multi-shot video, when Cin"
  },
  {
+  "channel": "Dan Kieft",
+  "title": "How I Make Cinematic AI Ads with Fable 5.2 & Seedance 2.5",
+  "views": 106990,
+  "date": "2026-11-12",
+  "url": "https://youtu.be/jeMl0OSwDss",
+  "desc": "Create your own Cinematic AI ads with Fable 5.2 and Seedance 2.5\nHiggsfield Black Friday Sale is live now 👉 👉 http://dankieft.com/higgsfield\n\nIn this video I teach you how you can create your own AI ads. We'll go over all the different steps fro prompting, to making your assets and generating the video so by the end of it you know exactly how.\n\nPrompts & Skills I used:\nhttps://realism-site.vercel.app/\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.instagram.com/dan.kieft/"
+ },
+ {
   "channel": "Jeff Su",
   "title": "I knew AI + Notion would be good, but this... wow.",
-  "views": 103130,
+  "views": 104617,
   "date": "2026-10-27",
   "url": "https://youtu.be/ofzHbyxkpVg",
   "desc": "Grab my free Cowork Toolkit: https://coworkacademy.ai/toolkit?utm_source=youtube&utm_medium=video&utm_campaign=v213\n\nIf your #AI keeps creating Notion pages you have to fix, it needs to learn how YOU work. In this video, I’ll show you how to teach Claude and #ChatGPT your database, template, and formatting preferences so they can handle the tedious work for you.\n\nYou’ll start with tasks and notes, save your preferences in a reusable Notion Conventions file, and see how the same process scales to entire projects with linked tasks and deliverables. It works with Claude, ChatGPT, or Gemini, so you can keep the Notion setup you already use.\n\n*TIMESTAMPS*\n00:00 Manage Your ENTIRE Notion Setup wit"
  },
  {
+  "channel": "Matt Wolfe",
+  "title": "How I Get Claude To Edit My Videos (Step-By-Step)",
+  "views": 103713,
+  "date": "2026-11-04",
+  "url": "https://youtu.be/ep4psgAFOqc",
+  "desc": "Try vidIQ for only $1 https://vidiq.com/mattwolfe/\n\nLearn how to edit videos with Claude AI, work with Premiere Pro, and turn your footage into short-form content.\n\nIn this guide, I walk through how to use Claude to help with video editing, from working with your existing footage to creating clips for Shorts and Reels. We’ll explore how Claude fits into an Adobe Premiere Pro workflow and where AI can help with the editing process.\n\nThe focus is on making useful content from your own videos, with creative control over the results. Less repetitive work, without filling your feed with AI slop.\n\nSharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://fu"
+ },
+ {
   "channel": "Nate Herk | AI Automation",
   "title": "Every AI Business Ranked from Worst to Best",
-  "views": 102192,
+  "views": 103294,
   "date": "2026-11-05",
   "url": "https://youtu.be/O3g_m2i2IGU",
   "desc": "FREE First Client SOP: https://app.aiautomationsociety.ai/optin/first-client-SOP/?utm_source=youtube&utm_medium=organic&utm_content=ai-business-ranked-from-worst-to-best&sl=yt_ai-business-ranked-from-worst-to-best\nHow I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=ai-business-ranked-from-worst-to-best&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=ai-business-ranked-from-worst-to-best&hcategory=youtube-videos&utm_campaign=free-group\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www"
  },
  {
-  "channel": "Matt Wolfe",
-  "title": "How I Get Claude To Edit My Videos (Step-By-Step)",
-  "views": 101821,
-  "date": "2026-11-04",
-  "url": "https://youtu.be/ep4psgAFOqc",
-  "desc": "Try vidIQ for only $1 https://vidiq.com/mattwolfe/\n\nLearn how to edit videos with Claude AI, work with Premiere Pro, and turn your footage into short-form content.\n\nIn this guide, I walk through how to use Claude to help with video editing, from working with your existing footage to creating clips for Shorts and Reels. We’ll explore how Claude fits into an Adobe Premiere Pro workflow and where AI can help with the editing process.\n\nThe focus is on making useful content from your own videos, with creative control over the results. Less repetitive work, without filling your feed with AI slop.\n\nSharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://fu"
+  "channel": "Jeff Su",
+  "title": "6 Insanely Practical AI Tips (in 18 minutes)",
+  "views": 101800,
+  "date": "2026-11-10",
+  "url": "https://youtu.be/9Hwanevuhd8",
+  "desc": "✅ Get HubSpot’s free guide, Use Claude like an AI Expert - https://clickhubspot.com/89c42f\n\nTired of AI tips that go out of date as soon as a new model comes out? These six AI productivity tips help you waste fewer tokens, do less manual work, and teach #ChatGPT, Claude, and Gemini how you like to work.\n\nI’ll show you how to turn a dense PDF into a reusable reference, save prompts you keep retyping, and catch misunderstandings by checking the AI’s plan first. Plus, you’ll see how simple tool rulebooks save you from correcting the same emails and calendar events every time.\n\n*TIMESTAMPS*\n00:00 Top 6 EVERYDAY AI Tips You'll Actually Use\n00:28 Tip #1: The Markdown Shortcut\n03:50 Tip #2: The Fol"
  },
  {
   "channel": "Nate Herk | AI Automation",
@@ -318,19 +342,19 @@
   "url": "https://youtu.be/xBSLmwVTsRc"
  },
  {
+  "channel": "Kevin Stratvert",
+  "title": "How to Use Claude Code for FREE with Ollama",
+  "views": 98435,
+  "date": "2026-11-10",
+  "url": "https://youtu.be/NkkAwdm2k7s",
+  "desc": "Learn how to use Claude Code for free with Ollama and a local AI model running on your own computer. In this step-by-step Windows tutorial, we'll install both tools, adjust Ollama's context length, connect Claude Code to Gemma 4 12B, and build a playable Breakout game. Then we'll improve the game with a follow-up prompt and learn how to return to the project later.\n\nThis setup uses a local model in the Claude Code tool, with no AI subscription or per-token API charges for local inference. It does not give you free access to Anthropic's Opus or Sonnet models. Speed and results depend on your hardware and the model you choose.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Download Ollama: https://olla"
+ },
+ {
   "channel": "Skill Leap AI",
   "title": "Ultimate Guide to ChatGPT in 2026 (Updated for ChatGPT 6 Astra)",
   "views": 96059,
   "date": "2026-09-23",
   "url": "https://youtu.be/F1PEICLlEBk"
- },
- {
-  "channel": "Jeff Su",
-  "title": "6 Insanely Practical AI Tips (in 18 minutes)",
-  "views": 93135,
-  "date": "2026-11-10",
-  "url": "https://youtu.be/9Hwanevuhd8",
-  "desc": "✅ Get HubSpot’s free guide, Use Claude like an AI Expert - https://clickhubspot.com/89c42f\n\nTired of AI tips that go out of date as soon as a new model comes out? These six AI productivity tips help you waste fewer tokens, do less manual work, and teach #ChatGPT, Claude, and Gemini how you like to work.\n\nI’ll show you how to turn a dense PDF into a reusable reference, save prompts you keep retyping, and catch misunderstandings by checking the AI’s plan first. Plus, you’ll see how simple tool rulebooks save you from correcting the same emails and calendar events every time.\n\n*TIMESTAMPS*\n00:00 Top 6 EVERYDAY AI Tips You'll Actually Use\n00:28 Tip #1: The Markdown Shortcut\n03:50 Tip #2: The Fol"
  },
  {
   "channel": "Matt Wolfe",
@@ -342,10 +366,18 @@
  {
   "channel": "Kevin Stratvert",
   "title": "ChatGPT Dots Tutorial for Beginners",
-  "views": 87343,
+  "views": 88935,
   "date": "2026-10-20",
   "url": "https://youtu.be/-I9Csc3khis",
   "desc": "Learn how to use ChatGPT dots to work toward ongoing goals, connect apps, and keep making progress even when your computer is off. In this step-by-step tutorial, I set up a YouTube coach, connect vidIQ, create a growth plan, collaborate using Spaces and Pages, give feedback by voice, and check the next day's results.\n\nHost: Kevin Stratvert\nSponsored by @OpenAI\n\n📚 RESOURCES\n- Download ChatGPT: https://www.chatgpt.com/download/\n- Features and availability may vary by plan and account.\n\n⌚ TIMESTAMPS\n0:00 - Introduction\n0:35 - Get started and create a dot\n1:32 - Customize your dot\n1:55 - Dots vs. chats and scheduled tasks\n2:30 - Connect apps and vidIQ\n3:21 - Give your dot a goal\n4:10 - Review th"
+ },
+ {
+  "channel": "Matt Wolfe",
+  "title": "How To Build An AI Operating System For Your Life",
+  "views": 88730,
+  "date": "2026-11-11",
+  "url": "https://youtu.be/pvl3z_GyU2Y",
+  "desc": "What if you could use AI agents to manage your emails, organize your schedule, create content, and help run your entire business?\n\nI sat down with Peter Yang to explore the personal AI system he uses to run his one-person business. He walks me through his AI chief of staff, a personal advisor that keeps him focused on his goals, and the automated workflows he uses for podcast research, video editing, content creation, and everyday tasks.\n\nWe dive into how he connects ChatGPT, Claude Code, and GroqBot using reusable AI skills, how he keeps those skills improving over time, and how you can build your own versions of these workflows. I also walk through setting up a few of these automations mys"
  },
  {
   "channel": "Skill Leap AI",
@@ -363,27 +395,19 @@
  },
  {
   "channel": "Kevin Stratvert",
-  "title": "How to Use Claude Code for FREE with Ollama",
-  "views": 84368,
-  "date": "2026-11-10",
-  "url": "https://youtu.be/NkkAwdm2k7s",
-  "desc": "Learn how to use Claude Code for free with Ollama and a local AI model running on your own computer. In this step-by-step Windows tutorial, we'll install both tools, adjust Ollama's context length, connect Claude Code to Gemma 4 12B, and build a playable Breakout game. Then we'll improve the game with a follow-up prompt and learn how to return to the project later.\n\nThis setup uses a local model in the Claude Code tool, with no AI subscription or per-token API charges for local inference. It does not give you free access to Anthropic's Opus or Sonnet models. Speed and results depend on your hardware and the model you choose.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Download Ollama: https://olla"
- },
- {
-  "channel": "Kevin Stratvert",
   "title": "Hermes Agent Tutorial for Beginners (FREE & Local)",
-  "views": 82295,
+  "views": 84340,
   "date": "2026-10-23",
   "url": "https://youtu.be/wETSpF4ef6E",
   "desc": "Learn how to use Hermes AI Agent on Windows, from installation and local AI setup to browser tasks, memory, reusable skills, and scheduled automation. Follow along as I use Hermes to manage YouTube comments.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Hermes: https://hermes-agent.nousresearch.com/desktop\n- Prompts used in this video: https://docs.google.com/document/d/1X5oTG9DTucymvyneero_KmjCRGZ7nEGiBZoMLmXdSQk/edit?usp=drivesdk\n\n⌚ TIMESTAMPS\n0:00 - Introduction\n0:35 - Install Hermes on Windows\n1:06 - Set up a local AI model\n2:07 - Create a folder and file\n3:17 - Connect your browser\n4:22 - Review YouTube comments\n5:05 - Publish an approved reply\n5:33 - Save preferences with memory\n6:19 - Test me"
  },
  {
   "channel": "Matt Wolfe",
-  "title": "How To Build An AI Operating System For Your Life",
-  "views": 74804,
-  "date": "2026-11-11",
-  "url": "https://youtu.be/pvl3z_GyU2Y",
-  "desc": "What if you could use AI agents to manage your emails, organize your schedule, create content, and help run your entire business?\n\nI sat down with Peter Yang to explore the personal AI system he uses to run his one-person business. He walks me through his AI chief of staff, a personal advisor that keeps him focused on his goals, and the automated workflows he uses for podcast research, video editing, content creation, and everyday tasks.\n\nWe dive into how he connects ChatGPT, Claude Code, and GroqBot using reusable AI skills, how he keeps those skills improving over time, and how you can build your own versions of these workflows. I also walk through setting up a few of these automations mys"
+  "title": "AI News: Things Will Never Be The Same",
+  "views": 77405,
+  "date": "2026-11-13",
+  "url": "https://youtu.be/G_Jrexy_5Bg",
+  "desc": "Try @OpenAI Decisions API here: https://developers.openai.com/api/docs/guides/decisions \n\nHere's the AI news from one of the wildest weeks we've ever seen! Jensen Huang steps down as NVIDIA CEO, Anthropic launches Claude Fable 5.2, and Google's Gemini 4 Carbon finally becomes available. Plus, new AI features from Adobe MAX, big updates to Claude, and a rapid-fire roundup of everything else happening in AI.\n\nSharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads"
  },
  {
   "channel": "Kevin Stratvert",
@@ -395,7 +419,7 @@
  {
   "channel": "Nate Herk | AI Automation",
   "title": "I Studied 10,000 AI Websites… Here’s what I learned",
-  "views": 68849,
+  "views": 70559,
   "date": "2026-11-09",
   "url": "https://youtu.be/mImbbszCjCI",
   "desc": "How I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=10000-ai-websites&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=10000-ai-websites&hcategory=youtube-videos&utm_campaign=free-group\nFREE Scrollcraft Website Design Skill: https://app.aiautomationsociety.ai/optin/scrollcraft/?utm_source=youtube&utm_medium=organic&utm_content=10000-ai-websites&sl=yt_10000-ai-websites\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nMost AI websites look fine an"
@@ -406,14 +430,6 @@
   "views": 68740,
   "date": "2026-10-19",
   "url": "https://youtu.be/hgLI491ajG0"
- },
- {
-  "channel": "Dan Kieft",
-  "title": "How I Make Cinematic AI Ads with Fable 5.2 & Seedance 2.5",
-  "views": 67963,
-  "date": "2026-11-12",
-  "url": "https://youtu.be/jeMl0OSwDss",
-  "desc": "Create your own Cinematic AI ads with Fable 5.2 and Seedance 2.5\nHiggsfield Black Friday Sale is live now 👉 👉 http://dankieft.com/higgsfield\n\nIn this video I teach you how you can create your own AI ads. We'll go over all the different steps fro prompting, to making your assets and generating the video so by the end of it you know exactly how.\n\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.instagram.com/dan.kieft/"
  },
  {
   "channel": "The AI Advantage",
@@ -465,9 +481,17 @@
   "url": "https://youtu.be/V0PzEBcnAdk"
  },
  {
+  "channel": "Nate Herk | AI Automation",
+  "title": "Everything Alex Hormozi Said About Learning AI for 2027",
+  "views": 58943,
+  "date": "2026-11-11",
+  "url": "https://youtu.be/dlkZr61G6vA",
+  "desc": "How I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=hormozi-ai&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=hormozi-ai&hcategory=youtube-videos&utm_campaign=free-group\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nI went through over 200 of Alex Hormozi’s videos and posts to break down how he uses AI in his business. We cover his workflows for content, sales, and customer support, why he capped his team’s AI budget, and the $350,000 autom"
+ },
+ {
   "channel": "Metics Media",
   "title": "Build $10,000 Websites using ChatGPT (Ultimate Guide)",
-  "views": 56955,
+  "views": 57585,
   "date": "2026-10-25",
   "url": "https://youtu.be/-7jk1Y7AU7w",
   "desc": "Turn ChatGPT into a design agency. Install my free skill, answer a few questions, and build a cinematic website with a moving opening scene, then put it live on your own domain. No coding or design skills needed.\n\n📁 $10K Checklist (free PDF): https://drive.google.com/file/d/15Ojdui_YbbDwgzotKxEktbQvuUVQh9K3/view?usp=drive_link\n📁 $10K Websites skill (free on GitHub): https://github.com/meticsmedia/10k-websites\n\n✅ ChatGPT desktop app: https://chatgpt.com/download/\n✅ Hostinger (Exclusive Discount): https://meticsmedia.com/hostinger-CMA\n✅ OpenArt (Best Deal): https://meticsmedia.com/openart-CMA\n\nThis step-by-step tutorial shows beginners how to build a premium, cinematic website with ChatGPT and"
@@ -475,10 +499,34 @@
  {
   "channel": "Metics Media",
   "title": "Master Hermes Agent in 20 Minutes (Beginner Tutorial)",
-  "views": 56265,
+  "views": 57035,
   "date": "2026-10-28",
   "url": "https://youtu.be/q5RagIqBtjc",
   "desc": "By the end of this video, your own AI agent will run 24/7, check what you care about, and text you when something changes. This Hermes Agent tutorial for beginners gets you there in five steps, with no code.\n✅ Hostinger VPS (Exclusive 10% Discount): https://meticsmedia.com/hermes-RYB\n✅ Nous Portal ($15 Off Your First Month): https://meticsmedia.com/nous-RYB\n\nThis Hermes Agent tutorial takes you from zero to your own self-hosted AI agent, step by step, with no code. First, you’ll see why your agent should live on a server instead of your own computer. Then you’ll deploy Hermes on a Hostinger VPS with a one-click template and tour the Hermes dashboard. Next, you’ll connect an AI model through "
+ },
+ {
+  "channel": "The AI Advantage",
+  "title": "How I Edit My Videos with Claude",
+  "views": 56112,
+  "date": "2026-11-04",
+  "url": "https://youtu.be/fS-88gtHXIg",
+  "desc": "Join The AI Advantage Club\nhttps://joinaiaclub.com/igor\n\nHere’s how we use ChatGPT and Claude Design to create the animations in my videos, from a transcript with timestamps to the final edit.\n\nClaude Design\nhttps://claude.ai/design\n\nChatGPT\nhttps://chatgpt.com/\n\nDropbox\nhttps://www.dropbox.com/\n\nPrompt:\nhttps://docs.google.com/document/d/1nyUVaiXRMtBtQNd-7o8W5bzZRzy5XbpKLUl2isji9sU/edit?usp=sharing\n\nChapters:\n0:00 How we make our video animations\n0:31 Record and share the footage\n0:54 Create a transcript with timestamps\n1:12 Set up Claude Design and the prompt\n2:02 Generate and review the animation\n2:27 Add the animations to the final edit\n2:57 Join The AI Advantage Club\n\nLet's Connect:\n📸 I"
+ },
+ {
+  "channel": "AI Master",
+  "title": "Gemini Just Became Free — You Don’t Need a Google AI Subscription",
+  "views": 54702,
+  "date": "2026-11-07",
+  "url": "https://youtu.be/1iySkKc4tyw",
+  "desc": "#sponsored Get your 30-day free trial here! https://gohighlevel.com/aimaster\n🧠 Never miss latest Gemini Updates! Join 15,000+ AI enthusiasts → \nhttps://aimaster.me/yt/freegemini\n🤝 Exclusive brand partnership - https://aimaster.me/collab\n\nGoogle quietly cut free Gemini from three models to one on October 9, and most people never noticed. In this video I open a clean free account with no subscription and check what Gemini Free actually gives you today: the model picker, the Usage Limits page, the 32K context window, and what the $4.99 AI Plus plan really fixes.\n\nWhat you'll see in this video:\n00:00 - What Changed in Free Gemini\n00:23 - The Live Model Picker & Limits\n01:21 - Usage Limits & Comp"
+ },
+ {
+  "channel": "Kevin Stratvert",
+  "title": "How to Use Remotion with ChatGPT",
+  "views": 54482,
+  "date": "2026-10-30",
+  "url": "https://youtu.be/9PwpJpJJ3IY",
+  "desc": "Learn how to use Remotion with ChatGPT and Codex to create animations and motion graphics without writing the code yourself. In this beginner tutorial, we build an animated business intro, create a transparent lower third for existing footage, and turn sales data into an animated bar chart. You’ll also learn how to preview and customize your animations in Remotion Studio, export an MP4, and use ProRes 4444 for transparent video in DaVinci Resolve or Adobe Premiere Pro.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Download ChatGPT: https://chatgpt.com/download/\n- Remotion: https://www.remotion.dev/\n- Remotion license and pricing: https://www.remotion.dev/docs/license/pricing\n- Remotion is free for i"
  },
  {
   "channel": "Nate Herk | AI Automation",
@@ -488,14 +536,6 @@
   "url": "https://youtu.be/DSS1Yqb6-qE"
  },
  {
-  "channel": "Kevin Stratvert",
-  "title": "How to Use Remotion with ChatGPT",
-  "views": 53083,
-  "date": "2026-10-30",
-  "url": "https://youtu.be/9PwpJpJJ3IY",
-  "desc": "Learn how to use Remotion with ChatGPT and Codex to create animations and motion graphics without writing the code yourself. In this beginner tutorial, we build an animated business intro, create a transparent lower third for existing footage, and turn sales data into an animated bar chart. You’ll also learn how to preview and customize your animations in Remotion Studio, export an MP4, and use ProRes 4444 for transparent video in DaVinci Resolve or Adobe Premiere Pro.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Download ChatGPT: https://chatgpt.com/download/\n- Remotion: https://www.remotion.dev/\n- Remotion license and pricing: https://www.remotion.dev/docs/license/pricing\n- Remotion is free for i"
- },
- {
   "channel": "Matt Wolfe",
   "title": "Old Phones Are Becoming Robots?!?",
   "views": 52996,
@@ -503,19 +543,19 @@
   "url": "https://youtu.be/FiyUagHO37Y"
  },
  {
-  "channel": "AI Master",
-  "title": "Gemini Just Became Free — You Don’t Need a Google AI Subscription",
-  "views": 52865,
-  "date": "2026-11-07",
-  "url": "https://youtu.be/1iySkKc4tyw",
-  "desc": "#sponsored Get your 30-day free trial here! https://gohighlevel.com/aimaster\n🧠 Never miss latest Gemini Updates! Join 15,000+ AI enthusiasts → \nhttps://aimaster.me/yt/freegemini\n🤝 Exclusive brand partnership - https://aimaster.me/collab\n\nGoogle quietly cut free Gemini from three models to one on October 9, and most people never noticed. In this video I open a clean free account with no subscription and check what Gemini Free actually gives you today: the model picker, the Usage Limits page, the 32K context window, and what the $4.99 AI Plus plan really fixes.\n\nWhat you'll see in this video:\n00:00 - What Changed in Free Gemini\n00:23 - The Live Model Picker & Limits\n01:21 - Usage Limits & Comp"
- },
- {
   "channel": "Parker Prompts",
   "title": "9 Grok Bot Use Cases You Should Try ASAP",
   "views": 52748,
   "date": "2026-10-03",
   "url": "https://youtu.be/8FBvRYDQWow"
+ },
+ {
+  "channel": "Kevin Stratvert",
+  "title": "How to Create an Excel Dashboard with Copilot",
+  "views": 52718,
+  "date": "2026-10-29",
+  "url": "https://youtu.be/YgcEesCDIkw",
+  "desc": "Learn how to create an interactive Excel dashboard with Microsoft Copilot. In this step-by-step tutorial, we build a sales dashboard from sample data, explore interactive filters, verify key metrics, customize the design, and see the dashboard automatically update when a new order is added.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Sample Excel workbook: https://1drv.ms/x/c/b09f9559f6a16b6c/IQBfflBBTT40QogwtC2-DZyCAdXLGSFSJjE1NbP4yFntwPc?e=eAR7Mu\n\nPrompt 1: Create the dashboard\nCreate a professional, interactive sales dashboard using the data in this workbook. Include key sales metrics, charts showing sales trends and performance, and interactive filters so I can explore the data. Put everything"
  },
  {
   "channel": "Skill Leap AI",
@@ -526,22 +566,6 @@
   "desc": "*Build 3D Worlds with Claude Code (21 ready-made builds):* https://clickhubspot.com/rhn1\n\nGet your free AI plan on Futurepedia 2.0: https://clickhubspot.com/etov\n\nClaude can now do 3D, and in this video I put it to the test by having it build three different 3D worlds using Blender and Unreal Engine. If you thought Claude was only for writing and coding, this will change how you see it.\n\nI walk through each world from the first prompt to the finished scene, so you can see exactly what I asked for and what Claude created. \n\nYou will see how Claude works with Blender and Unreal Engine, what kind of results you can realistically expect from AI 3D creation right now, and why this opens up 3D des"
  },
  {
-  "channel": "Kevin Stratvert",
-  "title": "How to Create an Excel Dashboard with Copilot",
-  "views": 51706,
-  "date": "2026-10-29",
-  "url": "https://youtu.be/YgcEesCDIkw",
-  "desc": "Learn how to create an interactive Excel dashboard with Microsoft Copilot. In this step-by-step tutorial, we build a sales dashboard from sample data, explore interactive filters, verify key metrics, customize the design, and see the dashboard automatically update when a new order is added.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Sample Excel workbook: https://1drv.ms/x/c/b09f9559f6a16b6c/IQBfflBBTT40QogwtC2-DZyCAdXLGSFSJjE1NbP4yFntwPc?e=eAR7Mu\n\nPrompt 1: Create the dashboard\nCreate a professional, interactive sales dashboard using the data in this workbook. Include key sales metrics, charts showing sales trends and performance, and interactive filters so I can explore the data. Put everything"
- },
- {
-  "channel": "The AI Advantage",
-  "title": "How I Edit My Videos with Claude",
-  "views": 51616,
-  "date": "2026-11-04",
-  "url": "https://youtu.be/fS-88gtHXIg",
-  "desc": "Join The AI Advantage Club\nhttps://joinaiaclub.com/igor\n\nHere’s how we use ChatGPT and Claude Design to create the animations in my videos, from a transcript with timestamps to the final edit.\n\nClaude Design\nhttps://claude.ai/design\n\nChatGPT\nhttps://chatgpt.com/\n\nDropbox\nhttps://www.dropbox.com/\n\nPrompt:\nhttps://docs.google.com/document/d/1nyUVaiXRMtBtQNd-7o8W5bzZRzy5XbpKLUl2isji9sU/edit?usp=sharing\n\nChapters:\n0:00 How we make our video animations\n0:31 Record and share the footage\n0:54 Create a transcript with timestamps\n1:12 Set up Claude Design and the prompt\n2:02 Generate and review the animation\n2:27 Add the animations to the final edit\n2:57 Join The AI Advantage Club\n\nLet's Connect:\n📸 I"
- },
- {
   "channel": "Parker Prompts",
   "title": "Grok 4.7 + Grok Bot Is CHEATING (Only $20 NOW!)",
   "views": 51592,
@@ -550,17 +574,9 @@
   "desc": "Go from ABSOLUTE ZERO to using AI like the people who do this for a living👇\nhttps://www.skool.com/ai-fluency\n\nIn this video, I show how to use Grok 4.7 with Grok Bot and Cursor to build AI agents that find clients, redesign websites, track competitor pricing, organize YouTube Watch Later videos into a learning dashboard, and build web apps. I also set up a Chief of Staff bot that coordinates the other agents and combines their work into one dashboard.\n\nI'm Parker. I started this YouTube Channel with the goal to learn more about AI myself and to then pass on the knowledge to anyone willing to listen.\n\nlet's work together: partnerships @ parker-prompts.com"
  },
  {
-  "channel": "Nate Herk | AI Automation",
-  "title": "Everything Alex Hormozi Said About AI in 2026",
-  "views": 51271,
-  "date": "2026-11-11",
-  "url": "https://youtu.be/dlkZr61G6vA",
-  "desc": "How I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=hormozi-ai&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=hormozi-ai&hcategory=youtube-videos&utm_campaign=free-group\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nI went through over 200 of Alex Hormozi’s videos and posts to break down how he uses AI in his business. We cover his workflows for content, sales, and customer support, why he capped his team’s AI budget, and the $350,000 autom"
- },
- {
   "channel": "Parker Prompts",
   "title": "Gemini Canvas Gives You Superpowers, Here's How to Unlock It",
-  "views": 50387,
+  "views": 50787,
   "date": "2026-10-29",
   "url": "https://youtu.be/iHHa3bafFFY",
   "desc": "Go from ABSOLUTE ZERO to using AI like the people who do this for a living👇\nhttps://www.skool.com/ai-fluency\n\nIn this video, I show how to use Gemini Canvas to build a teleprompter app, create an interactive client proposal, turn messy files into a pitch deck and animated video, and make camera settings easier to learn with an infographic and quiz. I also connect Gemini Notebook to Canvas to build a complete interactive course from trusted sources, with lessons, practical tasks, quizzes, and progress tracking.\n\nGemini Canvas Prompts 👉 https://parker-prompts.com/geminicanvas\n\nI'm Parker. I started this YouTube Channel with the goal to learn more about AI myself and to then pass on the knowled"
@@ -571,6 +587,14 @@
   "views": 50375,
   "date": "2026-09-29",
   "url": "https://youtu.be/dP-0nt4U2QE"
+ },
+ {
+  "channel": "Parker Prompts",
+  "title": "Grok Bot Tutorial for Beginners: How to Set Up Your First AI Agent",
+  "views": 50171,
+  "date": "2026-11-08",
+  "url": "https://youtu.be/xHYp3LvPCTA",
+  "desc": "Go from ABSOLUTE ZERO to using AI like the people who do this for a living👇\nhttps://www.skool.com/ai-fluency\n\nIn this video, I show how to set up Grok Bot and create your own team of AI agents that can handle tasks using connected apps and their own cloud computer. I walk through building bots for tracking receipts, managing spreadsheets and emails, getting multiple agents to work together, automating Goodreads, scheduling recurring tasks, and teaching bots new skills by recording your actions.\n\nI'm Parker. I started this YouTube Channel with the goal to learn more about AI myself and to then pass on the knowledge to anyone willing to listen.\n\nlet's work together: partnerships @ parker-promp"
  },
  {
   "channel": "The AI Advantage",
@@ -587,25 +611,9 @@
   "url": "https://youtu.be/Bd8-geZPwI4"
  },
  {
-  "channel": "Parker Prompts",
-  "title": "Grok Bot Tutorial for Beginners: How to Set Up Your First AI Agent",
-  "views": 48020,
-  "date": "2026-11-08",
-  "url": "https://youtu.be/xHYp3LvPCTA",
-  "desc": "Go from ABSOLUTE ZERO to using AI like the people who do this for a living👇\nhttps://www.skool.com/ai-fluency\n\nIn this video, I show how to set up Grok Bot and create your own team of AI agents that can handle tasks using connected apps and their own cloud computer. I walk through building bots for tracking receipts, managing spreadsheets and emails, getting multiple agents to work together, automating Goodreads, scheduling recurring tasks, and teaching bots new skills by recording your actions.\n\nI'm Parker. I started this YouTube Channel with the goal to learn more about AI myself and to then pass on the knowledge to anyone willing to listen.\n\nlet's work together: partnerships @ parker-promp"
- },
- {
-  "channel": "Futurepedia",
-  "title": "Claude Makes 3D Animations Easy Now",
-  "views": 47927,
-  "date": "2026-11-12",
-  "url": "https://youtu.be/ZxaMmG71g8c",
-  "desc": "*Build 3D Animated Explainer Videos with Claude (37 Ready-Made Styles):* https://clickhubspot.com/777a\n\nMore from Futurepedia:\n👉 Get your free AI plan on Futurepedia 2.0: https://clickhubspot.com/691m\n\nSummary:\nClaude can now make stunning 3D animations in almost any style, and it's surprisingly easy. In this video I break down how it works using Three.js (and how it differs from the frame-by-frame JavaScript method from my last motion graphics video), then walk through making one from a single prompt. I also show off my free 3D Style Atlas: 37 ready-made styles you can copy and paste into Claude, with built-in sound effects and a voiceover mode that syncs the animation to your narration.\n\nC"
- },
- {
   "channel": "Nate Herk | AI Automation",
   "title": "I Turned Codex Into My AI Operating System",
-  "views": 47826,
+  "views": 48316,
   "date": "2026-11-02",
   "url": "https://youtu.be/_EChYLC3Vag",
   "desc": "https://chatgpt.com/download/\n\nCodex runs my entire business now, not just my code. Go to my IG, DM me \"CODEX\" and I'll send it over. 👇 @ChatGPT #ChatGPT_Partner #ad"
@@ -613,7 +621,7 @@
  {
   "channel": "Metics Media",
   "title": "Build the PERFECT WordPress Website with AI (Full Guide)",
-  "views": 46605,
+  "views": 47397,
   "date": "2026-11-03",
   "url": "https://youtu.be/p6sPn17Rm_Q",
   "desc": "Let AI build your WordPress website, then edit any part of it yourself, even if you stop paying for AI. Claude and my free skill design it, make your photos and build it in Elementor. A WordPress AI tutorial for beginners.\n✅ Hostinger (Exclusive Discount): https://meticsmedia.com/hostinger-ETX\n✅ Higgsfield (Best Deal): https://meticsmedia.com/higgsfield-ETX\n\n👉Claude desktop app: https://claude.com/download\n👉WordPress website skill (free on GitHub): https://github.com/meticsmedia/wordpress-website-skill\n\nThis step-by-step tutorial shows complete beginners how to build a custom WordPress website with AI and no code. You’ll set up the Claude AI desktop app on the Pro plan and install a free Wor"
@@ -634,6 +642,22 @@
   "url": "https://youtu.be/nJut4s0DTx8"
  },
  {
+  "channel": "Matt Wolfe",
+  "title": "The New Ring Camera Flies Around Your House",
+  "views": 44813,
+  "date": "2026-11-11",
+  "url": "https://youtu.be/Xtb3Pua0e8s",
+  "desc": "Sharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\nLet’s work together!\n- Brand, sponsorship & business inquiries: business@mattwolfe.com\n\n#AINews #AITools #ArtificialIntelligence"
+ },
+ {
+  "channel": "Skill Leap AI",
+  "title": "Claude Duet Is Here: The End of Prompting?",
+  "views": 43666,
+  "date": "2026-11-03",
+  "url": "https://youtu.be/ZdXXv-0aPfI",
+  "desc": "*Get the Claude Duet Guide:* https://clickhubspot.com/rd03\n\nHere is the link to Claude Duet waitlist: https://claude.com/product/claude-duet\n\nGet your free AI plan on Futurepedia 2.0: https://clickhubspot.com/etov\n\nClaude Duet is Anthropic's new proactive AI agent, and in this video I show you what it is and how it works on my own account.\n\nClaude Duet is a new app, separate from the regular Claude app, where Claude messages you first. It has its own computer in the cloud, so it keeps working after you close the app.\n\nI cover who can get it right now, how the waitlist works, and what's inside the app, including the main thread, channels, the Tasks tab and the Make tab.\n\nThen I show real exam"
+ },
+ {
   "channel": "Nate Herk | AI Automation",
   "title": "This GitHub repo will automate getting you a job",
   "views": 43575,
@@ -641,12 +665,12 @@
   "url": "https://youtu.be/2U8jn2M7g7U"
  },
  {
-  "channel": "Skill Leap AI",
-  "title": "Claude Duet Is Here: The End of Prompting?",
-  "views": 43228,
-  "date": "2026-11-03",
-  "url": "https://youtu.be/ZdXXv-0aPfI",
-  "desc": "*Get the Claude Duet Guide:* https://clickhubspot.com/rd03\n\nHere is the link to Claude Duet waitlist: https://claude.com/product/claude-duet\n\nGet your free AI plan on Futurepedia 2.0: https://clickhubspot.com/etov\n\nClaude Duet is Anthropic's new proactive AI agent, and in this video I show you what it is and how it works on my own account.\n\nClaude Duet is a new app, separate from the regular Claude app, where Claude messages you first. It has its own computer in the cloud, so it keeps working after you close the app.\n\nI cover who can get it right now, how the waitlist works, and what's inside the app, including the main thread, channels, the Tasks tab and the Make tab.\n\nThen I show real exam"
+  "channel": "Matt Wolfe",
+  "title": "MASSIVE AI Shake-Up That Changes Everything",
+  "views": 43253,
+  "date": "2026-11-12",
+  "url": "https://youtu.be/iTe0IB5Ugf8",
+  "desc": "Sharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\nLet’s work together!\n- Brand, sponsorship & business inquiries: business@mattwolfe.com\n\n#AINews #AITools #ArtificialIntelligence"
  },
  {
   "channel": "Nate Herk | AI Automation",
@@ -684,28 +708,20 @@
   "url": "https://youtu.be/7bE0PCee01Y"
  },
  {
-  "channel": "Metics Media",
-  "title": "Full Hermes Agent Setup Tutorial: Step-by-Step Walkthrough",
-  "views": 38142,
-  "date": "2026-10-26",
-  "url": "https://youtu.be/knZBpQddnJc",
-  "desc": "Hermes Agent setup tutorial for beginners: put the free, open-source AI agent on your own server in one click, connect it to Telegram, and get a 24/7 AI assistant that messages you first, no coding required.\n✅ Hermes Agent VPS (Exclusive 10% Discount): https://meticsmedia.com/hermes-WPJ\n✅ Nous Portal ($15 Off Your First Month): https://meticsmedia.com/nous-WPJ\n\nIn this step-by-step Hermes Agent setup guide, you’ll deploy a one-click Hermes Agent template, log into the Hermes web dashboard, and connect an AI model through Nous Portal, where each message costs a fraction of a cent. Then you’ll give your agent its own Telegram bot using a QR code, and get it live with one quick restart. From th"
- },
- {
   "channel": "Parker Prompts",
   "title": "Give Me 14 Minutes, I'll Teach You 97% of Obsidian",
-  "views": 38141,
+  "views": 38418,
   "date": "2026-10-16",
   "url": "https://youtu.be/y27oP8A8S9s",
   "desc": "Go from ABSOLUTE ZERO to using AI like the people who do this for a living👇\nhttps://www.skool.com/ai-fluency\n\nIn this video, I show how to use Obsidian from scratch, including creating vaults, organizing notes with folders and tags, linking ideas, using Graph View, setting up templates and daily notes, saving web pages, and planning projects with Canvas. \n\nObsidian + Claude Prompts 👉 https://parker-prompts.com/obsidian\n\nI'm Parker. I started this YouTube Channel with the goal to learn more about AI myself and to then pass on the knowledge to anyone willing to listen.\n\nlet's work together: partnerships @ parker-prompts.com"
  },
  {
-  "channel": "Matt Wolfe",
-  "title": "The New Ring Camera Flies Around Your House",
-  "views": 37511,
-  "date": "2026-11-11",
-  "url": "https://youtu.be/Xtb3Pua0e8s",
-  "desc": "Sharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\nLet’s work together!\n- Brand, sponsorship & business inquiries: business@mattwolfe.com\n\n#AINews #AITools #ArtificialIntelligence"
+  "channel": "Metics Media",
+  "title": "Full Hermes Agent Setup Tutorial: Step-by-Step Walkthrough",
+  "views": 38369,
+  "date": "2026-10-26",
+  "url": "https://youtu.be/knZBpQddnJc",
+  "desc": "Hermes Agent setup tutorial for beginners: put the free, open-source AI agent on your own server in one click, connect it to Telegram, and get a 24/7 AI assistant that messages you first, no coding required.\n✅ Hermes Agent VPS (Exclusive 10% Discount): https://meticsmedia.com/hermes-WPJ\n✅ Nous Portal ($15 Off Your First Month): https://meticsmedia.com/nous-WPJ\n\nIn this step-by-step Hermes Agent setup guide, you’ll deploy a one-click Hermes Agent template, log into the Hermes web dashboard, and connect an AI model through Nous Portal, where each message costs a fraction of a cent. Then you’ll give your agent its own Telegram bot using a QR code, and get it live with one quick restart. From th"
  },
  {
   "channel": "Metics Media",
@@ -746,7 +762,7 @@
  {
   "channel": "Parker Prompts",
   "title": "Gemini 4 Argon Is Finally Here (And It's REALLY Good)",
-  "views": 34560,
+  "views": 34622,
   "date": "2026-10-24",
   "url": "https://youtu.be/aejlgh-gtF4",
   "desc": "Go from ABSOLUTE ZERO to using AI like the people who do this for a living👇\nhttps://www.skool.com/ai-fluency\n\nIn this video, I test Google Gemini 4 Argon across five challenges: building an interactive 3D V8 engine, recreating Toggl Track from screenshots, solving a murder mystery from a full novel, turning a three-and-a-half-hour lecture into an interactive course, and generating a 90-second animated explainer. I also compare its results with Gemini 3.1 Pro, GPT-6 Astra, and Claude Opus 5.5 to see how they perform and what they cost.\n\nGemini 4 Argon Test Prompts 👉 https://parker-prompts.com/gemini4argon\n\nI'm Parker. I started this YouTube Channel with the goal to learn more about AI myself "
@@ -759,20 +775,36 @@
   "url": "https://youtu.be/K70Qf06XBLE"
  },
  {
+  "channel": "Matt Wolfe",
+  "title": "Fable 5.2 Is Quite Insane!",
+  "views": 34205,
+  "date": "2026-11-11",
+  "url": "https://youtu.be/Mt54ez7xsiI",
+  "desc": "Sharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\n\nLet’s work together!\n- Brand, sponsorship & business inquiries: business@mattwolfe.com\n\n#AINews #AITools #ArtificialIntelligence"
+ },
+ {
   "channel": "Parker Prompts",
   "title": "This FREE Claude Skill Is INSANE at AI Videos (Opus 5.5)",
-  "views": 33077,
+  "views": 33197,
   "date": "2026-10-23",
   "url": "https://youtu.be/hZkd4Iy-4lE",
   "desc": "Create INSANE AI Videos 👉 https://parkerprompts.com/Higgsfield-1\n\nIn this video, I show how to connect Claude Opus 5.5 to Higgsfield and use the SUPERVIDEO skill to create AI videos without writing detailed prompts yourself. I compare a basic generation against the skill, create a 30-second transformation scene with dialogue, and build a one-minute animated short using consistent character sheets, multiple connected shots, and a final edit in CapCut.\n\nGrab The SUPERVIDEO Playbook: \nhttps://drive.google.com/file/d/1ZD0ww5tE2S7BofGDliHlrPa0fFhIbyca/view?usp=sharing\n\nI'm Parker. I started this YouTube Channel with the goal to learn more about AI myself and to then pass on the knowledge to anyon"
  },
  {
-  "channel": "Matt Wolfe",
-  "title": "Fable 5.2 Is Quite Insane!",
-  "views": 32785,
-  "date": "2026-11-11",
-  "url": "https://youtu.be/Mt54ez7xsiI",
-  "desc": "Sharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\n\nLet’s work together!\n- Brand, sponsorship & business inquiries: business@mattwolfe.com\n\n#AINews #AITools #ArtificialIntelligence"
+  "channel": "AI Master",
+  "title": "How to Install DLSS 5 on ANY RTX GPU in One Click! (Full Tutorial)",
+  "views": 32668,
+  "date": "2026-11-08",
+  "url": "https://youtu.be/B_JmRIabBa4",
+  "desc": "#sponsored Try Topview for free! https://www.topview.ai/?via=artur\n🎓Go deeper into AI with full courses → https://aimaster.me/yt/dlss\n🤝 Exclusive brand partnership - https://aimaster.me/collab\n\nDLSS 5 Swapper — https://dlss5swapper.org\n\nDLSS 5 is officially available only in NBA 2K27, but there is a way to get DLSS 5 in single player PC games that never received support, on RTX 20, 30, and 40 series GPUs. In this DLSS 5 tutorial I show how to install DLSS 5 Swapper step by step, which ReShade and neural rendering settings to use, and how to set up DLSS 5 in older DirectX 11 games like Batman Arkham Knight. Then I break down the real DLSS 5 performance cost, how much FPS you lose on RTX 50 ca"
+ },
+ {
+  "channel": "The AI Advantage",
+  "title": "ChatGPT Images 2.6 Is Here: GIFs, Dot Upgrades & More",
+  "views": 32586,
+  "date": "2026-11-06",
+  "url": "https://youtu.be/5LkRDoGVook",
+  "desc": "Get the FREE Dots PDF\nhttps://learn.aiadvantage.com/free-ai-assistant-pdf\n\nJoin The AI Advantage Club\nhttps://joinaiaclub.com/igor\n\nCustom GIFs are now part of ChatGPT Images 2.6, alongside new options for creating and editing visuals. This week’s AI updates also bring improvements to Dots and personal finance tools—with practical uses ranging from protecting your calendar to tracking Black Friday deals.\n\nChatGPT Images 2.6\nhttps://openai.com/index/introducing-images-2-6/\n\nGetting started with your Dot\nhttps://help.openai.com/en/articles/20001530-getting-started-with-your-dot\n\nScheduled tasks in ChatGPT\nhttps://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt\n\nClaude Personal "
  },
  {
   "channel": "AI Master",
@@ -780,14 +812,6 @@
   "views": 32463,
   "date": "2026-10-24",
   "url": "https://youtu.be/OMy4hCP8uSc"
- },
- {
-  "channel": "The AI Advantage",
-  "title": "ChatGPT Images 2.6 Is Here: GIFs, Dot Upgrades & More",
-  "views": 32295,
-  "date": "2026-11-06",
-  "url": "https://youtu.be/5LkRDoGVook",
-  "desc": "Get the FREE Dots PDF\nhttps://learn.aiadvantage.com/free-ai-assistant-pdf\n\nJoin The AI Advantage Club\nhttps://joinaiaclub.com/igor\n\nCustom GIFs are now part of ChatGPT Images 2.6, alongside new options for creating and editing visuals. This week’s AI updates also bring improvements to Dots and personal finance tools—with practical uses ranging from protecting your calendar to tracking Black Friday deals.\n\nChatGPT Images 2.6\nhttps://openai.com/index/introducing-images-2-6/\n\nGetting started with your Dot\nhttps://help.openai.com/en/articles/20001530-getting-started-with-your-dot\n\nScheduled tasks in ChatGPT\nhttps://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt\n\nClaude Personal "
  },
  {
   "channel": "Skill Leap AI",
@@ -812,6 +836,14 @@
   "desc": "Join The AI Advantage Club\nhttps://joinaiaclub.com/igor\n\nI used AI to recreate an app I used to pay for, then customized it to work exactly how I wanted. Here’s how to use Reverse Engineer Anything with ChatGPT, including my screen-drawing app, AIA Ink, and a second example inspired by Slido.\n\nI’ll explain reverse engineering in plain English, show the request and setup, and share why this changes what we can build with AI.\n\nReverse Engineer Anything (REA) — GitHub\nhttps://github.com/morluto/rea\n\nScreenBrush — Original Screen-Drawing App\nhttps://apps.apple.com/us/app/screenbrush/id1233965871?mt=12\n\nSlido — Original Q&A and Polling Tool\nhttps://www.slido.com/\n\nArtCraft — Open-Source Creative "
  },
  {
+  "channel": "The AI Advantage",
+  "title": "ChatGPT & Grok Bot: 7 Useful Updates for Everyday Life",
+  "views": 30846,
+  "date": "2026-10-30",
+  "url": "https://youtu.be/MNiurW07nLs",
+  "desc": "Join The AI Advantage Club\nhttps://joinaiaclub.com/igor\n\nSee how I use ChatGPT and Grok Bot to handle everyday admin, connect my apps, and get things done from my phone. I cover the latest updates, share practical examples, and show what works—and what still needs improving.\n\nChatGPT — Dots, iCloud Connections and Usage Updates\nhttps://help.openai.com/en/articles/6825453-chatgpt-release-notes\n\nGrok Bot — Phone Apps and Action Button Shortcut\nhttps://docs.x.ai/grok-bot/mobile\n\nGrok Bot — App Connections and 1Password\nhttps://docs.x.ai/grok-bot/computer-and-apps\n\nEveryday AI Use Cases — The Reddit Post Featured\nhttps://www.reddit.com/r/GrokBot/comments/1xgrf08/i_run_about_two_dozen_ai_bots_for"
+ },
+ {
   "channel": "Matt Wolfe",
   "title": "A real-life speeder bike from Return of the Jedi (Not AI)",
   "views": 30804,
@@ -820,44 +852,44 @@
   "desc": "Sharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\n\nLet’s work together!\n- Brand, sponsorship & business inquiries: business@mattwolfe.com\n\n#AINews #StarWars #FutreTech"
  },
  {
-  "channel": "The AI Advantage",
-  "title": "ChatGPT & Grok Bot: 7 Useful Updates for Everyday Life",
-  "views": 30687,
-  "date": "2026-10-30",
-  "url": "https://youtu.be/MNiurW07nLs",
-  "desc": "Join The AI Advantage Club\nhttps://joinaiaclub.com/igor\n\nSee how I use ChatGPT and Grok Bot to handle everyday admin, connect my apps, and get things done from my phone. I cover the latest updates, share practical examples, and show what works—and what still needs improving.\n\nChatGPT — Dots, iCloud Connections and Usage Updates\nhttps://help.openai.com/en/articles/6825453-chatgpt-release-notes\n\nGrok Bot — Phone Apps and Action Button Shortcut\nhttps://docs.x.ai/grok-bot/mobile\n\nGrok Bot — App Connections and 1Password\nhttps://docs.x.ai/grok-bot/computer-and-apps\n\nEveryday AI Use Cases — The Reddit Post Featured\nhttps://www.reddit.com/r/GrokBot/comments/1xgrf08/i_run_about_two_dozen_ai_bots_for"
+  "channel": "Kevin Stratvert",
+  "title": "How to Use Grok – Complete Beginner's Tutorial (2026)",
+  "views": 29932,
+  "date": "2026-10-28",
+  "url": "https://youtu.be/lGSQV0lIGus",
+  "desc": "Learn how to use Grok AI in this complete beginner's tutorial. I'll walk you through how to get started with Grok, generate AI images and videos, analyze documents, research topics, write content, review trends on X (Twitter), create apps and code, and connect Grok to apps like Zapier.  \n\nConnect Grok to Zapier MCP to better automate your workflow for free: https://grok.kevinstratvert.com\n\nGrok is a powerful AI assistant that can help you with everyday tasks, creative projects, research, and productivity. Whether you are brand new to Grok or looking to explore more of its features, this step-by-step tutorial will show you six practical ways to put Grok to work.\n\nIn this Grok AI tutorial, you"
  },
  {
-  "channel": "Matt Wolfe",
-  "title": "MASSIVE AI Shake-Up That Changes Everything",
-  "views": 29521,
-  "date": "2026-11-12",
-  "url": "https://youtu.be/iTe0IB5Ugf8",
-  "desc": "Sharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\nLet’s work together!\n- Brand, sponsorship & business inquiries: business@mattwolfe.com\n\n#AINews #AITools #ArtificialIntelligence"
- },
- {
-  "channel": "AI Master",
-  "title": "How to Install DLSS 5 on ANY RTX GPU in One Click! (Full Tutorial)",
-  "views": 29510,
-  "date": "2026-11-08",
-  "url": "https://youtu.be/B_JmRIabBa4",
-  "desc": "#sponsored Try Topview for free! https://www.topview.ai/?via=artur\n🎓Go deeper into AI with full courses → https://aimaster.me/yt/dlss\n🤝 Exclusive brand partnership - https://aimaster.me/collab\n\nDLSS 5 Swapper — https://dlss5swapper.org\n\nDLSS 5 is officially available only in NBA 2K27, but there is a way to get DLSS 5 in single player PC games that never received support, on RTX 20, 30, and 40 series GPUs. In this DLSS 5 tutorial I show how to install DLSS 5 Swapper step by step, which ReShade and neural rendering settings to use, and how to set up DLSS 5 in older DirectX 11 games like Batman Arkham Knight. Then I break down the real DLSS 5 performance cost, how much FPS you lose on RTX 50 ca"
+  "channel": "Futurepedia",
+  "title": "Top 15 Tricks for INSTANTLY Better Claude Designs",
+  "views": 29836,
+  "date": "2026-11-04",
+  "url": "https://youtu.be/rU5llKCPPwI",
+  "desc": "*Claude Design Guide:* https://clickhubspot.com/9ev6\n\nMore from Futurepedia:\n👉 Get your free AI plan on Futurepedia 2.0: https://clickhubspot.com/691m\n\nSummary:\nClaude Design is an awesome tool, but out of the box you'll get very generic designs. These are my top 15 tips for getting incredible designs out of it that don't look like AI, starting with the basics for complete beginners and going all the way up to power-user moves.\nI cover where to find great references and how to have Claude find them for you, building your own reference library and design systems, exploring multiple directions and tweaks, killing the AI-sounding copy, polishing with Impeccable, using your own assets, bringing "
  },
  {
   "channel": "Matt Wolfe",
   "title": "Claude Code Just Called My Phone",
-  "views": 29445,
+  "views": 29763,
   "date": "2026-11-07",
   "url": "https://youtu.be/A5SfzBD6M3o",
   "desc": "Your AI agent can now call you when it needs help 🤯\n\nHere's how I'm using it with Claude Code to edit my videos:\n\n1. If it needs a creative decision, it calls my phone and asks.\n2. If a render finishes, it just sends me a text.\n3. If it doesn't need my input, it keeps working without interrupting me.\n\nNo more AI agents sitting in a terminal waiting for me to respond.\n\n@birdHQ makes this possible by letting AI agents make phone calls, send texts, and emails. And it works with Claude Code, ChatGPT, Cursor, and Codex.\n\nCheck out Bird at the link in my pinned comment.\n\n#BirdPartner #ClaudeCode #AIAgents #AITools #AI"
  },
  {
   "channel": "Kevin Stratvert",
-  "title": "How to Use Grok – Complete Beginner's Tutorial (2026)",
-  "views": 29444,
-  "date": "2026-10-28",
-  "url": "https://youtu.be/lGSQV0lIGus",
-  "desc": "Learn how to use Grok AI in this complete beginner's tutorial. I'll walk you through how to get started with Grok, generate AI images and videos, analyze documents, research topics, write content, review trends on X (Twitter), create apps and code, and connect Grok to apps like Zapier.  \n\nConnect Grok to Zapier MCP to better automate your workflow for free: https://grok.kevinstratvert.com\n\nGrok is a powerful AI assistant that can help you with everyday tasks, creative projects, research, and productivity. Whether you are brand new to Grok or looking to explore more of its features, this step-by-step tutorial will show you six practical ways to put Grok to work.\n\nIn this Grok AI tutorial, you"
+  "title": "Google AI Studio Voice Generator – Text to Speech Tutorial",
+  "views": 29474,
+  "date": "2026-11-11",
+  "url": "https://youtu.be/shpOEg__ICo",
+  "desc": "Learn how to use Google AI Studio's Voice Generator to create realistic AI voices, customize voice styles, and generate conversations between multiple speakers in this beginner-friendly tutorial.\n\nGoogle AI Studio makes it easy to transform a simple text prompt into natural-sounding audio, for free. You can create professional voiceovers, voicemail greetings, podcast conversations, training videos, and much more!\n\nIn this tutorial, you'll learn how to:\n - Access Google AI Studio's AI voice generator.\n - Convert text into realistic AI-generated speech.\n - Choose different AI voices and customize their delivery.\n - Use voice style instructions to control tone, personality, pacing, and emotion."
+ },
+ {
+  "channel": "The AI Advantage",
+  "title": "New Claude Fable 5.2 Is Insane (Yes, Again!)",
+  "views": 29328,
+  "date": "2026-11-12",
+  "url": "https://youtu.be/6RAjpFNnST8",
+  "desc": "Join The AI Advantage Club\nhttps://joinaiaclub.com/igor\n\nIf you use AI to make presentations, teach something or explain an idea, these examples are worth seeing. I show you a slide deck I made with Claude Fable 5.2, try an AI-built first-person shooter, and explore interactive experiences that teach winemaking and the history of Central Park.\n\nTry Claude\nhttps://claude.ai/\n\nOfficial Fable 5.2 announcement and benchmarks\nhttps://www.anthropic.com/claude-fable-and-mythos-5-2\n\nSaltline FPS game — Felix Rieseberg\nhttps://x.com/felixrieseberg/status/2119925633564463609\n\nSnow globe comparison — Mr Tactical\nhttps://x.com/MrTacticalX/status/2119949557664735583\n\nFirst Crush winemaking game — Kieran "
  },
  {
   "channel": "Kevin Stratvert",
@@ -868,17 +900,17 @@
   "desc": "Stop typing and start talking! Learn how to use ChatGPT Voice in this step-by-step tutorial for beginners. Discover how to have natural, back-and-forth conversations, brainstorm ideas, and use voice mode for more than just asking questions. You'll also learn how to change ChatGPT’s voice and preferred spoken language. \n\nIn this video, you’ll learn how to:\n• Start a ChatGPT Voice conversation and understand Voice vs. Dictation\n• Interrupt responses, ask follow-up questions, and adjust speaking speed\n• Brainstorm ideas for videos, presentations, projects, and travel\n• Practice job interviews, presentations, and more\n• Learn a language through conversations and role-playing\n• Upload files and d"
  },
  {
-  "channel": "Futurepedia",
-  "title": "Top 15 Tricks for INSTANTLY Better Claude Designs",
-  "views": 29107,
-  "date": "2026-11-04",
-  "url": "https://youtu.be/rU5llKCPPwI",
-  "desc": "*Claude Design Guide:* https://clickhubspot.com/9ev6\n\nMore from Futurepedia:\n👉 Get your free AI plan on Futurepedia 2.0: https://clickhubspot.com/691m\n\nSummary:\nClaude Design is an awesome tool, but out of the box you'll get very generic designs. These are my top 15 tips for getting incredible designs out of it that don't look like AI, starting with the basics for complete beginners and going all the way up to power-user moves.\nI cover where to find great references and how to have Claude find them for you, building your own reference library and design systems, exploring multiple directions and tweaks, killing the AI-sounding copy, polishing with Impeccable, using your own assets, bringing "
+  "channel": "Skill Leap AI",
+  "title": "You Won’t Believe the Websites Claude Can Build Now",
+  "views": 28914,
+  "date": "2026-11-05",
+  "url": "https://youtu.be/6m9Wihe9sJ8",
+  "desc": "*Guide to build stunning websites with Claude (75 ready-to-copy designs):* https://clickhubspot.com/p5lm\n\nGet your free AI plan on Futurepedia 2.0: https://clickhubspot.com/etov\n\nClaude made 75 designer quality websites in a single day, and I turned them into a free library. In this video I build 7 of them, from a marketing agency to a SaaS launch page with a rocket that launches as you scroll, without writing any code.\n⠀\nIn this Claude AI tutorial, I show you how to use Claude as an AI website builder, step by step, in the Claude desktop app. You pick a design, fill in your details, copy the prompt, and Claude builds the whole site, the design, the words, and the animation, then checks it o"
  },
  {
   "channel": "Parker Prompts",
   "title": "How the Top 1% Make Cinematic AI Videos (FREE System)",
-  "views": 28658,
+  "views": 28762,
   "date": "2026-10-20",
   "url": "https://youtu.be/LIK6ZayNndU",
   "desc": "Create Cinematic AI Videos 👉 https://parkerprompts.com/Higgsfield-1\n\nIn this video, I show how to connect Claude to Higgsfield and use GPT Image 2.5 Sunburst and Seedance 2.5 to create four cinematic AI short films without writing the generation prompts myself. I walk through setting up the MCP connector, creating consistent character and animal reference sheets, and generating complete 30-second films in realistic fantasy, hand-drawn anime, American cartoon, and black-and-white noir styles.\n\nGrab The FREE System 👉 https://parker-prompts.com/freesystem\n\nI'm Parker. I started this YouTube Channel with the goal to learn more about AI myself and to then pass on the knowledge to anyone willing t"
@@ -891,17 +923,9 @@
   "url": "https://youtu.be/EUjd_UBApoA"
  },
  {
-  "channel": "Skill Leap AI",
-  "title": "You Won’t Believe the Websites Claude Can Build Now",
-  "views": 27860,
-  "date": "2026-11-05",
-  "url": "https://youtu.be/6m9Wihe9sJ8",
-  "desc": "*Guide to build stunning websites with Claude (75 ready-to-copy designs):* https://clickhubspot.com/p5lm\n\nGet your free AI plan on Futurepedia 2.0: https://clickhubspot.com/etov\n\nClaude made 75 designer quality websites in a single day, and I turned them into a free library. In this video I build 7 of them, from a marketing agency to a SaaS launch page with a rocket that launches as you scroll, without writing any code.\n⠀\nIn this Claude AI tutorial, I show you how to use Claude as an AI website builder, step by step, in the Claude desktop app. You pick a design, fill in your details, copy the prompt, and Claude builds the whole site, the design, the words, and the animation, then checks it o"
- },
- {
   "channel": "Parker Prompts",
   "title": "Meta Muse Just Got a MASSIVE Upgrade (Muse Wonder)",
-  "views": 27770,
+  "views": 27822,
   "date": "2026-10-15",
   "url": "https://youtu.be/EAKbhcMLrlM",
   "desc": "Go from ABSOLUTE ZERO to using AI like the people who do this for a living👇\nhttps://www.skool.com/ai-fluency\n\nIn this video, I test Meta's Muse Wonder against five real tasks, including recreating a bedroom in interactive 3D, finding errors in hospital bills, remembering details across conversations, analyzing personal finances, and planning a five-day Tokyo trip. I also compare its results with Claude Opus 5.5 and GPT 6 Astra to see where Muse performs well and where the other models still do better.\n\nMeta Muse Test Prompts 👉\nhttps://parker-prompts.com/metamuse\n\nI'm Parker. I started this YouTube Channel with the goal to learn more about AI myself and to then pass on the knowledge to anyone"
@@ -956,12 +980,12 @@
   "url": "https://youtu.be/2kD9v7Q3vec"
  },
  {
-  "channel": "Kevin Stratvert",
-  "title": "Google AI Studio Voice Generator – Text to Speech Tutorial",
-  "views": 25314,
-  "date": "2026-11-11",
-  "url": "https://youtu.be/shpOEg__ICo",
-  "desc": "Learn how to use Google AI Studio's Voice Generator to create realistic AI voices, customize voice styles, and generate conversations between multiple speakers in this beginner-friendly tutorial.\n\nGoogle AI Studio makes it easy to transform a simple text prompt into natural-sounding audio, for free. You can create professional voiceovers, voicemail greetings, podcast conversations, training videos, and much more!\n\nIn this tutorial, you'll learn how to:\n - Access Google AI Studio's AI voice generator.\n - Convert text into realistic AI-generated speech.\n - Choose different AI voices and customize their delivery.\n - Use voice style instructions to control tone, personality, pacing, and emotion."
+  "channel": "Parker Prompts",
+  "title": "7 Hermes Agent Skills You NEED to Install Today",
+  "views": 24904,
+  "date": "2026-10-31",
+  "url": "https://youtu.be/gcQCedWUHkE",
+  "desc": "Host Hermes Agent on Your Own Server 👉 https://www.hostg.xyz/SHJvn\n\nIn this video, I test seven Hermes Agent skills that let it build and test apps, research websites, read articles faster, give shorter answers, challenge business plans, create narrated videos, and work across email, calendars, and spreadsheets. I also show how to set up Hermes on a Hostinger VPS, install each skill, and test it on real tasks.\n\nHermes Skills Setup 👉 https://parker-prompts.com/hermes-setup\n\nI'm Parker. I started this YouTube Channel with the goal to learn more about AI myself and to then pass on the knowledge to anyone willing to listen.\n\nlet's work together: partnerships @ parker-prompts.com"
  },
  {
   "channel": "AI Master",
@@ -969,14 +993,6 @@
   "views": 24868,
   "date": "2026-10-10",
   "url": "https://youtu.be/xF7fISoiTrI"
- },
- {
-  "channel": "Parker Prompts",
-  "title": "7 Hermes Agent Skills You NEED to Install Today",
-  "views": 24431,
-  "date": "2026-10-31",
-  "url": "https://youtu.be/gcQCedWUHkE",
-  "desc": "Host Hermes Agent on Your Own Server 👉 https://www.hostg.xyz/SHJvn\n\nIn this video, I test seven Hermes Agent skills that let it build and test apps, research websites, read articles faster, give shorter answers, challenge business plans, create narrated videos, and work across email, calendars, and spreadsheets. I also show how to set up Hermes on a Hostinger VPS, install each skill, and test it on real tasks.\n\nHermes Skills Setup 👉 https://parker-prompts.com/hermes-setup\n\nI'm Parker. I started this YouTube Channel with the goal to learn more about AI myself and to then pass on the knowledge to anyone willing to listen.\n\nlet's work together: partnerships @ parker-prompts.com"
  },
  {
   "channel": "AI Master",
@@ -1002,7 +1018,7 @@
  {
   "channel": "Kevin Stratvert",
   "title": "How to Create PowerPoint Presentations with AI (Genspark Tutorial)",
-  "views": 24025,
+  "views": 24099,
   "date": "2026-10-26",
   "url": "https://youtu.be/QmE1YuNPbiM",
   "desc": "Learn how to create presentations with AI using Genspark AI Slides. In this beginner tutorial, I'll show you how to turn a prompt into a slide deck, customize text and images with AI or the slide editor, add slides, and export your presentation to PowerPoint. We'll also look at presenting, sharing, and saving your presentation's design as a reusable Skill.\n\nTry Genspark AI Slides: https://aislides.kevinstratvert.com\n\nGenspark's new Free Quota gives Plus and Pro subscribers a weekly allowance for AI Slides in Standard mode, so covered tasks don't use monthly credits while quota remains. Once the allowance is used, tasks switch to monthly credits. Ultra mode uses credits directly. Check your a"
@@ -1010,10 +1026,18 @@
  {
   "channel": "Parker Prompts",
   "title": "ChatGPT Work Gives You Superpowers, Here's How to Unlock It",
-  "views": 23111,
+  "views": 23483,
   "date": "2026-11-02",
   "url": "https://youtu.be/Q8CkwmY7BME",
   "desc": "Go from ABSOLUTE ZERO to using AI like the people who do this for a living👇\nhttps://www.skool.com/ai-fluency\n\nIn this video, I show how to use ChatGPT Work to automate everyday tasks, from organizing a full year of bank statements into a spreadsheet and dashboard to turning ad scripts into detailed storyboards. I also build a reusable storyboard skill, research competitors' ads using AI agents, and create a presentation with new ad concepts based on that research.\n\nI'm Parker. I started this YouTube Channel with the goal to learn more about AI myself and to then pass on the knowledge to anyone willing to listen.\n\nlet's work together: partnerships @ parker-prompts.com"
+ },
+ {
+  "channel": "AI Master",
+  "title": "How to Set Up Claude for Small Business (AI Automation Guide)",
+  "views": 22697,
+  "date": "2026-10-31",
+  "url": "https://youtu.be/e8Ywi7AprYw",
+  "desc": "#sponsored Use code AIMASTER to get your .Online domain at just $0.99 for the first year https://get.online/aimaster2\n\n🚀 Learn AI with hands-on courses → https://aimaster.me/yt/claudebusiness\n🤝 Exclusive brand partnership → https://aimaster.me/collab\n\nCan Claude actually run the routine parts of a small business instead of waiting for a new prompt every time? In this video, I install Anthropic’s Small Business plugin, connect Gmail, Google Calendar and QuickBooks, and set it up around a real cleaning-company workflow. From there, Claude builds Monday briefs, drafts replies to new leads, follows up on overdue invoices, creates client proposals, learns company-specific rules, and eventually ru"
  },
  {
   "channel": "Nate Herk | AI Automation",
@@ -1028,14 +1052,6 @@
   "views": 22222,
   "date": "2026-10-09",
   "url": "https://youtu.be/QLv4WCKVqd0"
- },
- {
-  "channel": "AI Master",
-  "title": "How to Set Up Claude for Small Business (AI Automation Guide)",
-  "views": 21766,
-  "date": "2026-10-31",
-  "url": "https://youtu.be/e8Ywi7AprYw",
-  "desc": "#sponsored Use code AIMASTER to get your .Online domain at just $0.99 for the first year https://get.online/aimaster2\n\n🚀 Learn AI with hands-on courses → https://aimaster.me/yt/claudebusiness\n🤝 Exclusive brand partnership → https://aimaster.me/collab\n\nCan Claude actually run the routine parts of a small business instead of waiting for a new prompt every time? In this video, I install Anthropic’s Small Business plugin, connect Gmail, Google Calendar and QuickBooks, and set it up around a real cleaning-company workflow. From there, Claude builds Monday briefs, drafts replies to new leads, follows up on overdue invoices, creates client proposals, learns company-specific rules, and eventually ru"
  },
  {
   "channel": "Parker Prompts",
@@ -1082,24 +1098,25 @@
   "url": "https://youtu.be/aIrrq3CLSKM"
  },
  {
+  "channel": "Matt Wolfe",
+  "title": "When you give a humanoid roller skates",
+  "views": 19609,
+  "date": "2026-11-10",
+  "url": "https://youtu.be/isqwXApzV5E",
+  "desc": "Sharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\nLet’s work together!\n- Brand, sponsorship & business inquiries: business@mattwolfe.com\n\n#AINews #AITools #ArtificialIntelligence"
+ },
+ {
   "channel": "Kevin Stratvert",
   "title": "Video Editor with Customizable Templates: Build a Full Video Fast",
-  "views": 19080,
+  "views": 19336,
   "date": "2026-10-30",
   "url": "https://youtu.be/Df_FbS8PxTE",
   "desc": "Learn how to use Movavi Video Editor 2027 to create professional-looking videos quickly and easily with customizable video templates, drag-and-drop editing tools, and AI-powered features. Download Movavi Video Editor for FREE (Windows and Mac): https://mova.vi/KEVIN Use code Kevin for 25% OFF a 1-year subscription!\n\nIn this step-by-step Movavi tutorial we'll walk through how to edit a complete product review video from start to finish. You'll learn how to customize ready-made video templates, arrange clips using Movavi's flexible Blocks system, add transitions and music, improve audio quality, and use AI tools to simplify the video editing process.\n\nIn this video, you'll learn how to:\n   - U"
  },
  {
-  "channel": "Matt Wolfe",
-  "title": "The Robot Butler Will Clean Up After You",
-  "views": 18321,
-  "date": "2026-10-26",
-  "url": "https://youtu.be/B8YFkYY20OY"
- },
- {
   "channel": "Kevin Stratvert",
   "title": "vidIQ Tutorial for Beginners (Step-by-Step)",
-  "views": 18157,
+  "views": 18571,
   "date": "2026-11-03",
   "url": "https://youtu.be/I_192sI3UPM",
   "desc": "Learn how to use vidIQ for YouTube in this step-by-step beginner tutorial. I'll show you how to connect your channel, find video ideas with AI Coach, research keywords and search demand, spot outlier videos, and improve your titles, thumbnails, and descriptions. We'll also explore the vidIQ browser extension and connect vidIQ to ChatGPT to analyze your channel and identify opportunities to improve.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Try vidIQ: https://vidiq.com/kevinstratvert\n\n⌚ TIMESTAMPS\n00:00 - Introduction\n00:50 - Get started with vidIQ\n01:32 - Connect your YouTube channel\n02:17 - Find video ideas with AI Coach\n04:25 - Research keywords and search demand\n06:08 - Explore matching searc"
@@ -1107,10 +1124,17 @@
  {
   "channel": "Parker Prompts",
   "title": "7 NEW Claude Mods Use Cases (Try These Now)",
-  "views": 17976,
+  "views": 18476,
   "date": "2026-11-07",
   "url": "https://youtu.be/a0BqNDnPM2I",
   "desc": "Go from ABSOLUTE ZERO to using AI like the people who do this for a living👇\nhttps://www.skool.com/ai-fluency\n\nIn this video, I show seven custom Claude Mods that change how the desktop app looks and works, including a theme switcher, automatic prompt rewriting, simpler explanations, and live computer usage monitoring. I also demonstrate Mods that track chat caching, hide sensitive information during screen recordings, and enforce custom rules, plus how to install all seven together.\n\nMods Shown:\n1. Theme Switcher\n2. Auto Prompter\n3. Jargon Buster\n4. Load\n5. Chat Thermometer\n6. Fake Data Mode\n7. Rule Enforcer\n\nI'm Parker. I started this YouTube Channel with the goal to learn more about AI mys"
+ },
+ {
+  "channel": "Matt Wolfe",
+  "title": "The Robot Butler Will Clean Up After You",
+  "views": 18321,
+  "date": "2026-10-26",
+  "url": "https://youtu.be/B8YFkYY20OY"
  },
  {
   "channel": "The AI Advantage",
@@ -1122,7 +1146,7 @@
  {
   "channel": "Matt Wolfe",
   "title": "That is Some Crazy Fabric",
-  "views": 17436,
+  "views": 17337,
   "date": "2026-11-07",
   "url": "https://youtu.be/w3z3Fa7ACt8",
   "desc": "Sharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\nLet’s work together!\n- Brand, sponsorship & business inquiries: business@mattwolfe.com\n\n#AINews #AITools #ArtificialIntelligence"
@@ -1135,20 +1159,28 @@
   "url": "https://youtu.be/4O0VWfZZsj4"
  },
  {
+  "channel": "Futurepedia",
+  "title": "One Claude chat can run all your other chats",
+  "views": 16961,
+  "date": "2026-11-09",
+  "url": "https://youtu.be/JMrZEdQrHP8",
+  "desc": "How to set up a master session that checks on, starts and manages your other Claude Code chats."
+ },
+ {
   "channel": "Nate Herk | AI Automation",
   "title": "What's your favorite AI model?",
-  "views": 16377,
+  "views": 16405,
   "date": "2026-11-04",
   "url": "https://youtu.be/wuTk_G_UtCI",
   "desc": "I asked people at Oracle AI World for their favorite AI model. What's yours?"
  },
  {
   "channel": "Matt Wolfe",
-  "title": "When you give a humanoid roller skates",
-  "views": 16234,
-  "date": "2026-11-10",
-  "url": "https://youtu.be/isqwXApzV5E",
-  "desc": "Sharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\nLet’s work together!\n- Brand, sponsorship & business inquiries: business@mattwolfe.com\n\n#AINews #AITools #ArtificialIntelligence"
+  "title": "This controls games characters AND robots",
+  "views": 16275,
+  "date": "2026-11-08",
+  "url": "https://youtu.be/jKjir4-HmQI",
+  "desc": "Sharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\n\nLet’s work together!\n- Brand, sponsorship & business inquiries: business@mattwolfe.com\n\n#AINews #AITools #ArtificialIntelligence"
  },
  {
   "channel": "Kevin Stratvert",
@@ -1158,12 +1190,12 @@
   "url": "https://youtu.be/8nds44yMR0g"
  },
  {
-  "channel": "Matt Wolfe",
-  "title": "This controls games characters AND robots",
-  "views": 16123,
-  "date": "2026-11-08",
-  "url": "https://youtu.be/jKjir4-HmQI",
-  "desc": "Sharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\n\nLet’s work together!\n- Brand, sponsorship & business inquiries: business@mattwolfe.com\n\n#AINews #AITools #ArtificialIntelligence"
+  "channel": "Kevin Stratvert",
+  "title": "Why Laptops Are Getting So Expensive",
+  "views": 16175,
+  "date": "2026-11-12",
+  "url": "https://youtu.be/WAdkVxs-O4Y",
+  "desc": "Why are laptops getting so expensive? Learn how the AI boom is putting pressure on RAM and SSD prices, why chipmakers can't quickly increase supply, and what it means for your next computer. We'll look at Apple's MacBook Air price increases, how a laptop can become a worse deal without its price changing, and what to check before deciding whether to buy now or wait.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Apple MacBook Air pricing (U.S.): https://www.apple.com/shop/buy-mac\n- Apple M5 MacBook Air launch announcement: https://www.apple.com/newsroom/2026/03/apple-introduces-the-new-macbook-air-with-m5/\n- TrendForce: CPU, RAM, and SSD cost breakdown: https://www.trendforce.com/presscenter/news/202"
  },
  {
   "channel": "Kevin Stratvert",
@@ -1182,18 +1214,10 @@
  {
   "channel": "Nate Herk | AI Automation",
   "title": "Which AI tool do people at Oracle AI World use the most?",
-  "views": 15395,
+  "views": 15412,
   "date": "2026-11-03",
   "url": "https://youtu.be/iboJevEybdg",
   "desc": "I asked people at Oracle AI World which AI tool they use the most. What's yours?"
- },
- {
-  "channel": "Futurepedia",
-  "title": "One Claude chat can run all your other chats",
-  "views": 15391,
-  "date": "2026-11-09",
-  "url": "https://youtu.be/JMrZEdQrHP8",
-  "desc": "How to set up a master session that checks on, starts and manages your other Claude Code chats."
  },
  {
   "channel": "AI Master",
@@ -1204,6 +1228,14 @@
  },
  {
   "channel": "AI Master",
+  "title": "1000+ Hours of Learning Claude Code in 25 Minutes (Beginner to Pro Tutorial)",
+  "views": 14623,
+  "date": "2026-11-04",
+  "url": "https://youtu.be/ec0StkHdO18",
+  "desc": "#sponsored Use code AIMASTER to get a discount on Incogni paid plan: https://incogni.com/aimaster\n\n🧠 Learn Claude Code and AI with 200+ lessons, then practice with the latest models → https://aimaster.me/yt/claudecode100\n🤝 Exclusive brand partnership → https://aimaster.me/collab\n\nI’ve spent 1,000+ hours inside Claude Code, and this is the full course squeezed into one video. This Claude Code tutorial walks you through 6 levels, from beginner to pro. It covers CLAUDE.md, permissions, plan mode, prompting, tests, hooks, skills, MCP servers, token limits, subagents, worktrees and automation with claude -p. You’ll see which level you’re on and how to reach the next one without burning through yo"
+ },
+ {
+  "channel": "AI Master",
   "title": "ULTIMATE ChatGPT Guide: How to Use ChatGPT-6 For Beginners in 2026",
   "views": 14250,
   "date": "2026-10-16",
@@ -1211,26 +1243,10 @@
  },
  {
   "channel": "AI Master",
-  "title": "1000+ Hours of Learning Claude Code in 25 Minutes (Beginner to Pro Tutorial)",
-  "views": 14083,
-  "date": "2026-11-04",
-  "url": "https://youtu.be/ec0StkHdO18",
-  "desc": "#sponsored Use code AIMASTER to get a discount on Incogni paid plan: https://incogni.com/aimaster\n\n🧠 Learn Claude Code and AI with 200+ lessons, then practice with the latest models → https://aimaster.me/yt/claudecode100\n🤝 Exclusive brand partnership → https://aimaster.me/collab\n\nI’ve spent 1,000+ hours inside Claude Code, and this is the full course squeezed into one video. This Claude Code tutorial walks you through 6 levels, from beginner to pro. It covers CLAUDE.md, permissions, plan mode, prompting, tests, hooks, skills, MCP servers, token limits, subagents, worktrees and automation with claude -p. You’ll see which level you’re on and how to reach the next one without burning through yo"
- },
- {
-  "channel": "AI Master",
   "title": "FULL Nano Banana 2.1 Tutorial: How to Use Google's AI Image Generator",
   "views": 13720,
   "date": "2026-10-28",
   "url": "https://youtu.be/os6UjJXo0p8"
- },
- {
-  "channel": "The AI Advantage",
-  "title": "New Claude Fable 5.2 Is Insane (Yes, Again!)",
-  "views": 13536,
-  "date": "2026-11-12",
-  "url": "https://youtu.be/6RAjpFNnST8",
-  "desc": "Join The AI Advantage Club\nhttps://joinaiaclub.com/igor\n\nIf you use AI to make presentations, teach something or explain an idea, these examples are worth seeing. I show you a slide deck I made with Claude Fable 5.2, try an AI-built first-person shooter, and explore interactive experiences that teach winemaking and the history of Central Park.\n\nTry Claude\nhttps://claude.ai/\n\nOfficial Fable 5.2 announcement and benchmarks\nhttps://www.anthropic.com/claude-fable-and-mythos-5-2\n\nSaltline FPS game — Felix Rieseberg\nhttps://x.com/felixrieseberg/status/2119925633564463609\n\nSnow globe comparison — Mr Tactical\nhttps://x.com/MrTacticalX/status/2119949557664735583\n\nFirst Crush winemaking game — Kieran "
  },
  {
   "channel": "Matt Wolfe",
@@ -1245,6 +1261,14 @@
   "views": 13469,
   "date": "2026-10-18",
   "url": "https://youtu.be/mEKgkM6cqzE"
+ },
+ {
+  "channel": "Parker Prompts",
+  "title": "How To Create Insane AI UGC Ads With Opus 5.5",
+  "views": 13159,
+  "date": "2026-11-12",
+  "url": "https://youtu.be/R7HqeICmqSo",
+  "desc": "Create realistic AI UGC Ads 👉 https://parkerprompts.com/Higgsfield-1\n\nIn this video, I show how to create 14 realistic UGC product ads using Claude Opus 5.5 and Higgsfield, without filming or writing scripts by hand. I walk through connecting both tools, using my free Real UGC Ads skill, generating product sheets and video concepts, creating ads with Seedance 2.5, editing captions and cuts inside Claude, and keeping the same AI character consistent across multiple ads.\n\nI'm Parker. I started this YouTube Channel with the goal to learn more about AI myself and to then pass on the knowledge to anyone willing to listen.\n\nlet's work together: partnerships @ parker-prompts.com\n\nThis video is spon"
  },
  {
   "channel": "Matt Wolfe",
@@ -1263,10 +1287,26 @@
  {
   "channel": "Matt Wolfe",
   "title": "What will people REALLY use these for?",
-  "views": 12473,
+  "views": 12522,
   "date": "2026-11-05",
   "url": "https://youtu.be/hniPlxcQ7X4",
   "desc": "Sharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\nLet’s work together!\n- Brand, sponsorship & business inquiries: business@mattwolfe.com\n\n#AINews #AITools #ArtificialIntelligence"
+ },
+ {
+  "channel": "Skill Leap AI",
+  "title": "Claude Fable 5.2 Is Scary Good",
+  "views": 12478,
+  "date": "2026-11-12",
+  "url": "https://youtu.be/B3KSjklvg-I",
+  "desc": "*Build Stunning Websites with Claude (75 ready-to-copy designs):* https://clickhubspot.com/zrbw\n\nGet your free AI plan on Futurepedia 2.0: https://clickhubspot.com/etov\n\nHere's how to use Claude Fable 5.2 on real work, from redoing a website to turning a business plan into a 3D place you can walk through.\n⠀\n18 months ago, I had a Claude model make a chess game. In this video, Claude Fable 5.2 builds a full 3D chess game you can play against the computer from one prompt, where the pieces actually fight, and then I give it ten real jobs and show you exactly how I did each one.\n⠀\nFirst, I redo my own website, howfinity.com, using a design from the free Claude Website Library and the Code tab in"
+ },
+ {
+  "channel": "Matt Wolfe",
+  "title": "How to automate your photo library",
+  "views": 12223,
+  "date": "2026-11-12",
+  "url": "https://youtu.be/IehCboBcYsA",
+  "desc": "Learn more about the decision model: https://developers.openai.com/api/docs/guides/decisions\nhttps://platform.openai.com/decisions\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\nLet’s work together!\n- Brand, sponsorship & business inquiries: business@mattwolfe.com\n\n#AINews #AITools #ArtificialIntelligence"
  },
  {
   "channel": "Matt Wolfe",
@@ -1278,7 +1318,7 @@
  {
   "channel": "Nate Herk | AI Automation",
   "title": "Do you say please to AI?",
-  "views": 11888,
+  "views": 11901,
   "date": "2026-11-02",
   "url": "https://youtu.be/1I2dLDAFNaY",
   "desc": "Do you say please to AI? I asked people at Oracle AI World."
@@ -1286,7 +1326,7 @@
  {
   "channel": "Futurepedia",
   "title": "Free Claude 2.0 Setup Guide",
-  "views": 11758,
+  "views": 11818,
   "date": "2026-11-06",
   "url": "https://youtu.be/BMsezHlEVW4",
   "desc": "Claude 2.0 is here, and it's basically a whole new app.\n\nI put together a free Claude 2.0 setup kit to go with it:\n- A setup checklist\n- An interactive tour of the new layout\n- Prompts for everything I show\n- A starter pack of mods I've tested, so you can customize Claude's interface to your own workflow\n\nFree Guide is linked in the linked video!"
@@ -1305,14 +1345,6 @@
   "views": 11448,
   "date": "2026-10-13",
   "url": "https://youtu.be/b0jA6fkGsk8"
- },
- {
-  "channel": "Parker Prompts",
-  "title": "How To Create Insane AI UGC Ads With Opus 5.5",
-  "views": 11439,
-  "date": "2026-11-12",
-  "url": "https://youtu.be/R7HqeICmqSo",
-  "desc": "Create realistic AI UGC Ads 👉 https://parkerprompts.com/Higgsfield-1\n\nIn this video, I show how to create 14 realistic UGC product ads using Claude Opus 5.5 and Higgsfield, without filming or writing scripts by hand. I walk through connecting both tools, using my free Real UGC Ads skill, generating product sheets and video concepts, creating ads with Seedance 2.5, editing captions and cuts inside Claude, and keeping the same AI character consistent across multiple ads.\n\nI'm Parker. I started this YouTube Channel with the goal to learn more about AI myself and to then pass on the knowledge to anyone willing to listen.\n\nlet's work together: partnerships @ parker-prompts.com\n\nThis video is spon"
  },
  {
   "channel": "Matt Wolfe",
@@ -1346,10 +1378,18 @@
  {
   "channel": "Kevin Stratvert",
   "title": "This AI Lets You Edit Presentations by Drawing! 🤯",
-  "views": 10261,
+  "views": 10319,
   "date": "2026-10-26",
   "url": "https://youtu.be/2Ly7Q6H4bWg",
   "desc": "Try Genspark AI Slides: https://aislides.kevinstratvert.com\n\nSponsored by @GensparkProduct\n#Genspark #WorkwithGenspark #20xCheaper"
+ },
+ {
+  "channel": "AI Master",
+  "title": "How to Create Viral AI Influencers With Higgsfield AI (Step-By-Step Guide)",
+  "views": 10161,
+  "date": "2026-11-02",
+  "url": "https://youtu.be/Q2vLbqB_mww",
+  "desc": "#sponsored Start creating with Higgsfield https://higgsfield.ai/s/ai-influencer-iamaimaster-FgRDyg\n\n🎬 Learn more about AI video creation → https://aimaster.me/yt/ai_influencers\n🤝 Exclusive brand partnership - https://aimaster.me/collab\n\nWhy are AI influencers racking up millions of views, who actually pays for those views, and how do you build your own? In this video I create an AI influencer from scratch with Higgsfield AI, launch her on a brand-new Instagram account, and show the real first numbers.\n\nWhat you'll see:\n- Who pays for the views: how brands run paid creator campaigns on marketplaces like Launchpoint, and how per-eligible-view payouts work (with a simple example, not a promise)"
  },
  {
   "channel": "Metics Media",
@@ -1359,6 +1399,30 @@
   "url": "https://youtu.be/Ns6sfNYHYjc"
  },
  {
+  "channel": "Nate Herk | AI Automation",
+  "title": "Claude Can Now Run Your Omnisend Account for You",
+  "views": 10128,
+  "date": "2026-11-11",
+  "url": "https://youtu.be/3iylmS2k3Is",
+  "desc": "Claude can now work inside your Omnisend account, using your real data to build the campaign. Go to my Instagram, DM me \"FLOW\" and I'll send you my code for 30% off your first 3 months. 👇 @omnisend #ad \n\nhttps://your.omnisend.com/nate_herk, code NATEH30"
+ },
+ {
+  "channel": "AI Master",
+  "title": "How to Make AI Video Ads With Just a Product Photo (AI Marketing Tutorial)",
+  "views": 10050,
+  "date": "2026-10-31",
+  "url": "https://youtu.be/gGscsK57CE0",
+  "desc": "#sponsored Try Topview for free! https://www.topview.ai/?via=artur\n\n🎓Go deeper into AI with full courses → https://aimaster.me/yt/topview\n🤝 Exclusive brand partnership → https://aimaster.me/collab\n\nCan an AI agent turn real product photos into a TikTok ad without you manually choosing every model, shot, and production step? In this video, I connect Topview to Codex, give the agent a real product and a clear brief, then let it research the market, choose a direction, build the production plan, generate the assets, and assemble the ad. I then review the product consistency, test alternative hooks, and end with two finished versions built for a clean A/B test.\n\n📌 Timestamps:\n\n00:00 — Can an AI "
+ },
+ {
+  "channel": "Futurepedia",
+  "title": "Claude 2 0 powerful code features for maximum organization",
+  "views": 9915,
+  "date": "2026-11-07",
+  "url": "https://youtu.be/3VTn_1SNktA",
+  "desc": "Claude Code's new Session Rail makes everything easier to manage. \n\nSee where sessions are running, track active folders, control chats remotely from your phone, and monitor your 1 million token context window to understand exactly what Claude is working on."
+ },
+ {
   "channel": "Futurepedia",
   "title": "Claude just made motion graphics with zero video generator",
   "views": 9912,
@@ -1366,20 +1430,28 @@
   "url": "https://youtu.be/2gVfS19Hudk"
  },
  {
-  "channel": "Futurepedia",
-  "title": "Claude 2 0 powerful code features for maximum organization",
-  "views": 9890,
-  "date": "2026-11-07",
-  "url": "https://youtu.be/3VTn_1SNktA",
-  "desc": "Claude Code's new Session Rail makes everything easier to manage. \n\nSee where sessions are running, track active folders, control chats remotely from your phone, and monitor your 1 million token context window to understand exactly what Claude is working on."
- },
- {
   "channel": "Nate Herk | AI Automation",
   "title": "Do people say please to AI?",
-  "views": 9877,
+  "views": 9867,
   "date": "2026-11-06",
   "url": "https://youtu.be/16lpGeMZlzY",
   "desc": "I asked people at Oracle AI World if they say please to AI. Do you?"
+ },
+ {
+  "channel": "Skill Leap AI",
+  "title": "ChatGPT Images Just Got a Huge Upgrade (53 Prompts Included)",
+  "views": 9790,
+  "date": "2026-11-10",
+  "url": "https://youtu.be/9FtoFKfzkv0",
+  "desc": "*Get the AI Image Lab (53 image prompts for ads, products, mascots and GIFs):* https://clickhubspot.com/i2vz\n\nGet your free AI plan on Futurepedia 2.0: https://clickhubspot.com/etov\n\nChatGPT Images can make GIFs now. In this video I show every GIF option in the new ChatGPT Images 2.6 update, and how much better its edits got.\n⠀\nYou'll see how to turn a rough sketch into an animated mascot, change a GIF's playback speed, and change the animation just by describing it in the chat. I also save an image as a reference once and use it in any chat by typing @ and its name.\n⠀\nThen I use the ChatGPT image generator as an AI GIF generator for real work: reaction GIFs of myself from one selfie, a prod"
+ },
+ {
+  "channel": "Futurepedia",
+  "title": "Claude can now add features to itself",
+  "views": 9529,
+  "date": "2026-11-12",
+  "url": "https://youtu.be/P_I98bc9uHg",
+  "desc": "Mods let Claude add features to its own app. You describe what you want and it builds it in."
  },
  {
   "channel": "The AI Advantage",
@@ -1396,41 +1468,9 @@
   "url": "https://youtu.be/XQuRgVP9-Sc"
  },
  {
-  "channel": "AI Master",
-  "title": "How to Create Viral AI Influencers With Higgsfield AI (Step-By-Step Guide)",
-  "views": 9475,
-  "date": "2026-11-02",
-  "url": "https://youtu.be/Q2vLbqB_mww",
-  "desc": "#sponsored Start creating with Higgsfield https://higgsfield.ai/s/ai-influencer-iamaimaster-FgRDyg\n\n🎬 Learn more about AI video creation → https://aimaster.me/yt/ai_influencers\n🤝 Exclusive brand partnership - https://aimaster.me/collab\n\nWhy are AI influencers racking up millions of views, who actually pays for those views, and how do you build your own? In this video I create an AI influencer from scratch with Higgsfield AI, launch her on a brand-new Instagram account, and show the real first numbers.\n\nWhat you'll see:\n- Who pays for the views: how brands run paid creator campaigns on marketplaces like Launchpoint, and how per-eligible-view payouts work (with a simple example, not a promise)"
- },
- {
-  "channel": "Skill Leap AI",
-  "title": "ChatGPT Images Just Got a Huge Upgrade (53 Prompts Included)",
-  "views": 9297,
-  "date": "2026-11-10",
-  "url": "https://youtu.be/9FtoFKfzkv0",
-  "desc": "*Get the AI Image Lab (53 image prompts for ads, products, mascots and GIFs):* https://clickhubspot.com/i2vz\n\nGet your free AI plan on Futurepedia 2.0: https://clickhubspot.com/etov\n\nChatGPT Images can make GIFs now. In this video I show every GIF option in the new ChatGPT Images 2.6 update, and how much better its edits got.\n⠀\nYou'll see how to turn a rough sketch into an animated mascot, change a GIF's playback speed, and change the animation just by describing it in the chat. I also save an image as a reference once and use it in any chat by typing @ and its name.\n⠀\nThen I use the ChatGPT image generator as an AI GIF generator for real work: reaction GIFs of myself from one selfie, a prod"
- },
- {
-  "channel": "Nate Herk | AI Automation",
-  "title": "Claude Can Now Run Your Omnisend Account for You",
-  "views": 9284,
-  "date": "2026-11-11",
-  "url": "https://youtu.be/3iylmS2k3Is",
-  "desc": "Claude can now work inside your Omnisend account, using your real data to build the campaign. Go to my Instagram, DM me \"FLOW\" and I'll send you my code for 30% off your first 3 months. 👇 @omnisend #ad \n\nhttps://your.omnisend.com/nate_herk, code NATEH30"
- },
- {
-  "channel": "AI Master",
-  "title": "How to Make AI Video Ads With Just a Product Photo (AI Marketing Tutorial)",
-  "views": 9256,
-  "date": "2026-10-31",
-  "url": "https://youtu.be/gGscsK57CE0",
-  "desc": "#sponsored Try Topview for free! https://www.topview.ai/?via=artur\n\n🎓Go deeper into AI with full courses → https://aimaster.me/yt/topview\n🤝 Exclusive brand partnership → https://aimaster.me/collab\n\nCan an AI agent turn real product photos into a TikTok ad without you manually choosing every model, shot, and production step? In this video, I connect Topview to Codex, give the agent a real product and a clear brief, then let it research the market, choose a direction, build the production plan, generate the assets, and assemble the ad. I then review the product consistency, test alternative hooks, and end with two finished versions built for a clean A/B test.\n\n📌 Timestamps:\n\n00:00 — Can an AI "
- },
- {
   "channel": "Nate Herk | AI Automation",
   "title": "Favorite person in AI? Asking people at Oracle AI World",
-  "views": 9195,
+  "views": 9239,
   "date": "2026-11-04",
   "url": "https://youtu.be/eJqHvjD4060",
   "desc": "Who's your favorite person in AI? I asked people at Oracle AI World."
@@ -1443,36 +1483,28 @@
   "url": "https://youtu.be/4sGplZdBy6A"
  },
  {
-  "channel": "Matt Wolfe",
-  "title": "How to automate your photo library",
-  "views": 9131,
-  "date": "2026-11-12",
-  "url": "https://youtu.be/IehCboBcYsA",
-  "desc": "Learn more about the decision model: https://developers.openai.com/api/docs/guides/decisions\nhttps://platform.openai.com/decisions\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\nLet’s work together!\n- Brand, sponsorship & business inquiries: business@mattwolfe.com\n\n#AINews #AITools #ArtificialIntelligence"
- },
- {
-  "channel": "Kevin Stratvert",
-  "title": "Why Laptops Are Getting So Expensive",
-  "views": 8989,
-  "date": "2026-11-12",
-  "url": "https://youtu.be/WAdkVxs-O4Y",
-  "desc": "Why are laptops getting so expensive? Learn how the AI boom is putting pressure on RAM and SSD prices, why chipmakers can't quickly increase supply, and what it means for your next computer. We'll look at Apple's MacBook Air price increases, how a laptop can become a worse deal without its price changing, and what to check before deciding whether to buy now or wait.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Apple MacBook Air pricing (U.S.): https://www.apple.com/shop/buy-mac\n- Apple M5 MacBook Air launch announcement: https://www.apple.com/newsroom/2026/03/apple-introduces-the-new-macbook-air-with-m5/\n- TrendForce: CPU, RAM, and SSD cost breakdown: https://www.trendforce.com/presscenter/news/202"
- },
- {
-  "channel": "Futurepedia",
-  "title": "Claude video generator creates amazing storyboards",
-  "views": 8720,
-  "date": "2026-10-27",
-  "url": "https://youtu.be/KgYS_jaHdYo",
-  "desc": "Claude video generator creates outstanding storyboards.\n\nStop generating blind: this AI prompt shows you a storyboard before it runs the full thing.\n\nBy default, the prompt asks Claude for a visual storyboard first. You get images of each major beat, so you can see what the video will look like before running the full generation.\n\nAlready know the style? Switch the storyboard off and ask for edits afterwards.\n\nThen hit copy prompt. It grabs the full prompt to recreate the style plus the topic you added, so in Claude \"all I have to do is paste it in and hit send.\""
+  "channel": "Metics Media",
+  "title": "Hostinger WordPress Tutorial 2026 - Full Course for Beginners",
+  "views": 8953,
+  "date": "2026-11-08",
+  "url": "https://youtu.be/TX8djQV2wKo",
+  "desc": "Build a real WordPress website in one sitting, no code. This Hostinger WordPress tutorial covers the plan page, the right install, a free theme and template, and going live on your own free domain.\n✅ Hostinger (Exclusive Discount): https://meticsmedia.com/hostinger-QXR\n\nA complete WordPress course for beginners, start to finish, on Hostinger. This WordPress tutorial for beginners covers picking a hosting plan without overpaying, installing WordPress the right way (Hostinger offers two paths and only one keeps the rest of this working), clearing out the pre-installed plugins, installing the free Blocksy theme, and importing a professionally designed template. From there you customize everythi"
  },
  {
   "channel": "AI Master",
   "title": "Ultimate Gemini Guide: How to Use Gemini 4 Argon (Beginner to Pro)",
-  "views": 8629,
+  "views": 8845,
   "date": "2026-11-06",
   "url": "https://youtu.be/42DKLSfo10E",
   "desc": "#sponsored Try HeyGen https://www.heygen.com/?sid=rewardful&utm_content=creator&utm_medium=influencera&via=artur-vishnevskii\n\n🧠 Never miss latest Gemini Updates! Join to my 15,000+ students → \nhttps://aimaster.me/yt/argon\n🤝 Exclusive brand partnership - https://aimaster.me/collab\n\nGemini 4 Argon is Google's most powerful AI model yet, and there is no free version. In this full guide, I put it through real tasks from start to finish, so you can decide whether it is worth paying for.\n\n00:00 Hook \n00:15 Demo 1: A working app from one prompt \n03:46 Where to get Argon, and how to test it cheaply \n05:14 The honesty check \n07:36 Demo 2: A contract, read by the contractor's lawyer \n09:15 Demo 3: Wha"
+ },
+ {
+  "channel": "Futurepedia",
+  "title": "Claude video generator creates amazing storyboards",
+  "views": 8749,
+  "date": "2026-10-27",
+  "url": "https://youtu.be/KgYS_jaHdYo",
+  "desc": "Claude video generator creates outstanding storyboards.\n\nStop generating blind: this AI prompt shows you a storyboard before it runs the full thing.\n\nBy default, the prompt asks Claude for a visual storyboard first. You get images of each major beat, so you can see what the video will look like before running the full generation.\n\nAlready know the style? Switch the storyboard off and ask for edits afterwards.\n\nThen hit copy prompt. It grabs the full prompt to recreate the style plus the topic you added, so in Claude \"all I have to do is paste it in and hit send.\""
  },
  {
   "channel": "The AI Advantage",
@@ -1482,6 +1514,14 @@
   "url": "https://youtu.be/I9ja4gEbBiI"
  },
  {
+  "channel": "Futurepedia",
+  "title": "Claude just got rebuilt so hard an engineer called it Claude 2.0",
+  "views": 8438,
+  "date": "2026-11-04",
+  "url": "https://youtu.be/WLJC4s8Nh1M",
+  "desc": "The Claude desktop app just got a total overhaul.\n\nOne of the engineers who worked on Claude Code said \"it's basically a Claude 2.0.\"\n\nThe layout change is a big one. Cowork has been merged into Chat, so now there are only two tabs: Home and Code."
+ },
+ {
   "channel": "Matt Wolfe",
   "title": "3 Critical Tasks AI Can Automate For You",
   "views": 8431,
@@ -1489,36 +1529,20 @@
   "url": "https://youtu.be/evXFML_Rnc0"
  },
  {
-  "channel": "Futurepedia",
-  "title": "Claude just got rebuilt so hard an engineer called it Claude 2.0",
-  "views": 8418,
-  "date": "2026-11-04",
-  "url": "https://youtu.be/WLJC4s8Nh1M",
-  "desc": "The Claude desktop app just got a total overhaul.\n\nOne of the engineers who worked on Claude Code said \"it's basically a Claude 2.0.\"\n\nThe layout change is a big one. Cowork has been merged into Chat, so now there are only two tabs: Home and Code."
- },
- {
   "channel": "Metics Media",
-  "title": "Hostinger WordPress Tutorial 2026 - Full Course for Beginners",
-  "views": 8357,
-  "date": "2026-11-08",
-  "url": "https://youtu.be/TX8djQV2wKo",
-  "desc": "Build a real WordPress website in one sitting, no code. This Hostinger WordPress tutorial covers the plan page, the right install, a free theme and template, and going live on your own free domain.\n✅ Hostinger (Exclusive Discount): https://meticsmedia.com/hostinger-QXR\n\nA complete WordPress course for beginners, start to finish, on Hostinger. This WordPress tutorial for beginners covers picking a hosting plan without overpaying, installing WordPress the right way (Hostinger offers two paths and only one keeps the rest of this working), clearing out the pre-installed plugins, installing the free Blocksy theme, and importing a professionally designed template. From there you customize everythi"
+  "title": "How to Design a Shopify Store for a Clothing Brand (2026)",
+  "views": 8247,
+  "date": "2026-11-05",
+  "url": "https://youtu.be/CwI1hvi-Zgc",
+  "desc": "Shopify clothing store tutorial for beginners: design your clothing brand’s store from scratch with the free Horizon theme, add products in every size and color, and launch on your own domain, ready to take real orders.\n✅ Shopify (Free Trial + 3 Months for $1/Mo.): https://meticsmedia.com/shopify-XTF\n✅ Higgsfield (Best Deal): https://meticsmedia.com/higgsfield-XTF\n\nWhether you’re launching your first clothing brand or redesigning a store you already have, this step-by-step Shopify tutorial takes you from a blank store to a finished one. You’ll customize the Horizon theme in the Shopify theme editor, design a homepage with a hero image, a collection grid, and featured products, and add your c"
  },
  {
   "channel": "Matt Wolfe",
   "title": "This Airtaxi is Ready For Primetime!",
-  "views": 8064,
+  "views": 8120,
   "date": "2026-11-10",
   "url": "https://youtu.be/GcFRheDNh5U",
   "desc": "Sharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\n\nLet’s work together!\n- Brand, sponsorship & business inquiries: business@mattwolfe.com\n\n#AINews #AITools #ArtificialIntelligence"
- },
- {
-  "channel": "Metics Media",
-  "title": "How to Design a Shopify Store for a Clothing Brand (2026)",
-  "views": 8047,
-  "date": "2026-11-05",
-  "url": "https://youtu.be/CwI1hvi-Zgc",
-  "desc": "Shopify clothing store tutorial for beginners: design your clothing brand’s store from scratch with the free Horizon theme, add products in every size and color, and launch on your own domain, ready to take real orders.\n✅ Shopify (Free Trial + 3 Months for $1/Mo.): https://meticsmedia.com/shopify-XTF\n✅ Higgsfield (Best Deal): https://meticsmedia.com/higgsfield-XTF\n\nWhether you’re launching your first clothing brand or redesigning a store you already have, this step-by-step Shopify tutorial takes you from a blank store to a finished one. You’ll customize the Horizon theme in the Shopify theme editor, design a homepage with a hero image, a collection grid, and featured products, and add your c"
  },
  {
   "channel": "The AI Advantage",
@@ -1526,14 +1550,6 @@
   "views": 7882,
   "date": "2026-10-16",
   "url": "https://youtu.be/fP4_LH2CrB8"
- },
- {
-  "channel": "Skill Leap AI",
-  "title": "Claude Fable 5.2 Is Scary Good",
-  "views": 7541,
-  "date": "2026-11-12",
-  "url": "https://youtu.be/B3KSjklvg-I",
-  "desc": "*Build Stunning Websites with Claude (75 ready-to-copy designs):* https://clickhubspot.com/zrbw\n\nGet your free AI plan on Futurepedia 2.0: https://clickhubspot.com/etov\n\nHere's how to use Claude Fable 5.2 on real work, from redoing a website to turning a business plan into a 3D place you can walk through.\n⠀\n18 months ago, I had a Claude model make a chess game. In this video, Claude Fable 5.2 builds a full 3D chess game you can play against the computer from one prompt, where the pieces actually fight, and then I give it ten real jobs and show you exactly how I did each one.\n⠀\nFirst, I redo my own website, howfinity.com, using a design from the free Claude Website Library and the Code tab in"
  },
  {
   "channel": "Futurepedia",
@@ -1573,6 +1589,14 @@
   "url": "https://youtu.be/MCgavq9YpP0"
  },
  {
+  "channel": "Futurepedia",
+  "title": "One scene, 86 animation styles, all made by Claude",
+  "views": 6809,
+  "date": "2026-11-11",
+  "url": "https://youtu.be/2V0GoU9e3fo",
+  "desc": "The same little robot scene in 13 animation styles. Every frame is code Claude wrote, no video generator. All 86 styles and their copy-paste prompts are in the related video."
+ },
+ {
   "channel": "AI Master",
   "title": "Ultimate Jev Tutorial: How to Set Up & Use Jev AI for Beginners",
   "views": 6683,
@@ -1583,7 +1607,7 @@
  {
   "channel": "Nate Herk | AI Automation",
   "title": "Would you pick an AI co-founder or a human one?",
-  "views": 6491,
+  "views": 6665,
   "date": "2026-11-07",
   "url": "https://youtu.be/9qvqlSxgzgk",
   "desc": "I asked people at Oracle AI World if they'd pick an AI co-founder or a human one. Which would you pick?"
@@ -1591,7 +1615,7 @@
  {
   "channel": "Metics Media",
   "title": "Hostinger WooCommerce Tutorial (2026) - Full Setup Guide",
-  "views": 6391,
+  "views": 6497,
   "date": "2026-11-01",
   "url": "https://youtu.be/dPUjUIXnbc4",
   "desc": "This Hostinger WooCommerce tutorial walks you through setting up a full online store from start to finish. Go from a blank Hostinger account to a live WooCommerce store that's ready to take orders, step by step.\n✅ Hostinger (Exclusive Discount): https://meticsmedia.com/hostinger-PEA\n\nLearn how to set up WooCommerce on Hostinger with no coding and no design experience. Everything lives in one place, so your hosting, your free domain, your WordPress install, and all of your store settings are handled from a single account. You'll start by getting your plan and claiming your free domain, then let Hostinger install WordPress for you. From there you'll add a free theme and a ready-made store temp"
@@ -1605,17 +1629,33 @@
   "desc": "I asked people at Oracle AI World for the dumbest thing they've asked AI. What's yours?"
  },
  {
+  "channel": "The AI Advantage",
+  "title": "Claude’s New Whiteboards, Sheets & Data: What You Can Do Now.",
+  "views": 6266,
+  "date": "2026-11-13",
+  "url": "https://youtu.be/SDipcfxxa8s",
+  "desc": "Get the FREE Dots PDF\nhttps://learn.aiadvantage.com/free-ai-assistant-pdf\n\nJoin The AI Advantage Club\nhttps://joinaiaclub.com/igor\n\nClaude’s new Whiteboards, Sheets and Data features give you more ways to work with AI. But which ones are actually useful—and is there a reason to switch from Google Sheets?\n\nTry Claude:\nhttps://claude.ai/\n\nChatGPT Spaces — getting started:\nhttps://help.openai.com/en/articles/20001549-getting-started-with-space-in-chatgpt\n\nSet up your business on ChatGPT:\nhttps://help.openai.com/en/articles/20001635-setting-up-your-business-on-chatgpt\n\nDots custom instructions:\nhttps://learn.chatgpt.com/docs/dots/controls\n\nChapters:\n0:00 This Week’s AI Updates\n0:47 What’s New in"
+ },
+ {
   "channel": "Nate Herk | AI Automation",
   "title": "Describe AI agents in 2027 in one word",
-  "views": 6166,
+  "views": 6212,
   "date": "2026-11-05",
   "url": "https://youtu.be/P-zrKj-odIE",
   "desc": "Describe AI agents in 2027 in one word. I asked people at Oracle AI World."
  },
  {
+  "channel": "AI Master",
+  "title": "How to Automate Instagram DMs With Claude AI (Beginner's Guide)",
+  "views": 5927,
+  "date": "2026-11-06",
+  "url": "https://youtu.be/YUxvBstwv9U",
+  "desc": "#sponsored 👉 Try Blotato🔥: https://blotato.com/?ref=artur\n🎁 🖤Use code BLACKFRIDAY2026 for 50% off your x 3 months, or use AIMASTERS30 for 30% off\n\n🎓Go deeper into AI with full courses → https://aimaster.me/yt/dm_automation\n🤝 Exclusive brand partnership - https://aimaster.me/collab\n\nComment a keyword, get a DM instantly. In this video I show how to build Instagram and Facebook comment-to-DM automations with Blotato, first by hand and then directly from Claude with a single prompt.\n\nWhat you'll learn:\n- How a comment-to-DM automation works and how to build one in the Blotato dashboard: trigger, keyword, message and button\n- How to connect Blotato to Claude with an API key and a custom connecto"
+ },
+ {
   "channel": "Nate Herk | AI Automation",
   "title": "AI co-founder or human co-founder?",
-  "views": 5915,
+  "views": 5925,
   "date": "2026-11-03",
   "url": "https://youtu.be/fkeK5J7sjpI",
   "desc": "AI co-founder or human co-founder? I asked people at Oracle AI World."
@@ -1630,7 +1670,7 @@
  {
   "channel": "The AI Advantage",
   "title": "How I Use Claude in My Video Edits",
-  "views": 5709,
+  "views": 5722,
   "date": "2026-11-05",
   "url": "https://youtu.be/L0fLLr5Oej0",
   "desc": "Want to save time, get more leverage, and stop figuring this AI stuff out from scratch? I put the clearest map and support inside the AI Advantage Club: https://joinaiaclub.com/igor\n\nLet's Connect:\n📸 Instagram: https://www.instagram.com/igorpogany/"
@@ -1643,11 +1683,27 @@
   "url": "https://youtu.be/A6nf3vplEPY"
  },
  {
+  "channel": "AI Master",
+  "title": "How to Build a Fully Functional Web App with Claude AI (No Code)",
+  "views": 5463,
+  "date": "2026-10-30",
+  "url": "https://youtu.be/MZ3hEzqjJTg",
+  "desc": "#sponsored Build with Softr! https://bit.ly/4zTdUIG\n\n🎓Go deeper into AI with full courses → https://aimaster.me/yt/vibecode\n🤝 Exclusive brand partnership - https://aimaster.me/collab\n\nVibe coding a pretty page is easy. Turning it into a secure business app your team and clients can actually log into is the hard part. In this tutorial, I build a complete campaign management app for an ad agency just by chatting with Claude, with a real database, user roles, permissions and control, and a client portal, without writing a single line of code.\n\nHere's the problem with most AI-built internal tools: someone in marketing or ops vibe-codes a page, the team starts relying on it, and then IT has to re"
+ },
+ {
   "channel": "Futurepedia",
   "title": "Remotion vs  Hyperframes. One prompt. One map skill",
   "views": 5326,
   "date": "2026-10-05",
   "url": "https://youtu.be/RxB56eE5BRc"
+ },
+ {
+  "channel": "Kevin Stratvert",
+  "title": "You’ve Tried ChatGPT. But Have You Tried Grok? 🤖",
+  "views": 5310,
+  "date": "2026-11-09",
+  "url": "https://youtu.be/frXyEsq-qao",
+  "desc": "What can Grok AI do? Watch the full tutorial to learn how to generate images and videos, build apps, explore conversations on X, and write better prompts to get the results you want.\n\n🎬Watch the full tutorial: https://youtu.be/lGSQV0lIGus\nSponsored by Zapier \n#Grok #GrokAI #AITools"
  },
  {
   "channel": "Futurepedia",
@@ -1658,19 +1714,19 @@
   "desc": "Claude's video generator is so good at making mind-blowing science videos.\n\nI used one of our free templates from the style atlas, entered a prompt, added a voiceover and boom, an amazing science video about stars, perfect for presentation."
  },
  {
+  "channel": "The AI Advantage",
+  "title": "OpenAI Dots: New Updates",
+  "views": 5196,
+  "date": "2026-11-02",
+  "url": "https://youtu.be/KItEnnHeNz0",
+  "desc": "Want to save time, get more leverage, and stop figuring this AI stuff out from scratch? I put the clearest map and support inside the AI Advantage Club: https://joinaiaclub.com/igor\n\nLet's Connect:\n📸 Instagram: https://www.instagram.com/igorpogany/"
+ },
+ {
   "channel": "Kevin Stratvert",
   "title": "Zapier Just Got a Major Upgrade 🚀",
   "views": 5191,
   "date": "2026-10-01",
   "url": "https://youtu.be/3HQNVSbcllI"
- },
- {
-  "channel": "The AI Advantage",
-  "title": "OpenAI Dots: New Updates",
-  "views": 5184,
-  "date": "2026-11-02",
-  "url": "https://youtu.be/KItEnnHeNz0",
-  "desc": "Want to save time, get more leverage, and stop figuring this AI stuff out from scratch? I put the clearest map and support inside the AI Advantage Club: https://joinaiaclub.com/igor\n\nLet's Connect:\n📸 Instagram: https://www.instagram.com/igorpogany/"
  },
  {
   "channel": "The AI Advantage",
@@ -1680,52 +1736,28 @@
   "url": "https://youtu.be/wtm2Dl1PHtk"
  },
  {
-  "channel": "AI Master",
-  "title": "How to Automate Instagram DMs With Claude AI (Beginner's Guide)",
-  "views": 5036,
-  "date": "2026-11-06",
-  "url": "https://youtu.be/YUxvBstwv9U",
-  "desc": "#sponsored 👉 Try Blotato🔥: https://blotato.com/?ref=artur\n🎁 🖤Use code BLACKFRIDAY2026 for 50% off your x 3 months, or use AIMASTERS30 for 30% off\n\n🎓Go deeper into AI with full courses → https://aimaster.me/yt/dm_automation\n🤝 Exclusive brand partnership - https://aimaster.me/collab\n\nComment a keyword, get a DM instantly. In this video I show how to build Instagram and Facebook comment-to-DM automations with Blotato, first by hand and then directly from Claude with a single prompt.\n\nWhat you'll learn:\n- How a comment-to-DM automation works and how to build one in the Blotato dashboard: trigger, keyword, message and button\n- How to connect Blotato to Claude with an API key and a custom connecto"
- },
- {
-  "channel": "Kevin Stratvert",
-  "title": "You’ve Tried ChatGPT. But Have You Tried Grok? 🤖",
-  "views": 5029,
+  "channel": "Skill Leap AI",
+  "title": "Most People Use Claude the Wrong Way",
+  "views": 4994,
   "date": "2026-11-09",
-  "url": "https://youtu.be/frXyEsq-qao",
-  "desc": "What can Grok AI do? Watch the full tutorial to learn how to generate images and videos, build apps, explore conversations on X, and write better prompts to get the results you want.\n\n🎬Watch the full tutorial: https://youtu.be/lGSQV0lIGus\nSponsored by Zapier \n#Grok #GrokAI #AITools"
- },
- {
-  "channel": "Futurepedia",
-  "title": "One scene, 86 animation styles, all made by Claude",
-  "views": 4910,
-  "date": "2026-11-11",
-  "url": "https://youtu.be/2V0GoU9e3fo",
-  "desc": "The same little robot scene in 13 animation styles. Every frame is code Claude wrote, no video generator. All 86 styles and their copy-paste prompts are in the related video."
- },
- {
-  "channel": "AI Master",
-  "title": "How to Build a Fully Functional Web App with Claude AI (No Code)",
-  "views": 4830,
-  "date": "2026-10-30",
-  "url": "https://youtu.be/MZ3hEzqjJTg",
-  "desc": "#sponsored Build with Softr! https://bit.ly/4zTdUIG\n\n🎓Go deeper into AI with full courses → https://aimaster.me/yt/vibecode\n🤝 Exclusive brand partnership - https://aimaster.me/collab\n\nVibe coding a pretty page is easy. Turning it into a secure business app your team and clients can actually log into is the hard part. In this tutorial, I build a complete campaign management app for an ad agency just by chatting with Claude, with a real database, user roles, permissions and control, and a client portal, without writing a single line of code.\n\nHere's the problem with most AI-built internal tools: someone in marketing or ops vibe-codes a page, the team starts relying on it, and then IT has to re"
+  "url": "https://youtu.be/blDMSLpFCzw",
+  "desc": "Build a website with Claude from a prompt, then change anything in plain words.\n\nThis design was made for a plumber, with a giant phone number feeding a copper pipe that carries water down the page. I made it in the Claude desktop app using the Claude Code tab, and when I typed in a change to the water in the pipe, Claude made it for me.\n\n#Claude #ClaudeCode #AI"
  },
  {
   "channel": "Nate Herk | AI Automation",
   "title": "Would you let AI text for you for a week?",
-  "views": 4824,
+  "views": 4891,
   "date": "2026-11-05",
   "url": "https://youtu.be/UD_F6EJ86PY",
   "desc": "I asked people at Oracle AI World if they'd let AI answer their texts for a week. Would you?"
  },
  {
-  "channel": "Skill Leap AI",
-  "title": "Most People Use Claude the Wrong Way",
-  "views": 4771,
+  "channel": "AI Master",
+  "title": "How to Save 90% of Your Claude Tokens — Full Model Management Guide",
+  "views": 4874,
   "date": "2026-11-09",
-  "url": "https://youtu.be/blDMSLpFCzw",
-  "desc": "Build a website with Claude from a prompt, then change anything in plain words.\n\nThis design was made for a plumber, with a giant phone number feeding a copper pipe that carries water down the page. I made it in the Claude desktop app using the Claude Code tab, and when I typed in a change to the water in the pipe, Claude made it for me.\n\n#Claude #ClaudeCode #AI"
+  "url": "https://youtu.be/-l6H36dG1r8",
+  "desc": "#sponsored Take control of your online privacy! Try Gologin for FREE: https://bit.ly/gologin_ai-master\n🎁Promo code: AIM40\n\n🚀 Learn Claude AI with hands-on courses → https://aimaster.me/yt/claude_models\n🤝 Exclusive brand partnership → https://aimaster.me/collab\n\nAre you wasting your Claude limits by using Opus for tasks that Haiku could handle just as well? I tested Claude Haiku, Sonnet, and Opus on five different challenges — everyday tasks, creative work, document analysis, coding, and hard reasoning — to find out when paying for a bigger model actually makes a difference.\n\n📌 Timestamps\n00:00 — Are you wasting your Claude limits?\n00:22 — Haiku vs. Sonnet vs. Opus: everyday tasks\n03:48 — Cre"
  },
  {
   "channel": "AI Master",
@@ -1749,6 +1781,14 @@
   "url": "https://youtu.be/DqUewrLQQfg"
  },
  {
+  "channel": "Futurepedia",
+  "title": "Claude designs look generic until you do this.",
+  "views": 4415,
+  "date": "2026-11-09",
+  "url": "https://youtu.be/6w9PtRnSP50",
+  "desc": "Claude designs look generic until you do this.\n\nClaude wants to give you something it knows will look good, so it plays it safe. That's why its generations default to \"common, middle of the road styles. Not bad, but not unique.\"\n\nThe fix is to give it references: Screenshots, Websites, Examples of specific things you like\n\nThen tell Claude exactly what to take from each one. The reference doesn't have to be a whole website.\n\nFree Claude Design guide link in linked video."
+ },
+ {
   "channel": "The AI Advantage",
   "title": "Grokbot with ANY AI Model?",
   "views": 4293,
@@ -1763,44 +1803,44 @@
   "url": "https://youtu.be/BXG4h1KLUTs"
  },
  {
-  "channel": "Futurepedia",
-  "title": "Claude designs look generic until you do this.",
-  "views": 4150,
-  "date": "2026-11-09",
-  "url": "https://youtu.be/6w9PtRnSP50",
-  "desc": "Claude designs look generic until you do this.\n\nClaude wants to give you something it knows will look good, so it plays it safe. That's why its generations default to \"common, middle of the road styles. Not bad, but not unique.\"\n\nThe fix is to give it references: Screenshots, Websites, Examples of specific things you like\n\nThen tell Claude exactly what to take from each one. The reference doesn't have to be a whole website.\n\nFree Claude Design guide link in linked video."
- },
- {
-  "channel": "Futurepedia",
-  "title": "Claude's Artifacts now even more powerful",
-  "views": 4111,
-  "date": "2026-11-05",
-  "url": "https://youtu.be/zl2APMcV-mk",
-  "desc": "Claude's Artifacts now come in five new formats: Documents, Slides, Design, Dashboard and Motion\n\nDocs is like a Google Docs you can chat with. Slides you can create and present from Claude, or download as a PowerPoint. Design is \"extremely powerful for designing prototypes, social posts, websites, apps, or any visual work.\"\n\nMotion builds animations and motion graphics entirely through code, so there's no AI video generator involved. Dashboard and Motion are still in beta, so you might not see them just yet, but they are powerful."
- },
- {
   "channel": "Nate Herk | AI Automation",
   "title": "What's the dumbest thing you've asked AI?",
-  "views": 4095,
+  "views": 4169,
   "date": "2026-11-06",
   "url": "https://youtu.be/EN9IcNncjxE",
   "desc": "What's the dumbest thing you've asked AI? I asked people at Oracle AI World."
  },
  {
+  "channel": "Futurepedia",
+  "title": "Claude's Artifacts now even more powerful",
+  "views": 4165,
+  "date": "2026-11-05",
+  "url": "https://youtu.be/zl2APMcV-mk",
+  "desc": "Claude's Artifacts now come in five new formats: Documents, Slides, Design, Dashboard and Motion\n\nDocs is like a Google Docs you can chat with. Slides you can create and present from Claude, or download as a PowerPoint. Design is \"extremely powerful for designing prototypes, social posts, websites, apps, or any visual work.\"\n\nMotion builds animations and motion graphics entirely through code, so there's no AI video generator involved. Dashboard and Motion are still in beta, so you might not see them just yet, but they are powerful."
+ },
+ {
   "channel": "The AI Advantage",
   "title": "ChatGPT Just Doubled Its Usage Limits!",
-  "views": 4083,
+  "views": 4087,
   "date": "2026-11-02",
   "url": "https://youtu.be/IFruWOvf098",
   "desc": "Want to save time, get more leverage, and stop figuring this AI stuff out from scratch? I put the clearest map and support inside the AI Advantage Club: https://joinaiaclub.com/igor\n\nLet's Connect:\n📸 Instagram: https://www.instagram.com/igorpogany/"
  },
  {
+  "channel": "Futurepedia",
+  "title": "Make Claude keep working until it's actually done",
+  "views": 4007,
+  "date": "2026-11-11",
+  "url": "https://youtu.be/qVEuTps-wyw",
+  "desc": "/goal keeps Claude Code working until the job is done, as long as the finish line is something it can check."
+ },
+ {
   "channel": "AI Master",
-  "title": "How to Save 90% of Your Claude Tokens — Full Model Management Guide",
-  "views": 4005,
-  "date": "2026-11-09",
-  "url": "https://youtu.be/-l6H36dG1r8",
-  "desc": "#sponsored Take control of your online privacy! Try Gologin for FREE: https://bit.ly/gologin_ai-master\n🎁Promo code: AIM40\n\n🚀 Learn Claude AI with hands-on courses → https://aimaster.me/yt/claude_models\n🤝 Exclusive brand partnership → https://aimaster.me/collab\n\nAre you wasting your Claude limits by using Opus for tasks that Haiku could handle just as well? I tested Claude Haiku, Sonnet, and Opus on five different challenges — everyday tasks, creative work, document analysis, coding, and hard reasoning — to find out when paying for a bigger model actually makes a difference.\n\n📌 Timestamps\n00:00 — Are you wasting your Claude limits?\n00:22 — Haiku vs. Sonnet vs. Opus: everyday tasks\n03:48 — Cre"
+  "title": "How to Use AI Voice Typing in Any App (Speech to Text Guide) | Typeless",
+  "views": 3919,
+  "date": "2026-11-07",
+  "url": "https://youtu.be/ppLYqflktAk",
+  "desc": "#sponsored Hit the link and get a $1 coupon for Typeless monthly plan, or up to $25 coupon if you subscribe to annual plan right away! → https://www.typeless.com/?via=1104\n\n🎓Go deeper into AI with full courses → https://aimaster.me/yt/typeless\n🤝 Exclusive brand partnership - https://aimaster.me/collab\n\nYou give AI four-word prompts because typing is slow, and you get generic answers back. In this video I put Typeless, an AI voice keyboard, through eight tests on a real video production workflow: talking instead of typing in Claude, Google Docs, Slack, Gmail and Ask Anything, and comparing the raw Mac dictation with what Typeless produces.\n\nChapters:\n\n00:00 Hook\n00:21 Test 1 - A game from one"
  },
  {
   "channel": "AI Master",
@@ -1812,7 +1852,7 @@
  {
   "channel": "The AI Advantage",
   "title": "Grok Bot Just Got Pages!",
-  "views": 3782,
+  "views": 3793,
   "date": "2026-11-03",
   "url": "https://youtu.be/aOV21mHETXQ",
   "desc": "Want to save time, get more leverage, and stop figuring this AI stuff out from scratch? I put the clearest map and support inside the AI Advantage Club: https://joinaiaclub.com/igor\n\nLet's Connect:\n📸 Instagram: https://www.instagram.com/igorpogany/"
@@ -1823,6 +1863,14 @@
   "views": 3691,
   "date": "2026-10-16",
   "url": "https://youtu.be/BGJELJSCpmc"
+ },
+ {
+  "channel": "The AI Advantage",
+  "title": "ChatGPT Can Make GIFs Now!",
+  "views": 3592,
+  "date": "2026-11-09",
+  "url": "https://youtu.be/iZm0eJm-YNQ",
+  "desc": "Want to save time, get more leverage, and stop figuring this AI stuff out from scratch? I put the clearest map and support inside the AI Advantage Club: https://joinaiaclub.com/igor\n\nLet's Connect:\n📸 Instagram: https://www.instagram.com/igorpogany/"
  },
  {
   "channel": "Metics Media",
@@ -1839,38 +1887,6 @@
   "url": "https://youtu.be/wTYKO_5nonc"
  },
  {
-  "channel": "Futurepedia",
-  "title": "Make Claude keep working until it's actually done",
-  "views": 3550,
-  "date": "2026-11-11",
-  "url": "https://youtu.be/qVEuTps-wyw",
-  "desc": "/goal keeps Claude Code working until the job is done, as long as the finish line is something it can check."
- },
- {
-  "channel": "The AI Advantage",
-  "title": "ChatGPT Can Make GIFs Now!",
-  "views": 3535,
-  "date": "2026-11-09",
-  "url": "https://youtu.be/iZm0eJm-YNQ",
-  "desc": "Want to save time, get more leverage, and stop figuring this AI stuff out from scratch? I put the clearest map and support inside the AI Advantage Club: https://joinaiaclub.com/igor\n\nLet's Connect:\n📸 Instagram: https://www.instagram.com/igorpogany/"
- },
- {
-  "channel": "The AI Advantage",
-  "title": "Switch ChatGPT Accounts in Seconds!",
-  "views": 3527,
-  "date": "2026-11-09",
-  "url": "https://youtu.be/YKsFWC39qok",
-  "desc": "Want to save time, get more leverage, and stop figuring this AI stuff out from scratch? I put the clearest map and support inside the AI Advantage Club: https://joinaiaclub.com/igor\n\nLet's Connect:\n📸 Instagram: https://www.instagram.com/igorpogany/"
- },
- {
-  "channel": "AI Master",
-  "title": "How to Use AI Voice Typing in Any App (Speech to Text Guide) | Typeless",
-  "views": 3508,
-  "date": "2026-11-07",
-  "url": "https://youtu.be/ppLYqflktAk",
-  "desc": "#sponsored Hit the link and get a $1 coupon for Typeless monthly plan, or up to $25 coupon if you subscribe to annual plan right away! → https://www.typeless.com/?via=1104\n\n🎓Go deeper into AI with full courses → https://aimaster.me/yt/typeless\n🤝 Exclusive brand partnership - https://aimaster.me/collab\n\nYou give AI four-word prompts because typing is slow, and you get generic answers back. In this video I put Typeless, an AI voice keyboard, through eight tests on a real video production workflow: talking instead of typing in Claude, Google Docs, Slack, Gmail and Ask Anything, and comparing the raw Mac dictation with what Typeless produces.\n\nChapters:\n\n00:00 Hook\n00:21 Test 1 - A game from one"
- },
- {
   "channel": "AI Master",
   "title": "How to Build a Full-Stack App with AI in 2026 (AI App Builder)",
   "views": 3487,
@@ -1884,6 +1900,14 @@
   "date": "2026-10-23",
   "url": "https://youtu.be/eMFpzUYNv3o",
   "desc": "Add captions and timestamps in Claude video generator.\n\nStop paying for captions. Here's how to get a word-by-word SRT from Claude in one prompt.\n\nDrop your audio file into Claude and say: \"Give me a word level SRT transcript for this that I can copy paste.\"\n\nIf you only ask for an SRT transcript, you get timing by line instead of for each word. That works for longer videos, since the word-level files get gigantic. For short clips, having it down to the word is nice.\n\nPaste the SRT into your caption editor and you're done.\n\nLink to out free atlas in linked video."
+ },
+ {
+  "channel": "The AI Advantage",
+  "title": "Switch ChatGPT Accounts in Seconds!",
+  "views": 3482,
+  "date": "2026-11-09",
+  "url": "https://youtu.be/YKsFWC39qok",
+  "desc": "Want to save time, get more leverage, and stop figuring this AI stuff out from scratch? I put the clearest map and support inside the AI Advantage Club: https://joinaiaclub.com/igor\n\nLet's Connect:\n📸 Instagram: https://www.instagram.com/igorpogany/"
  },
  {
   "channel": "Futurepedia",
@@ -1907,6 +1931,14 @@
   "url": "https://youtu.be/9X-4QbVC7dM"
  },
  {
+  "channel": "Metics Media",
+  "title": "Learn 80% of XERO in Under 20 Minutes",
+  "views": 3339,
+  "date": "2026-11-12",
+  "url": "https://youtu.be/8PMkzGgV5e0",
+  "desc": "This Xero tutorial for beginners shows you how to use Xero accounting software to send invoices, enter bills, reconcile your bank account, and read your reports.\n✅ XERO (90% Off Your First 6 Months): https://meticsmedia.com/xero-CFX\n\nThis step-by-step Xero tutorial is for small business owners, freelancers, and anyone who needs Xero for a job or a course. You don’t need any accounting experience. You’ll sign up, choose the right plan, and tour the Xero homepage, which older videos call the dashboard. Then you’ll follow one invoice around the four menus you need for everyday bookkeeping, which I call the Money Loop. You’ll create and send an invoice, enter a bill, import a CSV bank statement,"
+ },
+ {
   "channel": "AI Master",
   "title": "How to Vibe Code in 2026: Build Your First App with AI",
   "views": 3328,
@@ -1914,12 +1946,12 @@
   "url": "https://youtu.be/Wt7EiF9yFg0"
  },
  {
-  "channel": "Futurepedia",
-  "title": "Claude can now add features to itself",
-  "views": 3320,
-  "date": "2026-11-12",
-  "url": "https://youtu.be/P_I98bc9uHg",
-  "desc": "Mods let Claude add features to its own app. You describe what you want and it builds it in."
+  "channel": "Skill Leap AI",
+  "title": "Turn a floor plan into a 3D house you can walk through with Claude",
+  "views": 3318,
+  "date": "2026-11-02",
+  "url": "https://youtu.be/pKHOq0HiEQU",
+  "desc": "I gave Claude a floor plan, and now I can walk through the kitchen, the hallway and the bedrooms on my computer, with a mini floor plan and a blue dot showing exactly where I am. You can also give it an address, and it finds the listing and builds the house for you."
  },
  {
   "channel": "The AI Advantage",
@@ -1931,7 +1963,7 @@
  {
   "channel": "Futurepedia",
   "title": "Futurepedia 2.0 is live!",
-  "views": 3268,
+  "views": 3286,
   "date": "2026-10-28",
   "url": "https://youtu.be/isalixh-V0c",
   "desc": "You've been getting Futurepedia in your inbox for a while. Today it gets a lot more useful.\n\nFuturepedia 2.0 is live.\n\nThere's a new AI tool every day, and most of it is noise. So we rebuilt Futurepedia around one idea: you shouldn't have to sort through all of it to find the few tools that fit your job.\nHere's how it works. You tell Futurepedia about your work: your role, your goals, your budget, and how much AI you've used. It builds you a dashboard around your answers. Basically, your own AI plan.\n\nIt's a short form, and your plan is ready as soon as you finish it."
@@ -1942,14 +1974,6 @@
   "views": 3210,
   "date": "2026-10-23",
   "url": "https://youtu.be/nRuMcliU_uo"
- },
- {
-  "channel": "Skill Leap AI",
-  "title": "Turn a floor plan into a 3D house you can walk through with Claude",
-  "views": 3173,
-  "date": "2026-11-02",
-  "url": "https://youtu.be/pKHOq0HiEQU",
-  "desc": "I gave Claude a floor plan, and now I can walk through the kitchen, the hallway and the bedrooms on my computer, with a mini floor plan and a blue dot showing exactly where I am. You can also give it an address, and it finds the listing and builds the house for you."
  },
  {
   "channel": "The AI Advantage",
@@ -1974,6 +1998,14 @@
   "url": "https://youtu.be/qm9Dy19qEss"
  },
  {
+  "channel": "Metics Media",
+  "title": "Florida LLC - How to Start an LLC in Florida in 10 Minutes (2026)",
+  "views": 3060,
+  "date": "2026-11-10",
+  "url": "https://youtu.be/O5TTxm9MstU",
+  "desc": "Learn how to start an LLC in Florida, broken down into seven easy steps. Go from choosing your name to a filed Florida LLC, with every cost and decision explained before you pay anything.\n✅ Northwest Registered Agent (Best Deal): https://meticsmedia.com/northwest-VUQ\n\nStarting an LLC in Florida used to mean a pile of paperwork, and this walkthrough breaks the whole thing into seven simple steps you can follow in order. You'll check that your business name is actually available, decide whether to be your own registered agent or keep your home address off the public record, and file your Articles of Organization with the state. From there we cover your EIN, your operating agreement, and openin"
+ },
+ {
   "channel": "Futurepedia",
   "title": "Gemini Skills for repeatable tasks",
   "views": 3047,
@@ -1988,6 +2020,14 @@
   "url": "https://youtu.be/vhY7OGIh1v0"
  },
  {
+  "channel": "Skill Leap AI",
+  "title": "Claude Duet Sends Me a Daily Morning Brief",
+  "views": 2930,
+  "date": "2026-11-07",
+  "url": "https://youtu.be/izIlbtrFw0c",
+  "desc": "Get a daily morning brief from Claude Duet before you open your inbox.\n\nI told Claude what I do and what my priorities are, and now it messages me first with what actually needs me that day, plus email replies already drafted for me to look over and approve."
+ },
+ {
   "channel": "Nate Herk | AI Automation",
   "title": "Would you let AI answer your texts for a week?",
   "views": 2925,
@@ -1997,24 +2037,8 @@
  },
  {
   "channel": "Skill Leap AI",
-  "title": "Claude Duet Sends Me a Daily Morning Brief",
-  "views": 2877,
-  "date": "2026-11-07",
-  "url": "https://youtu.be/izIlbtrFw0c",
-  "desc": "Get a daily morning brief from Claude Duet before you open your inbox.\n\nI told Claude what I do and what my priorities are, and now it messages me first with what actually needs me that day, plus email replies already drafted for me to look over and approve."
- },
- {
-  "channel": "Metics Media",
-  "title": "Florida LLC - How to Start an LLC in Florida in 10 Minutes (2026)",
-  "views": 2875,
-  "date": "2026-11-10",
-  "url": "https://youtu.be/O5TTxm9MstU",
-  "desc": "Learn how to start an LLC in Florida, broken down into seven easy steps. Go from choosing your name to a filed Florida LLC, with every cost and decision explained before you pay anything.\n✅ Northwest Registered Agent (Best Deal): https://meticsmedia.com/northwest-VUQ\n\nStarting an LLC in Florida used to mean a pile of paperwork, and this walkthrough breaks the whole thing into seven simple steps you can follow in order. You'll check that your business name is actually available, decide whether to be your own registered agent or keep your home address off the public record, and file your Articles of Organization with the state. From there we cover your EIN, your operating agreement, and openin"
- },
- {
-  "channel": "Skill Leap AI",
   "title": "The Hidden ChatGPT Feature Almost Nobody Uses",
-  "views": 2775,
+  "views": 2801,
   "date": "2026-11-09",
   "url": "https://youtu.be/lNzVM7KIeGI",
   "desc": "How to create a ChatGPT skill from the Plugins section.\n\nI build a skill with the skill creator that turns a raw transcript into a week's worth of content, then upload a transcript with the skill selected and get back a text file of LinkedIn posts in the format I asked for. In ChatGPT Work on the desktop app, it can also create all kinds of files right on your computer."
@@ -2025,6 +2049,14 @@
   "views": 2732,
   "date": "2026-10-31",
   "url": "https://youtu.be/LP_ErrhiD-M"
+ },
+ {
+  "channel": "Metics Media",
+  "title": "Wyoming LLC - How to Start an LLC in Wyoming in 10 Minutes (2026)",
+  "views": 2671,
+  "date": "2026-11-11",
+  "url": "https://youtu.be/7FZCNCYL2Bk",
+  "desc": "Learn how to start an LLC in Wyoming, broken down into seven easy steps. Go from choosing your name to a filed Wyoming LLC, with every cost and decision explained before you pay anything.\n✅ Northwest Registered Agent (Best Deal): https://meticsmedia.com/northwest-MLR\n\nStarting an LLC in Wyoming used to mean a pile of paperwork, and this walkthrough breaks the whole thing into seven simple steps you can follow in order. You'll check that your business name is actually available, decide whether to be your own registered agent or keep your home address off the public record, and file your Articles of Organization with the Wyoming Secretary of State. From there we cover your EIN, your operating "
  },
  {
   "channel": "Skill Leap AI",
@@ -2044,18 +2076,26 @@
  {
   "channel": "The AI Advantage",
   "title": "Find Files Instantly with AI",
-  "views": 2561,
+  "views": 2565,
   "date": "2026-11-04",
   "url": "https://youtu.be/DaOAGnkueB0",
   "desc": "Want to save time, get more leverage, and stop figuring this AI stuff out from scratch? I put the clearest map and support inside the AI Advantage Club: https://joinaiaclub.com/igor\n\nLet's Connect:\n📸 Instagram: https://www.instagram.com/igorpogany/"
  },
  {
   "channel": "Metics Media",
-  "title": "Learn 80% of XERO in Under 20 Minutes",
-  "views": 2552,
-  "date": "2026-11-12",
-  "url": "https://youtu.be/8PMkzGgV5e0",
-  "desc": "This Xero tutorial for beginners shows you how to use Xero accounting software to send invoices, enter bills, reconcile your bank account, and read your reports.\n✅ XERO (90% Off Your First 6 Months): https://meticsmedia.com/xero-CFX\n\nThis step-by-step Xero tutorial is for small business owners, freelancers, and anyone who needs Xero for a job or a course. You don’t need any accounting experience. You’ll sign up, choose the right plan, and tour the Xero homepage, which older videos call the dashboard. Then you’ll follow one invoice around the four menus you need for everyday bookkeeping, which I call the Money Loop. You’ll create and send an invoice, enter a bill, import a CSV bank statement,"
+  "title": "New York LLC - How to Set up an LLC in New York in 2026 (Step-by-Step)",
+  "views": 2529,
+  "date": "2026-11-10",
+  "url": "https://youtu.be/JYRi2IVVT5U",
+  "desc": "Learn how to start an LLC in New York, broken down into seven easy steps. Go from choosing your name to a filed New York LLC, with every cost and decision explained before you pay anything.\n✅ Northwest Registered Agent (Best Deal): https://meticsmedia.com/northwest-HFQ\n\nStarting an LLC in New York used to mean a pile of paperwork, and this walkthrough breaks the whole thing into seven simple steps you can follow in order. You’ll check that your business name is actually available, decide whether to be your own registered agent or keep your home address off the public record, and file your Articles of Organization with the New York Department of State. I’ll also show you how to handle New Yor"
+ },
+ {
+  "channel": "The AI Advantage",
+  "title": "3 New Dots Updates You Should Know About",
+  "views": 2499,
+  "date": "2026-11-09",
+  "url": "https://youtu.be/k8zxn8OvTYU",
+  "desc": "Want to save time, get more leverage, and stop figuring this AI stuff out from scratch? I put the clearest map and support inside the AI Advantage Club: https://joinaiaclub.com/igor\nLet's Connect:\n📸 Instagram: https://www.instagram.com/igorpogany/"
  },
  {
   "channel": "Matt Wolfe",
@@ -2066,26 +2106,10 @@
  },
  {
   "channel": "Metics Media",
-  "title": "New York LLC - How to Set up an LLC in New York in 2026 (Step-by-Step)",
-  "views": 2451,
-  "date": "2026-11-10",
-  "url": "https://youtu.be/JYRi2IVVT5U",
-  "desc": "Learn how to start an LLC in New York, broken down into seven easy steps. Go from choosing your name to a filed New York LLC, with every cost and decision explained before you pay anything.\n✅ Northwest Registered Agent (Best Deal): https://meticsmedia.com/northwest-HFQ\n\nStarting an LLC in New York used to mean a pile of paperwork, and this walkthrough breaks the whole thing into seven simple steps you can follow in order. You’ll check that your business name is actually available, decide whether to be your own registered agent or keep your home address off the public record, and file your Articles of Organization with the New York Department of State. I’ll also show you how to handle New Yor"
- },
- {
-  "channel": "Metics Media",
   "title": "Colorado LLC - How to Start an LLC in Colorado in 10 Minutes (2026)",
   "views": 2432,
   "date": "2026-10-01",
   "url": "https://youtu.be/6aQADNTZeIc"
- },
- {
-  "channel": "Metics Media",
-  "title": "Wyoming LLC - How to Start an LLC in Wyoming in 10 Minutes (2026)",
-  "views": 2432,
-  "date": "2026-11-11",
-  "url": "https://youtu.be/7FZCNCYL2Bk",
-  "desc": "Learn how to start an LLC in Wyoming, broken down into seven easy steps. Go from choosing your name to a filed Wyoming LLC, with every cost and decision explained before you pay anything.\n✅ Northwest Registered Agent (Best Deal): https://meticsmedia.com/northwest-MLR\n\nStarting an LLC in Wyoming used to mean a pile of paperwork, and this walkthrough breaks the whole thing into seven simple steps you can follow in order. You'll check that your business name is actually available, decide whether to be your own registered agent or keep your home address off the public record, and file your Articles of Organization with the Wyoming Secretary of State. From there we cover your EIN, your operating "
  },
  {
   "channel": "AI Master",
@@ -2096,11 +2120,11 @@
  },
  {
   "channel": "The AI Advantage",
-  "title": "3 New Dots Updates You Should Know About",
-  "views": 2424,
-  "date": "2026-11-09",
-  "url": "https://youtu.be/k8zxn8OvTYU",
-  "desc": "Want to save time, get more leverage, and stop figuring this AI stuff out from scratch? I put the clearest map and support inside the AI Advantage Club: https://joinaiaclub.com/igor\nLet's Connect:\n📸 Instagram: https://www.instagram.com/igorpogany/"
+  "title": "iCloud Mail & Calendar Are Now in ChatGPT!",
+  "views": 2426,
+  "date": "2026-11-02",
+  "url": "https://youtu.be/LhBOXOdPqEo",
+  "desc": "Want to save time, get more leverage, and stop figuring this AI stuff out from scratch? I put the clearest map and support inside the AI Advantage Club: https://joinaiaclub.com/igor\n\nLet's Connect:\n📸 Instagram: https://www.instagram.com/igorpogany/"
  },
  {
   "channel": "Skill Leap AI",
@@ -2116,14 +2140,6 @@
   "views": 2400,
   "date": "2026-10-23",
   "url": "https://youtu.be/kgS10xZhPzI"
- },
- {
-  "channel": "The AI Advantage",
-  "title": "iCloud Mail & Calendar Are Now in ChatGPT!",
-  "views": 2377,
-  "date": "2026-11-02",
-  "url": "https://youtu.be/LhBOXOdPqEo",
-  "desc": "Want to save time, get more leverage, and stop figuring this AI stuff out from scratch? I put the clearest map and support inside the AI Advantage Club: https://joinaiaclub.com/igor\n\nLet's Connect:\n📸 Instagram: https://www.instagram.com/igorpogany/"
  },
  {
   "channel": "Skill Leap AI",
@@ -2150,7 +2166,7 @@
  {
   "channel": "Skill Leap AI",
   "title": "Build a website with Claude without writing code",
-  "views": 2161,
+  "views": 2177,
   "date": "2026-11-05",
   "url": "https://youtu.be/OIzVkR-ZLK4",
   "desc": "Claude made me 75 designer quality websites in a single day, including one that launches a rocket into orbit as you scroll and one where a gold ring turns into 3D. \n\nOpen Claude Code in the Claude desktop app, pick an empty folder, paste a prompt describing your website and business, and Claude builds the design, the words and the animation for phone, tablet and desktop."
@@ -2172,7 +2188,7 @@
  {
   "channel": "Skill Leap AI",
   "title": "I Can't Believe Claude Made This",
-  "views": 2094,
+  "views": 2107,
   "date": "2026-11-06",
   "url": "https://youtu.be/gPtB8Vkay40",
   "desc": "Build a website with Claude using just a prompt.\n\nThis looks like a rocket launch, but it's a website. As you scroll, the rocket lifts off, the altitude counts up, and the page tells its story until it reaches orbit and a button to start a free trial. Claude Code in the Claude desktop app built it, and it comes with a $20 subscription."
@@ -2190,6 +2206,22 @@
   "views": 2049,
   "date": "2026-10-17",
   "url": "https://youtu.be/Ar8yKK2liUw"
+ },
+ {
+  "channel": "Futurepedia",
+  "title": "Claude 2.0 just dropped",
+  "views": 1926,
+  "date": "2026-11-13",
+  "url": "https://youtu.be/-wxmK-0GrRU",
+  "desc": "Everything that changed in the new Claude app, from live dashboards to mods, in under a minute."
+ },
+ {
+  "channel": "Metics Media",
+  "title": "North Carolina LLC - How to Start an LLC in North Carolina in 10 Minutes (2026)",
+  "views": 1924,
+  "date": "2026-11-11",
+  "url": "https://youtu.be/RiqXJyb4PDo",
+  "desc": "Learn how to start an LLC in North Carolina, broken down into seven easy steps. Go from choosing your name to a filed North Carolina LLC, with every cost and decision explained before you pay anything.\n✅ Northwest Registered Agent (Best Deal): https://meticsmedia.com/northwest-CEY\n\nStarting an LLC in North Carolina used to mean a pile of paperwork, and this walkthrough breaks the whole thing into seven simple steps you can follow in order. You'll check that your business name is actually available, decide whether to be your own registered agent or keep your home address off the public record, and file your Articles of Organization with the North Carolina Secretary of State. From there we cov"
  },
  {
   "channel": "AI Master",
@@ -2213,39 +2245,10 @@
   "url": "https://youtu.be/F9YdbCwBX3c"
  },
  {
-  "channel": "Metics Media",
-  "title": "North Carolina LLC - How to Start an LLC in North Carolina in 10 Minutes (2026)",
-  "views": 1791,
-  "date": "2026-11-11",
-  "url": "https://youtu.be/RiqXJyb4PDo",
-  "desc": "Learn how to start an LLC in North Carolina, broken down into seven easy steps. Go from choosing your name to a filed North Carolina LLC, with every cost and decision explained before you pay anything.\n✅ Northwest Registered Agent (Best Deal): https://meticsmedia.com/northwest-CEY\n\nStarting an LLC in North Carolina used to mean a pile of paperwork, and this walkthrough breaks the whole thing into seven simple steps you can follow in order. You'll check that your business name is actually available, decide whether to be your own registered agent or keep your home address off the public record, and file your Articles of Organization with the North Carolina Secretary of State. From there we cov"
- },
- {
   "channel": "Futurepedia",
   "title": "Who nails the most realistic concert photo?",
   "views": 1684,
   "date": "2026-10-16",
   "url": "https://youtu.be/pur1QwIA0qg"
- },
- {
-  "channel": "Futurepedia",
-  "title": "Last 30 Days: your new real-time web search",
-  "views": 1592,
-  "date": "2026-10-13",
-  "url": "https://youtu.be/7-556KlDMfg"
- },
- {
-  "channel": "Skill Leap AI",
-  "title": "Gemini 4 Just Did Something Wild #gemini",
-  "views": 1581,
-  "date": "2026-10-21",
-  "url": "https://youtu.be/cF67F-XpDOA"
- },
- {
-  "channel": "Skill Leap AI",
-  "title": "ChatGPT Work hack that will save you hours! #chatgpt",
-  "views": 1533,
-  "date": "2026-10-14",
-  "url": "https://youtu.be/aZ7BhQamWto"
  }
 ]

@@ -1,321 +1,325 @@
 {
- "summary": "Today's desk focuses heavily on new enterprise AI agents, document processing tools, and creative agent updates from Adobe and Google. We are packaging top-trending tools into clear, beginner-friendly step-by-step tutorials with free-tier options.",
+ "summary": "AI agents and local AI execution are dominate today's beginner search demand, driven by recent tutorials on Ollama and Hermes Agent. Meanwhile, public debate around enterprise AI reliability has peaked following news surrounding the FAA's new SMART AI tool.",
  "topics": [
   {
-   "title": "Documind – Open-source AI tool to turn documents into structured data",
-   "why": "Massive developer and user interest on Hacker News for turning messy files into clean data without paid subscriptions.",
+   "title": "FAA SMART AI Tool Ground Stop Controversy",
+   "why": "Major news outlets are debating whether the FAA's newly deployed SMART AI traffic management system caused national flight delays.",
    "trend": 10,
    "sources": [
-    "hnrss.org"
+    "New York Post",
+    "GeekWire",
+    "Business Insider",
+    "Futurism"
    ]
   },
   {
-   "title": "Adobe brings AI agents and new creative tools to Photoshop, Premiere, and Firefly",
-   "why": "Major creative suite updates are trending across tech news for changing how editors and beginners create content.",
+   "title": "Free Local AI Agents (Ollama & Hermes Setup)",
+   "why": "Beginners are seeking free, private alternatives to paid subscription agents that run completely offline on desktop hardware.",
    "trend": 9,
    "sources": [
-    "news.google.com"
+    "Kevin Stratvert",
+    "Metics Media"
    ]
   },
   {
-   "title": "Databricks Launches New Always-on Genie: Autonomous AI for Complex Enterprise Work",
-   "why": "Enterprise data tooling is spiking as teams look for autonomous agents to handle complex data tasks.",
+   "title": "Claude 2.0 & Fable 5.2 Video Editing Automation",
+   "why": "Content creators want step-by-step workflows to turn raw transcriptions into edited video sequences using Claude.",
    "trend": 8,
    "sources": [
-    "news.google.com"
+    "Futurepedia",
+    "Matt Wolfe",
+    "The AI Advantage"
    ]
   },
   {
-   "title": "Google Pixel Tag",
-   "why": "New hardware tracking product announcement catching immediate interest on Product Hunt.",
+   "title": "Seedance 2.5 & Realistic AI Video Generation",
+   "why": "High-view competitor tutorials show massive beginner interest in generating consistent cinematic video clips for free.",
    "trend": 7,
    "sources": [
-    "producthunt.com"
+    "Dan Kieft",
+    "Metics Media"
    ]
   },
   {
-   "title": "Apify Unveils New AI Agent Capabilities and Server Actors",
-   "why": "Expanding capabilities for web scraping and automation agents are drawing developer attention.",
+   "title": "FreeFlow Dictation Voice-to-Text Workflow",
+   "why": "Product Hunt users are highlighting system-wide free voice dictation tools as a daily typing replacement.",
    "trend": 6,
    "sources": [
-    "news.google.com"
-   ]
-  },
-  {
-   "title": "Square Expands its Agentic Platform with Squaremates",
-   "why": "Small business automation features are expanding, making agent workflows accessible to non-technical users.",
-   "trend": 5,
-   "sources": [
-    "news.google.com"
-   ]
-  },
-  {
-   "title": "J. Crew debuts new AI shopping tool designed to think like a stylist",
-   "why": "Retail AI integration is showing how consumer-facing recommendation agents are evolving.",
-   "trend": 4,
-   "sources": [
-    "news.google.com"
-   ]
-  },
-  {
-   "title": "Anthropic launches Claude product for manufacturers",
-   "why": "Industry-specific AI rollouts are signaling a shift toward vertical enterprise solutions.",
-   "trend": 3,
-   "sources": [
-    "news.google.com"
-   ]
-  },
-  {
-   "title": "Filament by Galaxy",
-   "why": "New creative workflow product launched on Product Hunt today.",
-   "trend": 2,
-   "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "Google Cloud intros Gemini for healthcare",
-   "why": "Specialized vertical LLM offerings are expanding into regulated industries.",
+   "title": "Building a Life Operating System in Notion with AI",
+   "why": "Viewers are looking for quick templates to organize tasks, notes, and calendar items without manual tagging.",
+   "trend": 5,
+   "sources": [
+    "Jeff Su",
+    "Matt Wolfe"
+   ]
+  },
+  {
+   "title": "Google Gemini Canvas Free Features",
+   "why": "Google's updated free interface provides side-by-side document generation without an monthly upgrade.",
+   "trend": 4,
+   "sources": [
+    "Parker Prompts",
+    "AI Master"
+   ]
+  },
+  {
+   "title": "Kokonut UI Web Components for Beginners",
+   "why": "Web creators on Product Hunt are looking for ready-to-copy code snippets built specifically for AI-generated sites.",
+   "trend": 3,
+   "sources": [
+    "producthunt.com",
+    "Metics Media"
+   ]
+  },
+  {
+   "title": "Excel Automated Dashboards with Copilot",
+   "why": "Office workers want simple prompt structures to convert raw spreadsheet rows into clean charts.",
+   "trend": 2,
+   "sources": [
+    "Kevin Stratvert"
+   ]
+  },
+  {
+   "title": "Blender 5.3 AI Tools for 3D Beginners",
+   "why": "Product Hunt launched Blender 5.3 updates, drawing interest from beginner animators testing text-to-3D workflows.",
    "trend": 1,
    "sources": [
-    "news.google.com"
+    "producthunt.com",
+    "Futurepedia"
    ]
   }
  ],
  "packages": [
   {
-   "topic": "Documind – Open-source AI tool to turn documents into structured data",
-   "competitors": "Competitors like Jeff Su and Kevin Stratvert covered general document AI tools but missed open-source, local alternatives that cost nothing to run.",
-   "angle": "We show how to install and run Documind step-by-step on a free tier to turn PDFs into JSON and spreadsheets without monthly subscriptions.",
+   "topic": "FAA SMART AI Tool Ground Stop Controversy",
+   "competitors": "News outlets like GeekWire and Business Insider focused heavily on political statements and vendor blame. They missed explaining what the SMART AI tool actually does step-by-step and how enterprise AI monitoring works.",
+   "angle": "We break down what the FAA's SMART AI tool actually does on screen, how traffic flow AI works, and how to test similar routing tools yourself.",
    "viral": {
     "score": 68,
-    "why": "High practical utility combined with open-source curiosity taps straight into developer and beginner desire to cut SaaS costs."
+    "why": "High news volume drives broad search traffic, but technical viewers want clear visual explanations rather than news speculation."
    },
    "long": {
-    "title": "Turn Any Document Into Clean Data With Documind (Free)",
-    "thumb": "Turn PDFs to Data Free",
-    "hook": "In the next 7 minutes you will turn a messy PDF report into a clean spreadsheet using an open-source tool. No coding required.",
+    "title": "What the FAA’s New AI Tool Actually Does (SMART Explained)",
+    "thumb": "FAA AI Tool Explained",
+    "hook": "In the next 6 minutes, you will see exactly how air traffic control AI software processes flight data and where automated tools can fail. We will look past the headlines to examine the real technology behind the FAA's SMART system.",
     "outline": [
-     "What Documind is and why open-source document tools matter",
-     "Downloading and setting up the free open-source repository",
-     "Uploading your first PDF or scanned document",
-     "Configuring schema settings for structured data output",
-     "Exporting your structured data to CSV and JSON",
-     "The main limitation: handling low-resolution scanned handwriting",
-     "Summary and next steps"
+     "Overview of the FAA SMART AI deployment news",
+     "What SMART stands for and its core purpose in flight management",
+     "How predictive traffic AI handles real-time data inputs",
+     "Demonstration of open-source flight tracking AI tools",
+     "Why telecom infrastructure failures differ from AI model crashes",
+     "Key lessons for using AI in critical business workflows"
     ]
    },
    "shorts": [
     {
-     "title": "Turn PDFs to Data Instantly",
-     "hook": "Stop typing PDF data by hand.",
-     "script": "If you are still manually copying data from invoices and PDFs into Excel, stop right now. Today we are looking at Documind, a free open-source tool that turns any document into structured data automatically. You just drop your file in, define what fields you want, and export a clean CSV in seconds. The downside? Scanned handwriting can still cause errors. Try it out and save hours of boring work.",
-     "cta": "Subscribe for more free AI tools."
+     "title": "Did AI Crash US Flight Traffic?",
+     "hook": "Did a new AI tool really shut down US airspace?",
+     "script": "The FAA recently deployed an AI tool called SMART to manage air traffic. Days later, flights grounded nationwide. While news headlines blamed the software, official reports points to legacy telecom hardware failures. Here is how air traffic prediction models work: they process speed, altitude, and weather to suggest routes. They do not control aircraft directly. Understanding the difference between infrastructure lag and AI output helps you judge technology news accurately.",
+     "cta": "Subscribe to Toolscape for clear AI breakdowns."
     },
     {
-     "title": "Free Document AI Tool",
-     "hook": "This free tool reads your documents.",
-     "script": "Want to extract tables from massive PDFs without paying for expensive enterprise software? Documind is a completely free open-source AI tool that runs locally or in the cloud. It organizes messy text into neat spreadsheets with just one click. Keep in mind it requires basic setup steps if you want to run it locally. Check out our full channel tutorial to set it up today.",
-     "cta": "Watch the full guide on our channel."
+     "title": "Inside the FAA's New SMART AI System",
+     "hook": "Here is what the FAA's new AI tool actually does.",
+     "script": "The FAA rolled out a tool named SMART across traffic centers. It analyzes flight patterns to reduce delay bottlenecks near busy hubs like Charlotte. It works by calculating optimal spacing between arriving planes. The system flags potential delays hours before they happen, allowing controllers to adjust schedules early without manual math.",
+     "cta": "Follow for daily step-by-step AI tool guides."
     }
    ],
    "carousel": {
-    "title": "Turn Any PDF Into Structured Data For Free",
+    "title": "Understanding the FAA's New AI System: 5 Facts",
     "slides": [
-     "Stop copying PDF data into spreadsheets by hand.",
-     "Meet Documind: the open-source AI document parser.",
-     "Step 1: Open the free repository or hosted demo.",
-     "Step 2: Upload your messy PDF, invoice, or report.",
-     "Step 3: Define the data fields you need extracted.",
-     "Step 4: Export directly to CSV, JSON, or Excel.",
-     "Downside: Struggles with blurry handwritten documents."
+     "1. What is SMART? A traffic management system designed to predict flight congestion.",
+     "2. The Incident: A nationwide ground stop occurred shortly after deployment.",
+     "3. Official Response: Officials confirmed legacy telecom gear caused the network outage, not the AI.",
+     "4. How It Works: The system analyzes radar data and weather to suggest efficient flight paths.",
+     "5. Human Oversight: Air traffic controllers review all recommendations before implementation.",
+     "6. Takeaway: Critical systems depend on stable network hardware regardless of AI model quality."
     ]
    },
    "posts": {
     "x": [
-     "Tired of paying for expensive PDF extraction tools? Documind is a free, open-source AI tool that turns messy documents into structured spreadsheets. Here is how to use it step-by-step: [link]",
-     "We tested Documind to see how well it extracts structured data from complex PDFs. Watch our full beginner tutorial here: [link]"
+     "Did the FAA's new AI cause the ground stop? Official reports attribute the outage to aging telecom hardware rather than the SMART AI software. Here is how the system functions.",
+     "Understanding AI infrastructure: System outages are usually network failures, not algorithmic errors. Here is a breakdown of the FAA SMART tool."
     ],
-    "facebook": "If you spend hours copying data from PDF reports into Excel, you need to see this. We test Documind, a free open-source AI tool that extracts clean tables and structured data automatically. Watch the full step-by-step tutorial here: [link]",
-    "instagram": "Turn any messy PDF into a clean spreadsheet in seconds. We tested the new open-source Documind tool so you don't have to spend a dime on paid software. Link to full tutorial in bio! #AITools #Productivity #OpenSource #DataExtraction",
-    "linkedin": "Document processing shouldn't require expensive monthly software subscriptions. In our latest tutorial, we break down how to use Documind—a free, open-source AI tool—to turn unstructured documents into clean, usable data. Watch here: [link]"
+    "facebook": "The FAA recently introduced an AI tool called SMART to streamline flight paths. When flights grounded nationwide, many pointed fingers at the new software. Official reports show legacy hardware was to blame. Here is a visual breakdown of how traffic prediction AI operates.",
+    "instagram": "Curious about the tech behind the FAA headlines? Swipe through to see how the SMART AI system calculates flight routes and why network hardware remains the most critical factor. #AITools #TechNews #Toolscape #AirTraffic",
+    "linkedin": "As organizations deploy enterprise AI tools like the FAA's SMART system, infrastructure stability becomes paramount. Recent outages highlight that advanced software cannot bypass legacy hardware limitations."
    },
    "article": {
-    "title": "How to Use Documind to Turn Documents Into Structured Data for Free",
+    "title": "Inside the FAA SMART AI Deployment: Fact vs Fiction",
     "outline": [
-     "Introduction to Document Parsing AI",
-     "What is Documind and Who Is It For?",
-     "Step-by-Step Installation and Setup",
-     "Processing Your First PDF Document",
-     "Exporting to CSV and Managing Limitations",
-     "Conclusion"
+     "Introduction to the FAA Airspace Ground Stop",
+     "What is the SMART AI Air Traffic System?",
+     "How Predictive Algorithms Manage Logistics",
+     "Distinguishing System Outages from Software Bugs",
+     "Practical Takeaways for Enterprise AI Adoption"
     ]
    }
   },
   {
-   "topic": "Adobe brings AI agents and new creative tools to Photoshop, Premiere, and Firefly",
-   "competitors": "Competitors like Matt Wolfe and Dan Kieft covered Adobe's broad feature announcements, but skipped step-by-step instructions for beginners on the free web tier.",
-   "angle": "We walk through the new Adobe Firefly web interface step-by-step, showing absolute beginners how to use the new agent features without a paid Creative Cloud subscription.",
+   "topic": "Free Local AI Agents (Ollama & Hermes Setup)",
+   "competitors": "Kevin Stratvert and Metics Media provided setup guides for Ollama and Hermes Agent. However, they skipped simple configuration templates for non-technical beginners who struggle with terminal commands.",
+   "angle": "We show a 100% click-based setup using free GUI tools so beginners can run local AI agents without touching code.",
    "viral": {
-    "score": 62,
-    "why": "Adobe name recognition pulls high search volume, and our beginner-focused free tier angle differentiates from high-end pro overviews."
+    "score": 74,
+    "why": "Strong viewer demand for free, offline AI tools combined with a simplified no-code setup angle."
    },
    "long": {
-    "title": "How to Use Adobe's New AI Agent Tools (Beginner Guide)",
-    "thumb": "New Adobe AI Tools Guide",
-    "hook": "In the next 8 minutes you will use Adobe's new AI editing features to generate professional assets without opening complex editing software.",
+    "title": "Run Free AI Agents Locally in 10 Minutes (No Code)",
+    "thumb": "Free Local AI Agent",
+    "hook": "In the next 8 minutes, you will install a private AI agent on your computer that runs completely offline for zero dollars. You do not need coding skills or expensive subscription plans.",
     "outline": [
-     "Overview of Adobe's latest AI agent updates in Firefly",
-     "Accessing the free web workspace and tools",
-     "Step 1: Using generative fill and agent prompts in Photoshop web",
-     "Step 2: Testing the new video generation features in Premiere web",
-     "Step 3: Refining output with reference images",
-     "The downside: export limits and watermarks on free accounts",
-     "Summary and final verdict"
+     "Why local AI agents save money and protect privacy",
+     "Downloading and installing the free desktop application",
+     "Selecting light models optimized for standard laptops",
+     "Connecting the free user interface step-by-step",
+     "Testing task automation: summarizing files and sorting data",
+     "One common setting to tweak for faster performance"
     ]
    },
    "shorts": [
     {
-     "title": "Try Adobe's New AI Agents",
-     "hook": "Adobe just updated its AI tools.",
-     "script": "Adobe just released major AI agent updates across Photoshop and Premiere web. If you are a beginner, you can test these new features directly in your browser using the free tier of Adobe Firefly. Just type what you want to change, and the agent handles the masking and blending for you. The catch? Free tier exports include a watermark. Watch our full guide to see how it works.",
-     "cta": "Subscribe for weekly AI tool tutorials."
+     "title": "Run AI Locally for Free",
+     "hook": "Stop paying $20 a month for AI subscriptions.",
+     "script": "You can run powerful AI models directly on your laptop for free. Download Ollama, open the installation wizard, and select a lightweight model like Llama 3 or Hermes. It runs offline, never sends your data to external servers, and costs nothing. You can summarize private PDF documents and generate text without an internet connection.",
+     "cta": "Subscribe for more free AI tool guides."
     },
     {
-     "title": "Edit Videos Faster With Adobe AI",
-     "hook": "Here is how to use Adobe's new video AI.",
-     "script": "Want to try professional AI video editing without paying for a full subscription? Adobe's latest Firefly update brings agent-powered editing straight to your browser. You can generate B-roll, extend clips, and fix lighting with simple text prompts. Keep in mind that generation queues can be long during peak hours. Check out our channel for the full walkthrough.",
-     "cta": "Check our channel for the full tutorial."
+     "title": "Private AI Agent in 60 Seconds",
+     "hook": "Here is how to get a private AI agent running in 60 seconds.",
+     "script": "First, download the free desktop installer for Ollama. Second, pick a model tailored for basic hardware. Third, open your choice of free graphical interface. Now you have an active assistant that reads your local text files without uploading them anywhere. It is fast, secure, and completely free.",
+     "cta": "Check the channel for the full setup video."
     }
    ],
    "carousel": {
-    "title": "How To Use Adobe's New AI Agents For Free",
+    "title": "How to Run Local AI Agents for Free",
     "slides": [
-     "Adobe just launched massive AI updates for web and desktop.",
-     "You don't need a full Creative Cloud plan to test them.",
-     "Step 1: Go to the free Adobe Firefly web portal.",
-     "Step 2: Try generative fill inside the browser Photoshop tool.",
-     "Step 3: Use text prompts to generate video clips in Premiere web.",
-     "Step 4: Tweak styles using built-in reference controls.",
-     "Downside: Free accounts have export watermarks and strict generation limits."
+     "1. Download Ollama from the official website.",
+     "2. Install the lightweight runner file on your desktop.",
+     "3. Choose a fast local model like Llama 3 8B.",
+     "4. Add a friendly desktop dashboard like AnythingLLM.",
+     "5. Drag and drop local documents to ask questions securely.",
+     "6. Enjoy offline AI processing with zero monthly fees."
     ]
    },
    "posts": {
     "x": [
-     "Adobe just dropped new AI agent features for Photoshop and Premiere web. Here is how beginners can test them for free: [link]",
-     "Can Adobe's new browser AI tools replace your current editing workflow? We tested them step-by-step: [link]"
+     "You do not need to pay $20/month for basic AI tasks. Here is how to set up a completely free local agent on your laptop in 10 minutes.",
+     "Keep your personal data private. Running local AI models with Ollama gives you full control over your files without subscription costs."
     ],
-    "facebook": "Adobe just released major AI agent updates across its creative suite. In our latest tutorial, we show beginners how to use the free web tools step-by-step without a paid subscription. Watch here: [link]",
-    "instagram": "Testing Adobe's brand new AI editing agents! We break down how beginners can use the free web version for photo and video editing. Link in bio! #AdobeFirefly #AITools #VideoEditing #Photoshop",
-    "linkedin": "Adobe's latest AI agent rollout brings powerful generative features to browser-based creative tools. Here is our breakdown of how professionals and beginners can evaluate these new capabilities: [link]"
+    "facebook": "Want to use AI without paying monthly fees or sharing your personal files? You can run local AI agents directly on standard computers. Watch our simple 10-minute guide to get started using simple install clicks.",
+    "instagram": "Run your own offline AI assistant step-by-step. Swipe to see the 5 simple steps to get started for free. #LocalAI #Ollama #TechTutorial #Toolscape #FreeTools",
+    "linkedin": "Local AI deployment is becoming accessible for everyday users. By leveraging tools like Ollama and lightweight open-weights models, professionals can process confidential files without cloud privacy risks."
    },
    "article": {
-    "title": "Beginner's Guide to Adobe's New AI Agent Creative Tools",
+    "title": "Complete Beginner Guide to Free Local AI Agents",
     "outline": [
-     "What's New in Adobe's AI Suite",
-     "Accessing Firefly and Web Apps on a Free Plan",
-     "Step-by-Step Photoshop Web AI Editing",
-     "Testing Video Generation in Premiere Web",
-     "Understanding Free Tier Limits and Watermarks",
-     "Conclusion"
+     "The Benefits of Running AI Locally",
+     "System Requirements for Basic Laptops",
+     "Step-by-Step Installation of Ollama",
+     "Setting Up a No-Code Desktop Dashboard",
+     "Best Free Open-Source Models to Test"
     ]
    }
   },
   {
-   "topic": "Databricks Launches New Always-on Genie: Autonomous AI for Complex Enterprise Work",
-   "competitors": "Competitors like Nate Herk covered enterprise AI platforms generally, but focused heavily on high-end B2B sales pitches rather than a hands-on walkthrough.",
-   "angle": "We break down Databricks Genie into simple terms for beginners, showing what autonomous data agents can and cannot do for small data tasks.",
+   "topic": "Claude 2.0 & Fable 5.2 Video Editing Automation",
+   "competitors": "Futurepedia and The AI Advantage explained high-level video generation with Claude. They omitted showing how to format structured prompts to auto-generate timelines and edit points.",
+   "angle": "We provide copy-paste prompt templates that turn raw transcripts into structured video edit scripts inside Claude.",
    "viral": {
-    "score": 55,
-    "why": "Enterprise data tooling is a trending news item, and breaking it down for everyday beginners provides clear educational value."
+    "score": 58,
+    "why": "Targeted interest among video creators, though slightly lower broad-audience appeal than basic AI agent setups."
    },
    "long": {
-    "title": "Databricks Genie Explained: Autonomous AI For Data Work",
-    "thumb": "Databricks Genie Beginner Guide",
-    "hook": "In the next 6 minutes you will understand how Databricks Genie works and whether autonomous data agents are right for your team.",
+    "title": "How to Edit Videos with Claude (Step-by-Step)",
+    "thumb": "Auto Video Edit",
+    "hook": "In the next 7 minutes, you will use Claude to analyze a raw transcript, trim unnecessary pauses, and format a complete visual editing script. You can apply this template to any project immediately.",
     "outline": [
-     "What is Databricks Genie and why it launched today",
-     "How autonomous data agents differ from standard chatbots",
-     "Step-by-step look at setting up natural language data queries",
-     "Testing table joins and complex metrics on sample datasets",
-     "The main limitation: requires clean underlying database schemas",
-     "Summary and beginner verdict"
+     "Preparing your video transcript text for input",
+     "Copy-pasting the free prompt template into Claude",
+     "Extracting precise cut points and highlight clips",
+     "Generating visual B-roll suggestions automatically",
+     "Exporting the structured edit plan into your editor",
+     "Comparing manual editing time versus AI output"
     ]
    },
    "shorts": [
     {
-     "title": "Databricks Genie Explained",
-     "hook": "Databricks just launched an autonomous data agent.",
-     "script": "Databricks just released Always-on Genie, an autonomous AI designed to handle complex enterprise data questions in plain English. Instead of writing SQL queries, team members can ask questions and get charts instantly. The catch? If your underlying data is messy, the AI will give you messy results. Watch our full breakdown on the channel.",
-     "cta": "Subscribe for honest AI tool reviews."
+     "title": "Edit Videos 5x Faster with Claude",
+     "hook": "Still manually reviewing hours of video footage?",
+     "script": "Paste your transcript into Claude with this simple prompt: 'Identify silence, remove filler words, and split this text into 5 engaging sections with visual suggestions.' Claude analyzes the document and outputs precise timestamp cuts and scene concepts. You save hours of tedious timeline sorting using free text prompts.",
+     "cta": "Get the prompt template in our main video."
     },
     {
-     "title": "What Is An Autonomous Data Agent?",
-     "hook": "Can AI replace your SQL queries?",
-     "script": "Databricks Genie aims to let anyone query company data using natural conversation. You type a question, and the autonomous agent builds the tables and charts for you. But remember, setting up the data spaces still requires technical help. Check out our full channel video to learn how it works.",
-     "cta": "Watch the full breakdown on our channel."
+     "title": "Auto-Generate Video Scripts with AI",
+     "hook": "This free Claude trick edits your video script automatically.",
+     "script": "Upload your raw script or audio transcript into Claude. Ask it to organize the text into a two-column edit table showing spoken audio on the left and recommended screen visual actions on the right. In seconds, you have a complete production script ready for recording.",
+     "cta": "Subscribe to Toolscape for practical AI tricks."
     }
    ],
    "carousel": {
-    "title": "Databricks Genie: Autonomous Data AI Explained",
+    "title": "5 Steps to Edit Video Transcripts with Claude",
     "slides": [
-     "Databricks just launched Always-on Genie for data analytics.",
-     "What does an autonomous data agent actually do?",
-     "Feature 1: Converts plain English into complex database queries.",
-     "Feature 2: Builds automated charts and tables on the fly.",
-     "Feature 3: Designed for collaborative team workspaces.",
-     "Downside: Requires structured, clean data warehouses to work properly.",
-     "Verdict: Great for teams with existing data infrastructure."
+     "1. Export your raw script or video audio transcript as text.",
+     "2. Open Claude and paste the editing prompt template.",
+     "3. Request precise timestamp cuts and filler word removal.",
+     "4. Ask Claude to propose specific B-roll visuals for key points.",
+     "5. Copy the formatted table directly into your video project.",
+     "6. Save hours of manual footage review on every video."
     ]
    },
    "posts": {
     "x": [
-     "Databricks just launched Always-on Genie for autonomous enterprise data work. Here is our simple breakdown for beginners: [link]",
-     "Can natural language query agents replace standard SQL dashboards? We take a look at the new Databricks release: [link]"
+     "Stop wasting hours cutting video transcriptions by hand. Here is how to use free prompts in Claude to build your video edit lists automatically.",
+     "Turn raw text into formatted video edit plans in under two minutes using simple Claude prompts. Full step-by-step breakdown inside."
     ],
-    "facebook": "Databricks just announced Always-on Genie to help teams query complex data using plain English. We break down what this autonomous AI agent means for data workflows in our latest video: [link]",
-    "instagram": "Data analytics meets autonomous AI. We break down the new Databricks Genie release in simple terms for beginners. Link in bio! #Databricks #DataAnalytics #ArtificialIntelligence #TechNews",
-    "linkedin": "Autonomous data agents are evolving rapidly. Databricks just launched Always-on Genie for complex enterprise data work. Here is our quick beginner breakdown of what it does and its limitations: [link]"
+    "facebook": "Trimming video footage takes hours. You can speed up your workflow by using Claude to identify key highlights and organize your edit points automatically. Here is how to do it with simple copy-paste prompts.",
+    "instagram": "Speed up your video workflow using Claude. Swipe to see the exact prompt structure to turn raw text into an edit list. #VideoEditing #ClaudeAI #ContentCreator #Toolscape",
+    "linkedin": "Automating pre-production scripts can save video creation teams hours per project. Learn how to use large language models like Claude to generate structured shot lists and edit scripts from raw transcripts."
    },
    "article": {
-    "title": "Databricks Genie: A Beginner's Guide to Autonomous Data Agents",
+    "title": "Streamline Your Video Workflow with Claude AI",
     "outline": [
-     "Introduction to Autonomous Data Workflows",
-     "What Is Databricks Always-on Genie?",
-     "How Natural Language Database Queries Work",
-     "Enterprise Requirements and Limitations",
-     "Conclusion"
+     "The Problem with Manual Video Content Trimming",
+     "Preparing Text Transcripts for AI Processing",
+     "The Master Video Editing Prompt Template",
+     "Structuring Spoken Lines and Visual Cues",
+     "Importing Edit Plans into Standard Software"
     ]
    }
   }
  ],
  "hook_patterns": [
   {
-   "pattern": "Action verb + unexpected modifier + time or scale limit",
-   "example": "Build Your First AI Agent in 20 Minutes (No Coding)"
+   "pattern": "In the next [X] minutes you will [achieve specific result]",
+   "example": "In the next 5 minutes you will build a complete task tracker using free AI prompts."
   },
   {
-   "pattern": "First-person extreme test with a surprising consequence",
-   "example": "I Told Claude to 'Make it better' 100 Times (It Went Too Far)"
+   "pattern": "Stop doing [tedious task] by hand",
+   "example": "Stop organizing messy spreadsheet rows by hand."
   },
   {
-   "pattern": "Direct platform comparison or tier list verdict",
-   "example": "I Tried Every AI Video Generator - Full Tierlist"
+   "pattern": "This free tool does what a $[X] app does",
+   "example": "This free software does what a $20 monthly subscription app does."
   },
   {
-   "pattern": "Addressing a common tedious task with a free alternative",
-   "example": "Stop Organizing Files Yourself."
+   "pattern": "How to use [Tool Name] for beginners (Step-by-Step)",
+   "example": "How to use Ollama local AI for beginners (Step-by-Step)."
   },
   {
-   "pattern": "Major tech giant release explanation for normal people",
-   "example": "Every Claude 2.0 Concept Explained for Normal People"
+   "pattern": "I tested [Tool A] vs [Tool B] so you don't have to",
+   "example": "I tested 3 free AI agents so you don't have to."
   }
  ],
  "_competitors": [
   {
    "channel": "Metics Media",
    "title": "Build Your First AI Agent in 20 Minutes (No Coding)",
-   "views": 748917,
+   "views": 760268,
    "date": "2026-10-19",
    "url": "https://youtu.be/rCkYVxOX-dI",
    "desc": "A chatbot waits for your next message. An AI agent keeps working while you sleep. In this beginner tutorial, you'll build your first AI agent with no coding. Hermes Agent runs on its own server and messages you on Telegram.\n✅ Hostinger VPS (Exclusive 10% Discount): https://meticsmedia.com/hermes-MEG\n✅ Nous Portal ($15 Off Your First Month): https://meticsmedia.com/nous-MEG\n\nThis step-by-step AI agent tutorial is made for complete beginners. First, you'll learn what makes an AI agent different from a chatbot like ChatGPT or Claude. Then you'll see why we use Hermes Agent. It's a free, open-source agent from Nous Research. You'll deploy it on a Hostinger VPS with a one-click template and log i"
@@ -323,7 +327,7 @@
   {
    "channel": "Dan Kieft",
    "title": "How I Make Realistic AI Videos with Seedance 2.5 - Full Guide",
-   "views": 713688,
+   "views": 718570,
    "date": "2026-10-16",
    "url": "https://youtu.be/2hJsvDSPWYM",
    "desc": "Learn How To Make Ultra Realistic AI Videos with Seedance 2.5\nCreate AI Videos here 👉 http://dankieft.com/higgsfield\n\nLink to all my prompts 👉 https://how-to-make-realistic-footage.vercel.app/\n\nIn this video I teach you how to create realistic ai videos using Seedance 2.5. We will go over various different techniques in which I explain which ai models you should use, how to prompt ai and how to generate cool looking videos. Make sure to watch the entire video to fully understand how my workflow works.\n\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.in"
@@ -331,7 +335,7 @@
   {
    "channel": "Metics Media",
    "title": "Master Higgsfield AI in 20 Minutes (Beginner Tutorial)",
-   "views": 264824,
+   "views": 271437,
    "date": "2026-10-21",
    "url": "https://youtu.be/3W1VhiKLNp4",
    "desc": "This Higgsfield AI tutorial walks you through everything you need to know as a beginner. Go from generating your first image all the way to a finished video, step by step.\n✅ Higgsfield (Best Deal): https://meticsmedia.com/higgsfield-PXS\n\nLearn how to use Higgsfield AI to create images, videos, and voiceovers, even if you’ve never used an AI generator before. After a quick tour of the dashboard, you’ll generate a product mockup using your own logo as a reference, turn it into a video with sound, and create a voiceover from a simple script. Then we bring it all together inside Cinema Studio, where you save a character, a location, and a product as reusable elements and combine them into a real"
@@ -339,7 +343,7 @@
   {
    "channel": "Dan Kieft",
    "title": "How To Start Making AI Videos in 2026 (Beginner Guide)",
-   "views": 166391,
+   "views": 169080,
    "date": "2026-10-22",
    "url": "https://youtu.be/iO9MiefIpVM",
    "desc": "How To Start Making AI Video in 2026 (Beginner Guide)\nCreat AI Video with Higgsfield 👉 http://dankieft.com/higgsfield\n\n\nAll of my prompts: https://start-making-ai-videos.vercel.app/\n\n\nIn this video I teach you everything you need to know in order to start creating AI videos on higgsfield. We will go over prompting, workflows, references ai images and ai videos. by the end of this you know exactly how to start making videos on higgsfield\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.instagram.com/dan.kieft/"
@@ -347,7 +351,7 @@
   {
    "channel": "Kevin Stratvert",
    "title": "How to Use Ollama (Free Local AI)",
-   "views": 154764,
+   "views": 163814,
    "date": "2026-11-05",
    "url": "https://youtu.be/btMoPRHz8eM",
    "desc": "Learn how to install and use Ollama on Windows to run AI models locally for free. In this beginner tutorial, we'll set up Ollama without an account, choose a local model, chat with AI, ask follow-up questions, and analyze a PDF on your computer. Then we'll connect Ollama to OpenCode and build a website with AI that creates files directly on your PC. Once you've downloaded a local model, you can use it offline. Cloud models are optional and work differently; this tutorial focuses on local AI.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Ollama: https://ollama.com/\n- Download Ollama for Windows: https://ollama.com/download/windows\n- OpenCode: https://opencode.ai/\n- Download OpenCode: https://opencode"
@@ -355,7 +359,7 @@
   {
    "channel": "Matt Wolfe",
    "title": "Anthropic's Fable 5.2 is the World’s Best AI Model",
-   "views": 153943,
+   "views": 157367,
    "date": "2026-11-09",
    "url": "https://youtu.be/2TM8W66NI_8",
    "desc": "Fable 5.2 from Anthropic just dropped today. Here's the details.\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\nResources From Today's Video:\nLaunch Post: https://www.anthropic.com/claude-fable-and-mythos-5-2\nMatt Berman Gears of War: https://x.com/MatthewBerman/status/2119871207206158459\nAlex’s Examples: https://x.com/The_Alex/status/2119884217261892083\nPeter Yang Animation: h"
@@ -363,7 +367,7 @@
   {
    "channel": "Futurepedia",
    "title": "Claude 2.0 Is Here. EVERYTHING in 15 Minutes",
-   "views": 135594,
+   "views": 137623,
    "date": "2026-11-03",
    "url": "https://youtu.be/tM0dwXhOv2o",
    "desc": "*Free Claude 2.0 Setup Kit:* https://clickhubspot.com/o2iu\n\nMore from Futurepedia:\n👉 Get your free AI plan on Futurepedia 2.0: https://clickhubspot.com/691m\n\nSummary:\nAnthropic completely rebuilt the Claude desktop app, and it's a big enough change that one of the engineers who worked on Claude Code called it basically a v2. I cover everything that's new and how to get the most out of it, from the new artifacts to the new Code layout, ways to keep Claude working while you're away, new ways to multitask and mods.\nI go through the new Home and Code tabs, the new artifact formats (docs, slides, design, dashboards and motion), the session rail and context breakdown, sections, side chats, split v"
@@ -371,7 +375,7 @@
   {
    "channel": "Matt Wolfe",
    "title": "AI News: New ChatGPT & Google Models (14 Updates Worth Knowing)",
-   "views": 128305,
+   "views": 129485,
    "date": "2026-11-06",
    "url": "https://youtu.be/IrAHINf0M6E",
    "desc": "See what Optimizely’s Virtual Teammates can automate for you at http://optimizely.com/mattwolfe\n\nThis week’s AI news covers OpenAI’s GPT-Image 2.6, Google Gemini Omni 1.2 Flash, and the latest AI tools for creating images, generating videos, and getting things done. Watch demos of ChatGPT’s animated GIF creation and image editing, Google’s free AI video generation, and Grokbot’s new phone call feature.\n\nWe also explore Pruna’s PH3 Image and Pika H3 Flex open-weight models, plus voice and video calls with Meta Muse. Then, catch up on Claude’s bank account integration, Kimi K3.1 Pro, GPT-6 Cyber, and more in the rapid-fire roundup.\n\nWhich update will you actually use? Let me know in the commen"
@@ -379,7 +383,7 @@
   {
    "channel": "Dan Kieft",
    "title": "I Tried Every AI Video Generator - Full Tierlist",
-   "views": 123844,
+   "views": 126621,
    "date": "2026-10-28",
    "url": "https://youtu.be/tnG3TIULBro",
    "desc": "Find out what the Best AI Video Generator is in 2026!\nTry out all models 👉 https://tolt.link/tierlist\n\nI tested the 6 most popular AI video generators of 2026 in an 8-round head-to-head battle to find out which one is ACTUALLY the best. Seedance 2.5, Wan 3.0, MiniMax H3 Max, Flux 3, Kling 4.0 Flash and Gemini Omni 1.1 Flash all got the exact same prompts and the same references — then I ranked every single round on a tier list, counted the points, and added up exactly how many credits each model burned.\n\nAll My prompts:\nhttps://best-video-generator.vercel.app/\n\nOpenArt Arena:\nhttps://openart.ai/arena\n\n0:00 Intro\n1:21 The contenders\n2:11 Rules & judging criteria\n2:45 Round 1: Prompt adherence"
@@ -387,50 +391,50 @@
   {
    "channel": "Kevin Stratvert",
    "title": "How to Use Grok Bot for Beginners",
-   "views": 115454,
+   "views": 118658,
    "date": "2026-10-27",
    "url": "https://youtu.be/G6AwOYT-Gbw",
    "desc": "This Grok Bot tutorial for beginners shows you how to build your first AI team, with bots that watch your inbox, keep your books, and answer support tickets on their own.\n💵 Get 50% off QuickBooks Online ➜ https://quickbooks.kevinstratvert.com/\n\nFirst, you'll see what Grok Bot costs, including the 7-day free trial and the cheapest paid plans, and where everything lives in the app.\n\nNext, you'll build your first bot, which connects to Gmail right from the chat and starts watching your inbox for new catering orders on its own.\n\nThen you'll teach it how you like things done, so it remembers your writing rules every time it drafts an email.\n\nAlong the way, you'll learn how to use Grok Bot the way"
   },
   {
+   "channel": "Futurepedia",
+   "title": "Claude Makes 3D Animations Easy Now",
+   "views": 114147,
+   "date": "2026-11-12",
+   "url": "https://youtu.be/ZxaMmG71g8c",
+   "desc": "*Build 3D Animated Explainer Videos with Claude (37 Ready-Made Styles):* https://clickhubspot.com/777a\n\nMore from Futurepedia:\n👉 Get your free AI plan on Futurepedia 2.0: https://clickhubspot.com/691m\n\nSummary:\nClaude can now make stunning 3D animations in almost any style, and it's surprisingly easy. In this video I break down how it works using Three.js (and how it differs from the frame-by-frame JavaScript method from my last motion graphics video), then walk through making one from a single prompt. I also show off my free 3D Style Atlas: 37 ready-made styles you can copy and paste into Claude, with built-in sound effects and a voiceover mode that syncs the animation to your narration.\n\nC"
+  },
+  {
    "channel": "Metics Media",
    "title": "Higgsfield AI Tutorial for Beginners (2026) | Step-by-Step",
-   "views": 104393,
+   "views": 107254,
    "date": "2026-10-30",
    "url": "https://youtu.be/Mt91SiQotOU",
    "desc": "This Higgsfield AI tutorial for beginners shows you how to use Higgsfield AI, from your first AI image to a finished 4K video, without wasting credits.\n✅ Higgsfield (Best Deal): https://meticsmedia.com/higgsfield-TBR\n\nIn this Higgsfield AI tutorial for beginners, you'll learn how to use Higgsfield AI from your very first AI image all the way to a finished 4K video. We start by choosing the right plan and taking a quick tour, so you know where everything is. Then you'll create and edit AI images, turn them into AI videos with models like Seedance and Kling, and use Elements to keep your characters and products consistent in every shot. You'll also see how to build a multi-shot video, when Cin"
   },
   {
+   "channel": "Dan Kieft",
+   "title": "How I Make Cinematic AI Ads with Fable 5.2 & Seedance 2.5",
+   "views": 106990,
+   "date": "2026-11-12",
+   "url": "https://youtu.be/jeMl0OSwDss",
+   "desc": "Create your own Cinematic AI ads with Fable 5.2 and Seedance 2.5\nHiggsfield Black Friday Sale is live now 👉 👉 http://dankieft.com/higgsfield\n\nIn this video I teach you how you can create your own AI ads. We'll go over all the different steps fro prompting, to making your assets and generating the video so by the end of it you know exactly how.\n\nPrompts & Skills I used:\nhttps://realism-site.vercel.app/\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.instagram.com/dan.kieft/"
+  },
+  {
    "channel": "Jeff Su",
    "title": "I knew AI + Notion would be good, but this... wow.",
-   "views": 103130,
+   "views": 104617,
    "date": "2026-10-27",
    "url": "https://youtu.be/ofzHbyxkpVg",
    "desc": "Grab my free Cowork Toolkit: https://coworkacademy.ai/toolkit?utm_source=youtube&utm_medium=video&utm_campaign=v213\n\nIf your #AI keeps creating Notion pages you have to fix, it needs to learn how YOU work. In this video, I’ll show you how to teach Claude and #ChatGPT your database, template, and formatting preferences so they can handle the tedious work for you.\n\nYou’ll start with tasks and notes, save your preferences in a reusable Notion Conventions file, and see how the same process scales to entire projects with linked tasks and deliverables. It works with Claude, ChatGPT, or Gemini, so you can keep the Notion setup you already use.\n\n*TIMESTAMPS*\n00:00 Manage Your ENTIRE Notion Setup wit"
   },
   {
-   "channel": "Nate Herk | AI Automation",
-   "title": "Every AI Business Ranked from Worst to Best",
-   "views": 102192,
-   "date": "2026-11-05",
-   "url": "https://youtu.be/O3g_m2i2IGU",
-   "desc": "FREE First Client SOP: https://app.aiautomationsociety.ai/optin/first-client-SOP/?utm_source=youtube&utm_medium=organic&utm_content=ai-business-ranked-from-worst-to-best&sl=yt_ai-business-ranked-from-worst-to-best\nHow I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=ai-business-ranked-from-worst-to-best&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=ai-business-ranked-from-worst-to-best&hcategory=youtube-videos&utm_campaign=free-group\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www"
-  },
-  {
    "channel": "Matt Wolfe",
    "title": "How I Get Claude To Edit My Videos (Step-By-Step)",
-   "views": 101821,
+   "views": 103713,
    "date": "2026-11-04",
    "url": "https://youtu.be/ep4psgAFOqc",
    "desc": "Try vidIQ for only $1 https://vidiq.com/mattwolfe/\n\nLearn how to edit videos with Claude AI, work with Premiere Pro, and turn your footage into short-form content.\n\nIn this guide, I walk through how to use Claude to help with video editing, from working with your existing footage to creating clips for Shorts and Reels. We’ll explore how Claude fits into an Adobe Premiere Pro workflow and where AI can help with the editing process.\n\nThe focus is on making useful content from your own videos, with creative control over the results. Less repetitive work, without filling your feed with AI slop.\n\nSharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://fu"
-  },
-  {
-   "channel": "Jeff Su",
-   "title": "6 Insanely Practical AI Tips (in 18 minutes)",
-   "views": 93135,
-   "date": "2026-11-10",
-   "url": "https://youtu.be/9Hwanevuhd8",
-   "desc": "✅ Get HubSpot’s free guide, Use Claude like an AI Expert - https://clickhubspot.com/89c42f\n\nTired of AI tips that go out of date as soon as a new model comes out? These six AI productivity tips help you waste fewer tokens, do less manual work, and teach #ChatGPT, Claude, and Gemini how you like to work.\n\nI’ll show you how to turn a dense PDF into a reusable reference, save prompts you keep retyping, and catch misunderstandings by checking the AI’s plan first. Plus, you’ll see how simple tool rulebooks save you from correcting the same emails and calendar events every time.\n\n*TIMESTAMPS*\n00:00 Top 6 EVERYDAY AI Tips You'll Actually Use\n00:28 Tip #1: The Markdown Shortcut\n03:50 Tip #2: The Fol"
   }
  ],
  "_bank": [
@@ -444,7 +448,7 @@
   {
    "channel": "Metics Media",
    "title": "Build Your First AI Agent in 20 Minutes (No Coding)",
-   "views": 748917,
+   "views": 760268,
    "date": "2026-10-19",
    "url": "https://youtu.be/rCkYVxOX-dI",
    "desc": "A chatbot waits for your next message. An AI agent keeps working while you sleep. In this beginner tutorial, you'll build your first AI agent with no coding. Hermes Agent runs on its own server and messages you on Telegram.\n✅ Hostinger VPS (Exclusive 10% Discount): https://meticsmedia.com/hermes-MEG\n✅ Nous Portal ($15 Off Your First Month): https://meticsmedia.com/nous-MEG\n\nThis step-by-step AI agent tutorial is made for complete beginners. First, you'll learn what makes an AI agent different from a chatbot like ChatGPT or Claude. Then you'll see why we use Hermes Agent. It's a free, open-source agent from Nous Research. You'll deploy it on a Hostinger VPS with a one-click template and log i"
@@ -452,7 +456,7 @@
   {
    "channel": "Dan Kieft",
    "title": "How I Make Realistic AI Videos with Seedance 2.5 - Full Guide",
-   "views": 713688,
+   "views": 718570,
    "date": "2026-10-16",
    "url": "https://youtu.be/2hJsvDSPWYM",
    "desc": "Learn How To Make Ultra Realistic AI Videos with Seedance 2.5\nCreate AI Videos here 👉 http://dankieft.com/higgsfield\n\nLink to all my prompts 👉 https://how-to-make-realistic-footage.vercel.app/\n\nIn this video I teach you how to create realistic ai videos using Seedance 2.5. We will go over various different techniques in which I explain which ai models you should use, how to prompt ai and how to generate cool looking videos. Make sure to watch the entire video to fully understand how my workflow works.\n\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.in"
@@ -524,7 +528,7 @@
   {
    "channel": "Metics Media",
    "title": "Master Higgsfield AI in 20 Minutes (Beginner Tutorial)",
-   "views": 264824,
+   "views": 271437,
    "date": "2026-10-21",
    "url": "https://youtu.be/3W1VhiKLNp4",
    "desc": "This Higgsfield AI tutorial walks you through everything you need to know as a beginner. Go from generating your first image all the way to a finished video, step by step.\n✅ Higgsfield (Best Deal): https://meticsmedia.com/higgsfield-PXS\n\nLearn how to use Higgsfield AI to create images, videos, and voiceovers, even if you’ve never used an AI generator before. After a quick tour of the dashboard, you’ll generate a product mockup using your own logo as a reference, turn it into a video with sound, and create a voiceover from a simple script. Then we bring it all together inside Cinema Studio, where you save a character, a location, and a product as reusable elements and combine them into a real"
