@@ -43,8 +43,9 @@ jobs:
         with: { python-version: "3.12" }
       - name: Install
         working-directory: ts
+        env: { MOD: "${{ github.event.inputs.mod }}" }
         run: |
-          if [ "$JOB" = approve ] || [ "$JOB" = py ]; then pip install -q requests; else
+          if [ "$JOB" = approve ] || { [ "$JOB" = py ] && [[ "$MOD" != *calendar* ]]; }; then pip install -q requests; else
             sudo apt-get install -y -qq fonts-dejavu-core >/dev/null; pip install -q -r requirements.txt; fi
       - name: Work
         working-directory: ts
