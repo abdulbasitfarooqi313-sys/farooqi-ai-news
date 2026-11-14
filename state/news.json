@@ -379,7 +379,7 @@
   "huggingfaceceovowstokeepfightingforopensourceaiafterjensenhu",
   "unitedairlinesblocksaiagentsfrombookingflightscitingcybersec"
  ],
- "offset": 94696882,
+ "offset": 94696883,
  "chat": 6593456628,
  "days": {
   "2026-10-22": {
@@ -1117,7 +1117,7 @@
    "yt_status": "scheduled"
   },
   "2026-11-14": {
-   "status": "pending",
+   "status": "approved",
    "vmid": 771,
    "mids": [
     770,
@@ -1148,7 +1148,8 @@
     "یونائیٹڈ ایئرلائنز نے اے آئی ایجنٹس کی ٹکٹ بکنگ پر پابندی لگا دی"
    ],
    "yt": "4SMKAR8u9x4",
-   "yt_at": "2026-11-14T17:00:00+03:00"
+   "yt_at": "2026-11-14T17:00:00+03:00",
+   "yt_status": "scheduled"
   }
  },
  "podcast": {
