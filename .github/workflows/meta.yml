@@ -45,9 +45,9 @@ jobs:
           FB_PAGE_ID_NEWS: ${{ secrets.FB_PAGE_ID_NEWS }}
           FB_PAGE_TOKEN_NEWS: ${{ secrets.FB_PAGE_TOKEN_NEWS }}
           IG_USER_ID_NEWS: ${{ secrets.IG_USER_ID_NEWS }}
-          FB_PAGE_ID_NAWA: ${{ secrets.FB_PAGE_ID_NAWA }}
-          FB_PAGE_TOKEN_NAWA: ${{ secrets.FB_PAGE_TOKEN_NAWA }}
-          IG_USER_ID_NAWA: ${{ secrets.IG_USER_ID_NAWA }}
+          FB_PAGE_ID_NAWA: ${{ secrets.FB_PAGE_ID_NAWA || secrets.NAWA_FB_PAGE_ID }}   # نوا کی پہلے سے کاپی شدہ چابی
+          FB_PAGE_TOKEN_NAWA: ${{ secrets.FB_PAGE_TOKEN_NAWA || secrets.NAWA_FB_PAGE_TOKEN }}   # نوا کی پہلے سے کاپی شدہ چابی
+          IG_USER_ID_NAWA: ${{ secrets.IG_USER_ID_NAWA || secrets.NAWA_IG_USER_ID }}   # نوا کی پہلے سے کاپی شدہ چابی
           FB_PAGE_ID_TOOLSCAPE: ${{ secrets.FB_PAGE_ID_TOOLSCAPE }}
           FB_PAGE_TOKEN_TOOLSCAPE: ${{ secrets.FB_PAGE_TOKEN_TOOLSCAPE }}
           IG_USER_ID_TOOLSCAPE: ${{ secrets.IG_USER_ID_TOOLSCAPE }}
