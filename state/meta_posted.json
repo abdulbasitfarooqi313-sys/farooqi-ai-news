@@ -157,6 +157,10 @@
   "r9EPWLitnOI": {
    "ok": true,
    "seeded": true
+  },
+  "FOlHJk0SXnI": {
+   "tries": 1,
+   "err": "FB video: 400 (#100) No permission to publish the video"
   }
  }
 }
