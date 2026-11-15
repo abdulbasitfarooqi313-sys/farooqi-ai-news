@@ -1,8 +1,10 @@
-09:35:23 news: start
-09:35:38 news: 93 competitor videos, 108 trending items
-09:36:32 gemini-3.6-flash: HTTP 200 in 54s
-09:36:32    finish=STOP chars=17689
-09:36:32 toolscape: start
-09:36:35 toolscape: 137 competitor videos, 60 trending items
-09:37:08 gemini-3.6-flash: HTTP 200 in 32s
-09:37:08    finish=STOP chars=18063
+10:02:33 news: start
+10:02:36 news: 95 competitor videos, 104 trending items
+10:02:38 gemini-3.6-flash: HTTP 503 in 1s
+10:04:08 gemini-3.6-flash: HTTP 200 in 80s
+10:04:08    finish=STOP chars=17114
+10:04:08 desk news: JSON repaired
+10:04:08 toolscape: start
+10:04:11 toolscape: 137 competitor videos, 80 trending items
+10:04:52 gemini-3.6-flash: HTTP 200 in 41s
+10:04:52    finish=STOP chars=17702
