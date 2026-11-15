@@ -69,7 +69,7 @@ jobs:
       # GitHub کا شیڈول اس ریپو میں بہت دیر/کم چلتا ہے (15 نومبر: 10 گھنٹے میں صرف 1 بار) — اس لیے خود اگلا رن (~12 منٹ بعد)۔
       # دوسرا رن پہلے سے قطار میں/چل رہا ہو تو نہیں — ایک ہی زنجیر رہے۔
       - name: Next check (self-chain)
-        if: always() && !cancelled() && (github.event_name == 'schedule' || github.event.inputs.mode == 'run')
+        if: always() && !cancelled() && github.event.inputs.mode != 'seed'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
