@@ -9,13 +9,14 @@ on:
       mode: { description: "check | seed | run", required: false, default: "check" }
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: meta
   cancel-in-progress: false
 jobs:
   meta:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
       - name: Engine (private code)
@@ -65,3 +66,15 @@ jobs:
           git add state/meta_posted.json; git diff --cached --quiet && exit 0
           git commit -m "Facebook/Instagram ریکارڈ"
           for i in 1 2 3; do git pull --rebase --autostash -X theirs && git push && exit 0; sleep 10; done; exit 1
+      # GitHub کا شیڈول اس ریپو میں بہت دیر/کم چلتا ہے (15 نومبر: 10 گھنٹے میں صرف 1 بار) — اس لیے خود اگلا رن (~12 منٹ بعد)۔
+      # دوسرا رن پہلے سے قطار میں/چل رہا ہو تو نہیں — ایک ہی زنجیر رہے۔
+      - name: Next check (self-chain)
+        if: always() && !cancelled() && (github.event_name == 'schedule' || github.event.inputs.mode == 'run')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sleep 690
+          q=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/meta.yml/runs?status=queued" -q .total_count)
+          r=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/meta.yml/runs?status=in_progress" -q .total_count)
+          if [ "${q:-0}" -gt 0 ] || [ "${r:-1}" -gt 1 ]; then echo "دوسرا رن موجود — زنجیر وہی سنبھالے گا"; exit 0; fi
+          gh workflow run meta.yml --ref "${{ github.ref_name }}" -f mode=run
