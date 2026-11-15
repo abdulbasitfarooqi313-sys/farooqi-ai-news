@@ -31,6 +31,7 @@ jobs:
       YOUTUBE_CLIENT_ID: ${{ secrets.TS_YOUTUBE_CLIENT_ID }}
       YOUTUBE_CLIENT_SECRET: ${{ secrets.TS_YOUTUBE_CLIENT_SECRET }}
       YOUTUBE_REFRESH_TOKEN: ${{ secrets.TS_YOUTUBE_REFRESH_TOKEN }}
+      YOUTUBE_CAPTIONS_TOKEN: ${{ secrets.TS_YOUTUBE_CAPTIONS_TOKEN }}
       BLOGGER_REFRESH_TOKEN: ${{ secrets.TS_BLOGGER_REFRESH_TOKEN }}
     steps:
       - name: Toolscape code (private)
