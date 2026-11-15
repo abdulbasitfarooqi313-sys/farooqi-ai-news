@@ -159,7 +159,7 @@
    "seeded": true
   },
   "FOlHJk0SXnI": {
-   "tries": 2,
+   "tries": 3,
    "err": "FB link post: 403 (#200) If posting to a group, requires app being installed in the group, and \\\n          either publish_to_groups permission with user token, or both pages_read_engagement \\\n          and pages_manage_posts permission with page token; If posting to a page, \\\n          requires both"
   }
  }
