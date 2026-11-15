@@ -70,7 +70,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           [ -f breaking.mp4 ] || exit 0
-          T="breaking-$(TZ=Asia/Riyadh date +%F)-${{ github.run_number }}"
+          T="breaking-$(TZ=Asia/Riyadh date +%F)"      # Facebook ایجنٹ یہی نام ڈھونڈتا ہے
+          [ "${{ github.event.inputs.force }}" = sample ] && T="breaking-sample-${{ github.run_number }}"
           gh release delete "$T" -y --cleanup-tag 2>/dev/null || true
           gh release create "$T" --title "$T" --notes "review copy" breaking.mp4 breaking_thumb.jpg || true
       - name: Save
