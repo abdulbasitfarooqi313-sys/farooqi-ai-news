@@ -192,13 +192,17 @@
    "ok": true,
    "seeded": true,
    "tries": 1,
-   "err": "IG upload: 400 {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}"
+   "fb": "(posted, id lost)",
+   "ig_err": "IG upload: 400 {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+   "at": "2026-11-16 06:31"
   },
   "r9EPWLitnOI": {
    "ok": true,
    "seeded": true,
    "tries": 1,
-   "err": "IG upload: 400 {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}"
+   "fb": "(posted, id lost)",
+   "ig_err": "IG upload: 400 {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+   "at": "2026-11-16 06:31"
   },
   "FOlHJk0SXnI": {
    "tries": 1,
