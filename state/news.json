@@ -379,7 +379,7 @@
   "huggingfaceceovowstokeepfightingforopensourceaiafterjensenhu",
   "unitedairlinesblocksaiagentsfrombookingflightscitingcybersec"
  ],
- "offset": 94696891,
+ "offset": 94696892,
  "chat": 6593456628,
  "days": {
   "2026-11-01-w": {
@@ -1084,7 +1084,7 @@
    "yt_at": "2026-11-16T19:05:56.975775+03:00"
   },
   "2026-11-16-t": {
-   "status": "pending",
+   "status": "approved",
    "vmid": 983,
    "mids": [
     982,
@@ -1108,7 +1108,8 @@
    ],
    "kind": "tech",
    "yt": "b6gQqtDtliE",
-   "yt_at": "2026-11-16T18:00:00+03:00"
+   "yt_at": "2026-11-16T18:00:00+03:00",
+   "yt_status": "public"
   },
   "2026-11-16-w": {
    "status": "approved",
