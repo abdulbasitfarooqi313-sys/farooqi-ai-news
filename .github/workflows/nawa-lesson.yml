@@ -50,6 +50,7 @@ jobs:
         if: steps.need.outputs.run == '1'
         working-directory: nawa-repo
         env:
+          NAWA_TOKEN: ${{ secrets.NAWA_TOKEN }}   # ویڈیو کی ریلیز کاپی (فیس بک/انسٹاگرام)
           GEMINI_API_KEY: ${{ secrets.NAWA_GEMINI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.NAWA_TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.NAWA_TELEGRAM_CHAT_ID }}

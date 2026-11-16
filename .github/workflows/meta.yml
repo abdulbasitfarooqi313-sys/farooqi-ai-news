@@ -53,6 +53,7 @@ jobs:
           FB_PAGE_TOKEN_TOOLSCAPE: ${{ secrets.FB_PAGE_TOKEN_TOOLSCAPE }}
           IG_USER_ID_TOOLSCAPE: ${{ secrets.IG_USER_ID_TOOLSCAPE }}
           TS_TOKEN: ${{ secrets.TS_TOKEN }}             # ٹول اسکیپ کی ریلیز فائلیں
+          NAWA_TOKEN: ${{ secrets.NAWA_TOKEN }}         # نوائے فاروقی کی ریلیز فائلیں
         run: |
           M="${{ github.event.inputs.mode }}"; [ "${{ github.event_name }}" = "schedule" ] && M=run
           if [ "$M" = run ] && [ -z "$FB_PAGE_TOKEN_NEWS" ]; then echo "Secrets ابھی نہیں"; exit 0; fi
