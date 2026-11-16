@@ -192,10 +192,10 @@
   },
   "s5w5GQGCnMI": {
    "ok": true,
-   "tries": 1,
+   "tries": 2,
    "fb": "(posted, id lost)",
-   "ig_err": "IG upload: 400 {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-   "at": "2026-11-16 06:31"
+   "at": "2026-11-16 13:56",
+   "ig": "17916065037552523"
   },
   "r9EPWLitnOI": {
    "ok": true,
