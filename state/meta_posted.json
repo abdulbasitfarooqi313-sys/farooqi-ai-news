@@ -200,11 +200,12 @@
   },
   "r9EPWLitnOI": {
    "ok": true,
-   "seeded": true,
-   "tries": 1,
-   "fb": "(posted, id lost)",
+   "tries": 2,
+   "fb": "1454166363483023",
    "ig_err": "IG upload: 400 {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-   "at": "2026-11-16 06:31"
+   "at": "2026-11-16 11:44",
+   "fb_kind": "reel",
+   "ig": "18112201712094071"
   },
   "FOlHJk0SXnI": {
    "tries": 1,
@@ -220,7 +221,8 @@
    1794828680.5784504
   ],
   "toolscape": [
-   1794810694.9248948
+   1794810694.9248948,
+   1794829405.3963034
   ]
  },
  "auth_alert": 1794809857.5418575
