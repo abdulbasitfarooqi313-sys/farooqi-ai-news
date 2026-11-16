@@ -75,8 +75,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           sleep 690
-          q=0; for st in queued pending waiting requested; do
-            n=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/meta.yml/runs?status=$st" -q .total_count); q=$((q + ${n:-0})); done
-          r=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/meta.yml/runs?status=in_progress" -q .total_count)
-          if [ "${q:-0}" -gt 0 ] || [ "${r:-1}" -gt 1 ]; then echo "دوسرا رن موجود — زنجیر وہی سنبھالے گا"; exit 0; fi
+          # صرف اپنے بعد والا (نیا) رن ہو تو زنجیر اسی پر چھوڑیں — پرانے/پھنسے رن سے زنجیر نہ ٹوٹے (16 نومبر 2026)
+          n=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/meta.yml/runs?per_page=20" \
+                -q "[.workflow_runs[] | select(.id > ${{ github.run_id }} and .status != \"completed\")] | length")
+          if [ "${n:-0}" -gt 0 ]; then echo "نیا رن موجود — زنجیر وہی سنبھالے گا"; exit 0; fi
           gh workflow run meta.yml --ref "${{ github.ref_name }}" -f mode=run
