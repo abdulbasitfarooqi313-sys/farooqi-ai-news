@@ -202,7 +202,6 @@
    "ok": true,
    "tries": 2,
    "fb": "1454166363483023",
-   "ig_err": "IG upload: 400 {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
    "at": "2026-11-16 11:44",
    "fb_kind": "reel",
    "ig": "18112201712094071"
