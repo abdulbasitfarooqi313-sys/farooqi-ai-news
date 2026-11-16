@@ -135,6 +135,22 @@
   "2026-11-15-w2": {
    "ok": true,
    "seeded": true
+  },
+  "2026-11-16-t": {
+   "tries": 1,
+   "ok": true,
+   "fb": "1669199291212245",
+   "fb_kind": "reel",
+   "ig_err": "IG upload: 400 {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+   "at": "2026-11-16 17:08"
+  },
+  "2026-11-16-b": {
+   "tries": 1,
+   "ok": true,
+   "fb": "1155682077148036",
+   "fb_kind": "reel",
+   "ig": "18140896435649770",
+   "at": "2026-11-16 17:09"
   }
  },
  "toolscape": {
