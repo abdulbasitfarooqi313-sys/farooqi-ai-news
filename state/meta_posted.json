@@ -6,75 +6,111 @@
   },
   "2026-10-31": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB video: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-01-f": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB video: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-01-w": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB reel start: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-02": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB video: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-02-w": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB reel start: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-03-f": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB video: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-03-w": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB reel start: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-04": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB video: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-05-f": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB video: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-05-w": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB reel start: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-06-p": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB video: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-06-w": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB reel start: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-07": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB video: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-07-w": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB reel start: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-08-f": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB video: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-08-w": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB reel start: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-09": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB video: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-11": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB video: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-12-t": {
    "ok": true,
@@ -82,7 +118,9 @@
   },
   "2026-11-12-w": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB reel start: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-12-w2": {
    "ok": true,
@@ -90,19 +128,27 @@
   },
   "2026-11-13-p": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB video: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-13-w": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB reel start: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-14": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB video: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-15-w": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB reel start: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "2026-11-15-w2": {
    "ok": true,
@@ -112,51 +158,75 @@
  "toolscape": {
   "yauS9VLDOOk": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB video: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "Rpjslf9ChFM": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB reel start: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "Kj841Avc96M": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB reel start: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "p518oIWfo8M": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB video: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "asnlTguEj84": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB reel start: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "-tw6DWpBoQs": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB reel start: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "IvuvdAxcOt8": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB video: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "zTx3C5aGKYc": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB reel start: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "BvlH6m9sYj0": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB reel start: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "sOTEYB4AJWg": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB video: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "s5w5GQGCnMI": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB reel start: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "r9EPWLitnOI": {
    "ok": true,
-   "seeded": true
+   "seeded": true,
+   "tries": 1,
+   "err": "FB reel start: 400 Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
   },
   "FOlHJk0SXnI": {
    "tries": 1,
@@ -165,5 +235,9 @@
    "fb_kind": "video",
    "at": "2026-11-15 21:05"
   }
+ },
+ "backlog": {
+  "news": [],
+  "toolscape": []
  }
 }
