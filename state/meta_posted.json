@@ -124,8 +124,11 @@
   },
   "2026-11-15-w": {
    "ok": true,
-   "seeded": true,
-   "tries": 0
+   "tries": 1,
+   "fb": "39896105953367317",
+   "fb_kind": "reel",
+   "ig": "17919451398534871",
+   "at": "2026-11-16 06:30"
   },
   "2026-11-15-w2": {
    "ok": true,
@@ -180,18 +183,22 @@
   },
   "sOTEYB4AJWg": {
    "ok": true,
-   "seeded": true,
-   "tries": 0
+   "tries": 1,
+   "fb": "1118391100938977",
+   "fb_kind": "video",
+   "at": "2026-11-16 06:31"
   },
   "s5w5GQGCnMI": {
    "ok": true,
    "seeded": true,
-   "tries": 0
+   "tries": 1,
+   "err": "IG upload: 400 {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}"
   },
   "r9EPWLitnOI": {
    "ok": true,
    "seeded": true,
-   "tries": 0
+   "tries": 1,
+   "err": "IG upload: 400 {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}"
   },
   "FOlHJk0SXnI": {
    "tries": 1,
@@ -202,8 +209,12 @@
   }
  },
  "backlog": {
-  "news": [],
-  "toolscape": []
+  "news": [
+   1794810567.622325
+  ],
+  "toolscape": [
+   1794810694.9248948
+  ]
  },
  "auth_alert": 1794809857.5418575
 }
