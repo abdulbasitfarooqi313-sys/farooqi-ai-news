@@ -137,13 +137,13 @@
    "seeded": true
   },
   "2026-11-16-t": {
-   "tries": 5,
+   "tries": 6,
    "ok": true,
    "fb": "1669199291212245",
    "fb_kind": "reel",
-   "ig_err": "IG upload: 400 {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-   "at": "2026-11-16 17:08",
-   "err": "IG upload: 400 {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}"
+   "at": "2026-11-16 18:12",
+   "err": "IG upload: 400 {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+   "ig": "17997837804013532"
   },
   "2026-11-16-b": {
    "tries": 1,
