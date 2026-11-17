@@ -13,6 +13,7 @@ on:
       cmd: { description: "خالی = بوٹ؛ یا کوئی ماڈیول، مثلاً nawa.yt_check", required: false, default: "" }
 permissions:
   contents: read
+  actions: write          # خود کو دوبارہ چلانے کے لیے (17 نومبر 2026)
 concurrency:
   group: nawa-bot
   cancel-in-progress: false
@@ -90,6 +91,18 @@ jobs:
             save; redo
             sleep 50
           done
+      - name: Keep going (self-chain)
+        # GitHub کا شیڈول پبلک ریپو پر دن میں چند بار ہی چلتا ہے، اس لیے ✅ کا جواب گھنٹوں رکا رہتا تھا (مالک، 17 نومبر 2026)۔
+        # ہر رن ختم ہوتے ہی اگلا خود — صرف تب جب اپنے بعد والا کوئی نیا رن پہلے سے نہ ہو۔
+        if: always() && github.event.inputs.cmd == ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          n=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/nawa-poll.yml/runs?per_page=20" \
+                -q "[.workflow_runs[] | select(.id > ${{ github.run_id }} and .status != \"completed\")] | length")
+          if [ "${n:-0}" -gt 0 ]; then echo "نیا رن موجود"; exit 0; fi
+          gh workflow run nawa-poll.yml -R "$GITHUB_REPOSITORY" || \
+            gh api -X POST "repos/$GITHUB_REPOSITORY/actions/workflows/nawa-poll.yml/dispatches" -f ref=main
       - name: Alert on failure
         if: failure()
         env:
