@@ -57,8 +57,8 @@ jobs:
           NAWA_TOKEN: ${{ secrets.NAWA_TOKEN }}
           CMD: ${{ github.event.inputs.cmd }}
         run: |
-          python -u -m $CMD
+          rc=0; python -u -m $CMD || rc=$?          # ناکام ہو تب بھی جو بن چکا (مثلاً نقل شدہ صفحات) محفوظ ہو
           git add -A
-          git diff --cached --quiet && exit 0
+          git diff --cached --quiet && exit $rc
           git commit -q -m "کام: $CMD (لامحدود رنر)"
-          for i in 1 2 3; do git pull -q --rebase --autostash -X theirs && git push -q && exit 0; sleep 10; done
+          for i in 1 2 3; do git pull -q --rebase --autostash -X theirs && git push -q && exit $rc; sleep 10; done
