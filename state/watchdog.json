@@ -8,13 +8,16 @@
  },
  "nawaefarooqi-bit/nawaefarooqi-agents/lesson-video.yml": {
   "day": "2026-11-16",
-  "n": 0,
-  "told": 43932898594
+  "n": 1,
+  "told": 43932898594,
+  "run": 43932898594,
+  "last": "2026-11-17T02:37:01.293401+00:00"
  },
  "nawaefarooqi-bit/nawaefarooqi-agents/media.yml": {
-  "day": "2026-11-16",
-  "n": 0,
-  "told": 43931193231
+  "day": "2026-11-17",
+  "n": 1,
+  "run": 43992677742,
+  "last": "2026-11-17T02:37:01.293401+00:00"
  },
  "nawaefarooqi-bit/nawaefarooqi-agents/long-video.yml": {
   "day": "2026-11-16",
