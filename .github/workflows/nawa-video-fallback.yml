@@ -71,7 +71,9 @@ jobs:
         if: steps.need.outputs.run == '1'
         uses: actions/cache@v4
         with:
-          path: nawa-repo/data/tts_cache
+          path: |
+            nawa-repo/data/tts_cache
+            ~/.cache/huggingface
           key: nawa-tts-${{ github.run_id }}
           restore-keys: nawa-tts-
       - name: Make

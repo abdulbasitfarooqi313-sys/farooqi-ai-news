@@ -51,6 +51,13 @@ jobs:
           path: nawa-repo/data/drive
           key: nawa-drive-${{ github.run_id }}
           restore-keys: nawa-drive-
+      - name: Model cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: nawa-hf-${{ github.run_id }}
+          restore-keys: nawa-hf-
+      - run: sudo apt-get install -y -qq ffmpeg >/dev/null || true
       - name: Run
         working-directory: nawa-repo
         env:
