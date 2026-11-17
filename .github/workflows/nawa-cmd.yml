@@ -1,0 +1,64 @@
+# نوائے فاروقی — ایک بار والے کام (مثلاً سیرت کی قسط نقل کرنا) — بوٹ کی قطار سے الگ تاکہ منسوخ نہ ہو (17 نومبر 2026)
+name: Nawa command
+on:
+  workflow_dispatch:
+    inputs:
+      cmd: { description: "ماڈیول اور دلائل، مثلاً nawa.seerat episode 1 1 7 18 مقدمہ", required: true }
+permissions:
+  contents: read
+concurrency:
+  group: nawa-cmd-${{ github.run_id }}
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      GEMINI_API_KEY: ${{ secrets.NAWA_GEMINI_API_KEY }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.NAWA_TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.NAWA_TELEGRAM_CHAT_ID }}
+      GDRIVE_SERVICE_ACCOUNT_JSON: ${{ secrets.NAWA_GDRIVE_SERVICE_ACCOUNT_JSON }}
+      BLOGGER_CLIENT_ID: ${{ secrets.NAWA_BLOGGER_CLIENT_ID }}
+      BLOGGER_CLIENT_SECRET: ${{ secrets.NAWA_BLOGGER_CLIENT_SECRET }}
+      BLOGGER_REFRESH_TOKEN: ${{ secrets.NAWA_BLOGGER_REFRESH_TOKEN }}
+      BLOGGER_BLOG_ID: ${{ secrets.NAWA_BLOGGER_BLOG_ID }}
+      YOUTUBE_REFRESH_TOKEN: ${{ secrets.NAWA_YOUTUBE_REFRESH_TOKEN }}
+      YOUTUBE_CLIENT_ID: ${{ secrets.NAWA_YOUTUBE_CLIENT_ID }}
+      YOUTUBE_CLIENT_SECRET: ${{ secrets.NAWA_YOUTUBE_CLIENT_SECRET }}
+      ANTHROPIC_API_KEY: ${{ secrets.NAWA_ANTHROPIC_API_KEY }}
+      FB_PAGE_ID: ${{ secrets.FB_PAGE_ID_NAWA || secrets.NAWA_FB_PAGE_ID }}        # آیت کارڈ سیدھا فیس بک/انسٹاگرام (17 نومبر 2026) — وہی چابی جو ویڈیوز کی
+      FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN_NAWA || secrets.NAWA_FB_PAGE_TOKEN }}
+      IG_USER_ID: ${{ secrets.NAWA_IG_USER_ID }}
+      LINKEDIN_TOKEN: ${{ secrets.NAWA_LINKEDIN_TOKEN }}
+      LINKEDIN_AUTHOR: ${{ secrets.NAWA_LINKEDIN_AUTHOR }}
+      X_API_KEY: ${{ secrets.NAWA_X_API_KEY }}
+      X_API_SECRET: ${{ secrets.NAWA_X_API_SECRET }}
+      X_ACCESS_TOKEN: ${{ secrets.NAWA_X_ACCESS_TOKEN }}
+      X_ACCESS_SECRET: ${{ secrets.NAWA_X_ACCESS_SECRET }}
+    steps:
+      - name: Nawa code (private)
+        env: { NAWA_TOKEN: "${{ secrets.NAWA_TOKEN }}" }
+        run: |
+          [ -n "$NAWA_TOKEN" ] || { echo "::error::NAWA_TOKEN نہیں"; exit 1; }
+          git clone -q "https://x-access-token:${NAWA_TOKEN}@github.com/nawaefarooqi-bit/nawaefarooqi-agents" nawa-repo
+          cd nawa-repo && git config user.name "nawa-bot" && git config user.email "nawa-bot@users.noreply.github.com"
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: cd nawa-repo && pip install -q -r requirements.txt
+      - name: Cache Drive PDFs
+        uses: actions/cache@v4
+        with:
+          path: nawa-repo/data/drive
+          key: nawa-drive-${{ github.run_id }}
+          restore-keys: nawa-drive-
+      - name: Run
+        working-directory: nawa-repo
+        env:
+          NAWA_TOKEN: ${{ secrets.NAWA_TOKEN }}
+          CMD: ${{ github.event.inputs.cmd }}
+        run: |
+          python -u -m $CMD
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -q -m "کام: $CMD (لامحدود رنر)"
+          for i in 1 2 3; do git pull -q --rebase --autostash -X theirs && git push -q && exit 0; sleep 10; done
