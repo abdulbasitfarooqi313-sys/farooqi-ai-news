@@ -33,8 +33,8 @@ jobs:
       YOUTUBE_CLIENT_ID: ${{ secrets.NAWA_YOUTUBE_CLIENT_ID }}
       YOUTUBE_CLIENT_SECRET: ${{ secrets.NAWA_YOUTUBE_CLIENT_SECRET }}
       ANTHROPIC_API_KEY: ${{ secrets.NAWA_ANTHROPIC_API_KEY }}
-      FB_PAGE_ID: ${{ secrets.NAWA_FB_PAGE_ID }}
-      FB_PAGE_TOKEN: ${{ secrets.NAWA_FB_PAGE_TOKEN }}
+      FB_PAGE_ID: ${{ secrets.FB_PAGE_ID_NAWA || secrets.NAWA_FB_PAGE_ID }}        # آیت کارڈ سیدھا فیس بک/انسٹاگرام (17 نومبر 2026) — وہی چابی جو ویڈیوز کی
+      FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN_NAWA || secrets.NAWA_FB_PAGE_TOKEN }}
       IG_USER_ID: ${{ secrets.NAWA_IG_USER_ID }}
       LINKEDIN_TOKEN: ${{ secrets.NAWA_LINKEDIN_TOKEN }}
       LINKEDIN_AUTHOR: ${{ secrets.NAWA_LINKEDIN_AUTHOR }}
