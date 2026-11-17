@@ -94,7 +94,7 @@ jobs:
       - name: Keep going (self-chain)
         # GitHub کا شیڈول پبلک ریپو پر دن میں چند بار ہی چلتا ہے، اس لیے ✅ کا جواب گھنٹوں رکا رہتا تھا (مالک، 17 نومبر 2026)۔
         # ہر رن ختم ہوتے ہی اگلا خود — صرف تب جب اپنے بعد والا کوئی نیا رن پہلے سے نہ ہو۔
-        if: always() && github.event.inputs.cmd == ''
+        if: always()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
