@@ -100,6 +100,17 @@ jobs:
         run: |
           n=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/nawa-poll.yml/runs?per_page=20" \
                 -q "[.workflow_runs[] | select(.id > ${{ github.run_id }} and .status != \"completed\")] | length")
+          # نوا کی روزانہ لمبی ویڈیو (+2 شارٹس): GitHub کا شیڈول یہاں اکثر نہیں چلتا اور نجی ریپو کے منٹ ختم ہیں —
+          # 09:30–13:00 UTC کے بیچ آج کا «Nawa fallback long» نہ چلا ہو تو یہی بوٹ چلا دیتا ہے (مالک، 17 نومبر 2026)
+          H=$(date -u +%H%M); D=$(date -u +%F)
+          if [ "$H" -ge 0930 ] && [ "$H" -le 1300 ]; then
+            c=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/nawa-video-fallback.yml/runs?per_page=20&created=>=${D}T00:00:00Z" \
+                  -q '[.workflow_runs[] | select(.display_title=="Nawa fallback long" and (.conclusion=="success" or .status!="completed"))] | length')
+            if [ "${c:-0}" = 0 ]; then
+              gh api -X POST "repos/$GITHUB_REPOSITORY/actions/workflows/nawa-video-fallback.yml/dispatches" -f ref=main -f 'inputs[job]=long' -f 'inputs[force]=true' \
+                && echo "آج کی لمبی ویڈیو کا رن چلا دیا"
+            fi
+          fi
           if [ "${n:-0}" -gt 0 ]; then echo "نیا رن موجود"; exit 0; fi
           gh workflow run nawa-poll.yml -R "$GITHUB_REPOSITORY" || \
             gh api -X POST "repos/$GITHUB_REPOSITORY/actions/workflows/nawa-poll.yml/dispatches" -f ref=main
