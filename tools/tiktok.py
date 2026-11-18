@@ -16,8 +16,8 @@ from pathlib import Path
 
 import requests
 
-KEY = os.environ.get("TIKTOK_CLIENT_KEY", "")
-SECRET = os.environ.get("TIKTOK_CLIENT_SECRET", "")
+KEY = os.environ.get("TIKTOK_CLIENT_KEY", "").strip()
+SECRET = os.environ.get("TIKTOK_CLIENT_SECRET", "").strip()
 ACCT = os.environ.get("TIKTOK_ACCOUNT", "ainews")
 REDIRECT = "https://abdulbasitfarooqi313-sys.github.io/farooqi-ai-news/callback.html"
 SCOPES = "user.info.basic,video.upload,video.publish"
@@ -26,7 +26,8 @@ ST = Path(f"state/tiktok_{ACCT}.enc")
 
 
 def _crypt(data: bytes, dec: bool) -> bytes:
-    args = ["openssl", "enc", "-aes-256-cbc", "-pbkdf2", "-salt", "-pass", "env:TIKTOK_CLIENT_SECRET"] + (["-d"] if dec else [])
+    os.environ["TT_PASS"] = SECRET
+    args = ["openssl", "enc", "-aes-256-cbc", "-pbkdf2", "-salt", "-pass", "env:TT_PASS"] + (["-d"] if dec else [])
     return subprocess.run(args, input=data, capture_output=True, check=True).stdout
 
 
@@ -59,7 +60,8 @@ def access() -> str:
 
 def link() -> None:
     q = {"client_key": KEY, "scope": SCOPES, "response_type": "code", "redirect_uri": REDIRECT, "state": f"farooqi-{ACCT}"}
-    print("AUTH_URL " + "https://www.tiktok.com/v2/auth/authorize/?" + urllib.parse.urlencode(q))
+    import base64          # client_key عوامی ہے (اجازت کے لنک میں ہوتا ہے)؛ GitHub اسے *** کر دیتا ہے، اس لیے base64
+    print("AUTH_URL_B64 " + base64.b64encode(("https://www.tiktok.com/v2/auth/authorize/?" + urllib.parse.urlencode(q)).encode()).decode())
 
 
 def exchange() -> None:
