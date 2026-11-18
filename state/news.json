@@ -404,11 +404,6 @@
  "offset": 94696900,
  "chat": 6593456628,
  "days": {
-  "2026-11-04": {
-   "status": "approved",
-   "yt": "ziitHJ_Q6sg",
-   "yt_at": "2026-11-04T18:00:00+03:00"
-  },
   "2026-11-05-f": {
    "status": "approved",
    "vmid": 297,
@@ -1153,6 +1148,23 @@
    "yt": "M4sMIGwhEP4",
    "yt_at": "2026-11-18T17:00:00+03:00",
    "yt_status": "scheduled"
+  },
+  "2026-11-18-b": {
+   "status": "pending",
+   "vmid": 1213,
+   "mids": [
+    1212,
+    1213,
+    1214,
+    1215,
+    1216,
+    1217,
+    1218,
+    1219
+   ],
+   "kind": "breaking",
+   "yt": "n0ITRS9MRyc",
+   "yt_at": "2026-11-18T20:52:28.285947+03:00"
   },
   "2026-11-18-f": {
    "status": "approved",
