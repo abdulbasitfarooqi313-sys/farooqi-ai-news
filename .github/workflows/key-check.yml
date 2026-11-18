@@ -18,19 +18,24 @@ jobs:
           K_MAIN: ${{ secrets.GEMINI_API_KEY }}
           K_BACKUP: ${{ secrets.GEMINI_BACKUP_KEY }}
           K_NAWA: ${{ secrets.NAWA_GEMINI_API_KEY }}
+          K_NEWS: ${{ secrets.GEMINI_NEWS_KEY }}
+          K_NAWATTS: ${{ secrets.NAWA_GEMINI_TTS_BACKUP_KEY }}
+          K_TS: ${{ secrets.TS_GEMINI_API_KEY }}
           NAWA_TOKEN: ${{ secrets.NAWA_TOKEN }}
           TOKEN: ${{ secrets.NEWS_BOT_TOKEN || secrets.TELEGRAM_BOT_TOKEN }}
           CHAT_SECRET: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           msg="🔑 Gemini چابیوں کی جانچ (کوٹا خرچ نہیں):"
-          for n in BULLETIN FLASH PODCAST MAIN BACKUP NAWA; do
+          declare -A seen
+          for n in BULLETIN FLASH PODCAST NEWS BACKUP MAIN NAWA NAWATTS TS; do
             v="K_$n"; k="${!v}"
             if [ -z "$k" ]; then r="❌ Secret خالی/موجود نہیں"
             else
               c=$(curl -s -o out.json -w "%{http_code}" -H "x-goog-api-key: $k" "https://generativelanguage.googleapis.com/v1beta/models?pageSize=200")
               tts=$(grep -c "preview-tts" out.json || true)
               p=$(printf %s "$k" | cut -c1-4)
-              [ "$c" = "200" ] && r="✅ ٹھیک ($p… | آواز ماڈل: $tts)" || r="❌ HTTP $c: $(grep -o '"message": *"[^"]*' out.json | head -1 | cut -c13-120)"
+              h=$(printf %s "$k" | sha256sum | cut -c1-6); dup=""; [ -n "${seen[$h]}" ] && dup=" ⚠️ وہی چابی جو ${seen[$h]} میں"; seen[$h]=$n
+              [ "$c" = "200" ] && r="✅ ٹھیک ($p… | آواز ماڈل: $tts)$dup" || r="❌ HTTP $c: $(grep -o '"message": *"[^"]*' out.json | head -1 | cut -c13-120)"
             fi
             echo "$n: $r"; msg="$msg"$'\n'"$n: $r"
           done
