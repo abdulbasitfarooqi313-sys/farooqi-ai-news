@@ -188,13 +188,14 @@
    "at": "2026-11-18 14:12"
   },
   "2026-11-18-f": {
-   "tries": 1,
+   "tries": 2,
    "ok": true,
    "fb": "1670466978104355",
    "fb_kind": "video",
    "ig_err": "IG upload: 400 {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
    "tt": "inbox",
-   "at": "2026-11-18 14:13"
+   "at": "2026-11-18 14:13",
+   "err": "IG upload: 400 {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}"
   }
  },
  "toolscape": {
