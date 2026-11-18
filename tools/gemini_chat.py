@@ -109,9 +109,17 @@ def on_callback(st: dict, cb: dict) -> None:
 
 def main(minutes: float) -> None:
     st = json.loads(ST.read_text()) if ST.exists() else {}
+    me = requests.get(f"{TG}/getMe", timeout=30).json()
+    print("bot:", (me.get("result") or {}).get("username") or f"ERROR {me.get('description')}")
+    wh = (requests.get(f"{TG}/getWebhookInfo", timeout=30).json().get("result") or {}).get("url")
+    if wh:
+        print("webhook was set — removing"); requests.get(f"{TG}/deleteWebhook", timeout=30)
+    print("owner set:", bool(st.get("owner")), "| issue:", st.get("issue"))
     end = time.time() + minutes * 60
     while time.time() < end:
         ups = tg("getUpdates", offset=st.get("offset", 0), timeout=50, allowed_updates=["message", "callback_query"]) or []
+        if ups:
+            print("updates:", len(ups), [("msg" if "message" in u else "cb") for u in ups])
         for u in ups:
             st["offset"] = u["update_id"] + 1
             try:
@@ -120,7 +128,7 @@ def main(minutes: float) -> None:
                 elif "callback_query" in u:
                     on_callback(st, u["callback_query"])
             except Exception as e:
-                print("error:", type(e).__name__)
+                print("error:", type(e).__name__, str(e)[:120].replace(BOT, "***"))
             ST.parent.mkdir(exist_ok=True)
             ST.write_text(json.dumps(st))
         if not ups:
