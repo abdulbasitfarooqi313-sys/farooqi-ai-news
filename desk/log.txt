@@ -1,17 +1,8 @@
-11:16:51 news: start
-11:16:54 news: 94 competitor videos, 110 trending items
-11:20:54 gemini-3.6-flash: ReadTimeout after 240s
-11:20:58 gemini-3.6-flash: HTTP 503 in 4s
-11:21:26 gemini-3.5-flash-lite: HTTP 200 in 18s
-11:21:26    finish=STOP chars=13110
-11:21:26 toolscape: start
-11:21:31 toolscape: 137 competitor videos, 60 trending items
-11:22:26 gemini-3.6-flash: HTTP 503 in 55s
-11:22:37 gemini-3.6-flash: HTTP 503 in 1s
-11:22:48 gemini-3.5-flash-lite: HTTP 503 in 1s
-11:23:04 gemini-3.5-flash-lite: HTTP 503 in 5s
-11:23:49 gemini-flash-latest: HTTP 503 in 35s
-11:27:59 gemini-flash-latest: ReadTimeout after 240s
-11:29:10 gemini-3.8-flash: HTTP 503 in 71s
-11:33:20 gemini-3.8-flash: ReadTimeout after 240s
-11:33:20 toolscape: FAILED Gemini: no answer
+10:49:10 news: start
+10:49:14 news: 92 competitor videos, 90 trending items
+10:50:30 gemini-3.6-flash: HTTP 200 in 77s
+10:50:30    finish=STOP chars=16197
+10:50:30 toolscape: start
+10:50:39 toolscape: 138 competitor videos, 60 trending items
+10:51:50 gemini-3.6-flash: HTTP 200 in 71s
+10:51:50    finish=STOP chars=15658
