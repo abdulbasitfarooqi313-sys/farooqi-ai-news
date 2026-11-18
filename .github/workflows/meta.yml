@@ -54,6 +54,8 @@ jobs:
           IG_USER_ID_TOOLSCAPE: ${{ secrets.IG_USER_ID_TOOLSCAPE }}
           TS_TOKEN: ${{ secrets.TS_TOKEN }}             # ٹول اسکیپ کی ریلیز فائلیں
           NAWA_TOKEN: ${{ secrets.NAWA_TOKEN }}         # نوائے فاروقی کی ریلیز فائلیں
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}         # ٹک ٹاک (18 نومبر 2026)
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
         run: |
           M="${{ github.event.inputs.mode }}"; [ "${{ github.event_name }}" = "schedule" ] && M=run
           if [ "$M" = run ] && [ -z "$FB_PAGE_TOKEN_NEWS" ]; then echo "Secrets ابھی نہیں"; exit 0; fi
@@ -64,7 +66,7 @@ jobs:
         run: |
           [ -f state/meta_posted.json ] || exit 0
           git config user.name "ai-news-bot"; git config user.email "ai-news-bot@users.noreply.github.com"
-          git add state/meta_posted.json; git diff --cached --quiet && exit 0
+          git add state/meta_posted.json state/tiktok_*.enc 2>/dev/null; git diff --cached --quiet && exit 0
           git commit -m "Facebook/Instagram ریکارڈ"
           for i in 1 2 3; do git pull --rebase --autostash -X theirs && git push && exit 0; sleep 10; done; exit 1
       # GitHub کا شیڈول اس ریپو میں بہت دیر/کم چلتا ہے (15 نومبر: 10 گھنٹے میں صرف 1 بار) — اس لیے خود اگلا رن (~12 منٹ بعد)۔
