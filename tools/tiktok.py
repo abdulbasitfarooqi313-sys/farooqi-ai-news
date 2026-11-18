@@ -89,6 +89,11 @@ def post(path: str, title: str) -> None:
                           "disable_stitch": False, "is_aigc": True},
             "source_info": {"source": "FILE_UPLOAD", "video_size": size, "chunk_size": size, "total_chunk_count": 1}}
     j = requests.post(f"{API}/post/publish/video/init/", headers=H, json=body, timeout=60).json()
+    if (j.get("error") or {}).get("code") == "unaudited_client_can_only_post_to_private_accounts":
+        # منظوری سے پہلے: ویڈیو ٹک ٹاک کے Inbox میں ڈرافٹ کے طور پر (مالک ایپ میں خود پوسٹ کرے)
+        print("→ ابھی منظوری نہیں: Inbox ڈرافٹ (video.upload)")
+        j = requests.post(f"{API}/post/publish/inbox/video/init/", headers=H, json={"source_info": body["source_info"]}, timeout=60).json()
+        priv = "INBOX_DRAFT"
     d = j.get("data") or {}
     if not d.get("upload_url"):
         sys.exit(f"init ناکام: {j.get('error')}")
