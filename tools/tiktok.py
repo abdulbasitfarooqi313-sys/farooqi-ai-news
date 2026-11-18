@@ -111,6 +111,12 @@ def post(path: str, title: str) -> None:
     print("privacy:", priv)
 
 
+def whoami() -> None:
+    ci = requests.post(f"{API}/post/publish/creator_info/query/", headers={"Authorization": f"Bearer {access()}",
+                       "Content-Type": "application/json; charset=UTF-8"}, timeout=60).json().get("data") or {}
+    print(f"ACCOUNT[{ACCT}] = @{ci.get('creator_username')} ({ci.get('creator_nickname')})")
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1]
-    {"link": link, "exchange": exchange}.get(cmd, lambda: post(sys.argv[2], sys.argv[3]))()
+    {"link": link, "exchange": exchange, "whoami": whoami}.get(cmd, lambda: post(sys.argv[2], sys.argv[3]))()
