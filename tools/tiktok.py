@@ -59,6 +59,8 @@ def access() -> str:
 
 
 def link() -> None:
+    if not KEY.lower().startswith(("sb", "aw")):         # غلطی سے secret ڈالا گیا ہو تو لاگ میں نہ جائے
+        sys.exit(f"⚠️ TIKTOK_CLIENT_KEY درست نہیں لگتی (لمبائی {len(KEY)}) — sbaw… والی Client key ڈالیں")
     q = {"client_key": KEY, "scope": SCOPES, "response_type": "code", "redirect_uri": REDIRECT, "state": f"farooqi-{ACCT}"}
     import base64          # client_key عوامی ہے (اجازت کے لنک میں ہوتا ہے)؛ GitHub اسے *** کر دیتا ہے، اس لیے base64
     print("AUTH_URL_B64 " + base64.b64encode(("https://www.tiktok.com/v2/auth/authorize/?" + urllib.parse.urlencode(q)).encode()).decode())
