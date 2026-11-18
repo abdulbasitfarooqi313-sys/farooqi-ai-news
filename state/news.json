@@ -1184,70 +1184,88 @@
   }
  },
  "podcast": {
-  "week": "2026-11-11",
+  "week": "2026-11-18",
   "options": [
    {
-    "title": "یونیورسٹی امتحانات کی جانچ میں اے آئی کے چیلنجز",
-    "why": "طلباء اور اساتذہ کے لیے یہ سمجھنا ضروری ہے کہ مصنوعی ذہانت کے باعث اسائنمنٹس اور روایتی امتحانی طریقوں میں کیا تبدیلیاں ناگزیر ہو رہی ہیں۔",
+    "title": "تعلیمی اداروں میں مصنوعی ذہانت کا بڑھتا ہوا استعمال اور امتحانات میں نقل",
+    "why": "طالبات اور طلباء کے لیے تعلیمی میدان میں مصنوعی ذہانت کے چیلنجز اور امتحانات میں اس کے غلط استعمال کی تازہ صورتحال اہم ہے۔",
     "facts": [
      {
-      "title": "AI has made it ‘close to impossible’ to assess university coursework, regulator says - The Guardian",
+      "title": "The Anti-A.I. Campus Movement Is Growing - The New York Times",
+      "source": "The New York Times",
+      "summary": "The Anti-A.I. Campus Movement Is Growing The New York Times",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNWDB3MzlxNHBqS2FkU3R3MHkyZlAya3E0WnQtTkpkYUpnc1dzUXd4VjZVcEpLcmhQLTZmTTExMW9kUlFoRnhtMjBYT0NDTGc1QlZzV2JSclFvdm9kMmFYZnBOcVpYZ3hxSEJTSU5ndkRBMkI0WTVWV0huckNjWWRLMTlHWnY?oc=5"
+     },
+     {
+      "title": "South Korea’s high-stakes university exams upended by AI cheating scandal - The Guardian",
       "source": "The Guardian",
-      "summary": "AI has made it ‘close to impossible’ to assess university coursework, regulator says The Guardian",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQcnRuQjZGUU9xbUxieGFPbU9Yal9meFoxVlhVUkVCcm1DRVdrcE5LZzZEQlZJWFk2Y3k1LXNYTmZKOWd3dHh0TjFER0hScGJNUmlwWm9KaU9mOGZRMnV5TU5YeS1pd210Vmk1cUJ0VlJtV3k1aFNid3hvcl9yRlBpRWlVTDlVVVlYS295SUstY3B3Q19YOF8tTU81UkZmaWhZWF9QbkhjRWdKVlpQSXE1Qg?oc=5"
+      "summary": "South Korea’s high-stakes university exams upended by AI cheating scandal The Guardian",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNYXB1QXdiejZGZmxwSzk1ZHZMVS1NbE9CV0JkUHVxS0pEQTd3MlluNEN3eEdrcThRaHNra0JBM0x5RjZoR2VmcnZKOV9sUEZnRnRBOExWU2t2WHFNeHFTV0pnZDlXMDVGT0JVVUJqTFpUNE80R0NmTTdocWxVX0lGMjhxWUtSSG5Xbm9QaGpkWDI4NW42V2h3QkxZVW5sX1RMTTdySzd3?oc=5"
      },
      {
-      "title": "Students passing university assessments in minutes using AI, regulator warns - BBC",
-      "source": "BBC",
-      "summary": "Students passing university assessments in minutes using AI, regulator warns BBC",
-      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9JMEFla0ZySldPbjB4ZkR0NFBsbFhQWG9FdTJWaU5XRmNVOGF2VjBKelU2Y2R5MEJubTNYSU5qT21DY0pQN1V1M0RHMElpSHg2YXh3QmxvLW9rb1F1WkE?oc=5"
-     },
+      "title": "South Korea Offers $75,000 Bounties To Catch AI Exam Cheats - Bloomberg.com",
+      "source": "Bloomberg.com",
+      "summary": "South Korea Offers $75,000 Bounties To Catch AI Exam Cheats Bloomberg.com",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNS0VYWnNlaVotLWV3NFlYN0NlRHVxVFRCdVpFTnJKbXRiclVVUEwwNF82cEJ0QXlmNXhFQXZOMmE3Mkc1UDl4WEVuOUZCOWs3dC1uS1BiTHBHS242Qnd4R2oyeTN3UWg4cS1JYl9hZmJ5bmlJdUxJWlBydnpuU2dveHJ5YlJQT1hJaThMV1ViZUI4TzdsZEplWWVFWFMxVUFtOUtHSGRzXzk0QW1BcGtobw?oc=5"
+     }
+    ]
+   },
+   {
+    "title": "سائبر سیکیورٹی، ہیکنگ اور مصنوعی ذہانت سے جڑے نئے خطرات",
+    "why": "ٹیکنالوجی کی خرابیوں اور اے آئی سیکیورٹی کے خطرات سے عام پیشہ ور افراد اور نظام کو درپیش مشکلات کا جائزہ۔",
+    "facts": [
      {
-      "title": "Embrace paper exams to combat AI cheating, warns UK universities regulator - Financial Times",
+      "title": "US tech outages blamed on rush to fix bugs found by AI - Financial Times",
       "source": "Financial Times",
-      "summary": "Embrace paper exams to combat AI cheating, warns UK universities regulator Financial Times",
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNaUg2enEtekhQRDNKbWcyS1kxdE5zd3BpU1ZKVlFiZUo2bGhqWFlMU2tqR0QwTnQydDl5bXdJX21iMWotYXhKWjE1MzZscFh5ZTdqQmRQaUVPOUE3dklTSllpS19TaWx5ZnM5UDJKNDVVNWtLQzJrU2kwWWlmbGc0dzVHdU8?oc=5"
+      "summary": "US tech outages blamed on rush to fix bugs found by AI Financial Times",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPamJobDVBWldEQkNIYUwxTThSRmxqVElmaHVRNHZZcDhLUEZmaE85UGtpeXJrRnk3bGxiX1AwcnJjUlByTkcyajNtX05jbjBqY2pzMVRoaUQ5QUxBT1pscDN3YUtqTDUzZ2NwcmcyUFB6ek9wMDV5bnFaV3NlOG4xcXAtUUY?oc=5"
+     },
+     {
+      "title": "US senators warn White House that AI-enabled cyber threats are outpacing defenses - Reuters",
+      "source": "Reuters",
+      "summary": "US senators warn White House that AI-enabled cyber threats are outpacing defenses Reuters",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOdzI5cndBYkVfZHo2YU9EX19XUklYMzg0TWwySGlMeDV6Z2NBZlZsd1BTVTFmVm8tNllyaUdIdjM3TUFnVDFBaU4zWENEWW95ckJvZWo3M0lhSDBJOUlNT0xsZVpqelJSZVQ4MjR2NEJ5U1BLc082bTF5UlRPTGhuVUhFUUU2OTk4Qy1sb3psUGNONkFpRWtSUkdlSGlpOXR2ZkV1c1pMclp2SFgweEhIODFLTEJxdG1ZY29nQ2xWZDAxOUE?oc=5"
+     },
+     {
+      "title": "Critical flaw found in vital internet language Java through AI - BBC",
+      "source": "BBC",
+      "summary": "Critical flaw found in vital internet language Java through AI BBC",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5ZSWViaXNxSzRVUmpwYi1iWFhPLVVQc3JhMURLUUVkSTdNbG5SQnJndVBwdUlCS2lnNVV3OHFXRDdGc3FlR0NnbXJKWlJZbnYzLTZfTi12dG83SExWOWc?oc=5"
+     },
+     {
+      "title": "Criminals Have a New Favorite ‘Point-and-Shoot’ AI Hacking Tool - WIRED",
+      "source": "WIRED",
+      "summary": "Criminals Have a New Favorite ‘Point-and-Shoot’ AI Hacking Tool WIRED",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBmcDBuYTY4M05sMWZVcGlRZ1VsMWRTRF9UellnSV9NcnNkX3FUeXdrSmUybWYwYjBUMG5WSDlBSUpxcllpc1Nmc1hQZEZROHRWcWpWczM3OHcwT3k1Tk1LMg?oc=5"
      }
     ]
    },
    {
-    "title": "فری لانسنگ اور پیشہ ورانہ کام پر اے آئی اثرات",
-    "why": "پاکستانی نوجوانوں اور فری لانسرز کے لیے یہ جاننا اہم ہے کہ مصنوعی ذہانت کس طرح روزگار اور مختلف شعبوں میں مہارتوں کو تبدیل کر رہی ہے۔",
+    "title": "آرٹیفیشل انٹیلی جنس چپس اور عالمی پابندیوں کی سیاست",
+    "why": "عالمی سطح پر ٹیکنالوجی کی سپلائی اور چپس کی ترسیل پر پابندیوں کے اثرات کو سمجھنے کے لیے۔",
     "facts": [
      {
-      "title": "Work at the Frontier: AI’s effect on freelance work - OpenAI",
-      "source": "OpenAI",
-      "summary": "Work at the Frontier: AI’s effect on freelance work OpenAI",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9jbjZqUWRlTUJ3MkZPVlYzd2hSb3A2aDlBOG5zckhFZjVEZFlQc3diU0lxOVhwLUFHTnNRMy1SSlgyRGxhOVpsV2w4MHNFOElOSFBQRlNnSDV4eDloc2V0R3lnUQ?oc=5"
+      "title": "Nvidia stops shipping US-approved AI chips to China - Reuters",
+      "source": "Reuters",
+      "summary": "Nvidia stops shipping US-approved AI chips to China Reuters",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQc0dHN3dEWU8xaElLV21veDdXMWI3eUpBYWNYV2ZXSWZTUkJLX3dELUNmeEZhSGtlczFEMWFjXzZMTWhNRUJrZnlHT0VqN0ZYcXZwQ1dXTzJLSnJCREtWZXhQWVlQY20waTh4WlVZNmVTemVLM1l4UXNrbUJDd3p4OUhweklHT2F2SDRXTXpiWTRab3dIalpnQjVJNmc?oc=5"
      },
      {
-      "title": "Singapore’s accountancy sector adds jobs, raises pay as firms prepare workers for AI - The Straits Times",
-      "source": "The Straits Times",
-      "summary": "Singapore’s accountancy sector adds jobs, raises pay as firms prepare workers for AI The Straits Times",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQMkZZcW1BbGc1UkVRVXQyY0dtZXhVdkM2Q3FpSzdudnYzVHBKZ3ZZd2t4NE5IODVyRl9OeXhHZ1g1SExDYnFDM3pGZ0hUVHMxUE5xdnRqYzdoajZwaFNkTmNLWUZaeUJvMXBPVmtkTGpablRLaHhWUllrY2F6QUR1d2xEN2JaTmZ6cWx1bFZLeGZMTFBsM0xDN0E0WUpxREp6Y1k4V0g0cHdHb3o4ZXc?oc=5"
-     }
-    ]
-   },
-   {
-    "title": "اے آئی کمپنیوں پر نئے حکومتی قوانین اور نگرانی",
-    "why": "ٹیکنالوجی استعمال کرنے والے صارفین اور پیشہ ور افراد کے تحفظ کے لیے دنیا بھر میں متعارف کروائے جانے والے نئے حفاظتی قوانین کو سمجھنا اہم ہے۔",
-    "facts": [
-     {
-      "title": "OpenAI, Anthropic face new oversight as New York’s AI safety law takes effect - TechCrunch",
-      "source": "TechCrunch",
-      "summary": "OpenAI, Anthropic face new oversight as New York’s AI safety law takes effect TechCrunch",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNSVhqV2gyYlFPU1FIZlNHRkp4SGJHQVJmMzB3cHE0a29DRHpzS09Obzh5NmlQRFFQd25aaE90ZlVxMXJCaUI0Y1FsOEltc09rX0VRTlJZZ01oUlZXN05KV3NxRXpYclhwb0g1VFE4WFEwZ2tZNllMTkpjdFQ3RVBLeWZMTWVJN3B1OVQtWVM1NkNYbER5a2NwNm1HVmI3R1pjOHFoSzJOdzBucW8tZU53?oc=5"
+      "title": "China’s military seeks Nvidia’s advanced chips for AI capabilities, commission says - CNBC",
+      "source": "CNBC",
+      "summary": "China’s military seeks Nvidia’s advanced chips for AI capabilities, commission says CNBC",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE4weWVrTk9Ga05SYUppNDBNUDBuM2pQQ053VDJiUzcyblVpemUzeVdraEhIYm9iZVlMWjI0bVJObzlBRzdCbnVOR1F3MHJCS25VbmNzR1c5c25uLXpQUXVoLXpBZVdhZzZDRDJFVGpNZTU1LXBQbGfSAXtBVV95cUxQT3MycHpPaDRTWGhfS3VOam1XajZCOWxBMlR2eUhQNW01VnZXeDVRV0hUWVRLUFoyOEFvMmxxa1Y3aTV2bGJRQlV1SWI0NG4wSFU5aUZLM2RjbkRxTm1qQ3hjTFExQmsxbG5wdUNwWFBmRmt4TndkM2ZEdFk?oc=5"
      },
      {
-      "title": "Australia considers world-first criminal charges for AI companies that fail to prevent harm - ABC News & Headlines – Australian Broadcasting Corporation",
-      "source": "ABC News & Headlines – Australian Broadcasting Corporation",
-      "summary": "Australia considers world-first criminal charges for AI companies that fail to prevent harm ABC News & Headlines – Australian Broadcasting Corporation",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPTkh6Q3VRSTNBUHZIX0tORThaOENtWjdxby1tdXAzSnZQb1pXbU8weThqdk43TGlSYW5EY29jaWpZREwyRk54cEc5Q0w3NEtWaVhPTFdDMUs5djdqUXdOT2VIUmdCUG83a3I0Y25iSnFtdnRfN0hjS21tUHdYTnZCRmdPeVZqRk45dng1YXh5dGJDSFcwUzdvV1NodWVkWFE1cXhpaQ?oc=5"
+      "title": "Nvidia Stops Selling AI Chips to China Despite US Approval - Bloomberg.com",
+      "source": "Bloomberg.com",
+      "summary": "Nvidia Stops Selling AI Chips to China Despite US Approval Bloomberg.com",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQVk5ZV2dpR3EyVEtJcVdSZTBCVGl6UE1qZ1gzNWdiaHJ3WGR1S3NUd2VRcWVzUWhjanFicXVzNi1zRWZNel9EdlVOaC1uMUFCckRXMkRGWkRZeHdZUnE4VTdtUkZ2N0dITkRYa040X29HanoxODdGVXV3NzEyOGhnR1VOb2VwcFNIcHFJQlFrNXM3T1hqQlN5WnB0MHJTU0R2cTZOUnBNbV9Ubm81clFKM0x5cHRxdw?oc=5"
      }
     ]
    }
   ],
-  "mid": 614,
-  "pick": 2
+  "mid": 1210,
+  "pick": null
  }
 }
