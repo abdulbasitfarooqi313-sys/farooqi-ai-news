@@ -1,0 +1,12 @@
+# 🔎 کسی عوامی لنک کی جانچ (مثلاً ٹک ٹاک تصدیقی فائل)
+name: URL check
+on:
+  workflow_dispatch:
+    inputs:
+      url: { description: "URL", required: true }
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - run: curl -sS -L -o body.txt -w "HTTP %{http_code} | final %{url_effective} | type %{content_type}\n" "${{ github.event.inputs.url }}"; echo "---"; head -c 300 body.txt; echo
