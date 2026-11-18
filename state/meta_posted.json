@@ -197,6 +197,15 @@
    "at": "2026-11-18 14:13",
    "err": "IG upload: 400 {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
    "ig_tries": 2
+  },
+  "2026-11-18-b": {
+   "tries": 1,
+   "ok": true,
+   "fb": "2644998592608930",
+   "fb_kind": "reel",
+   "ig": "18126211133515884",
+   "tt": "inbox",
+   "at": "2026-11-18 18:00"
   }
  },
  "toolscape": {
