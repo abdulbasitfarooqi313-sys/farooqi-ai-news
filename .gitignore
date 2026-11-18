@@ -17,3 +17,4 @@ ts/
 !tools/watchdog.py
 !tools/groq_sample.py
 !tools/gemini_chat.py
+!tools/tiktok.py

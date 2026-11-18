@@ -1,0 +1,44 @@
+# 🎵 ٹک ٹاک: اجازت کا لنک / ٹوکن / آزمائشی پوسٹ (پبلک رنر)
+name: TikTok
+on:
+  workflow_dispatch:
+    inputs:
+      action: { description: "link | exchange | post", required: true, default: "link" }
+      release: { description: "post: ریلیز ٹیگ (مثلاً breaking-2026-11-17)", required: false }
+      file: { description: "post: فائل کا نام", required: false }
+      title: { description: "post: عنوان", required: false }
+      account: { description: "ainews | nawa | toolscape", required: false, default: "ainews" }
+permissions:
+  contents: write
+concurrency: { group: tiktok, cancel-in-progress: false }
+jobs:
+  tt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+      TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+      TIKTOK_AUTH_CODE: ${{ secrets.TIKTOK_AUTH_CODE }}
+      TIKTOK_ACCOUNT: ${{ github.event.inputs.account }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q requests
+      - name: Run
+        env: { ACT: "${{ github.event.inputs.action }}", REL: "${{ github.event.inputs.release }}", FILE: "${{ github.event.inputs.file }}", TITLE: "${{ github.event.inputs.title }}" }
+        run: |
+          if [ "$ACT" = post ]; then
+            gh release download "$REL" -p "$FILE" -D /tmp/v -R "$GITHUB_REPOSITORY"
+            python -u tools/tiktok.py post "/tmp/v/$FILE" "$TITLE"
+          else
+            python -u tools/tiktok.py "$ACT"
+          fi
+      - name: Save tokens (encrypted)
+        if: always()
+        run: |
+          git config user.name "ai-news-bot"; git config user.email "ai-news-bot@users.noreply.github.com"
+          git add state/tiktok_*.enc 2>/dev/null; git diff --cached --quiet && exit 0
+          git commit -q -m "ٹک ٹاک: ٹوکن (خفیہ)"
+          for i in 1 2 3; do git pull -q --rebase --autostash -X theirs && git push -q && exit 0; sleep 10; done
