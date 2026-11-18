@@ -16,3 +16,4 @@ ts/
 # نگران: کوئی راز نہیں، انجن کا کوڈ نہیں — پبلک رہ سکتا ہے
 !tools/watchdog.py
 !tools/groq_sample.py
+!tools/gemini_chat.py
