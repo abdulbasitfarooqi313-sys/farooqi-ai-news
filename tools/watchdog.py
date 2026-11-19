@@ -26,6 +26,7 @@ WATCH = [
     ("اے آئی نیوز — فلیش شارٹ", OWN, "flash.yml", "GH", "flash.yml", {}),
     ("اے آئی نیوز — آج کا لفظ (رات)", OWN, "reserve.yml", "GH", "reserve.yml", {}),
     ("اے آئی نیوز — ٹیک دریافت", OWN, "tech.yml", "GH", "tech.yml", {"mode": "real"}),
+    ("اے آئی نیوز — خودکار شارٹ", OWN, "clips.yml", "GH", "clips.yml", {"mode": "real"}),
     ("روزنامچہ فاروقی", OWN, "desk.yml", "GH", "desk.yml", {}),
     ("وائرل مقابل", OWN, "outliers.yml", "GH", "outliers.yml", {}),
     ("ہفتہ وار رپورٹ", OWN, "perf.yml", "GH", "perf.yml", {}),
