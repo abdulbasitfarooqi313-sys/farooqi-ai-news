@@ -178,7 +178,8 @@
    "fb_kind": "reel",
    "ig": "18121754359959735",
    "tt": "inbox",
-   "at": "2026-11-18 10:13"
+   "at": "2026-11-18 10:13",
+   "tt_resent": true
   },
   "2026-11-18": {
    "tries": 1,
@@ -196,7 +197,8 @@
    "tt": "inbox",
    "at": "2026-11-18 14:13",
    "err": "IG upload: 400 {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-   "ig_tries": 2
+   "ig_tries": 2,
+   "tt_resent": true
   },
   "2026-11-18-b": {
    "tries": 1,
@@ -205,7 +207,8 @@
    "fb_kind": "reel",
    "ig": "18126211133515884",
    "tt": "inbox",
-   "at": "2026-11-18 18:00"
+   "at": "2026-11-18 18:00",
+   "tt_resent": true
   }
  },
  "toolscape": {
@@ -324,7 +327,8 @@
    "fb_kind": "reel",
    "ig": "18112704575183713",
    "tt": "inbox",
-   "at": "2026-11-18 19:29"
+   "at": "2026-11-18 19:29",
+   "tt_resent": true
   }
  },
  "backlog": {
