@@ -1,0 +1,32 @@
+# 🧰 ٹول اسکیپ: اگلے 3 ہفتوں کے موضوع + اسکرین شاٹ فہرست کا کارڈ (مالک، 19 نومبر 2026) — لامحدود رنر پر (اضافی کام کا اصول)
+# ہر اتوار صبح ~7:30 سعودی، اور ہاتھ سے۔ کوڈ نجی ریپو سے (ENGINE_TOKEN / TS_TOKEN)، فائل ٹول اسکیپ بوٹ پر۔
+name: Toolscape topics card
+on:
+  schedule:
+    - cron: "30 4 * * 0"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency: toolscape-topics-card
+jobs:
+  card:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Engine (private code)
+        env: { ENGINE_TOKEN: "${{ secrets.ENGINE_TOKEN }}" }
+        run: |
+          git clone -q --depth 1 "https://x-access-token:${ENGINE_TOKEN}@github.com/abdulbasitfarooqi313-sys/farooqi-ai-news-engine" /tmp/engine
+          rsync -a --exclude .git --exclude .gitignore --exclude .github --exclude state --exclude media --exclude cache --exclude desk /tmp/engine/ ./
+      - name: Toolscape calendar (private, read only)
+        env: { TS_TOKEN: "${{ secrets.TS_TOKEN }}" }
+        run: git clone -q --depth 1 "https://x-access-token:${TS_TOKEN}@github.com/hellotoolscape/ai-tube-factory" ts
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install requests playwright && python -m playwright install --with-deps chromium >/dev/null 2>&1 || true
+      - name: Card
+        env:
+          TS_TELEGRAM_BOT_TOKEN: ${{ secrets.TS_TELEGRAM_BOT_TOKEN }}
+          TS_TELEGRAM_CHAT_ID: ${{ secrets.TS_TELEGRAM_CHAT_ID }}
+        run: python -u -m news.topics_card ts/state/calendar.json send
