@@ -43,7 +43,7 @@ jobs:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           OPENVERSE_CLIENT_ID: ${{ secrets.OPENVERSE_CLIENT_ID }}
           OPENVERSE_CLIENT_SECRET: ${{ secrets.OPENVERSE_CLIENT_SECRET }}
-        run: PYTHONPATH=. NEWS_ANCHOR=${{ inputs.anchor }} KEYED=${{ inputs.keyed }} NEWS_STYLE=${{ inputs.style }} FORCE_KEY=1 python -u lab/preview.py 2>&1 | tee preview.log
+        run: PYTHONPATH=. NEWS_LOOK=${{ inputs.style == 'tv' && 'tv' || '' }} NEWS_ANCHOR=${{ inputs.anchor }} KEYED=${{ inputs.keyed }} NEWS_STYLE=${{ inputs.style }} FORCE_KEY=1 python -u lab/preview.py 2>&1 | tee preview.log
       - if: always()
         env:
           GH_TOKEN: ${{ github.token }}
