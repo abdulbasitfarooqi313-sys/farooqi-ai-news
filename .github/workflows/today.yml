@@ -31,7 +31,7 @@ jobs:
           else echo "::warning::ENGINE_TOKEN missing — using code in this repo"; fi
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - run: pip install requests json-repair
+      - run: pip install requests json-repair playwright && python -m playwright install --with-deps chromium >/dev/null 2>&1 || true
       - name: Report
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
