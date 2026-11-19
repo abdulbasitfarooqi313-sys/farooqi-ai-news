@@ -63,7 +63,7 @@ jobs:
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
           BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
-        run: python -m news.breaking ${{ github.event.inputs.force == 'yes' && 'force' || (github.event.inputs.force == 'sample' && 'sample' || '') }}
+        run: BREAKING_ROTATE=1 python -m news.breaking ${{ github.event.inputs.force == 'yes' && 'force' || (github.event.inputs.force == 'sample' && 'sample' || '') }}
       - name: Keep a review copy
         if: always()
         env:
