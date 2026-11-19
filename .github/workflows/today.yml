@@ -8,6 +8,7 @@ on:
       dry: { description: "صرف لاگ میں (ٹیلیگرام نہیں): yes", required: false, default: "no" }
 permissions:
   contents: read
+  actions: read
 concurrency: today
 jobs:
   today:
@@ -48,6 +49,31 @@ jobs:
           NAWA_YOUTUBE_CLIENT_ID: ${{ secrets.NAWA_YOUTUBE_CLIENT_ID }}
           NAWA_YOUTUBE_CLIENT_SECRET: ${{ secrets.NAWA_YOUTUBE_CLIENT_SECRET }}
           NAWA_YOUTUBE_REFRESH_TOKEN: ${{ secrets.NAWA_YOUTUBE_REFRESH_TOKEN }}
+          # 🩺 حالت رپورٹ (news/health.py) — صرف پڑھتی/جانچتی ہے
+          GH_TOKEN: ${{ github.token }}
+          TS_TOKEN: ${{ secrets.TS_TOKEN }}
+          NAWA_TOKEN: ${{ secrets.NAWA_TOKEN }}
+          ENGINE_TOKEN: ${{ secrets.ENGINE_TOKEN }}
+          GEMINI_CHAT_GH: ${{ secrets.GEMINI_CHAT_GH }}
+          GEMINI_BOT_TOKEN: ${{ secrets.GEMINI_BOT_TOKEN }}
+          GEMINI_TTS_BULLETIN: ${{ secrets.GEMINI_TTS_BULLETIN }}
+          GEMINI_TTS_FLASH: ${{ secrets.GEMINI_TTS_FLASH }}
+          GEMINI_TTS_PODCAST: ${{ secrets.GEMINI_TTS_PODCAST }}
+          NAWA_GEMINI_API_KEY: ${{ secrets.NAWA_GEMINI_API_KEY }}
+          NAWA_GEMINI_TTS_BACKUP_KEY: ${{ secrets.NAWA_GEMINI_TTS_BACKUP_KEY }}
+          TS_GEMINI_API_KEY: ${{ secrets.TS_GEMINI_API_KEY }}
+          BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
+          FB_PAGE_ID_NEWS: ${{ secrets.FB_PAGE_ID_NEWS }}
+          FB_PAGE_TOKEN_NEWS: ${{ secrets.FB_PAGE_TOKEN_NEWS }}
+          IG_USER_ID_NEWS: ${{ secrets.IG_USER_ID_NEWS }}
+          FB_PAGE_ID_NAWA: ${{ secrets.FB_PAGE_ID_NAWA || secrets.NAWA_FB_PAGE_ID }}
+          FB_PAGE_TOKEN_NAWA: ${{ secrets.FB_PAGE_TOKEN_NAWA || secrets.NAWA_FB_PAGE_TOKEN }}
+          IG_USER_ID_NAWA: ${{ secrets.IG_USER_ID_NAWA || secrets.NAWA_IG_USER_ID }}
+          FB_PAGE_ID_TOOLSCAPE: ${{ secrets.FB_PAGE_ID_TOOLSCAPE }}
+          FB_PAGE_TOKEN_TOOLSCAPE: ${{ secrets.FB_PAGE_TOKEN_TOOLSCAPE }}
+          IG_USER_ID_TOOLSCAPE: ${{ secrets.IG_USER_ID_TOOLSCAPE }}
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           YT_ANALYTICS_CLIENT_ID: ${{ secrets.YT_ANALYTICS_CLIENT_ID }}
           YT_ANALYTICS_CLIENT_SECRET: ${{ secrets.YT_ANALYTICS_CLIENT_SECRET }}
           TS_YT_ANALYTICS_CLIENT_ID: ${{ secrets.TS_YT_ANALYTICS_CLIENT_ID }}
