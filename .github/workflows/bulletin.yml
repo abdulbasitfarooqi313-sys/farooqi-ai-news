@@ -68,8 +68,7 @@ jobs:
           # الف/ب باری باری (مالک، 15 نومبر 2026): الف = نیوز روم (ٹی وی انداز)، ب = ایکسپلینر (پوری اسکرین مناظر، پہلے شہ سرخیاں)
           # 16 نومبر سے گنتی: ہر بلیٹن والا دن (پیر/بدھ/ہفتہ) — ایک ہی دن کے دوبارہ رن میں وہی انداز
           n=$(python3 -c "import datetime as d;t=d.datetime.now(d.timezone(d.timedelta(hours=3))).date();s=d.date(2026,11,16);print(sum(1 for i in range(max(0,(t-s).days)) if (s+d.timedelta(i)).weekday() in (0,2,5)))")
-          if [ $((n % 2)) = 0 ]; then export NEWS_LOOK=tv; echo "انداز: الف (نیوز روم)"; else
-            export NEWS_STYLE=explainer NEWS_ORDER=cold; echo "انداز: ب (ایکسپلینر)"; fi
+          export NEWS_STYLE=explainer NEWS_ORDER=cold; echo "انداز: ایکسپلینر (مقفل، 19 نومبر)"
           python -m news.bulletin ${{ github.event.inputs.force == 'yes' && 'force' || '' }}; rc=$?
           [ $rc = 0 ] || { [ -f state/news_error.txt ] && grep -E "Error|error|File \"/home" state/news_error.txt | tail -6 | while IFS= read -r l; do echo "::notice::$l"; done; }
           exit $rc
