@@ -1,12 +1,14 @@
 {
  "seen": [
-  "https://youtu.be/tM0dwXhOv2o",
-  "https://youtu.be/r0cJOa9MZsE",
   "https://youtu.be/DByAR5Su1Yw",
-  "https://youtu.be/lVbQqjAJpkE",
   "https://youtu.be/l21b1qBP-zE",
+  "https://youtu.be/FCmLuTENOp0",
   "https://youtu.be/-M62vWrZh54",
-  "https://youtu.be/0vNyVMDFdkg"
+  "https://youtu.be/0vNyVMDFdkg",
+  "https://youtu.be/r0cJOa9MZsE",
+  "https://youtu.be/tM0dwXhOv2o",
+  "https://youtu.be/lVbQqjAJpkE",
+  "https://youtu.be/G_Jrexy_5Bg"
  ],
  "news": [
   {
@@ -197,6 +199,100 @@
    "status": "queued",
    "on": "2026-11-16",
    "tries": 0
+  },
+  {
+   "channel": "Matthew Berman",
+   "title": "Gemini Carbon, NVIDIA CEO AFFAIR, Fable 5.2, Meta Muse Ember, GPT Image 2.6, Minimax H3: AI NEWS",
+   "views": 112514,
+   "date": "2026-11-11",
+   "url": "https://youtu.be/FCmLuTENOp0",
+   "desc": "Hire Viktor for your team: https://ref.viktor.com/mberman-yt\nUse code MATTHEWBERMAN100 for $100 in credits\n\nJoin My Newsletter for Regular AI Updates 👇🏼\nhttps://forwardfuture.com\n\nMy Links 🔗\n👉🏻 X: https://x.com/matthewberman\n👉🏻 Forward Future X: https://x.com/forwardfuture\n👉🏻 Instagram: https://www.instagram.com/matthewberman_ai\n👉🏻 Discord: https://discord.gg/u7wTTGWhuJ\n👉🏻 Spotify: https://open.spotify.com/show/6dBxDwxtHl1hpqHhfoXmy8\n\nMedia/Sponsorship Inquiries ✅ \nhttps://bit.ly/44TC45V\n\nChapters:\n00:00 Intro\n00:15 NVIDIA CEO Affair\n01:28 Fable 5.2\n04:31 Sponsor\n05:35 Fable 5.2 (Cont.)\n07:46 Gemini 4 Carbon\n09:59 LongCat 2.5\n10:38 Ripple 65B\n11:44 Inkling 2 Small\n12:48 Meta Muse Ember\n13:52",
+   "base": 9307,
+   "ratio": 12.1,
+   "age": 8,
+   "id": "9263ed3b8f",
+   "plan": {
+    "analysis": {
+     "hook_strategy": "سنسنی خیز سرخی (NVIDIA CEO کی خبر) کے ساتھ تیز ترین متعدد AI ماڈلز کی اپڈیٹس کا امتزاج جس نے شائقین کی توجہ فوری کھینچی۔",
+     "core_narrative": "اے آئی کی دنیا میں ایک طرف ہارڈ ویئر اور بڑی کمپنیوں کی اہم خبریں ہیں تو دوسری طرف گوگل، میٹا اور دیگر AI ماڈلز کی نئی دوڑ شروع ہو چکی ہے۔",
+     "pain_points": [
+      "روزانہ اتنے نئے AI ماڈلز آ رہے ہیں کہ سب پر نظر رکھنا مشکل ہو گیا ہے۔",
+      "صارفین کو سمجھ نہیں آتا کہ کون سا نیا ٹول ان کے عملی کام کا ہے اور کون سا محض ڈراما یا سنسنی۔",
+      "تکنیکی خبروں کو سادہ اور عام فہم زبان میں سمجھنے کے ذرائع کی کمی۔"
+     ],
+     "visual_cues": "تھمب نیل پر بولڈ ٹیکسٹ، ڈرامائی نیون لائٹس اور مختلف AI برانڈز کے علامتی آئیکنز کی موجودگی۔"
+    },
+    "ours": {
+     "title": "گوگل، میٹا اور اینویڈیا کی بڑی اپڈیٹس: اس ہفتے AI کی دنیا میں کیا نیا آیا؟",
+     "hook": "کیا آپ کو معلوم ہے کہ صرف ایک ہفتے کے اندر AI کی دنیا میں کتنی بڑی تبدیلیاں آ چکی ہیں؟ اگر آپ نئے AI ماڈلز کی اس تیز دوڑ میں پیچھے نہیں رہنا چاہتے تو یہ اپڈیٹ آپ کے لیے ہے۔",
+     "body": [
+      "گوگل نے اپنے Gemini فریم ورک میں نیا اپڈیٹ شامل کیا ہے جو ڈیٹا پروسیسنگ اور جوابات کی رفتار کو مزید تیز بناتا ہے۔",
+      "اینویڈیا کی مارکیٹ پوزیشن اور AI چپس کی بڑھتی ہوئی مانگ نے ٹیک انڈسٹری میں نیا تحرک پیدا کر دیا ہے۔",
+      "میٹا (Meta) نے اپنے نئے AI ماڈلز متعارف کروائے ہیں جو ڈویلپرز کے لیے مزید کھلے اور آسان اختیارات لاتے ہیں۔",
+      "تصویریں بنانے والے نئے AI ٹولز نے اب مزید قدرتی اور حقیقت پسندانہ رزلٹ دینا شروع کر دیے ہیں۔",
+      "چھوٹے اور کم خرچ AI ماڈلز اب عام موبائل فونز اور درمیانے لیپ ٹاپس پر بھی آسانی سے کام کر سکتے ہیں۔"
+     ],
+     "extra_value": "ان تمام نئے AI ماڈلز میں سے چھوٹے 'Lightweight Models' کو بغیر کسی مہنگے گرافکس کارڈ کے اپنے فون یا پی سی پر بالکل مفت چلانے کا طریقہ۔",
+     "cta": "ان تمام نئی اپڈیٹس میں سے کون سا ٹول آپ کے لیے سب سے زیادہ فائدہ مند ہے؟ کمنٹ میں بتائیں اور روزانہ کی AI خبروں کے لیے فاروقی اے آئی نیوز کو سبسکرائب کریں۔",
+     "thumbnail_prompt": "A futuristic glowing digital sphere bursting with energy, floating sleek neon geometric shapes, dark high-tech background. Text: NEW AI RACE",
+     "fact_check": [
+      "Gemini کے حالیہ اپڈیٹس کی رسمی ریلیز اور خصوصیات کی تصدیق کریں۔",
+      "Meta کے نئے AI ماڈل کی سرکاری ریلیز اور نام کی تصدیق کریں۔",
+      "NVIDIA کے حوالے سے جاری کردہ تازہ ترین نیوز سورس کی صداقت جانچیں۔"
+     ],
+     "fit": 9,
+     "fit_why": "یہ ویڈیو ہمارے چینل کے بنیادی فریم ورک 'سادہ اور تیز رفتار روزانہ کی AI خبریں' پر 100 فیصد پورا اترتی ہے۔"
+    }
+   },
+   "status": "new",
+   "on": "2026-11-19"
+  },
+  {
+   "channel": "Matt Wolfe",
+   "title": "AI News: Things Will Never Be The Same",
+   "views": 194740,
+   "date": "2026-11-13",
+   "url": "https://youtu.be/G_Jrexy_5Bg",
+   "desc": "Try @OpenAI Decisions API here: https://developers.openai.com/api/docs/guides/decisions \n\nHere's the AI news from one of the wildest weeks we've ever seen! Jensen Huang steps down as NVIDIA CEO, Anthropic launches Claude Fable 5.2, and Google's Gemini 4 Carbon finally becomes available. Plus, new AI features from Adobe MAX, big updates to Claude, and a rapid-fire roundup of everything else happening in AI.\n\nSharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads",
+   "base": 19394,
+   "ratio": 10.0,
+   "age": 6,
+   "id": "20a47db0df",
+   "plan": {
+    "analysis": {
+     "hook_strategy": "شدید تجسس اور FOMO (خوف کہ آپ پیچھے نہ رہ جائیں) پیدا کرنا، جس میں بڑا دعویٰ کیا گیا ہے کہ 'دنیا اب پہلے جیسی نہیں رہے گی۔'",
+     "core_narrative": "AI کی دنیا میں ایک ہی ہفتے کے اندر ہونے والی تمام بڑی اور حیران کن اپڈیٹس کا ایک تیز رفتار خلاصہ پیش کرنا۔",
+     "pain_points": [
+      "AI میں ہونے والی تیز رفتار تبدیلیوں سے پیچھے رہ جانے کا ڈر",
+      "ایک ساتھ تمام نئی خبروں اور ٹولز کی معلومات حاصل نہ ہونا",
+      "یہ نہ سمجھ پانا کہ ان تبدیلیوں کا عام انسان یا اس کے کام پر کیا اثر پڑے گا"
+     ],
+     "visual_cues": "ٹیک نیوز کی ڈرامائی گرافکس، بڑی AI کمپنیوں کے نشانات، اور سنسنی خیز ہیڈ لائنز کا استعمال۔"
+    },
+    "ours": {
+     "title": "اے آئی کی دنیا میں زبردست تبدیلی: اس ہفتے کی ۵ بڑی بریکنگ نیوز",
+     "hook": "کیا مصنوعی ذہانت کی دنیا مکمل طور پر بدلنے والی ہے؟ اس ہفتے AI کی دنیا میں ایسی بڑی تبدیلیاں آئی ہیں جن کا اثر ہم سب کے کام پر پڑے گا۔",
+     "body": [
+      "گوگل نے اپنے AI ماڈل Gemini میں نئی زبردست اپڈیٹس شامل کر دی ہیں جس سے اس کی رفتار اور سمجھ پہلے سے کہیں بہتر ہو گئی ہے۔",
+      "Claude AI نے اپنی نئی اپڈیٹ متعارف کروائی ہے جو اب پیچیدہ کوڈنگ اور سائنسی سوالات کو سیکنڈوں میں حل کر سکتی ہے۔",
+      "Adobe نے کریئیٹرز اور ڈیزائنرز کے لیے نئے AI فیچرز دیے ہیں جو تصویر اور ویڈیو ایڈیٹنگ کا طریقہ بدل دیں گے۔",
+      "AI کے شعبے میں پروسیسر اور چپس بنانے والی بڑی کمپنیوں کے درمیان جدید ٹیکنالوجی کی جنگ مزید تیز ہو چکی ہے۔",
+      "سب سے اہم بات، اب AI ٹولز صرف معلومات نہیں دے رہے بلکہ کمپیوٹر پر خودکار طریقے سے کام انجام دینے لگے ہیں۔"
+     ],
+     "extra_value": "عملی مشورہ: اگر آپ سٹوڈنٹ یا فری لانسر ہیں، تو آج ہی سے کلاوڈ (Claude) یا جیمنائی (Gemini) کا مفت ورژن اپنی ریسرچ اور رائٹنگ کے لیے استعمال کرنا شروع کریں تاکہ وقت بچ سکے۔",
+     "cta": "ان نئی اپڈیٹس میں سے کون سی خبر آپ کو سب سے زیادہ کام کی لگی؟ کمنٹس میں بتائیں اور روزانہ AI نیوز کے لیے فاروقی اے آئی نیوز کو سبسکرائب کریں۔",
+     "thumbnail_prompt": "Futuristic glowing digital server core with neon blue and golden circuits, high-tech cyber environment, sleek 3D render, clean composition, bold minimal text overlay 'AI BIG SHIFT', no faces, no human figures, no real brand logos",
+     "fact_check": [
+      "این ویڈیا (NVIDIA) اور ان کے سی ای او کے حوالے سے کسی بھی خبر کی آفیشل پریس ریلیز سے تصدیق کریں۔",
+      "گوگل جیمنائی اور اینتھروپک کلاوڈ کے متعلقہ ماڈلز کی موجودہ اپڈیٹ اور ورژن نمبر کو آفیشل ویب سائٹ سے چیک کریں۔",
+      "ایڈوبی (Adobe) کی تازہ ترین AI فیچرز کی ریلیز ڈیٹ اور دستیابی کی تصدیق کریں۔"
+     ],
+     "fit": 9,
+     "fit_why": "یہ مواد ہمارے چینل کی فارمیٹ یعنی فاسٹ پیسڈ، معلوماتی اور روزمرہ کی سادہ اردو میں AI نیوز کے لیے 100 فیصد موزوں ہے۔"
+    }
+   },
+   "status": "new",
+   "on": "2026-11-19"
   }
  ],
  "toolscape": [
@@ -298,155 +394,128 @@
  ],
  "latest": {
   "nawa": {
-   "on": "2026-11-16",
+   "on": "2026-11-19",
    "list": [
     {
-     "title": "Fajr Namaz Mein Konsi Surah Parhni Chahiye 😮 || Sunnat Ka Sahi Tariqa || Dr Farhat Hashmi",
-     "channel": "FARHAT SPEAKS",
-     "views": 1632,
-     "ratio": 11.4,
-     "age": 14,
-     "url": "https://youtu.be/l21b1qBP-zE",
-     "short": null
-    },
-    {
-     "title": "Surah Yaseen Full 🌿 A Gentle Reminder for the Heart | Urdu Translation | Mansoor Ghaznavi",
+     "title": "Surah Yaseen Full 🌙 Powerful Reminder of the Hereafter | Urdu & Hindi Translation | Qari Mansoor",
      "channel": "Learn Quran Urdu",
-     "views": 43019,
-     "ratio": 7.3,
-     "age": 3,
-     "url": "https://youtu.be/7EgUEnnqwW4",
-     "short": null
-    },
-    {
-     "title": "Surah Al Kahf | The Amazing Story of the Cave | Urdu & Hindi Translation | Mansoor Ghaznavi",
-     "channel": "Learn Quran Urdu",
-     "views": 36534,
-     "ratio": 6.2,
-     "age": 4,
-     "url": "https://youtu.be/y45j5T5Y1tI",
+     "views": 23752,
+     "ratio": 5.0,
+     "age": 2,
+     "url": "https://youtu.be/PbdOQqoJlIg",
      "short": null
     },
     {
      "title": "Sirf 3 Din Astaghfar Karein! | Mushkilaat Mein Allah Ki Rehmat Paane Ka Raaz | Dr Farhat Hashmi",
      "channel": "FARHAT SPEAKS",
-     "views": 579,
-     "ratio": 4.0,
-     "age": 10,
+     "views": 585,
+     "ratio": 3.9,
+     "age": 13,
      "url": "https://youtu.be/ATbiEZy_NC4",
      "short": null
     }
    ]
   },
   "news": {
-   "on": "2026-11-16",
+   "on": "2026-11-19",
    "list": [
     {
      "title": "Fable 5.2 solved all software...",
      "channel": "Matthew Berman",
-     "views": 310990,
-     "ratio": 34.1,
-     "age": 7,
+     "views": 315846,
+     "ratio": 33.9,
+     "age": 10,
      "url": "https://youtu.be/0vNyVMDFdkg",
-     "short": null
-    },
-    {
-     "title": "Kimi K3.1 weights OUT, open source computer use, SOTA image model, science model, Pika H3: AI NEWS",
-     "channel": "Matthew Berman",
-     "views": 175333,
-     "ratio": 19.2,
-     "age": 11,
-     "url": "https://youtu.be/-M62vWrZh54",
      "short": null
     },
     {
      "title": "12 months to the singularity",
      "channel": "Matthew Berman",
-     "views": 160935,
-     "ratio": 17.6,
-     "age": 9,
+     "views": 162480,
+     "ratio": 17.5,
+     "age": 12,
      "url": "https://youtu.be/lVbQqjAJpkE",
      "short": null
     },
     {
      "title": "Gemini Carbon, NVIDIA CEO AFFAIR, Fable 5.2, Meta Muse Ember, GPT Image 2.6, Minimax H3: AI NEWS",
      "channel": "Matthew Berman",
-     "views": 111053,
-     "ratio": 12.2,
-     "age": 5,
+     "views": 112514,
+     "ratio": 12.1,
+     "age": 8,
      "url": "https://youtu.be/FCmLuTENOp0",
      "short": null
     },
     {
-     "title": "Anthropic Researcher explains how to train LLMs",
+     "title": "AI News: Things Will Never Be The Same",
+     "channel": "Matt Wolfe",
+     "views": 194740,
+     "ratio": 10.0,
+     "age": 6,
+     "url": "https://youtu.be/G_Jrexy_5Bg",
+     "short": null
+    },
+    {
+     "title": "Anthropic Researcher Explains How LLMs Are Built and Trained",
      "channel": "Matthew Berman",
-     "views": 78764,
-     "ratio": 8.6,
-     "age": 4,
+     "views": 86796,
+     "ratio": 9.3,
+     "age": 7,
      "url": "https://youtu.be/Sjdvu4nHfDk",
      "short": null
     },
     {
      "title": "Claude Fable 5.2 Is Absolutely RIDICULOUS",
      "channel": "TheAIGRID",
-     "views": 426876,
-     "ratio": 6.0,
-     "age": 6,
+     "views": 540373,
+     "ratio": 7.5,
+     "age": 9,
      "url": "https://youtu.be/GipTWtfaiLs",
-     "short": null
-    },
-    {
-     "title": "AI News: Things Will Never Be The Same",
-     "channel": "Matt Wolfe",
-     "views": 162009,
-     "ratio": 4.9,
-     "age": 3,
-     "url": "https://youtu.be/G_Jrexy_5Bg",
-     "short": null
-    },
-    {
-     "title": "Anthropic's Fable 5.2 is the World’s Best AI Model",
-     "channel": "Matt Wolfe",
-     "views": 162084,
-     "ratio": 4.9,
-     "age": 7,
-     "url": "https://youtu.be/2TM8W66NI_8",
-     "short": null
-    },
-    {
-     "title": "AI News: New ChatGPT & Google Models (14 Updates Worth Knowing)",
-     "channel": "Matt Wolfe",
-     "views": 130508,
-     "ratio": 4.0,
-     "age": 10,
-     "url": "https://youtu.be/IrAHINf0M6E",
-     "short": null
-    },
-    {
-     "title": "5 Best Government Apps in Pakistan | CNIC Renewal, Driving License & Token Tax",
-     "channel": "Asad Ali TV",
-     "views": 88415,
-     "ratio": 3.4,
-     "age": 13,
-     "url": "https://youtu.be/ofJQ4kUMMNo",
-     "short": null
-    },
-    {
-     "title": "The AI Godfather Just Proved The Entire AI Industry Wrong",
-     "channel": "TheAIGRID",
-     "views": 236464,
-     "ratio": 3.3,
-     "age": 11,
-     "url": "https://youtu.be/_fEqQa5hBmI",
      "short": null
     },
     {
      "title": "How To Build An AI Operating System For Your Life",
      "channel": "Matt Wolfe",
-     "views": 103997,
-     "ratio": 3.2,
-     "age": 5,
+     "views": 115922,
+     "ratio": 6.0,
+     "age": 8,
      "url": "https://youtu.be/pvl3z_GyU2Y",
+     "short": null
+    },
+    {
+     "title": "OpenAI GPT-6.2 Astra is Here - It's Not What You Think",
+     "channel": "Matt Wolfe",
+     "views": 115043,
+     "ratio": 5.0,
+     "age": 1,
+     "url": "https://youtu.be/JVHkb8PTMvc",
+     "short": null
+    },
+    {
+     "title": "Insane AI Breakthroughs Nobody Is Talking About",
+     "channel": "Matt Wolfe",
+     "views": 107223,
+     "ratio": 4.7,
+     "age": 1,
+     "url": "https://youtu.be/-oA6oLxWpJg",
+     "short": null
+    },
+    {
+     "title": "Box CEO Explains Why AI Makes Software Features Obsolete",
+     "channel": "Matthew Berman",
+     "views": 41138,
+     "ratio": 4.4,
+     "age": 3,
+     "url": "https://youtu.be/kMdHCyAnNHA",
+     "short": null
+    },
+    {
+     "title": "The AI Godfather Just Proved The Entire AI Industry Wrong",
+     "channel": "TheAIGRID",
+     "views": 244999,
+     "ratio": 3.4,
+     "age": 14,
+     "url": "https://youtu.be/_fEqQa5hBmI",
      "short": null
     }
    ]
