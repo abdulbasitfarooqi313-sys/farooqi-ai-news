@@ -1,291 +1,282 @@
 {
- "summary": "Today's AI landscape is dominated by major model releases like OpenAI's GPT-6.2 Astra alongside enterprise workspace updates like Microsoft Copilot Workspaces. For Toolscape, our strategy focuses on delivering practical step-by-step tutorials with free tools that simplify these updates for everyday users.",
+ "summary": "Today's desk focuses heavily on new local AI tools like HeyGen Avatar 6 and workflow helpers like Tabstack by Mozilla that beginners can test for free. Competitor channels are dominating with step-by-step tutorials on Claude workflows and local AI execution, which we can adapt with our simpler, beginner-friendly angle.",
  "topics": [
   {
-   "title": "OpenAI GPT-6.2 Astra Release",
-   "why": "OpenAI's latest model drop is dominating tech news and creator discussions today.",
+   "title": "HeyGen Avatar 6",
+   "why": "New avatar generation capabilities released on Product Hunt are attracting massive beginner interest for video content creation.",
    "trend": 10,
-   "sources": [
-    "The Neuron",
-    "Matt Wolfe",
-    "Nate Herk | AI Automation"
-   ]
-  },
-  {
-   "title": "Microsoft Copilot Workspaces",
-   "why": "Announced at Ignite 2026 as a new way to manage multi-document team projects.",
-   "trend": 9,
-   "sources": [
-    "ZDNET",
-    "news.google.com"
-   ]
-  },
-  {
-   "title": "Documind Open-Source Document Parser",
-   "why": "Trending on Hacker News for converting complex PDFs and documents into clean structured data for free.",
-   "trend": 8,
-   "sources": [
-    "hnrss.org"
-   ]
-  },
-  {
-   "title": "MIT 30x Faster Image AI",
-   "why": "New research breakthrough offering high-resolution image creation at a fraction of current compute times.",
-   "trend": 7,
-   "sources": [
-    "hnrss.org"
-   ]
-  },
-  {
-   "title": "Diagramly 2.0",
-   "why": "Top Product Hunt launch simplifying automated visual diagramming for beginners.",
-   "trend": 6,
    "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "AI Canvas Visual Editor",
-   "why": "Popular visual workspace launch on Product Hunt aimed at interactive visual prompt design.",
+   "title": "Tabstack by Mozilla",
+   "why": "Mozilla's new browsing and tab management AI tool is trending for productivity-focused beginners.",
+   "trend": 9,
+   "sources": [
+    "producthunt.com"
+   ]
+  },
+  {
+   "title": "Apple Creator Studio AI Upgrade",
+   "why": "Major new tool updates rolled out for creators in the Apple ecosystem, driving heavy search interest.",
+   "trend": 8,
+   "sources": [
+    "news.google.com"
+   ]
+  },
+  {
+   "title": "Google AdMob AI Tools",
+   "why": "Google introducing automated monetization and ad management tools for publishers and beginners.",
+   "trend": 7,
+   "sources": [
+    "news.google.com"
+   ]
+  },
+  {
+   "title": "Google Buys AI Scheduling Tool Howie",
+   "why": "Major acquisition in the AI agent space impacting calendar and daily scheduling workflows.",
+   "trend": 6,
+   "sources": [
+    "news.google.com"
+   ]
+  },
+  {
+   "title": "Play That Back",
+   "why": "New audio playback and recap tool gaining traction on Product Hunt for daily productivity.",
    "trend": 5,
    "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "AssemblyAI-STT-3.7",
-   "why": "Newly updated speech-to-text model hitting Product Hunt with enhanced speed.",
+   "title": "Snapchat AI Tools for Brands and Creators",
+   "why": "Expansion of platform-specific creation tools making it easier to generate custom visual content.",
    "trend": 4,
+   "sources": [
+    "news.google.com"
+   ]
+  },
+  {
+   "title": "Instagram Unauthorized Reposts Tool",
+   "why": "New creator protections target unauthorized video edits and AI-modified reposts.",
+   "trend": 3,
+   "sources": [
+    "news.google.com"
+   ]
+  },
+  {
+   "title": "Spellar for Chrome",
+   "why": "Browser-based speech and note helper featured on Product Hunt for meeting transcription.",
+   "trend": 2,
    "sources": [
     "producthunt.com"
    ]
   },
   {
-   "title": "Google Acquisition of Howie AI",
-   "why": "Google expands its AI agent capabilities by acquiring email scheduling startup Howie.",
-   "trend": 3,
-   "sources": [
-    "Bloomberg.com",
-    "Quartz"
-   ]
-  },
-  {
-   "title": "Open-Source Privacy Policy Reader AI",
-   "why": "Hacker News highlight that automatically summarizes website privacy terms and data selling practices.",
-   "trend": 2,
-   "sources": [
-    "hnrss.org"
-   ]
-  },
-  {
-   "title": "Instagram Creator AI & Repost Tool",
-   "why": "TechCrunch reported new creator features targeting unauthorized reposts and AI edits.",
+   "title": "Stripo Email Widgets",
+   "why": "New email template widgets launched to simplify newsletter design for beginners.",
    "trend": 1,
    "sources": [
-    "TechCrunch",
-    "news.google.com"
+    "producthunt.com"
    ]
   }
  ],
  "packages": [
   {
-   "topic": "OpenAI GPT-6.2 Astra Release",
-   "competitors": "Matt Wolfe and Nate Herk covered the announcement and model benchmarks, but focused on news commentary rather than practical screen-share tutorials.",
-   "angle": "Show beginners three exact everyday work tasks you can complete in under 5 minutes using GPT-6.2 Astra.",
+   "topic": "HeyGen Avatar 6",
+   "competitors": "Competitors like Dan Kieft and Futurepedia covered complex AI video pipelines using multiple paid tools like Fable 5.2 and Seedance 2.5, missing a simple free-tier walkthrough for casual creators.",
+   "angle": "We show how to set up and generate your first video using HeyGen Avatar 6's free plan step by step without any paid software.",
    "viral": {
     "score": 68,
-    "why": "GPT-6.2 Astra is a massive search query right now, but high news saturation caps overall viral potential."
+    "why": "High demand for AI video tools right now, and beginners actively look for clear tutorials on the newest avatar releases."
    },
    "long": {
-    "title": "How to Use GPT-6.2 Astra for Daily Work Tasks",
-    "thumb": "GPT-6.2 Astra Guide",
-    "hook": "In the next 6 minutes, you will learn how to automate three daily desk tasks using OpenAI's new GPT-6.2 Astra. We will use a free account to clean data, summarize transcripts, and format emails step by step.",
+    "title": "How to Use HeyGen Avatar 6 (Free Beginner Guide)",
+    "thumb": "HeyGen Avatar 6 Free",
+    "hook": "In the next 7 minutes you will create your first talking AI avatar using HeyGen Avatar 6 without paying a cent. Let's look at the free plan limitations and how to set it up.",
     "outline": [
-     "Opening free ChatGPT and selecting GPT-6.2 Astra",
-     "Task 1: Cleaning messy spreadsheet text into clean columns",
-     "Task 2: Turning a 20-minute audio transcript into action points",
-     "Task 3: Writing formatted customer emails with context",
-     "One major limitation to keep in mind regarding usage caps",
-     "Summary and practical takeaway"
+     "What is HeyGen Avatar 6 and what you get on the free plan",
+     "Step 1: Setting up your free account",
+     "Step 2: Choosing and customizing your avatar",
+     "Step 3: Typing your script and adjusting voice settings",
+     "Step 4: Generating and downloading your first video",
+     "One real downside: Free watermark and generation limits",
+     "Summary and what to watch next"
     ]
    },
    "shorts": [
     {
-     "title": "Try GPT-6.2 Astra in 60 Seconds",
-     "hook": "Here is how to automate your daily email replies in under one minute with GPT-6.2 Astra.",
-     "script": "Open ChatGPT and select GPT-6.2 Astra from the model dropdown. Paste your unformatted notes into the prompt box. Type: summarize these bullet points into a professional customer update email with three clear points. Click send. Review the generated output, copy it directly into your email client, and make one quick edit before sending.",
-     "cta": "Subscribe for simple AI tutorials every morning."
+     "title": "Make Your First AI Avatar Free",
+     "hook": "Stop paying for video software when HeyGen Avatar 6 has a free tier.",
+     "script": "Go to the HeyGen website and sign up for the free plan. Choose your avatar template from the library. Type your script into the text box and pick a voice. Click generate, wait two minutes, and download your finished video. Watch the full tutorial for the exact steps.",
+     "cta": "Subscribe for more free tool guides."
     },
     {
-     "title": "GPT-6.2 Astra Data Trick",
-     "hook": "You can clean a messy list in 30 seconds using GPT-6.2 Astra.",
-     "script": "Copy your unformatted text list from your notes app. Paste it into GPT-6.2 Astra. Prompt it: format this messy list into a clean table with columns for Name, Date, and Action Item. GPT-6.2 Astra structures the raw data instantly. Copy the clean table directly into Excel or Google Sheets.",
-     "cta": "Follow Toolscape for step-by-step AI guides."
+     "title": "HeyGen Avatar 6 Quick Test",
+     "hook": "Here is how to test HeyGen Avatar 6 in under 60 seconds.",
+     "script": "Open HeyGen on your browser. Select Avatar 6 from the new model options. Paste a short two-sentence intro for your channel. Hit submit and watch the facial tracking in real time. Remember, the free tier includes a small watermark.",
+     "cta": "Check our channel for the full walkthrough."
     }
    ],
    "carousel": {
-    "title": "3 Fast Ways to Use GPT-6.2 Astra Today",
+    "title": "How to Use HeyGen Avatar 6 for Free",
     "slides": [
-     "Slide 1: Select GPT-6.2 Astra in your model menu.",
-     "Slide 2: Paste unformatted meeting notes into the prompt window.",
-     "Slide 3: Ask Astra to output a 3-bullet summary with action items.",
-     "Slide 4: Paste messy text data to auto-create clean spreadsheets.",
-     "Slide 5: Draft customer emails with natural tone guidelines.",
-     "Slide 6: One drawback: free tiers reach hourly message limits fast."
+     "Step 1: Create a free account on HeyGen",
+     "Step 2: Select Avatar 6 from the model list",
+     "Step 3: Type or paste your script text",
+     "Step 4: Choose your voice and language",
+     "Step 5: Generate and download your video",
+     "Note: Free plan includes a standard watermark"
     ]
    },
    "posts": {
     "x": [
-     "OpenAI launched GPT-6.2 Astra today. Here is how to use it for 3 basic desk tasks without spending extra money.",
-     "Step 1: Paste unformatted text notes into Astra. Step 2: Request structured tables. Step 3: Copy directly to Google Sheets."
+     "Just tested HeyGen Avatar 6 on the free plan. Here is a simple step-by-step walkthrough to make your first talking video in under 10 minutes: [Link]",
+     "Want to try HeyGen Avatar 6 without paying for a subscription? Here is what you get on the free tier and how to start: [Link]"
     ],
-    "facebook": "OpenAI's new GPT-6.2 Astra is live. Here is our step-by-step visual tutorial on how beginners can clean data and draft customer emails in 5 minutes.",
-    "instagram": "How to use GPT-6.2 Astra for everyday work tasks step-by-step. Swipe through to learn 3 fast workflows you can try right now for free! #AITools #ChatGPT #Productivity #TechTutorial",
-    "linkedin": "OpenAI released GPT-6.2 Astra today. Instead of high-level news summaries, here is a practical 3-step guide for using Astra to clean messy document data and draft customer responses efficiently."
+    "facebook": "We tested the new HeyGen Avatar 6 free tier. If you want to create simple talking avatar videos without expensive software, watch our step-by-step guide for beginners. Let us know what you think in the comments!",
+    "instagram": "Testing out HeyGen Avatar 6! 🎥 Watch our new beginner guide to see how to make your first free talking avatar video step by step. Link in bio! #HeyGen #AITools #ContentCreation",
+    "linkedin": "AI video tools keep evolving. We tested the new HeyGen Avatar 6 free tier to see how easy it is for beginners to build professional avatars without a budget. Watch the full tutorial: [Link]"
    },
    "article": {
-    "title": "Beginner Guide to OpenAI GPT-6.2 Astra: 3 Practical Daily Workflows",
+    "title": "HeyGen Avatar 6 Tutorial: How Beginners Can Make Free Videos",
     "outline": [
-     "Introduction to GPT-6.2 Astra Capabilities",
-     "Setting Up Your Free ChatGPT Account",
-     "Workflow 1: Formatting Messy Text into Tables",
-     "Workflow 2: Summarizing Lengthy Transcripts",
-     "Workflow 3: Drafting Business Emails",
-     "Current Usage Limits and Final Tips"
+     "Introduction to HeyGen Avatar 6",
+     "What is Included in the Free Plan",
+     "Step-by-Step Setup Guide",
+     "Best Practices for Realistic Results",
+     "Limitations to Keep in Mind",
+     "Conclusion"
     ]
    }
   },
   {
-   "topic": "Microsoft Copilot Workspaces",
-   "competitors": "ZDNET reported the Ignite 2026 press release details, but omitted a concrete visual walkthrough of how end users navigate the workspace interface.",
-   "angle": "Walk through setting up your first multi-file workspace in Copilot step-by-step for office work.",
+   "topic": "Tabstack by Mozilla",
+   "competitors": "Competitors like Jeff Su and Matt Wolfe focused heavily on complex AI operating systems and paid note apps, ignoring standalone browser assistants for everyday users.",
+   "angle": "We test Tabstack by Mozilla as a free, privacy-first way to organize messy browser tabs without extra software.",
    "viral": {
-    "score": 54,
-    "why": "Solid search intent among office workers in US and UK, though enterprise updates have slightly narrower consumer reach."
+    "score": 52,
+    "why": "Tab management is a universal pain point, and Mozilla's brand trust gives this tool immediate credibility."
    },
    "long": {
-    "title": "How to Use Microsoft Copilot Workspaces Step by Step",
-    "thumb": "Copilot Workspaces Guide",
-    "hook": "In the next 7 minutes, you will build your first Copilot Workspace to organize your project files automatically. You will see every click on screen with zero coding required.",
+    "title": "How to Use Tabstack by Mozilla (Free Tab Organizer)",
+    "thumb": "Organize Tabs with AI",
+    "hook": "In the next 6 minutes you will clean up dozens of open browser tabs using Tabstack by Mozilla for free. Let's look at how it works.",
     "outline": [
-     "Navigating to the new Copilot Workspaces menu",
-     "Creating your first workspace folder and uploading files",
-     "Asking Copilot to cross-reference Word docs and Excel sheets",
-     "Generating a single project status summary",
-     "One downside: offline file sync requires a stable connection",
-     "Recap and next steps for office productivity"
+     "What is Tabstack by Mozilla and why use it",
+     "Step 1: Installing the extension on your browser",
+     "Step 2: Grouping and sorting messy tabs automatically",
+     "Step 3: Searching your history with AI prompts",
+     "One real downside: Privacy considerations with session data",
+     "Summary and next steps"
     ]
    },
    "shorts": [
     {
-     "title": "Copilot Workspaces Quick Start",
-     "hook": "Stop opening ten browser tabs to finish one project report.",
-     "script": "Open Microsoft Copilot Workspaces from your sidebar menu. Click New Workspace and name your project. Drag in your Word document and your data spreadsheet simultaneously. Type: compare these two files and list three project risks. Copilot generates a combined report in seconds.",
-     "cta": "Subscribe to Toolscape for more office AI shortcuts."
+     "title": "Stop Drowning in Open Browser Tabs",
+     "hook": "Have 50 tabs open right now? Here is how to fix it for free.",
+     "script": "Install Tabstack by Mozilla on your browser. Click the extension icon to view all your open windows in one clean sidebar. Let the AI group your research, shopping, and work tabs automatically. Click any group to collapse them instantly.",
+     "cta": "Subscribe for more simple productivity tips."
     },
     {
-     "title": "Organize Files with Copilot Workspaces",
-     "hook": "Here is how Copilot Workspaces organizes your work projects.",
-     "script": "Create a fresh workspace inside Microsoft Copilot. Drop in your meeting notes, PDF specs, and draft emails. Prompt Copilot: draft a status report based strictly on these three source files. Review the structured summary without searching through separate folders.",
-     "cta": "Check our full video for the complete tutorial."
+     "title": "Mozilla's New Tab Organizer",
+     "hook": "Try this free browser tool to organize your research instantly.",
+     "script": "Open your browser and add Tabstack by Mozilla. It takes your open tabs and sorts them by topic without manual folder creation. Type a keyword in the search bar to find that exact article from three days ago.",
+     "cta": "Watch our full video for the setup guide."
     }
    ],
    "carousel": {
-    "title": "Master Copilot Workspaces in 4 Clicks",
+    "title": "Organize Tabs with Tabstack",
     "slides": [
-     "Slide 1: Open Copilot and select the Workspaces tab.",
-     "Slide 2: Click Create New Workspace and title your project.",
-     "Slide 3: Upload your Word files and Excel spreadsheets together.",
-     "Slide 4: Prompt Copilot to draft a combined status summary.",
-     "Slide 5: Export your summary straight to Word or email.",
-     "Slide 6: Note: sync requires an active Microsoft account."
+     "Step 1: Add Tabstack by Mozilla to your browser",
+     "Step 2: Open your messy tab window",
+     "Step 3: Let the extension group tabs by topic",
+     "Step 4: Search past sessions instantly",
+     "Note: Requires active browser permissions"
     ]
    },
    "posts": {
     "x": [
-     "Microsoft unveiled Copilot Workspaces at Ignite 2026. Here is how to combine your project files into one summary.",
-     "Drop your docs into Copilot Workspaces, ask for a master summary, and save 30 minutes of manual copy-pasting."
+     "Drowning in open browser tabs? We tested Tabstack by Mozilla to see how well it organizes your workspace for free: [Link]",
+     "A simple way to clean up your research tabs without paying for a complex workspace app. Here is our Tabstack guide: [Link]"
     ],
-    "facebook": "Microsoft Copilot Workspaces is now available following Ignite 2026. Learn how to connect your Word documents and spreadsheets into one central AI workspace with our beginner guide.",
-    "instagram": "Organize multi-file projects faster with Microsoft Copilot Workspaces! Swipe to see the step-by-step walkthrough for office productivity. #MicrosoftCopilot #Productivity #AITools #Workplace",
-    "linkedin": "Microsoft Copilot Workspaces introduced a streamlined approach to managing multi-document projects. Here is our step-by-step breakdown of how to build your first project workspace in under five minutes."
+    "facebook": "If your browser always has 50+ tabs open, you will love this. We tested Tabstack by Mozilla to see how its free AI sorting features help you stay organized. Watch our step-by-step tutorial!",
+    "instagram": "Too many open tabs? 🖥️ We tested Tabstack by Mozilla to show beginners how to organize their browser in seconds. Link in bio! #Productivity #Mozilla #AITools",
+    "linkedin": "Browser clutter slows down daily work. We tested Tabstack by Mozilla to evaluate its free tab organization features for everyday users. Watch the full tutorial: [Link]"
    },
    "article": {
-    "title": "Getting Started with Microsoft Copilot Workspaces: A Beginner's Tutorial",
+    "title": "Tabstack by Mozilla Review: Free Browser Organization Guide",
     "outline": [
-     "What is Microsoft Copilot Workspaces?",
-     "Creating Your First Project Workspace",
-     "Uploading and Managing Multiple Source Files",
-     "Prompting Copilot Across Multiple Documents",
-     "Key Limitations to Keep in Mind",
-     "Conclusion and Best Practices"
+     "Introduction to Tabstack by Mozilla",
+     "How to Install and Set Up",
+     "Key Features for Tab Management",
+     "One Major Downside to Consider",
+     "Conclusion"
     ]
    }
   },
   {
-   "topic": "Documind Open-Source Document Parser",
-   "competitors": "Featured on Hacker News Show HN with no major YouTube competitor coverage yet, leaving open space for a simple step-by-step beginner guide.",
-   "angle": "Show beginners how to convert PDF documents into structured JSON or CSV data using this free open-source tool.",
+   "topic": "Apple Creator Studio AI Upgrade",
+   "competitors": "Competitors like Kevin Stratvert and Matt Wolfe covered general Apple AI updates, but missed a dedicated walkthrough for creators using the new Studio tools on standard hardware.",
+   "angle": "We break down the new Apple Creator Studio AI upgrades with a clear guide on what features are free for existing users.",
    "viral": {
-    "score": 48,
-    "why": "Strong practical search value for document extraction, but open-source desktop setup appeals to a slightly more technical subset."
+    "score": 61,
+    "why": "Massive Apple audience base looking for practical tutorials on newly released creator features."
    },
    "long": {
-    "title": "Convert PDFs to Data for Free with Documind",
-    "thumb": "Free PDF to Data",
-    "hook": "In the next 5 minutes, you will extract clean spreadsheet data from scanned PDF documents for free. We will use an open-source tool called Documind with zero subscription fees.",
+    "title": "Apple Creator Studio AI Upgrade: What's New for Beginners",
+    "thumb": "Apple Creator Studio AI",
+    "hook": "In the next 8 minutes you will learn how to use the new Apple Creator Studio AI features to speed up your editing workflow. Let's dive in.",
     "outline": [
-     "What Documind is and why open-source matters",
-     "Accessing the free web interface",
-     "Uploading a multi-page PDF invoice or document",
-     "Defining the exact fields you want to extract",
-     "Exporting clean CSV files ready for Excel",
-     "One downside: complex multi-column tables may need clean-up",
-     "Final recap and recommended prompt template"
+     "Overview of the Apple Creator Studio AI update",
+     "Feature 1: Automated audio cleanup and enhancement",
+     "Feature 2: Smart timeline clipping and captioning",
+     "Feature 3: Managing assets with built-in assistant tools",
+     "One real downside: Hardware requirements and device limits",
+     "Summary and workflow recommendations"
     ]
    },
    "shorts": [
     {
-     "title": "Extract PDF Data for Free",
-     "hook": "Stop manually copying numbers from PDF invoices into Excel.",
-     "script": "Head over to Documind on your browser. Upload any PDF invoice or scanned receipt. Define the data fields you need, like Date, Vendor, and Total Amount. Click extract. Documind turns raw document text into clean structured data. Download the result directly as a CSV file.",
-     "cta": "Subscribe to Toolscape for free AI tools."
+     "title": "Apple Creator Studio AI Upgrades",
+     "hook": "Apple just upgraded Creator Studio with powerful new AI tools.",
+     "script": "Open Apple Creator Studio on your updated device. Import your raw video file into the timeline. Click the new AI enhancement button to clean background audio automatically. Export your polished clip in half the usual time.",
+     "cta": "Subscribe for weekly AI tool tutorials."
     },
     {
-     "title": "Open Source AI Tool: Documind",
-     "hook": "This free open-source tool turns messy PDFs into clean data.",
-     "script": "Documind is a free open-source tool featured on Hacker News today. Drop your PDF report into the app interface. Select your output format such as JSON or CSV. Click process to extract structured table data in under 10 seconds without paying a subscription.",
-     "cta": "Follow Toolscape for daily free tool tutorials."
+     "title": "Clean Audio with Apple AI Studio",
+     "hook": "Fix muddy microphone audio in one click using Apple Studio.",
+     "script": "Select your audio track inside the updated Apple Creator Studio. Toggle the new AI voice isolation setting on. Listen as background hums disappear instantly without manual EQ adjustments.",
+     "cta": "Watch our full guide for all new features."
     }
    ],
    "carousel": {
-    "title": "How to Turn PDFs into Clean Data with Documind",
+    "title": "Apple Creator Studio AI Guide",
     "slides": [
-     "Slide 1: Visit Documind for open-source document parsing.",
-     "Slide 2: Upload your PDF invoice or scanned document.",
-     "Slide 3: Specify target data fields like Date or Amount.",
-     "Slide 4: Preview the auto-extracted structured table.",
-     "Slide 5: Download the data as a CSV file for Excel.",
-     "Slide 6: Note: scanned low-resolution files can miss fields."
+     "Step 1: Update to the latest Creator Studio version",
+     "Step 2: Import your audio or video file",
+     "Step 3: Enable AI voice isolation",
+     "Step 4: Use smart clipping for fast edits",
+     "Note: Compatible with supported Apple devices only"
     ]
    },
    "posts": {
     "x": [
-     "Documind is a new open-source AI tool that turns PDF documents into structured data. Here is how to use it for free.",
-     "Upload a PDF, pick your output columns, and export to CSV without manual copy-pasting."
+     "Apple Creator Studio just got a major AI upgrade. Here is a beginner's guide to the new features and how to use them: [Link]",
+     "Testing the new AI audio and video tools in Apple Creator Studio. Here is what works and what requires newer hardware: [Link]"
     ],
-    "facebook": "Need to pull data out of PDF invoices? Documind is a free open-source AI tool launched on Hacker News. Check out our simple step-by-step guide to export PDF tables directly to CSV.",
-    "instagram": "Turn PDFs into clean spreadsheets with Documind! Swipe through for a free, step-by-step tutorial on open-source document extraction. #OpenSource #AITools #Productivity #ExcelTips",
-    "linkedin": "Documind launched on Hacker News as an open-source solution for converting documents into structured data. Here is how non-technical users can use it to automate manual data entry."
+    "facebook": "Apple just rolled out new AI tools inside Creator Studio. We tested the audio cleanup and editing features so you can see how they work before updating. Watch our new video!",
+    "instagram": "Testing the new Apple Creator Studio AI upgrades! 📱 Watch our beginner breakdown to see how these tools improve your daily workflow. Link in bio! #Apple #VideoEditing #CreatorStudio",
+    "linkedin": "Apple's latest Creator Studio AI updates aim to simplify video and audio production for creators. We tested the new features to see how they perform in real use cases: [Link]"
    },
    "article": {
-    "title": "Documind Tutorial: How to Turn PDF Documents into Structured Data for Free",
+    "title": "Apple Creator Studio AI Upgrades: Beginner Feature Guide",
     "outline": [
-     "Introduction to Open-Source PDF Parsing",
-     "Setting Up Documind in Your Browser",
-     "Uploading Documents and Defining Custom Schema",
-     "Exporting Extracted Data to CSV and Excel",
-     "Downsides and Handling Formatting Errors",
+     "What Is Apple Creator Studio AI",
+     "Top New Features for Video Creators",
+     "How to Use Smart Audio Cleanup",
+     "Hardware Requirements and Limitations",
      "Final Verdict"
     ]
    }
@@ -293,39 +284,47 @@
  ],
  "hook_patterns": [
   {
-   "pattern": "How to Use [Tool] for FREE with [Method]",
-   "example": "How to Use Claude Code for FREE with Ollama"
+   "pattern": "Result + time frame in the opening line",
+   "example": "In the next 7 minutes you will build a complete workflow without writing code."
   },
   {
-   "pattern": "Build Your First [Thing] in [Time] (No Coding)",
-   "example": "Build Your First AI Agent in 20 Minutes (No Coding)"
+   "pattern": "Direct callout of a common daily pain point",
+   "example": "Still organizing your files and tabs by hand every single day?"
   },
   {
-   "pattern": "[Tool A] + [Tool B] Is The Best Way To [Action]",
-   "example": "Claude + Blender Is The Best Way To Make AI Videos"
+   "pattern": "Highlighting a free alternative to paid subscriptions",
+   "example": "This free tool does what a $30 monthly app does, right inside your browser."
   },
   {
-   "pattern": "How I [Action] with [Tool] - Full Guide",
-   "example": "How I Edit My Videos with Claude - Full Guide"
+   "pattern": "Addressing beginner mistakes directly",
+   "example": "Stop doing this one manual step when testing new AI tools."
   },
   {
-   "pattern": "[Tool] Just Became Free — You Don't Need a [Subscription]",
-   "example": "Gemini Just Became Free — You Don't Need a Google AI Subscription"
+   "pattern": "Focusing on speed and simplicity",
+   "example": "Here is how to set up your first AI agent in under five minutes."
   }
  ],
  "_competitors": [
   {
    "channel": "Kevin Stratvert",
    "title": "How to Use Ollama (Free Local AI)",
-   "views": 213161,
+   "views": 225110,
    "date": "2026-11-05",
    "url": "https://youtu.be/btMoPRHz8eM",
    "desc": "Learn how to install and use Ollama on Windows to run AI models locally for free. In this beginner tutorial, we'll set up Ollama without an account, choose a local model, chat with AI, ask follow-up questions, and analyze a PDF on your computer. Then we'll connect Ollama to OpenCode and build a website with AI that creates files directly on your PC. Once you've downloaded a local model, you can use it offline. Cloud models are optional and work differently; this tutorial focuses on local AI.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Ollama: https://ollama.com/\n- Download Ollama for Windows: https://ollama.com/download/windows\n- OpenCode: https://opencode.ai/\n- Download OpenCode: https://opencode"
   },
   {
+   "channel": "Dan Kieft",
+   "title": "Claude + Blender Is The Best Way To Make AI Videos (Full Course)",
+   "views": 220338,
+   "date": "2026-11-16",
+   "url": "https://youtu.be/OO6J2w_FBnE",
+   "desc": "Claude + Blender Is The Best Way To Make AI Videos (Full Course)\nBlack Friday Deal on the MCP You Need 👉 http://dankieft.com/higgsfield\n\nUsing Blender together with Claude is one of the best ways to create AI video references that you can use inside of Seedance 2.5. It allows you to have full control over the camera movement, the characters and the location. That's why you need to understand how to use it. In this full in depth tutorial I show you all the tips and tricks I know to make good AI videos with Blender \n\n\nAll prompts\nhttps://claude-and-blender.vercel.app/\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquir"
+  },
+  {
    "channel": "Futurepedia",
    "title": "Claude Makes 3D Animations Easy Now",
-   "views": 196081,
+   "views": 206180,
    "date": "2026-11-12",
    "url": "https://youtu.be/ZxaMmG71g8c",
    "desc": "*Build 3D Animated Explainer Videos with Claude (37 Ready-Made Styles):* https://clickhubspot.com/777a\n\nMore from Futurepedia:\n👉 Get your free AI plan on Futurepedia 2.0: https://clickhubspot.com/691m\n\nSummary:\nClaude can now make stunning 3D animations in almost any style, and it's surprisingly easy. In this video I break down how it works using Three.js (and how it differs from the frame-by-frame JavaScript method from my last motion graphics video), then walk through making one from a single prompt. I also show off my free 3D Style Atlas: 37 ready-made styles you can copy and paste into Claude, with built-in sound effects and a voiceover mode that syncs the animation to your narration.\n\nC"
@@ -333,7 +332,7 @@
   {
    "channel": "Matt Wolfe",
    "title": "AI News: Things Will Never Be The Same",
-   "views": 189370,
+   "views": 194571,
    "date": "2026-11-13",
    "url": "https://youtu.be/G_Jrexy_5Bg",
    "desc": "Try @OpenAI Decisions API here: https://developers.openai.com/api/docs/guides/decisions \n\nHere's the AI news from one of the wildest weeks we've ever seen! Jensen Huang steps down as NVIDIA CEO, Anthropic launches Claude Fable 5.2, and Google's Gemini 4 Carbon finally becomes available. Plus, new AI features from Adobe MAX, big updates to Claude, and a rapid-fire roundup of everything else happening in AI.\n\nSharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads"
@@ -341,31 +340,23 @@
   {
    "channel": "Dan Kieft",
    "title": "How To Start Making AI Videos in 2026 (Beginner Guide)",
-   "views": 183196,
+   "views": 186935,
    "date": "2026-10-22",
    "url": "https://youtu.be/iO9MiefIpVM",
    "desc": "How To Start Making AI Video in 2026 (Beginner Guide)\nCreat AI Video with Higgsfield 👉 http://dankieft.com/higgsfield\n\n\nAll of my prompts: https://start-making-ai-videos.vercel.app/\n\n\nIn this video I teach you everything you need to know in order to start creating AI videos on higgsfield. We will go over prompting, workflows, references ai images and ai videos. by the end of this you know exactly how to start making videos on higgsfield\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.instagram.com/dan.kieft/"
   },
   {
-   "channel": "Dan Kieft",
-   "title": "Claude + Blender Is The Best Way To Make AI Videos (Full Course)",
-   "views": 168432,
-   "date": "2026-11-16",
-   "url": "https://youtu.be/OO6J2w_FBnE",
-   "desc": "Claude + Blender Is The Best Way To Make AI Videos (Full Course)\nBlack Friday Deal on the MCP You Need 👉 http://dankieft.com/higgsfield\n\nUsing Blender together with Claude is one of the best ways to create AI video references that you can use inside of Seedance 2.5. It allows you to have full control over the camera movement, the characters and the location. That's why you need to understand how to use it. In this full in depth tutorial I show you all the tips and tricks I know to make good AI videos with Blender \n\n\nAll prompts\nhttps://claude-and-blender.vercel.app/\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquir"
-  },
-  {
-   "channel": "Matt Wolfe",
-   "title": "Anthropic's Fable 5.2 is the World’s Best AI Model",
-   "views": 164823,
-   "date": "2026-11-09",
-   "url": "https://youtu.be/2TM8W66NI_8",
-   "desc": "Fable 5.2 from Anthropic just dropped today. Here's the details.\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\nResources From Today's Video:\nLaunch Post: https://www.anthropic.com/claude-fable-and-mythos-5-2\nMatt Berman Gears of War: https://x.com/MatthewBerman/status/2119871207206158459\nAlex’s Examples: https://x.com/The_Alex/status/2119884217261892083\nPeter Yang Animation: h"
+   "channel": "Nate Herk | AI Automation",
+   "title": "Anthropic Just Released the New Rules of Claude Code",
+   "views": 184314,
+   "date": "2026-11-17",
+   "url": "https://youtu.be/8Pg6G5h05hk",
+   "desc": "FREE AI OS Template: https://app.aiautomationsociety.ai/optin/ai-os/?utm_source=youtube&utm_medium=organic&utm_content=claude-code-best-practices&sl=yt_claude-code-best-practices\nHow I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=claude-code-best-practices&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=claude-code-best-practices&hcategory=youtube-videos&utm_campaign=free-group\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nLydia Hallie from"
   },
   {
    "channel": "Kevin Stratvert",
    "title": "How to Use Claude Code for FREE with Ollama",
-   "views": 158827,
+   "views": 170342,
    "date": "2026-11-10",
    "url": "https://youtu.be/NkkAwdm2k7s",
    "desc": "Learn how to use Claude Code for free with Ollama and a local AI model running on your own computer. In this step-by-step Windows tutorial, we'll install both tools, adjust Ollama's context length, connect Claude Code to Gemma 4 12B, and build a playable Breakout game. Then we'll improve the game with a follow-up prompt and learn how to return to the project later.\n\nThis setup uses a local model in the Claude Code tool, with no AI subscription or per-token API charges for local inference. It does not give you free access to Anthropic's Opus or Sonnet models. Speed and results depend on your hardware and the model you choose.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Download Ollama: https://olla"
@@ -373,47 +364,47 @@
   {
    "channel": "Dan Kieft",
    "title": "How I Make Cinematic AI Ads with Fable 5.2 & Seedance 2.5",
-   "views": 151770,
+   "views": 156920,
    "date": "2026-11-12",
    "url": "https://youtu.be/jeMl0OSwDss",
    "desc": "Create your own Cinematic AI ads with Fable 5.2 and Seedance 2.5\nHiggsfield Black Friday Sale is live now 👉 http://dankieft.com/higgsfield\n\nIn this video I teach you how you can create your own AI ads. We'll go over all the different steps fro prompting, to making your assets and generating the video so by the end of it you know exactly how.\n\nPrompts & Skills I used:\nhttps://realism-site.vercel.app/\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.instagram.com/dan.kieft/"
   },
   {
-   "channel": "Dan Kieft",
-   "title": "I Tried Every AI Video Generator - Full Tierlist",
-   "views": 141556,
-   "date": "2026-10-28",
-   "url": "https://youtu.be/tnG3TIULBro",
-   "desc": "Find out what the Best AI Video Generator is in 2026!\nTry out all models 👉 https://tolt.link/tierlist\n\nI tested the 6 most popular AI video generators of 2026 in an 8-round head-to-head battle to find out which one is ACTUALLY the best. Seedance 2.5, Wan 3.0, MiniMax H3 Max, Flux 3, Kling 4.0 Flash and Gemini Omni 1.1 Flash all got the exact same prompts and the same references — then I ranked every single round on a tier list, counted the points, and added up exactly how many credits each model burned.\n\nAll My prompts:\nhttps://best-video-generator.vercel.app/\n\nOpenArt Arena:\nhttps://openart.ai/arena\n\n0:00 Intro\n1:21 The contenders\n2:11 Rules & judging criteria\n2:45 Round 1: Prompt adherence"
-  },
-  {
    "channel": "Jeff Su",
    "title": "6 Insanely Practical AI Tips (in 18 minutes)",
-   "views": 137966,
+   "views": 145227,
    "date": "2026-11-10",
    "url": "https://youtu.be/9Hwanevuhd8",
    "desc": "✅ Get HubSpot’s free guide, Use Claude like an AI Expert - https://clickhubspot.com/89c42f\n\nTired of AI tips that go out of date as soon as a new model comes out? These six AI productivity tips help you waste fewer tokens, do less manual work, and teach #ChatGPT, Claude, and Gemini how you like to work.\n\nI’ll show you how to turn a dense PDF into a reusable reference, save prompts you keep retyping, and catch misunderstandings by checking the AI’s plan first. Plus, you’ll see how simple tool rulebooks save you from correcting the same emails and calendar events every time.\n\n*TIMESTAMPS*\n00:00 Top 6 EVERYDAY AI Tips You'll Actually Use\n00:28 Tip #1: The Markdown Shortcut\n03:50 Tip #2: The Fol"
   },
   {
+   "channel": "Dan Kieft",
+   "title": "I Tried Every AI Video Generator - Full Tierlist",
+   "views": 144772,
+   "date": "2026-10-28",
+   "url": "https://youtu.be/tnG3TIULBro",
+   "desc": "Find out what the Best AI Video Generator is in 2026!\nTry out all models 👉 https://tolt.link/tierlist\n\nI tested the 6 most popular AI video generators of 2026 in an 8-round head-to-head battle to find out which one is ACTUALLY the best. Seedance 2.5, Wan 3.0, MiniMax H3 Max, Flux 3, Kling 4.0 Flash and Gemini Omni 1.1 Flash all got the exact same prompts and the same references — then I ranked every single round on a tier list, counted the points, and added up exactly how many credits each model burned.\n\nAll My prompts:\nhttps://best-video-generator.vercel.app/\n\nOpenArt Arena:\nhttps://openart.ai/arena\n\n0:00 Intro\n1:21 The contenders\n2:11 Rules & judging criteria\n2:45 Round 1: Prompt adherence"
+  },
+  {
    "channel": "Kevin Stratvert",
    "title": "How to Use Grok Bot for Beginners",
-   "views": 133253,
+   "views": 136653,
    "date": "2026-10-27",
    "url": "https://youtu.be/G6AwOYT-Gbw",
    "desc": "This Grok Bot tutorial for beginners shows you how to build your first AI team, with bots that watch your inbox, keep your books, and answer support tickets on their own.\n💵 Get 50% off QuickBooks Online ➜ https://quickbooks.kevinstratvert.com/\n\nFirst, you'll see what Grok Bot costs, including the 7-day free trial and the cheapest paid plans, and where everything lives in the app.\n\nNext, you'll build your first bot, which connects to Gmail right from the chat and starts watching your inbox for new catering orders on its own.\n\nThen you'll teach it how you like things done, so it remembers your writing rules every time it drafts an email.\n\nAlong the way, you'll learn how to use Grok Bot the way"
   },
   {
    "channel": "Nate Herk | AI Automation",
-   "title": "Anthropic Just Released the New Rules of Claude Code",
-   "views": 131469,
-   "date": "2026-11-17",
-   "url": "https://youtu.be/8Pg6G5h05hk",
-   "desc": "FREE AI OS Template: https://app.aiautomationsociety.ai/optin/ai-os/?utm_source=youtube&utm_medium=organic&utm_content=claude-code-best-practices&sl=yt_claude-code-best-practices\nHow I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=claude-code-best-practices&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=claude-code-best-practices&hcategory=youtube-videos&utm_campaign=free-group\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nLydia Hallie from"
+   "title": "The SIMPLEST Way To Make Money Online With Claude AI in 2026",
+   "views": 128048,
+   "date": "2026-11-16",
+   "url": "https://youtu.be/XSehihyKFqw",
+   "desc": "My FREE resources: https://www.skool.com/ai-automation-society/about?el=simplest-way-claude&hcategory=youtube-videos&utm_campaign=free-group\nFREE Scrollcraft Website Design Skill: https://app.aiautomationsociety.ai/optin/scrollcraft/?utm_source=youtube&utm_medium=organic&utm_content=simplest-way-claude&sl=yt_simplest-way-claude\nHow I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=simplest-way-claude&hcategory=youtube-videos&utm_campaign=plus-group\n\nMy Tools💻\nFREE MONTH of Glaido: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nMaking money online with "
   },
   {
    "channel": "Metics Media",
    "title": "Higgsfield AI Tutorial for Beginners (2026) | Step-by-Step",
-   "views": 118356,
+   "views": 120708,
    "date": "2026-10-30",
    "url": "https://youtu.be/Mt91SiQotOU",
    "desc": "This Higgsfield AI tutorial for beginners shows you how to use Higgsfield AI, from your first AI image to a finished 4K video, without wasting credits.\n✅ Higgsfield (Best Deal): https://meticsmedia.com/higgsfield-TBR\n\nIn this Higgsfield AI tutorial for beginners, you'll learn how to use Higgsfield AI from your very first AI image all the way to a finished 4K video. We start by choosing the right plan and taking a quick tour, so you know where everything is. Then you'll create and edit AI images, turn them into AI videos with models like Seedance and Kling, and use Elements to keep your characters and products consistent in every shot. You'll also see how to build a multi-shot video, when Cin"
@@ -421,18 +412,18 @@
   {
    "channel": "Matt Wolfe",
    "title": "How To Build An AI Operating System For Your Life",
-   "views": 112594,
+   "views": 115799,
    "date": "2026-11-11",
    "url": "https://youtu.be/pvl3z_GyU2Y",
    "desc": "What if you could use AI agents to manage your emails, organize your schedule, create content, and help run your entire business?\n\nI sat down with Peter Yang to explore the personal AI system he uses to run his one-person business. He walks me through his AI chief of staff, a personal advisor that keeps him focused on his goals, and the automated workflows he uses for podcast research, video editing, content creation, and everyday tasks.\n\nWe dive into how he connects ChatGPT, Claude Code, and GroqBot using reusable AI skills, how he keeps those skills improving over time, and how you can build your own versions of these workflows. I also walk through setting up a few of these automations mys"
   },
   {
-   "channel": "Jeff Su",
-   "title": "I knew AI + Notion would be good, but this... wow.",
-   "views": 111221,
-   "date": "2026-10-27",
-   "url": "https://youtu.be/ofzHbyxkpVg",
-   "desc": "Grab my free Cowork Toolkit: https://coworkacademy.ai/toolkit?utm_source=youtube&utm_medium=video&utm_campaign=v213\n\nIf your #AI keeps creating Notion pages you have to fix, it needs to learn how YOU work. In this video, I’ll show you how to teach Claude and #ChatGPT your database, template, and formatting preferences so they can handle the tedious work for you.\n\nYou’ll start with tasks and notes, save your preferences in a reusable Notion Conventions file, and see how the same process scales to entire projects with linked tasks and deliverables. It works with Claude, ChatGPT, or Gemini, so you can keep the Notion setup you already use.\n\n*TIMESTAMPS*\n00:00 Manage Your ENTIRE Notion Setup wit"
+   "channel": "Matt Wolfe",
+   "title": "OpenAI GPT-6.2 Astra is Here - It's Not What You Think",
+   "views": 114457,
+   "date": "2026-11-18",
+   "url": "https://youtu.be/JVHkb8PTMvc",
+   "desc": "Sharing the latest news and advancements in AI - 🛠️ Explore AI Tools & News: https://futuretools.io/\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\nLet’s work together!\n- Brand, sponsorship & business inquiries: business@mattwolfe.com\n\n#AINews #AITools #ArtificialIntelligence"
   }
  ],
  "_bank": [
@@ -532,19 +523,20 @@
    "url": "https://youtu.be/eBszYxzE2dk"
   },
   {
-   "channel": "Nate Herk | AI Automation",
-   "title": "Every Claude 2.0 Concept Explained for Normal People",
-   "views": 215939,
-   "date": "2026-10-30",
-   "url": "https://youtu.be/tcb5q_6jwvY"
-  },
-  {
    "channel": "Kevin Stratvert",
    "title": "How to Use Ollama (Free Local AI)",
-   "views": 213161,
+   "views": 225110,
    "date": "2026-11-05",
    "url": "https://youtu.be/btMoPRHz8eM",
    "desc": "Learn how to install and use Ollama on Windows to run AI models locally for free. In this beginner tutorial, we'll set up Ollama without an account, choose a local model, chat with AI, ask follow-up questions, and analyze a PDF on your computer. Then we'll connect Ollama to OpenCode and build a website with AI that creates files directly on your PC. Once you've downloaded a local model, you can use it offline. Cloud models are optional and work differently; this tutorial focuses on local AI.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Ollama: https://ollama.com/\n- Download Ollama for Windows: https://ollama.com/download/windows\n- OpenCode: https://opencode.ai/\n- Download OpenCode: https://opencode"
+  },
+  {
+   "channel": "Dan Kieft",
+   "title": "Claude + Blender Is The Best Way To Make AI Videos (Full Course)",
+   "views": 220338,
+   "date": "2026-11-16",
+   "url": "https://youtu.be/OO6J2w_FBnE",
+   "desc": "Claude + Blender Is The Best Way To Make AI Videos (Full Course)\nBlack Friday Deal on the MCP You Need 👉 http://dankieft.com/higgsfield\n\nUsing Blender together with Claude is one of the best ways to create AI video references that you can use inside of Seedance 2.5. It allows you to have full control over the camera movement, the characters and the location. That's why you need to understand how to use it. In this full in depth tutorial I show you all the tips and tricks I know to make good AI videos with Blender \n\n\nAll prompts\nhttps://claude-and-blender.vercel.app/\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquir"
   }
  ]
 }
