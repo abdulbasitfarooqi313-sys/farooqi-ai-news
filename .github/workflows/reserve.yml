@@ -83,8 +83,8 @@ jobs:
           git commit -m "رات کا ریزرو کام"
           for i in 1 2 3; do git pull --rebase --autostash -X theirs && git push && exit 0; sleep 10; done; echo "push ناکام"; exit 1
 
-      - name: Alert on failure
-        if: failure()
+      - name: Alert on failure   # مقررہ رن کی ناکامی نگران (watchdog) وجہ سمیت بتاتا ہے — یہاں دوہرا پیغام نہیں
+        if: failure() && github.event_name != 'schedule'
         env:
           TOKEN: ${{ secrets.NEWS_BOT_TOKEN || secrets.TELEGRAM_BOT_TOKEN }}
           CHAT_SECRET: ${{ secrets.TELEGRAM_CHAT_ID }}

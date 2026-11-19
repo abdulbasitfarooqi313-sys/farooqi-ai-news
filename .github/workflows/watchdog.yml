@@ -17,6 +17,7 @@ jobs:
       - name: Check + retry
         env:
           GH_TOKEN: ${{ github.token }}
+          ENGINEER_GH: ${{ secrets.GEMINI_CHAT_GH }}   # کوڈ کی خرابی → جیمنائی انجینئر Issue (نجی engine ریپو)
           TS_TOKEN: ${{ secrets.TS_TOKEN }}
           NAWA_TOKEN: ${{ secrets.NAWA_TOKEN }}
           NEWS_BOT_TOKEN: ${{ secrets.NEWS_BOT_TOKEN }}

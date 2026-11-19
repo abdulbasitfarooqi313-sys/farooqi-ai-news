@@ -9,6 +9,7 @@ import datetime as dt
 import json
 import os
 import pathlib
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -81,6 +82,80 @@ def ts_made_today() -> bool:
         return True                                  # معلوم نہ ہو سکے تو احتیاط: دوبارہ نہ بناؤ
 
 
+REASONS = [  # (لاگ میں کیا ملا، اردو وجہ، دوبارہ کوشش سے ٹھیک ہونے کا امکان؟)
+    (("exceeded your current quota", "RESOURCE_EXHAUSTED", " 429"), "جیمنائی کا آج کا کوٹا ختم", False),
+    (("503", "UNAVAILABLE", "overloaded", "high demand"), "جیمنائی/گوگل اس وقت مصروف تھا", True),
+    (("Read timed out", "ReadTimeout", "timed out", "TimeoutError"), "کسی سرور نے وقت پر جواب نہیں دیا", True),
+    (("invalid_grant", "Token has been expired", "token expired", "Bad credentials", "OAuthException"), "کسی چابی کی میعاد ختم — نئی لگانی ہو گی", False),
+    (("No space left on device",), "رنر کی ڈسک بھر گئی", True),
+    (("quotaExceeded", "uploadLimitExceeded"), "یوٹیوب کا روزانہ کوٹا/اپلوڈ حد ختم", False),
+    (("ConnectionError", "Connection reset", "Max retries exceeded", "502 Bad Gateway"), "نیٹ ورک کا عارضی مسئلہ", True),
+]
+
+
+class _NoRedir(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *a, **k):
+        return None
+
+
+def joblog(repo: str, job: int, tok: str) -> str:
+    """لاگ کا لنک (302) خود کھولو — بلاب پر GitHub کی چابی نہ بھیجی جائے"""
+    req = urllib.request.Request(f"https://api.github.com/repos/{repo}/actions/jobs/{job}/logs",
+                                 headers={"Authorization": f"Bearer {tok}", "X-GitHub-Api-Version": "2022-11-28"})
+    try:
+        with urllib.request.build_opener(_NoRedir).open(req, timeout=40) as r:
+            return r.read().decode("utf-8", "replace")
+    except urllib.error.HTTPError as e:
+        if e.code not in (301, 302, 303, 307) or not e.headers.get("Location"):
+            raise
+        with urllib.request.urlopen(e.headers["Location"], timeout=60) as r:
+            return r.read().decode("utf-8", "replace")
+
+
+def why(repo: str, run: dict, tok: str) -> tuple[str, str, bool]:
+    """ناکام رن کے لاگ سے اردو وجہ: (وجہ، لاگ کا آخری حصہ، کوڈ کی خرابی؟)"""
+    try:
+        jobs = api(f"repos/{repo}/actions/runs/{run['id']}/jobs", tok).get("jobs", [])
+        j = next((x for x in jobs if x.get("conclusion") in ("failure", "timed_out")), None)
+        if not j:
+            return "وجہ معلوم نہ ہو سکی", "", False
+        if j.get("conclusion") == "timed_out":
+            return "کام مقررہ وقت سے زیادہ چلا (ٹائم آؤٹ)", "", False
+        log = joblog(repo, j["id"], tok)
+    except Exception as e:
+        return f"لاگ نہ پڑھ سکا ({type(e).__name__})", "", False
+    lines = [l.split("Z ", 1)[-1] for l in log.splitlines()]
+    tail = "\n".join(lines[-80:])
+    for keys, text, _ in REASONS:
+        if any(k in tail for k in keys):
+            return text, tail, False
+    err = [l for l in lines if l.strip() and ("Error" in l or "Exception" in l) and "##[error]Process completed" not in l]
+    if any("Traceback" in l for l in lines):
+        return "کوڈ کی خرابی: " + (err[-1].strip()[:140] if err else "Traceback"), tail, True
+    return "وجہ واضح نہیں" + (f": {err[-1].strip()[:120]}" if err else ""), tail, False
+
+
+def engineer(name: str, run: dict, reason: str, tail: str, st: dict) -> str:
+    """کوڈ کی خرابی → جیمنائی انجینئر کو Issue (حل Pull Request بنے، ✅/❌ ٹیلیگرام پر)۔ دن میں زیادہ سے زیادہ 2۔"""
+    tok = os.environ.get("ENGINEER_GH", "").strip()
+    day = dt.datetime.now(RIYADH).strftime("%Y-%m-%d")
+    q = st.setdefault("_engineer", {})
+    if not tok or q.get(day, 0) >= 2:
+        return ""
+    body = (f"🔧 نگران نے خود بھیجا: «{name}» ناکام ہوا۔\n\nوجہ: {reason}\nرن: {run['html_url']}\n\n"
+            f"لاگ کا آخری حصہ:\n```\n{tail[-6000:]}\n```\n\n"
+            "براہِ کرم وجہ تلاش کریں اور کم سے کم تبدیلی سے ٹھیک کریں (AGENTS.md کے اصول)۔ صرف وہی بدلیں جو اس خرابی کے لیے ضروری ہو۔\n\n"
+            "<!-- tg chat=OWNER msg=0 files= -->")
+    try:
+        i = api("repos/abdulbasitfarooqi313-sys/farooqi-ai-news-engine/issues", tok,
+                {"title": f"خودکار: «{name}» کی خرابی", "body": body, "labels": ["gemini"]})
+        q[day] = q.get(day, 0) + 1
+        return i.get("html_url", "")
+    except Exception as e:
+        print("engineer issue:", type(e).__name__, getattr(e, "code", ""))
+        return ""
+
+
 def hhmm(t: dt.datetime) -> str:
     return t.astimezone(RIYADH).strftime("%I:%M %p").lstrip("0").replace("AM", "صبح").replace("PM", "شام/رات")
 
@@ -102,7 +177,15 @@ def main() -> None:
         except Exception as e:
             print(f"- {name}: دیکھ نہ سکا ({type(e).__name__} {getattr(e, 'code', '')})")
             continue
-        done = [r for r in runs if r["status"] == "completed" and r["conclusion"] in ("success", "failure", "timed_out")]
+        mine = (st.get(key) or {}).get("last")                  # ہماری اپنی دوبارہ کوشش (workflow_dispatch) کا وقت
+        def ours(r: dict) -> bool:                             # ہاتھ سے چلائے نمونے/جانچ (19 نومبر: ٹیک نمونہ) نگرانی میں نہیں
+            if r.get("event") != "workflow_dispatch":
+                return True
+            if not mine:
+                return False
+            c = dt.datetime.fromisoformat(r["created_at"].replace("Z", "+00:00"))
+            return abs((c - dt.datetime.fromisoformat(mine)).total_seconds()) < 300
+        done = [r for r in runs if r["status"] == "completed" and r["conclusion"] in ("success", "failure", "timed_out") and ours(r)]
         if not done or done[0]["conclusion"] == "success":
             if (st.pop(key, None) or {}).get("n", 0) > 0 and done:
                 tell(f"✅ «{name}» دوبارہ کوشش پر ٹھیک چل گیا۔")
@@ -130,7 +213,12 @@ def main() -> None:
         if now < due:
             if s.get("told") != last["id"]:
                 s["told"] = last["id"]
-                tell(f"⚠️ «{name}» ناکام ہوا۔ 🔁 تقریباً {hhmm(due)} (سعودی) پر خود دوبارہ کوشش ہو گی ({n + 1}/{len(DELAYS)}) — آپ کو کچھ نہیں کرنا۔")
+                reason, tail, code = why(repo, last, TOK[tk])
+                st[key] = s
+                fix = engineer(name, last, reason, tail, st) if code and n == 0 else ""
+                tell(f"⚠️ «{name}» ناکام ہوا۔\nوجہ: {reason}\n🔁 تقریباً {hhmm(due)} (سعودی) پر خود دوبارہ کوشش ہو گی ({n + 1}/{len(DELAYS)})"
+                     + (" — مگر کوٹا ختم ہو تو شاید کل ہی چلے" if "کوٹا" in reason else "") + "۔ آپ کو کچھ نہیں کرنا۔"
+                     + (f"\n🤖 کوڈ کی خرابی جیمنائی انجینئر کو دے دی — حل بنے گا تو «Farooqi Gemini» پر ✅/❌ آئے گا۔" if fix else ""))
             st[key] = s
             continue
         if repo == TS or target == "toolscape-video.yml":

@@ -72,8 +72,8 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -q -m "تدبر قرآن: باب کی ویڈیو (پبلک رنر)"
           for i in 1 2 3; do git pull -q --rebase --autostash -X theirs && git push -q && exit 0; sleep 10; done
-      - name: Alert on failure
-        if: failure()
+      - name: Alert on failure   # مقررہ رن کی ناکامی نگران (watchdog) وجہ سمیت بتاتا ہے — یہاں دوہرا پیغام نہیں
+        if: failure() && github.event_name != 'schedule'
         env:
           TOKEN: ${{ secrets.NAWA_TELEGRAM_BOT_TOKEN }}
           CHAT: ${{ secrets.NAWA_TELEGRAM_CHAT_ID }}
