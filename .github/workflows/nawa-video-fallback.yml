@@ -15,7 +15,7 @@ on:
     - cron: "45 10 * * 0-6"
   workflow_dispatch:
     inputs:
-      job: { description: "media | long", required: true, default: "media" }
+      job: { description: "media | long | shorts (باقی شارٹس)", required: true, default: "media" }
       force: { description: "جانچ کے بغیر چلاؤ", type: boolean, default: false }
 permissions:
   contents: read
@@ -94,7 +94,7 @@ jobs:
           YOUTUBE_CLIENT_ID: ${{ secrets.NAWA_YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.NAWA_YOUTUBE_CLIENT_SECRET }}
         run: |
-          if [ "$JOB" = long ]; then python -u -m nawa.long_video; else
+          if [ "$JOB" = shorts ]; then python -u -m nawa.shorts_only; elif [ "$JOB" = long ]; then python -u -m nawa.long_video; else
             python -u -m nawa.media; python -u -m nawa.yt_queue || echo "::warning::yt_queue ناکام"; fi
       - name: Save (private repo)
         if: always() && steps.need.outputs.run == '1' && hashFiles('nawa-repo/.git/HEAD') != ''
