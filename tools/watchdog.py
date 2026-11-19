@@ -121,6 +121,14 @@ def why(repo: str, run: dict, tok: str) -> tuple[str, str, bool]:
             return "وجہ معلوم نہ ہو سکی", "", False
         if j.get("conclusion") == "timed_out":
             return "کام مقررہ وقت سے زیادہ چلا (ٹائم آؤٹ)", "", False
+        if not j.get("runner_name"):                     # کام شروع ہی نہیں ہوا (19 نومبر: نوا کے نجی منٹ ختم)
+            try:
+                ann = " ".join(x.get("message", "") for x in api(j["check_run_url"].split("api.github.com/", 1)[1] + "/annotations", tok))
+            except Exception:
+                ann = ""
+            if "spending limit" in ann or "payments" in ann or "minutes" in ann:
+                return "نجی ریپو کے مفت GitHub منٹ اس مہینے ختم — کام متبادل (پبلک) رنر پر ہوتا ہے", "", False
+            return "کام شروع ہی نہیں ہوا: " + (ann[:140] or "وجہ نامعلوم"), "", False
         log = joblog(repo, j["id"], tok)
     except Exception as e:
         return f"لاگ نہ پڑھ سکا ({type(e).__name__})", "", False
