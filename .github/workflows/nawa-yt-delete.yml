@@ -1,0 +1,30 @@
+# 🗑 نوائے فاروقی: مالک کی تصدیق شدہ ایک ویڈیو یوٹیوب سے ہٹانا (لامحدود رنر) — صرف Private/شیڈول؛ Public کو نہیں چھیڑتا
+name: Nawa YT delete
+run-name: "Nawa YT delete ${{ github.event.inputs.vid }}"
+on:
+  workflow_dispatch:
+    inputs:
+      vid: { description: "یوٹیوب ویڈیو آئی ڈی", required: true }
+permissions:
+  contents: read
+jobs:
+  del:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Nawa code
+        env: { NAWA_TOKEN: "${{ secrets.NAWA_TOKEN }}" }
+        run: git clone -q --depth 1 "https://x-access-token:${NAWA_TOKEN}@github.com/nawaefarooqi-bit/nawaefarooqi-agents" nawa-repo
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: cd nawa-repo && pip install -q requests
+      - name: Delete
+        working-directory: nawa-repo
+        env:
+          VID: ${{ github.event.inputs.vid }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.NAWA_TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.NAWA_TELEGRAM_CHAT_ID }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.NAWA_YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.NAWA_YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.NAWA_YOUTUBE_CLIENT_SECRET }}
+        run: python -u -m nawa.yt_delete "$VID"
