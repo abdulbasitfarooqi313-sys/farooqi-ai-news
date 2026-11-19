@@ -17,7 +17,7 @@ jobs:
         run: git clone -q --depth 1 "https://x-access-token:${NAWA_TOKEN}@github.com/nawaefarooqi-bit/nawaefarooqi-agents" nawa-repo
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - run: cd nawa-repo && pip install -q requests
+      - run: cd nawa-repo && pip install -q -r requirements.txt
       - name: Delete
         working-directory: nawa-repo
         env:
