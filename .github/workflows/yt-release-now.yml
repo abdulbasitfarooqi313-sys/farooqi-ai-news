@@ -1,0 +1,33 @@
+# ▶️ منظور شدہ یوٹیوب ویڈیو کو (مالک کے کہنے پر) ابھی پبلک کرنا — صرف ہاتھ سے چلتی ہے
+name: YouTube release now
+run-name: "YT release ${{ github.event.inputs.vid }}"
+on:
+  workflow_dispatch:
+    inputs:
+      vid: { description: "یوٹیوب ویڈیو آئی ڈی", required: true }
+permissions:
+  contents: read
+jobs:
+  go:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Engine (private code)
+        env: { ENGINE_TOKEN: "${{ secrets.ENGINE_TOKEN }}" }
+        run: git clone -q --depth 1 "https://x-access-token:${ENGINE_TOKEN}@github.com/abdulbasitfarooqi313-sys/farooqi-ai-news-engine" engine
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: cd engine && pip install -q requests
+      - name: Release
+        working-directory: engine
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          VID: ${{ github.event.inputs.vid }}
+        run: |
+          python - <<'PY'
+          import os, datetime as dt
+          from news import youtube as yt
+          print("mode:", yt.release(os.environ["VID"], dt.datetime.now(dt.timezone.utc)))
+          PY
