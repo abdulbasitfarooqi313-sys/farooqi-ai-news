@@ -1,338 +1,352 @@
 {
- "summary": "Today's desk focuses heavily on new local AI tools like HeyGen Avatar 6 and workflow helpers like Tabstack by Mozilla that beginners can test for free. Competitor channels are dominating with step-by-step tutorials on Claude workflows and local AI execution, which we can adapt with our simpler, beginner-friendly angle.",
+ "summary": "Local AI setups and video AI controls are dominating creator discussions this week, driven by massive view counts on free offline tools and major platform updates. Channels that provide step-by-step screen navigation without coding will capture rising search traffic from privacy-conscious beginners.",
  "topics": [
   {
-   "title": "HeyGen Avatar 6",
-   "why": "New avatar generation capabilities released on Product Hunt are attracting massive beginner interest for video content creation.",
+   "title": "Free Local AI Setup with Ollama",
+   "why": "Competitor tutorials on running AI models locally offline for free are pulling over 200,000 views this month.",
    "trend": 10,
    "sources": [
-    "producthunt.com"
+    "Kevin Stratvert",
+    "Matt Wolfe"
    ]
   },
   {
-   "title": "Tabstack by Mozilla",
-   "why": "Mozilla's new browsing and tab management AI tool is trending for productivity-focused beginners.",
+   "title": "Canva AI Controls and Settings",
+   "why": "Canva recently launched new controls allowing users to customize or turn off AI features across design workflows.",
    "trend": 9,
    "sources": [
-    "producthunt.com"
+    "CNET",
+    "news.google.com"
    ]
   },
   {
-   "title": "Apple Creator Studio AI Upgrade",
-   "why": "Major new tool updates rolled out for creators in the Apple ecosystem, driving heavy search interest.",
+   "title": "Instagram AI Video & Repost Protection",
+   "why": "Instagram introduced new tools designed to protect creators from unauthorized reposts and unlabeled AI video edits.",
    "trend": 8,
    "sources": [
+    "TechCrunch",
     "news.google.com"
    ]
   },
   {
-   "title": "Google AdMob AI Tools",
-   "why": "Google introducing automated monetization and ad management tools for publishers and beginners.",
+   "title": "Claude 3D Animation Integration",
+   "why": "Tutorials combining Claude with free animation software are generating high interest among video creators.",
    "trend": 7,
    "sources": [
-    "news.google.com"
+    "Dan Kieft",
+    "Futurepedia"
    ]
   },
   {
-   "title": "Google Buys AI Scheduling Tool Howie",
-   "why": "Major acquisition in the AI agent space impacting calendar and daily scheduling workflows.",
+   "title": "Google AI Studio Free Voice Generator",
+   "why": "Beginners are actively seeking simple text-to-speech workflows using free browser-based tools.",
    "trend": 6,
    "sources": [
-    "news.google.com"
+    "Kevin Stratvert"
    ]
   },
   {
-   "title": "Play That Back",
-   "why": "New audio playback and recap tool gaining traction on Product Hunt for daily productivity.",
+   "title": "Building Practical AI Approval Workflows",
+   "why": "Small businesses need clear structures to review AI-generated content before publishing.",
    "trend": 5,
    "sources": [
-    "producthunt.com"
+    "IT Brew",
+    "news.google.com"
    ]
   },
   {
-   "title": "Snapchat AI Tools for Brands and Creators",
-   "why": "Expansion of platform-specific creation tools making it easier to generate custom visual content.",
+   "title": "Avoiding Holiday AI Shopping Scams",
+   "why": "Increased reports of fake storefronts and AI phishing target online shoppers ahead of the holidays.",
    "trend": 4,
    "sources": [
-    "news.google.com"
+    "WIRED",
+    "KMTV 3 News"
    ]
   },
   {
-   "title": "Instagram Unauthorized Reposts Tool",
-   "why": "New creator protections target unauthorized video edits and AI-modified reposts.",
+   "title": "Higgsfield AI Video Generator Guide",
+   "why": "New video generation platforms are gaining steady traction among beginners testing cinematic clips.",
    "trend": 3,
    "sources": [
+    "Metics Media"
+   ]
+  },
+  {
+   "title": "Pinterest AI Shopping Tools",
+   "why": "Pinterest unveiled automated product tags and visual search updates for holiday merchants.",
+   "trend": 2,
+   "sources": [
+    "Chain Store Age",
     "news.google.com"
    ]
   },
   {
-   "title": "Spellar for Chrome",
-   "why": "Browser-based speech and note helper featured on Product Hunt for meeting transcription.",
-   "trend": 2,
-   "sources": [
-    "producthunt.com"
-   ]
-  },
-  {
-   "title": "Stripo Email Widgets",
-   "why": "New email template widgets launched to simplify newsletter design for beginners.",
+   "title": "Snapchat Creator AI Features",
+   "why": "Snapchat added lightweight creative AI features targeted at independent digital creators.",
    "trend": 1,
    "sources": [
-    "producthunt.com"
+    "PYMNTS.com",
+    "news.google.com"
    ]
   }
  ],
  "packages": [
   {
-   "topic": "HeyGen Avatar 6",
-   "competitors": "Competitors like Dan Kieft and Futurepedia covered complex AI video pipelines using multiple paid tools like Fable 5.2 and Seedance 2.5, missing a simple free-tier walkthrough for casual creators.",
-   "angle": "We show how to set up and generate your first video using HeyGen Avatar 6's free plan step by step without any paid software.",
+   "topic": "Free Local AI Setup with Ollama",
+   "competitors": "Kevin Stratvert showed terminal commands for setting up Ollama, but skipped basic visual UI installation for non-coders.",
+   "angle": "A click-by-click beginner guide showing how to run Ollama with a simple graphic interface without touching code.",
    "viral": {
     "score": 68,
-    "why": "High demand for AI video tools right now, and beginners actively look for clear tutorials on the newest avatar releases."
+    "why": "Offline local AI content consistently pulls 180k-240k views, and non-coders actively look for accessible setup steps."
    },
    "long": {
-    "title": "How to Use HeyGen Avatar 6 (Free Beginner Guide)",
-    "thumb": "HeyGen Avatar 6 Free",
-    "hook": "In the next 7 minutes you will create your first talking AI avatar using HeyGen Avatar 6 without paying a cent. Let's look at the free plan limitations and how to set it up.",
+    "title": "Run Free AI Offline on Your Computer: Ollama Beginner Guide",
+    "thumb": "Run AI Offline Free",
+    "hook": "In the next 6 minutes, you will install and run a completely free AI model directly on your computer that works offline. You do not need any coding skills or monthly subscriptions.",
     "outline": [
-     "What is HeyGen Avatar 6 and what you get on the free plan",
-     "Step 1: Setting up your free account",
-     "Step 2: Choosing and customizing your avatar",
-     "Step 3: Typing your script and adjusting voice settings",
-     "Step 4: Generating and downloading your first video",
-     "One real downside: Free watermark and generation limits",
-     "Summary and what to watch next"
+     "Downloading the official Ollama installer for Windows and Mac",
+     "Selecting lightweight models designed for standard laptop hardware",
+     "Installing Page Assist for a clean browser-based chat window",
+     "Testing your offline setup with simple summary tasks",
+     "Troubleshooting memory usage and response speed",
+     "Comparing local AI privacy against subscription web apps"
     ]
    },
    "shorts": [
     {
-     "title": "Make Your First AI Avatar Free",
-     "hook": "Stop paying for video software when HeyGen Avatar 6 has a free tier.",
-     "script": "Go to the HeyGen website and sign up for the free plan. Choose your avatar template from the library. Type your script into the text box and pick a voice. Click generate, wait two minutes, and download your finished video. Watch the full tutorial for the exact steps.",
-     "cta": "Subscribe for more free tool guides."
+     "title": "Run AI Without Internet for Free",
+     "hook": "Here is how to run a powerful AI assistant offline without paying a subscription.",
+     "script": "First, go to ollama.com and download the desktop app for your computer. Next, download Page Assist from the Chrome Web Store to get a friendly chat screen. Open the app, select the lightweight Llama model, and press enter. Now you can write notes and draft text even when your Wi-Fi is disconnected.",
+     "cta": "Subscribe to Toolscape for clear AI tutorials."
     },
     {
-     "title": "HeyGen Avatar 6 Quick Test",
-     "hook": "Here is how to test HeyGen Avatar 6 in under 60 seconds.",
-     "script": "Open HeyGen on your browser. Select Avatar 6 from the new model options. Paste a short two-sentence intro for your channel. Hit submit and watch the facial tracking in real time. Remember, the free tier includes a small watermark.",
-     "cta": "Check our channel for the full walkthrough."
+     "title": "Stop Paying $20/Mo for AI",
+     "hook": "You can run private AI models directly on your hardware without software fees.",
+     "script": "Most people do not realize standard laptops can run offline language models for basic writing tasks. By installing Ollama and a simple interface extension, your data stays completely local on your machine. No accounts, no data tracking, and zero monthly fees.",
+     "cta": "Check the full setup guide on our channel."
     }
    ],
    "carousel": {
-    "title": "How to Use HeyGen Avatar 6 for Free",
+    "title": "How to Run AI Offline for Free",
     "slides": [
-     "Step 1: Create a free account on HeyGen",
-     "Step 2: Select Avatar 6 from the model list",
-     "Step 3: Type or paste your script text",
-     "Step 4: Choose your voice and language",
-     "Step 5: Generate and download your video",
-     "Note: Free plan includes a standard watermark"
+     "Step 1: Download Ollama from the official website.",
+     "Step 2: Install the free desktop app on Windows or Mac.",
+     "Step 3: Add the Page Assist extension to your web browser.",
+     "Step 4: Pick a small 3B or 7B model for standard laptops.",
+     "Step 5: Turn off Wi-Fi and test your local chat screen.",
+     "Summary: Private AI running locally with zero subscription cost."
     ]
    },
    "posts": {
     "x": [
-     "Just tested HeyGen Avatar 6 on the free plan. Here is a simple step-by-step walkthrough to make your first talking video in under 10 minutes: [Link]",
-     "Want to try HeyGen Avatar 6 without paying for a subscription? Here is what you get on the free tier and how to start: [Link]"
+     "Want private AI without a $20 monthly bill? Here is how to install Ollama and run free offline models on your laptop in 6 minutes.",
+     "Running local AI does not require complex coding. Use Ollama + Page Assist for a clean, private desktop setup."
     ],
-    "facebook": "We tested the new HeyGen Avatar 6 free tier. If you want to create simple talking avatar videos without expensive software, watch our step-by-step guide for beginners. Let us know what you think in the comments!",
-    "instagram": "Testing out HeyGen Avatar 6! 🎥 Watch our new beginner guide to see how to make your first free talking avatar video step by step. Link in bio! #HeyGen #AITools #ContentCreation",
-    "linkedin": "AI video tools keep evolving. We tested the new HeyGen Avatar 6 free tier to see how easy it is for beginners to build professional avatars without a budget. Watch the full tutorial: [Link]"
+    "facebook": "Learn how to install and run free offline AI models on your own computer step-by-step. Keep your data private with zero monthly subscription fees.",
+    "instagram": "Run AI offline on your laptop for free. Complete step-by-step setup guide for beginners. #AI #Ollama #TechTutorial #FreeTools #Productivity",
+    "linkedin": "A step-by-step guide to installing local offline AI models using Ollama. Learn how small teams can manage private tasks without ongoing API expenses."
    },
    "article": {
-    "title": "HeyGen Avatar 6 Tutorial: How Beginners Can Make Free Videos",
+    "title": "How to Install and Run Free Local AI with Ollama",
     "outline": [
-     "Introduction to HeyGen Avatar 6",
-     "What is Included in the Free Plan",
-     "Step-by-Step Setup Guide",
-     "Best Practices for Realistic Results",
-     "Limitations to Keep in Mind",
-     "Conclusion"
+     "Why local offline AI matters for data privacy",
+     "Hardware requirements for smooth performance",
+     "Step-by-step Ollama installation on Windows and Mac",
+     "Connecting a user-friendly browser interface",
+     "Best lightweight models for daily workflow tasks"
     ]
    }
   },
   {
-   "topic": "Tabstack by Mozilla",
-   "competitors": "Competitors like Jeff Su and Matt Wolfe focused heavily on complex AI operating systems and paid note apps, ignoring standalone browser assistants for everyday users.",
-   "angle": "We test Tabstack by Mozilla as a free, privacy-first way to organize messy browser tabs without extra software.",
+   "topic": "Canva AI Controls and Settings",
+   "competitors": "CNET covered Canva's tool updates at a news level, but missed a direct walkthrough of how users adjust settings in their design editor.",
+   "angle": "A visual navigation tutorial showing how to customize workspace settings and disable unwanted automated AI suggestions.",
    "viral": {
     "score": 52,
-    "why": "Tab management is a universal pain point, and Mozilla's brand trust gives this tool immediate credibility."
+    "why": "Canva has a massive user base searching for practical editor control tricks, though administrative settings carry steady rather than explosive reach."
    },
    "long": {
-    "title": "How to Use Tabstack by Mozilla (Free Tab Organizer)",
-    "thumb": "Organize Tabs with AI",
-    "hook": "In the next 6 minutes you will clean up dozens of open browser tabs using Tabstack by Mozilla for free. Let's look at how it works.",
+    "title": "How to Control Canva AI Features: Step-by-Step Settings Guide",
+    "thumb": "Control Canva AI",
+    "hook": "In under five minutes, you will learn how to customize Canva's new AI controls so your design workspace stays clutter-free. We will navigate the exact settings menu together on screen.",
     "outline": [
-     "What is Tabstack by Mozilla and why use it",
-     "Step 1: Installing the extension on your browser",
-     "Step 2: Grouping and sorting messy tabs automatically",
-     "Step 3: Searching your history with AI prompts",
-     "One real downside: Privacy considerations with session data",
-     "Summary and next steps"
+     "Finding the updated account and project settings menu",
+     "Disabling automatic magic design recommendations",
+     "Managing permissions for automated background cleanup",
+     "Configuring default data preferences for team assets",
+     "Keeping your canvas running fast on older computers"
     ]
    },
    "shorts": [
     {
-     "title": "Stop Drowning in Open Browser Tabs",
-     "hook": "Have 50 tabs open right now? Here is how to fix it for free.",
-     "script": "Install Tabstack by Mozilla on your browser. Click the extension icon to view all your open windows in one clean sidebar. Let the AI group your research, shopping, and work tabs automatically. Click any group to collapse them instantly.",
-     "cta": "Subscribe for more simple productivity tips."
+     "title": "Clean Up Your Canva Workspace",
+     "hook": "Tired of AI prompts cluttering your Canva canvas? Turn them off in 30 seconds.",
+     "script": "Click your profile icon in the top right corner and open Account Settings. Scroll down to Privacy and Preferences. Toggle off automated magic suggestions and real-time layout recommendations. Now your design editor loads faster with clean manual controls.",
+     "cta": "Follow Toolscape for quick tech tips."
     },
     {
-     "title": "Mozilla's New Tab Organizer",
-     "hook": "Try this free browser tool to organize your research instantly.",
-     "script": "Open your browser and add Tabstack by Mozilla. It takes your open tabs and sorts them by topic without manual folder creation. Type a keyword in the search bar to find that exact article from three days ago.",
-     "cta": "Watch our full video for the setup guide."
+     "title": "Canva Settings You Should Change",
+     "hook": "Here is how to stop Canva from auto-editing your uploaded project graphics.",
+     "script": "Open your design preferences menu and check your asset editing toggles. Disabling automatic layout shifts keeps your text alignment exact. It takes less than a minute and prevents frustrating layout changes while editing templates.",
+     "cta": "Watch our full tutorial for more details."
     }
    ],
    "carousel": {
-    "title": "Organize Tabs with Tabstack",
+    "title": "Master Canva AI Preferences",
     "slides": [
-     "Step 1: Add Tabstack by Mozilla to your browser",
-     "Step 2: Open your messy tab window",
-     "Step 3: Let the extension group tabs by topic",
-     "Step 4: Search past sessions instantly",
-     "Note: Requires active browser permissions"
+     "Step 1: Open Account Settings from your Canva avatar.",
+     "Step 2: Select Privacy and Design Preferences.",
+     "Step 3: Toggle off automated layout recommendations.",
+     "Step 4: Restrict auto-generated magic prompt popups.",
+     "Step 5: Save preferences to speed up your editor.",
+     "Result: A clean, fast design canvas tailored to your workflow."
     ]
    },
    "posts": {
     "x": [
-     "Drowning in open browser tabs? We tested Tabstack by Mozilla to see how well it organizes your workspace for free: [Link]",
-     "A simple way to clean up your research tabs without paying for a complex workspace app. Here is our Tabstack guide: [Link]"
+     "Is Canva feeling cluttered? Here is how to use Canva's new settings menu to turn off unwanted AI suggestions and speed up your editor.",
+     "Take control of your Canva workspace. Quickly adjust design preferences to keep your layout tools simple and fast."
     ],
-    "facebook": "If your browser always has 50+ tabs open, you will love this. We tested Tabstack by Mozilla to see how its free AI sorting features help you stay organized. Watch our step-by-step tutorial!",
-    "instagram": "Too many open tabs? 🖥️ We tested Tabstack by Mozilla to show beginners how to organize their browser in seconds. Link in bio! #Productivity #Mozilla #AITools",
-    "linkedin": "Browser clutter slows down daily work. We tested Tabstack by Mozilla to evaluate its free tab organization features for everyday users. Watch the full tutorial: [Link]"
+    "facebook": "Customize your Canva editor settings with this quick guide. Learn how to turn off automated prompts and keep your design workspace clean.",
+    "instagram": "How to customize your Canva AI settings step-by-step. #Canva #GraphicDesign #DesignTools #Productivity #TechTips",
+    "linkedin": "A clear guide on configuring Canva workspace preferences for creative teams who want control over layout automation."
    },
    "article": {
-    "title": "Tabstack by Mozilla Review: Free Browser Organization Guide",
+    "title": "How to Customize Canva AI Settings for a Cleaner Workspace",
     "outline": [
-     "Introduction to Tabstack by Mozilla",
-     "How to Install and Set Up",
-     "Key Features for Tab Management",
-     "One Major Downside to Consider",
-     "Conclusion"
+     "Overview of Canva's updated editor preferences",
+     "How to navigate directly to design controls",
+     "Disabling automated layout suggestions",
+     "Managing privacy settings for team workspaces",
+     "Optimization steps for smoother editing speed"
     ]
    }
   },
   {
-   "topic": "Apple Creator Studio AI Upgrade",
-   "competitors": "Competitors like Kevin Stratvert and Matt Wolfe covered general Apple AI updates, but missed a dedicated walkthrough for creators using the new Studio tools on standard hardware.",
-   "angle": "We break down the new Apple Creator Studio AI upgrades with a clear guide on what features are free for existing users.",
+   "topic": "Instagram AI Video & Repost Protection",
+   "competitors": "TechCrunch reported on Instagram's creator security features, but omitted concrete steps creators should take inside the mobile app.",
+   "angle": "A practical mobile walkthrough showing creators how to turn on account protections and identify unauthorized video reposts.",
    "viral": {
-    "score": 61,
-    "why": "Massive Apple audience base looking for practical tutorials on newly released creator features."
+    "score": 45,
+    "why": "Content protection is critical for video creators, though administrative security topics usually accumulate steady search traffic over time."
    },
    "long": {
-    "title": "Apple Creator Studio AI Upgrade: What's New for Beginners",
-    "thumb": "Apple Creator Studio AI",
-    "hook": "In the next 8 minutes you will learn how to use the new Apple Creator Studio AI features to speed up your editing workflow. Let's dive in.",
+    "title": "Protect Your Instagram Videos: New AI & Repost Settings Guide",
+    "thumb": "Protect Your Reels",
+    "hook": "In this video, you will learn how to activate Instagram's updated creator protection features to safeguard your original content. We will walk through every toggle inside the mobile app.",
     "outline": [
-     "Overview of the Apple Creator Studio AI update",
-     "Feature 1: Automated audio cleanup and enhancement",
-     "Feature 2: Smart timeline clipping and captioning",
-     "Feature 3: Managing assets with built-in assistant tools",
-     "One real downside: Hardware requirements and device limits",
-     "Summary and workflow recommendations"
+     "Locating creator security settings in the Instagram app",
+     "Enabling content reuse restrictions for original Reels",
+     "Understanding automatic labels on AI-modified clips",
+     "Reviewing unauthorized duplicate video notifications",
+     "Best settings to protect your personal brand assets"
     ]
    },
    "shorts": [
     {
-     "title": "Apple Creator Studio AI Upgrades",
-     "hook": "Apple just upgraded Creator Studio with powerful new AI tools.",
-     "script": "Open Apple Creator Studio on your updated device. Import your raw video file into the timeline. Click the new AI enhancement button to clean background audio automatically. Export your polished clip in half the usual time.",
-     "cta": "Subscribe for weekly AI tool tutorials."
+     "title": "Stop Unauthorized Reel Reposts",
+     "hook": "Protect your Instagram videos from being copied with this hidden toggle.",
+     "script": "Open Instagram settings and tap Account Privacy. Scroll to Content Reuse and toggle off Allow Remixes by Others. This prevents unauthorized accounts from downloading or re-uploading your video clips without attribution.",
+     "cta": "Subscribe for more creator tools."
     },
     {
-     "title": "Clean Audio with Apple AI Studio",
-     "hook": "Fix muddy microphone audio in one click using Apple Studio.",
-     "script": "Select your audio track inside the updated Apple Creator Studio. Toggle the new AI voice isolation setting on. Listen as background hums disappear instantly without manual EQ adjustments.",
-     "cta": "Watch our full guide for all new features."
+     "title": "Check Your Instagram Video Safety",
+     "hook": "Instagram just added new tools to flag unauthorized video edits.",
+     "script": "Head to your Creator Dashboard and select Content Protection. Here you can review flagged copies of your video uploads and request automatic removals. Setting this up today keeps your original content credit intact.",
+     "cta": "Full walkthrough available on Toolscape."
     }
    ],
    "carousel": {
-    "title": "Apple Creator Studio AI Guide",
+    "title": "Protect Your Instagram Content",
     "slides": [
-     "Step 1: Update to the latest Creator Studio version",
-     "Step 2: Import your audio or video file",
-     "Step 3: Enable AI voice isolation",
-     "Step 4: Use smart clipping for fast edits",
-     "Note: Compatible with supported Apple devices only"
+     "Step 1: Open Instagram and go to Creator Settings.",
+     "Step 2: Tap on Content Reuse and Permissions.",
+     "Step 3: Restrict unauthorized remixing on original Reels.",
+     "Step 4: Enable automatic attribution tags for shared clips.",
+     "Step 5: Monitor flagged duplicate uploads in your dashboard.",
+     "Result: Better protection for your video asset library."
     ]
    },
    "posts": {
     "x": [
-     "Apple Creator Studio just got a major AI upgrade. Here is a beginner's guide to the new features and how to use them: [Link]",
-     "Testing the new AI audio and video tools in Apple Creator Studio. Here is what works and what requires newer hardware: [Link]"
+     "Protect your video content on Instagram. Here is how to use Instagram's updated protection features to prevent unauthorized video reposts.",
+     "Keep ownership of your Reels. Simple settings update to restrict unauthorized editing and re-uploading of your videos."
     ],
-    "facebook": "Apple just rolled out new AI tools inside Creator Studio. We tested the audio cleanup and editing features so you can see how they work before updating. Watch our new video!",
-    "instagram": "Testing the new Apple Creator Studio AI upgrades! 📱 Watch our beginner breakdown to see how these tools improve your daily workflow. Link in bio! #Apple #VideoEditing #CreatorStudio",
-    "linkedin": "Apple's latest Creator Studio AI updates aim to simplify video and audio production for creators. We tested the new features to see how they perform in real use cases: [Link]"
+    "facebook": "Keep your Instagram content secure. Follow this step-by-step guide to adjust your account settings and block unauthorized video reposting.",
+    "instagram": "Protect your Reels from unauthorized reposts with these account settings updates. #InstagramTips #CreatorEconomy #SocialMedia #VideoProtection #Toolscape",
+    "linkedin": "A straightforward practical guide for video creators looking to configure Instagram's newest content protection and attribution controls."
    },
    "article": {
-    "title": "Apple Creator Studio AI Upgrades: Beginner Feature Guide",
+    "title": "How to Use Instagram's Content Protection Settings for Reels",
     "outline": [
-     "What Is Apple Creator Studio AI",
-     "Top New Features for Video Creators",
-     "How to Use Smart Audio Cleanup",
-     "Hardware Requirements and Limitations",
-     "Final Verdict"
+     "Understanding Instagram's content protection updates",
+     "How to navigate the app's creator privacy settings",
+     "Restricting unauthorized remixes and video downloads",
+     "Handling flagged duplicates in your creator dashboard",
+     "Recommended security practices for independent creators"
     ]
    }
   }
  ],
  "hook_patterns": [
   {
-   "pattern": "Result + time frame in the opening line",
-   "example": "In the next 7 minutes you will build a complete workflow without writing code."
+   "pattern": "How to Use [Tool Name] for FREE with [Complementary Tool]",
+   "example": "How to Use Ollama for FREE with WebUI"
   },
   {
-   "pattern": "Direct callout of a common daily pain point",
-   "example": "Still organizing your files and tabs by hand every single day?"
+   "pattern": "Build Your First [Project Type] in [Number] Minutes (No Coding)",
+   "example": "Build Your First AI Automation in 10 Minutes (No Coding)"
   },
   {
-   "pattern": "Highlighting a free alternative to paid subscriptions",
-   "example": "This free tool does what a $30 monthly app does, right inside your browser."
+   "pattern": "[Tool Name] + [Software] Is The Best Way To [Desired Outcome]",
+   "example": "Claude + Notion Is The Best Way To Organize Projects"
   },
   {
-   "pattern": "Addressing beginner mistakes directly",
-   "example": "Stop doing this one manual step when testing new AI tools."
+   "pattern": "[Number] Practical [Topic] Tips (in [Number] minutes)",
+   "example": "5 Practical Canva AI Tips (in 6 minutes)"
   },
   {
-   "pattern": "Focusing on speed and simplicity",
-   "example": "Here is how to set up your first AI agent in under five minutes."
+   "pattern": "How I [Task] with [Tool Name]",
+   "example": "How I Create Visual Content with Google AI Studio"
   }
  ],
  "_competitors": [
   {
-   "channel": "Kevin Stratvert",
-   "title": "How to Use Ollama (Free Local AI)",
-   "views": 225110,
-   "date": "2026-11-05",
-   "url": "https://youtu.be/btMoPRHz8eM",
-   "desc": "Learn how to install and use Ollama on Windows to run AI models locally for free. In this beginner tutorial, we'll set up Ollama without an account, choose a local model, chat with AI, ask follow-up questions, and analyze a PDF on your computer. Then we'll connect Ollama to OpenCode and build a website with AI that creates files directly on your PC. Once you've downloaded a local model, you can use it offline. Cloud models are optional and work differently; this tutorial focuses on local AI.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Ollama: https://ollama.com/\n- Download Ollama for Windows: https://ollama.com/download/windows\n- OpenCode: https://opencode.ai/\n- Download OpenCode: https://opencode"
-  },
-  {
    "channel": "Dan Kieft",
    "title": "Claude + Blender Is The Best Way To Make AI Videos (Full Course)",
-   "views": 220338,
+   "views": 260805,
    "date": "2026-11-16",
    "url": "https://youtu.be/OO6J2w_FBnE",
    "desc": "Claude + Blender Is The Best Way To Make AI Videos (Full Course)\nBlack Friday Deal on the MCP You Need 👉 http://dankieft.com/higgsfield\n\nUsing Blender together with Claude is one of the best ways to create AI video references that you can use inside of Seedance 2.5. It allows you to have full control over the camera movement, the characters and the location. That's why you need to understand how to use it. In this full in depth tutorial I show you all the tips and tricks I know to make good AI videos with Blender \n\n\nAll prompts\nhttps://claude-and-blender.vercel.app/\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquir"
   },
   {
+   "channel": "Kevin Stratvert",
+   "title": "How to Use Ollama (Free Local AI)",
+   "views": 239994,
+   "date": "2026-11-05",
+   "url": "https://youtu.be/btMoPRHz8eM",
+   "desc": "Learn how to install and use Ollama on Windows to run AI models locally for free. In this beginner tutorial, we'll set up Ollama without an account, choose a local model, chat with AI, ask follow-up questions, and analyze a PDF on your computer. Then we'll connect Ollama to OpenCode and build a website with AI that creates files directly on your PC. Once you've downloaded a local model, you can use it offline. Cloud models are optional and work differently; this tutorial focuses on local AI.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Ollama: https://ollama.com/\n- Download Ollama for Windows: https://ollama.com/download/windows\n- OpenCode: https://opencode.ai/\n- Download OpenCode: https://opencode"
+  },
+  {
    "channel": "Futurepedia",
    "title": "Claude Makes 3D Animations Easy Now",
-   "views": 206180,
+   "views": 214823,
    "date": "2026-11-12",
    "url": "https://youtu.be/ZxaMmG71g8c",
    "desc": "*Build 3D Animated Explainer Videos with Claude (37 Ready-Made Styles):* https://clickhubspot.com/777a\n\nMore from Futurepedia:\n👉 Get your free AI plan on Futurepedia 2.0: https://clickhubspot.com/691m\n\nSummary:\nClaude can now make stunning 3D animations in almost any style, and it's surprisingly easy. In this video I break down how it works using Three.js (and how it differs from the frame-by-frame JavaScript method from my last motion graphics video), then walk through making one from a single prompt. I also show off my free 3D Style Atlas: 37 ready-made styles you can copy and paste into Claude, with built-in sound effects and a voiceover mode that syncs the animation to your narration.\n\nC"
   },
   {
+   "channel": "Nate Herk | AI Automation",
+   "title": "Anthropic Just Released the New Rules of Claude Code",
+   "views": 206327,
+   "date": "2026-11-17",
+   "url": "https://youtu.be/8Pg6G5h05hk",
+   "desc": "FREE AI OS Template: https://app.aiautomationsociety.ai/optin/ai-os/?utm_source=youtube&utm_medium=organic&utm_content=claude-code-best-practices&sl=yt_claude-code-best-practices\nHow I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=claude-code-best-practices&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=claude-code-best-practices&hcategory=youtube-videos&utm_campaign=free-group\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nLydia Hallie from"
+  },
+  {
    "channel": "Matt Wolfe",
    "title": "AI News: Things Will Never Be The Same",
-   "views": 194571,
+   "views": 197183,
    "date": "2026-11-13",
    "url": "https://youtu.be/G_Jrexy_5Bg",
    "desc": "Try @OpenAI Decisions API here: https://developers.openai.com/api/docs/guides/decisions \n\nHere's the AI news from one of the wildest weeks we've ever seen! Jensen Huang steps down as NVIDIA CEO, Anthropic launches Claude Fable 5.2, and Google's Gemini 4 Carbon finally becomes available. Plus, new AI features from Adobe MAX, big updates to Claude, and a rapid-fire roundup of everything else happening in AI.\n\nSharing the latest news and advancements in AI\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads"
@@ -340,31 +354,31 @@
   {
    "channel": "Dan Kieft",
    "title": "How To Start Making AI Videos in 2026 (Beginner Guide)",
-   "views": 186935,
+   "views": 190019,
    "date": "2026-10-22",
    "url": "https://youtu.be/iO9MiefIpVM",
    "desc": "How To Start Making AI Video in 2026 (Beginner Guide)\nCreat AI Video with Higgsfield 👉 http://dankieft.com/higgsfield\n\n\nAll of my prompts: https://start-making-ai-videos.vercel.app/\n\n\nIn this video I teach you everything you need to know in order to start creating AI videos on higgsfield. We will go over prompting, workflows, references ai images and ai videos. by the end of this you know exactly how to start making videos on higgsfield\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.instagram.com/dan.kieft/"
   },
   {
-   "channel": "Nate Herk | AI Automation",
-   "title": "Anthropic Just Released the New Rules of Claude Code",
-   "views": 184314,
-   "date": "2026-11-17",
-   "url": "https://youtu.be/8Pg6G5h05hk",
-   "desc": "FREE AI OS Template: https://app.aiautomationsociety.ai/optin/ai-os/?utm_source=youtube&utm_medium=organic&utm_content=claude-code-best-practices&sl=yt_claude-code-best-practices\nHow I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=claude-code-best-practices&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=claude-code-best-practices&hcategory=youtube-videos&utm_campaign=free-group\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nLydia Hallie from"
-  },
-  {
    "channel": "Kevin Stratvert",
    "title": "How to Use Claude Code for FREE with Ollama",
-   "views": 170342,
+   "views": 181787,
    "date": "2026-11-10",
    "url": "https://youtu.be/NkkAwdm2k7s",
    "desc": "Learn how to use Claude Code for free with Ollama and a local AI model running on your own computer. In this step-by-step Windows tutorial, we'll install both tools, adjust Ollama's context length, connect Claude Code to Gemma 4 12B, and build a playable Breakout game. Then we'll improve the game with a follow-up prompt and learn how to return to the project later.\n\nThis setup uses a local model in the Claude Code tool, with no AI subscription or per-token API charges for local inference. It does not give you free access to Anthropic's Opus or Sonnet models. Speed and results depend on your hardware and the model you choose.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Download Ollama: https://olla"
   },
   {
+   "channel": "Matt Wolfe",
+   "title": "Insane AI Breakthroughs Nobody Is Talking About",
+   "views": 179641,
+   "date": "2026-11-18",
+   "url": "https://youtu.be/-oA6oLxWpJg",
+   "desc": "12 AI breakthroughs you probably missed, from incredibly human AI voices to a walking robot powered by an old phone.\n\nThese are some of the coolest AI tools, research projects, and tech demos I’ve come across recently that didn’t make it into my weekly AI news videos. We’re looking at AI characters that react to your movements, interactive world models, new ways to edit videos, and voice AI that invents an entire life for itself.\n\nI test several of these tools, explore what you can actually try today, and point out where the demos still fall short. Plus, glasses that claim to understand silent speech, NVIDIA’s AI character animation, and robots learning to move at human speed.\n\nWhich of thes"
+  },
+  {
    "channel": "Dan Kieft",
    "title": "How I Make Cinematic AI Ads with Fable 5.2 & Seedance 2.5",
-   "views": 156920,
+   "views": 161599,
    "date": "2026-11-12",
    "url": "https://youtu.be/jeMl0OSwDss",
    "desc": "Create your own Cinematic AI ads with Fable 5.2 and Seedance 2.5\nHiggsfield Black Friday Sale is live now 👉 http://dankieft.com/higgsfield\n\nIn this video I teach you how you can create your own AI ads. We'll go over all the different steps fro prompting, to making your assets and generating the video so by the end of it you know exactly how.\n\nPrompts & Skills I used:\nhttps://realism-site.vercel.app/\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.instagram.com/dan.kieft/"
@@ -372,7 +386,7 @@
   {
    "channel": "Jeff Su",
    "title": "6 Insanely Practical AI Tips (in 18 minutes)",
-   "views": 145227,
+   "views": 150768,
    "date": "2026-11-10",
    "url": "https://youtu.be/9Hwanevuhd8",
    "desc": "✅ Get HubSpot’s free guide, Use Claude like an AI Expert - https://clickhubspot.com/89c42f\n\nTired of AI tips that go out of date as soon as a new model comes out? These six AI productivity tips help you waste fewer tokens, do less manual work, and teach #ChatGPT, Claude, and Gemini how you like to work.\n\nI’ll show you how to turn a dense PDF into a reusable reference, save prompts you keep retyping, and catch misunderstandings by checking the AI’s plan first. Plus, you’ll see how simple tool rulebooks save you from correcting the same emails and calendar events every time.\n\n*TIMESTAMPS*\n00:00 Top 6 EVERYDAY AI Tips You'll Actually Use\n00:28 Tip #1: The Markdown Shortcut\n03:50 Tip #2: The Fol"
@@ -380,7 +394,7 @@
   {
    "channel": "Dan Kieft",
    "title": "I Tried Every AI Video Generator - Full Tierlist",
-   "views": 144772,
+   "views": 147843,
    "date": "2026-10-28",
    "url": "https://youtu.be/tnG3TIULBro",
    "desc": "Find out what the Best AI Video Generator is in 2026!\nTry out all models 👉 https://tolt.link/tierlist\n\nI tested the 6 most popular AI video generators of 2026 in an 8-round head-to-head battle to find out which one is ACTUALLY the best. Seedance 2.5, Wan 3.0, MiniMax H3 Max, Flux 3, Kling 4.0 Flash and Gemini Omni 1.1 Flash all got the exact same prompts and the same references — then I ranked every single round on a tier list, counted the points, and added up exactly how many credits each model burned.\n\nAll My prompts:\nhttps://best-video-generator.vercel.app/\n\nOpenArt Arena:\nhttps://openart.ai/arena\n\n0:00 Intro\n1:21 The contenders\n2:11 Rules & judging criteria\n2:45 Round 1: Prompt adherence"
@@ -388,42 +402,34 @@
   {
    "channel": "Kevin Stratvert",
    "title": "How to Use Grok Bot for Beginners",
-   "views": 136653,
+   "views": 139970,
    "date": "2026-10-27",
    "url": "https://youtu.be/G6AwOYT-Gbw",
    "desc": "This Grok Bot tutorial for beginners shows you how to build your first AI team, with bots that watch your inbox, keep your books, and answer support tickets on their own.\n💵 Get 50% off QuickBooks Online ➜ https://quickbooks.kevinstratvert.com/\n\nFirst, you'll see what Grok Bot costs, including the 7-day free trial and the cheapest paid plans, and where everything lives in the app.\n\nNext, you'll build your first bot, which connects to Gmail right from the chat and starts watching your inbox for new catering orders on its own.\n\nThen you'll teach it how you like things done, so it remembers your writing rules every time it drafts an email.\n\nAlong the way, you'll learn how to use Grok Bot the way"
   },
   {
-   "channel": "Nate Herk | AI Automation",
-   "title": "The SIMPLEST Way To Make Money Online With Claude AI in 2026",
-   "views": 128048,
-   "date": "2026-11-16",
-   "url": "https://youtu.be/XSehihyKFqw",
-   "desc": "My FREE resources: https://www.skool.com/ai-automation-society/about?el=simplest-way-claude&hcategory=youtube-videos&utm_campaign=free-group\nFREE Scrollcraft Website Design Skill: https://app.aiautomationsociety.ai/optin/scrollcraft/?utm_source=youtube&utm_medium=organic&utm_content=simplest-way-claude&sl=yt_simplest-way-claude\nHow I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=simplest-way-claude&hcategory=youtube-videos&utm_campaign=plus-group\n\nMy Tools💻\nFREE MONTH of Glaido: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nMaking money online with "
-  },
-  {
-   "channel": "Metics Media",
-   "title": "Higgsfield AI Tutorial for Beginners (2026) | Step-by-Step",
-   "views": 120708,
-   "date": "2026-10-30",
-   "url": "https://youtu.be/Mt91SiQotOU",
-   "desc": "This Higgsfield AI tutorial for beginners shows you how to use Higgsfield AI, from your first AI image to a finished 4K video, without wasting credits.\n✅ Higgsfield (Best Deal): https://meticsmedia.com/higgsfield-TBR\n\nIn this Higgsfield AI tutorial for beginners, you'll learn how to use Higgsfield AI from your very first AI image all the way to a finished 4K video. We start by choosing the right plan and taking a quick tour, so you know where everything is. Then you'll create and edit AI images, turn them into AI videos with models like Seedance and Kling, and use Elements to keep your characters and products consistent in every shot. You'll also see how to build a multi-shot video, when Cin"
+   "channel": "Matt Wolfe",
+   "title": "OpenAI GPT-6.2 Astra is Here - It's Not What You Think",
+   "views": 122431,
+   "date": "2026-11-18",
+   "url": "https://youtu.be/JVHkb8PTMvc",
+   "desc": "Sharing the latest news and advancements in AI - 🛠️ Explore AI Tools & News: https://futuretools.io/\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\nLet’s work together!\n- Brand, sponsorship & business inquiries: business@mattwolfe.com\n\n#AINews #AITools #ArtificialIntelligence"
   },
   {
    "channel": "Matt Wolfe",
    "title": "How To Build An AI Operating System For Your Life",
-   "views": 115799,
+   "views": 118152,
    "date": "2026-11-11",
    "url": "https://youtu.be/pvl3z_GyU2Y",
    "desc": "What if you could use AI agents to manage your emails, organize your schedule, create content, and help run your entire business?\n\nI sat down with Peter Yang to explore the personal AI system he uses to run his one-person business. He walks me through his AI chief of staff, a personal advisor that keeps him focused on his goals, and the automated workflows he uses for podcast research, video editing, content creation, and everyday tasks.\n\nWe dive into how he connects ChatGPT, Claude Code, and GroqBot using reusable AI skills, how he keeps those skills improving over time, and how you can build your own versions of these workflows. I also walk through setting up a few of these automations mys"
   },
   {
-   "channel": "Matt Wolfe",
-   "title": "OpenAI GPT-6.2 Astra is Here - It's Not What You Think",
-   "views": 114457,
-   "date": "2026-11-18",
-   "url": "https://youtu.be/JVHkb8PTMvc",
-   "desc": "Sharing the latest news and advancements in AI - 🛠️ Explore AI Tools & News: https://futuretools.io/\n\nDiscover More:\n🛠️ Explore AI Tools & News: https://futuretools.io/\n📰 Weekly Newsletter: https://futuretools.io/newsletter\n\nSocials:\n❌ Twiter/X: https://x.com/mreflow\n🖼️ Instagram: https://instagram.com/mr.eflow\n🧵 Threads: https://www.threads.net/@mr.eflow\n🟦 LinkedIn: https://www.linkedin.com/in/matt-wolfe-30841712/\n👍 Facebook: https://www.facebook.com/mattrwolfe\n\nLet’s work together!\n- Brand, sponsorship & business inquiries: business@mattwolfe.com\n\n#AINews #AITools #ArtificialIntelligence"
+   "channel": "Dan Kieft",
+   "title": "How To Make Your Own AI Cartoon Show - AI Animation Breakdown",
+   "views": 117991,
+   "date": "2026-11-14",
+   "url": "https://youtu.be/ZRUpbbZF0_A",
+   "desc": "Learn How To Create AI Cartoon shows!\nAI tool I used for the animation 👉 http://dankieft.com/higgsfield\n\nIn this video I teach you everything I know to create your own AI animated cartoon show. We will go over the exact setup I use to make cool looking AI cartoons so you can make your own show, with yourself starring in it. \n\n\nAll the prompts I used;\nhttps://cartoon-show-site.vercel.app/\n\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n\n📧 For business inquiries: business@dankieft.com\nFollow me on Instagram: https://www.instagram.com/dan.kieft/"
   }
  ],
  "_bank": [
@@ -523,20 +529,20 @@
    "url": "https://youtu.be/eBszYxzE2dk"
   },
   {
-   "channel": "Kevin Stratvert",
-   "title": "How to Use Ollama (Free Local AI)",
-   "views": 225110,
-   "date": "2026-11-05",
-   "url": "https://youtu.be/btMoPRHz8eM",
-   "desc": "Learn how to install and use Ollama on Windows to run AI models locally for free. In this beginner tutorial, we'll set up Ollama without an account, choose a local model, chat with AI, ask follow-up questions, and analyze a PDF on your computer. Then we'll connect Ollama to OpenCode and build a website with AI that creates files directly on your PC. Once you've downloaded a local model, you can use it offline. Cloud models are optional and work differently; this tutorial focuses on local AI.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Ollama: https://ollama.com/\n- Download Ollama for Windows: https://ollama.com/download/windows\n- OpenCode: https://opencode.ai/\n- Download OpenCode: https://opencode"
-  },
-  {
    "channel": "Dan Kieft",
    "title": "Claude + Blender Is The Best Way To Make AI Videos (Full Course)",
-   "views": 220338,
+   "views": 260805,
    "date": "2026-11-16",
    "url": "https://youtu.be/OO6J2w_FBnE",
    "desc": "Claude + Blender Is The Best Way To Make AI Videos (Full Course)\nBlack Friday Deal on the MCP You Need 👉 http://dankieft.com/higgsfield\n\nUsing Blender together with Claude is one of the best ways to create AI video references that you can use inside of Seedance 2.5. It allows you to have full control over the camera movement, the characters and the location. That's why you need to understand how to use it. In this full in depth tutorial I show you all the tips and tricks I know to make good AI videos with Blender \n\n\nAll prompts\nhttps://claude-and-blender.vercel.app/\n\nJoin my FREE community where you can find my prompts & chat about AI\n👉 https://www.skool.com/nextgenai\n\n\n📧 For business inquir"
+  },
+  {
+   "channel": "Kevin Stratvert",
+   "title": "How to Use Ollama (Free Local AI)",
+   "views": 239994,
+   "date": "2026-11-05",
+   "url": "https://youtu.be/btMoPRHz8eM",
+   "desc": "Learn how to install and use Ollama on Windows to run AI models locally for free. In this beginner tutorial, we'll set up Ollama without an account, choose a local model, chat with AI, ask follow-up questions, and analyze a PDF on your computer. Then we'll connect Ollama to OpenCode and build a website with AI that creates files directly on your PC. Once you've downloaded a local model, you can use it offline. Cloud models are optional and work differently; this tutorial focuses on local AI.\n\nHost: Kevin Stratvert\n\n📚 RESOURCES\n- Ollama: https://ollama.com/\n- Download Ollama for Windows: https://ollama.com/download/windows\n- OpenCode: https://opencode.ai/\n- Download OpenCode: https://opencode"
   }
  ]
 }
