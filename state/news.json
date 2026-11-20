@@ -401,7 +401,7 @@
   "cybersecurityaistartupcormareaches1bvaluationinabout3months",
   "allthequestionsnvidiashouldanswerontuesdaybutprobablywont"
  ],
- "offset": 94696909,
+ "offset": 94696910,
  "chat": 6593456628,
  "days": {
   "2026-11-09": {
@@ -1184,7 +1184,7 @@
    "yt_status": "scheduled"
   },
   "2026-11-20-w2": {
-   "status": "pending",
+   "status": "approved",
    "vmid": 1453,
    "mids": [
     1452,
@@ -1208,7 +1208,8 @@
    ],
    "kind": "word",
    "yt": "fs83CScOntk",
-   "yt_at": "2026-11-21T13:00:00+03:00"
+   "yt_at": "2026-11-24T13:00:00+03:00",
+   "yt_status": "scheduled"
   }
  },
  "podcast": {
