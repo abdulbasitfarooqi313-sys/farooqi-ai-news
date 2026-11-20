@@ -20,7 +20,7 @@ jobs:
         run: git clone -q "https://x-access-token:${NAWA_TOKEN}@github.com/nawaefarooqi-bit/nawaefarooqi-agents" nawa-repo
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - run: cd nawa-repo && pip install -q -r requirements.txt && python -m playwright install --with-deps chromium >/dev/null && sudo apt-get install -y -qq ffmpeg >/dev/null
+      - run: cd nawa-repo && pip install -q -r requirements.txt edge-tts && python -m playwright install --with-deps chromium >/dev/null && sudo apt-get install -y -qq ffmpeg >/dev/null
       - name: Make
         working-directory: nawa-repo
         env:
