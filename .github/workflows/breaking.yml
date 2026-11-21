@@ -45,6 +45,12 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Install ffmpeg
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: LLM cache (restore)            # 🧠 ٹوکن بچت: رنز کے درمیان Gemini جواب کا کیشے
+        uses: actions/cache/restore@v4
+        with:
+          path: cache/llm
+          key: llm-breaking-${{ github.run_id }}
+          restore-keys: llm-breaking-
       - name: Make breaking
         env:
           GEMINI_NEWS_KEY: ${{ secrets.GEMINI_NEWS_KEY }}
@@ -74,6 +80,12 @@ jobs:
           [ "${{ github.event.inputs.force }}" = sample ] && T="breaking-sample-${{ github.run_number }}"
           gh release delete "$T" -y --cleanup-tag 2>/dev/null || true
           gh release create "$T" --title "$T" --notes "review copy" breaking.mp4 breaking_thumb.jpg || true
+      - name: LLM cache (save)
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: cache/llm
+          key: llm-breaking-${{ github.run_id }}
       - name: Save
         if: always()
         run: |
