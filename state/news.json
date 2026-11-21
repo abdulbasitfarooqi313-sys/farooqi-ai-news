@@ -401,7 +401,7 @@
   "anthropichitsnasdaqexchangesat11133aboveipoprice",
   "atnasdaqopeningbellanthropicceorecommitstopacingaidevelopmen"
  ],
- "offset": 94696913,
+ "offset": 94696915,
  "chat": 6593456628,
  "days": {
   "2026-11-13-w": {
@@ -1077,7 +1077,7 @@
    "yt_status": "scheduled"
   },
   "2026-11-21": {
-   "status": "pending",
+   "status": "approved",
    "vmid": 1569,
    "mids": [
     1568,
@@ -1108,7 +1108,8 @@
     "میٹا کے نئے اے آئی ایجنٹ میوز پر صارفین کا نجی ڈیٹا افشا ہونے کی رپورٹس"
    ],
    "yt": "7JvMgxmd5Dg",
-   "yt_at": "2026-11-21T17:00:00+03:00"
+   "yt_at": "2026-11-21T17:00:00+03:00",
+   "yt_status": "scheduled"
   },
   "2026-11-21-c": {
    "status": "pending",
