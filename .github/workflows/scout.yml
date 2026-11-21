@@ -33,6 +33,12 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install requests json-repair
+      - name: LLM cache (restore)            # 🧠 ٹوکن بچت
+        uses: actions/cache/restore@v4
+        with:
+          path: cache/llm
+          key: llm-scout-${{ github.run_id }}
+          restore-keys: llm-scout-
       - name: Scout
         env:
           GEMINI_NEWS_KEY: ${{ secrets.GEMINI_NEWS_KEY }}
@@ -62,3 +68,9 @@ jobs:
           CHAT=$(python3 -c "import json;print(json.load(open('state/news.json')).get('chat',''))" 2>/dev/null); CHAT=${CHAT:-$CHAT_SECRET}
           curl -s -X POST "https://api.telegram.org/bot$TOKEN/sendMessage" --data-urlencode "chat_id=$CHAT" \
             --data-urlencode "text=⚠️ اے آئی نیوز: «${{ github.workflow }}» ناکام ہو گیا۔ یہ لنک Jules یا Claude کو دکھائیں: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" >/dev/null || true
+      - name: LLM cache (save)
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: cache/llm
+          key: llm-scout-${{ github.run_id }}
