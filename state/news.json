@@ -401,7 +401,7 @@
   "anthropichitsnasdaqexchangesat11133aboveipoprice",
   "atnasdaqopeningbellanthropicceorecommitstopacingaidevelopmen"
  ],
- "offset": 94696917,
+ "offset": 94696918,
  "chat": 6593456628,
  "days": {
   "2026-11-13-w": {
@@ -1112,7 +1112,7 @@
    "yt_status": "scheduled"
   },
   "2026-11-21-c": {
-   "status": "pending",
+   "status": "approved",
    "vmid": 1629,
    "mids": [
     1628,
@@ -1137,7 +1137,8 @@
    "kind": "clip",
    "src": "2026-11-20-p",
    "yt": "EJdSI-vyVk4",
-   "yt_at": "2026-11-21T19:00:00+03:00"
+   "yt_at": "2026-11-21T19:00:00+03:00",
+   "yt_status": "scheduled"
   },
   "2026-11-21-w": {
    "status": "approved",
