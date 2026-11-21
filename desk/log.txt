@@ -1,10 +1,22 @@
-10:40:17 news: start
-10:40:21 news: 95 competitor videos, 90 trending items
-10:40:24 gemini-3.6-flash: HTTP 503 in 3s
-10:40:43 gemini-3.6-flash: HTTP 503 in 8s
-10:41:11 gemini-3.5-flash-lite: HTTP 200 in 18s
-10:41:11    finish=STOP chars=14330
-10:41:11 toolscape: start
-10:41:12 toolscape: 140 competitor videos, 40 trending items
-10:42:09 gemini-3.6-flash: HTTP 200 in 57s
-10:42:09    finish=STOP chars=16112
+10:22:31 news: start
+10:22:36 news: 96 competitor videos, 90 trending items
+10:23:00 gemini-3.6-flash: HTTP 503 in 24s
+10:23:43 gemini-3.6-flash: HTTP 503 in 34s
+10:24:05 gemini-3.5-flash-lite: HTTP 503 in 11s
+10:24:17 gemini-3.5-flash-lite: HTTP 503 in 2s
+10:28:27 gemini-flash-latest: ReadTimeout after 240s
+10:28:41 gemini-flash-latest: HTTP 503 in 14s
+10:32:51 gemini-3.8-flash: ReadTimeout after 240s
+10:33:06 gemini-3.8-flash: HTTP 503 in 15s
+10:33:16 news: FAILED Gemini: no answer
+10:33:16 toolscape: start
+10:33:46 toolscape: 140 competitor videos, 40 trending items
+10:37:47 gemini-3.6-flash: ReadTimeout after 240s
+10:41:47 gemini-3.6-flash: ReadTimeout after 240s
+10:41:47 gemini-3.5-flash-lite: HTTP 503 in 1s
+10:41:59 gemini-3.5-flash-lite: HTTP 503 in 2s
+10:42:16 gemini-flash-latest: HTTP 503 in 7s
+10:42:27 gemini-flash-latest: HTTP 503 in 1s
+10:43:04 gemini-3.8-flash: HTTP 503 in 27s
+10:47:14 gemini-3.8-flash: ReadTimeout after 240s
+10:47:14 toolscape: FAILED Gemini: no answer
